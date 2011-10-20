@@ -1,0 +1,75 @@
+/*
+ * Media Object
+ * 
+ * Adapted from:
+ *   stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ *   facebook.com
+ */
+
+/*
+ * Apply clearfix to main object element.
+ * Alternatively, abstract this to a reusable helper class
+ */
+
+.media {
+    *zoom: 1;
+}
+
+.media:before,
+.media:after {
+    content: "";
+    display: table;
+}
+
+.media:after {
+    clear: both;
+}
+
+/*
+ * Primary graphical component (e.g. img, svg, sprite)
+ */
+
+.media .img {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+/*
+ * Optional graphical component
+ */
+
+.media .opt {
+    float: right;
+    margin: 0 0 0 10px;
+}
+
+/*
+ * 1. Remove excess space below images in .img block
+ * 2. Guard against `img {max-width:100%}` hiding all Media Object images in IE8
+ */
+
+.media .img img,
+.media .opt img {
+    display: block; /* 1 */
+    max-width: none; /* 2 */
+} 
+
+/*
+ * Media object body
+ * 1. Create a new block formatting context (NBFC) in modern browsers
+ * 2. Avoid shrink-wrap behaviour of table-cell
+ * 3. Override for IE6/7
+ * 4. Create a new block formatting context in IE6/7
+ *
+ * N.B. This breaks down in some browsers when images within .body exceed its 
+ * width. The alternative is to use `overflow:hidden` to create the NBFC but 
+ * this is problematic if the object contains elements absolutely positioned 
+ * beyond the confines of its box.
+ */
+
+.media .body {
+    display:table-cell; /* 1 */
+    width:10000px; /* 2 */
+    *width:auto; /* 3 */
+    *zoom:1; /* 4 */
+}
