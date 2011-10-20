@@ -14,10 +14,10 @@
         fjs = doc.getElementsByTagName(script)[0],
         frag = doc.createDocumentFragment(),
         add = function(url, id) {
-            if (doc.getElementById(id)) {return;}
+            if (doc.getElementById(id)) { return; }
             js = doc.createElement(script);
             js.src = url;
-            js.id = id || null;
+            id && (js.id = id);
             frag.appendChild(js);
         };
 
