@@ -1,0 +1,21 @@
+/* ==========================================================================
+   States utilities
+   ========================================================================== */
+
+/**
+ * Indicate that interaction will result in an action.
+ *
+ * Commonly toggled via JavaScript.
+ */
+
+.is-actionable {
+    cursor: pointer;
+}
+
+.is-draggable {
+    cursor: move;
+}
+
+.is-disabled {
+    cursor: default;
+}

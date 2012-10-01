@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Text utilities
+   ========================================================================== */
+
+/**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+
+.text-truncate {
+    max-width: 100%; /* 1 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal; /* 2 */
+}
+
+/**
+ * Word breaking
+ *
+ * Break strings when their length exceeds the width of their container.
+ */
+
+.text-break {
+    word-break: break-all;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Horizontal text alignment
+ */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}

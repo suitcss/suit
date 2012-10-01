@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Link-specific utilities
+   ========================================================================== */
+
+/**
+ * Clean link
+ *
+ * A link without any text-decoration at all.
+ */
+
+.link-clean,
+.link-clean:hover,
+.link-clean:focus,
+.link-clean:active {
+    text-decoration: none;
+}
+
+/**
+ * Link complex
+ *
+ * A common pattern is to have a link with several pieces of text and/or an
+ * icon, where only one piece of text should display the underline when the
+ * link is the subject of user interaction.
+ *
+ * Example HTML:
+ *
+ * <a class="link-complex" href="#">
+ *     Link complex
+ *     <span class="link-complex__target">target</span>
+ * </a>
+ */
+
+.link-complex:hover,
+.link-complex:focus,
+.link-complex:active {
+    text-decoration: none;
+}
+
+.link-complex:hover .link-complex__target,
+.link-complex:focus .link-complex__target,
+.link-complex:active .link-complex__target {
+    text-decoration: underline;
+}
+
+/**
+ * Block-level link
+ *
+ * Combination of traits commonly used in vertical navigation lists.
+ */
+
+.link-block,
+.link-block:hover,
+.link-block:focus,
+.link-block:active {
+    display: block;
+    text-decoration: none;
+}
+
+/**
+ * Pseudo-link
+ *
+ * Another interactive element, e.g., `button`, styled to look like an
+ * anchor. Relies on the use of a placeholder anchor.
+ *
+ * Example HTML:
+ *
+ * <button class="link-pseudo">
+ *     <a>Button content</a>
+ * </button>
+ */
+
+.link-pseudo {
+    display: inline;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: transparent;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.link-pseudo:hover,
+.link-pseudo:focus,
+.link-pseudo:active {
+    background: inherit;
+    color: inherit;
+    text-decoration: inherit;
+}

@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Display utilities
+   ========================================================================== */
+
+/**
+ * Display-type utilities
+ */
+
+.inline {
+    display: inline !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+.block {
+    display: block !important;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Completely remove from the flow and screen readers.
+ */
+
+.is-hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/**
+ * Completely remove from the flow but leave available to screen readers.
+ */
+
+.is-vishidden {
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/**
+ * Control visibility without affecting flow.
+ */
+
+.is-visible {
+    visibility: visible;
+}
+
+.is-invisible {
+    visibility: hidden;
+}
