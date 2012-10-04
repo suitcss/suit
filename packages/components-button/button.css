@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+/**
+ * The button classes are best applied to links, buttons, and submit inputs.
+ * These components can be used in forms, as calls to action, or as part of the
+ * general UI of the site/app.
+ *
+ * Recommended use:
+ *
+ * <a class="btn [btn--modifier]" href="[url]">Button text</a>
+ * <button class="btn [btn--modifier]" type="submit">Button text</button>
+ * <input class="btn [btn--modifier]" type="submit" value="Button text">
+ */
+
+/**
+ * Button template
+ *
+ * Build on this component using rulesets in your application-level CSS.
+ *
+ * 1. Normalize `box-sizing` across all elements that this component could be
+ *    applied to.
+ * 2. Inherit text color from ancestor.
+ * 3. Inherit font styles from ancestor.
+ * 4. Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+.
+ * 5. Corrects inability to style clickable `input` types in iOS
+ */
+
+.btn {
+    position: relative;
+    -moz-box-sizing: border-box; /* 1 */
+    box-sizing: border-box; /* 1 */
+    display: inline-block;
+    padding: 0.4em 0.75em;
+    border: 1px solid;
+    margin: 0;
+    background: transparent;
+    color: inherit; /* 2 */
+    cursor: pointer;
+    font: inherit; /* 3 */
+    line-height: normal; /* 4 */
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-appearance: none; /* 5 */
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    text-decoration: none;
+}
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+
+.btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Modifier: smaller buttons
+ */
+
+.btn--small {
+    font-size: 0.75em;
+}
+
+/**
+ * Modifier: larger buttons
+ */
+
+.btn--large {
+    font-size: 1.25em;
+}
+
+/**
+ * Modifier: full-width buttons
+ */
+
+.btn--full {
+    display: block;
+    width: 100%;
+}
