@@ -1,0 +1,17 @@
+{
+    "name": "suit-flex-embed",
+    "version": "1.0.0",
+    "author": "Nicolas Gallagher",
+    "styles": [
+        "flex-embed.css"
+    ],
+    "keywords": ["css", "flexible", "responsive", "embed", "video", "media"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/necolas/suit-flex-embed.git"
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://opensource.org/licenses/MIT"
+    }]
+}
