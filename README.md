@@ -89,7 +89,7 @@ SUIT components should make use of additional class name conventions:
   styles.
 
 * `with-*`: Mix-in additional UI traits that are required when including
-  optional child UI components. For example: "with-dropdown" to modify an
+  optional child UI components. For example: `with-dropdown` to modify an
   element's traits as needed to work with the inclusion of a child dropdown
   component.
 
@@ -155,11 +155,15 @@ Example template:
 
 ```html
 <div class="cf">
-    <a class="obj-left link-complex" href="[url]>
-      <img class="block" src="[src]" alt="">
-      <span class="link-complex__target">Username</span>
+    <a class="obj-left link-complex" href="[url]">
+        <img class="block" src="[src]" alt="">
     </a>
     <div class="nbfc">
+        <a class="link-complex" href="[url]">
+            <b class="link-complex__target">John Doe</b>
+            <span class="text-mute">@johndoe</span>
+        </a>
+
         [text]
     </div>
 </div>
@@ -184,7 +188,7 @@ have.
 
 The components are specific and complex patterns. Components may be built up
 from utilities and an additional layer of custom styles (that are themselves
-not yet generic enough to be abstracted into a utility or small component).
+not yet generic enough to be abstracted into a utility or smaller component).
 
 Each part of a UI is a small component and many of those components can
 be used independently.
@@ -192,12 +196,12 @@ be used independently.
 Files should be small and well commented. Including example HTML in CSS
 comments can be very helpful in illustrating how to make use of a utility or
 component. If a component file is starting to get quite large, it probably
-consists of multiple indepedent components and should be broken up into
+consists of multiple, indepedent components and should be broken up into
 multiple files.
 
 Combine traits on HTML elements in the template for a component. If you have a
-UI pattern that is used in many places, create a template for it rather than
-rewriting it multiple times in different templates.
+UI pattern that is used in many places, consider creating a template for it
+rather than rewriting it multiple times in different templates.
 
 As with utilities, components should be well documented. It shouldn't be
 assumed that CSS is self-documenting.
