@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /**
- * Recommended uses:
+ * Example uses:
  *
  * <div class="grid">
  *     <div class="grid__cell unit-1of2"></div>
@@ -24,24 +24,26 @@
 /**
  * Grid container
  * Must only contain `.grid` or `.grid__cell` components as children.
+ *
+ * 1. Adjustment for child element margins (half gutter size). Requires
+ *    corresponding `padding` value in `grid-cell`.
+ * 2. Ensure consistent default alignment.
+ * 3. Remove inter-unit whitespace that appears between `inline-block` child
+ *    elements. Work for all non-monospace font-families.  If you're using a
+ *    monospace base font, you will need to set the `grid` font-family to
+ *   `sans-serif` and then redeclare the monospace font on the `grid__cell`
+ *    objects.
+ * 4. Protect against WebKit bug with optimizelegibility.
  */
 
 .grid {
     display: block;
     padding: 0;
-    /* Corresponds to half the grid gutter size of 10px */
-    margin: 0 -5px;
-    /* Ensure consistent default alignment */
-    text-align: left;
-    /* Remove inter-unit whitespace for all non-monospace font-families
-     * If you're using a monospace base font, you will need to set the `grid`
-     * font-family to `sans-serif` and then redeclare the monospace font on
-     * the `grid__cell` objects.
-     */
-    letter-spacing: -0.31em;
-    word-spacing: -0.43em;
-    /* Protect against WebKit bug with optimizelegibility */
-    text-rendering: optimizespeed;
+    margin: 0 -5px; /* 1 */
+    text-align: left; /* 2 */
+    letter-spacing: -0.31em; /* 3 */
+    word-spacing: -0.43em; /* 3 */
+    text-rendering: optimizespeed; /* 4 */
 }
 
 /*
@@ -55,27 +57,30 @@
     margin-left: 0;
 }
 
-/*
+/**
  * Grid units
  * No explicit width by default. Apply `.unit-x-y` classes.
+ *
+ * 1. Fundamentals of the non-float grid layout mechanism.
+ * 2. Apply grid gutter (half gutter size). Mirrors corresponding `margin`
+ *    value in `grid`.
+ * 3. Controls vertical positioning of units.
+ * 4. Keeps content correctly aligned with the grid direction.
+ * 5. Reset text defaults.
  */
 
 .grid__cell {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
-    display: inline-block;
+    display: inline-block; /* 1 */
     margin: 0;
-    /* Corresponds to half the grid gutter size of 10px */
-    padding: 0 5px;
-    /* Controls vertical positioning of units */
-    vertical-align: top;
-    /* Keeps unit content correctly aligned */
-    text-align: left;
-    /* Reset text defaults */
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-rendering: auto;
+    padding: 0 5px; /* 2 */
+    vertical-align: top; /* 3 */
+    text-align: left; /* 4 */
+    letter-spacing: normal; /* 5 */
+    word-spacing: normal; /* 5 */
+    text-rendering: auto; /* 5 */
 }
 
 /*
