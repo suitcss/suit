@@ -1,11 +1,14 @@
 {
     "name": "suit-grid",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Nicolas Gallagher",
     "styles": [
         "grid.css"
     ],
-    "keywords": ["css", "grid"],
+    "keywords": [
+        "css",
+        "grid"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/necolas/suit-grid.git"
