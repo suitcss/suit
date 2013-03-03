@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Display utilities
+   ========================================================================== */
+
+/**
+ * Display-type utilities
+ */
+
+.u-inline {
+    display: inline !important;
+}
+
+.u-inlineBlock {
+    display: inline-block !important;
+}
+
+.u-block {
+    display: block !important;
+}
