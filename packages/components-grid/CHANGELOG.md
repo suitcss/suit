@@ -1,5 +1,7 @@
 === HEAD
 
+* Remove `unit` classes; now part of a 'dimension' utility.
+
 === 0.1.1 (February 25, 2013)
 
 * Fix typo in unit class name.
