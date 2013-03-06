@@ -9,9 +9,9 @@
  *
  * Recommended use:
  *
- * <a class="btn [btn--modifier]" href="[url]">Button text</a>
- * <button class="btn [btn--modifier]" type="submit">Button text</button>
- * <input class="btn [btn--modifier]" type="submit" value="Button text">
+ * <a class="Button [Button--modifier]" role="button" href="[url]">Button text</a>
+ * <button class="Button [Button--modifier]" type="submit">Button text</button>
+ * <input class="Button [Button--modifier]" type="submit" value="Button text">
  */
 
 /**
@@ -24,10 +24,11 @@
  * 2. Inherit text color from ancestor.
  * 3. Inherit font styles from ancestor.
  * 4. Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+.
- * 5. Corrects inability to style clickable `input` types in iOS
+ * 5. Prevent wrapping across multiple lines.
+ * 6. Corrects inability to style clickable `input` types in iOS
  */
 
-.btn {
+.Button {
     position: relative;
     -moz-box-sizing: border-box; /* 1 */
     box-sizing: border-box; /* 1 */
@@ -43,13 +44,13 @@
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    white-space: nowrap;
-    -webkit-appearance: none; /* 5 */
+    white-space: nowrap; /* 5 */
+    -webkit-appearance: none; /* 6 */
 }
 
-.btn:hover,
-.btn:focus,
-.btn:active {
+.Button:hover,
+.Button:focus,
+.Button:active {
     text-decoration: none;
 }
 
@@ -57,7 +58,7 @@
  * Remove excess padding and border in Firefox 4+
  */
 
-.btn::-moz-focus-inner {
+.Button::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
@@ -68,7 +69,7 @@
  * Modifier: smaller buttons
  */
 
-.btn--small {
+.Button--small {
     font-size: 0.75em;
 }
 
@@ -76,7 +77,7 @@
  * Modifier: larger buttons
  */
 
-.btn--large {
+.Button--large {
     font-size: 1.25em;
 }
 
@@ -84,7 +85,7 @@
  * Modifier: full-width buttons
  */
 
-.btn--full {
+.Button--full {
     display: block;
     width: 100%;
 }
