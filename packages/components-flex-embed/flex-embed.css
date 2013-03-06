@@ -10,21 +10,23 @@
  *
  * Example HTML:
  *
- * <div class="flex-embed flex-embed--16by9">
- *     [iframe|object|embed]
+ * <div class="Container">
+ *     <div class="FlexEmbed FlexEmbed--16by9">
+ *         [iframe|object|embed]
+ *     </div>
  * </div>
  */
 
-.flex-embed {
+.FlexEmbed {
     position: relative;
     overflow: hidden;
     height: 0;
     padding: 0;
 }
 
-.flex-embed iframe,
-.flex-embed embed,
-.flex-embed object {
+.FlexEmbed iframe,
+.FlexEmbed embed,
+.FlexEmbed object {
     position: absolute;
     left: 0;
     top: 0;
@@ -36,7 +38,7 @@
  * Modifier: 16:9 aspect ratio
  */
 
-.flex-embed--16by9 {
+.FlexEmbed--16by9 {
     padding-bottom: 56.25%;
 }
 
@@ -44,6 +46,6 @@
  * Modifier: 4:3 aspect ratio
  */
 
-.flex-embed--4by3 {
+.FlexEmbed--4by3 {
     padding-bottom: 75%;
 }
