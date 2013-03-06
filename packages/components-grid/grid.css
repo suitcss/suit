@@ -5,38 +5,37 @@
 /**
  * Example uses:
  *
- * <div class="grid">
- *     <div class="grid__cell unit-1of2"></div>
- *     <div class="grid__cell unit-1of2"></div>
- *     <div class="grid__cell unit-1of3"></div>
- *     <div class="grid__cell unit-1of3"></div>
+ * <div class="Grid">
+ *     <div class="Grid-cell u-1of2"></div>
+ *     <div class="Grid-cell u-1of2"></div>
+ *     <div class="Grid-cell u-1of3"></div>
+ *     <div class="Grid-cell u-1of3"></div>
  * </div>
  *
- * <div class="grid grid--center">
- *     <div class="grid__cell unit-1of3"></div>
- *     <div class="grid__cell unit-1of3"></div>
+ * <div class="Grid Grid--center">
+ *     <div class="Grid-cell u-1of3"></div>
+ *     <div class="Grid-cell u-1of3"></div>
  * </div>
  */
 
-/* Grid core
+/* Grid container
    ========================================================================== */
 
 /**
- * Grid container
- * Must only contain `.grid` or `.grid__cell` components as children.
+ * Must only contain `Grid` or `Grid-cell` components as children.
  *
  * 1. Adjustment for child element margins (half gutter size). Requires
- *    corresponding `padding` value in `grid-cell`.
+ *    corresponding `padding` value in `Grid-cell`.
  * 2. Ensure consistent default alignment.
  * 3. Remove inter-unit whitespace that appears between `inline-block` child
  *    elements. Work for all non-monospace font-families.  If you're using a
- *    monospace base font, you will need to set the `grid` font-family to
- *   `sans-serif` and then redeclare the monospace font on the `grid__cell`
+ *    monospace base font, you will need to set the `Grid` font-family to
+ *   `sans-serif` and then redeclare the monospace font on the `Grid-cell`
  *    objects.
  * 4. Protect against WebKit bug with optimizelegibility.
  */
 
-.grid {
+.Grid {
     display: block;
     padding: 0;
     margin: 0 -5px; /* 1 */
@@ -46,30 +45,43 @@
     text-rendering: optimizespeed; /* 4 */
 }
 
-/*
- * Child `grid` object adjustments
+/**
+ * Modifier: horizontally center all grid units
+ * Allows for automatic unit centering irrespective of the number of
+ * units in the grid.
+ */
+
+.Grid--center {
+    text-align: center;
+}
+
+/**
+ * Child `Grid` object adjustments
  * Used for more complex fixed-fluid hybrid grids
  */
 
-.grid > .grid {
+.Grid > .Grid {
     overflow: hidden;
     margin-right: 0;
     margin-left: 0;
 }
 
+/* Grid cell
+   ========================================================================== */
+
 /**
- * Grid units
- * No explicit width by default. Apply `.unit-x-y` classes.
+ * No explicit width by default. Rely on combining `Grid-cell` with a dimension
+ * utility, e.g., `<div class="Grid-cell u-1of2"></div>`.
  *
  * 1. Fundamentals of the non-float grid layout mechanism.
  * 2. Apply grid gutter (half gutter size). Mirrors corresponding `margin`
- *    value in `grid`.
+ *    value in `Grid`.
  * 3. Controls vertical positioning of units.
  * 4. Keeps content correctly aligned with the grid direction.
  * 5. Reset text defaults.
  */
 
-.grid__cell {
+.Grid-cell {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
@@ -83,23 +95,13 @@
     text-rendering: auto; /* 5 */
 }
 
-/*
- * Modifier: horizontally center all grid units
- * Allows for automatic unit centering irrespective of the number of
- * units in the grid.
- */
-
-.grid--center {
-    text-align: center;
-}
-
-/*
+/**
  * Modifier: horizontally center one unit
  * Set a specific unit to be horizontally centered. Doesn't affect
- * any other units. Can still contain a child `grid` object.
+ * any other units. Can still contain a child `Grid` object.
  */
 
-.grid__cell--center {
+.Grid-cell--center {
     display: block;
     margin: 0 auto;
 }
