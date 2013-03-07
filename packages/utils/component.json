@@ -2,24 +2,13 @@
     "name": "suit-utils",
     "version": "0.1.0",
     "author": "Nicolas Gallagher",
-    "styles": [
-        "display.css",
-        "layout.css",
-        "link.css",
-        "space.css",
-        "state.css",
-        "text.css"
-    ],
-    "keywords": ["css", "utilities"],
     "dependencies": {
-        "normalize-css": "*"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/necolas/suit-utils.git"
-    },
-    "licenses": [{
-        "type": "MIT",
-        "url": "http://opensource.org/licenses/MIT"
-    }]
+        "suit-utils-dimension": "0.1.x",
+        "suit-utils-display": "0.1.x",
+        "suit-utils-layout": "0.1.x",
+        "suit-utils-link": "0.1.x",
+        "suit-utils-space": "0.1.x",
+        "suit-utils-state": "0.1.x",
+        "suit-utils-text": "0.1.x"
+    }
 }
