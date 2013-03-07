@@ -41,8 +41,16 @@
     margin: 0 -5px; /* 1 */
     text-align: left; /* 2 */
     letter-spacing: -0.31em; /* 3 */
-    word-spacing: -0.43em; /* 3 */
     text-rendering: optimizespeed; /* 4 */
+}
+
+/**
+ * Opera hack
+ */
+
+.opera:-o-prefocus,
+.Grid {
+    word-spacing: -0.43em;
 }
 
 /**
