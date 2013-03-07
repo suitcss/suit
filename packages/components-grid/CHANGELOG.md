@@ -1,5 +1,7 @@
 === HEAD
 
+* Add a test file.
+* Fix whitespace collasping in Chrome 25.
 * Change class naming convention.
 * Remove `unit` classes; now part of a 'dimension' utility.
 
