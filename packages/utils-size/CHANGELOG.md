@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.1.1 (March 7, 2013)
+
 * Add test file.
 * Fix missing comma in selector.
 
