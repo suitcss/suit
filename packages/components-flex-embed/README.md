@@ -13,9 +13,9 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Available classes
 
-* `flex-embed` - The core responsive embed component with no dimensions
-* `flex-embed--16by9` - The modifier class for 16x9 aspect ratio embed
-* `flex-embed--4by3` - The modifier class for 4x3 aspect ratio embed
+* `FlexEmbed` - The core responsive embed component with no dimensions
+* `FlexEmbed--16by9` - The modifier class for 16x9 aspect ratio embed
+* `FlexEmbed--4by3` - The modifier class for 4x3 aspect ratio embed
 
 ## Usage
 
@@ -23,7 +23,7 @@ Like many SUIT components, suit-flex-embed relies on a base component class
 that is extended by any number of additional modifier classes.
 
 ```html
-<div class="flex-embed flex-embed--16by9">
+<div class="FlexEmbed FlexEmbed--16by9">
     [iframe|object|embed]
 </div>
 ```
@@ -39,7 +39,7 @@ create a 2.35:1 aspect ratio:
  * Modifier: 47:20 aspect ratio
  */
 
-.flex-embed--47by20 {
+.FlexEmbed--47by20 {
     padding-bottom: 42.55%;
 }
 ```
