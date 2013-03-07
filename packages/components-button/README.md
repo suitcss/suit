@@ -13,10 +13,10 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Available classes
 
-* `btn` - The core button component
-* `btn--small` - The modifier class for smaller buttons
-* `btn--large` - The modifier class for larger buttons
-* `btn--full` - The modifier class for full-width buttons
+* `Button` - The core button component
+* `Button--small` - The modifier class for smaller buttons
+* `Button--large` - The modifier class for larger buttons
+* `Button--full` - The modifier class for full-width buttons
 
 ## Usage
 
@@ -24,7 +24,7 @@ Like all SUIT components, suit-button relies on a base component class that is
 extended by any number of additional modifier classes.
 
 ```
-<button class="btn btn--small" type="submit">Submit</button>
+<button class="Button Button--small" type="submit">Submit</button>
 ```
 
 The suit-button component is almost entirely structural. You can build your
@@ -38,30 +38,30 @@ stylesheets. For example:
  * components/app/button/button.css
  */
 
-.btn {
+.Button {
     border-color: #d9d9d9 #d9d9d9 #ccc;
     border-radius: 2px;
     color: #444;
     background-color: #eee;
 }
 
-.btn:hover,
-.btn:focus,
-.btn:active,
-.btn.is-pressed {
+.Button:hover,
+.Button:focus,
+.Button:active,
+.Button.is-pressed {
     border-color: #c6c6c6 #c6c6c6 #bbb;
     color: #222;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     background-color: #f5f5f5;
 }
 
-.btn:focus {
+.Button:focus {
     border-color: #069;
     outline: 0;
 }
 
-.btn:active,
-.btn.is-pressed {
+.Button:active,
+.Button.is-pressed {
     box-shadow: inset 0 1px 2px rgba(0,0,0, 0.2);
     background-color: #ccc;
 }
@@ -75,7 +75,7 @@ a "primary button" style build upon the suit-button component.
  * Modifier: primary buttons
  */
 
-.btn--primary {
+.Button--primary {
     border-color: #057ed0;
     color: #fff;
     background-color: #019ad2;
