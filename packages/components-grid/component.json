@@ -2,19 +2,8 @@
     "name": "suit-grid",
     "version": "0.1.1",
     "author": "Nicolas Gallagher",
-    "styles": [
-        "grid.css"
-    ],
-    "keywords": [
-        "css",
-        "grid"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/necolas/suit-grid.git"
-    },
-    "licenses": [{
-        "type": "MIT",
-        "url": "http://opensource.org/licenses/MIT"
-    }]
+    "main": "grid.css",
+    "devDependencies": {
+        "suit-utils-dimension": "0.1.x"
+    }
 }
