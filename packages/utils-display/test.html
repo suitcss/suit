@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Display [utility] - SUIT</title>
+        <link rel="stylesheet" href="display.css">
+        <style>
+            /**
+             * The hidden `overflow` is used to prevent margin collapse so that
+             * it is easier to test for `inline` vs `inline-block`.
+             */
+            .dev-Box {
+                background: #ddd;
+                margin-top: 10px;
+                overflow: hidden;
+            }
+
+            /**
+             * The `margin` is used to differentiate between `inline` and
+             * `inline-block`, as `inline` elements will not apply the margin.
+             */
+            .dev-Inner {
+                background: lightgreen;
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Test: SUIT utilities - display</h1>
+        <div class="dev-Box">
+            <span class="u-block dev-Inner">
+                This <code>span</code> should be <code>block</code>
+            </span>
+        </div>
+        <div class="dev-Box">
+            <span class="u-inlineBlock dev-Inner">
+                This <code>span</code> should be <code>inline-block</code>
+            </span>
+        </div>
+        <div class="dev-Box">
+            <div class="u-inline dev-Inner">
+                This <code>div</code> should be <code>inline</code>
+            </div>
+        </div>
+    </body>
+</html>
