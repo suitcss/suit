@@ -76,13 +76,13 @@
     margin: 0;
     background: transparent;
     color: inherit;
-    text-decoration: inherit;
+    cursor: pointer;
+    font: inherit;
 }
 
 .u-linkPseudo:hover,
 .u-linkPseudo:focus,
 .u-linkPseudo:active {
-    background: inherit;
+    background: transparent;
     color: inherit;
-    text-decoration: inherit;
 }
