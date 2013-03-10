@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Link [utility] - SUIT</title>
+        <link rel="stylesheet" href="link.css">
+        <style>
+            a {
+                background: #eee;
+                color: #069;
+                text-decoration: underline;
+            }
+
+            a:hover,
+            a:focus,
+            a:active {
+                color: red;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Test: SUIT utilities - link</h1>
+
+        <p>
+            <a href="#">Control link</a>
+        </p>
+
+        <p>
+            <a class="u-linkClean" href="#">A link with no text decoration</a>
+        </p>
+
+        <a class="u-linkBlock" href="#">A block link (also no text decoration)</a>
+
+        <p>
+            <a class="u-linkComplex" href="#">
+                Link complex
+                <span class="u-linkComplex-target">target</span>
+            </a>
+        </p>
+
+        <p>
+            <button class="u-linkPseudo">
+                <a>A button that looks like a link</a>
+            </button>
+        </p>
+    </body>
+</html>
