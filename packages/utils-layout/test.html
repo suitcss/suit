@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Layout [utility] - SUIT</title>
+        <link rel="stylesheet" href="layout.css">
+        <style>
+            .dev-Box {
+                background: #ddd;
+                clear: both;
+                margin-top: 10px;
+                padding: 10px;
+            }
+
+            .dev-Float {
+                float: left;
+                height: 100px;
+                margin: 0 10px 0 0;
+                width: 100px;
+            }
+
+            .dev-Highlight {
+                background: red;
+            }
+
+            .dev-LittleBox {
+                background: red;
+                display: inline-block;
+                height: 16px;
+                width: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Test: SUIT utilities - layout</h1>
+        <h3>Clearfix</h3>
+        <div class="u-cf dev-Box">
+            <div class="dev-Float dev-Highlight"></div>
+            <div class="dev-Float dev-Highlight"></div>
+        </div>
+
+        <h3>New block formatting context</h3>
+        <div class="dev-Box" style="width:300px;">
+            <div class="dev-Float dev-Highlight"></div>
+            <div class="u-nbfc">
+                <p><b>u-nbfc</b>. The text should not wrap under the float.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tincidunt nulla. Suspendisse semper, nisl vitae ultricies vulputate, metus tortor tincidunt neque, sed feugiat lacus ipsum eu neque. Mauris pharetra facilisis turpis, ac lacinia justo fermentum vel. Maecenas sed semper nisi. Integer sed erat nec sem mattis dignissim.</p>
+            </div>
+        </div>
+
+        <div class="dev-Box" style="width:300px;">
+            <div class="dev-Float dev-Highlight"></div>
+            <div class="u-nbfcAlt">
+                <p><b>u-nbfcAlt</b>. The text should not wrap under the float.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tincidunt nulla. Suspendisse semper, nisl vitae ultricies vulputate, metus tortor tincidunt neque, sed feugiat lacus ipsum eu neque. Mauris pharetra facilisis turpis, ac lacinia justo fermentum vel. Maecenas sed semper nisi. Integer sed erat nec sem mattis dignissim.</p>
+            </div>
+        </div>
+
+        <h3>Floats</h3>
+        <div class="dev-Box">
+            <div class="u-pullStart dev-Highlight"><b>u-pullStart</b><br>Float</div> x
+        </div>
+        <div class="dev-Box" style="text-align:right">
+            <div class="u-pullEnd dev-Highlight"><b>u-pullEnd</b><br>Float</div> x
+        </div>
+        <div class="dev-Box">
+            <div class="u-objStart dev-Highlight"><b>u-objStart</b><br>Float with margin</div> x
+        </div>
+        <div class="dev-Box" style="text-align:right">
+            <div class="u-objEnd dev-Highlight"><b>u-objEnd</b><br>Float with margin</div> x
+        </div>
+
+        <h3>Alignment</h3>
+        <div style="line-height:30px">
+            <p><b>u-alignTop</b> <span class="dev-LittleBox u-alignTop"></span></p>
+            <p><b>u-alignMiddle</b> <span class="dev-LittleBox u-alignMiddle"></span></p>
+            <p><b>u-alignBaseline</b> <span class="dev-LittleBox u-alignBaseline"></span></p>
+            <p><b>u-alignBottom</b> <span class="dev-LittleBox u-alignBottom"></span></p>
+        </div>
+    </body>
+</html>
