@@ -1,5 +1,6 @@
 === HEAD
 
+* Remove `text-decoration` from default linkComplex.
 * Fix the pseudo-link styles.
 * Add a test file.
 
