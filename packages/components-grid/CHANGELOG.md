@@ -1,6 +1,7 @@
 === HEAD
 
-* Remove default gutter
+* Remove use of `Grid` as a child of `Grid`.
+* Remove default gutter.
 
 === 0.2.0 (March 7, 2013)
 
