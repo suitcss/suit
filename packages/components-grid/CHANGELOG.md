@@ -1,5 +1,7 @@
 === HEAD
 
+* Remove default gutter
+
 === 0.2.0 (March 7, 2013)
 
 * Add a test file.
