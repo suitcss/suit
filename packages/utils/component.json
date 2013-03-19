@@ -1,6 +1,6 @@
 {
     "name": "suit-utils",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "author": "Nicolas Gallagher",
     "dependencies": {
         "suit-utils-dimension": "~0.2.0",
