@@ -1,5 +1,7 @@
 === HEAD
 
+* Update 'suit-utils-dimension' to v0.2.x.
+
 === 0.2.0 (March 7, 2013)
 
 * Break the utilities up into separate repositories.
