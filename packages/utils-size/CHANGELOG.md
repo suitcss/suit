@@ -1,5 +1,8 @@
 === HEAD
 
+* Add intrinsic width utilities.
+* Use a `size` identifier in the class name.
+
 === 0.1.1 (March 7, 2013)
 
 * Add test file.
