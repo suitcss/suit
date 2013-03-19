@@ -90,7 +90,7 @@ the component.
             [tweet-text]
         </p>
 
-        <div class="u-textMute>
+        <div class="u-textMute">
             <a href="#">
                 <span>Expand</span>
                 <span class="u-isHidden">Collapse</span>
