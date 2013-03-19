@@ -3,18 +3,22 @@
    ========================================================================== */
 
 /**
+ * Core grid component
+ * Make use of dimension utilities, or components that extend 'grid' in order
+ * to apply particular widths to cells.
+ *
  * Example uses:
  *
  * <div class="Grid">
- *     <div class="Grid-cell u-1of2"></div>
- *     <div class="Grid-cell u-1of2"></div>
- *     <div class="Grid-cell u-1of3"></div>
- *     <div class="Grid-cell u-1of3"></div>
+ *     <div class="Grid-cell u-size1of2"></div>
+ *     <div class="Grid-cell u-size1of2"></div>
+ *     <div class="Grid-cell u-size1of3"></div>
+ *     <div class="Grid-cell u-size1of3"></div>
  * </div>
  *
  * <div class="Grid Grid--center">
- *     <div class="Grid-cell u-1of3"></div>
- *     <div class="Grid-cell u-1of3"></div>
+ *     <div class="Grid-cell u-size1of3"></div>
+ *     <div class="Grid-cell u-size1of3"></div>
  * </div>
  */
 
