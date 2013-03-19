@@ -8,9 +8,9 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Installation
 
-* [Bower](https://github.com/twitter/bower/): `bower install suit-utils`
+* [Bower](https://github.com/twitter/bower/): `bower install suit-utils --save`
 
-…a convenient way to install all the SUIT utility packages:
+…is a convenient way to install all the SUIT utility packages:
 
 * [suit-utils-dimension](https://github.com/necolas/suit-utils-dimension)
 * [suit-utils-display](https://github.com/necolas/suit-utils-display)
@@ -22,7 +22,12 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Usage
 
-### Referencing the utilities
+Utilities are a low-level layer in your CSS. They have a very narrow scope and
+may end up being used frequently, due to their separation from the nature of
+their content. As a result, once a class is in significant use great care
+should be taken before modifying it.
+
+### Referencing utilities
 
 During development, you can include the utilities you need using the `@import`
 directive in your main stylesheet. Your build step should take care of inlining
@@ -37,7 +42,7 @@ Example:
 
 @import "/components/suit-utils-display/display.css";
 @import "/components/suit-utils-layout/layout.css";
-@import "/components/suit-utils-space/space.css";
+@import "/components/suit-utils-layout/dimension.css";
 @import "/components/suit-utils-state/state.css";
 @import "/components/suit-utils-text/text.css";
 @import "/components/suit-utils-link/link.css";
@@ -47,16 +52,22 @@ Example:
 
 ### Templating
 
-Apply the desired trait, or combination of traits, directly to the HTML element
-in a component's template.
+Each utility class modifies a single trait (a small collection of similar
+styles).
 
-These simple utilities can be used to create a wide variety of UI patterns that
-can form the basis for virtual and specific components.
+To apply a trait, or a combination of traits to an element, add the
+corresponding class directly to the HTML.
+
+Together, they can form a wide variety of UI patterns from simple principles.
+Although you won't _always_ want to use combinations of utilities to generate
+more complicated patterns, the option is there. Refactoring an HTML template to
+move particular utility traits into a CSS component's styles is a relatively
+simple task.
 
 The following contrived example would be a structural template for a simple
-tweet-like component. You would then create a new component CSS file to house
-any additional, specific styles that are needed to fully realise this
-component.
+tweet-like component. You would then create a new component CSS file for any
+additional, specific styles (often a "skin" or "theme") needed to fully realise
+the component.
 
 ```html
 <article class="Tweet">
@@ -66,7 +77,7 @@ component.
     <a class="u-objStart" href="[href]">
         <img src="[src]" alt="[username]'s avatar">
     </a>
-    <div class="u-nbfc">
+    <div class="u-sizeFill">
         <a class="u-linkComplex" href="[url]">
             <span class="u-linkComplex-target">[full-name]</span>
             <span>@username</span>
@@ -79,7 +90,7 @@ component.
             [tweet-text]
         </p>
 
-        <div>
+        <div class="u-textMute>
             <a href="#">
                 <span>Expand</span>
                 <span class="u-isHidden">Collapse</span>
