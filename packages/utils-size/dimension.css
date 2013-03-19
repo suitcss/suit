@@ -2,7 +2,52 @@
    Dimension utilities
    ========================================================================== */
 
-/* Proportional units
+/* Intrinsic widths
+   ========================================================================== */
+
+/**
+ * Make an element shrink wrap its content.
+ */
+
+.u-sizeFit {
+    display: block;
+    float: left;
+    width: auto !important;
+}
+
+/**
+ * Make an element fill the remaining space.
+ * N.B. This will hide overflow.
+ */
+
+.u-sizeFill {
+    display: block;
+    overflow: hidden;
+    width: auto !important;
+}
+
+/**
+ * An alternative method to make an element fill the remaining space.
+ * N.B. Do not use if child elements might be wider than the remaining space.
+ * In Chrome, Safari, and Firefox it results in undesired layout.
+ */
+
+.u-sizeFillAlt {
+    display: table-cell;
+    max-width: 100%;
+    width: 10000px;
+}
+
+/**
+ * Make an element the width of its parent.
+ */
+
+.u-sizeFull {
+    display: block;
+    width: 100%;
+}
+
+/* Proportional widths
    ========================================================================== */
 
 /**
