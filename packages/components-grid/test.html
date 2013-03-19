@@ -8,7 +8,9 @@
         <style>
             .dev-Box {
                 background: #ddd;
+                border: 1px solid black;
                 margin-bottom: 10px;
+                text-align: center;
             }
         </style>
     </head>
@@ -16,16 +18,16 @@
         <h3>Basic</h3>
 
         <div class="Grid">
-            <div class="Grid-cell u-1of4">
+            <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">1</div>
             </div>
-            <div class="Grid-cell u-1of4">
+            <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">2</div>
             </div>
-            <div class="Grid-cell u-1of4">
+            <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">3</div>
             </div>
-            <div class="Grid-cell u-1of4">
+            <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">4</div>
             </div>
         </div>
@@ -33,64 +35,64 @@
         <h3>Wrapping of multiple cells</h3>
 
         <div class="Grid">
-            <div class="Grid-cell u-1of2">
+            <div class="Grid-cell u-size1of2">
                 <div class="dev-Box">1</div>
             </div>
-            <div class="Grid-cell u-1of2">
+            <div class="Grid-cell u-size1of2">
                 <div class="dev-Box">2</div>
             </div>
-            <div class="Grid-cell u-1of3">
+            <div class="Grid-cell u-size1of3">
                 <div class="dev-Box">3</div>
             </div>
-            <div class="Grid-cell u-1of3">
+            <div class="Grid-cell u-size1of3">
                 <div class="dev-Box">4</div>
             </div>
-            <div class="Grid-cell u-1of3">
+            <div class="Grid-cell u-size1of3">
                 <div class="dev-Box">5</div>
             </div>
-            <div class="Grid-cell u-1of4">
+            <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">6</div>
             </div>
-            <div class="Grid-cell u-1of4">
+            <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">7</div>
             </div>
-            <div class="Grid-cell u-1of4">
+            <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">8</div>
             </div>
-            <div class="Grid-cell u-1of4">
+            <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">9</div>
             </div>
-            <div class="Grid-cell u-1of3">
+            <div class="Grid-cell u-size1of3">
                 <div class="dev-Box">10</div>
             </div>
-            <div class="Grid-cell u-1of3">
+            <div class="Grid-cell u-size1of3">
                 <div class="dev-Box">11</div>
             </div>
-            <div class="Grid-cell u-1of3">
+            <div class="Grid-cell u-size1of3">
                 <div class="dev-Box">12</div>
             </div>
-            <div class="Grid-cell u-1of5">
+            <div class="Grid-cell u-size1of5">
                 <div class="dev-Box">13</div>
             </div>
-            <div class="Grid-cell u-1of5">
+            <div class="Grid-cell u-size1of5">
                 <div class="dev-Box">14</div>
             </div>
-            <div class="Grid-cell u-3of5">
+            <div class="Grid-cell u-size3of5">
                 <div class="dev-Box">15</div>
             </div>
-            <div class="Grid-cell u-2of6">
+            <div class="Grid-cell u-size2of6">
                 <div class="dev-Box">16</div>
             </div>
-            <div class="Grid-cell u-1of6">
+            <div class="Grid-cell u-size1of6">
                 <div class="dev-Box">17</div>
             </div>
-            <div class="Grid-cell u-3of6">
+            <div class="Grid-cell u-size3of6">
                 <div class="dev-Box">18</div>
             </div>
-            <div class="Grid-cell u-5of12">
+            <div class="Grid-cell u-size5of12">
                 <div class="dev-Box">19</div>
             </div>
-            <div class="Grid-cell u-7of12">
+            <div class="Grid-cell u-size7of12">
                 <div class="dev-Box">20</div>
             </div>
         </div>
@@ -98,28 +100,28 @@
         <h3>Grid-based centering</h3>
 
         <div class="Grid Grid--center">
-            <div class="Grid-cell u-1of2">
+            <div class="Grid-cell u-size1of2">
                 <div class="dev-Box">1</div>
             </div>
         </div>
 
         <div class="Grid Grid--center">
-            <div class="Grid-cell u-1of3">
+            <div class="Grid-cell u-size1of3">
                 <div class="dev-Box">1</div>
             </div>
-            <div class="Grid-cell u-1of3">
+            <div class="Grid-cell u-size1of3">
                 <div class="dev-Box">2</div>
             </div>
         </div>
 
         <div class="Grid Grid--center">
-            <div class="Grid-cell u-1of4">
+            <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">1</div>
             </div>
-            <div class="Grid-cell u-1of4">
+            <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">2</div>
             </div>
-            <div class="Grid-cell u-1of4">
+            <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">3</div>
             </div>
         </div>
@@ -127,18 +129,22 @@
         <h3>Cell-based centering</h3>
 
         <div class="Grid">
-            <div class="Grid-cell u-1of2"><div class="dev-Box">1</div></div>
-            <div class="Grid-cell u-1of2"><div class="dev-Box">2</div></div>
-            <div class="Grid-cell Grid-cell--center u-3of4">
+            <div class="Grid-cell u-size1of2">
+                <div class="dev-Box">1</div>
+            </div>
+            <div class="Grid-cell u-size1of2">
+                <div class="dev-Box">2</div>
+            </div>
+            <div class="Grid-cell Grid-cell--center u-size3of4">
                 <div class="dev-Box">3: Centered cell with child grid</div>
                 <div class="Grid">
-                    <div class="Grid-cell u-1of3">
+                    <div class="Grid-cell u-size1of3">
                         <div class="dev-Box">1</div>
                     </div>
-                    <div class="Grid-cell u-1of3">
+                    <div class="Grid-cell u-size1of3">
                         <div class="dev-Box">2</div>
                     </div>
-                    <div class="Grid-cell u-1of3">
+                    <div class="Grid-cell u-size1of3">
                         <div class="dev-Box">3</div>
                     </div>
                 </div>
