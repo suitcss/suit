@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.0 (March 19, 2013)
+
 * Add intrinsic width utilities.
 * Use a `size` identifier in the class name.
 
