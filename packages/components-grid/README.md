@@ -5,8 +5,8 @@ A SUIT component for a CSS grid. The grid makes use of `inline-block` and
 
 N.B. This component relies on particular dimensions being applied to cells in
 the grid via other classes. For example, [SUIT
-dimensions](https://github.com/necolas/suit-utils-dimensions) or the [SUIT
-responsive grid](https://github.com/necolas/suit-grid-responsive) extension.
+dimensions](https://github.com/necolas/suit-utils-dimensions/) or the [SUIT
+Grid Layouts](https://github.com/necolas/suit-grid-layouts/) extension.
 
 Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
@@ -41,7 +41,8 @@ alignment.
 </div>
 ```
 
-All cells within a grid can be centered by adding the `Grid--center` class to the grid container:
+All cells within a grid can be centered by adding the `Grid--center` class to
+the grid container:
 
 ```html
 <div class="Grid Grid--center">
