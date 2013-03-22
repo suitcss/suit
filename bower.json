@@ -1,0 +1,13 @@
+{
+    "name": "suit",
+    "version": "0.1.0",
+    "author": "Nicolas Gallagher",
+    "dependencies": {
+        "suit-utils": "~0.2.0",
+        "suit-button": "~0.2.0",
+        "suit-button-group": "~0.2.0",
+        "suit-flex-embed": "~0.2.0",
+        "suit-grid": "~0.3.0",
+        "suit-grid-layouts": "~0.2.0"
+    }
+}
