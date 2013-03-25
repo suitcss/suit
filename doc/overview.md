@@ -191,8 +191,8 @@ All 'core' files of a particular type must be referenced before the 'theme' file
 @import "core/util/dimension.css";
 @import "core/util/text.css";
 
-@import "skin/util/link.css";
-@import "skin/util/text.css";
+@import "theme/util/link.css";
+@import "theme/util/text.css";
 
 /* Components */
 
@@ -200,8 +200,8 @@ All 'core' files of a particular type must be referenced before the 'theme' file
 @import "core/component/button-group.css";
 @import "core/component/grid.css";
 
-@import "skin/component/button.css";
-@import "skin/component/steam-item.css";
+@import "theme/component/button.css";
+@import "theme/component/steam-item.css";
 ```
 
 
