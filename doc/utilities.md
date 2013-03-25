@@ -58,7 +58,7 @@ In the example below, the “muted” text color would be applied by default. Bu
 if a color it set for `a:hover`, the muted color will be replaced on hover.
 This is because `a:hover` has a higher specificity than `.class`:
 
-```
+```html
 <a class="u-textMute" href="#">…</a>
 ```
 
@@ -66,7 +66,7 @@ However, by applying the text utility to a `span` around the text content, we
 can avoid the specificity issue altogether and make sure that the text within
 the link is muted on hover too.
 
-```
+```html
 <a href="#">
   <span class="u-textMute">…</span>
 </a>
