@@ -36,16 +36,16 @@ these imports for production.
 Example:
 
 ```css
-@import "/components/normalize-css/normalize.css";
+@import "/bower_components/normalize-css/normalize.css";
 
 /* Utilities */
 
-@import "/components/suit-utils-display/display.css";
-@import "/components/suit-utils-layout/layout.css";
-@import "/components/suit-utils-layout/dimension.css";
-@import "/components/suit-utils-state/state.css";
-@import "/components/suit-utils-text/text.css";
-@import "/components/suit-utils-link/link.css";
+@import "/bower_components/suit-utils-display/display.css";
+@import "/bower_components/suit-utils-layout/layout.css";
+@import "/bower_components/suit-utils-dimension/dimension.css";
+@import "/bower_components/suit-utils-state/state.css";
+@import "/bower_components/suit-utils-text/text.css";
+@import "/bower_components/suit-utils-link/link.css";
 
 ...
 ```
