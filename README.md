@@ -11,7 +11,7 @@ a monolithic or centralized HTML/CSS framework. You can build your own toolkit
 on top of a curated set of SUIT packages.
 
 SUIT splits CSS into 2 main layers: low-level utilities and higher-level
-components. This distinction is make explicit by class name conventions.
+components. This distinction is made explicit by class name conventions.
 
 **[Documentation](doc)**.
 
