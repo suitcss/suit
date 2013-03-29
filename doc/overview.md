@@ -94,7 +94,10 @@ BAD:
 
 ```css
 /* In tweet.css */
-.Tweet .Icon { position: absolute; top: 0; }
+.Tweet .Icon {
+    position: absolute;
+    top: 0;
+}
 ```
 
 GOOD:
@@ -108,9 +111,32 @@ GOOD:
 
 ```css
 /* In tweet.css */
-.Tweet-icon { position: absolute; top: 0; }
+.Tweet-icon {
+    position: absolute;
+    top: 0;
+}
 ```
 
+If your component can be affected by a state change in a parent component
+(e.g., a `:hover` or `:focus` interaction), then you may depend on the parent
+component's class in your component's CSS file. In general, a ruleset should
+always be in the file of the component that matches the last class in the
+selector. For example:
+
+```css
+/**
+ * These styles are in the 'tweet.css' component file because the last
+ * class in each rule is for a child element of the 'Tweet' component.
+ */
+
+.StreamItem:hover .Tweet-icon {
+    color: red;
+}
+
+.StreamItem.is-collapsed:hover .Tweet-actions {
+    visibility: visible;
+}
+```
 
 ## Importing
 
