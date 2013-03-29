@@ -7,7 +7,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 ## Installation
 
 * Download: [zip](https://github.com/necolas/suit-utils-dimension/zipball/master)
-* [Bower](https://github.com/twitter/bower/): `bower install suit-utils-dimension --save`
+* [Bower](https://github.com/twitter/bower/): `bower install --save suit-utils-dimension`
 * Git: `git clone https://github.com/necolas/suit-utils-dimension.git`
 
 ## Usage
