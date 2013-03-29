@@ -23,7 +23,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 Like all SUIT components, suit-button relies on a base component class that is
 extended by any number of additional modifier classes.
 
-```
+```html
 <button class="Button Button--small" type="submit">Submit</button>
 ```
 
@@ -31,11 +31,10 @@ The suit-button component is almost entirely structural. You can build your
 application-specific theme styles upon suit-button in your application-level
 stylesheets. For example:
 
-```
-@import "components/vendor/suit-button/button.css"
-
+```css
 /**
- * components/app/button/button.css
+ * theme/component/button.css
+ * @require suit-button
  */
 
 .Button {
@@ -70,7 +69,7 @@ stylesheets. For example:
 You can also create your own application-level modifiers. This is an example of
 a "primary button" style build upon the suit-button component.
 
-```
+```css
 /**
  * Modifier: primary buttons
  */
