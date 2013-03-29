@@ -157,7 +157,7 @@ outside of your component's CSS code:
 ```
 
 Your build process should inline the CSS and wrap it any specified Media
-Queries (you should create a production build of your CSS that omits MEdia
+Queries (you should create a production build of your CSS that omits Media
 Queries if you require IE 8 support).
 
 
@@ -182,6 +182,7 @@ For example:
 
 ```
 .
+├── main.css
 ├── theme
 |   ├── util
 |   |   ├── link.css
