@@ -33,8 +33,6 @@ application makes use of multi-media embeds that require them. For example, to
 create a 2.35:1 aspect ratio:
 
 ```css
-@import "components/vendor/suit-flex-embed/flex-embed.css"
-
 /**
  * Modifier: 47:20 aspect ratio
  */
