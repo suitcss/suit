@@ -8,7 +8,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 ## Installation
 
 * Download: [zip](https://github.com/necolas/suit-flex-embed/zipball/master)
-* [Bower](https://github.com/twitter/bower/): `bower install suit-flex-embed`
+* [Bower](https://github.com/twitter/bower/): `bower install --save suit-flex-embed`
 * Git: `git clone https://github.com/necolas/suit-flex-embed.git`
 
 ## Available classes
