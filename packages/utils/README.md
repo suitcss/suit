@@ -101,7 +101,7 @@ the component.
             </a>
             <a href="#">
                 <i class="Icon Icon--favorite"></i>
-                <span class="u-isVishidden">Favorite</span>
+                <span class="u-isHiddenVisually">Favorite</span>
             </a>
             ...
         </div>
