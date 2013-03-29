@@ -8,7 +8,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 ## Installation
 
 * Download: [zip](https://github.com/necolas/suit-button/zipball/master)
-* [Bower](https://github.com/twitter/bower/): `bower install suit-button`
+* [Bower](https://github.com/twitter/bower/): `bower install --save suit-button`
 * Git: `git clone https://github.com/necolas/suit-button.git`
 
 ## Available classes
