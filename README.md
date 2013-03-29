@@ -3,7 +3,7 @@
 SUIT is a collection of modular, combinable, and theme-agnostic HTML/CSS
 packages. Each package is stand-alone and written to follow a common set of
 naming conventions and authoring practices. Dependencies between HTML/CSS are
-managed by [Bower](https://github.com/twitter/bower) – a package manager for
+managed by [Bower](https://github.com/twitter/bower/) – a package manager for
 the web – but packages can be manually combined.
 
 SUIT is an approach to authoring HTML/CSS for large web applications. It is not
@@ -17,10 +17,10 @@ components. This distinction is made explicit by class name conventions.
 
 ## Installation
 
-Install [Bower](https://github.com/twitter/bower), then run:
+Install [Bower](https://github.com/twitter/bower/), then run:
 
 ```
-bower install suit --save
+bower install --save suit
 ```
 
 ## Packages
