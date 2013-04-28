@@ -10,6 +10,14 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 * Download: [zip](https://github.com/necolas/suit-utils-text/zipball/master)
 * Git: `git clone https://github.com/necolas/suit-utils-text.git`
 
+## Available classes
+
+* `u-textTruncate` - Truncate a single line of text, with ellipsis.
+* `u-textBreak` - Break strings when their length exceeds the width of their container.
+* `u-textCenter` - Center-align text.
+* `u-textLeft` - Left-align text.
+* `u-textRight` - Right-align text.
+
 ## Usage
 
 Please refer to the README for [SUIT utils](https://github.com/necolas/suit-utils/)
