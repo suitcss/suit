@@ -10,6 +10,12 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 * Download: [zip](https://github.com/necolas/suit-utils-display/zipball/master)
 * Git: `git clone https://github.com/necolas/suit-utils-display.git`
 
+## Available classes
+
+* `u-inline` - Display inline.
+* `u-inlineBlock` - Display inline-block.
+* `u-block` - Display block.
+
 ## Usage
 
 Please refer to the README for [SUIT utils](https://github.com/necolas/suit-utils/)
