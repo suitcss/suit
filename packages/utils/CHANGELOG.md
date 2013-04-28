@@ -1,5 +1,7 @@
 === HEAD
 
+* Rename `component.json` to `bower.json`.
+
 === 0.3.0 (March 19, 2013)
 
 * Update 'suit-utils-dimension' to v0.2.x.
