@@ -8,7 +8,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Installation
 
-* [Bower](https://github.com/twitter/bower/): `bower install --save suit-utils`
+* [Bower](http://bower.io/): `bower install --save suit-utils`
 
 …is a convenient way to install all the SUIT utility packages:
 
