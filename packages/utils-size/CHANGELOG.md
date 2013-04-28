@@ -1,5 +1,7 @@
 === HEAD
 
+* Rename `component.json` to `bower.json`.
+
 === 0.2.0 (March 19, 2013)
 
 * Add intrinsic width utilities.
