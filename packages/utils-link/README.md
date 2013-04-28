@@ -6,8 +6,8 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Installation
 
+* [Bower](http://bower.io/): `bower install --save suit-utils-link`
 * Download: [zip](https://github.com/necolas/suit-utils-link/zipball/master)
-* [Bower](https://github.com/twitter/bower/): `bower install --save suit-utils-link`
 * Git: `git clone https://github.com/necolas/suit-utils-link.git`
 
 ## Usage
