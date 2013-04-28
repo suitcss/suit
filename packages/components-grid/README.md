@@ -13,7 +13,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 ## Installation
 
 * Download: [zip](https://github.com/necolas/suit-grid/zipball/master)
-* [Bower](https://github.com/twitter/bower/): `bower install --save suit-grid`
+* [Bower](http://bower.io/): `bower install --save suit-grid`
 * Git: `git clone https://github.com/necolas/suit-grid`
 
 ## Features
