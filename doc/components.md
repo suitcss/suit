@@ -109,7 +109,7 @@ the UI. These styles must always be scoped in CSS to another class, i.e.,
 
 ```css
 .Tweet { /* … */ }
-.Tweet.is-expanding { /* … */ }
+.Tweet.is-expanded { /* … */ }
 ```
 
 ```html
