@@ -19,33 +19,33 @@
  *
  * Build on this component using rulesets in your application-level CSS.
  *
- * 1. Normalize `box-sizing` across all elements that this component could be
+ * 1. Corrects inability to style clickable `input` types in iOS
+ * 2. Normalize `box-sizing` across all elements that this component could be
  *    applied to.
- * 2. Inherit text color from ancestor.
- * 3. Inherit font styles from ancestor.
- * 4. Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+.
- * 5. Prevent wrapping across multiple lines.
- * 6. Corrects inability to style clickable `input` types in iOS
+ * 3. Inherit text color from ancestor.
+ * 4. Inherit font styles from ancestor.
+ * 5. Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+.
+ * 6. Prevent wrapping across multiple lines.
  */
 
 .Button {
-    position: relative;
-    -moz-box-sizing: border-box; /* 1 */
-    box-sizing: border-box; /* 1 */
-    display: inline-block;
-    padding: 0.4em 0.75em;
-    border: 1px solid;
-    margin: 0;
+    -webkit-appearance: none; /* 1 */
     background: transparent;
-    color: inherit; /* 2 */
+    border: 1px solid;
+    -moz-box-sizing: border-box; /* 2 */
+    box-sizing: border-box; /* 2 */
+    color: inherit; /* 3 */
     cursor: pointer;
-    font: inherit; /* 3 */
-    line-height: normal; /* 4 */
+    display: inline-block;
+    font: inherit; /* 4 */
+    line-height: normal; /* 5 */
+    margin: 0;
+    padding: 0.4em 0.75em;
+    position: relative;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    white-space: nowrap; /* 5 */
-    -webkit-appearance: none; /* 6 */
+    white-space: nowrap; /* 6 */
 }
 
 .Button:hover,
