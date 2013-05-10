@@ -75,22 +75,6 @@
 /* -------------------------------------------------------------------------- */
 
 /**
- * Modifier: smaller buttons
- */
-
-.Button--small {
-    font-size: 0.75em;
-}
-
-/**
- * Modifier: larger buttons
- */
-
-.Button--large {
-    font-size: 1.25em;
-}
-
-/**
  * Modifier: full-width buttons
  */
 
