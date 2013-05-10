@@ -7,16 +7,29 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Installation
 
-* Download: [zip](https://github.com/necolas/suit-button/zipball/master)
 * [Bower](http://bower.io/): `bower install --save suit-button`
+* Download: [zip](https://github.com/necolas/suit-button/zipball/master)
 * Git: `git clone https://github.com/necolas/suit-button.git`
 
-## Available classes
+## HTML classes
+
+### Component core class
 
 * `Button` - The core button component
+
+### Component modifier classes
+
 * `Button--small` - The modifier class for smaller buttons
 * `Button--large` - The modifier class for larger buttons
 * `Button--full` - The modifier class for full-width buttons
+
+### Component state classes
+
+* `is-disabled` - The foundation for disabled-state button styles
+
+N.B. You must also include the `disabled` attribute on `button` and `input`
+elements. For `a` elements, you should remove the `href` attribute and prevent
+JavaScript event handlers from firing.
 
 ## Usage
 
@@ -24,7 +37,11 @@ Like all SUIT components, suit-button relies on a base component class that is
 extended by any number of additional modifier classes.
 
 ```html
-<button class="Button Button--small" type="submit">Submit</button>
+<a class="Button Button--full" href="[url]">Sign up</button>
+
+<button class="Button Button--small is-disabled" type="submit">Submit</button>
+
+<input class="Button Button--large" type="submit" value="Submit">
 ```
 
 The suit-button component is almost entirely structural. You can build your
