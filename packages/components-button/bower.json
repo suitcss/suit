@@ -2,5 +2,9 @@
     "name": "suit-button",
     "version": "1.1.0",
     "author": "Nicolas Gallagher",
-    "main": "button.css"
+    "main": "button.css",
+    "ignore": [
+        "CHANGELOG.md",
+        "test.html"
+    ]
 }
