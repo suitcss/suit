@@ -48,10 +48,19 @@
     white-space: nowrap; /* 6 */
 }
 
+/**
+ * UI states
+ */
+
 .Button:hover,
 .Button:focus,
 .Button:active {
     text-decoration: none;
+}
+
+.Button:disabled,
+.Button.is-disabled {
+    cursor: default;
 }
 
 /**
