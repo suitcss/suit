@@ -25,14 +25,15 @@
  * 3. Inherit text color from ancestor.
  * 4. Inherit font styles from ancestor.
  * 5. Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+.
- * 6. Prevent wrapping across multiple lines.
+ * 6. Prevent button text from being selectable.
+ * 7. Prevent wrapping across multiple lines.
  */
 
 .Button {
     -webkit-appearance: none; /* 1 */
     background: transparent;
     border: 1px solid;
-    -moz-box-sizing: border-box; /* 2 */
+    -moz-box-sizing: border-box;
     box-sizing: border-box; /* 2 */
     color: inherit; /* 3 */
     cursor: pointer;
@@ -44,8 +45,12 @@
     position: relative;
     text-align: center;
     text-decoration: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none; /* 6 */
     vertical-align: middle;
-    white-space: nowrap; /* 6 */
+    white-space: nowrap; /* 7 */
 }
 
 /**
