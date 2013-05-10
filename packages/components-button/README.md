@@ -19,8 +19,6 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ### Component modifier classes
 
-* `Button--small` - The modifier class for smaller buttons
-* `Button--large` - The modifier class for larger buttons
 * `Button--full` - The modifier class for full-width buttons
 
 ### Component state classes
@@ -39,10 +37,12 @@ extended by any number of additional modifier classes.
 ```html
 <a class="Button Button--full" href="[url]">Sign up</button>
 
-<button class="Button Button--small is-disabled" type="submit">Submit</button>
+<button class="Button is-disabled" type="submit">Submit</button>
 
-<input class="Button Button--large" type="submit" value="Submit">
+<input class="Button" type="submit" value="Submit">
 ```
+
+## Theming
 
 The suit-button component is almost entirely structural. You can build your
 application-specific theme styles upon suit-button in your application-level
@@ -83,20 +83,28 @@ stylesheets. For example:
 }
 ```
 
-You can also create your own application-level modifiers. This is an example of
-a "primary button" style build upon the suit-button component.
+You should also create your own application-level modifiers or rely on a theme
+that provides them for you. For example:
 
 ```css
 /**
- * Modifier: primary buttons
+ * Modifier: default buttons
  */
 
-.Button--primary {
+.Button--default {
     border-color: #057ed0;
     color: #fff;
     background-color: #019ad2;
 }
 
+/**
+ * Modifier: large buttons
+ */
+
+.Button--large {
+    font-size: 1.5em;
+    padding: 0.75em 1.5em;
+}
 ...
 ```
 
