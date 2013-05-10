@@ -1,5 +1,7 @@
 === HEAD
 
+* Remove size modifiers.
+* Add `is-disabled` and `:disabled` styles.
 * Rename `component.json` to `bower.json`.
 
 === 1.1.0 (March 7, 2013)
