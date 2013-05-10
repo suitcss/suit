@@ -13,17 +13,10 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## HTML classes
 
-### Component core class
-
-* `Button` - The core button component
-
-### Component modifier classes
-
-* `Button--full` - The modifier class for full-width buttons
-
-### Component state classes
-
-* `is-disabled` - The foundation for disabled-state button styles
+* `Button` - [core] The core button component
+* `Button--full` - [modifier] The modifier class for full-width buttons
+* `is-pressed` - [state] For pressed-state button styles (themes)
+* `is-disabled` - [state] For disabled-state button styles (themes)
 
 N.B. You must also include the `disabled` attribute on `button` and `input`
 elements. For `a` elements, you should remove the `href` attribute and prevent
@@ -39,7 +32,7 @@ extended by any number of additional modifier classes.
 
 <button class="Button is-disabled" type="submit">Submit</button>
 
-<input class="Button" type="submit" value="Submit">
+<input class="Button is-pressed" type="submit" value="Submit">
 ```
 
 ## Theming
@@ -105,7 +98,6 @@ that provides them for you. For example:
     font-size: 1.5em;
     padding: 0.75em 1.5em;
 }
-...
 ```
 
 ## Browser support
