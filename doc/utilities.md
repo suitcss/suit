@@ -42,9 +42,9 @@ utility is used to create a "new block formatting context".
 </div>
 ```
 
-If a utility needs to apply styles to a child element, it should be targetted
+If a utility needs to apply styles to a descendant element, it should be targetted
 using a class that is made from the full utility name, followed by a hyphen and
-a Camel case name for the child:
+a Camel case descendant name:
 
 ```html
 <a class="u-linkComplex" href="#">
@@ -54,9 +54,25 @@ a Camel case name for the child:
 ```
 
 If you need to avoid cascade resolution for a series of traits, use extra HTML.
-In the example below, the “muted” text color would be applied by default. But
-if a color it set for `a:hover`, the muted color will be replaced on hover.
-This is because `a:hover` has a higher specificity than `.class`:
+
+Let's assume that you always want the color of a link's text to be “muted”. In
+the example below, muted text color would be applied by default. But if a color
+value is set for `a:hover`, it will replace the muted color on hover.  This is
+because `a:hover` has a higher specificity than `.class`:
+
+```css
+a {
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+.u-textMute {
+    color: grey;
+}
+```
 
 ```html
 <a class="u-textMute" href="#">…</a>

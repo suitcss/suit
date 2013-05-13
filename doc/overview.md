@@ -46,7 +46,7 @@ The complete set of naming patterns is as follows:
 
 * `ComponentName`
 * `ComponentName--modifierName`
-* `ComponentName-childName`
+* `ComponentName-descendantName`
 * `is-stateOfComponent`
 * `with-ComponentName`
 
@@ -69,7 +69,7 @@ SUIT aims to make it easier for teams to work with, and reuse, HTML/CSS.
   .Grid-cell` rather than `.Grid .Grid-cell`.
 
 * Use classes rather than tags in selectors, as much as is practical, e.g., use
-  `.list-item` rather than `.list li`. This helps make components more reusable
+  `.List-item` rather than `.list li`. This helps make components more reusable
   and robust.
 
 Trait composition takes place on the element:
@@ -126,7 +126,7 @@ selector. For example:
 ```css
 /**
  * These styles are in the 'tweet.css' component file because the last
- * class in each rule is for a child element of the 'Tweet' component.
+ * class in each rule is for a descendant element of the 'Tweet' component.
  */
 
 .StreamItem:hover .Tweet-icon {

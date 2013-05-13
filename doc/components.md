@@ -79,15 +79,17 @@ case. The class should be included _in addition_ to the base component class.
 <button class="Button Button--primary">…</button>
 ```
 
-### ComponentName-childName
+### ComponentName-descendantName
 
-A component child is a class that is attached to a child node of a component.
-It's responsible for applying presentation directly to the child. Child names
-must be written in Camel case.
+A component descendant is a class that is attached to a descendant node of a
+component. It's responsible for applying presentation directly to the
+descendant on behalf of a particular component. Descendant names must be
+written in Camel case.
 
 ```html
 <article class="Tweet">
     <header class="Tweet-header">
+        <img class="Tweet-avatar" src="{{src}}" alt="{{alt}}">
         …
     </header>
     <div class="Tweet-body">
@@ -103,9 +105,6 @@ must be Camel case. Never style these classes directly; they should always be
 used as a chaining class. JS can add/remove these classes. This means that the
 same state names can be used in multiple contexts, but every component must
 define its own styles for the state (as they are scoped to the component).
-
-Custom component-states that can be applied/removed with JavaScript to modify
-the UI. These styles must always be scoped in CSS to another class, i.e.,
 
 ```css
 .Tweet { /* … */ }
@@ -144,7 +143,7 @@ for the child `Dropdown` component to render as expected.
 
 If a specific host component needs custom style-adjustments when it contains
 another type of component, you should use a component modifier (not a
-`with-ComponentName` class.
+`with-ComponentName`) class.
 
 ```css
 /* Buttons need their own custom adjustments when they contain icons */
