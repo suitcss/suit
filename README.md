@@ -34,6 +34,7 @@ bower install --save suit
 * [Link](https://github.com/necolas/suit-utils-link/)
 * [Space](https://github.com/necolas/suit-utils-space/)
 * [State](https://github.com/necolas/suit-utils-state/)
+* [Text](https://github.com/necolas/suit-utils-text/)
 
 **Components**:
 
