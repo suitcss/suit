@@ -1,5 +1,6 @@
 === HEAD
 
+* Rename float helpers.
 * Rename `component.json` to `bower.json`.
 * Add a test file.
 

@@ -12,13 +12,13 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Available classes
 
-* `u-cf` - Contain floats (micro clearfix)
-* `u-nbfc` - Create a new block formatting context
-* `u-nbfcAlt` - Create a new block formatting context (alternative technique)
-* `u-pullStart` - Float at the start of the reading direction (e.g., 'left' in a LTR language).
-* `u-pullEnd` - Float at the start of the reading direction (e.g., 'left' in a LTR language).
-* `u-objStart` - The same as `u-pullStart` but with `10px` of opposite margin, and child image normalization.
-* `u-objEnd` - The same as `u-pullEnd` but with `10px` of opposite margin, and child image normalization.
+* `u-cf` - Contain floats (micro clearfix).
+* `u-nbfc` - Create a new block formatting context.
+* `u-nbfcAlt` - Create a new block formatting context (alternative technique).
+* `u-pullLeft` - Float left.
+* `u-pullRight` - Float right.
+* `u-objLeft` - The same as `u-pullLeft` but with `10px` of opposite margin, and child image normalization.
+* `u-objRight` - The same as `u-pullRight` but with `10px` of opposite margin, and child image normalization.
 * `u-alignTop` - Vertically align to top.
 * `u-alignMiddle` - Vertically align to middle.
 * `u-alignBaseline` -Vertically align to baseline.

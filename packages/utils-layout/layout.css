@@ -63,11 +63,11 @@
  * Floats
  */
 
-.u-pullStart {
+.u-pullLeft {
     float: left;
 }
 
-.u-pullEnd {
+.u-pullRight {
     float: right;
 }
 
@@ -80,12 +80,12 @@
  * proceeding objects.
  */
 
-.u-objStart {
+.u-objLeft {
     float: left;
     margin-right: 10px;
 }
 
-.u-objEnd {
+.u-objRight {
     float: right;
     margin-left: 10px;
 }
@@ -96,8 +96,8 @@
  *    IE 8.
  */
 
-.u-objStart img,
-.u-objEnd img {
+.u-objLeft img,
+.u-objRight img {
     display: block; /* 1 */
     max-width: none; /* 2 */
 }
