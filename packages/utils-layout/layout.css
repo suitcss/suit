@@ -64,11 +64,11 @@
  */
 
 .u-pullLeft {
-    float: left;
+    float: left !important;
 }
 
 .u-pullRight {
-    float: right;
+    float: right !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -81,12 +81,12 @@
  */
 
 .u-objLeft {
-    float: left;
+    float: left !important;
     margin-right: 10px;
 }
 
 .u-objRight {
-    float: right;
+    float: right !important;
     margin-left: 10px;
 }
 
@@ -110,17 +110,17 @@
  */
 
 .u-alignTop {
-    vertical-align: top;
+    vertical-align: top !important;
 }
 
 .u-alignMiddle {
-    vertical-align: middle;
+    vertical-align: middle !important;
 }
 
 .u-alignBaseline {
-    vertical-align: baseline;
+    vertical-align: baseline !important;
 }
 
 .u-alignBottom {
-    vertical-align: bottom;
+    vertical-align: bottom !important;
 }
