@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.0 (May 25, 2013)
+
 * Add table display utilities.
 * Rename `component.json` to `bower.json`.
 * Add a test file.
