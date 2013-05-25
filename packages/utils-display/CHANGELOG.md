@@ -1,5 +1,6 @@
 === HEAD
 
+* Add table display utilities.
 * Rename `component.json` to `bower.json`.
 * Add a test file.
 

@@ -15,6 +15,8 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 * `u-inline` - Display inline.
 * `u-inlineBlock` - Display inline-block.
 * `u-block` - Display block.
+* `u-table` - Display table.
+* `u-tableCell` - Display table-cell.
 
 ## Usage
 

@@ -17,3 +17,11 @@
 .u-block {
     display: block !important;
 }
+
+.u-table {
+    display: table !important;
+}
+
+.u-tableCell {
+    display: table-cell !important;
+}
