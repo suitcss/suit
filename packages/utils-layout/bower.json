@@ -2,5 +2,9 @@
     "name": "suit-utils-layout",
     "version": "0.1.0",
     "author": "Nicolas Gallagher",
-    "main": "layout.css"
+    "main": "layout.css",
+    "ignore": [
+      "CHANGELOG.md",
+      "test.html"
+    ]
 }
