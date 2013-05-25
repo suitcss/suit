@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.0 (May 25, 2013)
+
 * Add `!important` to various utilities.
 * Rename float helpers.
 * Rename `component.json` to `bower.json`.
