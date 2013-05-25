@@ -2,5 +2,9 @@
     "name": "suit-utils-display",
     "version": "0.1.0",
     "author": "Nicolas Gallagher",
-    "main": "display.css"
+    "main": "display.css",
+    "ignore": [
+        "CHANGELOG.md",
+        "test.html"
+    ]
 }
