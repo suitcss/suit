@@ -1,5 +1,7 @@
 == HEAD
 
+* Update 'suit-button' to ~2.0.0.
+* Update 'suit-utils' to ~0.4.0.
 * Documentation improvements.
 
 == 0.1.0 (March 22, 2013)
