@@ -1,5 +1,9 @@
 === HEAD
 
+=== 0.4.0 (May 26, 2013)
+
+* Update 'suit-utils-layout' to v0.2.x.
+* Update 'suit-utils-display' to v0.2.x.
 * Rename `component.json` to `bower.json`.
 
 === 0.3.0 (March 19, 2013)
