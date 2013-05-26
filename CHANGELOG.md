@@ -1,5 +1,7 @@
 == HEAD
 
+* Documentation improvements.
+
 == 0.1.0 (March 22, 2013)
 
 * Rewrite documentation; improve clarity and examples.
