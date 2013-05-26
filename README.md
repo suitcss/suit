@@ -38,6 +38,7 @@ bower install --save suit
 
 **Components**:
 
+* [Arrange](https://github.com/necolas/suit-arrange/)
 * [Button](https://github.com/necolas/suit-button/)
 * [Button group](https://github.com/necolas/suit-button-group/)
 * [Flexible embeds](https://github.com/necolas/suit-flex-embed/)

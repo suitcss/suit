@@ -1,5 +1,6 @@
 == HEAD
 
+* Add 'suit-arrange' component.
 * Update 'suit-button' to ~2.0.0.
 * Update 'suit-utils' to ~0.4.0.
 * Documentation improvements.
