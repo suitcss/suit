@@ -2,5 +2,9 @@
     "name": "suit-utils-text",
     "version": "0.1.0",
     "author": "Nicolas Gallagher",
-    "main": "text.css"
+    "main": "text.css",
+    "ignore": [
+        "CHANGELOG.md",
+        "test.html"
+    ]
 }
