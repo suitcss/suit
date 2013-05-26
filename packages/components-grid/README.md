@@ -12,8 +12,8 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Installation
 
-* Download: [zip](https://github.com/necolas/suit-grid/zipball/master)
 * [Bower](http://bower.io/): `bower install --save suit-grid`
+* Download: [zip](https://github.com/necolas/suit-grid/zipball/master)
 * Git: `git clone https://github.com/necolas/suit-grid`
 
 ## Features
