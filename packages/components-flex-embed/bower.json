@@ -2,5 +2,9 @@
     "name": "suit-flex-embed",
     "version": "1.1.0",
     "author": "Nicolas Gallagher",
-    "main": "flex-embed.css"
+    "main": "flex-embed.css",
+    "ignore": [
+        "CHANGELOG.md",
+        "test.html"
+    ]
 }
