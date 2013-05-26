@@ -3,9 +3,9 @@
     "version": "0.3.0",
     "author": "Nicolas Gallagher",
     "dependencies": {
-        "suit-utils-dimension": "~0.2.0",
-        "suit-utils-display": "0.1.x",
-        "suit-utils-layout": "0.1.x",
+        "suit-utils-dimension": "0.2.x",
+        "suit-utils-display": "0.2.x",
+        "suit-utils-layout": "0.2.x",
         "suit-utils-link": "0.1.x",
         "suit-utils-space": "0.1.x",
         "suit-utils-state": "0.1.x",
