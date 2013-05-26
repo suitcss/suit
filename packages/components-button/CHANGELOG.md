@@ -1,5 +1,8 @@
 === HEAD
 
+=== 2.0.0 (May 26, 2013)
+
+* Prevent user-select of text.
 * Remove size modifiers.
 * Add `is-disabled` and `:disabled` styles.
 * Rename `component.json` to `bower.json`.
