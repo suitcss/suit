@@ -71,10 +71,10 @@ the component.
 
 ```html
 <article class="Tweet">
-    <a class="u-objEnd" href="[permalink]">
+    <a class="u-objRight" href="[permalink]">
         [timestamp]
     </a>
-    <a class="u-objStart" href="[href]">
+    <a class="u-objLeft" href="[href]">
         <img src="[src]" alt="[username]'s avatar">
     </a>
     <div class="u-sizeFill">
