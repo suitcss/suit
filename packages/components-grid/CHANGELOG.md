@@ -1,8 +1,10 @@
 === HEAD
 
+=== 0.3.1 (May 26, 2013)
+
 * Rename `component.json` to `bower.json`.
 
-== 0.3.0 (March 19, 2013)
+=== 0.3.0 (March 19, 2013)
 
 * Remove use of `Grid` as a child of `Grid`.
 * Remove default gutter.
