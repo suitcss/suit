@@ -19,7 +19,6 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 * `Arrange--bottom` - The modifier class for bottom-aligned cells
 * `Arrange--equal` - The modifier class for equal-width cells
 * `Arrange--withGutter` - The modifier class for a 10px inter-cell gutter
-
 * `Arrange-sizeFit` - The child class for cells to snap to fit their content
 * `Arrange-sizeFill` - the child class for cells to expand to fill the remaining space
 
