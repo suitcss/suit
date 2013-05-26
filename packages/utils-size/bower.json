@@ -2,5 +2,9 @@
     "name": "suit-utils-dimension",
     "version": "0.2.0",
     "author": "Nicolas Gallagher",
-    "main": "dimension.css"
+    "main": "dimension.css",
+    "ignore": [
+        "CHANGELOG.md",
+        "test.html"
+    ]
 }
