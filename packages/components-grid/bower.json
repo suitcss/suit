@@ -5,5 +5,9 @@
     "main": "grid.css",
     "devDependencies": {
         "suit-utils-dimension": "~0.2.0"
-    }
+    },
+    "ignore": [
+        "CHANGELOG.md",
+        "test.html"
+    ]
 }
