@@ -2,5 +2,9 @@
     "name": "suit-utils-link",
     "version": "0.1.1",
     "author": "Nicolas Gallagher",
-    "main": "link.css"
+    "main": "link.css",
+    "ignore": [
+        "CHANGELOG.md",
+        "test.html"
+    ]
 }
