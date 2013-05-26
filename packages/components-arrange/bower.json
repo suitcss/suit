@@ -1,0 +1,10 @@
+{
+    "name": "suit-arrange",
+    "version": "0.0.0",
+    "author": "Nicolas Gallagher",
+    "main": "arrange.css",
+    "ignore": [
+        "CHANGELOG.md",
+        "test.html"
+    ]
+}
