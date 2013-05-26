@@ -1,5 +1,8 @@
 === HEAD
 
+=== 0.1.1 (May 26, 2013)
+
+* Add Bower ignores.
 * Add a test file.
 * Rename `component.json` to `bower.json`.
 
