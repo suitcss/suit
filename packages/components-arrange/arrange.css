@@ -1,0 +1,146 @@
+/* ==========================================================================
+   Arrange cells
+   ========================================================================== */
+
+/**
+ * This component lets you lay out a row of cells in various ways. You can
+ * specify whether a cell should be wide enough to fit its content, or take up
+ * the remaining space in the row. It's also possible to give all cells an
+ * equal width, and to control their vertical alignment.
+ *
+ * `Arrange` must only contain 'Arrange-sizeFit' and 'Arrange-sizeFill' child
+ * nodes.
+ *
+ * It's recommended that you only use one 'Arrange-sizeFill' per component
+ * instance (unless using the `Arrange--equally` modifier; see below). The
+ * first 'Arrange-sizeFill' in the component's source order will not share the
+ * extra space with any subsequent nodes of that class.
+ *
+ * Example HTML:
+ *
+ * <div class="Arrange Arrange--top">
+ *     <div class="Arrange-sizeFit">
+ *         [content]
+ *     </div>
+ *     <div class="Arrange-sizeFill">
+ *         [content]
+ *     </div>
+ *     <div class="Arrange-sizeFit">
+ *         [content]
+ *     </div>
+ * </div>
+ */
+
+/**
+ * 1. Rely on table layout.
+ * 2. Zero out the default spacing that might be on an element (e.g., `ul`).
+ * 3. Reset the table-layout algorithm in case a component is nested.
+ * 4. Make sure the component fills the full width of its parent.
+ */
+
+.Arrange {
+    display: table; /* 1 */
+    margin: 0; /* 2 */
+    padding: 0; /* 2 */
+    table-layout: auto; /* 3 */
+    width: 100%; /* 4 */
+}
+
+/**
+ * There are two possible types of child.
+ * `sizeFill` will expand to fill all of the remaining space not filled by
+ * `sizeFit` elements.
+ *
+ * 1. Zero out any default spacing that might be on an element (e.g., `li`);
+ *    Margin has no effect when coupled with `display: table-cell`.
+ * 2. All cells are top-aligned by default
+ */
+
+.Arrange-sizeFill,
+.Arrange-sizeFit {
+    display: table-cell;
+    padding: 0; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * Make sure the main content block expands to fill the remaining space.
+ */
+
+.Arrange-sizeFill {
+    width: 100%;
+}
+
+/**
+ * Where possible, protect against large images breaking the layout. Prevent them from
+ * exceeding the width of the main content block by making them fluid.
+ *
+ * Only work for all browsers with the `Arrange--equally` variant. For Firefox
+ * and IE to constrain image dimensions for other layouts, large images will
+ * need their width set to `100%`.
+ */
+
+.Arrange-sizeFill img {
+    height: auto;
+    max-width: 100%;
+}
+
+/**
+ * Defend against a side-effect of this layout pattern: images in
+ * 'Arrange-sizeFit' cannot be fluid, otherwise they lose their ability to
+ * provide size to a cell.
+ */
+
+.Arrange-sizeFit img {
+    max-width: none !important;
+    width: auto !important;
+}
+
+/* Vertical alignment modifiers
+   ========================================================================== */
+
+.Arrange--middle .Arrange-sizeFill,
+.Arrange--middle .Arrange-sizeFit {
+    vertical-align: middle;
+}
+
+.Arrange--bottom .Arrange-sizeFill,
+.Arrange--bottom .Arrange-sizeFit {
+    vertical-align: bottom;
+}
+
+/* Equal-width modifier
+   ========================================================================== */
+
+/**
+ * This layout algorithm will create equal-width table cells, irrespective of
+ * the width of their content.
+ */
+
+.Arrange--equal {
+    table-layout: fixed;
+}
+
+/**
+ * Give the cells an equal width.
+ * It's recommended that only 'Arrange-sizeFill' be used for equal width cells.
+ * Their inner images will automatically be responsive.
+ */
+
+.Arrange--equal > .Arrange-sizeFill,
+.Arrange--equal > .Arrange-sizeFit {
+    width: auto;
+}
+
+/* Gutter-separating modifier
+   ========================================================================== */
+
+.Arrange--withGutter > .Arrange-sizeFill,
+.Arrange--withGutter > .Arrange-sizeFit {
+    padding-left: 10px;
+}
+
+.Arrange--withGutter > .Arrange-sizeFill:first-child,
+.Arrange--withGutter > .Arrange-sizeFit:first-child {
+    padding-left: 0;
+}
