@@ -10,7 +10,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Installation
 
-* [Bower](https://github.com/twitter/bower/): `bower install --save suit-arrange`
+* [Bower](http://bower.io/): `bower install --save suit-arrange`
 * Download: [zip](https://github.com/necolas/suit-arrange/zipball/master)
 * Git: `git clone https://github.com/necolas/suit-arrange.git`
 
