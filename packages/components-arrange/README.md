@@ -6,6 +6,8 @@ cells. Makes use of CSS table layout.
 
 Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
+[Live test rendering](http://necolas.github.io/suit-arrange/test.html)
+
 ## Installation
 
 * [Bower](https://github.com/twitter/bower/): `bower install --save suit-arrange`
