@@ -1,29 +1,25 @@
-# SUIT: Small HTML/CSS tools
+# Suit
 
-SUIT is a collection of modular, combinable, and theme-agnostic HTML/CSS
-packages. Each package is stand-alone and written to follow a common set of
-naming conventions and authoring practices. Dependencies between HTML/CSS are
-managed by [Bower](http://bower.io/) – a package manager for
-the web – but packages can be manually combined.
+A collection of small, adaptive, structural CSS modules for building web UIs and custom toolkits.
 
-SUIT is an approach to authoring HTML/CSS for large web applications. It is not
-a monolithic or centralized HTML/CSS framework. You can build your own toolkit
-on top of a curated set of SUIT packages.
-
-SUIT splits CSS into 2 main layers: low-level utilities and higher-level
-components. This distinction is made explicit by class name conventions.
-
-**[Documentation](doc)**.
 
 ## Installation
 
-Install [Bower](http://bower.io/), then run:
+Recommended: install [Bower](http://bower.io/), then run this command in your project directory:
 
 ```
 bower install --save suit
 ```
 
-## Packages
+Alternative: (a download bundle will be available at some point)
+
+
+## Official packages
+
+Each package is stand-alone, contains its own documentation and tests, and is written to follow a common set of
+[naming conventions and authoring practices](doc/overview.md). Dependencies are best
+managed using [Bower](http://bower.io/) – a package manager for
+the web.
 
 **Utilities**:
 
@@ -45,14 +41,34 @@ bower install --save suit
 * [Grid](https://github.com/necolas/suit-grid/)
 * [Grid Layouts](https://github.com/necolas/suit-grid-layouts/)
 
+**Themes**:
+
+* (soon)
+
+
+## Features
+
+**[Read about the design decisions and authoring principles of Suit](doc)**.
+
+* Highly modular; each module is individually versioned.
+* Provides common, low-level utility classes.
+* Provides common structural UI patterns.
+* Responsive grid.
+* Consistent class name conventions.
+* Work more with HTML than CSS.
+* Theme-independence.
+* Designed for large web sites and applications.
+* Easy to build your application's custom toolkit on top of Suit.
+* Very small footprint.
+
 
 ## Why?
 
 * Monolithic UI frameworks don't make it easy to use, share, and version
   specific UI traits and components.
 * Complex applications need to loosely couple content, document semantics, and
-  presentational structure to make it easier to change any layer with minimal
-  impact on the others.
+  presentational structure to make it easier to change any layer while minimizing the
+  impact on other layers.
 * Complex applications need to clearly surface and scope the relationship
   between all HTML classes (and their attached styles and behaviour).
 * Complex applications can accumulate technical debt when components are not
@@ -70,9 +86,10 @@ bower install --save suit
 * Organize discrete UI features into small, standalone packages / files.
 
 
-## Related resources
+## Browser support
 
-* [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
-* [SOLID CSS](http://blog.millermedeiros.com/solid-css/)
-* [Idiomatic CSS](https://github.com/necolas/idiomatic-css/)
-* [Idiomatic HTML](https://github.com/necolas/idiomatic-html/)
+* Google Chrome (latest)
+* Opera (latest)
+* Firefox 4+
+* Safari 5+
+* Internet Explorer 8+

@@ -237,3 +237,11 @@ All 'core' files of a particular type must be referenced before the 'theme' file
 SUIT relies on some form of build process to produce production-ready code.
 Imports should be inlined, CSS should be stripped of comments and minified, and
 Media Queries should wrap the code from every import that appends them.
+
+
+## Related reading
+
+* [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
+* [SOLID CSS](http://blog.millermedeiros.com/solid-css/)
+* [Idiomatic CSS](https://github.com/necolas/idiomatic-css/)
+* [Idiomatic HTML](https://github.com/necolas/idiomatic-html/)
