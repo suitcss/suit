@@ -6,17 +6,34 @@
         <link rel="stylesheet" href="flex-embed.css">
     </head>
     <body>
-        <h3>16:9</h3>
+        <h1>SUIT flex-embed [component]</h1>
+        <p>This is a test page for the <a href="https://github.com/necolas/suit-flex-embed">SUIT flex-embed</a> component.</p>
+
+        <h3>16:9 (iframe)</h3>
         <div style="max-width:500px">
             <div class="FlexEmbed FlexEmbed--16by9" style="max-width:600px;">
                 <iframe width="1280" height="720" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
-        <h3>4:3</h3>
+        <h3>16:9 (image)</h3>
+        <div style="max-width:500px;">
+            <div class="FlexEmbed FlexEmbed--16by9">
+                <img class="FlexEmbed-item" width="500" height="280" src="http://lorempixel.com/500/280/nature/9" alt="">
+            </div>
+        </div>
+
+        <h3>4:3 (iframe)</h3>
         <div style="max-width:500px;">
             <div class="FlexEmbed FlexEmbed--4by3">
                 <iframe width="1280" height="720" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <h3>4:3 (image)</h3>
+        <div style="max-width:500px;">
+            <div class="FlexEmbed FlexEmbed--4by3">
+                <img class="FlexEmbed-item" width="500" height="375" src="http://lorempixel.com/500/375/nature/9" alt="">
             </div>
         </div>
     </body>

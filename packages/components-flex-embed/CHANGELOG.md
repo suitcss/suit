@@ -1,5 +1,7 @@
 === HEAD
 
+* Add explicit descendant class.
+
 === 1.1.1 (May 26, 2013)
 
 * Rename `component.json` to `bower.json`.

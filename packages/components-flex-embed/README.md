@@ -7,8 +7,8 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Installation
 
-* Download: [zip](https://github.com/necolas/suit-flex-embed/zipball/master)
 * [Bower](http://bower.io/): `bower install --save suit-flex-embed`
+* Download: [zip](https://github.com/necolas/suit-flex-embed/zipball/master)
 * Git: `git clone https://github.com/necolas/suit-flex-embed.git`
 
 ## Available classes
@@ -16,6 +16,8 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 * `FlexEmbed` - The core responsive embed component with no dimensions
 * `FlexEmbed--16by9` - The modifier class for 16x9 aspect ratio embed
 * `FlexEmbed--4by3` - The modifier class for 4x3 aspect ratio embed
+* `FlexEmbed-item` - The descendant class for the media that is being embedded
+  (optional for `iframe`, `embed`, and `object` elements)
 
 ## Usage
 
@@ -25,6 +27,10 @@ that is extended by any number of additional modifier classes.
 ```html
 <div class="FlexEmbed FlexEmbed--16by9">
     [iframe|object|embed]
+</div>
+
+<div class="FlexEmbed FlexEmbed--4by3">
+    <img class="FlexEmbed-item" src="…" alt="">
 </div>
 ```
 

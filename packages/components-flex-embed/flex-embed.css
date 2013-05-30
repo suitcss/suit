@@ -3,17 +3,20 @@
    ========================================================================== */
 
 /**
- * Flexible multi-media embeds
+ * Flexible media embeds
  *
- * For use with multi-media embeds, such as videos or slideshows, that need to
- * retain a specific aspect ratio but adapt to elements of variable widths.
+ * For use with media embeds – such as videos, slideshows, or even images –
+ * that need to retain a specific aspect ratio but adapt to the width of their
+ * containing element.
  *
  * Example HTML:
  *
- * <div class="Container">
- *     <div class="FlexEmbed FlexEmbed--16by9">
- *         [iframe|object|embed]
- *     </div>
+ * <div class="FlexEmbed FlexEmbed--16by9">
+ *     <iframe class="FlexEmbed-item" src="…"></iframe>
+ * </div>
+ *
+ * <div class="FlexEmbed FlexEmbed--16by9">
+ *     [iframe|object|embed|img]
  * </div>
  */
 
@@ -24,6 +27,14 @@
     padding: 0;
 }
 
+/**
+ * The use of an explicit descendant class makes this component more flexible.
+ * However, it will work automatically for iframes, embeds, and objects to
+ * account for times when you cannot modify the attributes for 3rd party widget
+ * code.
+ */
+
+.FlexEmbed-item,
 .FlexEmbed iframe,
 .FlexEmbed embed,
 .FlexEmbed object {
