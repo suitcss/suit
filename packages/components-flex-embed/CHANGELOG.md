@@ -1,5 +1,7 @@
 === HEAD
 
+=== 1.2.0 (May 31, 2013)
+
 * Add explicit descendant class.
 
 === 1.1.1 (May 26, 2013)
