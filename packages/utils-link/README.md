@@ -29,7 +29,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
     ```html
     <button class="u-linkPseudo">
-        <a>Button content</a>
+        <a role="presentation">Button content</a>
     </button>
     ```
 

@@ -1,5 +1,7 @@
 === HEAD
 
+* Add `role="presentation"` to `linkPseudo` markup examples.
+
 === 0.1.2 (May 26, 2013)
 
 * Add bower ignores.

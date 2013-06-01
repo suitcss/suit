@@ -60,13 +60,13 @@
 /**
  * Pseudo-link
  *
- * Another interactive element, e.g., `button`, styled to look like an
- * anchor. Relies on the use of a placeholder anchor.
+ * Another interactive element, e.g., `button`, styled to look like an anchor.
+ * Relies on the use of a placeholder anchor (and ideally ARIA).
  *
  * Example HTML:
  *
  * <button class="u-linkPseudo">
- *     <a>Button content</a>
+ *     <a role="presentation">Button content</a>
  * </button>
  */
 
