@@ -1,0 +1,13 @@
+{
+    "name": "suit-base",
+    "version": "0.1.0",
+    "author": "Nicolas Gallagher",
+    "main": "base.css",
+    "dependencies": {
+        "normalize-css": "*"
+    },
+    "ignore": [
+        "CHANGELOG.md",
+        "test.html"
+    ]
+}
