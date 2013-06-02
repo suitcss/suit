@@ -1,6 +1,6 @@
-# SUIT utilities: dimension
+# SUIT utilities: offset
 
-A SUIT collection of utility classes for low-level CSS dimension traits.
+A SUIT collection of utility classes for low-level CSS offset traits.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
