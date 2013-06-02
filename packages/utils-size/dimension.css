@@ -9,10 +9,15 @@
  * Make an element shrink wrap its content.
  */
 
-.u-sizeFit {
+.u-sizeFit,
+.u-sizeFitAlt {
     display: block;
     float: left;
     width: auto !important;
+}
+
+.u-sizeFitAlt {
+    float: right;
 }
 
 /**
