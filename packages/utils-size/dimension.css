@@ -48,6 +48,8 @@
  */
 
 .u-sizeFull {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     display: block;
     width: 100%;
 }
