@@ -1,0 +1,10 @@
+{
+    "name": "suit-utils-offset",
+    "version": "0.1.0",
+    "author": "Nicolas Gallagher",
+    "main": "offset.css",
+    "ignore": [
+        "CHANGELOG.md",
+        "test.html"
+    ]
+}
