@@ -12,7 +12,8 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Available classes
 
-* `u-sizeFit` - Make an element shrink wrap its content.
+* `u-sizeFit` - Make an element shrink wrap its content by floating left.
+* `u-sizeFitAlt` - Make an element shrink wrap its content by floating right.
 * `u-sizeFill` - Make an element fill the remaining space.
 * `u-sizeFillAlt` - An alternative method to make an element fill the remaining space.
 * `u-sizeFull` - Make an element the width of its parent.
