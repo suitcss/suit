@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.0 (June 1, 2013)
+
 * Add `box-sizing:border-box` to `sizeFull`.
 * Create a `sizeFitAlt` utility for floating right.
 * Add tests for intrinsic width utilities.
