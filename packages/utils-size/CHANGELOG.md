@@ -1,5 +1,10 @@
 === HEAD
 
+* Add `box-sizing:border-box` to `sizeFull`.
+* Create a `sizeFitAlt` utility for floating right.
+* Add tests for intrinsic width utilities.
+* Fix tests.
+
 === 0.2.1 (May 26, 2013)
 
 * Add Bower ignores.
