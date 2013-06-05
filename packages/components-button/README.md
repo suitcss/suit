@@ -17,7 +17,7 @@ Like all SUIT components, suit-button relies on a base component class that is
 extended by any number of additional modifier classes.
 
 ```html
-<a class="Button Button--full" href="[url]">Sign up</button>
+<a class="Button Button--full" href="[url]">Sign up</a>
 
 <button class="Button is-disabled" type="submit">Submit</button>
 
