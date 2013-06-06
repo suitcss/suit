@@ -1,5 +1,8 @@
 === HEAD
 
+* Update 'suit-utils-dimension' to v0.3.x
+* Update 'suit-utils-state' to v0.2.x
+
 === 0.4.0 (May 26, 2013)
 
 * Update 'suit-utils-layout' to v0.2.x.
