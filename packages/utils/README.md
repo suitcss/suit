@@ -4,7 +4,7 @@ A SUIT collection of utility classes for common, reusable, low-level CSS traits.
 The collection includes dimension, display, layout, link, space, state, and
 text utilities.
 
-Read more about [SUIT's design principles](https://github.com/necolas/suit/).
+Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
@@ -12,13 +12,13 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 …is a convenient way to install all the SUIT utility packages:
 
-* [suit-utils-dimension](https://github.com/necolas/suit-utils-dimension)
-* [suit-utils-display](https://github.com/necolas/suit-utils-display)
-* [suit-utils-layout](https://github.com/necolas/suit-utils-layout)
-* [suit-utils-link](https://github.com/necolas/suit-utils-link)
-* [suit-utils-space](https://github.com/necolas/suit-utils-space)
-* [suit-utils-state](https://github.com/necolas/suit-utils-state)
-* [suit-utils-text](https://github.com/necolas/suit-utils-text)
+* [suit-utils-dimension](https://github.com/suitcss/utils-dimension)
+* [suit-utils-display](https://github.com/suitcss/utils-display)
+* [suit-utils-layout](https://github.com/suitcss/utils-layout)
+* [suit-utils-link](https://github.com/suitcss/utils-link)
+* [suit-utils-space](https://github.com/suitcss/utils-space)
+* [suit-utils-state](https://github.com/suitcss/utils-state)
+* [suit-utils-text](https://github.com/suitcss/utils-text)
 
 ## Usage
 
