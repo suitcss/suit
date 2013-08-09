@@ -1,0 +1,8 @@
+{
+    "name": "utils-display",
+    "repo": "suitcss/utils-display",
+    "version": "0.2.0",
+    "styles": ["display.css"],
+    "author": "Nicolas Gallagher",
+    "license": "MIT"
+}
