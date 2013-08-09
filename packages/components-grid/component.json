@@ -1,0 +1,8 @@
+{
+    "name": "grid",
+    "repo": "suitcss/grid",
+    "version": "0.3.1",
+    "styles": ["grid.css"],
+    "author": "Nicolas Gallagher",
+    "license": "MIT"
+}
