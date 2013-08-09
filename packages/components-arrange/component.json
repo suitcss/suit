@@ -1,0 +1,8 @@
+{
+    "name": "arrange",
+    "repo": "suitcss/arrange",
+    "version": "0.1.0",
+    "styles": ["arrange.css"],
+    "author": "Nicolas Gallagher",
+    "license": "MIT"
+}
