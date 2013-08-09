@@ -1,0 +1,8 @@
+{
+    "name": "button",
+    "repo": "suitcss/button",
+    "version": "2.0.0",
+    "styles": ["button.css"],
+    "author": "Nicolas Gallagher",
+    "license": "MIT"
+}
