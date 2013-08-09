@@ -1,0 +1,8 @@
+{
+    "name": "utils-dimension",
+    "repo": "suitcss/utils-dimension",
+    "version": "0.3.0",
+    "styles": ["dimension.css"],
+    "author": "Nicolas Gallagher",
+    "license": "MIT"
+}
