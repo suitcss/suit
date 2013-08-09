@@ -1,0 +1,11 @@
+{
+    "name": "base",
+    "repo": "suitcss/base",
+    "version": "0.1.0",
+    "styles": ["base.css"],
+    "dependencies": {
+        "necolas/normalize.css": "*"
+    },
+    "author": "Nicolas Gallagher",
+    "license": "MIT"
+}
