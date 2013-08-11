@@ -1,5 +1,8 @@
 === HEAD
 
+* Add 'suit-utils-offset' v0.1.x.
+* Add Component(1) support.
+
 === 0.5.0 (June 6, 2013)
 
 * Update 'suit-utils-dimension' to v0.3.x
