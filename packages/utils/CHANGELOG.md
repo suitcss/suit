@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.6.0 (August 11, 2013)
+
 * Add 'suit-utils-offset' v0.1.x.
 * Add Component(1) support.
 
