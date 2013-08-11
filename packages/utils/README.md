@@ -16,6 +16,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 * [suit-utils-display](https://github.com/suitcss/utils-display)
 * [suit-utils-layout](https://github.com/suitcss/utils-layout)
 * [suit-utils-link](https://github.com/suitcss/utils-link)
+* [suit-utils-offset](https://github.com/suitcss/utils-offset)
 * [suit-utils-space](https://github.com/suitcss/utils-space)
 * [suit-utils-state](https://github.com/suitcss/utils-state)
 * [suit-utils-text](https://github.com/suitcss/utils-text)

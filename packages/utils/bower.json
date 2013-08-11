@@ -7,6 +7,7 @@
     "suit-utils-display": "~0.2.0",
     "suit-utils-layout": "~0.2.0",
     "suit-utils-link": "~0.1.2",
+    "suit-utils-offset": "~0.1.0",
     "suit-utils-space": "~0.1.2",
     "suit-utils-state": "~0.2.0",
     "suit-utils-text": "~0.1.1"

@@ -7,6 +7,7 @@
         "suitcss/utils-display": "~0.2.0",
         "suitcss/utils-layout": "~0.2.0",
         "suitcss/utils-link": "~0.1.2",
+        "suitcss/utils-offset": "~0.1.0",
         "suitcss/utils-space": "~0.1.2",
         "suitcss/utils-state": "~0.2.0",
         "suitcss/utils-text": "~0.1.1"
