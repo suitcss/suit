@@ -1,5 +1,9 @@
 === HEAD
 
+* Add `!important` to `sizeXofY` declarations.
+* Remove stray `size3of9` selector.
+* Add Xof3 proportions to documentation.
+
 === 0.3.0 (June 1, 2013)
 
 * Add `box-sizing:border-box` to `sizeFull`.
