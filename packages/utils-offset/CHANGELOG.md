@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.0 (August 14, 2013)
+
 * Add `!important` to every declaration.
 * Remove stray `before3of9` and `after3of9` selectors.
 
