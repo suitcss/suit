@@ -17,7 +17,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 `X` must be an integer less than `Y`.
 
-`Y` can be any of the following numbers: 2, 4, 5, 6, 8, 10, 12.
+`Y` can be any of the following numbers: 2, 3, 4, 5, 6, 8, 10, 12.
 
 ## Usage
 
