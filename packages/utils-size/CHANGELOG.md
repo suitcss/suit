@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.4.0 (August 14, 2013)
+
 * Add `!important` to `sizeXofY` declarations.
 * Remove stray `size3of9` selector.
 * Add Xof3 proportions to documentation.
