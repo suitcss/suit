@@ -5,6 +5,7 @@
     "main": "offset.css",
     "ignore": [
         "CHANGELOG.md",
+        "component.json",
         "test.html"
     ]
 }
