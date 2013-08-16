@@ -1,5 +1,6 @@
 === HEAD
 
+* Update `utils-dimension` to v0.4.x.
 * Update Bower install directory path.
 
 === 0.3.1 (May 26, 2013)
