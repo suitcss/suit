@@ -1,5 +1,7 @@
 === HEAD
 
+* Update Bower install directory path.
+
 === 0.3.1 (May 26, 2013)
 
 * Rename `component.json` to `bower.json`.
