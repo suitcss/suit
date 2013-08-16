@@ -5,16 +5,16 @@ A SUIT component for a CSS grid. The grid makes use of `inline-block` and
 
 N.B. This component relies on particular dimensions being applied to cells in
 the grid via other classes. For example, [SUIT
-dimensions](https://github.com/necolas/suit-utils-dimensions/) or the [SUIT
-Grid Layouts](https://github.com/necolas/suit-grid-layouts/) extension.
+dimensions](https://github.com/suitcss/utils-dimensions/) or the [SUIT
+Grid Layouts](https://github.com/suitcss/grid-layouts/) extension.
 
-Read more about [SUIT's design principles](https://github.com/necolas/suit/).
+Read more about [SUIT](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-grid`
-* Download: [zip](https://github.com/necolas/suit-grid/zipball/master)
-* Git: `git clone https://github.com/necolas/suit-grid`
+* Download: [zip](https://github.com/suitcss/grid/zipball/master)
+* Git: `git clone https://github.com/suitcss/grid`
 
 ## Features
 
@@ -64,18 +64,18 @@ Or individual cells can be centered on their own line by adding the
 
 The core grid component includes no gutters by default.
 
-You may want to install or create a skin that adds gutters to the grid. This is
-the technique used to create gutters:
+You may want to create a modifier class, or use a skin that adds gutters to the
+grid. This is one technique to create gutters:
 
 ```css
 /* Grid gutters: 10px */
 
 .Grid {
-    margin: 0 -5px;
+    margin: 0 0 0 -10px;
 }
 
 .Grid-cell {
-    padding: 0 5px;
+    padding: 0 0 0 10px;
 }
 ```
 
