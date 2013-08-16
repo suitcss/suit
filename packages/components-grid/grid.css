@@ -26,13 +26,13 @@
    ========================================================================== */
 
 /**
- * Must only contain `Grid` or `Grid-cell` components as children.
+ * All content must be contained within descendent `Grid-cell` elements.
  *
  * 1. Ensure consistent default alignment.
  * 2. Remove inter-unit whitespace that appears between `inline-block` child
- *    elements. Work for all non-monospace font-families.  If you're using a
+ *    elements. Works for non-monospace font-families. If you're using a
  *    monospace base font, you will need to set the `Grid` font-family to
- *   `sans-serif` and then redeclare the monospace font on the `Grid-cell`
+ *    `sans-serif` and then redeclare the monospace font on the `Grid-cell`
  *    objects.
  * 3. Protect against WebKit bug with optimizelegibility.
  */
