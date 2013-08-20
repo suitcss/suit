@@ -1,11 +1,15 @@
-# Suit
+# SUIT
 
-A collection of small, adaptive, structural CSS modules for building web UIs and custom toolkits.
+A collection of small, adaptive, structural HTML/CSS modules built using a
+naming convention inspired by the BEM methodology.
+
+**[Documentation](doc/README.md)**.
 
 
 ## Installation
 
-Recommended: install [Bower](http://bower.io/), then run this command in your project directory:
+Recommended: install [Bower](http://bower.io/), then run this command in your
+project directory:
 
 ```
 bower install --save suit
@@ -14,76 +18,110 @@ bower install --save suit
 Alternative: (a download bundle will be available at some point)
 
 
-## Official packages
-
-Each package is stand-alone, contains its own documentation and tests, and is written to follow a common set of
-[naming conventions and authoring practices](doc/overview.md). Dependencies are best
-managed using [Bower](http://bower.io/) – a package manager for
-the web.
-
-**Utilities**:
-
-* [All](https://github.com/necolas/suit-utils/)
-* [Dimension](https://github.com/necolas/suit-utils-dimension/)
-* [Display](https://github.com/necolas/suit-utils-display/)
-* [Layout](https://github.com/necolas/suit-utils-layout/)
-* [Link](https://github.com/necolas/suit-utils-link/)
-* [Space](https://github.com/necolas/suit-utils-space/)
-* [State](https://github.com/necolas/suit-utils-state/)
-* [Text](https://github.com/necolas/suit-utils-text/)
-
-**Components**:
-
-* [Arrange](https://github.com/necolas/suit-arrange/)
-* [Button](https://github.com/necolas/suit-button/)
-* [Button group](https://github.com/necolas/suit-button-group/)
-* [Flexible embeds](https://github.com/necolas/suit-flex-embed/)
-* [Grid](https://github.com/necolas/suit-grid/)
-* [Grid Layouts](https://github.com/necolas/suit-grid-layouts/)
-
-**Themes**:
-
-* (soon)
-
-
 ## Features
 
-**[Read about the design decisions and authoring principles of Suit](doc)**.
-
-* Highly modular; each module is individually versioned.
-* Provides common, low-level utility classes.
-* Provides common structural UI patterns.
-* Responsive grid.
+* Very small footprint.
+* Individually versioned modules.
+* Provides common, utility classes.
+* Provides common, structural UI patterns.
 * Consistent class name conventions.
+* Responsive friendly.
 * Work more with HTML than CSS.
 * Theme-independence.
 * Designed for large web sites and applications.
-* Easy to build your application's custom toolkit on top of Suit.
-* Very small footprint.
+* Easy to extend and build upon.
 
 
-## Why?
+## Official packages
 
-* Monolithic UI frameworks don't make it easy to use, share, and version
-  specific UI traits and components.
-* Complex applications need to loosely couple content, document semantics, and
-  presentational structure to make it easier to change any layer while minimizing the
-  impact on other layers.
-* Complex applications need to clearly surface and scope the relationship
-  between all HTML classes (and their attached styles and behaviour).
-* Complex applications can accumulate technical debt when components are not
-  kept independent of one-another, or the dependencies aren't clear.
+Each package is stand-alone, contains its own documentation and tests, and is
+written to follow a common set of [naming
+conventions](doc/naming-conventions.md). Dependencies are best managed using
+[Bower](http://bower.io/) – a package manager for the web.
+
+* [Base](https://github.com/suitcss/base/)
+
+**Utilities**:
+
+* [All](https://github.com/suitcss/utils/)
+* [Dimension](https://github.com/suitcss/utils-dimension/)
+* [Display](https://github.com/suitcss/utils-display/)
+* [Layout](https://github.com/suitcss/utils-layout/)
+* [Link](https://github.com/suitcss/utils-link/)
+* [Offset](https://github.com/suitcss/utils-offset/)
+* [Space](https://github.com/suitcss/utils-space/)
+* [State](https://github.com/suitcss/utils-state/)
+* [Text](https://github.com/suitcss/utils-text/)
+
+**Components**:
+
+* [Arrange](https://github.com/suitcss/arrange/)
+* [Button](https://github.com/suitcss/button/)
+* [Button group](https://github.com/suitcss/button-group/)
+* [Flexible embeds](https://github.com/suitcss/flex-embed/)
+* [Form](https://github.com/suitcss/form/)
+* [Grid](https://github.com/suitcss/grid/)
+* [Grid Layouts](https://github.com/suitcss/grid-layouts/)
+* [Table](https://github.com/suitcss/table/)
 
 
-## How?
+## Example
 
-* Build progressive enhancement into the UI layers themselves. Use low-level
-  utilities to build up a skeleton UI.
-* Codify the separation of responsibilities by using structured class names
-  that reflect different purposes and relationships.
-* Provide clear, constrained, and explicit authoring principles.
-* Use multiple classes in HTML templates to combine styles.
-* Organize discrete UI features into small, standalone packages / files.
+HTML:
+
+```html
+<article class="app-Excerpt u-cf">
+    <img class="app-Excerpt-thumbnail u-sizeFit" src="{src}" alt="">
+    <div class="u-sizeFill">
+        <h1 class="app-Excerpt-title u-h3"><a href="{url}">{content}</a></h1>
+        <p class="app-Excerpt-text">{content}</p>
+    </div>
+</article>
+```
+
+CSS:
+
+```css
+/**
+ * Excerpt component
+ *
+ * @require u-cf
+ * @require u-sizeFit
+ * @require u-sizeFill
+ *
+ * <article class="app-Excerpt u-cf">
+ *     <img class="app-Excerpt-thumbnail u-sizeFit" src="{src}" alt="">
+ *     <div class="u-sizeFill">
+ *         <h1 class="app-Excerpt-title">{content}</h1>
+ *         <p class="app-Excerpt-text">{content}</p>
+ *     </div>
+ * </article>
+ */
+
+.app-Excerpt {
+    line-height: 1.2857em;
+}
+
+.app-Excerpt-thumbnail {
+    border: 2px solid #000;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.app-Excerpt-title {
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 15px;
+    padding-bottom: 5px;
+}
+```
+
+
+## Suggested tooling
+
+* [autoprefixer](https://github.com/ai/autoprefixer)
+* [csslint](https://github.com/stubbornella/csslint)
+* [html-inspector](https://github.com/philipwalton/html-inspector)
+* [rework](https://github.com/visionmedia/rework)
 
 
 ## Browser support
