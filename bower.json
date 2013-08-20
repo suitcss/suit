@@ -1,14 +1,15 @@
 {
-    "name": "suit",
-    "version": "0.2.0",
-    "author": "Nicolas Gallagher",
-    "dependencies": {
-        "suit-utils": "~0.4.0",
-        "suit-arrange": "~0.1.0",
-        "suit-button": "~2.0.0",
-        "suit-button-group": "~1.1.0",
-        "suit-flex-embed": "~1.1.0",
-        "suit-grid": "~0.3.0",
-        "suit-grid-layouts": "~0.2.0"
-    }
+  "name": "suit",
+  "version": "0.2.0",
+  "author": "Nicolas Gallagher",
+  "dependencies": {
+    "suit-base": "~0.1.0",
+    "suit-utils": "~0.5.0",
+    "suit-arrange": "~0.1.0",
+    "suit-button": "~2.0.0",
+    "suit-button-group": "~1.1.0",
+    "suit-flex-embed": "~1.2.0",
+    "suit-grid": "~0.3.0",
+    "suit-grid-layouts": "~0.2.0"
+  }
 }
