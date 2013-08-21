@@ -197,11 +197,33 @@ for the child `Dropdown` component to render as expected.
 <article class="Tweet with-Dropdown">
     [other content]
     <div class="Dropdown is-closed">
-            …
+        ...
     </div>
 </article>
 ```
 
+You can also prefix the full set of `ComponentName-*` class patterns if
+necessary.
+
+
+```css
+/* tweet.css */
+
+/* Provide ability to toggle Tweet actions visibile on hover of ancestor */
+.with-Tweet-actions--toggleVisibility { visibility: hidden; }
+.with-Tweet-actions--toggleVisibility:hover .Tweet-actions { visibility: visible; }
+```
+
+```html
+<div class="Stream-item with-Tweet-actions--toggleVisibility">
+    <article class="Tweet">
+        [other content]
+        <div class="Tweet-actions">
+            ...
+        </div>
+    </article>
+</div>
+```
 
 ## Other
 

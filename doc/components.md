@@ -99,16 +99,20 @@ are 3 main reasons for this:
 3. To avoid increasing the specificity of selectors unnecessarily.
 
 If you need variants on a component, use modifier classes. If you need
-ancestral context, use a dedicated "mixin" class that is the responsibility of
-the component being affected.
+ancestral context, use a dedicated "mixin" class (`with-ComponentName`) that is
+the responsibility of the component being affected.
 
 GOOD:
 
 ```css
 .Tweet { /* ... */ }
+
+/* Modifier */
 .Tweet--withExpansion { /* ... */ }
-.with-tweetActionsToggle .Tweet-actions { /* ... */ }
-.with-tweetActionsToggle:hover .Tweet-actions { /* ... */ }
+
+/* Mixin */
+.with-Tweet-actions--toggleVisibility .Tweet-actions { /* ... */ }
+.with-Tweet-actions--toggleVisibility:hover .Tweet-actions { /* ... */ }
 ```
 
 BAD:
@@ -178,7 +182,7 @@ Components may have local state. You should scope state classes (`is-*`) to the
 component's class:
 
 ```css
-.Component.is-inSomeState { /* ... */ }
+.Component.is-someState { /* ... */ }
 ```
 
 ### Document thoroughly
