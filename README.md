@@ -1,7 +1,9 @@
 # SUIT
 
-A collection of small, adaptive, structural HTML/CSS modules built using a
-naming convention inspired by the BEM methodology.
+An HTML/CSS framework for creating loosely coupled UI components.
+
+SUIT provides a collection of small, adaptive, structural HTML/CSS modules
+built using a naming convention inspired by the BEM methodology.
 
 **[Documentation](doc/README.md)**.
 
