@@ -1,5 +1,7 @@
 === HEAD
 
+* Rewrite the documentation.
+
 === 0.2.0 (May 26, 2013)
 
 * Add 'suit-arrange' component.
