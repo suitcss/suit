@@ -1,0 +1,7 @@
+{
+    "name": "<%= modulePackageName %>",
+    "repo": "user/<%= modulePackageName %>",
+    "version": "0.0.0",
+    "styles": ["<%= moduleFileName %>"],
+    "license": "MIT"
+}

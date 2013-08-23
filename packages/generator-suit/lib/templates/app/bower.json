@@ -1,0 +1,15 @@
+{
+    "name": "<%= modulePackageName %>",
+    "description": "",
+    "version": "0.0.0",
+    "main": "<%= moduleFileName %>",
+    "ignore": [
+        "test",
+        ".csslintrc",
+        ".travis.yml",
+        "CHANGELOG.md",
+        "component.json",
+        "package.json",
+        "test.html"
+    ]
+}
