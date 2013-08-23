@@ -64,6 +64,17 @@ itself with realising a single UI pattern. Don't try to do too much.
 If a component file is starting to get quite large, it probably consists of
 multiple, indepedent components and should be broken up into multiple files.
 
+### Document thoroughly
+
+Component names should be as short as possible but as long as necessary. Files
+should small but well commented. These are some of the questions your comments
+should answer:
+
+* What is the component for?
+* How should it be used?
+* What should the corresponding HTML look like?
+* What are the known limitations?
+
 ### Rely on utilities
 
 Utilities are simple, shared abstractions that components may depend on. Any
@@ -184,14 +195,3 @@ component's class:
 ```css
 .Component.is-someState { /* ... */ }
 ```
-
-### Document thoroughly
-
-Component names should be as short as possible but as long as necessary. Files
-should small but well commented. These are some of the questions your comments
-should answer:
-
-* What is the component for?
-* How should it be used?
-* What should the corresponding HTML look like?
-* What are the known limitations?
