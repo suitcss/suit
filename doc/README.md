@@ -5,7 +5,6 @@
 * [Design principles](design-principles.md)
 * [Naming conventions](naming-conventions.md)
     * [u-utilityName](naming-conventions.md#u-utilityName)
-    * [u-isStateName](naming-conventions.md#u-isStateName)
     * [ComponentName](naming-conventions.md#ComponentName)
     * [ComponentName--modifierName](naming-conventions.md#ComponentName--modifierName)
     * [ComponentName-descendantName](naming-conventions.md#ComponentName-descendantName)

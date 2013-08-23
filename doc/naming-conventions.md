@@ -12,7 +12,6 @@ of finer separation of responsibilities is build upon it.
 **Table of contents**
 
 * [u-utilityName](#u-utilityName)
-* [u-isStateName](#u-isStateName)
 * [ComponentName](#ComponentName)
 * [ComponentName--modifierName](#ComponentName--modifierName)
 * [ComponentName-descendantName](#ComponentName-descendantName)
@@ -26,13 +25,13 @@ of finer separation of responsibilities is build upon it.
 Low-level structural, positional, and visual traits. Utilities can be applied
 directly to any element within a component.
 
-Syntax: `u-[is]<utilityName>`
+Syntax: `u-<utilityName>`
 
 <a name="u-utilityName"></a>
 ### u-utilityName
 
-General utilities must use a camel case name. What follows is an example of how
-various utilities can be used to create a simple layout.
+Utilities must use a camel case name. What follows is an example of how various
+utilities can be used to create a simple layout.
 
 ```html
 <div class="u-cf"> <!-- contain floats -->
@@ -55,21 +54,6 @@ element. The descendant is targetted using a class of the form:
     No underline on hover.
 </a>
 ```
-
-<a name="u-isStateName"></a>
-### u-isStateName
-
-State utilities must start their name with `is`. They are subset of utilities,
-focused on global state such as hiding elements.  Can be applied/removed with
-JS to modify the UI.
-
-```html
-<span class="Icon Icon--save">
-  <span class="u-isHiddenVisually">Save</span>
-</span>
-```
-
-N.B. These must not be used for custom component-level states.
 
 
 ## [Components](components.md)

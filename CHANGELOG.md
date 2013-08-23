@@ -1,5 +1,6 @@
 === HEAD
 
+* Simplify utility naming conventions.
 * Rewrite the documentation.
 
 === 0.2.0 (May 26, 2013)
