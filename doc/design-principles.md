@@ -31,12 +31,12 @@ properties in a single rule. CSS rules should have a high cohesion.
 ## Extension over direct modification
 
 Use additional classes (applied directly to the element that is an instance of
-the base component) should be used to extend or overwrite the base styles of a
-module. Avoid directly modifying the base classes unless it is to fix a bug.
+the base component) to extend or overwrite the base styles of a module. Avoid
+directly modifying the base classes unless it is to fix a bug.
 
 Limit the total visual variation within a component. Modifier classes should
 not radically change the component or require the consumer of the component to
-change their expectations of how it will function. Create a new component.
+change their expectations of how it will function.
 
 
 <a name="composition"></a>
@@ -61,10 +61,8 @@ Prefer multiple, specific modules over a single, generic one. This helps to
 avoid tight coupling between unrelated modules, making it easier to make
 changes without inadvertantly affecting other modules.
 
-Split modules that attempt to do too much into smaller, more specific ones.
-This way other components or templates only have to know about the classes that
-are of interest to them, and you can reduce the number of levels in the UI
-system.
+Avoid creating components that attempt to do too much. Smaller, more specific
+components are preferred.
 
 Don't couple your styles to particular DOM elements or to a particular DOM
 structure (i.e., specific siblings, or a reliance on a node always being a
