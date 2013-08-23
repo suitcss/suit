@@ -1,43 +1,43 @@
 # SUIT utilities
 
 Utilities are structural, positional, and visual traits. They are very small
-and focused, usually concerne with just one or two traits.
+and focused, usually concerned with just one or two traits.
 
 (Read about SUIT's [naming conventions](naming-conventions.md).)
 
 
 ## When to use utilities
 
-Utilities should be used when you always want something to be applied (e.g., in
-viewport-agnostic situations).
+Utilities should be used when you always want a trait to be applied (i.e., they
+are viewport-size agnostic).
 
-Don’t use `u-pullLeft` to float a large part of the UI (like a sidebar) if you
-don't intend to float it at different viewport widths. But **do** use the
-utilities for things like positioning avatars or controlling text wrapping,
-etc; anything that is not going to change in kind at different viewport
-widths.
+For example, don’t use `u-pullLeft` to float a large part of the UI (like a
+sidebar) if you don't intend to float it at different viewport widths. But
+**do** use utilities for positioning avatars or controlling text wrapping and
+color, etc.
 
-If you find that a design change means that it is now problematic to continue
-using a specific utility in a component's template, just move the presentation
-into the component itself and remove the utility from the HTML template. It's
-pretty easy to migrate presentation between layers the utility and component
-layers of the CSS.
+If you find that a design change means that it becomes problematic to continue
+using a specific utility in a component's template, then shift the presentation
+into the component itself, and remove the utility from the HTML template. It's
+pretty easy to migrate presentation between the utility and component layers of
+the CSS.
 
 
 ## Using utilities
 
-Check the inline documentation for a utility to find information about what it
-does and how it does it.
+Make sure to read the documentation within the CSS files of utilities. It will
+contain information about each utility class and the implementation.
 
-SUIT's utilities are grouped by type. The names of utilities with similar focus
-usually start with a common string, e.g., `u-textCenter`, `u-textTruncate`;
-`u-linkClean`, `u-linkBlock`.
+SUIT's utilities are grouped by type. The names of utilities with similar
+concerns usually start with a common string, e.g., `u-textCenter`,
+`u-textTruncate`; `u-linkClean`, `u-linkBlock`; `u-isHidden`,
+`u-isDraggable`.
 
-Any classes with obfuscated names, e.g., `u-cf` and `u-nbfc`, are either
-abstract or very commonly used utilities with otherwise excessively long names.
-For example, the `u-cf` utility is used to "contain floats" without clipping
-any overflow; the `u-nbfc` utility is used to create a "new block formatting
-context".
+Any classes with terse names, e.g., `u-cf` and `u-nbfc`, are either
+particularly abstract or very commonly used utilities with otherwise
+excessively long names.  For example, the `u-cf` utility is used to "contain
+floats" without clipping any overflow; the `u-nbfc` utility is used to create a
+"new block formatting context".
 
 ```html
 <div class="Tweet u-cf">
@@ -52,12 +52,13 @@ context".
 
 ### Side-stepping specificity issues
 
-If you need to avoid cascade resolution issues, look to use extra HTML.
+If you need to avoid cascade resolution issues, you may wish to use extra
+HTML.
 
 Let's assume that you always want the color of a link's text to be "muted". In
-the example below, muted text color would be applied by default. But if a color
-value is set for `a:hover`, it will replace the muted color on hover. This is
-because `a:hover` has a higher CSS specificity than `.class`:
+the example below, the muted text color would be applied by default. But if a
+color value is set for `a:hover`, it will override the text's muted color on
+hover. This is because `a:hover` has a higher CSS specificity than `.class`:
 
 ```css
 a { color: black; }
@@ -91,7 +92,7 @@ precisely what a utility does, how it does it, and any short-comings it may
 have.
 
 If a utility needs to apply styles to a descendant element, that element should
-be targetted using a class that is made from the full utility name, followed by
+be targeted using a class that is made from the full utility name, followed by
 a hyphen and a camel case descendant name:
 
 ```html
