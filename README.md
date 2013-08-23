@@ -66,6 +66,9 @@ conventions](doc/naming-conventions.md). Dependencies are best managed using
 * [Grid Layouts](https://github.com/suitcss/grid-layouts/)
 * [Table](https://github.com/suitcss/table/)
 
+N.B. There is a [Yeoman generator for creating SUIT component
+packages](https://github.com/suitcss/generator-suit).
+
 
 ## Example
 
@@ -123,6 +126,7 @@ CSS:
 * [autoprefixer](https://github.com/ai/autoprefixer)
 * [csslint](https://github.com/stubbornella/csslint)
 * [html-inspector](https://github.com/philipwalton/html-inspector)
+* [generator-suit](https://github.com/suitcss/generator-suit)
 * [rework](https://github.com/visionmedia/rework)
 
 
