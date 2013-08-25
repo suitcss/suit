@@ -58,7 +58,7 @@ Or individual cells can be centered on their own line by adding the
 <div class="Grid">
     <div class="Grid-cell u-size1of2"></div>
     <div class="Grid-cell u-size1of2"></div>
-    <div class="Grid-cell Grid--center u-size3of4"></div>
+    <div class="Grid-cell Grid-cell--center u-size3of4"></div>
 </div>
 ```
 
