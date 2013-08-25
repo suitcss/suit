@@ -38,3 +38,13 @@ ul {
     list-style: none;
     padding: 0;
 }
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+
+[tabindex="-1"] {
+  outline: none;
+}
