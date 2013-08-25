@@ -4,15 +4,15 @@ A SUIT component for horizontally and vertically arranging a single row of
 cells. Includes modifier classes for equal-width cells and gutter-separated
 cells. Makes use of CSS table layout.
 
-Read more about [SUIT's design principles](https://github.com/necolas/suit/).
+Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
-[Live test rendering](http://necolas.github.io/suit-arrange/test.html)
+[Live test rendering](http://suitcss.github.io/arrange/test.html)
 
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-arrange`
-* Download: [zip](https://github.com/necolas/suit-arrange/zipball/master)
-* Git: `git clone https://github.com/necolas/suit-arrange.git`
+* Download: [zip](https://github.com/suitcss/arrange/zipball/master)
+* Git: `git clone https://github.com/suitcss/arrange.git`
 
 ## Available classes
 
