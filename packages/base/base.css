@@ -28,6 +28,10 @@ fieldset {
     padding: 0;
 }
 
+iframe {
+    border: 0;
+}
+
 ol,
 ul {
     margin: 0;
