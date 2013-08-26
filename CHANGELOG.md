@@ -1,5 +1,8 @@
 === HEAD
 
+* Update 'suit-base' to ~0.2.0.
+* Update 'suit-utils' to ~0.6.0.
+* Update 'suit-button-group' to ~1.2.0.
 * Relax rules to do with JavaScript's use of HTML classes.
 * Simplify utility naming conventions.
 * Rewrite the documentation.

@@ -3,13 +3,13 @@
     "repo": "suitcss/suit",
     "version": "0.2.0",
     "dependencies": {
-        "suitcss/base": "~0.1.0",
-        "suitcss/utils": "~0.5.0",
+        "suitcss/base": "~0.2.0",
+        "suitcss/utils": "~0.6.0",
         "suitcss/arrange": "~0.1.0",
         "suitcss/button": "~2.0.0",
-        "suitcss/button-group": "~1.1.0",
-        "suitcss/flex-embed": "~1.1.0",
-        "suitcss/grid": "~0.3.0",
+        "suitcss/button-group": "~1.2.0",
+        "suitcss/flex-embed": "~1.2.0",
+        "suitcss/grid": "~0.3.1",
         "suitcss/grid-layouts": "~0.2.0"
     },
     "author": "Nicolas Gallagher",
