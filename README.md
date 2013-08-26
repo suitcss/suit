@@ -27,10 +27,11 @@ Alternative: (a download bundle will be available at some point)
 * Provides common, utility classes.
 * Provides common, structural UI patterns.
 * Consistent class name conventions.
+* Testing friendly.
 * Responsive friendly.
 * Work more with HTML than CSS.
 * Theme-independence.
-* Designed for large web sites and applications.
+* Designed for teams working on large web sites and applications.
 * Easy to extend and build upon.
 
 
