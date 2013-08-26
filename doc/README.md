@@ -10,7 +10,7 @@
     * [ComponentName-descendantName](naming-conventions.md#ComponentName-descendantName)
     * [is-stateOfComponent](naming-conventions.md#is-stateOfComponent)
     * [with-ComponentName](naming-conventions.md#with-ComponentName)
-    * [js-aName](naming-conventions.md#js-aName)
+    * [js-someName](naming-conventions.md#js-someName)
 * [Utilities](utilities.md)
 * [Components](components.md)
 * [API](api.md)

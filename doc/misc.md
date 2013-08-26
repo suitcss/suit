@@ -2,32 +2,23 @@
 
 ## Working with JavaScript
 
-### js-aName
+### js-someName
 
-JavaScript should only rely on `js-*` classes in selectors (unless they need to
-be very general, e.g., `a`). _Never_ apply styles to `js-*` classes.
+Use the `id` attribute and `js-*` class names are reserved for JavaScript-only
+use. Application-specific data or content can be stored in `data-*`
+attributes.
 
-Use the `id` attribute and `js-*` class names for JavaScript hooks. You should
-avoid selecting DOM nodes using selectors that are reserved for CSS. Data or
-content can be stored in `data-*` attributes.
+* JavaScript may use any component-level classes in selectors.
+* JavaScript may add/remove the component-level state class `is-expanding`.
+* JavaScript may add/remove utilities classes.
+* JavaScript may JavaScript-specific utility classes prefixed with `js-`.
 
-This Tweet component has a component-level state (expanding), a global-level
-state (actionable), and a JavaScript-hook (toggle-expand).
+The example below includes a dedicated JavaScript utility class to which
+behaviour is bound. It is independent of any specific UI component.
 
 ```html
-<div class="Tweet is-expanding u-isActionable js-toggleExpand">
-    …
-</div>
+<a class="js-showProfile" data-username="necolas" href="{url}">...</a>
 ```
-
-* JavaScript should **not** make use of the `Tweet` class.
-* JavaScript may add/remove the component-level state class `is-expanding`.
-* JavaScript may add/remove the global-level state class `u-isActionable`.
-* JavaScript may use the `js-toggleExpand` class as a selector.
-
-JavaScript can apply or remove state classes, e.g., `is-animating` or
-`u-isHidden` in order to apply specific styles that accompany a JavaScript
-component, state, or event.
 
 
 ## Importing

@@ -1,5 +1,6 @@
 === HEAD
 
+* Relax rules to do with JavaScript's use of HTML classes.
 * Simplify utility naming conventions.
 * Rewrite the documentation.
 
