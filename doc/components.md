@@ -67,8 +67,8 @@ multiple, indepedent components and should be broken up into multiple files.
 ### Document thoroughly
 
 Component names should be as short as possible but as long as necessary. Files
-should small but well commented. These are some of the questions your comments
-should answer:
+should be small but well commented. These are some of the questions your
+comments should answer:
 
 * What is the component for?
 * How should it be used?
@@ -82,7 +82,7 @@ number of utilities may be included in a component's HTML if they help you to
 create the intended outcome.
 
 ```html
-/* Tweet component template */
+<!-- Tweet component template -->
 <div class="Tweet">
     <a class="u-linkComplex" href="https://twitter.com/{user.screenname}">
         <img class="u-objLeft" src="{user.avatar}" alt="">

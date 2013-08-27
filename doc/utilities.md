@@ -109,7 +109,7 @@ widely used in the application.
 
 ## Modifiying utilities
 
-Utilities are should not be edited while in use, unless it is to fix a bug.
+Utilities should not be edited while in use, unless it is to fix a bug.
 Modifications to utilities cascade throughout the application and should be
 made with extreme care.
 
