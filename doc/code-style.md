@@ -280,12 +280,12 @@ in useful diffs and blames.
 .selector-3[type="text"] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    font-family: helvetica, arial, sans-serif;
-    color: #333;
     background: #fff;
     background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+    box-sizing: border-box;
+    color: #333;
+    display: block;
+    font-family: helvetica, arial, sans-serif;
 }
 
 .selector-a,
@@ -374,8 +374,8 @@ An example of various conventions.
  */
 
 .Grid {
-    height: 100%;
     font-size: 0; /* 1 */
+    height: 100%;
     white-space: nowrap; /* 2 */
 }
 
@@ -384,22 +384,22 @@ An example of various conventions.
  *
  * No explicit width by default. Extend with `.Grid-cell--n` classes.
  *
- * 1. Set the inter-cell spacing
- * 2. Reset white-space inherited from `.Grid`
- * 3. Reset font-size inherited from `.Grid`
+ * 1. Reset font-size inherited from `.Grid`
+ * 2. Set the inter-cell spacing
+ * 3. Reset white-space inherited from `.Grid`
  */
 
 .Grid-cell {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    box-sizing: border-box;
-    height: 100%;
-    padding: 0 10px; /* 1 */
     border: 2px solid #333;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 16px; /* 1 */
+    height: 100%;
+    overflow: hidden;
+    padding: 0 10px; /* 2 */
+    position: relative;
     vertical-align: top;
-    white-space: normal; /* 2 */
-    font-size: 16px; /* 3 */
+    white-space: normal; /* 3 */
 }
 
 /* Cell states */
