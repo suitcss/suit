@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.0 (August 28, 2013)
+
 * Add CSS linting.
 * Remove `word-break: break-word`.
 * Add `color` inheritance utilities.
