@@ -16,10 +16,10 @@
 
 .u-textTruncate {
     max-width: 100%; /* 1 */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    word-wrap: normal; /* 2 */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important; /* 2 */
 }
 
 /**
@@ -29,9 +29,9 @@
  */
 
 .u-textBreak {
-    word-break: break-all;
-    word-break: break-word;
-    word-wrap: break-word;
+    word-break: break-all !important;
+    word-break: break-word !important;
+    word-wrap: break-word !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -41,13 +41,13 @@
  */
 
 .u-textCenter {
-    text-align: center;
+    text-align: center !important;
 }
 
 .u-textLeft {
-    text-align: left;
+    text-align: left !important;
 }
 
 .u-textRight {
-    text-align: right;
+    text-align: right !important;
 }
