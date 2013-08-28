@@ -1,5 +1,7 @@
 === HEAD
 
+* Add CSS linting.
+* Remove `word-break: break-word`.
 * Add `color` inheritance utilities.
 * Add `!important` to declarations.
 * Add Component(1) support.
