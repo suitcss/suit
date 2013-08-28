@@ -1,5 +1,9 @@
 === HEAD
 
+* Add `color` inheritance utilities.
+* Add `!important` to declarations.
+* Add Component(1) support.
+
 === 0.1.1 (May 26, 2013)
 
 * Add Bower ignores.
