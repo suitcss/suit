@@ -5,6 +5,16 @@
         <title>Text [utility] - SUIT</title>
         <link rel="stylesheet" href="text.css">
         <style>
+            a {
+                color: blue;
+            }
+
+            a:hover,
+            a:focus,
+            a:active {
+                color: red;
+            }
+
             .dev-Box {
                 background: #ddd;
                 margin-bottom: 10px;
@@ -13,6 +23,27 @@
         </style>
     </head>
     <body>
+        <h3>u-textCenter</h3>
+        <div class="dev-Box">
+            <div class="u-textCenter">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+
+        <h3>u-textLeft</h3>
+        <div class="dev-Box">
+            <div class="u-textLeft">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+
+        <h3>u-textRight</h3>
+        <div class="dev-Box">
+            <div class="u-textRight">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+
         <h3>u-textTruncate</h3>
         <div class="dev-Box">
             <div class="u-textTruncate">
@@ -27,25 +58,14 @@
             </div>
         </div>
 
-        <h3>u-textLeft</h3>
+        <h3>u-textInheritColor</h3>
         <div class="dev-Box">
-            <div class="u-textLeft">
-                Lorem ipsum dolor sit amet.
-            </div>
+            <a class="u-textInheritColor" href="#">Should be black, but red on hover</a>
         </div>
 
-        <h3>u-textCenter</h3>
+        <h3>u-textInheritAllColor</h3>
         <div class="dev-Box">
-            <div class="u-textCenter">
-                Lorem ipsum dolor sit amet.
-            </div>
-        </div>
-
-        <h3>u-textRight</h3>
-        <div class="dev-Box">
-            <div class="u-textRight">
-                Lorem ipsum dolor sit amet.
-            </div>
+            <a class="u-textInheritAllColor" href="#">Should be black, and black on hover</a>
         </div>
     </body>
 </html>
