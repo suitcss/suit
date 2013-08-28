@@ -3,6 +3,22 @@
    ========================================================================== */
 
 /**
+ * Horizontal text alignment
+ */
+
+.u-textCenter {
+    text-align: center !important;
+}
+
+.u-textLeft {
+    text-align: left !important;
+}
+
+.u-textRight {
+    text-align: right !important;
+}
+
+/**
  * Text truncation
  *
  * Prevent text from wrapping onto multiple lines, and truncate with an
@@ -34,20 +50,21 @@
     word-wrap: break-word !important;
 }
 
-/* -------------------------------------------------------------------------- */
-
 /**
- * Horizontal text alignment
+ * Inherit the ancestor's text color.
  */
 
-.u-textCenter {
-    text-align: center !important;
+.u-textInheritColor {
+  color: inherit;
 }
 
-.u-textLeft {
-    text-align: left !important;
-}
+/**
+ * Inherit the ancestor's text color for all states.
+ */
 
-.u-textRight {
-    text-align: right !important;
+.u-textInheritAllColor,
+.u-textInheritAllColor:hover,
+.u-textInheritAllColor:focus,
+.u-textInheritAllColor:active {
+  color: inherit;
 }
