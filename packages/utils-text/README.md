@@ -7,6 +7,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-utils-text`
+* [Component(1)](http://component.io/): `component install suitcss/utils-text`
 * Download: [zip](https://github.com/suitcss/utils-text/zipball/master)
 * Git: `git clone https://github.com/suitcss/utils-text.git`
 
