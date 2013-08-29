@@ -7,6 +7,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-utils-dimension`
+* [Component(1)](http://component.io/): `component install suitcss/utils-dimension`
 * Download: [zip](https://github.com/suitcss/utils-dimension/zipball/master)
 * Git: `git clone https://github.com/suitcss/utils-dimension.git`
 
