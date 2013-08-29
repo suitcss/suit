@@ -11,13 +11,13 @@
 
 .u-sizeFit,
 .u-sizeFitAlt {
-    display: block;
-    float: left;
+    display: block !important;
+    float: left !important;
     width: auto !important;
 }
 
 .u-sizeFitAlt {
-    float: right;
+    float: right !important;
 }
 
 /**
@@ -26,8 +26,8 @@
  */
 
 .u-sizeFill {
-    display: block;
-    overflow: hidden;
+    display: block !important;
+    overflow: hidden !important;
     width: auto !important;
 }
 
@@ -38,9 +38,9 @@
  */
 
 .u-sizeFillAlt {
-    display: table-cell;
-    max-width: 100%;
-    width: 10000px;
+    display: table-cell !important;
+    max-width: 100% !important;
+    width: 10000px !important;
 }
 
 /**
@@ -48,10 +48,10 @@
  */
 
 .u-sizeFull {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important;
 }
 
 /* Proportional widths
