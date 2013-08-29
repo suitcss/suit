@@ -2,13 +2,13 @@
 
 A SUIT collection of utility classes for low-level CSS dimension traits.
 
-Read more about [SUIT's design principles](https://github.com/necolas/suit/).
+Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-utils-dimension`
-* Download: [zip](https://github.com/necolas/suit-utils-dimension/zipball/master)
-* Git: `git clone https://github.com/necolas/suit-utils-dimension.git`
+* Download: [zip](https://github.com/suitcss/utils-dimension/zipball/master)
+* Git: `git clone https://github.com/suitcss/utils-dimension.git`
 
 ## Available classes
 
@@ -21,7 +21,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Usage
 
-Please refer to the README for [SUIT utils](https://github.com/necolas/suit-utils/)
+Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
 
 ## Browser support
 
