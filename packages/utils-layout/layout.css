@@ -3,6 +3,27 @@
    ========================================================================== */
 
 /**
+ * Vertical alignment utilities
+ * Depends on an appropriate `display` value.
+ */
+
+.u-alignTop {
+    vertical-align: top !important;
+}
+
+.u-alignMiddle {
+    vertical-align: middle !important;
+}
+
+.u-alignBaseline {
+    vertical-align: baseline !important;
+}
+
+.u-alignBottom {
+    vertical-align: bottom !important;
+}
+
+/**
  * Contain floats
  *
  * Make an element expand to contain floated children.
@@ -37,7 +58,7 @@
  */
 
 .u-nbfc {
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 /**
@@ -53,11 +74,9 @@
  */
 
 .u-nbfcAlt {
-    display: table-cell; /* 1 */
-    width: 10000px; /* 2 */
+    display: table-cell !important; /* 1 */
+    width: 10000px !important; /* 2 */
 }
-
-/* -------------------------------------------------------------------------- */
 
 /**
  * Floats
@@ -70,8 +89,6 @@
 .u-pullRight {
     float: right !important;
 }
-
-/* -------------------------------------------------------------------------- */
 
 /**
  * Object position helpers.
@@ -100,27 +117,4 @@
 .u-objRight img {
     display: block; /* 1 */
     max-width: none; /* 2 */
-}
-
-/* -------------------------------------------------------------------------- */
-
-/**
- * Vertical alignment utilities
- * Depends on an appropriate `display` value.
- */
-
-.u-alignTop {
-    vertical-align: top !important;
-}
-
-.u-alignMiddle {
-    vertical-align: middle !important;
-}
-
-.u-alignBaseline {
-    vertical-align: baseline !important;
-}
-
-.u-alignBottom {
-    vertical-align: bottom !important;
 }

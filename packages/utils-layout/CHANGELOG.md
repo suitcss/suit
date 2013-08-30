@@ -1,5 +1,6 @@
 === HEAD
 
+* Add `!important` to more declarations.
 * Add CSS linting.
 * Add Component(1) support.
 
