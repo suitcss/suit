@@ -1,7 +1,7 @@
 {
     "name": "utils-layout",
     "repo": "suitcss/utils-layout",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "styles": ["layout.css"],
     "author": "Nicolas Gallagher",
     "license": "MIT"

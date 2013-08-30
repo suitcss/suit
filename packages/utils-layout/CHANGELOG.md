@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.1 (August 30, 2013)
+
 * Add `!important` to more declarations.
 * Add CSS linting.
 * Add Component(1) support.
