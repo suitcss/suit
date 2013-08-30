@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.1 (August 30, 2013)
+
 * Add CSS linting and configuration.
 * Add Component(1) support.
 
