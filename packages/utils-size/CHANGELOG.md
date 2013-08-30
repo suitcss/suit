@@ -1,5 +1,8 @@
 === HEAD
 
+* Add CSS linting.
+* Add `!important` to remaining declarations.
+
 === 0.4.0 (August 14, 2013)
 
 * Add `!important` to `sizeXofY` declarations.
