@@ -2,13 +2,13 @@
 
 A SUIT collection of utility classes for low-level CSS display traits.
 
-Read more about [SUIT's design principles](https://github.com/necolas/suit/).
+Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-utils-display`
-* Download: [zip](https://github.com/necolas/suit-utils-display/zipball/master)
-* Git: `git clone https://github.com/necolas/suit-utils-display.git`
+* Download: [zip](https://github.com/suitcss/utils-display/zipball/master)
+* Git: `git clone https://github.com/suitcss/utils-display.git`
 
 ## Available classes
 
@@ -20,7 +20,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Usage
 
-Please refer to the README for [SUIT utils](https://github.com/necolas/suit-utils/)
+Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
 
 ## Browser support
 
