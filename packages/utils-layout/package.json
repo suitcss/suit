@@ -1,0 +1,12 @@
+{
+  "name": "suit-utils-layout",
+  "private": true,
+  "version": "0.2.0",
+  "devDependencies": {
+    "csslint": ">=0.9.10"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/csslint *.css"
+  }
+}
+

@@ -1,5 +1,8 @@
 === HEAD
 
+* Add CSS linting.
+* Add Component(1) support.
+
 === 0.2.0 (May 25, 2013)
 
 * Add `!important` to various utilities.
