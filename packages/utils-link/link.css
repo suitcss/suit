@@ -12,7 +12,7 @@
 .u-linkClean:hover,
 .u-linkClean:focus,
 .u-linkClean:active {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /**
@@ -34,13 +34,13 @@
 .u-linkComplex:hover,
 .u-linkComplex:focus,
 .u-linkComplex:active {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .u-linkComplex:hover .u-linkComplex-target,
 .u-linkComplex:focus .u-linkComplex-target,
 .u-linkComplex:active .u-linkComplex-target {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 /**
@@ -53,8 +53,8 @@
 .u-linkBlock:hover,
 .u-linkBlock:focus,
 .u-linkBlock:active {
-    display: block;
-    text-decoration: none;
+    display: block !important;
+    text-decoration: none !important;
 }
 
 /**
@@ -65,25 +65,25 @@
  *
  * Example HTML:
  *
- * <button class="u-linkPseudo">
+ * <button class="u-linkPseudo" type="button">
  *     <a role="presentation">Button content</a>
  * </button>
  */
 
 .u-linkPseudo {
-    display: inline;
-    padding: 0;
-    border: 0;
-    margin: 0;
-    background: transparent;
-    color: inherit;
-    cursor: pointer;
-    font: inherit;
+    display: inline !important;
+    padding: 0 !important;
+    border: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    color: inherit !important;
+    cursor: pointer !important;
+    font: inherit !important;
 }
 
 .u-linkPseudo:hover,
 .u-linkPseudo:focus,
 .u-linkPseudo:active {
-    background: transparent;
-    color: inherit;
+    background: transparent !important;
+    color: inherit !important;
 }
