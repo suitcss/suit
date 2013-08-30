@@ -1,5 +1,8 @@
 === HEAD
 
+* Add CSS linting and configuration.
+* Add Component(1) support.
+
 === 0.2.0 (May 25, 2013)
 
 * Add table display utilities.
