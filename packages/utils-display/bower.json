@@ -4,7 +4,9 @@
     "author": "Nicolas Gallagher",
     "main": "display.css",
     "ignore": [
+        ".*",
         "CHANGELOG.md",
+        "package.json",
         "test.html"
     ]
 }
