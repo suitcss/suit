@@ -2,22 +2,23 @@
 
 A SUIT collection of utility classes for low-level CSS link traits.
 
-Read more about [SUIT's design principles](https://github.com/necolas/suit/).
+Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-utils-link`
-* Download: [zip](https://github.com/necolas/suit-utils-link/zipball/master)
-* Git: `git clone https://github.com/necolas/suit-utils-link.git`
+* Download: [zip](https://github.com/suitcss/utils-link/zipball/master)
+* Git: `git clone https://github.com/suitcss/utils-link.git`
 
 ## Available classes
 
 * `u-linkClean` - A link without no `text-decoration` for any state.
 
-* `u-linkComplex` - Isolate a link's interactive `text-decoration` underline to a sub-section of the link.
+* `u-linkComplex` - Limit a link's interactive `text-decoration` underline to a
+  sub-section of the link text.
 
     ```html
-    <a class="u-linkComplex" href="#">
+    <a class="u-linkComplex" href="{url}">
         Link complex
         <span class="u-linkComplex-target">target</span>
     </a>
@@ -35,7 +36,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 
 ## Usage
 
-Please refer to the README for [SUIT utils](https://github.com/necolas/suit-utils/)
+Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
 
 ## Browser support
 
