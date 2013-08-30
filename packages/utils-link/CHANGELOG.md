@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.1.3 (August 30, 2013)
+
 * Add CSS linting and configuration.
 * Add `!important` to each declaration.
 * Add `role="presentation"` to `linkPseudo` markup examples.
