@@ -1,5 +1,6 @@
 === HEAD
 
+* Add responsive offset plugins.
 * Add CSS linting and configuration.
 * Add Component(1) support.
 
