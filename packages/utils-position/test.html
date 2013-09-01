@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Position [utility] - SUIT</title>
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link rel="stylesheet" href="build/build.css">
+<style>
+  .Box {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+  }
+
+  .u-highlight {
+    background: red;
+  }
+
+  #center {
+    border: 1px solid black;
+    height: 200px;
+    position: relative;
+    width: 200px;
+  }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-position">positioning utilities</a> tests</h1>
+
+  <h2 class="Test-describe">.u-posAbsoluteCenter</h2>
+  <h3 class="Test-it">absolutely centers the element</h3>
+  <div class="Test-run" id="center">
+    <span class="u-posAbsoluteCenter u-highlight"></span>
+  </div>
+  <div class="Test-run" id="center">
+    <span class="u-posAbsoluteCenter u-highlight Box"></span>
+  </div>
+</div>
