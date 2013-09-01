@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.2 (September 1, 2013)
+
 * Add `-webkit-box-sizing` for Android 2/3.
 * Add CSS linting and configuration.
 * Add Component(1) support.
