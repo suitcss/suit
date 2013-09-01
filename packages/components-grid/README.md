@@ -13,6 +13,7 @@ Read more about [SUIT](https://github.com/suitcss/suit/).
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-grid`
+* [Component(1)](http://component.io/): `component install suitcss/grid`
 * Download: [zip](https://github.com/suitcss/grid/zipball/master)
 * Git: `git clone https://github.com/suitcss/grid`
 
