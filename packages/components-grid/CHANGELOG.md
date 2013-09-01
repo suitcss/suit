@@ -1,5 +1,6 @@
 === HEAD
 
+* Add `-webkit-box-sizing` for Android 2/3.
 * Add CSS linting and configuration.
 * Add Component(1) support.
 * Update `utils-dimension` to v0.4.x.
