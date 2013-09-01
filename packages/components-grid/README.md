@@ -1,5 +1,7 @@
 # SUIT grid
 
+[![Build Status](https://secure.travis-ci.org/suitcss/grid.png?branch=master)](http://travis-ci.org/suitcss/grid)
+
 A SUIT component for a CSS grid. The grid makes use of `inline-block` and
 `box-sizing` to provide features that float-based layouts cannot.
 
@@ -78,6 +80,23 @@ grid. This is one technique to create gutters:
 .Grid-cell {
     padding: 0 0 0 10px;
 }
+```
+
+## Testing
+
+Install [Node](http://nodejs.org) (comes with npm).
+
+From the repo root, install the project's development dependencies:
+
+```
+bower install
+npm install
+```
+
+To run the CSS Lint tests:
+
+```
+npm test
 ```
 
 ## Browser support

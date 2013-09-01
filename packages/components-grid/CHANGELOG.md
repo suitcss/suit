@@ -1,5 +1,7 @@
 === HEAD
 
+* Add CSS linting and configuration.
+* Add Component(1) support.
 * Update `utils-dimension` to v0.4.x.
 * Update Bower install directory path.
 
