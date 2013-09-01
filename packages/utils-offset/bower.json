@@ -4,8 +4,10 @@
     "author": "Nicolas Gallagher",
     "main": "offset.css",
     "ignore": [
+        ".*",
         "CHANGELOG.md",
         "component.json",
+        "package.json",
         "test.html"
     ]
 }
