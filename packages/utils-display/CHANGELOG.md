@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.2 (September 1, 2013)
+
 * Fix Bower ignores.
 
 === 0.2.1 (August 30, 2013)
