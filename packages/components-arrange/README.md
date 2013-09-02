@@ -11,6 +11,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-arrange`
+* [Component(1)](http://component.io/): `component install suitcss/arrange`
 * Download: [zip](https://github.com/suitcss/arrange/zipball/master)
 * Git: `git clone https://github.com/suitcss/arrange.git`
 
