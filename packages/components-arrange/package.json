@@ -1,0 +1,12 @@
+{
+  "name": "suit-arrange",
+  "private": true,
+  "description": "",
+  "version": "0.1.0",
+  "devDependencies": {
+    "csslint": ">=0.9.10"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/csslint *.css"
+  }
+}

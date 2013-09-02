@@ -1,5 +1,7 @@
 # SUIT arrange
 
+[![Build Status](https://secure.travis-ci.org/suitcss/arrange.png?branch=master)](http://travis-ci.org/suitcss/arrange)
+
 A SUIT component for horizontally and vertically arranging a single row of
 cells. Includes modifier classes for equal-width cells and gutter-separated
 cells. Makes use of CSS table layout.
@@ -77,6 +79,23 @@ For complete examples of the markup needed to create various layouts, please
 refer to the `test.html` file.
 
 N.B. This component affects the width of images in cells.
+
+## Testing
+
+Install [Node](http://nodejs.org) (comes with npm) and Bower.
+
+From the repo root, install the project's development dependencies:
+
+```
+bower install
+npm install
+```
+
+To run the CSS Lint tests:
+
+```
+npm test
+```
 
 ## Browser support
 
