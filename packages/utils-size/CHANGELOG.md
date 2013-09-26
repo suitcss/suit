@@ -1,5 +1,7 @@
 === HEAD
 
+* Add responsive offset plugins.
+
 === 0.4.1 (August 30, 2013)
 
 * Add CSS linting.
