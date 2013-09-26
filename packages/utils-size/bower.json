@@ -2,7 +2,12 @@
     "name": "suit-utils-dimension",
     "version": "0.4.1",
     "author": "Nicolas Gallagher",
-    "main": "dimension.css",
+    "main": [
+        "dimension.css",
+        "dimension-v1.css",
+        "dimension-v2.css",
+        "dimension-v3.css"
+    ],
     "ignore": [
         ".*",
         "CHANGELOG.md",
