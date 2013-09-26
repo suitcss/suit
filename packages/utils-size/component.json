@@ -1,7 +1,7 @@
 {
     "name": "utils-dimension",
     "repo": "suitcss/utils-dimension",
-    "version": "0.4.1",
+    "version": "0.5.0",
     "styles": [
         "dimension.css",
         "dimension-v1.css",
