@@ -1,7 +1,7 @@
 {
     "name": "utils-offset",
     "repo": "suitcss/utils-offset",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "styles": [
       "offset.css",
       "offset-v1.css",

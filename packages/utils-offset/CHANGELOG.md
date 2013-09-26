@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.0 (September 26, 2013)
+
 * Add responsive offset plugins.
 * Add CSS linting and configuration.
 * Add Component(1) support.
