@@ -2,7 +2,12 @@
     "name": "suit-utils-offset",
     "version": "0.2.0",
     "author": "Nicolas Gallagher",
-    "main": "offset.css",
+    "main": [
+      "offset.css",
+      "offset-v1.css",
+      "offset-v2.css",
+      "offset-v3.css"
+    ],
     "ignore": [
         ".*",
         "CHANGELOG.md",

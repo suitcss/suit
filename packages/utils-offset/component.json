@@ -2,7 +2,12 @@
     "name": "utils-offset",
     "repo": "suitcss/utils-offset",
     "version": "0.2.0",
-    "styles": ["offset.css"],
+    "styles": [
+      "offset.css",
+      "offset-v1.css",
+      "offset-v2.css",
+      "offset-v3.css"
+    ],
     "author": "Nicolas Gallagher",
     "license": "MIT"
 }
