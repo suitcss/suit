@@ -12,9 +12,9 @@ Utilities should be used when you always want a trait to be applied (i.e., they
 are viewport-size agnostic).
 
 For example, don’t use `u-pullLeft` to float a large part of the UI (like a
-sidebar) if you don't intend to float it at different viewport widths. But
-**do** use utilities for positioning avatars or controlling text wrapping and
-color, etc.
+sidebar) if you don't intend to float it at all viewport widths. But **do** use
+utilities for positioning avatars or controlling text wrapping and color,
+etc.
 
 If you find that a design change means that it becomes problematic to continue
 using a specific utility in a component's template, then shift the presentation
