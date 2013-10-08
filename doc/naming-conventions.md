@@ -17,6 +17,7 @@ of finer separation of responsibilities is build upon it.
 * [ComponentName-descendantName](#ComponentName-descendantName)
 * [is-stateOfComponent](#is-stateOfComponent)
 * [with-ComponentName](#with-ComponentName)
+* [v1-*](#media)
 * [js-someName](#js-someName)
 
 
@@ -189,7 +190,6 @@ for the child `Dropdown` component to render as expected.
 You can also prefix the full set of `ComponentName-*` class patterns if
 necessary.
 
-
 ```css
 /* tweet.css */
 
@@ -211,6 +211,20 @@ necessary.
 
 
 ## Other
+
+<a name="media-queries"></a>
+### v[n]-utilityName or v[n]-ComponentName
+
+To scope utility or component styles to a Media Query breakpoint, use a `v[n]`
+class name prefix to denote which variant the utility is scoped to. For
+example:
+
+```html
+<div class="v2-u-before1of4 v3-u-before1of3">...</div>
+```
+
+Also see the [SUIT grid layouts](https://github.com/suitcss/grid-layouts)
+component.
 
 <a name="js-someName"></a>
 ### js-someName
