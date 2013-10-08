@@ -58,11 +58,16 @@ where possible:
 
 ### One pattern, one component, one file
 
-Each component must be in a dedicated file. Each component should concern
-itself with realising a single UI pattern. Don't try to do too much.
+Each component should concern itself with realising a single UI pattern. Don't
+try to do too much.
 
-If a component file is starting to get quite large, it probably consists of
-multiple, indepedent components and should be broken up into multiple files.
+The CSS for a component must be in a dedicated file with a name that
+corresponds HTML class. For example, the CSS for `ButtonGroup` should be in a
+file called `button-group.css`.
+
+Sometimes, a single component is complex enough that multiple files are
+necessary. If you need to do this, use a `.`-separated suffix in the additional
+file(s), e.g., `component-name.editing.css`.
 
 ### Document thoroughly
 
