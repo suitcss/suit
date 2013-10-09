@@ -54,7 +54,7 @@
  */
 
 .u-textInheritColor {
-  color: inherit;
+  color: inherit !important;
 }
 
 /**
@@ -65,5 +65,5 @@
 .u-textInheritAllColor:hover,
 .u-textInheritAllColor:focus,
 .u-textInheritAllColor:active {
-  color: inherit;
+  color: inherit !important;
 }

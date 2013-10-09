@@ -1,5 +1,7 @@
 === HEAD
 
+* Add `!important` to color inheritance utilities.
+
 === 0.2.1 (September 1, 2013)
 
 * Fix Bower ignores.
