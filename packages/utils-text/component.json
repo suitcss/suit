@@ -1,7 +1,7 @@
 {
     "name": "utils-text",
     "repo": "suitcss/utils-text",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "styles": ["text.css"],
     "author": "Nicolas Gallagher",
     "license": "MIT"

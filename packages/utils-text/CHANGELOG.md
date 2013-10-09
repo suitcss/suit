@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.2 (October 9, 2013)
+
 * Add `!important` to color inheritance utilities.
 
 === 0.2.1 (September 1, 2013)
