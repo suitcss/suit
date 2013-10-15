@@ -1,5 +1,9 @@
 === HEAD
 
+* Update 'suit-utils-dimension' to v0.5.x
+* Update 'suit-utils-offset' to v0.3.x
+* Update 'suit-utils-text' to v0.2.x
+
 === 0.6.0 (August 11, 2013)
 
 * Add 'suit-utils-offset' v0.1.x.
