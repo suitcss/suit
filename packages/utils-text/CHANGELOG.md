@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.3 (October 15, 2013)
+
 * Fix `u-textBreak` utility.
 
 === 0.2.2 (October 9, 2013)
