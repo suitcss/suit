@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.7.0 (October 15, 2013)
+
 * Update 'suit-utils-dimension' to v0.5.x
 * Update 'suit-utils-offset' to v0.3.x
 * Update 'suit-utils-text' to v0.2.x
