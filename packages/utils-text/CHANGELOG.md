@@ -1,5 +1,7 @@
 === HEAD
 
+* Fix `u-textBreak` utility.
+
 === 0.2.2 (October 9, 2013)
 
 * Add `!important` to color inheritance utilities.
