@@ -1,5 +1,6 @@
 === HEAD
 
+* Make buttons full-width by default.
 * Add CSS linting and configuration.
 
 === 2.0.0 (May 26, 2013)

@@ -23,10 +23,11 @@
  * 2. Normalize `box-sizing` across all elements that this component could be
  *    applied to.
  * 3. Inherit text color from ancestor.
- * 4. Inherit font styles from ancestor.
- * 5. Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+.
- * 6. Prevent button text from being selectable.
- * 7. Prevent wrapping across multiple lines.
+ * 4. Take up the full width of the parent context.
+ * 5. Inherit font styles from ancestor.
+ * 6. Normalize `line-height`. For `input, it can't be changed from `normal` in Firefox 4+.
+ * 7. Prevent button text from being selectable.
+ * 8. Prevent wrapping across multiple lines.
  */
 
 .Button {
@@ -37,9 +38,9 @@
     box-sizing: border-box; /* 2 */
     color: inherit; /* 3 */
     cursor: pointer;
-    display: inline-block;
-    font: inherit; /* 4 */
-    line-height: normal; /* 5 */
+    display: block; /* 4 */
+    font: inherit; /* 5 */
+    line-height: normal; /* 6 */
     margin: 0;
     padding: 0.4em 0.75em;
     position: relative;
@@ -48,9 +49,10 @@
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
-    user-select: none; /* 6 */
+    user-select: none; /* 7 */
     vertical-align: middle;
-    white-space: nowrap; /* 7 */
+    white-space: nowrap; /* 8 */
+    width: 100%; /* 4 */
 }
 
 /**
@@ -75,15 +77,4 @@
 .Button::-moz-focus-inner {
     border: 0;
     padding: 0;
-}
-
-/* -------------------------------------------------------------------------- */
-
-/**
- * Modifier: full-width buttons
- */
-
-.Button--full {
-    display: block;
-    width: 100%;
 }
