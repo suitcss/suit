@@ -15,8 +15,7 @@ of finer separation of responsibilities is build upon it.
 * [ComponentName](#ComponentName)
 * [ComponentName--modifierName](#ComponentName--modifierName)
 * [ComponentName-descendantName](#ComponentName-descendantName)
-* [is-stateOfComponent](#is-stateOfComponent)
-* [with-ComponentName](#with-ComponentName)
+* [ComponentName.is-stateOfComponent](#is-stateOfComponent)
 * [v1-*](#media)
 * [js-someName](#js-someName)
 
@@ -141,11 +140,11 @@ written in camel case.
 ```
 
 <a name="is-stateOfComponent"></a>
-### is-stateOfComponent
+### ComponentName.is-stateOfComponent
 
 Use `is-stateName` for state-based modifications of components. The state name
 must be Camel case. **Never style these classes directly; they should always be
-used as a chaining class.**
+used as an adjoining class.**
 
 JS can add/remove these classes. This means that the same state names can be
 used in multiple contexts, but every component must define its own styles for
@@ -160,53 +159,6 @@ the state (as they are scoped to the component).
 <article class="Tweet is-expanded">
     …
 </article>
-```
-
-<a name="with-ComponentName"></a>
-### with-ComponentName
-
-Use the `with-ComponentName` pattern to bundle styles that need to be mixed
-into an element that hosts your component. The `with-*` pattern classes should
-be standalone selectors, never styled as chained to a component. Treat it like
-a mixin.
-
-For example, the `with-Dropdown` class might include styles that are required
-for the child `Dropdown` component to render as expected.
-
-```css
-/* The host element of a Dropdown always needs these styles */
-.with-Dropdown { position: relative; }
-```
-
-```html
-<article class="Tweet with-Dropdown">
-    [other content]
-    <div class="Dropdown is-closed">
-        ...
-    </div>
-</article>
-```
-
-You can also prefix the full set of `ComponentName-*` class patterns if
-necessary.
-
-```css
-/* tweet.css */
-
-/* Provide ability to toggle Tweet actions visibile on hover of ancestor */
-.with-Tweet-actions--toggleVisibility { visibility: hidden; }
-.with-Tweet-actions--toggleVisibility:hover .Tweet-actions { visibility: visible; }
-```
-
-```html
-<div class="Stream-item with-Tweet-actions--toggleVisibility">
-    <article class="Tweet">
-        [other content]
-        <div class="Tweet-actions">
-            ...
-        </div>
-    </article>
-</div>
 ```
 
 

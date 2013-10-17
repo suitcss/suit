@@ -114,9 +114,7 @@ are 3 main reasons for this:
 
 3. To avoid increasing the specificity of selectors unnecessarily.
 
-If you need variants on a component, use modifier classes. If you need
-ancestral context, use a dedicated "mixin" class (`with-ComponentName`) that is
-the responsibility of the component being affected.
+If you need variants on a component, use modifier classes.
 
 GOOD:
 
@@ -125,10 +123,6 @@ GOOD:
 
 /* Modifier */
 .Tweet--withExpansion { /* ... */ }
-
-/* Mixin */
-.with-Tweet-actions--toggleVisibility .Tweet-actions { /* ... */ }
-.with-Tweet-actions--toggleVisibility:hover .Tweet-actions { /* ... */ }
 ```
 
 BAD:
