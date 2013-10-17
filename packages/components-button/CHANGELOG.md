@@ -1,5 +1,7 @@
 === HEAD
 
+* Add CSS linting and configuration.
+
 === 2.0.0 (May 26, 2013)
 
 * Prevent user-select of text.
