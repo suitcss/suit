@@ -17,7 +17,7 @@ Like all SUIT components, suit-button relies on a base component class that is
 extended by any number of additional modifier classes.
 
 ```html
-<a class="Button Button--full" href="[url]">Sign up</a>
+<a class="Button" href="{{url}}">Sign up</a>
 
 <button class="Button is-disabled" type="submit">Submit</button>
 
@@ -27,35 +27,16 @@ extended by any number of additional modifier classes.
 ## Core HTML classes
 
 * `Button` - [core] The core button component
-* `Button--full` - [modifier] The modifier class for full-width buttons
 * `is-disabled` - [state] For disabled-state button styles (themes)
 
 N.B. You must also include the `disabled` attribute on `button` and `input`
 elements. For `a` elements, you should remove the `href` attribute and prevent
 JavaScript event handlers from firing.
 
-## Theme HTML classes
-
-The following modifier and state classes should be implemented by all themes.
-This ensures that themes can hook into a shared set of HTML class names. You're
-still free to create additional, custom modifier names if your theme requires
-them.
-
-* `Button--largest` (optional) - [modifier] Largest button size
-* `Button--large` - [modifier] Large button size
-* `Button--small` - [modifier] Small button size
-* `Button--smallest` (optional) - [modifier] Smallest button size
-* `Button--default` - [modifier] Default button style of your theme
-* `is-disabled` - [state] For disabled-state button styles
-* `is-pressed` - [state] For pressed-state button styles
-
-N.B. You should try to avoid styling the core `Button` class directly.
-
 ## Theming
 
-The suit-button component is almost entirely structural. You can rely on a
-theme or build your application-specific theme styles in your application-level
-stylesheets. For example:
+The suit-button component is almost entirely structural. You can build your
+application-specific theme styles in your app. For example:
 
 ```css
 /**
