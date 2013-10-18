@@ -1,7 +1,7 @@
 {
     "name": "grid",
     "repo": "suitcss/grid",
-    "version": "0.3.2",
+    "version": "1.0.0",
     "styles": ["grid.css"],
     "development": {
       "suitcss/utils-dimension": "~0.5.0",

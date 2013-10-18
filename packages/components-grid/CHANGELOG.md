@@ -1,5 +1,7 @@
 === HEAD
 
+=== 1.0.0 (October 18, 2013)
+
 * Improve documentation.
 * Improve whitespace collapse reliability by using `font-size:0` (no IE 8 support).
 * Add `Grid--alignRight` to right-align grid cells.
