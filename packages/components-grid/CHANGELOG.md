@@ -1,5 +1,6 @@
 === HEAD
 
+* Improve documentation.
 * Improve whitespace collapse reliability by using `font-size:0` (no IE 8 support).
 * Add `Grid--alignRight` to right-align grid cells.
 * Rename `Grid--center` to `Grid-alignCenter`.
