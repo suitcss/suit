@@ -4,7 +4,7 @@
   "author": "Nicolas Gallagher",
   "dependencies": {
     "suit-base": "~0.2.0",
-    "suit-utils": "~0.6.0",
+    "suit-utils": "~0.7.0",
     "suit-arrange": "~0.1.0",
     "suit-button": "~2.0.0",
     "suit-button-group": "~1.2.0",
