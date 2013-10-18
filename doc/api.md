@@ -21,6 +21,8 @@ individual packages for details of their API.
 * `u-sizeXof10`
 * `u-sizeXof12`
 
+…and responsive variants `v1-*`, `v2-*`, and `v3-*`.
+
 ### [Display](https://github.com/suitcss/utils-display)
 
 * `u-block`
@@ -69,6 +71,8 @@ individual packages for details of their API.
 * `u-afterXof10`
 * `u-afterXof12`
 
+…and responsive variants `v1-*`, `v2-*`, and `v3-*`.
+
 ### [State](https://github.com/suitcss/utils-state)
 
 * `u-isActionable`
@@ -83,6 +87,8 @@ individual packages for details of their API.
 
 * `u-textBreak`
 * `u-textCenter`
+* `u-textColorInherit`
+* `u-textColorInheritAll`
 * `u-textLeft`
 * `u-textRight`
 * `u-textTruncate`
@@ -93,36 +99,38 @@ individual packages for details of their API.
 ### [Arrange](https://github.com/suitcss/arrange)
 
 * `Arrange`
+* `Arrange-sizeFill`
+* `Arrange-sizeFit`
 * `Arrange--middle`
 * `Arrange--bottom`
 * `Arrange--equal`
 * `Arrange--withGutter`
-* `Arrange-sizeFill`
-* `Arrange-sizeFit`
 
 ### [Button](https://github.com/suitcss/button)
 
 * `Button`
-* `Button--full`
 * `Button.is-disabled`
 
 ### [Button group](https://github.com/suitcss/button-group)
 
 * `ButtonGroup`
 * `ButtonGroup-item`
+* `ButtonGroup--hz`
+* `ButtonGroup--borderCollapse` (via plugin)
 
 ### [Flexible embeds](https://github.com/suitcss/flex-embed)
 
 * `FlexEmbed`
+* `FlexEmbed-item`
 * `FlexEmbed--4by3`
 * `FlexEmbed--16by9`
-* `FlexEmbed-item`
 
 ### [Grid](https://github.com/suitcss/grid)
 
 * `Grid`
-* `Grid--center`
 * `Grid-cell`
+* `Grid--alignCenter`
+* `Grid--alignRight`
 * `Grid-cell--center`
 
 ### [Grid layouts](https://github.com/suitcss/grid-layouts)
