@@ -9,14 +9,9 @@
  *
  * Example uses:
  *
- * <div class="Grid">
+ * <div class="Grid [Grid--alignCenter|Grid--alignRight]">
+ *     <div class="Grid-cell [Grid-cell--center] u-size1of2"></div>
  *     <div class="Grid-cell u-size1of2"></div>
- *     <div class="Grid-cell u-size1of2"></div>
- *     <div class="Grid-cell u-size1of3"></div>
- *     <div class="Grid-cell u-size1of3"></div>
- * </div>
- *
- * <div class="Grid Grid--center">
  *     <div class="Grid-cell u-size1of3"></div>
  *     <div class="Grid-cell u-size1of3"></div>
  * </div>
@@ -26,41 +21,37 @@
    ========================================================================== */
 
 /**
- * All content must be contained within descendent `Grid-cell` elements.
+ * All content must be contained within child `Grid-cell` elements.
  *
- * 1. Ensure consistent default alignment.
- * 2. Remove inter-unit whitespace that appears between `inline-block` child
- *    elements. Works for non-monospace font-families. If you're using a
- *    monospace base font, you will need to set the `Grid` font-family to
- *    `sans-serif` and then redeclare the monospace font on the `Grid-cell`
- *    objects.
- * 3. Protect against WebKit bug with optimizelegibility.
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ * 2. Ensure consistent default alignment.
+ * 3. Remove inter-cell whitespace that appears between `inline-block` child
+ *    elements.
  */
 
 .Grid {
-    display: block;
-    padding: 0;
-    margin: 0;
-    text-align: left; /* 1 */
-    letter-spacing: -0.31em; /* 2 */
-    text-rendering: optimizespeed; /* 3 */
-}
-
-/* Opera hack */
-
-.opera:-o-prefocus,
-.Grid {
-    word-spacing: -0.43em; /* 2 */
+    display: block; /* 1 */
+    padding: 0; /* 1 */
+    margin: 0; /* 1 */
+    text-align: left; /* 2 */
+    font-size: 0; /* 3 */
 }
 
 /**
- * Modifier: horizontally center all grid units
- * Allows for automatic unit centering irrespective of the number of
- * units in the grid.
+ * Modifier: center align all grid cells
  */
 
-.Grid--center {
+.Grid--alignCenter {
     text-align: center;
+}
+
+/**
+ * Modifier: right align all grid cells
+ */
+
+.Grid--alignRight {
+    text-align: right;
 }
 
 /* Grid cell
@@ -68,27 +59,26 @@
 
 /**
  * No explicit width by default. Rely on combining `Grid-cell` with a dimension
- * utility or component that extends 'grid'.
+ * utility or a component class that extends 'grid'.
  *
- * 1. Fundamentals of the non-float grid layout mechanism.
- * 2. Controls vertical positioning of units.
+ * 1. Fundamentals of the non-float grid layout.
+ * 2. Reset font size change made in `Grid`.
  * 3. Keeps content correctly aligned with the grid direction.
- * 4. Reset text defaults.
+ * 4. Controls vertical positioning of units.
+ * 5. Make cells full-width by default.
  */
 
 .Grid-cell {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 100%;
     display: inline-block; /* 1 */
+    font-size: 1rem; /* 2 */
     margin: 0;
     padding: 0;
-    vertical-align: top; /* 2 */
     text-align: left; /* 3 */
-    letter-spacing: normal; /* 4 */
-    word-spacing: normal; /* 4 */
-    text-rendering: auto; /* 4 */
+    vertical-align: top; /* 4 */
+    width: 100%; /* 5 */
 }
 
 /**
