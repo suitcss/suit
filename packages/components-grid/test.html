@@ -4,13 +4,26 @@
         <meta charset="utf-8">
         <title>Grid [component] - SUIT</title>
         <link rel="stylesheet" href="bower_components/suit-utils-dimension/dimension.css">
+        <link rel="stylesheet" href="bower_components/suit-utils-offset/offset.css">
         <link rel="stylesheet" href="grid.css">
         <style>
+            body {
+                margin: 0;
+            }
+
             .dev-Box {
                 background: #ddd;
                 border: 1px solid black;
                 margin-bottom: 10px;
                 text-align: center;
+            }
+
+            .Grid--withGutter {
+                margin: 0 -10px;
+            }
+
+            .Grid--withGutter > .Grid-cell {
+                padding: 0 10px;
             }
         </style>
     </head>
@@ -99,13 +112,13 @@
 
         <h3>Grid-based centering</h3>
 
-        <div class="Grid Grid--center">
+        <div class="Grid Grid--alignCenter">
             <div class="Grid-cell u-size1of2">
                 <div class="dev-Box">1</div>
             </div>
         </div>
 
-        <div class="Grid Grid--center">
+        <div class="Grid Grid--alignCenter">
             <div class="Grid-cell u-size1of3">
                 <div class="dev-Box">1</div>
             </div>
@@ -114,7 +127,7 @@
             </div>
         </div>
 
-        <div class="Grid Grid--center">
+        <div class="Grid Grid--alignCenter">
             <div class="Grid-cell u-size1of4">
                 <div class="dev-Box">1</div>
             </div>
@@ -148,6 +161,69 @@
                         <div class="dev-Box">3</div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <h3>Grid + Offsets + Gutters (and nested grids)</h3>
+        <div class="Grid Grid--withGutter">
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">1</div>
+            </div>
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">2</div>
+            </div>
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">3</div>
+            </div>
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">4</div>
+            </div>
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">5</div>
+            </div>
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">6</div>
+            </div>
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">7</div>
+            </div>
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">8</div>
+            </div>
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">9</div>
+            </div>
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">10</div>
+            </div>
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">11</div>
+            </div>
+            <div class="Grid-cell u-size1of12">
+                <div class="dev-Box">12</div>
+            </div>
+        </div>
+
+        <div class="Grid Grid--withGutter">
+            <div class="Grid-cell u-before1of4 u-size1of2">
+                <div class="dev-Box">1</div>
+            </div>
+            <div class="Grid-cell u-size1of2">
+                <div class="dev-Box">2</div>
+            </div>
+            <div class="Grid-cell">
+                <div class="dev-Box">3</div>
+                <div class="Grid Grid--withGutter">
+                    <div class="Grid-cell u-before1of6 u-size1of4 u-after1of6">
+                        <div class="dev-Box">1</div>
+                    </div>
+                    <div class="Grid-cell u-before1of12 u-size4of12">
+                        <div class="dev-Box">2</div>
+                    </div>
+                </div>
+            </div>
+            <div class="Grid-cell u-before3of12 u-size7of12 u-after2of12">
+                <div class="dev-Box">4</div>
             </div>
         </div>
     </body>
