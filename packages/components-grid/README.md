@@ -35,14 +35,12 @@ Read more about [SUIT](https://github.com/suitcss/suit/).
 * `Grid-cell`: a child cell of `Grid` that wraps grid content
 * `Grid--alignCenter`: center align all child `Grid-cell`
 * `Grid--alignRight`: right align all child `Grid-cell`
-* `Grid-cell--Center`: center an individual `Grid-cell`
+* `Grid-cell--center`: center an individual `Grid-cell`
 
 ## Use
 
 A simple grid is easy to create. A grid container can have any number of child
-cells. A cell can be styled to control its width and alignment at various
-breakpoints. The [responsive dimension
-utilities](https://github.com/suitcss/utils-dimension) are suggested.
+cells.
 
 ```html
 <div class="Grid [Grid--alignCenter|Grid--alignRight]">
@@ -53,9 +51,10 @@ utilities](https://github.com/suitcss/utils-dimension) are suggested.
 </div>
 ```
 
+### Adding gutters
+
 The grid component includes no gutters by default. In your app's CSS, the
-component can be extended with modifier classes for your gutter sizes and
-alternative vertical alignments.
+component can be extended with modifier classes for your gutter sizes.
 
 ```css
 /**
@@ -63,7 +62,12 @@ alternative vertical alignments.
  * ui/grid/grid.css
  */
 
-/* Grid gutters: 20px */
+/**
+ * Grid gutters: 20px
+ * NOTE: this can trigger a horizontal scrollbar if the component is as wide as
+ * the viewport. Use padding on a container, or `overflow-x:hidden` to protect
+ * against it.
+ */
 
 .Grid--withGutter {
     margin: 0 -10px;
@@ -72,18 +76,76 @@ alternative vertical alignments.
 .Grid--withGutter > .Grid-cell {
     padding: 0 10px;
 }
+```
 
-/* Middle align cells on the same row */
+### Alternative vertical alignments
+
+The grid top-aligns cells in any visual row. In your app's CSS, the component
+can be extended with modifier classes for alternative vertical alignments.
+
+```css
+/**
+ * @requires suit-grid
+ * ui/grid/grid.css
+ */
+
+/* ... other grid extension ... */
+
+/**
+ * Alternative vertical alignment of grid cells
+ */
 
 .Grid--alignMiddle .Grid-cell {
     vertical-align: middle;
 }
 
-/* Bottom align cells on the same row */
-
 .Grid--alignBottom .Grid-cell {
     vertical-align: bottom;
 }
+```
+
+### Widths and offsets
+
+Cell widths and offsets can be controlled using the [responsive dimension
+utilities](https://github.com/suitcss/utils-dimension) and [responsive offset
+utilities](https://github.com/suitcss/utils-offset), respectively.
+
+One limitation of creating grid gutters in the manner shown above is that it
+prevents any offset utilities applied directly to the `Grid` component from
+functioning as expected.
+
+GOOD:
+
+```html
+<div class="Grid Grid--withGutter">
+  <div class="Grid-cell u-size1of2 u-before1of4 u-after1of4">
+    {{>partial}}
+  </div>
+</div>
+```
+
+BAD:
+
+```html
+<div class="Grid Grid--withGutter u-before1of4 u-after1of4">
+  <div class="Grid-cell">
+    {{>partial}}
+  </div>
+</div>
+```
+
+You can nest grids in any context, including one that uses dimension or offset
+utilities, but keep in mind that the the dimensions will be relative to the
+grid's width, and not the width of the whole application.
+
+```html
+<div class="u-before1of4 u-after1of4">
+  <div class="Grid Grid--withGutter">
+    <div class="Grid-cell u-size1of2"> <!-- 50% of the width of the Grid -->
+      {{>partial}}
+    </div>
+  </div>
+</div>
 ```
 
 ## Testing
