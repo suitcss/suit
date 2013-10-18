@@ -19,6 +19,14 @@ Components are not _just_ CSS. A component is a combination of CSS and an HTML
 template. A component's templates might make use of utilities and other
 components.
 
+### Component scope
+
+The component's core class name (e.g., `ComponentName`) reserves a namespace
+that can only be used by that component.
+
+Avoid tight coupling between components, even if that means the code is not as
+DRY as you think it should be.
+
 ### One pattern, one component, one file
 
 **Each component should implement a single part of the UI**. Don't try to do
@@ -38,14 +46,6 @@ where every selector starts with the string `Grid`.
 .Grid-cell {}
 .Grid--withGutter > .Grid-cell {}
 ```
-
-### Component scope
-
-The component's core class name (e.g., `ComponentName`) reserves a namespace
-that can only be used by that component.
-
-Avoid tight coupling between components, even if that means the code is not as
-DRY as you think it should be.
 
 ### Component classes
 
@@ -182,8 +182,8 @@ the HTML template.
 
 **Directly styling nested components is the last option.** If you need to add
 custom styles directly to a nested component, the preferred pattern is shown
-below. It scopes the changes to affect only `Button` components within the
-`Excerpt-buttonWrapper` part of the `Excerpt` component.
+below. It scopes the changes to affect only `Icon` components within the
+`Excerpt-wrapButton` part of the `Excerpt` component.
 
 
 ```css
