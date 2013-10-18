@@ -9,7 +9,7 @@
     "suitcss/button": "~2.0.0",
     "suitcss/button-group": "~1.2.0",
     "suitcss/flex-embed": "~1.2.0",
-    "suitcss/grid": "~0.3.1",
+    "suitcss/grid": "~1.0.0",
     "suitcss/grid-layouts": "~0.2.0"
   },
   "author": "Nicolas Gallagher",

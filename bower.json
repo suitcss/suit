@@ -9,7 +9,7 @@
     "suit-button": "~2.0.0",
     "suit-button-group": "~1.2.0",
     "suit-flex-embed": "~1.2.0",
-    "suit-grid": "~0.3.1",
+    "suit-grid": "~1.0.0",
     "suit-grid-layouts": "~0.2.0"
   }
 }
