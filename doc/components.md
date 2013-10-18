@@ -21,17 +21,25 @@ components.
 
 ### One pattern, one component, one file
 
-Each component should have a dedicated CSS file with a name that corresponds
-HTML class. For example, the CSS for `ButtonGroup` should be in a file called
-`button-group.css`.
+**Each component should implement a single part of the UI**. Don't try to do
+too much.
 
-If you need additional files to help with organization, use a `.`-separated
-suffix, e.g., `component-name.editing.css`.
+**Each component should have a dedicated CSS file** with a name that
+corresponds HTML class. For example, the CSS for `ButtonGroup` should be in a
+file called `button-group.css`. If you need additional files to help with
+organization, use a `.`-separated suffix, e.g., `button-group.plugin.css`.
+
+**All selectors in a component file must start with the component's
+namespace**. For example, a component called `Grid` could have CSS like this,
+where every selector starts with the string `Grid`.
+
+```css
+.Grid {}
+.Grid-cell {}
+.Grid--withGutter > .Grid-cell {}
+```
 
 ### Component scope
-
-Each component should implement a single part of the UI. Don't try to do too
-much.
 
 The component's core class name (e.g., `ComponentName`) reserves a namespace
 that can only be used by that component.
@@ -46,7 +54,9 @@ Component names should be as short as possible but as long as necessary.
 Components must use the `ComponentName-descendentName` class name pattern to
 clearly and directly style any descendant elements that the component requires
 to realise itself. This helps to limit the specificity of the component
-selectors. For example:
+selectors.
+
+For example, this component template…
 
 ```html
 <article class="Excerpt u-cf">
@@ -59,6 +69,8 @@ selectors. For example:
 </div>
 ```
 
+…is styled by this component CSS.
+
 ```css
 .Excerpt {}
 .Excerpt-title {}
@@ -67,8 +79,8 @@ selectors. For example:
 .Excerpt-time {}
 ```
 
-It also limits the unintentionally pollution of other contexts that selectors
-like `Excerpt p` or `Excerpt > p` can introduce.
+Each component uses selectors that limit the unintentional pollution – that
+selectors like `Excerpt p` or `Excerpt > p` can introduce – of other contexts.
 
 ### Documenting HTML and implementation details
 
@@ -84,9 +96,9 @@ following questions:
 
 ### Adapting to ancestral context
 
-**Most components should not set their own width, margin, and positioning.**
-Write components that can adapt to the dimensions of their ancestral context,
-unless there is a good reason to prevent them from doing so.
+**Most components should not set their own width, margin, and positioning.** By
+authoring a component to be full-width or inline, it can better adapt to the
+dimensions of an ancestral context.
 
 ```css
 .Button {
@@ -99,12 +111,23 @@ unless there is a good reason to prevent them from doing so.
 }
 ```
 
+### Nesting components
+
+**A component should wrap a nested component in an element.** This wrapping
+element should be used to control dimensions, margins, and positioning of the
+nested component without directly modifying it. Inheritable styles can also be
+applied to this wrapper.
+
 ```css
+/* Excerpt */
+
 .Excerpt {
     /* ... */
 }
 
-.Excerpt-buttonWrapper {
+/* Wraps nested `Button` component */
+
+.Excerpt-wrapButton {
     display: inline-block;
     margin-top: 20px;
 }
@@ -114,7 +137,7 @@ unless there is a good reason to prevent them from doing so.
 <article class="Excerpt u-cf">
     {{! other implementation details }}
 
-    <div class="Excerpt-buttonWrapper">
+    <div class="Excerpt-wrapButton">
         <button class="Button Button--default" type="button">{{button_text}}</button>
     </div>
 </article>
@@ -122,10 +145,10 @@ unless there is a good reason to prevent them from doing so.
 
 ### Use partials and template inheritance
 
-Rely on HTML templating and template inheritance to hide implementation
+**Rely on HTML templating and template inheritance** to hide implementation
 details. You can make parts of a partial configurable from the inherited
-context. The example below allows an inherited context to set `Button` and
-`Icon` modifier classes.
+context. The example below allows a component to set modifier classes on nested
+`Button` and `Icon` components.
 
 ```html
 {{! button_default_and_icon }}
@@ -142,7 +165,7 @@ context. The example below allows an inherited context to set `Button` and
 <article class="Excerpt u-cf">
     {{! other implementation details }}
 
-    <div class="Excerpt-buttonWrapper">
+    <div class="Excerpt-wrapButton">
         {{< button_default_and_icon }}
             {{$button_class}}Button--flat{{/button_class}}
             {{$icon_class}}Icon--tick{{/icon_class}}
@@ -150,6 +173,10 @@ context. The example below allows an inherited context to set `Button` and
     </div>
 </article>
 ```
+
+The same outcome can be achieved using normal partials instead of template
+inheritance, but the modifier class would need to be set in the view instead of
+the HTML template.
 
 ### Directly styling nested components
 
@@ -160,10 +187,14 @@ below. It scopes the changes to affect only `Button` components within the
 
 
 ```css
-/* component file for `Excerpt` */
+/* in component file for `Excerpt` */
 
-.Excerpt-buttonWrapper .Button {
-    /* ... */
+.Excerpt-wrapButton .Icon {
+    display: none;
+}
+
+.Excerpt-wrapButton:hover .Icon {
+    display: block;
 }
 ```
 
