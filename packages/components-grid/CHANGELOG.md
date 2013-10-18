@@ -1,5 +1,10 @@
 === HEAD
 
+* Improve whitespace collapse reliability by using `font-size:0` (no IE 8 support).
+* Add `Grid--alignRight` to right-align grid cells.
+* Rename `Grid--center` to `Grid-alignCenter`.
+* Add `utils-offset` to development dependencies.
+
 === 0.3.2 (September 1, 2013)
 
 * Add `-webkit-box-sizing` for Android 2/3.
