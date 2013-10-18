@@ -4,7 +4,7 @@
   "author": "Nicolas Gallagher",
   "main": "grid.css",
   "devDependencies": {
-    "suit-utils-dimension": "~0.4.0",
+    "suit-utils-dimension": "~0.5.0",
     "suit-utils-offset": "~0.3.0"
   },
   "ignore": [

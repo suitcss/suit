@@ -3,6 +3,10 @@
     "repo": "suitcss/grid",
     "version": "0.3.2",
     "styles": ["grid.css"],
+    "development": {
+      "suitcss/utils-dimension": "~0.5.0",
+      "suitcss/utils-offset": "~0.3.0"
+    },
     "author": "Nicolas Gallagher",
     "license": "MIT"
 }
