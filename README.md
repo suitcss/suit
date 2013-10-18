@@ -23,16 +23,17 @@ Alternative: (a download bundle will be available at some point)
 ## Features
 
 * Very small footprint.
+* Scoped components.
 * Individually versioned modules.
-* Provides common, utility classes.
-* Provides common, structural UI patterns.
 * Consistent class name conventions.
-* Components developed independently of their context (mitigates rule-order issues).
+* Develop components independently of their context (mitigates rule-order
+  issues).
+* Provides common, utility classes.
 * Testing friendly.
 * Responsive friendly.
 * Work more with HTML than CSS.
 * Theme-independence.
-* Designed for teams working on large web sites and applications.
+* Designed for teams working on large, changing web sites and applications.
 * Easy to extend and build upon.
 
 
@@ -78,12 +79,12 @@ HTML:
 
 ```html
 <article class="Excerpt u-cf">
-    <img class="Excerpt-thumbnail u-sizeFit" src="{src}" alt="">
+    <img class="Excerpt-thumbnail u-sizeFit" src="{{src}}" alt="">
     <div class="u-sizeFill">
-        <h1 class="Excerpt-title u-h3"><a href="{url}">{title}</a></h1>
-        <p class="Excerpt-text">{description}</p>
+        <h1 class="Excerpt-title u-h3"><a href="{{url}}">{{title}}</a></h1>
+        <p class="Excerpt-text">{{description}}</p>
         <span class="Excerpt-readMore">
-            <a class="Button Button--secondary">{button_text}</a>
+            <a class="Button Button--secondary">{{button_text}}</a>
         </span>
     </div>
 </article>
@@ -100,12 +101,12 @@ CSS:
  * @require u-sizeFill
  *
  * <article class="Excerpt u-cf">
- *     <img class="Excerpt-thumbnail u-sizeFit" src="{src}" alt="">
+ *     <img class="Excerpt-thumbnail u-sizeFit" src="{{src}}" alt="">
  *     <div class="u-sizeFill">
- *         <h1 class="Excerpt-title">{title}</h1>
- *         <p class="Excerpt-text">{description}</p>
+ *         <h1 class="Excerpt-title u-h3">{{title}}</h1>
+ *         <p class="Excerpt-text">{{description}}</p>
  *         <span class="Excerpt-readMore">
- *             <a class="Button Button--secondary">{button_text}</a>
+ *             <a class="Button Button--secondary">{{button_text}}</a>
  *         </span>
  *     </div>
  * </article>
