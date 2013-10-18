@@ -1,5 +1,8 @@
 === HEAD
 
+* Rewrite the component documentation.
+* Formally document the use of `v1-*`-style prefixes for breakpoint-specific classes.
+* Introduce a convention for components that use multiple files.
 * Update 'suit-base' to ~0.2.0.
 * Update 'suit-utils' to ~0.6.0.
 * Update 'suit-button-group' to ~1.2.0.
