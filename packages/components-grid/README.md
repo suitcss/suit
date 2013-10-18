@@ -29,56 +29,60 @@ Read more about [SUIT](https://github.com/suitcss/suit/).
 * Infinite nesting.
 * Built-in redundancy.
 
+## Available classes
+
+* `Grid`: core component
+* `Grid-cell`: a child cell of `Grid` that wraps grid content
+* `Grid--alignCenter`: center align all child `Grid-cell`
+* `Grid--alignRight`: right align all child `Grid-cell`
+* `Grid-cell--Center`: center an individual `Grid-cell`
+
 ## Use
 
-A simple grid is easy to create. A grid container can have any number of cells.
-Each cell can be directly or indirectly styled to control their width and
-alignment.
+A simple grid is easy to create. A grid container can have any number of child
+cells. A cell can be styled to control its width and alignment at various
+breakpoints. The [responsive dimension
+utilities](https://github.com/suitcss/utils-dimension) are suggested.
 
 ```html
-<div class="Grid">
-    <div class="Grid-cell u-size1of2"></div>
-    <div class="Grid-cell u-size1of2"></div>
-    <div class="Grid-cell u-size1of3"></div>
+<div class="Grid [Grid--alignCenter|Grid--alignRight]">
+    <div class="Grid-cell u-size1of2 v3-u-size6of12"></div>
+    <div class="Grid-cell u-size1of2 v3-u-size4of12"></div>
+    <div class="Grid-cell u-size1of3 v3-u-size2of12"></div>
     <div class="Grid-cell u-size1of3"></div>
 </div>
 ```
 
-All cells within a grid can be centered by adding the `Grid--center` class to
-the grid container:
-
-```html
-<div class="Grid Grid--center">
-    <div class="Grid-cell u-size1of3"></div>
-    <div class="Grid-cell u-size1of3"></div>
-</div>
-```
-
-Or individual cells can be centered on their own line by adding the
-`Grid-cell--center` class to a cell:
-
-```html
-<div class="Grid">
-    <div class="Grid-cell u-size1of2"></div>
-    <div class="Grid-cell u-size1of2"></div>
-    <div class="Grid-cell Grid-cell--center u-size3of4"></div>
-</div>
-```
-
-The core grid component includes no gutters by default.
-
-You may want to create a modifier class, or use a skin that adds gutters to the
-grid. This is one technique to create gutters:
+The grid component includes no gutters by default. In your app's CSS, the
+component can be extended with modifier classes for your gutter sizes and
+alternative vertical alignments.
 
 ```css
-/* Grid gutters: 10px */
+/**
+ * @requires suit-grid
+ * ui/grid/grid.css
+ */
 
-.Grid {
-    margin: 0 0 0 -10px;
+/* Grid gutters: 20px */
+
+.Grid--withGutter {
+    margin: 0 -10px;
 }
 
-.Grid-cell {
-    padding: 0 0 0 10px;
+.Grid--withGutter > .Grid-cell {
+    padding: 0 10px;
+}
+
+/* Middle align cells on the same row */
+
+.Grid--alignMiddle .Grid-cell {
+    vertical-align: middle;
+}
+
+/* Bottom align cells on the same row */
+
+.Grid--alignBottom .Grid-cell {
+    vertical-align: bottom;
 }
 ```
 
@@ -105,4 +109,4 @@ npm test
 * Opera (latest)
 * Firefox 4+
 * Safari 5+
-* Internet Explorer 8+
+* Internet Explorer 9+
