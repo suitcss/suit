@@ -2,7 +2,7 @@
 
 An HTML/CSS framework for creating loosely coupled UI components.
 
-SUIT provides a collection of small, adaptive, structural HTML/CSS modules
+SUIT also provides a collection of small, adaptive, structural HTML/CSS modules
 built using a naming convention inspired by the BEM methodology.
 
 **[Documentation](doc/README.md)**.
@@ -27,6 +27,7 @@ Alternative: (a download bundle will be available at some point)
 * Provides common, utility classes.
 * Provides common, structural UI patterns.
 * Consistent class name conventions.
+* Components developed independently of their context (mitigates rule-order issues).
 * Testing friendly.
 * Responsive friendly.
 * Work more with HTML than CSS.
@@ -76,11 +77,14 @@ packages](https://github.com/suitcss/generator-suit).
 HTML:
 
 ```html
-<article class="app-Excerpt u-cf">
-    <img class="app-Excerpt-thumbnail u-sizeFit" src="{src}" alt="">
+<article class="Excerpt u-cf">
+    <img class="Excerpt-thumbnail u-sizeFit" src="{src}" alt="">
     <div class="u-sizeFill">
-        <h1 class="app-Excerpt-title u-h3"><a href="{url}">{content}</a></h1>
-        <p class="app-Excerpt-text">{content}</p>
+        <h1 class="Excerpt-title u-h3"><a href="{url}">{title}</a></h1>
+        <p class="Excerpt-text">{description}</p>
+        <span class="Excerpt-readMore">
+            <a class="Button Button--secondary">{button_text}</a>
+        </span>
     </div>
 </article>
 ```
@@ -95,29 +99,37 @@ CSS:
  * @require u-sizeFit
  * @require u-sizeFill
  *
- * <article class="app-Excerpt u-cf">
- *     <img class="app-Excerpt-thumbnail u-sizeFit" src="{src}" alt="">
+ * <article class="Excerpt u-cf">
+ *     <img class="Excerpt-thumbnail u-sizeFit" src="{src}" alt="">
  *     <div class="u-sizeFill">
- *         <h1 class="app-Excerpt-title">{content}</h1>
- *         <p class="app-Excerpt-text">{content}</p>
+ *         <h1 class="Excerpt-title">{title}</h1>
+ *         <p class="Excerpt-text">{description}</p>
+ *         <span class="Excerpt-readMore">
+ *             <a class="Button Button--secondary">{button_text}</a>
+ *         </span>
  *     </div>
  * </article>
  */
 
-.app-Excerpt {
+.Excerpt {
     line-height: 1.2857em;
 }
 
-.app-Excerpt-thumbnail {
+.Excerpt-thumbnail {
     border: 2px solid #000;
     border-radius: 3px;
     margin-right: 10px;
 }
 
-.app-Excerpt-title {
+.Excerpt-title {
     border-bottom: 1px solid #ccc;
     margin: 0 0 15px;
     padding-bottom: 5px;
+}
+
+.Excerpt-readMore {
+    display: inline-block;
+    margin-top: 10px;
 }
 ```
 
