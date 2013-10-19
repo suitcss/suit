@@ -2,9 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/user/<%= modulePackageName %>.png?branch=master)](http://travis-ci.org/user/<%= modulePackageName %>)
 
-A SUIT component for horizontally and vertically arranging a single row of
-cells. Includes modifier classes for equal-width cells and gutter-separated
-cells. Makes use of CSS table layout.
+A SUIT component for...
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
