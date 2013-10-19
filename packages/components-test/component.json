@@ -1,0 +1,7 @@
+{
+    "name": "suit-test",
+    "repo": "user/suit-test",
+    "version": "0.1.0",
+    "styles": ["test.css"],
+    "license": "MIT"
+}
