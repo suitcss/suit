@@ -1,5 +1,6 @@
 === HEAD
 
+* Remove `vertical-align:middle` to make the component conform with framework.
 * Allow text wrapping.
 * Make buttons full-width by default.
 * Add CSS linting and configuration.

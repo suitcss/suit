@@ -50,7 +50,6 @@
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none; /* 7 */
-    vertical-align: middle;
     white-space: normal; /* 8 */
     width: 100%; /* 4 */
 }
