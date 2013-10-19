@@ -1,10 +1,16 @@
 {
-    "name": "suit-button",
-    "version": "2.0.0",
-    "author": "Nicolas Gallagher",
-    "main": "button.css",
-    "ignore": [
-        "CHANGELOG.md",
-        "test.html"
-    ]
+  "name": "suit-button",
+  "version": "2.0.0",
+  "author": "Nicolas Gallagher",
+  "main": "button.css",
+  "ignore": [
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ],
+  "devDependencies": {
+    "suit-test": "*"
+  }
 }

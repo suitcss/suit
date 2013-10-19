@@ -1,56 +1,77 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>Button [component] - SUIT</title>
+<link rel="stylesheet" href="bower_components/suit-test/test.css">
 <link rel="stylesheet" href="button.css">
 <style>
-    .test {
+    #fontInheritance {
       font-family: sans-serif;
+      font-family: 20px;
+      font-weight: bold;
     }
 
-    /* test-2 */
-
-    .test-2 {
-        width: 100px;
+    #textWrapping {
+        width: 80px;
     }
 
-    /* test-3 */
+    #colorInheritance {
+        color: green;
+    }
 
-    .test-3 .Button {
+    #baseline .Button {
         display: inline-block;
         width: auto;
     }
 
-    .test-3 .Button:first-child {
-        width: 100px;
+    #baseline .Button:first-child {
+        width: 80px;
     }
 </style>
 
-<div class="test">
-    <h3>.Button</h3>
-    <div class="test-1">
+<div class="Test">
+    <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/button">Button</a> component tests</h1>
+
+    <h3 class="Test-describe">.Button</h3>
+    <h3 class="Test-it">renders</h3>
+    <div class="Test-run" id="renders">
         <a class="Button" role="button" href="#non">Button text</a>
-        <button class="Button" type="submit">Button text</button>
+        <button class="Button" type="button">Button text</button>
         <input class="Button" type="submit" value="Button text">
     </div>
 
-    <h3>.Button (text wrapping)</h3>
-    <div class="test-2">
-        <a class="Button" role="button">Button text</a>
-        <button class="Button" type="submit">Button text</button>
+    <h3 class="Test-it">inherits font</h3>
+    <div class="Test-run" id="fontInheritance">
+        <a class="Button" href="#non">Button text</a>
+        <button class="Button" type="button">Button text</button>
         <input class="Button" type="submit" value="Button text">
     </div>
 
-    <h3>.Button (baseline alignment)</h3>
-    <div class="test-3">
-        <a class="Button" role="button">Button text</a>
-        <button class="Button" type="submit">Button text</button>
+    <h3 class="Test-it">inherits text color</h3>
+    <div class="Test-run" id="colorInheritance">
+        <a class="Button" href="#non">Button text</a>
+        <button class="Button" type="button">Button text</button>
         <input class="Button" type="submit" value="Button text">
     </div>
 
-    <h3>.Button.is-disabled</h3>
-    <div class="test-4">
-        <a class="Button is-disabled" role="button">Button text</a>
-        <button class="Button is-disabled" type="submit" disabled>Button text</button>
+    <h3 class="Test-it">allows text wrapping</h3>
+    <div class="Test-run" id="textWrapping">
+        <a class="Button" href="#non">Button text</a>
+        <button class="Button" type="button">Button text</button>
+        <input class="Button" type="submit" value="Button text">
+    </div>
+
+    <h3 class="Test-it">is baseline-aligned</h3>
+    <div class="Test-run" id="baseline">
+        <a class="Button" href="#non">Button text</a>
+        <button class="Button" type="button">Button text</button>
+        <input class="Button" type="submit" value="Button text">
+    </div>
+
+    <h3 class="Test-describe">.Button.is-disabled</h3>
+    <h3 class="Test-it">renders disabled</h3>
+    <div class="Test-run" id="is-disabled-renders">
+        <a class="Button is-disabled">Button text</a>
+        <button class="Button is-disabled" type="button" disabled>Button text</button>
         <input class="Button is-disabled" type="submit" value="Button text" disabled>
     </div>
 </div>
