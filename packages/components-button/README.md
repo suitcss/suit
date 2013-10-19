@@ -1,30 +1,18 @@
 # SUIT button
 
-A SUIT component that provides a structural UI button template.
-It requires a button theme.
+A SUIT component that provides a structural UI button template to be extended
+with modifiers.
 
-Read more about [SUIT's design principles](https://github.com/necolas/suit/).
+Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-button`
-* Download: [zip](https://github.com/necolas/suit-button/zipball/master)
-* Git: `git clone https://github.com/necolas/suit-button.git`
+* [Component(1)](http://component.io/): `component install suitcss/button`
+* Download: [zip](https://github.com/suitcss/button/zipball/master)
+* Git: `git clone https://github.com/suitcss/button`
 
-## Usage
-
-Like all SUIT components, suit-button relies on a base component class that is
-extended by any number of additional modifier classes.
-
-```html
-<a class="Button" href="{{url}}">Sign up</a>
-
-<button class="Button is-disabled" type="submit">Submit</button>
-
-<input class="Button is-pressed" type="submit" value="Submit">
-```
-
-## Core HTML classes
+## Available classes
 
 * `Button` - [core] The core button component
 * `is-disabled` - [state] For disabled-state button styles (themes)
@@ -33,14 +21,27 @@ N.B. You must also include the `disabled` attribute on `button` and `input`
 elements. For `a` elements, you should remove the `href` attribute and prevent
 JavaScript event handlers from firing.
 
-## Theming
+## Use
+
+Like all SUIT components, suit-button relies on a base component class that is
+extended by any number of additional modifier and state classes.
+
+```html
+<a class="Button" href="{{url}}">Sign up</a>
+
+<button class="Button Button--default is-disabled" type="button">Close</button>
+
+<input class="Button Button--primary is-pressed" type="submit" value="Submit">
+```
+
+### Theming / extending
 
 The suit-button component is almost entirely structural. You can build your
 application-specific theme styles in your app. For example:
 
 ```css
 /**
- * theme/component/button.css
+ * component/button.css
  * @require suit-button
  */
 
