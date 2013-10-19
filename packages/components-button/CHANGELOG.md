@@ -1,5 +1,7 @@
 === HEAD
 
+=== 3.0.0 (October 19, 2013)
+
 * Rewrite the test file using `suit-grid`.
 * Remove `vertical-align:middle` to make the component conform with framework.
 * Allow text wrapping.
