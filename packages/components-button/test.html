@@ -1,61 +1,56 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Button [component] - SUIT</title>
-        <link rel="stylesheet" href="button.css">
-        <style>
-            body {
-                font-family: sans-serif;
-            }
+<meta charset="utf-8">
+<title>Button [component] - SUIT</title>
+<link rel="stylesheet" href="button.css">
+<style>
+    .test {
+      font-family: sans-serif;
+    }
 
-            /* test-2 */
+    /* test-2 */
 
-            .test-2 {
-                width: 100px;
-            }
+    .test-2 {
+        width: 100px;
+    }
 
-            /* test-3 */
+    /* test-3 */
 
-            .test-3 .Button {
-                display: inline-block;
-                width: auto;
-            }
+    .test-3 .Button {
+        display: inline-block;
+        width: auto;
+    }
 
-            .test-3 .Button:first-child {
-                width: 100px;
-            }
-        </style>
-    </head>
-    <body>
-        <form>
-            <h3>.Button</h3>
-            <div class="test-1">
-                <a class="Button" role="button" href="#non">Button text</a>
-                <button class="Button" type="submit">Button text</button>
-                <input class="Button" type="submit" value="Button text">
-            </div>
+    .test-3 .Button:first-child {
+        width: 100px;
+    }
+</style>
 
-            <h3>.Button (text wrapping)</h3>
-            <div class="test-2">
-                <a class="Button is-disabled" role="button">Button text</a>
-                <button class="Button is-disabled" type="submit" disabled>Button text</button>
-                <input class="Button is-disabled" type="submit" value="Button text" disabled>
-            </div>
+<div class="test">
+    <h3>.Button</h3>
+    <div class="test-1">
+        <a class="Button" role="button" href="#non">Button text</a>
+        <button class="Button" type="submit">Button text</button>
+        <input class="Button" type="submit" value="Button text">
+    </div>
 
-            <h3>.Button (baseline alignment)</h3>
-            <div class="test-3">
-                <a class="Button is-disabled" role="button">Button text</a>
-                <button class="Button is-disabled" type="submit" disabled>Button text</button>
-                <input class="Button is-disabled" type="submit" value="Button text" disabled>
-            </div>
+    <h3>.Button (text wrapping)</h3>
+    <div class="test-2">
+        <a class="Button" role="button">Button text</a>
+        <button class="Button" type="submit">Button text</button>
+        <input class="Button" type="submit" value="Button text">
+    </div>
 
-            <h3>.Button.is-disabled</h3>
-            <div class="test-4">
-                <a class="Button is-disabled" role="button">Button text</a>
-                <button class="Button is-disabled" type="submit" disabled>Button text</button>
-                <input class="Button is-disabled" type="submit" value="Button text" disabled>
-            </div>
-        </form>
-    </body>
-</html>
+    <h3>.Button (baseline alignment)</h3>
+    <div class="test-3">
+        <a class="Button" role="button">Button text</a>
+        <button class="Button" type="submit">Button text</button>
+        <input class="Button" type="submit" value="Button text">
+    </div>
+
+    <h3>.Button.is-disabled</h3>
+    <div class="test-4">
+        <a class="Button is-disabled" role="button">Button text</a>
+        <button class="Button is-disabled" type="submit" disabled>Button text</button>
+        <input class="Button is-disabled" type="submit" value="Button text" disabled>
+    </div>
+</div>
