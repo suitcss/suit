@@ -1,5 +1,7 @@
 === HEAD
 
+* Rewrite the visual tests using 'suit-test'.
+
 === 1.0.0 (October 18, 2013)
 
 * Improve documentation.
