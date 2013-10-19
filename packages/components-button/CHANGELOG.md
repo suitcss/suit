@@ -1,5 +1,6 @@
 === HEAD
 
+* Allow text wrapping.
 * Make buttons full-width by default.
 * Add CSS linting and configuration.
 

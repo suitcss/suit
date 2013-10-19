@@ -25,9 +25,9 @@
  * 3. Inherit text color from ancestor.
  * 4. Take up the full width of the parent context.
  * 5. Inherit font styles from ancestor.
- * 6. Normalize `line-height`. For `input, it can't be changed from `normal` in Firefox 4+.
+ * 6. Normalize `line-height`. For `input`, it can't be changed from `normal` in Firefox 4+.
  * 7. Prevent button text from being selectable.
- * 8. Prevent wrapping across multiple lines.
+ * 8. Make sure `input` will wrap text across multiple lines.
  */
 
 .Button {
@@ -51,7 +51,7 @@
     -webkit-user-select: none;
     user-select: none; /* 7 */
     vertical-align: middle;
-    white-space: nowrap; /* 8 */
+    white-space: normal; /* 8 */
     width: 100%; /* 4 */
 }
 
