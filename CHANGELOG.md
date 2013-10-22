@@ -1,5 +1,6 @@
 === HEAD
 
+* Fix Component(1) installation.
 * Update 'suit-grid' to ~1.0.0.
 * Update 'suit-utils' to ~0.7.0.
 * Rewrite the component documentation.
