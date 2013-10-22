@@ -150,12 +150,12 @@ grid's width, and not the width of the whole application.
 
 ## Testing
 
-Install [Node](http://nodejs.org) (comes with npm).
+Install [Node](http://nodejs.org) (comes with npm) and [Component(1)](http://component.io).
 
 From the repo root, install the project's development dependencies:
 
 ```
-bower install
+component install --dev
 npm install
 ```
 
@@ -164,6 +164,14 @@ To run the CSS Lint tests:
 ```
 npm test
 ```
+
+To build the front-end development bundle:
+
+```
+component build --dev
+```
+
+Basic visual tests are in `test.html`.
 
 ## Browser support
 
