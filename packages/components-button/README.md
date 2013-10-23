@@ -101,7 +101,7 @@ npm install
 To run the CSS Lint tests and build the front-end development bundle:
 
 ```
-npm test
+make test
 ```
 
 Basic visual tests are in `test.html`.
