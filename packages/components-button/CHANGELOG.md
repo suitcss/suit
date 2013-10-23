@@ -1,5 +1,7 @@
 === HEAD
 
+* Use Component(1) for development.
+
 === 3.0.0 (October 19, 2013)
 
 * Rewrite the test file using `suit-grid`.

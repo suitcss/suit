@@ -7,6 +7,6 @@
     "csslint": ">=0.9.10"
   },
   "scripts": {
-    "test": "./node_modules/.bin/csslint *.css"
+    "test": "./node_modules/.bin/csslint *.css && component build --dev"
   }
 }

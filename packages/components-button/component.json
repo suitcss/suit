@@ -1,8 +1,14 @@
 {
-    "name": "button",
-    "repo": "suitcss/button",
-    "version": "3.0.0",
-    "styles": ["button.css"],
-    "author": "Nicolas Gallagher",
-    "license": "MIT"
+  "name": "button",
+  "repo": "suitcss/button",
+  "version": "3.0.0",
+  "styles": [
+    "button.css"
+  ],
+  "author": "Nicolas Gallagher",
+  "license": "MIT",
+  "remotes": [],
+  "development": {
+    "suitcss/test": "*"
+  }
 }

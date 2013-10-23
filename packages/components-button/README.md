@@ -87,6 +87,25 @@ application-specific theme styles in your app. For example:
 }
 ```
 
+## Testing
+
+Install [Node](http://nodejs.org) (comes with npm) and [Component(1)](http://component.io).
+
+From the repo root, install the project's development dependencies:
+
+```
+component install --dev
+npm install
+```
+
+To run the CSS Lint tests and build the front-end development bundle:
+
+```
+npm test
+```
+
+Basic visual tests are in `test.html`.
+
 ## Browser support
 
 * Google Chrome (latest)
