@@ -6,7 +6,8 @@
   "devDependencies": {
     "suit-utils-text": "~0.2.3",
     "suit-utils-dimension": "~0.5.0",
-    "suit-utils-display": "~0.2.2"
+    "suit-utils-display": "~0.2.2",
+    "suit-test": "*"
   },
   "ignore": [
     ".*",
