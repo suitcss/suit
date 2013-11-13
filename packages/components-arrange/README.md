@@ -20,14 +20,15 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 ## Available classes
 
 * `Arrange` - The core component class
+* `Arrange-sizeFit` - The child class for cells to snap to fit their content
+* `Arrange-sizeFill` - The child class for cells to expand to fill the remaining space
 * `Arrange--middle` - The modifier class for middle-aligned cells
 * `Arrange--bottom` - The modifier class for bottom-aligned cells
 * `Arrange--equal` - The modifier class for equal-width cells
-* `Arrange--withGutter` - The modifier class for a 10px inter-cell gutter
-* `Arrange-sizeFit` - The child class for cells to snap to fit their content
-* `Arrange-sizeFill` - the child class for cells to expand to fill the remaining space
 
 ## Usage
+
+N.B. This component affects the width of images in cells.
 
 Like many SUIT components, suit-arrange relies on a core component class
 that is extended by additional modifier classes. This component works best for
@@ -50,35 +51,46 @@ Or for an equally spaced row of buttons or icons, etc.
 ```html
 <ul class="Arrange Arrange--equal">
     <li class="Arrange-sizeFill">
-        <button class="Button Button--full">Reply</button>
+        <button class="Button">Reply</button>
     </li>
     <li class="Arrange-sizeFill">
-        <button class="Button Button--full">Like</button>
+        <button class="Button">Like</button>
     </li>
     <li class="Arrange-sizeFill">
-        <button class="Button Button--full">Save</button>
+        <button class="Button">Save</button>
     </li>
     <li class="Arrange-sizeFill">
-        <button class="Button Button--full">Remove</button>
+        <button class="Button">Remove</button>
     </li>
 </ul>
 ```
 
-If you want to change the default gutter associated with the
-`Arrange--withGutter` modifier, you can do so in your application-level
-stylesheet:
+### Adding gutters
+
+The grid component includes no gutters by default. In your app's CSS, the
+component can be extended with modifier classes for your gutter sizes.
 
 ```css
-.Arrange--withGutter > .Arrange-sizeFill,
-.Arrange--withGutter > .Arrange-sizeFit {
-    padding-left: 20px; /* increase padding */
+/**
+ * @requires suit-arrange
+ */
+
+/**
+ * Arrange gutters: 20px
+ * NOTE: this can trigger a horizontal scrollbar if the component is as wide as
+ * the viewport. Use padding on a container, or `overflow-x:hidden` to protect
+ * against it.
+ */
+
+.Arrange--withGutter {
+    margin: 0 -10px;
+}
+
+.Arrange--withGutter > .Arrange-sizeFit,
+.Arrange--withGutter > .Arrange-sizeFill {
+    padding: 0 10px;
 }
 ```
-
-For complete examples of the markup needed to create various layouts, please
-refer to the `test.html` file.
-
-N.B. This component affects the width of images in cells.
 
 ## Testing
 
