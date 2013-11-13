@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.0 (November 13, 2013)
+
 * Remove gutter modifier; add instructions for it to README.
 * Fix a spacing bug when gutters-between-cells and equal-width-cells were combined.
 * Use suit-test for the test file.
