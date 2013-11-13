@@ -47,6 +47,7 @@ Produces:
 ├── .csslintrc
 ├── .gitignore
 ├── .travis.yml
+├── Makefile
 ├── CHANGELOG.md
 ├── LICENSE.md
 ├── README.md
@@ -56,12 +57,3 @@ Produces:
 ├── my-component.css
 └── test.html
 ```
-
-
-## Running your package's tests
-
-Install the node dependencies and then run `npm test` to trigger the CSS Lint
-tests in the generated package.
-
-For further information about configuring CSS Lint, please refer to the [CSS
-Lint documentation](https://github.com/stubbornella/csslint/wiki/Command-line-interface).
