@@ -18,7 +18,7 @@
  *
  * Example HTML:
  *
- * <div class="Arrange Arrange--top">
+ * <div class="Arrange [Arrange--middle|Arrange--bottom|Arrange--equal]">
  *     <div class="Arrange-sizeFit">
  *         [content]
  *     </div>
@@ -32,18 +32,24 @@
  */
 
 /**
- * 1. Rely on table layout.
- * 2. Zero out the default spacing that might be on an element (e.g., `ul`).
- * 3. Reset the table-layout algorithm in case a component is nested.
- * 4. Make sure the component fills the full width of its parent.
+ * 1. Protect against the component expanding beyond the confines of its
+ *    container if properties affecting the box-model are applied to the
+ *    component. Mainly necessary because of (5).
+ * 2. Rely on table layout.
+ * 3. Zero out the default spacing that might be on an element (e.g., `ul`).
+ * 4. Make sure the component fills at least the full width of its parent.
+ * 5. Reset the table-layout algorithm in case a component is nested.
  */
 
 .Arrange {
-    display: table; /* 1 */
-    margin: 0; /* 2 */
-    padding: 0; /* 2 */
-    table-layout: auto; /* 3 */
-    width: 100%; /* 4 */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; /* 1 */
+    display: table; /* 2 */
+    margin: 0; /* 3 */
+    min-width: 100%; /* 4 */
+    padding: 0; /* 3 */
+    table-layout: auto; /* 5 */
 }
 
 /**
@@ -122,14 +128,16 @@
 }
 
 /**
- * Give the cells an equal width.
+ * Give the cells an equal width. This value ensures that Arrange is still 100%
+ * wide when gutters are used in conjunctions with equal-width cells.
+ *
  * It's recommended that only 'Arrange-sizeFill' be used for equal width cells.
  * Their inner images will automatically be responsive.
  */
 
 .Arrange--equal > .Arrange-sizeFill,
 .Arrange--equal > .Arrange-sizeFit {
-    width: auto;
+    width: 1%;
 }
 
 /* Gutter-separating modifier
