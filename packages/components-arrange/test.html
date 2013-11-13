@@ -1,136 +1,130 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Arrange [component] - SUIT</title>
-        <link rel="stylesheet" href="arrange.css">
-        <style>
-          body { max-width: 600px; }
-          p { margin: 0; }
-          h3 { margin-top: 3em; }
-          .dev-highlight { background: #eee; }
-          .u-block { display: block; }
-          .u-sizeFull { display: block; width: 100%; }
-          .u-textBreak { word-break: break-all; word-break: break-word; word-wrap: break-word; }
-        </style>
-    </head>
-    <body>
-        <h1>SUIT arrange [component]</h1>
-        <p>This is a test page for the <a href="https://github.com/suitcss/arrange">SUIT arrange</a> component.</p>
+<meta charset="utf-8">
+<title>Arrange [component] - SUIT</title>
+<link rel="stylesheet" href="build/build.css">
+<style>
+    body { max-width: 600px; }
+    p { margin: 0; }
+    h3 { margin-top: 3em; }
+    .dev-highlight { background: #eee; }
+    .u-block { display: block; }
+    .u-sizeFull { display: block; width: 100%; }
+    .u-textBreak { word-break: break-all; word-break: break-word; word-wrap: break-word; }
+</style>
 
-        <h3>sizeFit / sizeFill</h3>
+<h1>SUIT arrange [component]</h1>
+<p>This is a test page for the <a href="https://github.com/suitcss/arrange">SUIT arrange</a> component.</p>
 
-        <div class="Arrange">
-            <div class="Arrange-sizeFit dev-highlight">
-                <img class="u-block" src="http://lorempixel.com/120/120" alt="">
-            </div>
-            <div class="Arrange-sizeFill dev-highlight">
-                <p>Main content.</p>
-            </div>
-        </div>
+<h3>sizeFit / sizeFill</h3>
 
-        <h3>sizeFill / sizeFit</h3>
+<div class="Arrange">
+    <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/120/120" alt="">
+    </div>
+    <div class="Arrange-sizeFill dev-highlight">
+        <p>Main content.</p>
+    </div>
+</div>
 
-        <div class="Arrange">
-            <div class="Arrange-sizeFill dev-highlight">
-                <p>Main content.</p>
-            </div>
-            <div class="Arrange-sizeFit dev-highlight">
-                <img class="u-block" src="http://lorempixel.com/120/120" alt="">
-          </div>
-        </div>
+<h3>sizeFill / sizeFit</h3>
 
-        <h3>sizeFit / sizeFill / sizeFit</h3>
+<div class="Arrange">
+    <div class="Arrange-sizeFill dev-highlight">
+        <p>Main content.</p>
+    </div>
+    <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/120/120" alt="">
+  </div>
+</div>
 
-        <div class="Arrange">
-            <div class="Arrange-sizeFit dev-highlight">
-                <img class="u-block" src="http://lorempixel.com/120/120" alt="">
-                <small>Copywrite notice</small>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="Arrange-sizeFill dev-highlight">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa dui. In quam sapien, vulputate ut ultrices eu, ultricies non felis. Donec nisi diam, accumsan viverra laoreet sed, ultricies ut lacus. Sed sed iaculis sapien. Phasellus nec massa elit. Nullam rutrum, sapien non semper fermentum, mauris libero eleifend diam, ac rhoncus risus metus sed magna. Duis venenatis, orci at fermentum pulvinar, est diam consequat eros, in tristique neque ligula commodo lorem. Pellentesque eleifend mollis tincidunt. Donec a porta nisl. Phasellus ultrices rutrum odio tincidunt tristique. In hac habitasse platea dictumst. Proin nec massa ultrices est fermentum pretium sed non elit. Aenean nec erat augue.</p>
-            </div>
-            <div class="Arrange-sizeFit dev-highlight">
-                <img class="u-block" src="http://lorempixel.com/120/120" alt="">
-            </div>
-        </div>
+<h3>sizeFit / sizeFill / sizeFit</h3>
 
-        <h3>Middle-aligned cells</h3>
+<div class="Arrange">
+    <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/120/120" alt="">
+        <small>Copywrite notice</small>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="Arrange-sizeFill dev-highlight">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa dui. In quam sapien, vulputate ut ultrices eu, ultricies non felis. Donec nisi diam, accumsan viverra laoreet sed, ultricies ut lacus. Sed sed iaculis sapien. Phasellus nec massa elit. Nullam rutrum, sapien non semper fermentum, mauris libero eleifend diam, ac rhoncus risus metus sed magna. Duis venenatis, orci at fermentum pulvinar, est diam consequat eros, in tristique neque ligula commodo lorem. Pellentesque eleifend mollis tincidunt. Donec a porta nisl. Phasellus ultrices rutrum odio tincidunt tristique. In hac habitasse platea dictumst. Proin nec massa ultrices est fermentum pretium sed non elit. Aenean nec erat augue.</p>
+    </div>
+    <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/120/120" alt="">
+    </div>
+</div>
 
-        <div class="Arrange Arrange--middle">
-            <div class="Arrange-sizeFit dev-highlight">
-                <img class="u-block" src="http://lorempixel.com/120/120" alt="">
-            </div>
-            <div class="Arrange-sizeFill dev-highlight">
-                <p>Main content.</p>
-            </div>
-        </div>
+<h3>Middle-aligned cells</h3>
 
-        <h3>Bottom-aligned cells</h3>
+<div class="Arrange Arrange--middle">
+    <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/120/120" alt="">
+    </div>
+    <div class="Arrange-sizeFill dev-highlight">
+        <p>Main content.</p>
+    </div>
+</div>
 
-        <div class="Arrange Arrange--bottom">
-            <div class="Arrange-sizeFit dev-highlight">
-                <img class="u-block" src="http://lorempixel.com/120/120" alt="">
-            </div>
-            <div class="Arrange-sizeFill dev-highlight">
-                <p>Main content.</p>
-            </div>
-        </div>
+<h3>Bottom-aligned cells</h3>
 
-        <h3>Gutter-separated cells</h3>
+<div class="Arrange Arrange--bottom">
+    <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/120/120" alt="">
+    </div>
+    <div class="Arrange-sizeFill dev-highlight">
+        <p>Main content.</p>
+    </div>
+</div>
 
-        <div class="Arrange Arrange--withGutter">
-            <div class="Arrange-sizeFit dev-highlight">
-                <img class="u-block" src="http://lorempixel.com/120/120" alt="">
-            </div>
-            <div class="Arrange-sizeFill dev-highlight">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa dui. In quam sapien, vulputate ut ultrices eu, ultricies non felis. Donec nisi diam, accumsan viverra laoreet sed, ultricies ut lacus. Sed sed iaculis sapien. Phasellus nec massa elit. Nullam rutrum, sapien non semper fermentum, mauris libero eleifend diam, ac rhoncus risus metus sed magna. Duis venenatis, orci at fermentum pulvinar, est diam consequat eros, in tristique neque ligula commodo lorem. Pellentesque eleifend mollis tincidunt. Donec a porta nisl. Phasellus ultrices rutrum odio tincidunt tristique. In hac habitasse platea dictumst. Proin nec massa ultrices est fermentum pretium sed non elit. Aenean nec erat augue.</p>
-            </div>
-        </div>
+<h3>Gutter-separated cells</h3>
 
-        <h3>Equal-width cells</h3>
+<div class="Arrange Arrange--withGutter">
+    <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/120/120" alt="">
+    </div>
+    <div class="Arrange-sizeFill dev-highlight">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa dui. In quam sapien, vulputate ut ultrices eu, ultricies non felis. Donec nisi diam, accumsan viverra laoreet sed, ultricies ut lacus. Sed sed iaculis sapien. Phasellus nec massa elit. Nullam rutrum, sapien non semper fermentum, mauris libero eleifend diam, ac rhoncus risus metus sed magna. Duis venenatis, orci at fermentum pulvinar, est diam consequat eros, in tristique neque ligula commodo lorem. Pellentesque eleifend mollis tincidunt. Donec a porta nisl. Phasellus ultrices rutrum odio tincidunt tristique. In hac habitasse platea dictumst. Proin nec massa ultrices est fermentum pretium sed non elit. Aenean nec erat augue.</p>
+    </div>
+</div>
 
-        <div class="Arrange Arrange--equal">
-            <div class="Arrange-sizeFill dev-highlight">
-                A
-            </div>
-            <div class="Arrange-sizeFill dev-highlight">
-                B
-                <img class="u-block" src="http://lorempixel.com/120/120" alt="">
-            </div>
-            <div class="Arrange-sizeFill dev-highlight">
-                C
-            </div>
-            <div class="Arrange-sizeFill dev-highlight">
-                D
-            </div>
-            <div class="Arrange-sizeFill dev-highlight">
-                E
-            </div>
-            <div class="Arrange-sizeFill dev-highlight">
-                F
-            </div>
-        </div>
+<h3>Equal-width cells</h3>
 
-        <h3>Edge-case example: very wide images in sizeFill need `u-sizeFull` class</h3>
+<div class="Arrange Arrange--equal">
+    <div class="Arrange-sizeFill dev-highlight">
+        A
+    </div>
+    <div class="Arrange-sizeFill dev-highlight">
+        B
+        <img class="u-block" src="http://lorempixel.com/120/120" alt="">
+    </div>
+    <div class="Arrange-sizeFill dev-highlight">
+        C
+    </div>
+    <div class="Arrange-sizeFill dev-highlight">
+        D
+    </div>
+    <div class="Arrange-sizeFill dev-highlight">
+        E
+    </div>
+    <div class="Arrange-sizeFill dev-highlight">
+        F
+    </div>
+</div>
 
-        <div class="Arrange">
-            <div class="Arrange-sizeFit dev-highlight">
-                <img class="u-block" src="http://lorempixel.com/120/120" alt="">
-            </div>
-            <div class="Arrange-sizeFill u-textBreak dev-highlight">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <img class="u-sizeFull" src="http://lorempixel.com/700/150" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa dui. In quam sapien, vulputate ut ultrices eu, ultricies non felis. Donec nisi diam, accumsan viverra laoreet sed, ultricies ut lacus. Sed sed iaculis sapien. Phasellus nec massa elit. Nullam rutrum, sapien non semper fermentum, mauris libero eleifend diam, ac rhoncus risus metus sed magna. Duis venenatis, orci at fermentum pulvinar, est diam consequat eros, in tristique neque ligula commodo lorem. Pellentesque eleifend mollis tincidunt. Donec a porta nisl. Phasellus ultrices rutrum odio tincidunt tristique. In hac habitasse platea dictumst. Proin nec massa ultrices est fermentum pretium sed non elit. Aenean nec erat augue.</p>
-            </div>
-            <div class="Arrange-sizeFit dev-highlight">
-                <img class="u-block" src="http://lorempixel.com/80/80" alt="">
-            </div>
-            <div class="Arrange-sizeFit dev-highlight">
-                <img class="u-block" src="http://lorempixel.com/40/40" alt="">
-            </div>
-        </div>
+<h3>Edge-case example: very wide images in sizeFill need `u-sizeFull` class</h3>
 
-    </body>
-</html>
+<div class="Arrange">
+    <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/120/120" alt="">
+    </div>
+    <div class="Arrange-sizeFill u-textBreak dev-highlight">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <img class="u-sizeFull" src="http://lorempixel.com/700/150" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa dui. In quam sapien, vulputate ut ultrices eu, ultricies non felis. Donec nisi diam, accumsan viverra laoreet sed, ultricies ut lacus. Sed sed iaculis sapien. Phasellus nec massa elit. Nullam rutrum, sapien non semper fermentum, mauris libero eleifend diam, ac rhoncus risus metus sed magna. Duis venenatis, orci at fermentum pulvinar, est diam consequat eros, in tristique neque ligula commodo lorem. Pellentesque eleifend mollis tincidunt. Donec a porta nisl. Phasellus ultrices rutrum odio tincidunt tristique. In hac habitasse platea dictumst. Proin nec massa ultrices est fermentum pretium sed non elit. Aenean nec erat augue.</p>
+    </div>
+    <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/80/80" alt="">
+    </div>
+    <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/40/40" alt="">
+    </div>
+</div>

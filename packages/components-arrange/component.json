@@ -1,8 +1,17 @@
 {
-    "name": "arrange",
-    "repo": "suitcss/arrange",
-    "version": "0.1.1",
-    "styles": ["arrange.css"],
-    "author": "Nicolas Gallagher",
-    "license": "MIT"
+  "name": "arrange",
+  "repo": "suitcss/arrange",
+  "version": "0.1.1",
+  "styles": [
+    "arrange.css"
+  ],
+  "development": {
+    "suitcss/utils-text": "v0.2.3",
+    "suitcss/utils-dimension": "v0.5.0",
+    "suitcss/utils-display": "v0.2.2"
+  },
+  "author": "Nicolas Gallagher",
+  "license": "MIT",
+  "remotes": [],
+  "dependencies": {}
 }

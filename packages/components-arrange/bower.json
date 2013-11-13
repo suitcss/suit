@@ -1,13 +1,20 @@
 {
-    "name": "suit-arrange",
-    "version": "0.1.1",
-    "author": "Nicolas Gallagher",
-    "main": "arrange.css",
-    "ignore": [
-        ".*",
-        "CHANGELOG.md",
-        "component.json",
-        "package.json",
-        "test.html"
-    ]
+  "name": "suit-arrange",
+  "version": "0.1.1",
+  "author": "Nicolas Gallagher",
+  "main": "arrange.css",
+  "devDependencies": {
+    "suit-utils-text": "~0.2.3",
+    "suit-utils-dimension": "~0.5.0",
+    "suit-utils-display": "~0.2.2"
+  },
+  "ignore": [
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html",
+    "build",
+    "components"
+  ]
 }
