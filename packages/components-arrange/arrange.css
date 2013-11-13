@@ -139,16 +139,3 @@
 .Arrange--equal > .Arrange-sizeFit {
     width: 1%;
 }
-
-/* Gutter-separating modifier
-   ========================================================================== */
-
-.Arrange--withGutter > .Arrange-sizeFill,
-.Arrange--withGutter > .Arrange-sizeFit {
-    padding-left: 10px;
-}
-
-.Arrange--withGutter > .Arrange-sizeFill:first-child,
-.Arrange--withGutter > .Arrange-sizeFit:first-child {
-    padding-left: 0;
-}
