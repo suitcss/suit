@@ -28,9 +28,7 @@ function Generator() {
 
   this.sourceRoot(path.join(__dirname, '../../templates/app'));
 
-  this.on('end', function () {
-    this.installDependencies({ skipInstall: this.options['skip-install'] });
-  });
+  this.on('end', function () {});
 }
 
 util.inherits(Generator, yeoman.generators.Base);
@@ -58,6 +56,8 @@ Generator.prototype.projectFiles = function projectFiles() {
   this.template('index.css', this.moduleFileName);
   // test
   this.template('test.html', 'test.html');
+  // other
+  this.copy('Makefile');
 };
 
 Generator.name = "suitModule";

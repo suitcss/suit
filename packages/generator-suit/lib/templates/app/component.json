@@ -3,5 +3,7 @@
     "repo": "user/<%= modulePackageName %>",
     "version": "0.0.0",
     "styles": ["<%= moduleFileName %>"],
+    "dependencies": {},
+    "development": {},
     "license": "MIT"
 }

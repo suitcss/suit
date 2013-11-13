@@ -4,9 +4,11 @@
     "version": "0.0.0",
     "main": "<%= moduleFileName %>",
     "ignore": [
+        "build",
+        "components",
         "test",
-        ".csslintrc",
-        ".travis.yml",
+        ".*",
+        "Makefile",
         "CHANGELOG.md",
         "component.json",
         "package.json",
