@@ -35,9 +35,18 @@ describe('Generator test', function () {
         '.gitignore',
         '.travis.yml',
         // config files
-        ['bower.json', /"name": "suit-my-module"/],
-        ['component.json', /"name": "suit-my-module"/],
-        ['package.json', /"name": "suit-my-module"/],
+        [
+          'bower.json',
+          /"name": "suit-my-module"/
+        ],
+        [
+          'component.json',
+          /"name": "suit-my-module"/
+        ],
+        [
+          'package.json',
+          /"name": "suit-my-module"/
+        ],
         // docs
         'CHANGELOG.md',
         'LICENSE.md',

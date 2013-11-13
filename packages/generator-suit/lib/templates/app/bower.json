@@ -3,6 +3,9 @@
     "description": "",
     "version": "0.0.0",
     "main": "<%= moduleFileName %>",
+    "devDependencies": {
+        "suit-test": "*"
+    },
     "ignore": [
         "build",
         "components",

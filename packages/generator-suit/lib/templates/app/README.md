@@ -1,4 +1,4 @@
-# SUIT <%= moduleName %>
+# SUIT <%= _.classify(moduleName) %>
 
 [![Build Status](https://secure.travis-ci.org/user/<%= modulePackageName %>.png?branch=master)](http://travis-ci.org/user/<%= modulePackageName %>)
 
