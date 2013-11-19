@@ -1,5 +1,7 @@
 === HEAD
 
+* Apply `display:block` to `FlexEmbed` by default.
+
 === 1.2.0 (May 31, 2013)
 
 * Add explicit descendant class.
