@@ -1,4 +1,4 @@
-# SUIT flexible embed
+# SUIT FlexEmbed
 
 A SUIT component for responsive, intrinsic ratio embeds. Includes modifier
 classes for 16:9 and 4:3 aspect ratios.
@@ -8,6 +8,7 @@ Read more about [SUIT's design principles](https://github.com/necolas/suit/).
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-flex-embed`
+* [Component(1)](http://component.io/): `component install suitcss/flex-embed`
 * Download: [zip](https://github.com/necolas/suit-flex-embed/zipball/master)
 * Git: `git clone https://github.com/necolas/suit-flex-embed.git`
 
@@ -50,6 +51,26 @@ create a 2.35:1 aspect ratio:
 
 Alternatively, aspect ratios can be calculated programmatically and the
 corresponding `padding-bottom` value applied using an inline style.
+
+## Testing
+
+Install [Node](http://nodejs.org) (comes with npm). It's recommended that you
+also globally install [Component(1)](http://component.io): `npm install -g
+component`.
+
+From the repo root, install the project's development dependencies:
+
+```
+make
+```
+
+To run the CSS Lint tests and build the front-end development bundle:
+
+```
+make test
+```
+
+Basic visual tests are in `test.html`.
 
 ## Browser support
 
