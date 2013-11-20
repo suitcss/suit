@@ -10,7 +10,14 @@
         "suit-test": "*"
     },
     "ignore": [
+        "build",
+        "components",
+        "test",
+        ".*",
+        "Makefile",
         "CHANGELOG.md",
+        "component.json",
+        "package.json",
         "test.html"
     ]
 }
