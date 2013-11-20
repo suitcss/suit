@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.0 (November 20, 2013)
+
 * Add `!important` to the `tabindex=-1` styles.
 * Update Bower ignores.
 * Add 'suit-test' as a development dependency.
