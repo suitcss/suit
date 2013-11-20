@@ -6,6 +6,9 @@
     "dependencies": {
         "necolas/normalize.css": "*"
     },
+    "development": {
+        "suitcss/test": "*"
+    },
     "author": "Nicolas Gallagher",
     "license": "MIT"
 }

@@ -6,6 +6,9 @@
     "dependencies": {
         "normalize-css": "*"
     },
+    "devDependencies": {
+        "suit-test": "*"
+    },
     "ignore": [
         "CHANGELOG.md",
         "test.html"
