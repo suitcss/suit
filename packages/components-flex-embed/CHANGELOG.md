@@ -1,5 +1,7 @@
 === HEAD
 
+=== 1.2.1 (November 20, 2013)
+
 * Use 'suit-test' to structure the UI tests.
 * Use Component(1) for development.
 * Add CSS linting and configuration.

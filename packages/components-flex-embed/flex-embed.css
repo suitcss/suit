@@ -1,5 +1,7 @@
+/*! suit-flex-embed v1.2.1 | MIT License | github.com/suitcss */
+
 /* ==========================================================================
-   Intrinsic ratio embed - http://j.mp/GIHbnu
+   FlexEmbed
    ========================================================================== */
 
 /**
@@ -18,6 +20,8 @@
  * <div class="FlexEmbed FlexEmbed--16by9">
  *     [iframe|object|embed|img]
  * </div>
+ *
+ * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
  */
 
 .FlexEmbed {
