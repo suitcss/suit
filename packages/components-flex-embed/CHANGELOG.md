@@ -1,5 +1,8 @@
 === HEAD
 
+* Use 'suit-test' to structure the UI tests.
+* Use Component(1) for development.
+* Add CSS linting and configuration.
 * Apply `display:block` to `FlexEmbed` by default.
 
 === 1.2.0 (May 31, 2013)
