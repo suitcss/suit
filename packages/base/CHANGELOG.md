@@ -1,5 +1,11 @@
 === HEAD
 
+* Add `!important` to the `tabindex=-1` styles.
+* Update Bower ignores.
+* Add 'suit-test' as a development dependency.
+* Use Component(1) for development.
+* Add CSS linting and configuration.
+
 === 0.2.0 (August 25, 2013)
 
 * Remove focus outline from elements removed from the keyboard tab flow.
