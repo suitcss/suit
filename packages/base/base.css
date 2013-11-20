@@ -46,5 +46,5 @@ ul {
  */
 
 [tabindex="-1"]:focus {
-  outline: none;
+  outline: none !important;
 }
