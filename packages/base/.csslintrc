@@ -1,0 +1,2 @@
+--ignore=adjoining-classes,box-sizing,compatible-vendor-prefixes,important,unqualified-attributes,outline-none
+--exclude=bower_components/,component/

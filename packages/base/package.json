@@ -1,0 +1,13 @@
+{
+  "name": "suit-base",
+  "private": true,
+  "description": "",
+  "version": "0.2.0",
+  "devDependencies": {
+    "component": "*",
+    "csslint": ">=0.9.10"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/csslint *.css"
+  }
+}

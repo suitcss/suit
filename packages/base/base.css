@@ -45,6 +45,6 @@ ul {
  * might still respond to pointer events.
  */
 
-[tabindex="-1"] {
+[tabindex="-1"]:focus {
   outline: none;
 }
