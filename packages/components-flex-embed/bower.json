@@ -1,10 +1,20 @@
 {
-    "name": "suit-flex-embed",
-    "version": "1.2.0",
-    "author": "Nicolas Gallagher",
-    "main": "flex-embed.css",
-    "ignore": [
-        "CHANGELOG.md",
-        "test.html"
-    ]
+  "name": "suit-flex-embed",
+  "version": "1.2.0",
+  "author": "Nicolas Gallagher",
+  "main": "flex-embed.css",
+  "devDependencies": {
+    "suit-test": "*"
+  },
+  "ignore": [
+    "build",
+    "components",
+    "test",
+    ".*",
+    "Makefile",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ]
 }

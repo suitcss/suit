@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Flex Embed [component] - SUIT</title>
-        <link rel="stylesheet" href="flex-embed.css">
-    </head>
-    <body>
-        <h1>SUIT flex-embed [component]</h1>
-        <p>This is a test page for the <a href="https://github.com/necolas/suit-flex-embed">SUIT flex-embed</a> component.</p>
+<meta charset="utf-8">
+<title>FlexEmbed [component] - SUIT</title>
+<link rel="stylesheet" href="build/build.css">
+<style>
+    .Test-run {
+        max-width: 500px;
+    }
+</style>
 
-        <h3>16:9 (iframe)</h3>
-        <div style="max-width:500px">
-            <div class="FlexEmbed FlexEmbed--16by9" style="max-width:600px;">
-                <iframe width="1280" height="720" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
+<div class="Test">
+    <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/flex-embed">FlexEmbed</a> component tests</h1>
 
-        <h3>16:9 (image)</h3>
-        <div style="max-width:500px;">
-            <div class="FlexEmbed FlexEmbed--16by9">
-                <img class="FlexEmbed-item" width="500" height="280" src="http://lorempixel.com/500/280/nature/9" alt="">
-            </div>
+    <h2 class="Test-describe">.FlexEmbed--16by9</h2>
+    <h3 class="Test-it">renders 16:9 (iframe)</h3>
+    <div class="Test-run" id="renders">
+        <div class="FlexEmbed FlexEmbed--16by9">
+            <iframe width="1280" height="720" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
         </div>
+    </div>
+    <h3 class="Test-it">renders 16:9 (img)</h3>
+    <div class="Test-run" id="renders">
+        <div class="FlexEmbed FlexEmbed--16by9">
+            <img class="FlexEmbed-item" width="500" height="280" src="http://lorempixel.com/500/280/nature/9" alt="">
+        </div>
+    </div>
 
-        <h3>4:3 (iframe)</h3>
-        <div style="max-width:500px;">
-            <div class="FlexEmbed FlexEmbed--4by3">
-                <iframe width="1280" height="720" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
-            </div>
+    <h2 class="Test-describe">.FlexEmbed--4by3</h2>
+    <h3 class="Test-it">renders 4:3 (iframe)</h3>
+    <div class="Test-run" id="renders">
+        <div class="FlexEmbed FlexEmbed--4by3">
+            <iframe width="1280" height="720" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
         </div>
-
-        <h3>4:3 (image)</h3>
-        <div style="max-width:500px;">
-            <div class="FlexEmbed FlexEmbed--4by3">
-                <img class="FlexEmbed-item" width="500" height="375" src="http://lorempixel.com/500/375/nature/9" alt="">
-            </div>
+    </div>
+    <h3 class="Test-it">renders 4:3 (img)</h3>
+    <div class="Test-run" id="renders">
+        <div class="FlexEmbed FlexEmbed--4by3">
+            <img class="FlexEmbed-item" width="500" height="375" src="http://lorempixel.com/500/375/nature/9" alt="">
         </div>
-    </body>
-</html>
+    </div>
+</div>
