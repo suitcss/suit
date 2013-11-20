@@ -31,8 +31,7 @@ This is an example of an idiomatic SUIT CSS test file:
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>ComponentName [component] - SUIT</title>
-<link rel="stylesheet" href="bower_components/suit-test/test.css">
-<link rel="stylesheet" href="component-name.css">
+<link rel="stylesheet" href="build/build.css">
 <style>
     #textWrapping {
         width: 300px;
@@ -74,22 +73,23 @@ This is an example of an idiomatic SUIT CSS test file:
 
 ## Testing
 
-Install [Node](http://nodejs.org) (comes with npm) and Bower.
+Install [Node](http://nodejs.org) (comes with npm). It's recommended that you
+also globally install [Component(1)](http://component.io): `npm install -g
+component`.
 
 From the repo root, install the project's development dependencies:
 
 ```
-npm install
-bower install
+make
 ```
 
-To run the CSS Lint tests:
+To run the CSS Lint tests and build the front-end development bundle:
 
 ```
-npm test
+make test
 ```
 
-Open `test.html` in a browser to ensure each visual test is passing.
+Basic visual tests are in `test.html`.
 
 ## Browser support
 
