@@ -1,7 +1,7 @@
 {
   "name": "suit",
   "repo": "suitcss/suit",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "dependencies": {
     "suitcss/base": "0.3.0",
     "suitcss/utils": "0.7.1",
