@@ -1,5 +1,7 @@
 === HEAD
 
+* Fix `component.json` dependencies.
+
 === 0.7.0 (October 15, 2013)
 
 * Update 'suit-utils-dimension' to v0.5.x
