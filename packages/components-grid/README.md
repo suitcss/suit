@@ -32,9 +32,11 @@ Read more about [SUIT](https://github.com/suitcss/suit/).
 ## Available classes
 
 * `Grid`: core component
+* `Grid--alignCenter`: center-align all child `Grid-cell`
+* `Grid--alignRight`: right-align all child `Grid-cell`
+* `Grid--alignMiddle`: middle-align all child `Grid-cell`
+* `Grid--alignBottom`: bottom-align all child `Grid-cell`
 * `Grid-cell`: a child cell of `Grid` that wraps grid content
-* `Grid--alignCenter`: center align all child `Grid-cell`
-* `Grid--alignRight`: right align all child `Grid-cell`
 * `Grid-cell--center`: center an individual `Grid-cell`
 
 ## Use
@@ -43,7 +45,7 @@ A simple grid is easy to create. A grid container can have any number of child
 cells.
 
 ```html
-<div class="Grid [Grid--alignCenter|Grid--alignRight]">
+<div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--alignMiddle|Grid--alignBottom]">
     <div class="Grid-cell u-size1of2 v3-u-size6of12"></div>
     <div class="Grid-cell u-size1of2 v3-u-size4of12"></div>
     <div class="Grid-cell u-size1of3 v3-u-size2of12"></div>
@@ -75,32 +77,6 @@ component can be extended with modifier classes for your gutter sizes.
 
 .Grid--withGutter > .Grid-cell {
     padding: 0 10px;
-}
-```
-
-### Alternative vertical alignments
-
-The grid top-aligns cells in any visual row. In your app's CSS, the component
-can be extended with modifier classes for alternative vertical alignments.
-
-```css
-/**
- * @requires suit-grid
- * ui/grid/grid.css
- */
-
-/* ... other grid extension ... */
-
-/**
- * Alternative vertical alignment of grid cells
- */
-
-.Grid--alignMiddle .Grid-cell {
-    vertical-align: middle;
-}
-
-.Grid--alignBottom .Grid-cell {
-    vertical-align: bottom;
 }
 ```
 

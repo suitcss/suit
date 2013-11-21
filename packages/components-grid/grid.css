@@ -57,6 +57,22 @@
     text-align: right;
 }
 
+/**
+ * Modifier: middle-align grid cells
+ */
+
+.Grid--alignMiddle > .Grid-cell {
+    vertical-align: middle;
+}
+
+/**
+ * Modifier: bottom-align grid cells
+ */
+
+.Grid--alignBottom > .Grid-cell {
+    vertical-align: bottom;
+}
+
 /* Grid cell
    ========================================================================== */
 

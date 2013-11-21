@@ -32,7 +32,6 @@
     <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/grid">Grid</a> component tests</h1>
 
     <h2 class="Test-describe">.Grid</h2>
-
     <h3 class="Test-it">renders cells at fill-width by default</h3>
     <div class="Test-run">
         <div class="Grid">
@@ -44,7 +43,6 @@
             </div>
         </div>
     </div>
-
     <h3 class="Test-it">removes inter-cell whitespace</h3>
     <div class="Test-run">
         <div class="Grid">
@@ -62,7 +60,6 @@
             </div>
         </div>
     </div>
-
     <h3 class="Test-it">automatically wraps cells across multiple lines when they don't fit a single row</h3>
     <div class="Test-run">
         <div class="Grid">
@@ -92,7 +89,6 @@
             </div>
         </div>
     </div>
-
     <h3 class="Test-it">arranges cells of different heights into clear rows</h3>
     <div class="Test-run">
         <div class="Grid">
@@ -122,7 +118,6 @@
             </div>
         </div>
     </div>
-
     <h3 class="Test-it">supports nested grids</h3>
     <div class="Test-run">
         <div class="Grid">
@@ -143,7 +138,7 @@
         </div>
     </div>
 
-    <h2 class="Test-describe">.Grid .Grid--alignCenter</h2>
+    <h2 class="Test-describe">.Grid--alignCenter</h2>
     <h3 class="Test-it">center-aligns all grid cells but not their content</h3>
     <div class="Test-run">
         <div class="Grid Grid--alignCenter">
@@ -159,7 +154,7 @@
         </div>
     </div>
 
-    <h2 class="Test-describe">.Grid .Grid--alignRight</h2>
+    <h2 class="Test-describe">.Grid--alignRight</h2>
     <h3 class="Test-it">right-aligns all grid cells but not their content</h3>
     <div class="Test-run">
         <div class="Grid Grid--alignRight">
@@ -171,6 +166,44 @@
             </div>
             <div class="Grid-cell u-size1of4">
                 <div class="fixture-Box">3</div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="Test-describe">.Grid--alignMiddle</h2>
+    <h3 class="Test-it">middle-aligns all grid cells</h3>
+    <div class="Test-run">
+        <div class="Grid Grid--alignMiddle">
+            <div class="Grid-cell u-size1of4">
+                <div class="fixture-Box">1</div>
+            </div>
+            <div class="Grid-cell u-size1of4">
+              <div class="fixture-Box fixture-Box--doubleHeight">2</div>
+            </div>
+            <div class="Grid-cell u-size1of4">
+                <div class="fixture-Box">3</div>
+            </div>
+            <div class="Grid-cell u-size1of4">
+                <div class="fixture-Box">4</div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="Test-describe">.Grid--alignBottom</h2>
+    <h3 class="Test-it">bottom-aligns all grid cells</h3>
+    <div class="Test-run">
+        <div class="Grid Grid--alignBottom">
+            <div class="Grid-cell u-size1of4">
+                <div class="fixture-Box">1</div>
+            </div>
+            <div class="Grid-cell u-size1of4">
+                <div class="fixture-Box fixture-Box--doubleHeight">2</div>
+            </div>
+            <div class="Grid-cell u-size1of4">
+                <div class="fixture-Box">3</div>
+            </div>
+            <div class="Grid-cell u-size1of4">
+                <div class="fixture-Box">4</div>
             </div>
         </div>
     </div>
@@ -191,7 +224,7 @@
         </div>
     </div>
 
-    <h2 class="Test-describe">.Grid .Grid--withGutter (requires extension)</h2>
+    <h2 class="Test-describe">.Grid--withGutter (requires extension)</h2>
     <h3 class="Test-it">supports gutters</h3>
     <div class="Test-run">
         <div class="Grid Grid--withGutter">
@@ -209,7 +242,6 @@
             </div>
         </div>
     </div>
-
     <h3 class="Test-it">doesn't apply gutters to nested grids</h3>
     <div class="Test-run">
         <div class="Grid Grid--withGutter">
@@ -237,7 +269,6 @@
             </div>
         </div>
     </div>
-
     <h3 class="Test-it">correctly aligns gutters when using offsets (requires suit-utils-offset)</h3>
     <div class="Test-run">
         <div class="Grid Grid--withGutter">
@@ -263,7 +294,6 @@
             </div>
         </div>
     </div>
-
     <h3 class="Test-it">correctly aligns gutters within nested grids</h3>
     <div class="Test-run">
         <div class="Grid Grid--withGutter">
