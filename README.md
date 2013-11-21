@@ -10,15 +10,8 @@ built using a naming convention inspired by the BEM methodology.
 
 ## Installation
 
-Recommended: install [Bower](http://bower.io/), then run this command in your
-project directory:
-
-```
-bower install --save suit
-```
-
-Alternative: (a download bundle will be available at some point)
-
+* [Bower](http://bower.io/): `bower install --save suit`
+* [Component(1)](http://component.io/): `component install suitcss/suit`
 
 ## Features
 
@@ -137,11 +130,10 @@ CSS:
 
 ## Suggested tooling
 
-* [autoprefixer](https://github.com/ai/autoprefixer)
 * [csslint](https://github.com/stubbornella/csslint)
-* [html-inspector](https://github.com/philipwalton/html-inspector)
 * [generator-suit](https://github.com/suitcss/generator-suit)
-* [rework](https://github.com/visionmedia/rework)
+* [html-inspector](https://github.com/philipwalton/html-inspector)
+* [rework-suit](https://github.com/suitcss/rework-suit)
 
 
 ## Browser support
