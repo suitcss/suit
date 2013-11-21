@@ -1,14 +1,17 @@
 === HEAD
 
+* Update 'suit-base' to 0.3.0.
+* Update 'suit-utils' to 0.7.1.
+* Update 'suit-arrange' to 0.2.0.
+* Update 'suit-button' to 3.0.0.
+* Update 'suit-button-group' to 1.2.1.
+* Update 'suit-flex-embed' to 1.2.1.
+* Update 'suit-grid' to 1.1.0.
+* Remove 'grid-layouts'.
 * Fix Component(1) installation.
-* Update 'suit-grid' to ~1.0.0.
-* Update 'suit-utils' to ~0.7.0.
 * Rewrite the component documentation.
 * Formally document the use of `v1-*`-style prefixes for breakpoint-specific classes.
 * Introduce a convention for components that use multiple files.
-* Update 'suit-base' to ~0.2.0.
-* Update 'suit-utils' to ~0.6.0.
-* Update 'suit-button-group' to ~1.2.0.
 * Relax rules to do with JavaScript's use of HTML classes.
 * Simplify utility naming conventions.
 * Rewrite the documentation.
