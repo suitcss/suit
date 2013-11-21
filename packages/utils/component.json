@@ -1,7 +1,7 @@
 {
     "name": "utils",
     "repo": "suitcss/utils",
-    "version": "0.7.0",
+    "version": "0.7.1",
     "dependencies": {
         "suitcss/utils-dimension": "v0.5.0",
         "suitcss/utils-display": "v0.2.2",
