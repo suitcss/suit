@@ -1,6 +1,6 @@
 {
   "name": "suit-grid",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Nicolas Gallagher",
   "main": "grid.css",
   "devDependencies": {

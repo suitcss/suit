@@ -1,5 +1,7 @@
 === HEAD
 
+=== 1.1.0 (November 20, 2013)
+
 * Add `Grid--alignMiddle` and `Grid--alignBottom` modifiers.
 * Fix Component(1) install and use it in development.
 * Rewrite the visual tests using 'suit-test'.
