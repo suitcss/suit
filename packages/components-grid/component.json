@@ -1,13 +1,13 @@
 {
-    "name": "grid",
-    "repo": "suitcss/grid",
-    "version": "1.0.0",
-    "styles": ["grid.css"],
-    "development": {
-      "suitcss/utils-dimension": "v0.5.0",
-      "suitcss/utils-offset": "v0.3.0",
-      "suitcss/test": "v0.1.0"
-    },
-    "author": "Nicolas Gallagher",
-    "license": "MIT"
+  "name": "grid",
+  "repo": "suitcss/grid",
+  "version": "1.0.0",
+  "styles": ["grid.css"],
+  "development": {
+    "suitcss/utils-dimension": "v0.5.0",
+    "suitcss/utils-offset": "v0.3.0",
+    "suitcss/test": "v0.1.0"
+  },
+  "author": "Nicolas Gallagher",
+  "license": "MIT"
 }

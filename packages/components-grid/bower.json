@@ -9,7 +9,11 @@
     "suit-test": "~0.1.0"
   },
   "ignore": [
+    "build",
+    "components",
+    "test",
     ".*",
+    "Makefile",
     "CHANGELOG.md",
     "component.json",
     "package.json",

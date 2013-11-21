@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "devDependencies": {
+    "component": "*",
     "csslint": ">=0.9.10"
   },
   "scripts": {
