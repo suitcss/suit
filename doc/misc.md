@@ -11,7 +11,7 @@ attributes.
 * JavaScript may use any component-level classes in selectors.
 * JavaScript may add/remove the component-level state class `is-expanding`.
 * JavaScript may add/remove utilities classes.
-* JavaScript may JavaScript-specific utility classes prefixed with `js-`.
+* JavaScript may add/remove JavaScript-specific utility classes prefixed with `js-`.
 
 The example below includes a dedicated JavaScript utility class to which
 behaviour is bound. It is independent of any specific UI component.
