@@ -15,6 +15,8 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Available classes
 
+* `u-linkBlock` - Block-level link with no `text-decoration` for any state.
+
 * `u-linkClean` - A link without no `text-decoration` for any state.
 
 * `u-linkComplex` - Limit a link's interactive `text-decoration` underline to a
@@ -27,13 +29,19 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
     </a>
     ```
 
-* `u-linkBlock` - Block-level link with no `text-decoration` for any state.
+* `u-linkPseudo` - Make another interactive element, e.g., `button`, look like
+  a link. Requires the utility class being added to the base link rules.
 
-* `u-linkPseudo` - Style a `button` to look like a link.
+    ```css
+    a,
+    .u-linkPseudo {
+        color: lightblue;
+    }
+    ```
 
     ```html
-    <button class="u-linkPseudo">
-        <a role="presentation">Button content</a>
+    <button class="u-linkPseudo" type="button">
+        Link-like button
     </button>
     ```
 
