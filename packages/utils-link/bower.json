@@ -1,13 +1,17 @@
 {
-    "name": "suit-utils-link",
-    "version": "0.1.3",
-    "author": "Nicolas Gallagher",
-    "main": "link.css",
-    "ignore": [
-        ".*",
-        "CHANGELOG.md",
-        "component.json",
-        "package.json",
-        "test.html"
-    ]
+  "name": "suit-utils-link",
+  "version": "0.1.3",
+  "author": "Nicolas Gallagher",
+  "main": "link.css",
+  "devDependencies": {
+    "suit-test": "*"
+  },
+  "ignore": [
+    ".*",
+    "Makefile",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ]
 }

@@ -43,19 +43,23 @@ Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
 
 ## Testing
 
-Install [Node](http://nodejs.org) (comes with npm).
+Install [Node](http://nodejs.org) (comes with npm). It's recommended that you
+also globally install [Component(1)](http://component.io): `npm install -g
+component`.
 
 From the repo root, install the project's development dependencies:
 
 ```
-npm install
+make
 ```
 
-To run the CSS Lint tests:
+To re-run the CSS Lint tests and build the front-end development bundle:
 
 ```
-npm test
+make test
 ```
+
+Visual tests are in `test.html`.
 
 ## Browser support
 

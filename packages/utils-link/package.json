@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.1.3",
   "devDependencies": {
-    "csslint": ">=0.9.10"
+    "csslint": ">=0.9.10",
+    "component": "~0.18.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/csslint *.css"
