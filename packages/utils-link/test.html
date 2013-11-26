@@ -1,48 +1,66 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Link [utility] - SUIT</title>
-        <link rel="stylesheet" href="link.css">
-        <style>
-            a {
-                background: #eee;
-                color: #069;
-                text-decoration: underline;
-            }
+<meta charset="utf-8">
+<title>Link [utility] - SUIT</title>
+<link rel="stylesheet" href="build/build.css">
+<style>
+    .Test-run a,
+    .Test-run .u-linkPseudo {
+        color: #069;
+        outline: 1px solid red;
+        text-decoration: underline;
+    }
 
-            a:hover,
-            a:focus,
-            a:active {
-                color: red;
-                text-decoration: underline;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Test: SUIT utilities - link</h1>
+    .Test-run a:hover,
+    .Test-run a:focus,
+    .Test-run a:active,
+    .Test-run .u-linkPseudo:hover,
+    .Test-run .u-linkPseudo:focus,
+    .Test-run .u-linkPseudo:active {
+        color: red;
+        text-decoration: underline;
+    }
 
-        <p>
-            <a href="#">Control link</a>
-        </p>
+    #linkPseudo-mods button {
+        border: 3px solid blue;
+        padding: 10px;
+    }
+</style>
 
-        <p>
-            <a class="u-linkClean" href="#">A link with no text decoration</a>
-        </p>
+<div class="Test">
+    <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-link">link utilities</a> tests</h1>
 
-        <a class="u-linkBlock" href="#">A block link (also no text decoration)</a>
+    <p>
+        <a href="#">Control link</a>
+    </p>
 
-        <p>
-            <a class="u-linkComplex" href="#">
-                Link complex
-                <span class="u-linkComplex-target">target</span>
-            </a>
-        </p>
+    <h2 class="Test-describe">u-linkBlock</h2>
+    <h3 class="Test-it">renders a block-level link with no text decoration for any state</h3>
+    <div class="Test-run">
+        <a class="u-linkBlock" href="#">Link text</a>
+    </div>
 
-        <p>
-            <button class="u-linkPseudo">
-                <a>A button that looks like a link</a>
-            </button>
-        </p>
-    </body>
-</html>
+    <h2 class="Test-describe">u-linkClean</h2>
+    <h3 class="Test-it">renders a link with no text decoration for any state</h3>
+    <div class="Test-run">
+        <a class="u-linkClean" href="#">Link text</a>
+    </div>
+
+    <h2 class="Test-describe">u-linkComplex / u-linkComplex-target</h2>
+    <h3 class="Test-it">renders a link with only the 'target' receiving text decoration on hover/focus/active</h3>
+    <div class="Test-run">
+        <a class="u-linkComplex" href="#">
+            Link complex
+            <span class="u-linkComplex-target">target</span>
+        </a>
+    </div>
+
+    <h2 class="Test-describe">u-linkPseudo</h2>
+    <h3 class="Test-it">renders a `button` like a link</h3>
+    <div class="Test-run">
+        <button class="u-linkPseudo" type="button">Link text</button>
+    </div>
+    <h3 class="Test-it">doesn't prevent the button styles from being modified</h3>
+    <div class="Test-run" id="linkPseudo-mods">
+        <button class="u-linkPseudo" type="button">Link text</button>
+    </div>
+</div>
