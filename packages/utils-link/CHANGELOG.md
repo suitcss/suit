@@ -1,5 +1,9 @@
 === HEAD
 
+* Fix `u-linkPseudo`.
+* Use 'suit-test' for development.
+* Use Component(1) for development.
+
 === 0.1.3 (August 30, 2013)
 
 * Add CSS linting and configuration.
