@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.0 (November 26, 2013)
+
 * Fix `u-linkPseudo`.
 * Use 'suit-test' for development.
 * Use Component(1) for development.
