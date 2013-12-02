@@ -6,7 +6,7 @@ applying CSS to the DOM (i.e., the lack of style encapsulation), and to better
 communicate the relationships between classes.
 
 Although the major architectural division is between
-**[utilities](utilties.md)** and **[components](components.md)**, a layer
+**[utilities](utilities.md)** and **[components](components.md)**, a layer
 of finer separation of responsibilities is build upon it.
 
 **Table of contents**
