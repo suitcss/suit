@@ -2,7 +2,7 @@
   "name": "suit-flex-embed",
   "private": true,
   "description": "",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "devDependencies": {
     "component": "*",
     "csslint": ">=0.9.10"
