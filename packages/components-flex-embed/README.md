@@ -1,7 +1,7 @@
 # SUIT FlexEmbed
 
 A SUIT component for responsive, intrinsic ratio embeds. Includes modifier
-classes for 16:9 and 4:3 aspect ratios.
+classes for 3:1, 2:1, 16:9, and 4:3 aspect ratios.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
@@ -15,6 +15,8 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 ## Available classes
 
 * `FlexEmbed` - The core responsive embed component with no dimensions
+* `FlexEmbed--3by1` - The modifier class for 3x1 aspect ratio embed
+* `FlexEmbed--2by1` - The modifier class for 2x1 aspect ratio embed
 * `FlexEmbed--16by9` - The modifier class for 16x9 aspect ratio embed
 * `FlexEmbed--4by3` - The modifier class for 4x3 aspect ratio embed
 * `FlexEmbed-item` - The descendant class for the media that is being embedded

@@ -43,6 +43,22 @@
 }
 
 /**
+ * Modifier: 3:1 aspect ratio
+ */
+
+.FlexEmbed--3by1:before {
+    padding-bottom: 33.33333%;
+}
+
+/**
+ * Modifier: 2:1 aspect ratio
+ */
+
+.FlexEmbed--2by1:before {
+    padding-bottom: 50%;
+}
+
+/**
  * Modifier: 16:9 aspect ratio
  */
 
