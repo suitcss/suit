@@ -3,14 +3,14 @@
 A SUIT component for responsive, intrinsic ratio embeds. Includes modifier
 classes for 16:9 and 4:3 aspect ratios.
 
-Read more about [SUIT's design principles](https://github.com/necolas/suit/).
+Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [Bower](http://bower.io/): `bower install --save suit-flex-embed`
 * [Component(1)](http://component.io/): `component install suitcss/flex-embed`
-* Download: [zip](https://github.com/necolas/suit-flex-embed/zipball/master)
-* Git: `git clone https://github.com/necolas/suit-flex-embed.git`
+* Download: [zip](https://github.com/suitcss/flex-embed/zipball/master)
+* Git: `git clone https://github.com/suitcss/flex-embed.git`
 
 ## Available classes
 
