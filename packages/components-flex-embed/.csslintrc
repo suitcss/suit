@@ -1,2 +1,2 @@
 --ignore=adjoining-classes,box-sizing,compatible-vendor-prefixes,important
---exclude=bower_components/
+--exclude-list=components/,bower_componets/
