@@ -1,5 +1,7 @@
 === HEAD
 
+=== 1.3.0 (January 6, 2014)
+
 * Add support for `max-height`.
 
 === 1.2.1 (November 20, 2013)
