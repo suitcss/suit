@@ -44,7 +44,7 @@ create a 2.35:1 aspect ratio:
  * Modifier: 47:20 aspect ratio
  */
 
-.FlexEmbed--47by20 {
+.FlexEmbed--47by20:before {
     padding-bottom: 42.55%;
 }
 ```

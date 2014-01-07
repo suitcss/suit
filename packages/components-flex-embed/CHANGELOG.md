@@ -1,5 +1,7 @@
 === HEAD
 
+* Add support for `max-height`.
+
 === 1.2.1 (November 20, 2013)
 
 * Use 'suit-test' to structure the UI tests.
