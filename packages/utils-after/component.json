@@ -1,0 +1,13 @@
+{
+  "name": "utils-after",
+  "repo": "suitcss/utils-after",
+  "version": "0.1.0",
+  "styles": [
+    "after.css",
+    "after-v1.css",
+    "after-v2.css",
+    "after-v3.css"
+  ],
+  "author": "Nicolas Gallagher",
+  "license": "MIT"
+}

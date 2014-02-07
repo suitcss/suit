@@ -1,0 +1,2 @@
+--ignore=important,box-sizing
+--exclude=bower_components/

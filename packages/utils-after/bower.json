@@ -1,0 +1,18 @@
+{
+  "name": "suit-utils-after",
+  "version": "0.1.0",
+  "author": "Nicolas Gallagher",
+  "main": [
+    "after.css",
+    "after-v1.css",
+    "after-v2.css",
+    "after-v3.css"
+  ],
+  "ignore": [
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ]
+}
