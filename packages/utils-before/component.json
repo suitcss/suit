@@ -1,0 +1,13 @@
+{
+  "name": "utils-before",
+  "repo": "suitcss/utils-before",
+  "version": "0.1.0",
+  "styles": [
+    "before.css",
+    "before-v1.css",
+    "before-v2.css",
+    "before-v3.css"
+  ],
+  "author": "Nicolas Gallagher",
+  "license": "MIT"
+}
