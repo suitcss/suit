@@ -13,18 +13,18 @@
 html {
   background: var(base-background, inherit);
   color: var(base-color, inherit);
-  font: var(base-font, inherit);
+  font: var(base-font, 16px sans-serif);
 }
 
 a {
-  color: var(base-link-color, inherit);
+  color: var(base-link-color, #069);
   text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: var(base-link-hover-color, inherit);
+  color: var(base-link-hover-color, #069);
   text-decoration: underline;
 }
 
