@@ -28,29 +28,6 @@ may end up being used frequently, due to their separation from the nature of
 their content. As a result, once a class is in significant use great care
 should be taken before modifying it.
 
-### Referencing utilities
-
-During development, you can include the utilities you need using the `@import`
-directive in your main stylesheet. Your build step should take care of inlining
-these imports for production.
-
-Example:
-
-```css
-@import "/bower_components/normalize-css/normalize.css";
-
-/* Utilities */
-
-@import "/bower_components/suit-utils-display/display.css";
-@import "/bower_components/suit-utils-layout/layout.css";
-@import "/bower_components/suit-utils-size/size.css";
-@import "/bower_components/suit-utils-state/state.css";
-@import "/bower_components/suit-utils-text/text.css";
-@import "/bower_components/suit-utils-link/link.css";
-
-...
-```
-
 ### Templating
 
 Each utility class modifies a single trait (a small collection of similar
