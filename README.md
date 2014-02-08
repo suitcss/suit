@@ -66,6 +66,16 @@ N.B. There is a [Yeoman generator for creating SUIT component
 packages](https://github.com/suitcss/generator-suit).
 
 
+## Suggested tooling
+
+* [component](https://github.com/component/component)
+* [component-builder-suit](https://github.com/suitcss/component-builder-suit)
+* [generator-suit](https://github.com/suitcss/generator-suit)
+* [html-inspector](https://github.com/philipwalton/html-inspector)
+* [react](https://github.com/facebook/react)
+* [rework-suit](https://github.com/suitcss/rework-suit)
+
+
 ## Example
 
 HTML:
@@ -126,14 +136,6 @@ CSS:
     margin-top: 10px;
 }
 ```
-
-
-## Suggested tooling
-
-* [csslint](https://github.com/stubbornella/csslint)
-* [generator-suit](https://github.com/suitcss/generator-suit)
-* [html-inspector](https://github.com/philipwalton/html-inspector)
-* [rework-suit](https://github.com/suitcss/rework-suit)
 
 
 ## Browser support
