@@ -8,7 +8,8 @@
     "component-builder-suit": "0.1.x"
   },
   "scripts": {
+    "build": "component install && component build",
     "build-test": "component install --dev && component build --dev --use component-builder-suit",
-    "build": "component install && component build --use component-builder-suit"
+    "build-standalone": "component install && component build --use component-builder-suit"
   }
 }

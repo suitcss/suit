@@ -29,10 +29,16 @@ Install [Node](http://nodejs.org) (comes with npm).
 npm install
 ```
 
-To generate a build.
+To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
 
 ```
 npm run build
+```
+
+To generate a standalone, preprocessed build.
+
+```
+npm run build-standalone
 ```
 
 To generate the testing build.
