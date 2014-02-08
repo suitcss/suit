@@ -1,7 +1,7 @@
 # SUIT utilities
 
 A SUIT collection of utility classes for common, reusable, low-level CSS traits.
-The collection includes dimension, display, layout, link, space, state, and
+The collection includes size, display, layout, link, space, state, and
 text utilities.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
@@ -12,11 +12,11 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 …is a convenient way to install all the SUIT utility packages:
 
-* [suit-utils-dimension](https://github.com/suitcss/utils-dimension)
 * [suit-utils-display](https://github.com/suitcss/utils-display)
 * [suit-utils-layout](https://github.com/suitcss/utils-layout)
 * [suit-utils-link](https://github.com/suitcss/utils-link)
 * [suit-utils-offset](https://github.com/suitcss/utils-offset)
+* [suit-utils-size](https://github.com/suitcss/utils-size)
 * [suit-utils-space](https://github.com/suitcss/utils-space)
 * [suit-utils-state](https://github.com/suitcss/utils-state)
 * [suit-utils-text](https://github.com/suitcss/utils-text)
@@ -43,7 +43,7 @@ Example:
 
 @import "/bower_components/suit-utils-display/display.css";
 @import "/bower_components/suit-utils-layout/layout.css";
-@import "/bower_components/suit-utils-dimension/dimension.css";
+@import "/bower_components/suit-utils-size/size.css";
 @import "/bower_components/suit-utils-state/state.css";
 @import "/bower_components/suit-utils-text/text.css";
 @import "/bower_components/suit-utils-link/link.css";

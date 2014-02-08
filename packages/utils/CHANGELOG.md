@@ -1,5 +1,7 @@
 === HEAD
 
+* Reflect the renaming of 'utils-dimension' to 'utils-size'.
+
 === 0.7.1 (November 20, 2013)
 
 * Fix `component.json` dependencies.
