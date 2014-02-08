@@ -1,13 +1,11 @@
 {
-    "name": "utils-offset",
-    "repo": "suitcss/utils-offset",
-    "version": "0.3.0",
-    "styles": [
-      "offset.css",
-      "offset-v1.css",
-      "offset-v2.css",
-      "offset-v3.css"
-    ],
-    "author": "Nicolas Gallagher",
-    "license": "MIT"
+  "name": "utils-offset",
+  "repo": "suitcss/utils-offset",
+  "version": "0.3.0",
+  "dependencies": {
+    "suitcss/utils-before": "0.1.0",
+    "suitcss/utils-after": "0.1.0"
+  },
+  "author": "Nicolas Gallagher",
+  "license": "MIT"
 }

@@ -1,5 +1,7 @@
 === HEAD
 
+* Depend on 'utils-before' and 'utils-after'.
+
 === 0.3.0 (September 26, 2013)
 
 * Add responsive offset plugins.
