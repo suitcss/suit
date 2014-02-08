@@ -53,9 +53,7 @@ describe('Generator test', function () {
         // component
         'my-module.css',
         // test
-        'test.html',
-        // other
-        'Makefile'
+        'test.html'
       ];
 
       suitmodule.run([], function () {

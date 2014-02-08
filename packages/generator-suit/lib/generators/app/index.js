@@ -55,8 +55,6 @@ Generator.prototype.projectFiles = function projectFiles() {
   this.template('index.css', this.moduleFileName);
   // test
   this.template('test.html', 'test.html');
-  // other
-  this.copy('Makefile');
 };
 
 Generator.name = "suitModule";

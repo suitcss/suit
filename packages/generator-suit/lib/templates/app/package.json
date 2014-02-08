@@ -4,8 +4,12 @@
   "description": "",
   "version": "0.0.0",
   "devDependencies": {
-    "component": "*"
+    "component": "0.19.x",
+    "component-builder-suit": "0.1.x"
   },
   "scripts": {
+    "build": "component install && component build",
+    "build-test": "component install --dev && component build --dev --use component-builder-suit",
+    "build-standalone": "component install && component build --use component-builder-suit"
   }
 }
