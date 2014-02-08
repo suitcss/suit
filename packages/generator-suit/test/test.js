@@ -31,7 +31,6 @@ describe('Generator test', function () {
     it('creates expected files', function (cb) {
       var expected = [
         // dotfiles
-        '.csslintrc',
         '.gitignore',
         '.travis.yml',
         // config files

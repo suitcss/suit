@@ -41,7 +41,6 @@ util.inherits(Generator, yeoman.generators.Base);
 
 Generator.prototype.projectFiles = function projectFiles() {
   // dotfiles
-  this.copy('csslintrc', '.csslintrc');
   this.copy('gitignore', '.gitignore');
   this.copy('travis.yml', '.travis.yml');
   // config files

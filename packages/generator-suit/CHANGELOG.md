@@ -1,5 +1,7 @@
 === HEAD
 
+* Remove CSSLint tooling from modules.
+
 === 0.2.0 (November 13, 2013)
 
 * Add 'suit-test' to generated package's dev dependencies.
