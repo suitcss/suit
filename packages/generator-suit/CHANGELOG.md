@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.0 (February 8, 2014)
+
 * Add 'component-builder-suit' to generated package's tools.
 * Remove CSSLint tooling from modules.
 
