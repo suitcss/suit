@@ -1,21 +1,25 @@
 # SUIT base
 
-A thin layer on top of normalize.css that removes space from typographic and
-form elements. This provides a more practical base for web applications.
+Base styles for web applications. Provides a thin layer on top of
+[Normalize.css](https://github.com/necolas/normalize.css). Removes default
+margins and exposes variables for theming.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-base`
 * [Component(1)](http://component.io/): `component install suitcss/base`
-* Download: [zip](https://github.com/suitcss/suit-base/zipball/master)
-* Git: `git clone https://github.com/suitcss/suit-base.git`
+* [Bower](http://bower.io/): `bower install --save suit-base`
+* [Download](https://github.com/suitcss/base/releases): `suit-base.css`
 
-## Usage
+## Configurable variables
 
-Apply after `normalize.css` and before other CSS.
-
+* `var-base-background`: the application background style.
+* `var-base-color`: the root text color.
+* `var-base-font`: the root font style.
+* `var-base-link-color`: the root link color.
+* `var-base-link-hover-color`: the root link interaction (`:hover`, `:focus`,
+  `:active`) color.
 
 ## Testing
 

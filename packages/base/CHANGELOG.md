@@ -1,5 +1,6 @@
 === HEAD
 
+* Introduce base theme variables for `html` and `a`.
 * Remove default `figure` margin.
 
 === 0.3.0 (November 20, 2013)

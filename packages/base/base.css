@@ -10,6 +10,24 @@
  * appropriate elements.
  */
 
+html {
+  background: var(base-background, inherit);
+  color: var(base-color, inherit);
+  font: var(base-font, inherit);
+}
+
+a {
+  color: var(base-link-color, inherit);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(base-link-hover-color, inherit);
+  text-decoration: underline;
+}
+
 blockquote,
 dl,
 dd,
