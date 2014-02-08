@@ -10,8 +10,8 @@ built using a naming convention inspired by the BEM methodology.
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit`
 * [Component(1)](http://component.io/): `component install suitcss/suit`
+* [Bower](http://bower.io/): `bower install --save suit`
 
 ## Features
 
@@ -42,11 +42,11 @@ conventions](doc/naming-conventions.md). Dependencies are best managed using
 **Utilities**:
 
 * [All](https://github.com/suitcss/utils/)
-* [Dimension](https://github.com/suitcss/utils-dimension/)
 * [Display](https://github.com/suitcss/utils-display/)
 * [Layout](https://github.com/suitcss/utils-layout/)
 * [Link](https://github.com/suitcss/utils-link/)
-* [Offset](https://github.com/suitcss/utils-offset/)
+* [Offset](https://github.com/suitcss/utils-offset/) (packages [Before](https://github.com/suitcss/utils-before/) and [After](https://github.com/suitcss/utils-after/))
+* [Size](https://github.com/suitcss/utils-size/)
 * [Space](https://github.com/suitcss/utils-space/)
 * [State](https://github.com/suitcss/utils-state/)
 * [Text](https://github.com/suitcss/utils-text/)
