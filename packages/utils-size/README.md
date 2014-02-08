@@ -1,17 +1,17 @@
-# SUIT utilities: dimension
+# SUIT utilities: size
 
-[![Build Status](https://secure.travis-ci.org/suitcss/utils-dimension.png?branch=master)](http://travis-ci.org/suitcss/utils-dimension)
+[![Build Status](https://secure.travis-ci.org/suitcss/utils-size.png?branch=master)](http://travis-ci.org/suitcss/utils-size)
 
-A SUIT collection of utility classes for low-level CSS dimension traits.
+A SUIT collection of utility classes for low-level CSS sizing traits.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-utils-dimension`
-* [Component(1)](http://component.io/): `component install suitcss/utils-dimension`
-* Download: [zip](https://github.com/suitcss/utils-dimension/zipball/master)
-* Git: `git clone https://github.com/suitcss/utils-dimension.git`
+* [Component(1)](http://component.io/): `component install suitcss/utils-size`
+* [Bower](http://bower.io/): `bower install --save suitcss/utils-size`
+* Download: [zip](https://github.com/suitcss/utils-size/zipball/master)
+* Git: `git clone https://github.com/suitcss/utils-size.git`
 
 ## Available classes
 
@@ -52,10 +52,10 @@ responsive utilities from taking effect at the same time.
 Example:
 
 ```
-@import "/bower_components/suit-utils-dimension/dimension.css";
-@import "/bower_components/suit-utils-dimension/dimension-v1.css" (max-width: 25em);
-@import "/bower_components/suit-utils-dimension/dimension-v2.css" (min-width: 25em) and (max-width: 50em);
-@import "/bower_components/suit-utils-dimension/dimension-v3.css" (min-width: 50em);
+@import "/bower_components/suit-utils-size/size.css";
+@import "/bower_components/suit-utils-size/size-v1.css" (max-width: 25em);
+@import "/bower_components/suit-utils-size/size-v2.css" (min-width: 25em) and (max-width: 50em);
+@import "/bower_components/suit-utils-size/size-v3.css" (min-width: 50em);
 ```
 
 ## Testing

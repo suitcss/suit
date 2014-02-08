@@ -1,18 +1,18 @@
 {
-    "name": "suit-utils-dimension",
-    "version": "0.5.0",
-    "author": "Nicolas Gallagher",
-    "main": [
-        "dimension.css",
-        "dimension-v1.css",
-        "dimension-v2.css",
-        "dimension-v3.css"
-    ],
-    "ignore": [
-        ".*",
-        "CHANGELOG.md",
-        "component.json",
-        "package.json",
-        "test.html"
-    ]
+  "name": "suit-utils-size",
+  "version": "0.5.0",
+  "author": "Nicolas Gallagher",
+  "main": [
+    "size.css",
+    "size-v1.css",
+    "size-v2.css",
+    "size-v3.css"
+  ],
+  "ignore": [
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ]
 }
