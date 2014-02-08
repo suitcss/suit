@@ -8,6 +8,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
+* [Component(1)](http://component.io/): `component install suitcss/utils`
 * [Bower](http://bower.io/): `bower install --save suit-utils`
 
 …is a convenient way to install all the SUIT utility packages:
