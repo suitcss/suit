@@ -4,10 +4,11 @@
   "description": "",
   "version": "0.3.0",
   "devDependencies": {
-    "component": "*",
-    "csslint": ">=0.9.10"
+    "component": "0.19.x",
+    "component-builder-suit": "0.1.x"
   },
   "scripts": {
-    "test": "./node_modules/.bin/csslint *.css"
+    "build-test": "component install --dev && component build --dev --use component-builder-suit",
+    "build": "component install && component build --use component-builder-suit"
   }
 }

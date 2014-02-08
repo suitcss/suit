@@ -4,7 +4,7 @@ Base styles for web applications. Provides a thin layer on top of
 [Normalize.css](https://github.com/necolas/normalize.css). Removes default
 margins and exposes variables for theming.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about how to use [SUIT](https://github.com/suitcss/suit/).
 
 ## Installation
 
@@ -25,16 +25,20 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 Install [Node](http://nodejs.org) (comes with npm).
 
-From the repo root, install the project's development dependencies:
-
 ```
-make
+npm install
 ```
 
-To run the CSS Lint tests and build the front-end development bundle:
+To generate a build.
 
 ```
-make test
+npm run build
+```
+
+To generate the testing build.
+
+```
+npm run build-test
 ```
 
 Basic visual tests are in `test.html`.
