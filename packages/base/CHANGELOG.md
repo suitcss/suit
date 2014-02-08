@@ -1,5 +1,7 @@
 === HEAD
 
+* Remove default `figure` margin.
+
 === 0.3.0 (November 20, 2013)
 
 * Add `!important` to the `tabindex=-1` styles.
