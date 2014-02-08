@@ -1,23 +1,22 @@
 {
-    "name": "suit-base",
-    "version": "0.3.0",
-    "author": "Nicolas Gallagher",
-    "main": "base.css",
-    "dependencies": {
-        "normalize-css": "*"
-    },
-    "devDependencies": {
-        "suit-test": "*"
-    },
-    "ignore": [
-        "build",
-        "components",
-        "test",
-        ".*",
-        "Makefile",
-        "CHANGELOG.md",
-        "component.json",
-        "package.json",
-        "test.html"
-    ]
+  "name": "suit-base",
+  "version": "0.3.0",
+  "author": "Nicolas Gallagher",
+  "main": "base.css",
+  "dependencies": {
+    "normalize-css": "3.0.x"
+  },
+  "devDependencies": {
+    "suit-test": "*"
+  },
+  "ignore": [
+    "build",
+    "components",
+    "test",
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ]
 }

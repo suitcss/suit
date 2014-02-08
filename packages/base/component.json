@@ -1,14 +1,14 @@
 {
-    "name": "base",
-    "repo": "suitcss/base",
-    "version": "0.3.0",
-    "styles": ["base.css"],
-    "dependencies": {
-        "necolas/normalize.css": "*"
-    },
-    "development": {
-        "suitcss/test": "*"
-    },
-    "author": "Nicolas Gallagher",
-    "license": "MIT"
+  "name": "base",
+  "repo": "suitcss/base",
+  "version": "0.3.0",
+  "styles": ["base.css"],
+  "dependencies": {
+    "necolas/normalize.css": "3.0.x"
+  },
+  "development": {
+    "suitcss/test": "*"
+  },
+  "author": "Nicolas Gallagher",
+  "license": "MIT"
 }
