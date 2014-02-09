@@ -11,7 +11,6 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 * [Bower](http://bower.io/): `bower install --save suit-utils-link`
 * [Component(1)](http://component.io/): `component install suitcss/utils-link`
 * Download: [zip](https://github.com/suitcss/utils-link/zipball/master)
-* Git: `git clone https://github.com/suitcss/utils-link.git`
 
 ## Available classes
 
@@ -30,20 +29,18 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
     ```
 
 * `u-linkPseudo` - Make another interactive element, e.g., `button`, look like
-  a link. Requires the utility class being added to the base link rules.
-
-    ```css
-    a,
-    .u-linkPseudo {
-        color: lightblue;
-    }
-    ```
+  a link.
 
     ```html
     <button class="u-linkPseudo" type="button">
         Link-like button
     </button>
     ```
+
+## Configurable variables
+
+* `var-linkPseudo-color`: the text color to use for `button` when styled like a text link.
+* `var-linkPseudo-hover-color`: the text interaction color to use for `button` when styled like a text link.
 
 ## Usage
 

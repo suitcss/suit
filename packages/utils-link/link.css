@@ -65,29 +65,10 @@
  * Another interactive element, e.g., `button`, styled to look like an anchor.
  * Relies on the utility selector being added to the link base styles rule.
  *
- * `!important` is not used liberally because the root element, like normal
- * links, is likely to be modified by components.
- *
- * Example base CSS:
- *
- * a,
- * .u-linkPseudo {
- *     color: lightblue;
- * }
- *
- * a:hover,
- * a:focus,
- * a:active,
- * .u-linkPseudo:hover,
- * .u-linkPseudo:focus,
- * .u-linkPseudo:active {
- *     color: blue;
- * }
- *
  * Example HTML:
  *
  * <button class="u-linkPseudo" type="button">
- *     <a role="presentation">Button content</a>
+ *   Button content
  * </button>
  */
 
@@ -97,7 +78,7 @@
     border: 0;
     margin: 0;
     background: transparent;
-    color: inherit;
+    color: var(linkPseudo-color, inherit);
     cursor: pointer !important;
     font: inherit;
 }
@@ -106,5 +87,6 @@
 .u-linkPseudo:focus,
 .u-linkPseudo:active {
     background: transparent;
-    color: inherit;
+    color: var(linkPseudo-hover-color, inherit);
+    text-decoration: underline;
 }
