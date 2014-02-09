@@ -1,5 +1,6 @@
 === HEAD
 
+* Use 'component-builder-suit' for development.
 * Remove CSSLint.
 * Rename 'u-linkComplex-target' to 'u-linkComplexTarget'.
 
