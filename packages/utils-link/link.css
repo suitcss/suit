@@ -28,7 +28,7 @@
  *
  * <a class="u-linkComplex" href="#">
  *     Link complex
- *     <span class="u-linkComplex-target">target</span>
+ *     <span class="u-linkComplexTarget">target</span>
  * </a>
  */
 
@@ -39,9 +39,9 @@
     text-decoration: none !important;
 }
 
-.u-linkComplex:hover .u-linkComplex-target,
-.u-linkComplex:focus .u-linkComplex-target,
-.u-linkComplex:active .u-linkComplex-target {
+.u-linkComplex:hover .u-linkComplexTarget,
+.u-linkComplex:focus .u-linkComplexTarget,
+.u-linkComplex:active .u-linkComplexTarget {
     text-decoration: underline !important;
 }
 

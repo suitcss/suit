@@ -25,7 +25,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
     ```html
     <a class="u-linkComplex" href="{url}">
         Link complex
-        <span class="u-linkComplex-target">target</span>
+        <span class="u-linkComplexTarget">target</span>
     </a>
     ```
 
