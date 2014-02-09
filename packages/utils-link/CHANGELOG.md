@@ -1,5 +1,6 @@
 === HEAD
 
+* Remove CSSLint.
 * Rename 'u-linkComplex-target' to 'u-linkComplexTarget'.
 
 === 0.2.0 (November 26, 2013)
