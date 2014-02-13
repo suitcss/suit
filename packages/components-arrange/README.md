@@ -36,13 +36,13 @@ small-scale UI layout, for example, image-content pairs:
 
 ```html
 <div class="Arrange">
-    <div class="Arrange-sizeFit">
-        <img src="img.png" alt="">
-    </div>
-    <div class="Arrange-sizeFill">
-        Nicolas Gallagher @necolas
-        …
-    </div>
+  <div class="Arrange-sizeFit">
+    <img src="img.png" alt="">
+  </div>
+  <div class="Arrange-sizeFill">
+    Nicolas Gallagher @necolas
+    …
+  </div>
 </div>
 ```
 
@@ -50,18 +50,18 @@ Or for an equally spaced row of buttons or icons, etc.
 
 ```html
 <ul class="Arrange Arrange--equal">
-    <li class="Arrange-sizeFill">
-        <button class="Button">Reply</button>
-    </li>
-    <li class="Arrange-sizeFill">
-        <button class="Button">Like</button>
-    </li>
-    <li class="Arrange-sizeFill">
-        <button class="Button">Save</button>
-    </li>
-    <li class="Arrange-sizeFill">
-        <button class="Button">Remove</button>
-    </li>
+  <li class="Arrange-sizeFill">
+    <button class="Button">Reply</button>
+  </li>
+  <li class="Arrange-sizeFill">
+    <button class="Button">Like</button>
+  </li>
+  <li class="Arrange-sizeFill">
+    <button class="Button">Save</button>
+  </li>
+  <li class="Arrange-sizeFill">
+    <button class="Button">Remove</button>
+  </li>
 </ul>
 ```
 
@@ -72,7 +72,7 @@ component can be extended with modifier classes for your gutter sizes.
 
 ```css
 /**
- * @requires suit-arrange
+ * Extends suit-arrange
  */
 
 /**

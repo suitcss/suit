@@ -21,15 +21,15 @@
  * Example HTML:
  *
  * <div class="Arrange [Arrange--middle|Arrange--bottom|Arrange--equal]">
- *     <div class="Arrange-sizeFit">
- *         [content]
- *     </div>
- *     <div class="Arrange-sizeFill">
- *         [content]
- *     </div>
- *     <div class="Arrange-sizeFit">
- *         [content]
- *     </div>
+ *   <div class="Arrange-sizeFit">
+ *     [content]
+ *   </div>
+ *   <div class="Arrange-sizeFill">
+ *     [content]
+ *   </div>
+ *   <div class="Arrange-sizeFit">
+ *     [content]
+ *   </div>
  * </div>
  */
 
@@ -44,14 +44,14 @@
  */
 
 .Arrange {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; /* 1 */
-    display: table; /* 2 */
-    margin: 0; /* 3 */
-    min-width: 100%; /* 4 */
-    padding: 0; /* 3 */
-    table-layout: auto; /* 5 */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; /* 1 */
+  display: table; /* 2 */
+  margin: 0; /* 3 */
+  min-width: 100%; /* 4 */
+  padding: 0; /* 3 */
+  table-layout: auto; /* 5 */
 }
 
 /**
@@ -66,9 +66,9 @@
 
 .Arrange-sizeFill,
 .Arrange-sizeFit {
-    display: table-cell;
-    padding: 0; /* 1 */
-    vertical-align: top; /* 2 */
+  display: table-cell;
+  padding: 0; /* 1 */
+  vertical-align: top; /* 2 */
 }
 
 /**
@@ -76,7 +76,7 @@
  */
 
 .Arrange-sizeFill {
-    width: 100%;
+  width: 100%;
 }
 
 /**
@@ -89,8 +89,8 @@
  */
 
 .Arrange-sizeFill img {
-    height: auto;
-    max-width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 /**
@@ -100,8 +100,8 @@
  */
 
 .Arrange-sizeFit img {
-    max-width: none !important;
-    width: auto !important;
+  max-width: none !important;
+  width: auto !important;
 }
 
 /* Vertical alignment modifiers
@@ -109,12 +109,12 @@
 
 .Arrange--middle .Arrange-sizeFill,
 .Arrange--middle .Arrange-sizeFit {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .Arrange--bottom .Arrange-sizeFill,
 .Arrange--bottom .Arrange-sizeFit {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 /* Equal-width modifier
@@ -126,7 +126,7 @@
  */
 
 .Arrange--equal {
-    table-layout: fixed;
+  table-layout: fixed;
 }
 
 /**
@@ -139,5 +139,5 @@
 
 .Arrange--equal > .Arrange-sizeFill,
 .Arrange--equal > .Arrange-sizeFit {
-    width: 1%;
+  width: 1%;
 }
