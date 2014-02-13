@@ -9,12 +9,12 @@
  */
 
 .Test {
-    counter-reset: test-describe;
+  counter-reset: test-describe;
 }
 
 .Test-describe:before {
-    content: counter(test-describe);
-    counter-increment: test-describe;
+  content: counter(test-describe);
+  counter-increment: test-describe;
 }
 
 /**
@@ -22,12 +22,12 @@
  */
 
 .Test-describe {
-    counter-reset: test-it;
+  counter-reset: test-it;
 }
 
 .Test-it:before {
-    content: counter(test-describe) "." counter(test-it);
-    counter-increment: test-it;
+  content: counter(test-describe) "." counter(test-it);
+  counter-increment: test-it;
 }
 
 /**
@@ -35,12 +35,12 @@
  */
 
 .Test-title {
-    font-size: 2em;
-    font-family: sans-serif;
-    padding: 20px;
-    margin: 20px 0;
-    background: #eee;
-    color: #999;
+  font-size: 2em;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 20px 0;
+  background: #eee;
+  color: #999;
 }
 
 /**
@@ -49,25 +49,29 @@
 
 .Test-describe,
 .Test-it {
-    background: #eee;
-    border-left: 5px solid #666;
-    color: #666;
-    font-family: sans-serif;
-    font-weight: bold;
-    margin: 20px 0;
-    padding: 0.75em 20px;
+  background: #eee;
+  border-left: 5px solid #666;
+  color: #666;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 0.75em 20px;
 }
 
 .Test-describe {
-    font-size: 1.5em;
-    margin: 60px 0 20px;
+  font-size: 1.5em;
+  margin: 60px 0 20px;
 }
+
+/**
+ * The counter styles
+ */
 
 .Test-describe:before,
 .Test-it:before {
-    color: #999;
-    display: inline-block;
-    margin-right: 10px;
-    min-width: 30px;
-    text-transform: uppercase;
+  color: #999;
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 30px;
+  text-transform: uppercase;
 }
