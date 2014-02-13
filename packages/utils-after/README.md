@@ -24,9 +24,9 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 Utilities that can be limited to specific Media Query breakpoints.
 
-* `v1-u-afterXofY` - To use at the first Media Query breakpoint.
-* `v2-u-afterXofY` - To use at the second Media Query breakpoint.
-* `v3-u-afterXofY` - To use at the third Media Query breakpoint.
+* `u-sm-afterXofY` - To use at the smallest Media Query breakpoint.
+* `u-md-afterXofY` - To use at the medium Media Query breakpoint.
+* `u-lg-afterXofY` - To use at the large Media Query breakpoint.
 
 ## Usage
 
