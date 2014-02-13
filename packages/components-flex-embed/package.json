@@ -2,5 +2,14 @@
   "name": "suit-flex-embed",
   "private": true,
   "description": "",
-  "version": "1.4.0"
+  "version": "1.4.0",
+  "devDependencies": {
+    "component": "0.19.x",
+    "component-builder-suit": "0.1.x"
+  },
+  "scripts": {
+    "build": "component install && component build",
+    "build-test": "component install --dev && component build --dev --use component-builder-suit",
+    "build-standalone": "component install && component build --use component-builder-suit"
+  }
 }
