@@ -1,5 +1,8 @@
 === HEAD
 
+* Improve precision of a percentage.
+* Stop using CSSLint.
+
 === 1.4.0 (January 7, 2014)
 
 * Add support for 3:1 and 2:1 aspect ratios.
