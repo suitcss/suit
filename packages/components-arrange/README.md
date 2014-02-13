@@ -25,6 +25,12 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 * `Arrange--middle` - The modifier class for middle-aligned cells
 * `Arrange--bottom` - The modifier class for bottom-aligned cells
 * `Arrange--equal` - The modifier class for equal-width cells
+* `Arrange--withGutter` - The modifier class for adding a gutter between cells.
+
+## Configurable variables
+
+* `var-gutter-size-Arrange`: the width of the gutter applied by the
+  `Arrange--withGutter` modifier class.
 
 ## Usage
 
@@ -35,7 +41,7 @@ that is extended by additional modifier classes. This component works best for
 small-scale UI layout, for example, image-content pairs:
 
 ```html
-<div class="Arrange">
+<div class="Arrange Arrange--withGutter">
   <div class="Arrange-sizeFit">
     <img src="img.png" alt="">
   </div>
@@ -63,33 +69,6 @@ Or for an equally spaced row of buttons or icons, etc.
     <button class="Button">Remove</button>
   </li>
 </ul>
-```
-
-### Adding gutters
-
-The grid component includes no gutters by default. In your app's CSS, the
-component can be extended with modifier classes for your gutter sizes.
-
-```css
-/**
- * Extends suit-arrange
- */
-
-/**
- * Arrange gutters: 20px
- * NOTE: this can trigger a horizontal scrollbar if the component is as wide as
- * the viewport. Use padding on a container, or `overflow-x:hidden` to protect
- * against it.
- */
-
-.Arrange--withGutter {
-    margin: 0 -10px;
-}
-
-.Arrange--withGutter > .Arrange-sizeFit,
-.Arrange--withGutter > .Arrange-sizeFill {
-    padding: 0 10px;
-}
 ```
 
 ## Testing

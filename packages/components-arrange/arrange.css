@@ -4,6 +4,10 @@
    Arrange cells
    ========================================================================== */
 
+:root {
+  var-gutter-size-Arrange: 10px;
+}
+
 /**
  * This component lets you lay out a row of cells in various ways. You can
  * specify whether a cell should be wide enough to fit its content, or take up
@@ -14,13 +18,13 @@
  * nodes.
  *
  * It's recommended that you only use one 'Arrange-sizeFill' per component
- * instance (unless using the `Arrange--equally` modifier; see below). The
+ * instance (unless using the `Arrange--equal` modifier; see below). The
  * first 'Arrange-sizeFill' in the component's source order will not share the
  * extra space with any subsequent nodes of that class.
  *
  * Example HTML:
  *
- * <div class="Arrange [Arrange--middle|Arrange--bottom|Arrange--equal]">
+ * <div class="Arrange [Arrange--middle|Arrange--bottom|Arrange--equal] [Arrange--withGutter]">
  *   <div class="Arrange-sizeFit">
  *     [content]
  *   </div>
@@ -55,9 +59,8 @@
 }
 
 /**
- * There are two possible types of child.
- * `sizeFill` will expand to fill all of the remaining space not filled by
- * `sizeFit` elements.
+ * There are two possible types of child. `sizeFill` will expand to fill all
+ * of the remaining space not filled by `sizeFit` elements.
  *
  * 1. Zero out any default spacing that might be on an element (e.g., `li`);
  *    Margin has no effect when coupled with `display: table-cell`.
@@ -140,4 +143,24 @@
 .Arrange--equal > .Arrange-sizeFill,
 .Arrange--equal > .Arrange-sizeFit {
   width: 1%;
+}
+
+/* Gutter modifier
+   ========================================================================== */
+
+/**
+ * Add a gutter between cells
+ *
+ * NOTE: this can trigger a horizontal scrollbar if the component is as wide as
+ * the viewport. Use padding on a container, or `overflow-x:hidden` to protect
+ * against it.
+ */
+
+.Arrange--withGutter {
+  margin: 0 calc(-0.5 * var(gutter-size-Arrange));
+}
+
+.Arrange--withGutter > .Arrange-sizeFit,
+.Arrange--withGutter > .Arrange-sizeFill {
+  padding: 0 calc(0.5 * var(gutter-size-Arrange);
 }

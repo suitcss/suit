@@ -1,5 +1,6 @@
 === HEAD
 
+* Re-introduce the gutter modifier, relying on a variable for configuration.
 * Stop using CSSLint.
 
 === 0.2.0 (November 13, 2013)
