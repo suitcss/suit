@@ -94,23 +94,31 @@ component can be extended with modifier classes for your gutter sizes.
 
 ## Testing
 
-Install [Node](http://nodejs.org) (comes with npm). It's recommended that you
-also globally install [Component(1)](http://component.io): `npm install -g
-component`.
-
-From the repo root, install the project's development dependencies:
+Install [Node](http://nodejs.org) (comes with npm).
 
 ```
-make
+npm install
 ```
 
-To run the CSS Lint tests and build the front-end development bundle:
+To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
 
 ```
-make test
+npm run build
 ```
 
-Visual tests are in `test.html`.
+To generate a standalone, preprocessed build.
+
+```
+npm run build-standalone
+```
+
+To generate the testing build.
+
+```
+npm run build-test
+```
+
+Basic visual tests are in `test.html`.
 
 ## Browser support
 
