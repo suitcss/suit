@@ -1,13 +1,13 @@
 {
-    "name": "suit-utils-text",
-    "version": "0.2.3",
-    "author": "Nicolas Gallagher",
-    "main": "text.css",
-    "ignore": [
-        ".*",
-        "CHANGELOG.md",
-        "component.json",
-        "package.json",
-        "test.html"
-    ]
+  "name": "suit-utils-text",
+  "version": "0.2.3",
+  "author": "Nicolas Gallagher",
+  "main": "text.css",
+  "ignore": [
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ]
 }
