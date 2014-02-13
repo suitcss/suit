@@ -9,7 +9,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 ## Installation
 
 * [Component(1)](http://component.io/): `component install suitcss/utils-after`
-* [Bower](http://bower.io/): `bower install --save suitcss/utils-after`
+* [Bower](http://bower.io/): `bower install --save suit-utils-after`
 * Download: [zip](https://github.com/suitcss/utils-after/zipball/master)
 
 ## Available classes
