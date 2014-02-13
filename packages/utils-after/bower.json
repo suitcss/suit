@@ -4,9 +4,9 @@
   "author": "Nicolas Gallagher",
   "main": [
     "after.css",
-    "after-v1.css",
-    "after-v2.css",
-    "after-v3.css"
+    "after-sm.css",
+    "after-md.css",
+    "after-lg.css"
   ],
   "ignore": [
     ".*",
