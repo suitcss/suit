@@ -39,8 +39,8 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Configurable variables
 
-* `var-linkPseudo-color`: the text color to use for `button` when styled like a text link.
-* `var-linkPseudo-hover-color`: the text interaction color to use for `button` when styled like a text link.
+* `var-color-linkPseudo`: the text color to use for `button` when styled like a text link.
+* `var-color-hover-linkPseudo-hover`: the text interaction color to use for `button` when styled like a text link.
 
 ## Usage
 

@@ -4,6 +4,11 @@
    Link-specific utilities
    ========================================================================== */
 
+:root {
+  var-color-linkPseudo: inherit;
+  var-color-hover-linkPseudo: var(color-linkPseudo);
+}
+
 /**
  * Clean link
  *
@@ -78,7 +83,7 @@
     border: 0;
     margin: 0;
     background: transparent;
-    color: var(linkPseudo-color, inherit);
+    color: var(color-linkPseudo, inherit);
     cursor: pointer !important;
     font: inherit;
 }
@@ -87,6 +92,6 @@
 .u-linkPseudo:focus,
 .u-linkPseudo:active {
     background: transparent;
-    color: var(linkPseudo-hover-color, inherit);
+    color: var(color-hover-linkPseudo);
     text-decoration: underline;
 }
