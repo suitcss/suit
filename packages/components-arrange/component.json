@@ -7,7 +7,7 @@
   ],
   "development": {
     "suitcss/utils-text": "v0.2.3",
-    "suitcss/utils-dimension": "v0.5.0",
+    "suitcss/utils-size": "v0.5.0",
     "suitcss/utils-display": "v0.2.2",
     "suitcss/test": "*"
   },
