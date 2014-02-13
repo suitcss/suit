@@ -40,24 +40,24 @@ h6,
 figure,
 p,
 pre {
-    margin: 0;
+  margin: 0;
 }
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 iframe {
-    border: 0;
+  border: 0;
 }
 
 ol,
 ul {
-    margin: 0;
-    list-style: none;
-    padding: 0;
+  margin: 0;
+  list-style: none;
+  padding: 0;
 }
 
 /**
