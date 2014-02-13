@@ -12,8 +12,6 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 * [Bower](http://bower.io/): `bower install --save suit-test`
 * [Component(1)](http://component.io/): `component install suitcss/test`
 * Download: [zip](https://github.com/suitcss/test/zipball/master)
-* Git: `git clone https://github.com/suitcss/test.git`
-
 
 ## Available classes
 
@@ -73,20 +71,30 @@ This is an example of an idiomatic SUIT CSS test file:
 
 ## Testing
 
-Install [Node](http://nodejs.org) (comes with npm). It's recommended that you
-also globally install [Component(1)](http://component.io): `npm install -g
-component`.
+## Testing
 
-From the repo root, install the project's development dependencies:
+Install [Node](http://nodejs.org) (comes with npm).
 
 ```
-make
+npm install
 ```
 
-To run the CSS Lint tests and build the front-end development bundle:
+To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
 
 ```
-make test
+npm run build
+```
+
+To generate a standalone, preprocessed build.
+
+```
+npm run build-standalone
+```
+
+To generate the testing build.
+
+```
+npm run build-test
 ```
 
 Basic visual tests are in `test.html`.
