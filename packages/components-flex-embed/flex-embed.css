@@ -47,7 +47,7 @@
  */
 
 .FlexEmbed--3by1:before {
-  padding-bottom: 33.33333%;
+  padding-bottom: calc(100% / 3);
 }
 
 /**
