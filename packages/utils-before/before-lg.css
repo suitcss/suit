@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Offset utilities (breakpoint 1)
+   Offset utilities (breakpoint 3)
    ========================================================================== */
 
 /* Proportional offset before
@@ -11,117 +11,117 @@
  * Supports: 2, 3, 4, 5, 6, 8, 10, 12 section
  */
 
-.v1-u-beforeNone {
+.u-lg-beforeNone {
   margin-left: 0 !important;
 }
 
-.v1-u-before1of12 {
+.u-lg-before1of12 {
   margin-left: 8.333% !important;
 }
 
-.v1-u-before1of10 {
+.u-lg-before1of10 {
   margin-left: 10% !important;
 }
 
-.v1-u-before1of8 {
+.u-lg-before1of8 {
   margin-left: 12.5% !important;
 }
 
-.v1-u-before1of6,
-.v1-u-before2of12 {
+.u-lg-before1of6,
+.u-lg-before2of12 {
   margin-left: 16.667% !important;
 }
 
-.v1-u-before1of5,
-.v1-u-before2of10 {
+.u-lg-before1of5,
+.u-lg-before2of10 {
   margin-left: 20% !important;
 }
 
-.v1-u-before1of4,
-.v1-u-before2of8,
-.v1-u-before3of12 {
+.u-lg-before1of4,
+.u-lg-before2of8,
+.u-lg-before3of12 {
   margin-left: 25% !important;
 }
 
-.v1-u-before3of10 {
+.u-lg-before3of10 {
   margin-left: 30% !important;
 }
 
-.v1-u-before1of3,
-.v1-u-before2of6,
-.v1-u-before4of12 {
+.u-lg-before1of3,
+.u-lg-before2of6,
+.u-lg-before4of12 {
   margin-left: 33.333% !important;
 }
 
-.v1-u-before3of8 {
+.u-lg-before3of8 {
   margin-left: 37.5% !important;
 }
 
-.v1-u-before2of5,
-.v1-u-before4of10 {
+.u-lg-before2of5,
+.u-lg-before4of10 {
   margin-left: 40% !important;
 }
 
-.v1-u-before5of12 {
+.u-lg-before5of12 {
   margin-left: 41.667% !important;
 }
 
-.v1-u-before1of2,
-.v1-u-before2of4,
-.v1-u-before3of6,
-.v1-u-before4of8,
-.v1-u-before5of10,
-.v1-u-before6of12 {
+.u-lg-before1of2,
+.u-lg-before2of4,
+.u-lg-before3of6,
+.u-lg-before4of8,
+.u-lg-before5of10,
+.u-lg-before6of12 {
   margin-left: 50% !important;
 }
 
-.v1-u-before7of12 {
+.u-lg-before7of12 {
   margin-left: 58.333% !important;
 }
 
-.v1-u-before3of5,
-.v1-u-before6of10 {
+.u-lg-before3of5,
+.u-lg-before6of10 {
   margin-left: 60% !important;
 }
 
-.v1-u-before5of8 {
+.u-lg-before5of8 {
   margin-left: 62.5% !important;
 }
 
-.v1-u-before2of3,
-.v1-u-before4of6,
-.v1-u-before8of12 {
+.u-lg-before2of3,
+.u-lg-before4of6,
+.u-lg-before8of12 {
   margin-left: 66.667% !important;
 }
 
-.v1-u-before7of10 {
+.u-lg-before7of10 {
   margin-left: 70% !important;
 }
 
-.v1-u-before3of4,
-.v1-u-before6of8,
-.v1-u-before9of12 {
+.u-lg-before3of4,
+.u-lg-before6of8,
+.u-lg-before9of12 {
   margin-left: 75% !important;
 }
 
-.v1-u-before4of5,
-.v1-u-before8of10 {
+.u-lg-before4of5,
+.u-lg-before8of10 {
   margin-left: 80% !important;
 }
 
-.v1-u-before5of6,
-.v1-u-before10of12 {
+.u-lg-before5of6,
+.u-lg-before10of12 {
   margin-left: 83.333% !important;
 }
 
-.v1-u-before7of8 {
+.u-lg-before7of8 {
   margin-left: 87.5% !important;
 }
 
-.v1-u-before9of10 {
+.u-lg-before9of10 {
   margin-left: 90% !important;
 }
 
-.v1-u-before11of12 {
+.u-lg-before11of12 {
   margin-left: 91.667% !important;
 }
