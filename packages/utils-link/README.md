@@ -23,8 +23,8 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
     ```html
     <a class="u-linkComplex" href="{url}">
-        Link complex
-        <span class="u-linkComplexTarget">target</span>
+      Link complex
+      <span class="u-linkComplexTarget">target</span>
     </a>
     ```
 
@@ -33,7 +33,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
     ```html
     <button class="u-linkPseudo" type="button">
-        Link-like button
+      Link-like button
     </button>
     ```
 
