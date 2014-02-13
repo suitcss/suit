@@ -2,12 +2,5 @@
   "name": "suit-flex-embed",
   "private": true,
   "description": "",
-  "version": "1.4.0",
-  "devDependencies": {
-    "component": "*",
-    "csslint": ">=0.9.10"
-  },
-  "scripts": {
-    "test": "./node_modules/.bin/csslint *.css"
-  }
+  "version": "1.4.0"
 }
