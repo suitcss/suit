@@ -34,22 +34,31 @@ Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
 
 ## Testing
 
-Install [Node](http://nodejs.org) (comes with npm) and Bower.
-
-From the repo root, install the project's development dependencies:
+Install [Node](http://nodejs.org) (comes with npm).
 
 ```
 npm install
-bower install
 ```
 
-To run the CSS Lint tests:
+To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
 
 ```
-npm test
+npm run build
 ```
 
-Open `test.html` in a browser to ensure each visual test is passing.
+To generate a standalone, preprocessed build.
+
+```
+npm run build-standalone
+```
+
+To generate the testing build.
+
+```
+npm run build-test
+```
+
+Basic visual tests are in `test.html`.
 
 ## Browser support
 
