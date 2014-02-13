@@ -11,7 +11,6 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 * [Component(1)](http://component.io/): `component install suitcss/utils-before`
 * [Bower](http://bower.io/): `bower install --save suitcss/utils-before`
 * Download: [zip](https://github.com/suitcss/utils-before/zipball/master)
-* Git: `git clone https://github.com/suitcss/utils-before.git`
 
 ## Available classes
 
