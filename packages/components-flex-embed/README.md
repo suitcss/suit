@@ -29,11 +29,11 @@ that is extended by any number of additional modifier classes.
 
 ```html
 <div class="FlexEmbed FlexEmbed--16by9">
-    [iframe|object|embed]
+  [iframe|object|embed]
 </div>
 
 <div class="FlexEmbed FlexEmbed--4by3">
-    <img class="FlexEmbed-item" src="…" alt="">
+  <img class="FlexEmbed-item" src="…" alt="">
 </div>
 ```
 
@@ -47,7 +47,7 @@ create a 2.35:1 aspect ratio:
  */
 
 .FlexEmbed--47by20:before {
-    padding-bottom: 42.55%;
+  padding-bottom: 42.55%;
 }
 ```
 

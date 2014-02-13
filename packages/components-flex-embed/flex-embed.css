@@ -14,20 +14,20 @@
  * Example HTML:
  *
  * <div class="FlexEmbed FlexEmbed--4by3">
- *     <iframe class="FlexEmbed-item" src="…"></iframe>
+ *   <iframe class="FlexEmbed-item" src="…"></iframe>
  * </div>
  *
  * <div class="FlexEmbed FlexEmbed--16by9">
- *     [iframe|object|embed]
+ *   [iframe|object|embed]
  * </div>
  *
  * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
  */
 
 .FlexEmbed {
-    display: block;
-    overflow: hidden;
-    position: relative;
+  display: block;
+  overflow: hidden;
+  position: relative;
 }
 
 /**
@@ -37,9 +37,9 @@
  */
 
 .FlexEmbed:before {
-    content: "";
-    display: block;
-    width: 100%;
+  content: "";
+  display: block;
+  width: 100%;
 }
 
 /**
@@ -47,7 +47,7 @@
  */
 
 .FlexEmbed--3by1:before {
-    padding-bottom: 33.33333%;
+  padding-bottom: 33.33333%;
 }
 
 /**
@@ -55,7 +55,7 @@
  */
 
 .FlexEmbed--2by1:before {
-    padding-bottom: 50%;
+  padding-bottom: 50%;
 }
 
 /**
@@ -63,7 +63,7 @@
  */
 
 .FlexEmbed--16by9:before {
-    padding-bottom: 56.25%;
+  padding-bottom: 56.25%;
 }
 
 /**
@@ -71,7 +71,7 @@
  */
 
 .FlexEmbed--4by3:before {
-    padding-bottom: 75%;
+  padding-bottom: 75%;
 }
 
 /**
@@ -87,10 +87,10 @@
 .FlexEmbed iframe,
 .FlexEmbed embed,
 .FlexEmbed object {
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
