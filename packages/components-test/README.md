@@ -71,8 +71,6 @@ This is an example of an idiomatic SUIT CSS test file:
 
 ## Testing
 
-## Testing
-
 Install [Node](http://nodejs.org) (comes with npm).
 
 ```
