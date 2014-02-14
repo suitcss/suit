@@ -57,14 +57,3 @@
 .u-textInheritColor {
   color: inherit !important;
 }
-
-/**
- * Inherit the ancestor's text color for all states.
- */
-
-.u-textInheritAllColor,
-.u-textInheritAllColor:hover,
-.u-textInheritAllColor:focus,
-.u-textInheritAllColor:active {
-  color: inherit !important;
-}
