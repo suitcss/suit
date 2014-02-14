@@ -14,13 +14,12 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Available classes
 
+* `u-textBreak` - Break strings when their length exceeds the width of their container.
 * `u-textCenter` - Center-align text.
 * `u-textLeft` - Left-align text.
 * `u-textRight` - Right-align text.
-* `u-textTruncate` - Truncate a single line of text, with ellipsis.
-* `u-textBreak` - Break strings when their length exceeds the width of their container.
 * `u-textInheritColor` - Inherit the ancestor's text color.
-* `u-textInheritAllColor` - Inherit the ancestor's text color for all states.
+* `u-textTruncate` - Truncate a single line of text, with ellipsis.
 
 ## Usage
 

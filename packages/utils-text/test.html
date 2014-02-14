@@ -27,6 +27,24 @@
 <div class="Test">
   <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-text">text utilities</a> tests</h1>
 
+  <h2 class="Test-describe">.u-textBreak</h2>
+  <h3 class="Test-it">breaks stings across multiple lines, when they are wider than the container</h3>
+  <div class="Test-run">
+    <div class="dev-Box u-textBreak">
+        http://subdomain.exampledomain.com/averylongurlthatneedstobebrokenotherwiseitisgoingtokeepgoingforever
+    </div>
+  </div>
+  <h3 class="Test-it">does not break strings that are not wider than the container</h3>
+  <div class="Test-run">
+    <div class="dev-Box u-textBreak">
+        wraplongwords dontbreaklongwords
+        wraplongwords dontbreaklongwords
+        wraplongwords dontbreaklongwords
+        wraplongwords dontbreaklongwords
+        wraplongwords dontbreaklongwords
+    </div>
+  </div>
+
   <h2 class="Test-describe">.u-textCenter</h2>
   <h3 class="Test-it">center-aligns text</h3>
   <div class="Test-run">
@@ -51,37 +69,19 @@
     </div>
   </div>
 
-  <h2 class="Test-describe">.u-textTruncate</h2>
-  <h3 class="Test-it">clips and truncates a single line of text, using an ellipsis</h3>
-  <div class="Test-run">
-    <div class="dev-Box u-textTruncate">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit blandit dolor, at euismod ante eleifend in. Duis imperdiet cursus nibh, quis tincidunt nibh rhoncus at.
-    </div>
-  </div>
-
-  <h2 class="Test-describe">.u-textBreak</h2>
-  <h3 class="Test-it">breaks stings across multiple lines, when they are wider than the container</h3>
-  <div class="Test-run">
-    <div class="dev-Box u-textBreak">
-        http://subdomain.exampledomain.com/averylongurlthatneedstobebrokenotherwiseitisgoingtokeepgoingforever
-    </div>
-  </div>
-  <h3 class="Test-it">does not break strings that are not wider than the container</h3>
-  <div class="Test-run">
-    <div class="dev-Box u-textBreak">
-        wraplongwords dontbreaklongwords
-        wraplongwords dontbreaklongwords
-        wraplongwords dontbreaklongwords
-        wraplongwords dontbreaklongwords
-        wraplongwords dontbreaklongwords
-    </div>
-  </div>
-
   <h2 class="Test-describe">.u-textInheritColor</h2>
   <h3 class="Test-it">should inherit the ancestral text color</h3>
   <div class="Test-run">
     <div class="dev-Box">
       <a class="u-textInheritColor" href="#non">Should be black, but red on hover</a>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-textTruncate</h2>
+  <h3 class="Test-it">clips and truncates a single line of text, using an ellipsis</h3>
+  <div class="Test-run">
+    <div class="dev-Box u-textTruncate">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit blandit dolor, at euismod ante eleifend in. Duis imperdiet cursus nibh, quis tincidunt nibh rhoncus at.
     </div>
   </div>
 </div>
