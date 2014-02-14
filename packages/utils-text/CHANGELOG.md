@@ -1,5 +1,9 @@
 === HEAD
 
+* Add `u-textNoWrap` utility.
+* Remove `u-textInheritAllColor` utility. [a2693a5d](https://github.com/suitcss/utils-text/commit/a2693a5d7dd6d86993ca22a35a0fe452b85d7761)
+* Stop using CSSLint.
+
 === 0.2.3 (October 15, 2013)
 
 * Fix `u-textBreak` utility.
