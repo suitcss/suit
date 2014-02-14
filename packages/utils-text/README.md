@@ -19,6 +19,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 * `u-textLeft` - Left-align text.
 * `u-textRight` - Right-align text.
 * `u-textInheritColor` - Inherit the ancestor's text color.
+* `u-textNoWrap` - Prevent wrapping at whitespace.
 * `u-textTruncate` - Truncate a single line of text, with ellipsis.
 
 ## Usage

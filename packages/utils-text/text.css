@@ -39,6 +39,14 @@
 }
 
 /**
+ * Prevent whitespace wrapping
+ */
+
+.u-textNoWrap {
+  white-space: nowrap !important;
+}
+
+/**
  * Text truncation
  *
  * Prevent text from wrapping onto multiple lines, and truncate with an
