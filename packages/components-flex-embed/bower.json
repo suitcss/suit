@@ -1,6 +1,6 @@
 {
   "name": "suit-flex-embed",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": "Nicolas Gallagher",
   "main": "flex-embed.css",
   "devDependencies": {

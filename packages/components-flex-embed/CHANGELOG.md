@@ -1,5 +1,7 @@
 === HEAD
 
+=== 1.5.0 (February 14, 2014)
+
 * Improve precision of a percentage.
 * Stop using CSSLint.
 

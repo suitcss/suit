@@ -1,7 +1,7 @@
 {
   "name": "flex-embed",
   "repo": "suitcss/flex-embed",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "styles": ["flex-embed.css"],
   "development": {
     "suitcss/test": "*"

@@ -2,7 +2,7 @@
   "name": "suit-flex-embed",
   "private": true,
   "description": "",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "devDependencies": {
     "component": "0.19.x",
     "component-builder-suit": "0.1.x"
