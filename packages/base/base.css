@@ -4,6 +4,14 @@
    Base
    ========================================================================== */
 
+:root {
+  var-background-base: inherit;
+  var-color-base: inherit;
+  var-font-base: 16px sans-serif;
+  var-link-color-base: #069;
+  var-link-color-hover-base: var(link-color-base);
+}
+
 /**
  * A thin layer on top of normalize.css that provides a starting point more
  * suitable for web applications. Removes the default spacing and border for
@@ -11,20 +19,20 @@
  */
 
 html {
-  background: var(base-background, inherit);
-  color: var(base-color, inherit);
-  font: var(base-font, 16px sans-serif);
+  background: var(background-base);
+  color: var(color-base);
+  font: var(font-base);
 }
 
 a {
-  color: var(base-link-color, #069);
+  color: var(link-color-base);
   text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: var(base-link-hover-color, #069);
+  color: var(link-color-hover-base);
   text-decoration: underline;
 }
 

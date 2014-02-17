@@ -1,8 +1,12 @@
 {
   "name": "suit-base",
-  "private": true,
   "description": "",
   "version": "0.3.0",
+  "style": "base.css",
+  "files": [
+    "base.css",
+    "component.json"
+  ],
   "devDependencies": {
     "component": "0.19.x",
     "component-builder-suit": "0.1.x"

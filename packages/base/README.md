@@ -8,17 +8,18 @@ Read more about how to use [SUIT](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/base`
+* [Component(1)](http://github.com/component/component): `component install suitcss/base`
 * [Bower](http://bower.io/): `bower install --save suit-base`
+* [npm](http://npmjs.org/): `npm install --save suit-base`
 * [Download](https://github.com/suitcss/base/releases): `suit-base.css`
 
 ## Configurable variables
 
-* `var-base-background`: the application background style.
-* `var-base-color`: the root text color.
-* `var-base-font`: the root font style.
-* `var-base-link-color`: the root link color.
-* `var-base-link-hover-color`: the root link interaction (`:hover`, `:focus`,
+* `var-background-base`: the application background style.
+* `var-color-base`: the root text color.
+* `var-font-base`: the root font style.
+* `var-link-color-base`: the root link color.
+* `var-link-color-hover-base`: the root link interaction (`:hover`, `:focus`,
   `:active`) color.
 
 ## Testing
@@ -51,8 +52,8 @@ Basic visual tests are in `test.html`.
 
 ## Browser support
 
-* Google Chrome (latest)
-* Opera (latest)
-* Firefox 4+
-* Safari 5+
+* Google Chrome
+* Firefox
+* Safari
+* Opera
 * Internet Explorer 8+
