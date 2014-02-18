@@ -1,6 +1,6 @@
-# SUIT arrange
+# SUIT components-arrange
 
-[![Build Status](https://secure.travis-ci.org/suitcss/arrange.png?branch=master)](http://travis-ci.org/suitcss/arrange)
+[![Build Status](https://secure.travis-ci.org/suitcss/components-arrange.png?branch=master)](http://travis-ci.org/suitcss/components-arrange)
 
 A SUIT component for horizontally and vertically arranging a single row of
 cells. Includes modifier classes for equal-width cells and gutter-separated
@@ -8,14 +8,13 @@ cells. Makes use of CSS table layout.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
-[Live test rendering](http://suitcss.github.io/arrange/test.html)
+[Live test rendering](http://suitcss.github.io/components-arrange/test.html)
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-arrange`
-* [Component(1)](http://component.io/): `component install suitcss/arrange`
-* Download: [zip](https://github.com/suitcss/arrange/zipball/master)
-* Git: `git clone https://github.com/suitcss/arrange.git`
+* [Component(1)](https://github.com/component/component): `component install suitcss/components-arrange`
+* [npm](http://npmjs.org/): `npm install --save suit-components-arrange`
+* [Bower](http://bower.io/): `bower install --save suit-components-arrange`
 
 ## Available classes
 
