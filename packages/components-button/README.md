@@ -1,4 +1,4 @@
-# SUIT button
+# SUIT components-button
 
 A SUIT component that provides a structural UI button template to be extended
 with modifiers.
@@ -7,10 +7,9 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-button`
-* [Component(1)](http://component.io/): `component install suitcss/button`
-* Download: [zip](https://github.com/suitcss/button/zipball/master)
-* Git: `git clone https://github.com/suitcss/button`
+* [Component(1)](https://github.com/component/component/): `component install suitcss/components-button`
+* [npm](http://npmjs.org/): `npm install --save suit-components-button`
+* [Bower](http://bower.io/): `bower install --save suit-components-button`
 
 ## Available classes
 
@@ -20,6 +19,15 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 N.B. You must also include the `disabled` attribute on `button` and `input`
 elements. For `a` elements, you should remove the `href` attribute and prevent
 JavaScript event handlers from firing.
+
+## Configurable variables
+
+* `var-border-width-Button`
+* `var-border-color-Button`
+* `var-color-Button`
+* `var-font-Button`
+* `var-padding-Button`
+* `var-opacity-Button-disabled`
 
 ## Use
 
@@ -41,40 +49,35 @@ application-specific theme styles in your app. For example:
 
 ```css
 /**
- * component/button.css
- * @require suit-button
- */
-
-/**
  * Modifier: default buttons
  */
 
 .Button--default {
-    border-color: #d9d9d9 #d9d9d9 #ccc;
-    border-radius: 2px;
-    color: #444;
-    background-color: #eee;
+  border-color: #d9d9d9 #d9d9d9 #ccc;
+  border-radius: 2px;
+  color: #444;
+  background-color: #eee;
 }
 
 .Button--default:hover,
 .Button--default:focus,
 .Button--default:active,
 .Button--default.is-pressed {
-    border-color: #c6c6c6 #c6c6c6 #bbb;
-    color: #222;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    background-color: #f5f5f5;
+  border-color: #c6c6c6 #c6c6c6 #bbb;
+  color: #222;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background-color: #f5f5f5;
 }
 
 .Button--default:focus {
-    border-color: #069;
-    outline: 0;
+  border-color: #069;
+  outline: 0;
 }
 
 .Button--default:active,
 .Button--default.is-pressed {
-    box-shadow: inset 0 1px 2px rgba(0,0,0, 0.2);
-    background-color: #ccc;
+  box-shadow: inset 0 1px 2px rgba(0,0,0, 0.2);
+  background-color: #ccc;
 }
 
 /**
@@ -82,34 +85,43 @@ application-specific theme styles in your app. For example:
  */
 
 .Button--large {
-    font-size: 1.5em;
-    padding: 0.75em 1.5em;
+  font-size: 1.5em;
+  padding: 0.75em 1.5em;
 }
 ```
 
 ## Testing
 
-Install [Node](http://nodejs.org) (comes with npm) and [Component(1)](http://component.io).
-
-From the repo root, install the project's development dependencies:
+Install [Node](http://nodejs.org) (comes with npm).
 
 ```
-component install --dev
 npm install
 ```
 
-To run the CSS Lint tests and build the front-end development bundle:
+To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
 
 ```
-make test
+npm run build
+```
+
+To generate a standalone, preprocessed build.
+
+```
+npm run build-standalone
+```
+
+To generate the testing build.
+
+```
+npm run build-test
 ```
 
 Basic visual tests are in `test.html`.
 
 ## Browser support
 
-* Google Chrome (latest)
-* Opera (latest)
-* Firefox 4+
-* Safari 5+
+* Google Chrome
+* Firefox
+* Opera
+* Safari
 * Internet Explorer 8+
