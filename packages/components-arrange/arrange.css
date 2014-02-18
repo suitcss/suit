@@ -162,5 +162,5 @@
 
 .Arrange--withGutter > .Arrange-sizeFit,
 .Arrange--withGutter > .Arrange-sizeFill {
-  padding: 0 calc(0.5 * var(gutter-size-Arrange);
+  padding: 0 calc(0.5 * var(gutter-size-Arrange));
 }
