@@ -1,12 +1,25 @@
 {
-  "name": "suit-button",
-  "private": true,
+  "name": "suit-components-button",
   "description": "",
   "version": "3.0.0",
+  "style": "button.css",
+  "files": [
+    "button.css",
+    "component.json"
+  ],
   "devDependencies": {
-    "csslint": ">=0.9.10"
+    "component": "0.19.x",
+    "component-builder-suit": "0.1.x"
   },
   "scripts": {
-    "test": "./node_modules/.bin/csslint *.css"
-  }
+    "build": "component install && component build",
+    "build-test": "component install --dev && component build --dev --use component-builder-suit",
+    "build-standalone": "component install && component build --use component-builder-suit"
+  },
+  "keywords": [
+    "suit",
+    "css",
+    "component",
+    "button"
+  ]
 }
