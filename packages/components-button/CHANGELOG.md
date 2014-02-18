@@ -1,5 +1,7 @@
 === HEAD
 
+* Revert to implicit-width, inline-block rendering.
+* Add variables support.
 * Use Component(1) for development.
 
 === 3.0.0 (October 19, 2013)
