@@ -1,8 +1,12 @@
 {
-  "name": "suit-arrange",
-  "private": true,
+  "name": "suit-components-arrange",
   "description": "",
   "version": "0.2.0",
+  "style": "arrange.css",
+  "files": [
+    "arrange.css",
+    "component.json"
+  ],
   "devDependencies": {
     "component": "0.19.x",
     "component-builder-suit": "0.1.x"
