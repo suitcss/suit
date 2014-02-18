@@ -4,6 +4,15 @@
    SUIT: Button
    ========================================================================== */
 
+:root {
+  var-border-width-Button: 1px;
+  var-border-color-Button: currentcolor;
+  var-color-Button: inherit;
+  var-font-Button: inherit;
+  var-padding-Button: 0.4em 0.75em;
+  var-opacity-Button-disabled: 0.6;
+}
+
 /**
  * The button classes are best applied to links, buttons, and submit inputs.
  * These components can be used in forms, as calls to action, or as part of the
@@ -17,43 +26,35 @@
  */
 
 /**
- * Button template
- *
- * Build on this component using rulesets in your application-level CSS.
- *
- * 1. Corrects inability to style clickable `input` types in iOS
+ * 1. Corrects inability to style clickable `input` types in iOS.
  * 2. Normalize `box-sizing` across all elements that this component could be
  *    applied to.
  * 3. Inherit text color from ancestor.
- * 4. Take up the full width of the parent context.
- * 5. Inherit font styles from ancestor.
- * 6. Normalize `line-height`. For `input`, it can't be changed from `normal` in Firefox 4+.
- * 7. Prevent button text from being selectable.
- * 8. Make sure `input` will wrap text across multiple lines.
+ * 4. Inherit font styles from ancestor.
+ * 5. Normalize `line-height`. For `input`, it can't be changed from `normal` in Firefox 4+.
+ * 6. Prevent button text from being selectable.
+ * 7. Make sure `input` will wrap text across multiple lines.
  */
 
 .Button {
-    -webkit-appearance: none; /* 1 */
-    background: transparent;
-    border: 1px solid;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; /* 2 */
-    color: inherit; /* 3 */
-    cursor: pointer;
-    display: block; /* 4 */
-    font: inherit; /* 5 */
-    line-height: normal; /* 6 */
-    margin: 0;
-    padding: 0.4em 0.75em;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    user-select: none; /* 7 */
-    white-space: normal; /* 8 */
-    width: 100%; /* 4 */
+  -webkit-appearance: none; /* 1 */
+  background: transparent;
+  border-color: var(border-color-Button);
+  border-style: solid;
+  border-width: var(border-width-Button);
+  box-sizing: border-box; /* 2 */
+  color: var(color-Button); /* 3 */
+  cursor: pointer;
+  display: inline-block;
+  font: var(font-Button); /* 4 */
+  line-height: normal; /* 6 */
+  margin: 0;
+  padding: var(padding-Button);
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none; /* 6 */
+  white-space: normal; /* 7 */
 }
 
 /**
@@ -63,12 +64,13 @@
 .Button:hover,
 .Button:focus,
 .Button:active {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .Button:disabled,
 .Button.is-disabled {
-    cursor: default;
+  cursor: default;
+  opacity: var(opacity-Button-disabled);
 }
 
 /**
@@ -76,6 +78,6 @@
  */
 
 .Button::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
