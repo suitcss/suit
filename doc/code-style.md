@@ -32,7 +32,7 @@
 ## 2. Whitespace
 
 * Use whitespace to improve readability.
-* Use 4 spaces for indentation.
+* Use 2 spaces for indentation.
 * Don't use more than one blank line as a separator.
 * Strip all end-of-line and end-of-file whitespace.
 
