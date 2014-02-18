@@ -82,14 +82,14 @@ HTML:
 
 ```html
 <article class="Excerpt u-cf">
-    <img class="Excerpt-thumbnail u-sizeFit" src="{{src}}" alt="">
-    <div class="u-sizeFill">
-        <h1 class="Excerpt-title u-h3"><a href="{{url}}">{{title}}</a></h1>
-        <p class="Excerpt-text">{{description}}</p>
-        <span class="Excerpt-readMore">
-            <a class="Button Button--secondary">{{button_text}}</a>
-        </span>
-    </div>
+  <img class="Excerpt-thumbnail u-sizeFit" src="{{src}}" alt="">
+  <div class="u-sizeFill">
+    <h1 class="Excerpt-title u-h3"><a href="{{url}}">{{title}}</a></h1>
+    <p class="Excerpt-text">{{description}}</p>
+    <span class="Excerpt-readMore">
+      <a class="Button Button--secondary">{{button_text}}</a>
+    </span>
+  </div>
 </article>
 ```
 
@@ -104,36 +104,36 @@ CSS:
  * @require u-sizeFill
  *
  * <article class="Excerpt u-cf">
- *     <img class="Excerpt-thumbnail u-sizeFit" src="{{src}}" alt="">
- *     <div class="u-sizeFill">
- *         <h1 class="Excerpt-title u-h3">{{title}}</h1>
- *         <p class="Excerpt-text">{{description}}</p>
- *         <span class="Excerpt-readMore">
- *             <a class="Button Button--secondary">{{button_text}}</a>
- *         </span>
- *     </div>
+ *   <img class="Excerpt-thumbnail u-sizeFit" src="{{src}}" alt="">
+ *   <div class="u-sizeFill">
+ *     <h1 class="Excerpt-title u-h3">{{title}}</h1>
+ *     <p class="Excerpt-text">{{description}}</p>
+ *     <span class="Excerpt-readMore">
+ *       <a class="Button Button--secondary">{{button_text}}</a>
+ *     </span>
+ *   </div>
  * </article>
  */
 
 .Excerpt {
-    line-height: 1.2857em;
+  line-height: 1.2857em;
 }
 
 .Excerpt-thumbnail {
-    border: 2px solid #000;
-    border-radius: 3px;
-    margin-right: 10px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  margin-right: 10px;
 }
 
 .Excerpt-title {
-    border-bottom: 1px solid #ccc;
-    margin: 0 0 15px;
-    padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 15px;
+  padding-bottom: 5px;
 }
 
 .Excerpt-readMore {
-    display: inline-block;
-    margin-top: 10px;
+  display: inline-block;
+  margin-top: 10px;
 }
 ```
 

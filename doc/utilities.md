@@ -41,12 +41,12 @@ floats" without clipping any overflow; the `u-nbfc` utility is used to create a
 
 ```html
 <div class="Tweet u-cf">
-    <a class="u-objLeft" href="{url}">
-        <img class="u-block" src="{src}" alt="">
-    </a>
-    <p class="u-sizeFill u-textMute">
-        …
-    </p>
+  <a class="u-objLeft" href="{url}">
+    <img class="u-block" src="{src}" alt="">
+  </a>
+  <p class="u-sizeFill u-textMute">
+    …
+  </p>
 </div>
 ```
 
@@ -97,8 +97,8 @@ a hyphen and a camel case descendant name:
 
 ```html
 <a class="u-linkComplex" href="{url}">
-    Link text
-    <span class="u-linkComplex-target">target</span>
+  Link text
+  <span class="u-linkComplex-target">target</span>
 </a>
 ```
 

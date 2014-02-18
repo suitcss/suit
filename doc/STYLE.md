@@ -32,7 +32,7 @@
 ## 2. Whitespace
 
 * Use whitespace to improve readability.
-* Use 4 spaces for indentation.
+* Use 2 spaces for indentation.
 * Don't use more than one blank line as a separator.
 * Strip all end-of-line and end-of-file whitespace.
 
@@ -60,11 +60,11 @@ Example:
 
 ```html
 <div class="Tweet">
-    <a href="{url}">
-        <img src="{avatar}" alt="">
-    </a>
-    <p>{text}</p>
-    <button disabled>Reply</button>
+  <a href="{url}">
+    <img src="{avatar}" alt="">
+  </a>
+  <p>{text}</p>
+  <button disabled>Reply</button>
 </div>
 ```
 
@@ -80,7 +80,7 @@ Example:
  data-action="{action}"
  data-id="{id}"
  href="{url}">
-    <span>{text}</span>
+  <span>{text}</span>
 </a>
 ```
 
@@ -157,37 +157,37 @@ An example of various conventions.
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Document</title>
-        <link rel="stylesheet" href="main.css">
-        <script src="main.js"></script>
-    </head>
-    <body>
-        <article class="Post" id="1234">
-            <time class="Post-timestamp">{date}</time>
-            <a data-id="1234"
-             data-analytics-category="{category}"
-             data-analytics-action="{action}"
-             href="{url}">{text}</a>
-            <ul>
-                <li>
-                    <a href="{url}">{text}</a>
-                    <img src="{src}" alt="">
-                </li>
-                <li>
-                    <a href="{url}">{text}</a>
-                </li>
-            </ul>
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <article class="Post" id="1234">
+      <time class="Post-timestamp">{date}</time>
+      <a data-id="1234"
+       data-analytics-category="{category}"
+       data-analytics-action="{action}"
+       href="{url}">{text}</a>
+      <ul>
+        <li>
+          <a href="{url}">{text}</a>
+          <img src="{src}" alt="">
+        </li>
+        <li>
+          <a href="{url}">{text}</a>
+        </li>
+      </ul>
 
-            <a class="u-linkComplex" href="{url}">
-                <span class="u-linkComplex-target">{text}</span>
-                {text}
-            </a>
+      <a class="u-linkComplex" href="{url}">
+        <span class="u-linkComplex-target">{text}</span>
+        {text}
+      </a>
 
-            <input value="text" readonly>
-        </article>
-    </body>
+      <input value="text" readonly>
+    </article>
+  </body>
 </html>
 ```
 
@@ -278,19 +278,19 @@ in useful diffs and blames.
 .selector-1,
 .selector-2,
 .selector-3[type="text"] {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background: #fff;
-    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
-    box-sizing: border-box;
-    color: #333;
-    display: block;
-    font-family: helvetica, arial, sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: #fff;
+  background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+  box-sizing: border-box;
+  color: #333;
+  display: block;
+  font-family: helvetica, arial, sans-serif;
 }
 
 .selector-a,
 .selector-b {
-    padding: 10px;
+  padding: 10px;
 }
 ```
 
@@ -300,15 +300,15 @@ Use alphabetical ordering of declarations unless the cascade requires otherwise.
 
 ```css
 .selector {
-    background: #000;
-    border: 10px solid #333;
-    box-sizing: border-box;
-    color: #fff;
-    display: inline-block;
-    font-family: sans-serif;
-    font-size: 16px;
-    text-align: right;
-    width: 100%;
+  background: #000;
+  border: 10px solid #333;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: right;
+  width: 100%;
 }
 ```
 
@@ -330,12 +330,12 @@ readability and produce more useful diffs.
 
 ```css
 .selector {
-    background-image:
-        linear-gradient(#fff, #ccc),
-        linear-gradient(#f3c, #4ec);
-    box-shadow:
-        1px 1px 1px #000,
-        2px 2px 1px 1px #ccc inset;
+  background-image:
+    linear-gradient(#fff, #ccc),
+    linear-gradient(#f3c, #4ec);
+  box-shadow:
+    1px 1px 1px #000,
+    2px 2px 1px 1px #ccc inset;
 }
 ```
 
@@ -358,9 +358,9 @@ An example of various conventions.
  * Example HTML:
  *
  * <div class="Grid">
- *     <div class="Grid-cell Grid-cell--3"></div>
- *     <div class="Grid-cell Grid-cell--3"></div>
- *     <div class="Grid-cell Grid-cell--3"></div>
+ *   <div class="Grid-cell Grid-cell--3"></div>
+ *   <div class="Grid-cell Grid-cell--3"></div>
+ *   <div class="Grid-cell Grid-cell--3"></div>
  * </div>
  */
 
@@ -374,9 +374,9 @@ An example of various conventions.
  */
 
 .Grid {
-    font-size: 0; /* 1 */
-    height: 100%;
-    white-space: nowrap; /* 2 */
+  font-size: 0; /* 1 */
+  height: 100%;
+  white-space: nowrap; /* 2 */
 }
 
 /**
@@ -390,22 +390,22 @@ An example of various conventions.
  */
 
 .Grid-cell {
-    border: 2px solid #333;
-    box-sizing: border-box;
-    display: inline-block;
-    font-size: 16px; /* 1 */
-    height: 100%;
-    overflow: hidden;
-    padding: 0 10px; /* 2 */
-    position: relative;
-    vertical-align: top;
-    white-space: normal; /* 3 */
+  border: 2px solid #333;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 16px; /* 1 */
+  height: 100%;
+  overflow: hidden;
+  padding: 0 10px; /* 2 */
+  position: relative;
+  vertical-align: top;
+  white-space: normal; /* 3 */
 }
 
 /* Cell states */
 
 .Grid-cell.is-animating {
-    background-color: #fffdec;
+  background-color: #fffdec;
 }
 
 /* Cell dimension modifiers
@@ -422,7 +422,7 @@ An example of various conventions.
 
 .Grid-cell--detail,
 .Grid-cell--important {
-    border-width: 4px;
+  border-width: 4px;
 }
 ```
 
