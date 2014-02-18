@@ -60,12 +60,12 @@ For example, this component template…
 
 ```html
 <article class="Excerpt u-cf">
-    <h1 class="Except-title">{{title}}</h1>
-    <img class="Excerpt-image" src="{{src}}" alt="">
-    <p class="Except-text">
-      <span class="Excerpt-time">{{time}}</span>
-      {{text}}
-    </p>
+  <h1 class="Except-title">{{title}}</h1>
+  <img class="Excerpt-image" src="{{src}}" alt="">
+  <p class="Except-text">
+    <span class="Excerpt-time">{{time}}</span>
+    {{text}}
+  </p>
 </div>
 ```
 
@@ -102,12 +102,12 @@ dimensions of an ancestral context.
 
 ```css
 .Button {
-    border: 1px solid black;
-    box-sizing: border-box;
-    /* .. etc .. */
-    margin: 0;
-    padding: 0.5em;
-    width: 100%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  /* .. etc .. */
+  margin: 0;
+  padding: 0.5em;
+  width: 100%;
 }
 ```
 
@@ -122,24 +122,24 @@ applied to this wrapper.
 /* Excerpt */
 
 .Excerpt {
-    /* ... */
+  /* ... */
 }
 
 /* Wraps nested `Button` component */
 
 .Excerpt-wrapButton {
-    display: inline-block;
-    margin-top: 20px;
+  display: inline-block;
+  margin-top: 20px;
 }
 ```
 
 ```html
 <article class="Excerpt u-cf">
-    {{! other implementation details }}
+  {{! other implementation details }}
 
-    <div class="Excerpt-wrapButton">
-        <button class="Button Button--default" type="button">{{button_text}}</button>
-    </div>
+  <div class="Excerpt-wrapButton">
+    <button class="Button Button--default" type="button">{{button_text}}</button>
+  </div>
 </article>
 ```
 
@@ -154,23 +154,23 @@ context. The example below allows a component to set modifier classes on nested
 {{! button_default_and_icon }}
 
 <button class="Button {{$button_class}}Button--default{{/button_class}}" type="button">
-    <span class="Button-icon">
-        <span class="Icon {{$icon_class}}{{/icon_class}}"></span>
-    </span>
-    <span class="Button-label">{{text}}</span>
+  <span class="Button-icon">
+    <span class="Icon {{$icon_class}}{{/icon_class}}"></span>
+  </span>
+  <span class="Button-label">{{text}}</span>
 </button>
 ```
 
 ```html
 <article class="Excerpt u-cf">
-    {{! other implementation details }}
+  {{! other implementation details }}
 
-    <div class="Excerpt-wrapButton">
-        {{< button_default_and_icon }}
-            {{$button_class}}Button--flat{{/button_class}}
-            {{$icon_class}}Icon--tick{{/icon_class}}
-        {{/button_default_and_icon }}
-    </div>
+  <div class="Excerpt-wrapButton">
+    {{< button_default_and_icon }}
+      {{$button_class}}Button--flat{{/button_class}}
+      {{$icon_class}}Icon--tick{{/icon_class}}
+    {{/button_default_and_icon }}
+  </div>
 </article>
 ```
 
@@ -190,11 +190,11 @@ below. It scopes the changes to affect only `Icon` components within the
 /* in component file for `Excerpt` */
 
 .Excerpt-wrapButton .Icon {
-    display: none;
+  display: none;
 }
 
 .Excerpt-wrapButton:hover .Icon {
-    display: block;
+  display: block;
 }
 ```
 
@@ -208,11 +208,11 @@ create the intended outcome.
 {{! core Tweet }}
 
 <div class="Tweet">
-    <a class="u-linkComplex" href="https://twitter.com/{{user.screenname}}">
-        <img class="u-objLeft" src="{{user.avatar}}" alt="">
-        <b class="Tweet-fullname u-linkComplex-target">{{user.name}}</b>
-        <span class="Tweet-screenname u-textMute u-textSmall">@{{user.screenname}}</span>
-    </a>
-    ...
+  <a class="u-linkComplex" href="https://twitter.com/{{user.screenname}}">
+    <img class="u-objLeft" src="{{user.avatar}}" alt="">
+    <b class="Tweet-fullname u-linkComplex-target">{{user.name}}</b>
+    <span class="Tweet-screenname u-textMute u-textSmall">@{{user.screenname}}</span>
+  </a>
+  ...
 </div>
 ```

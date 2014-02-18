@@ -35,12 +35,12 @@ utilities can be used to create a simple layout.
 
 ```html
 <div class="u-cf"> <!-- contain floats -->
-    <a class="u-objLeft" href="{url}"> <!-- float left with right margin -->
-        <img class="u-block" src="{src}" alt=""> <!-- display block -->
-    </a>
-    <p class="u-sizeFill u-textBreak"> <!-- fill the remaining space; break long strings -->
-        …
-    </p>
+  <a class="u-objLeft" href="{url}"> <!-- float left with right margin -->
+    <img class="u-block" src="{src}" alt=""> <!-- display block -->
+  </a>
+  <p class="u-sizeFill u-textBreak"> <!-- fill the remaining space; break long strings -->
+    …
+  </p>
 </div>
 ```
 
@@ -50,8 +50,8 @@ element. The descendant is targetted using a class of the form:
 
 ```html
 <a class="u-linkComplex" href="{url}">
-    <span class="u-linkComplex-target">Underline on hover.</span>
-    No underline on hover.
+  <span class="u-linkComplex-target">Underline on hover.</span>
+  No underline on hover.
 </a>
 ```
 
@@ -96,7 +96,7 @@ HTML/CSS uses pascal case.
 
 ```html
 <article class="MyComponent">
-    …
+  …
 </article>
 ```
 
@@ -129,13 +129,13 @@ written in camel case.
 
 ```html
 <article class="Tweet">
-    <header class="Tweet-header">
-        <img class="Tweet-avatar" src="{{src}}" alt="{{alt}}">
-        …
-    </header>
-    <div class="Tweet-body">
-        …
-    </div>
+  <header class="Tweet-header">
+    <img class="Tweet-avatar" src="{{src}}" alt="{{alt}}">
+    …
+  </header>
+  <div class="Tweet-body">
+    …
+  </div>
 </article>
 ```
 
@@ -157,7 +157,7 @@ the state (as they are scoped to the component).
 
 ```html
 <article class="Tweet is-expanded">
-    …
+  …
 </article>
 ```
 
