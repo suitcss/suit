@@ -10,41 +10,35 @@
 }
 
 /**
- * The button classes are best applied to links, buttons, and submit inputs.
+ * The button classes are best applied to links and buttons.
  * These components can be used in forms, as calls to action, or as part of the
  * general UI of the site/app.
  */
 
 /**
- * 1. Corrects inability to style clickable `input` types in iOS.
- * 2. Normalize `box-sizing` across all elements that this component could be
+ * 1. Normalize `box-sizing` across all elements that this component could be
  *    applied to.
- * 3. Inherit text color from ancestor.
- * 4. Inherit font styles from ancestor.
- * 5. Normalize `line-height`. For `input`, it can't be changed from `normal` in Firefox 4+.
- * 6. Prevent button text from being selectable.
- * 7. Make sure `input` will wrap text across multiple lines.
+ * 2. Inherit text color from ancestor.
+ * 3. Inherit font styles from ancestor.
+ * 4. Prevent button text from being selectable.
  */
 
 .Button {
-  -webkit-appearance: none; /* 1 */
   background: transparent;
   border-color: var(--Button-border-color);
   border-style: solid;
   border-width: var(--Button-border-width);
-  box-sizing: border-box; /* 2 */
-  color: var(--Button-color); /* 3 */
+  box-sizing: border-box; /* 1 */
+  color: var(--Button-color); /* 2 */
   cursor: pointer;
   display: inline-block;
-  font: var(--Button-font); /* 4 */
-  line-height: normal; /* 5 */
+  font: var(--Button-font); /* 3 */
   margin: 0;
   padding: var(--Button-padding);
   position: relative;
   text-align: center;
   text-decoration: none;
-  user-select: none; /* 6 */
-  white-space: normal; /* 7 */
+  user-select: none; /* 4 */
 }
 
 /**
