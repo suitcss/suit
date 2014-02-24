@@ -15,4 +15,4 @@
 * [API](api.md)
 * [Misc](misc.md)
 
-[Code style](code-style.md)
+[Code style](STYLE.md)
