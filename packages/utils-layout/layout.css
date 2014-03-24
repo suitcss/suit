@@ -14,12 +14,12 @@
 
 .u-cf:before,
 .u-cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .u-cf:after {
-    clear: both;
+  clear: both;
 }
 
 /**
@@ -33,7 +33,7 @@
  */
 
 .u-nbfc {
-    overflow: hidden !important;
+  overflow: hidden !important;
 }
 
 /**
@@ -49,8 +49,8 @@
  */
 
 .u-nbfcAlt {
-    display: table-cell !important; /* 1 */
-    width: 10000px !important; /* 2 */
+  display: table-cell !important; /* 1 */
+  width: 10000px !important; /* 2 */
 }
 
 /**
@@ -58,9 +58,9 @@
  */
 
 .u-pullLeft {
-    float: left !important;
+  float: left !important;
 }
 
 .u-pullRight {
-    float: right !important;
+  float: right !important;
 }
