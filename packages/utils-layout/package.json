@@ -1,12 +1,18 @@
 {
-  "name": "suit-utils-layout",
-  "private": true,
+  "name": "suitcss-utils-layout",
+  "description": "Layout utilities for SUIT CSS",
   "version": "0.2.1",
+  "style": "layout.css",
   "devDependencies": {
-    "csslint": ">=0.9.10"
+    "component": "0.19.x",
+    "component-builder-suit": "0.2.x",
+    "suitcss-preprocessor": "0.1.x"
   },
   "scripts": {
-    "test": "./node_modules/.bin/csslint *.css"
+    "build": "npm run component && npm run preprocess",
+    "build-test": "npm run component-dev && npm run preprocess",
+    "component": "component install && component build --use component-builder-suit",
+    "component-dev": "component install --dev && component build --dev --use component-builder-suit",
+    "preprocess": "suitcss build/build.css build/build.css"
   }
 }
-
