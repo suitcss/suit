@@ -1,0 +1,20 @@
+{
+  "name": "suitcss-utils-align",
+  "description": "Vertical alignment utilities for SUIT CSS",
+  "version": "0.1.0",
+  "style": [
+    "align.css"
+  ],
+  "devDependencies": {
+    "component": "0.19.x",
+    "component-builder-suit": "0.2.x",
+    "suitcss-preprocessor": "0.1.x"
+  },
+  "scripts": {
+    "build": "npm run component && npm run preprocess",
+    "build-test": "npm run component-dev && npm run preprocess",
+    "component": "component install && component build --use component-builder-suit",
+    "component-dev": "component install --dev && component build --dev --use component-builder-suit",
+    "preprocess": "suitcss build/build.css build/build.css"
+  }
+}

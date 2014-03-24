@@ -1,0 +1,19 @@
+{
+  "name": "suit-utils-align",
+  "description": "Vertical alignment utilities for SUIT CSS",
+  "version": "0.1.0",
+  "main": "align.css",
+  "devDependencies": {
+    "suit-test": "*"
+  },
+  "ignore": [
+    "build",
+    "components",
+    "test",
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ]
+}
