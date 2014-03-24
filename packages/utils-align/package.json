@@ -2,9 +2,7 @@
   "name": "suitcss-utils-align",
   "description": "Vertical alignment utilities for SUIT CSS",
   "version": "0.1.0",
-  "style": [
-    "align.css"
-  ],
+  "style": "align.css",
   "devDependencies": {
     "component": "0.19.x",
     "component-builder-suit": "0.2.x",
