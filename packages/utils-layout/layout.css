@@ -89,32 +89,3 @@
 .u-pullRight {
     float: right !important;
 }
-
-/**
- * Object position helpers.
- *
- * Float an object left or right, and include some space between the object and
- * proceeding objects.
- */
-
-.u-objLeft {
-    float: left !important;
-    margin-right: 10px;
-}
-
-.u-objRight {
-    float: right !important;
-    margin-left: 10px;
-}
-
-/**
- * 1. Remove excess space below images
- * 2. Guard against `img {max-width:100%}` hiding this utility's images in
- *    IE 8.
- */
-
-.u-objLeft img,
-.u-objRight img {
-    display: block; /* 1 */
-    max-width: none; /* 2 */
-}
