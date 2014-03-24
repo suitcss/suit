@@ -1,0 +1,12 @@
+
+:root {
+  var-red: #F00;
+}
+
+body {
+  color: var(red);
+}
+
+:root {
+  var-red: #0F0;
+}

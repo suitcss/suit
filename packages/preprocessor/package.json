@@ -1,0 +1,36 @@
+{
+  "name": "suitcss-preprocessor",
+  "version": "0.1.1",
+  "description": "A CSS preprocessor for working with SUIT CSS packages",
+  "keywords": [
+    "css",
+    "preprocessor",
+    "pure",
+    "rework",
+    "suit"
+  ],
+  "main": "lib/index.js",
+  "bin": {
+    "suitcss": "bin/suitcss"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --slow 400",
+    "watch": "mocha --watch --reporter spec --slow 400"
+  },
+  "dependencies": {
+    "autoprefixer": "~1.1.20140319",
+    "colors": "~0.6.2",
+    "commander": "~2.1.0",
+    "node-watch": "0.3.4",
+    "pad-component": "0.0.1",
+    "read-file-stdin": "0.0.3",
+    "rework": "~0.20.1",
+    "rework-suit": "~1.0.0",
+    "write-file-stdout": "0.0.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.15.1"
+  },
+  "repository": "git://github.com/suitcss/preprocessor.git",
+  "license": "MIT"
+}
