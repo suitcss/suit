@@ -8,10 +8,10 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-utils-layout`
 * [Component(1)](http://component.io/): `component install suitcss/utils-layout`
+* [npm](http://npmjs.org/): `npm install suitcss-utils-layout`
+* [Bower](http://bower.io/): `bower install suit-utils-layout`
 * Download: [zip](https://github.com/suitcss/utils-layout/zipball/master)
-* Git: `git clone https://github.com/suitcss/utils-layout.git`
 
 ## Available classes
 
@@ -20,12 +20,6 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 * `u-nbfcAlt` - Create a new block formatting context (alternative technique).
 * `u-pullLeft` - Float left.
 * `u-pullRight` - Float right.
-* `u-objLeft` - The same as `u-pullLeft` but with `10px` of opposite margin, and child image normalization.
-* `u-objRight` - The same as `u-pullRight` but with `10px` of opposite margin, and child image normalization.
-* `u-alignTop` - Vertically align to top.
-* `u-alignMiddle` - Vertically align to middle.
-* `u-alignBaseline` -Vertically align to baseline.
-* `u-alignBottom` - Vertically align to bottom.
 
 ## Usage
 
@@ -35,16 +29,20 @@ Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
 
 Install [Node](http://nodejs.org) (comes with npm).
 
-From the repo root, install the project's development dependencies:
-
 ```
 npm install
 ```
 
-To run the CSS Lint tests:
+To generate a build:
 
 ```
-npm test
+npm run build
+```
+
+To generate the testing build.
+
+```
+npm run build-test
 ```
 
 ## Browser support
