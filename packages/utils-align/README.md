@@ -1,6 +1,6 @@
 # SUIT utilities: align
 
-[![Build Status](https://secure.travis-ci.org/user/suit-align.png?branch=master)](http://travis-ci.org/user/suit-align)
+[![Build Status](https://secure.travis-ci.org/suitcss/utils-align.png?branch=master)](http://travis-ci.org/suitcss/utils-align)
 
 SUIT CSS utility classes for vertically aligning elements.
 
@@ -10,7 +10,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 * [Component(1)](http://component.io/): `component install suitcss/utils-align`
 * [Bower](http://bower.io/): `bower install suit-utils-align`
-* Download: [zip](https://github.com/user/suit-utils-align/zipball/master)
+* Download: [zip](https://github.com/suitcss/utils-align/zipball/master)
 
 ## Available classes
 
