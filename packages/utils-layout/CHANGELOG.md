@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.0 (March 24, 2014)
+
 * Add npm support.
 * Remove `u-objLeft` and `u-objRight`.
 * Move alignment utilities to 'utils-align'.
