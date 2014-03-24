@@ -1,28 +1,3 @@
-/* ==========================================================================
-   Layout utilities
-   ========================================================================== */
-
-/**
- * Vertical alignment utilities
- * Depends on an appropriate `display` value.
- */
-
-.u-alignTop {
-    vertical-align: top !important;
-}
-
-.u-alignMiddle {
-    vertical-align: middle !important;
-}
-
-.u-alignBaseline {
-    vertical-align: baseline !important;
-}
-
-.u-alignBottom {
-    vertical-align: bottom !important;
-}
-
 /**
  * Contain floats
  *
