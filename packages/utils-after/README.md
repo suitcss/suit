@@ -2,14 +2,15 @@
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-after.png?branch=master)](http://travis-ci.org/suitcss/utils-after)
 
-A SUIT collection of utility classes for offsetting elements.
+SUIT CSS trailing offset utilities.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [Component(1)](http://component.io/): `component install suitcss/utils-after`
-* [Bower](http://bower.io/): `bower install --save suit-utils-after`
+* [npm](http://npmjs.org/): `npm install suitcss-utils-after`
+* [Bower](http://bower.io/): `bower install suit-utils-after`
 * Download: [zip](https://github.com/suitcss/utils-after/zipball/master)
 
 ## Available classes
@@ -40,16 +41,10 @@ Install [Node](http://nodejs.org) (comes with npm).
 npm install
 ```
 
-To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
+To generate a build:
 
 ```
 npm run build
-```
-
-To generate a standalone, preprocessed build.
-
-```
-npm run build-standalone
 ```
 
 To generate the testing build.
