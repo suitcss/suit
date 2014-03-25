@@ -1,11 +1,5 @@
 {
   "name": "suit-utils-size",
   "private": true,
-  "version": "0.5.0",
-  "devDependencies": {
-    "csslint": ">=0.9.10"
-  },
-  "scripts": {
-    "test": "./node_modules/.bin/csslint *.css"
-  }
+  "version": "0.5.0"
 }
