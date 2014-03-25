@@ -1,5 +1,8 @@
 === HEAD
 
+* Add npm support.
+* Update to 'utils-after' 0.2.0.
+* Update to 'utils-before' 0.2.0.
 * Depend on 'utils-before' and 'utils-after'.
 
 === 0.3.0 (September 26, 2013)
