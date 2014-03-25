@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.4.0 (March 25, 2014)
+
 * Add npm support.
 * Update to 'utils-after' 0.2.0.
 * Update to 'utils-before' 0.2.0.
