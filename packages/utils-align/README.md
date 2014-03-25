@@ -9,6 +9,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 ## Installation
 
 * [Component(1)](http://component.io/): `component install suitcss/utils-align`
+* [npm](http://npmjs.org/): `npm install suitcss-utils-align`
 * [Bower](http://bower.io/): `bower install suit-utils-align`
 * Download: [zip](https://github.com/suitcss/utils-align/zipball/master)
 
