@@ -3,8 +3,8 @@
   "version": "0.3.0",
   "author": "Nicolas Gallagher",
   "dependencies": {
-    "suit-utils-before": "~0.1.0",
-    "suit-utils-after": "~0.1.0"
+    "suit-utils-before": "0.2.x",
+    "suit-utils-after": "0.2.x"
   },
   "ignore": [
     ".*",
