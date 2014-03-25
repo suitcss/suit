@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils-size",
   "description": "Sizing utilities for SUIT CSS",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "style": "size.css",
   "devDependencies": {
     "component": "0.19.x",

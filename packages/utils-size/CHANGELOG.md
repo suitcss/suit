@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.6.1 (March 25, 2014)
+
 * Use `calc()` to improve precision of recurring decimals.
 
 === 0.6.0 (March 25, 2014)
