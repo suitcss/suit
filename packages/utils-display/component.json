@@ -1,8 +1,13 @@
 {
-    "name": "utils-display",
-    "repo": "suitcss/utils-display",
-    "version": "0.2.2",
-    "styles": ["display.css"],
-    "author": "Nicolas Gallagher",
-    "license": "MIT"
+  "name": "utils-display",
+  "repo": "suitcss/utils-display",
+  "version": "0.2.2",
+  "styles": [
+    "display.css"
+  ],
+  "development": {
+    "suitcss/components-test": "*"
+  },
+  "author": "Nicolas Gallagher",
+  "license": "MIT"
 }
