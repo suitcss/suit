@@ -1,5 +1,7 @@
 === HEAD
 
+* Add npm support.
+
 === 0.2.2 (September 1, 2013)
 
 * Fix Bower ignores.
