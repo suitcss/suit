@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils-text",
   "description": "Text utilities for SUIT CSS",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "style": "text.css",
   "devDependencies": {
     "component": "0.19.x",

@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.0 (March 25, 2014)
+
 * Add npm support.
 * Add `u-textNoWrap` utility.
 * Remove `u-textInheritAllColor` utility. [a2693a5d](https://github.com/suitcss/utils-text/commit/a2693a5d7dd6d86993ca22a35a0fe452b85d7761)
