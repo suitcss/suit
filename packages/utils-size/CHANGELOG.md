@@ -1,5 +1,7 @@
 === HEAD
 
+* Use `calc()` to improve precision of recurring decimals.
+
 === 0.6.0 (March 25, 2014)
 
 * Change media query naming convention to `u-sm-*`, `u-md-*`, `u-lg-*`.
