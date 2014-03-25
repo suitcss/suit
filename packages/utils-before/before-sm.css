@@ -1,11 +1,6 @@
-/* ==========================================================================
-   Offset utilities (breakpoint 1)
-   ========================================================================== */
-
-/* Proportional offset before
-   ========================================================================== */
-
 /**
+ * Breakpoint 1 (small)
+ *
  * Specify the proportional offset before an element.
  * Intentional redundancy build into each set of unit classes.
  * Supports: 2, 3, 4, 5, 6, 8, 10, 12 section
