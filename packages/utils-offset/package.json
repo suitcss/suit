@@ -1,0 +1,9 @@
+{
+  "name": "suitcss-utils-offset",
+  "description": "Offset utilities for SUIT CSS",
+  "version": "0.3.0",
+  "dependencies": {
+    "suit-utils-before": "0.2.x",
+    "suit-utils-after": "0.2.x"
+  }
+}
