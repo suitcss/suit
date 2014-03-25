@@ -2,16 +2,16 @@
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-size.png?branch=master)](http://travis-ci.org/suitcss/utils-size)
 
-A SUIT collection of utility classes for low-level CSS sizing traits.
+SUIT CSS sizing utilities.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [Component(1)](http://component.io/): `component install suitcss/utils-size`
-* [Bower](http://bower.io/): `bower install --save suitcss/utils-size`
+* [npm](http://npmjs.org/): `npm install suitcss-utils-size`
+* [Bower](http://bower.io/): `bower install suit-utils-size`
 * Download: [zip](https://github.com/suitcss/utils-size/zipball/master)
-* Git: `git clone https://github.com/suitcss/utils-size.git`
 
 ## Available classes
 
