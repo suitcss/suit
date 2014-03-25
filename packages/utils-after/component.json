@@ -8,6 +8,9 @@
     "after-md.css",
     "after-lg.css"
   ],
+  "development": {
+    "suitcss/components-test": "*"
+  },
   "author": "Nicolas Gallagher",
   "license": "MIT"
 }
