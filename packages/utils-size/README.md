@@ -62,17 +62,23 @@ Example:
 
 Install [Node](http://nodejs.org) (comes with npm).
 
-From the repo root, install the project's development dependencies:
-
 ```
 npm install
 ```
 
-To run the CSS Lint tests:
+To generate a build:
 
 ```
-npm test
+npm run build
 ```
+
+To generate the testing build.
+
+```
+npm run build-test
+```
+
+Basic visual tests are in `test.html`.
 
 ## Browser support
 
