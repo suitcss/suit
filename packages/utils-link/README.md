@@ -2,14 +2,15 @@
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-link.png?branch=master)](http://travis-ci.org/suitcss/utils-link)
 
-A SUIT collection of utility classes for low-level CSS link traits.
+SUIT CSS link utilities.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-utils-link`
 * [Component(1)](http://component.io/): `component install suitcss/utils-link`
+* [npm](http://npmjs.org/): `npm install suitcss-utils-link`
+* [Bower](http://bower.io/): `bower install suit-utils-link`
 * Download: [zip](https://github.com/suitcss/utils-link/zipball/master)
 
 ## Available classes
@@ -40,7 +41,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 ## Configurable variables
 
 * `var-color-linkPseudo`: the text color to use for `button` when styled like a text link.
-* `var-color-hover-linkPseudo-hover`: the text interaction color to use for `button` when styled like a text link.
+* `var-color-hover-linkPseudo`: the text interaction color to use for `button` when styled like a text link.
 
 ## Usage
 
@@ -54,16 +55,10 @@ Install [Node](http://nodejs.org) (comes with npm).
 npm install
 ```
 
-To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
+To generate a build:
 
 ```
 npm run build
-```
-
-To generate a standalone, preprocessed build.
-
-```
-npm run build-standalone
 ```
 
 To generate the testing build.

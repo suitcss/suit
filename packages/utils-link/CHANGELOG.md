@@ -1,5 +1,6 @@
 === HEAD
 
+* Add npm support.
 * Include configurable variables.
 * More `u-linkPseudo` fixes.
 * Use 'component-builder-suit' for development.
