@@ -3,7 +3,7 @@
 }
 
 /**
- * Pins to all corners by defaults. But when a width and/or height are
+ * Pins to all corners by default. But when a width and/or height are
  * provided, the element will be centered in its nearest relatively-positioned
  * ancestor.
  */
