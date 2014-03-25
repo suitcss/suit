@@ -1,7 +1,7 @@
 {
   "name": "utils-display",
   "repo": "suitcss/utils-display",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "styles": [
     "display.css"
   ],

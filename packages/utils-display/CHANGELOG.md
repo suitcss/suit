@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.3 (March 25, 2014)
+
 * Add npm support.
 
 === 0.2.2 (September 1, 2013)

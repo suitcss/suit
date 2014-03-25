@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils-display",
   "description": "Display utilities for SUIT CSS",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "style": "display.css",
   "devDependencies": {
     "component": "0.19.x",
