@@ -4,9 +4,9 @@
   "author": "Nicolas Gallagher",
   "main": [
     "size.css",
-    "size-v1.css",
-    "size-v2.css",
-    "size-v3.css"
+    "size-sm.css",
+    "size-md.css",
+    "size-lg.css"
   ],
   "ignore": [
     ".*",

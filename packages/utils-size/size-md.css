@@ -1,22 +1,18 @@
-/* ==========================================================================
-   Dimension utilities (breakpoint 3)
-   ========================================================================== */
-
-/* Intrinsic widths
+/* Intrinsic widths  breakpoint 2 (medium)
    ========================================================================== */
 
 /**
  * Make an element shrink wrap its content.
  */
 
-.v3-u-sizeFit,
-.v3-u-sizeFitAlt {
+.u-md-sizeFit,
+.u-md-sizeFitAlt {
   display: block !important;
   float: left !important;
   width: auto !important;
 }
 
-.v3-u-sizeFitAlt {
+.u-md-sizeFitAlt {
   float: right !important;
 }
 
@@ -25,7 +21,7 @@
  * N.B. This will hide overflow.
  */
 
-.v3-u-sizeFill {
+.u-md-sizeFill {
   display: block !important;
   overflow: hidden !important;
   width: auto !important;
@@ -37,7 +33,7 @@
  * In Chrome, Safari, and Firefox it results in undesired layout.
  */
 
-.v3-u-sizeFillAlt {
+.u-md-sizeFillAlt {
   display: table-cell !important;
   max-width: 100% !important;
   width: 10000px !important;
@@ -47,14 +43,14 @@
  * Make an element the width of its parent.
  */
 
-.v3-u-sizeFull {
+.u-md-sizeFull {
   -moz-box-sizing: border-box !important;
   box-sizing: border-box !important;
   display: block !important;
   width: 100% !important;
 }
 
-/* Proportional widths
+/* Proportional widths: breakpoint 2 (medium)
    ========================================================================== */
 
 /**
@@ -63,113 +59,113 @@
  * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
  */
 
-.v3-u-size1of12 {
+.u-md-size1of12 {
   width: 8.333% !important;
 }
 
-.v3-u-size1of10 {
+.u-md-size1of10 {
   width: 10% !important;
 }
 
-.v3-u-size1of8 {
+.u-md-size1of8 {
   width: 12.5% !important;
 }
 
-.v3-u-size1of6,
-.v3-u-size2of12 {
+.u-md-size1of6,
+.u-md-size2of12 {
   width: 16.667% !important;
 }
 
-.v3-u-size1of5,
-.v3-u-size2of10 {
+.u-md-size1of5,
+.u-md-size2of10 {
   width: 20% !important;
 }
 
-.v3-u-size1of4,
-.v3-u-size2of8,
-.v3-u-size3of12 {
+.u-md-size1of4,
+.u-md-size2of8,
+.u-md-size3of12 {
   width: 25% !important;
 }
 
-.v3-u-size3of10 {
+.u-md-size3of10 {
   width: 30% !important;
 }
 
-.v3-u-size1of3,
-.v3-u-size2of6,
-.v3-u-size4of12 {
+.u-md-size1of3,
+.u-md-size2of6,
+.u-md-size4of12 {
   width: 33.333% !important;
 }
 
-.v3-u-size3of8 {
+.u-md-size3of8 {
   width: 37.5% !important;
 }
 
-.v3-u-size2of5,
-.v3-u-size4of10 {
+.u-md-size2of5,
+.u-md-size4of10 {
   width: 40% !important;
 }
 
-.v3-u-size5of12 {
+.u-md-size5of12 {
   width: 41.667% !important;
 }
 
-.v3-u-size1of2,
-.v3-u-size2of4,
-.v3-u-size3of6,
-.v3-u-size4of8,
-.v3-u-size5of10,
-.v3-u-size6of12 {
+.u-md-size1of2,
+.u-md-size2of4,
+.u-md-size3of6,
+.u-md-size4of8,
+.u-md-size5of10,
+.u-md-size6of12 {
   width: 50% !important;
 }
 
-.v3-u-size7of12 {
+.u-md-size7of12 {
   width: 58.333% !important;
 }
 
-.v3-u-size3of5,
-.v3-u-size6of10 {
+.u-md-size3of5,
+.u-md-size6of10 {
   width: 60% !important;
 }
 
-.v3-u-size5of8 {
+.u-md-size5of8 {
   width: 62.5% !important;
 }
 
-.v3-u-size2of3,
-.v3-u-size4of6,
-.v3-u-size8of12 {
+.u-md-size2of3,
+.u-md-size4of6,
+.u-md-size8of12 {
   width: 66.667% !important;
 }
 
-.v3-u-size7of10 {
+.u-md-size7of10 {
   width: 70% !important;
 }
 
-.v3-u-size3of4,
-.v3-u-size6of8,
-.v3-u-size9of12 {
+.u-md-size3of4,
+.u-md-size6of8,
+.u-md-size9of12 {
   width: 75% !important;
 }
 
-.v3-u-size4of5,
-.v3-u-size8of10 {
+.u-md-size4of5,
+.u-md-size8of10 {
   width: 80% !important;
 }
 
-.v3-u-size5of6,
-.v3-u-size10of12 {
+.u-md-size5of6,
+.u-md-size10of12 {
   width: 83.333% !important;
 }
 
-.v3-u-size7of8 {
+.u-md-size7of8 {
   width: 87.5% !important;
 }
 
-.v3-u-size9of10 {
+.u-md-size9of10 {
   width: 90% !important;
 }
 
-.v3-u-size11of12 {
+.u-md-size11of12 {
   width: 91.667% !important;
 }
