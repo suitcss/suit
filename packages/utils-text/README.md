@@ -2,14 +2,15 @@
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-text.png?branch=master)](http://travis-ci.org/suitcss/utils-text)
 
-A SUIT collection of utility classes for low-level CSS text traits.
+SUIT CSS text utilities.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-utils-text`
 * [Component(1)](http://component.io/): `component install suitcss/utils-text`
+* [npm](http://npmjs.org/): `npm install suitcss-utils-text`
+* [Bower](http://bower.io/): `bower install suit-utils-text`
 * Download: [zip](https://github.com/suitcss/utils-text/zipball/master)
 
 ## Available classes
@@ -34,16 +35,10 @@ Install [Node](http://nodejs.org) (comes with npm).
 npm install
 ```
 
-To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
+To generate a build:
 
 ```
 npm run build
-```
-
-To generate a standalone, preprocessed build.
-
-```
-npm run build-standalone
 ```
 
 To generate the testing build.

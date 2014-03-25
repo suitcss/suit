@@ -1,14 +1,18 @@
 {
-  "name": "suit-utils-text",
-  "private": true,
+  "name": "suitcss-utils-text",
+  "description": "Text utilities for SUIT CSS",
   "version": "0.2.3",
+  "style": "text.css",
   "devDependencies": {
     "component": "0.19.x",
-    "component-builder-suit": "0.1.x"
+    "component-builder-suit": "0.2.x",
+    "suitcss-preprocessor": "0.1.x"
   },
   "scripts": {
-    "build": "component install && component build",
-    "build-test": "component install --dev && component build --dev --use component-builder-suit",
-    "build-standalone": "component install && component build --use component-builder-suit"
+    "build": "npm run component && npm run preprocess",
+    "build-test": "npm run component-dev && npm run preprocess",
+    "component": "component install && component build --use component-builder-suit",
+    "component-dev": "component install --dev && component build --dev --use component-builder-suit",
+    "preprocess": "suitcss build/build.css build/build.css"
   }
 }
