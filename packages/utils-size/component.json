@@ -1,7 +1,7 @@
 {
   "name": "utils-size",
   "repo": "suitcss/utils-size",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "styles": [
     "size.css",
     "size-sm.css",

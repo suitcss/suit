@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.6.0 (March 25, 2014)
+
 * Change media query naming convention to `u-sm-*`, `u-md-*`, `u-lg-*`.
 * Add npm support.
 * Remove CSSLint.
