@@ -2,16 +2,16 @@
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-display.png?branch=master)](http://travis-ci.org/suitcss/utils-display)
 
-A SUIT collection of utility classes for low-level CSS display traits.
+SUIT CSS display utilities.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-utils-display`
 * [Component(1)](http://component.io/): `component install suitcss/utils-display`
+* [npm](http://npmjs.org/): `npm install suitcss-utils-display`
+* [Bower](http://bower.io/): `bower install suit-utils-display`
 * Download: [zip](https://github.com/suitcss/utils-display/zipball/master)
-* Git: `git clone https://github.com/suitcss/utils-display.git`
 
 ## Available classes
 
@@ -29,17 +29,23 @@ Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
 
 Install [Node](http://nodejs.org) (comes with npm).
 
-From the repo root, install the project's development dependencies:
-
 ```
 npm install
 ```
 
-To run the CSS Lint tests:
+To generate a build:
 
 ```
-npm test
+npm run build
 ```
+
+To generate the testing build.
+
+```
+npm run build-test
+```
+
+Basic visual tests are in `test.html`.
 
 ## Browser support
 
