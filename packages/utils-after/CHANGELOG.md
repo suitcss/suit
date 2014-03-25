@@ -1,5 +1,7 @@
 === HEAD
 
+* Fix npm support.
+
 === 0.2.0 (March 25, 2014)
 
 * Use `calc()` to increase precision of percentage values.
