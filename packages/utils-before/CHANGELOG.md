@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.0 (March 25, 2014)
+
 * Use `calc()` to increase precision of percentage values.
 * Change the file and class names.
 * Stop using CSSLint.
