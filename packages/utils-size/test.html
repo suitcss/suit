@@ -1,105 +1,147 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Size [utility] - SUIT</title>
-    <link rel="stylesheet" href="build/build.css">
-    <style>
-      .u-cf:after {display: table; content:""; clear:both; }
-      .dev-Box {
-        background: #ddd;
-        margin-bottom: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>SUIT size [utility]</h1>
-    <p>This is a test page for the <a href="https://github.com/suitcss/utils-size">SUIT size</a> utilities.</p>
+<meta charset="utf-8">
+<title>Size [utility] - SUIT</title>
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link rel="stylesheet" href="build/build.css">
+<style>
+  .u-cf:after {
+    clear: both;
+    content:"";
+    display: table;
+  }
 
-    <h2>Intrinsic widths</h2>
-    <h3>sizeFit / sizeFill</h3>
+  .u-highlight {
+    background: #ff0;
+    margin: 0 0 10px;
+  }
+
+  .dev-Box {
+    background: red;
+    height: 50px;
+    width: 50px;
+  }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-size">sizing utility</a> tests</h1>
+
+  <h2 class="Test-describe">.u-sizeFit / .u-sizeFill</h2>
+  <h3 class="Test-it">shrink-wraps (on left) / fills remaining space</h3>
+  <div class="Test-run">
     <div class="u-cf">
-      <img class="u-sizeFit" src="http://lorempixel.com/50/50" width="50" height="50" alt="">
-
-      <div class="u-sizeFill dev-Box">
-        words and stuff
+      <div class="u-sizeFit">
+        <div class="dev-Box"></div>
+      </div>
+      <div class="u-sizeFill u-highlight">
+        content
       </div>
     </div>
+  </div>
 
-    <h3>sizeFit / sizeFillAlt</h3>
+  <h2 class="Test-describe">.u-sizeFit / .u-sizeFillAlt</h2>
+  <h3 class="Test-it">shrink-wraps (on left) / fills remaining space</h3>
+  <div class="Test-run">
     <div class="u-cf">
-      <img class="u-sizeFit" src="http://lorempixel.com/50/50" width="50" height="50" alt="">
-
-      <div class="u-sizeFillAlt dev-Box">
-        words and stuff
+      <div class="u-sizeFit">
+        <div class="dev-Box"></div>
+      </div>
+      <div class="u-sizeFillAlt u-highlight">
+        content
       </div>
     </div>
+  </div>
 
-    <h3>sizeFitAlt / sizeFill</h3>
+  <h2 class="Test-describe">.u-sizeFitAlt / .u-sizeFill</h2>
+  <h3 class="Test-it">shrink-wraps (on right) / fills remaining space</h3>
+  <div class="Test-run">
     <div class="u-cf">
-      <img class="u-sizeFitAlt" src="http://lorempixel.com/50/50" width="50" height="50" alt="">
-
-      <div class="u-sizeFill dev-Box">
-        words and stuff
+      <div class="u-sizeFitAlt">
+        <div class="dev-Box"></div>
+      </div>
+      <div class="u-sizeFill u-highlight">
+        content
       </div>
     </div>
+  </div>
 
-    <h3>sizeFull</h3>
-    <div class="u-sizeFull dev-Box" style="border:10px solid red;">
-      words and stuff
+  <h2 class="Test-describe">.u-sizeFull</h2>
+  <h3 class="Test-it">fits the full-width of the container</h3>
+  <div class="Test-run">
+    <div class="u-sizeFull u-highlight" style="border:10px solid red;">
+      content
     </div>
+  </div>
 
-    <h2>Proportional widths (%)</h2>
-    <h3>2 part</h3>
-    <div class="u-size1of2 dev-Box">1of2</div>
+  <h2 class="Test-describe">.u-sizeXof2</h2>
+  <h3 class="Test-it">sizes to 1/2 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of2 u-highlight">1of2</div>
+  </div>
 
-    <h3>3 part</h3>
-    <div class="u-size1of3 dev-Box">1of3</div>
-    <div class="u-size2of3 dev-Box">2of3</div>
+  <h2 class="Test-describe">.u-sizeXof3</h2>
+  <h3 class="Test-it">sizes to 1/3 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of3 u-highlight">1of3</div>
+    <div class="u-size2of3 u-highlight">2of3</div>
+  </div>
 
-    <h3>4 part</h3>
-    <div class="u-size1of4 dev-Box">1of4</div>
-    <div class="u-size2of4 dev-Box">2of4</div>
-    <div class="u-size3of4 dev-Box">3of4</div>
+  <h2 class="Test-describe">.u-sizeXof4</h2>
+  <h3 class="Test-it">sizes to 1/4 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of4 u-highlight">1of4</div>
+    <div class="u-size2of4 u-highlight">2of4</div>
+    <div class="u-size3of4 u-highlight">3of4</div>
+  </div>
 
-    <h3>6 part</h3>
-    <div class="u-size1of6 dev-Box">1of6</div>
-    <div class="u-size2of6 dev-Box">2of6</div>
-    <div class="u-size3of6 dev-Box">3of6</div>
-    <div class="u-size4of6 dev-Box">4of6</div>
-    <div class="u-size5of6 dev-Box">5of6</div>
+  <h2 class="Test-describe">.u-sizeXof6</h2>
+  <h3 class="Test-it">sizes to 1/6 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of6 u-highlight">1of6</div>
+    <div class="u-size2of6 u-highlight">2of6</div>
+    <div class="u-size3of6 u-highlight">3of6</div>
+    <div class="u-size4of6 u-highlight">4of6</div>
+    <div class="u-size5of6 u-highlight">5of6</div>
+  </div>
 
-    <h3>8 part</h3>
-    <div class="u-size1of8 dev-Box">1of8</div>
-    <div class="u-size2of8 dev-Box">2of8</div>
-    <div class="u-size3of8 dev-Box">3of8</div>
-    <div class="u-size4of8 dev-Box">4of8</div>
-    <div class="u-size5of8 dev-Box">5of8</div>
-    <div class="u-size6of8 dev-Box">6of8</div>
-    <div class="u-size7of8 dev-Box">7of8</div>
+  <h2 class="Test-describe">.u-sizeXof8</h2>
+  <h3 class="Test-it">sizes to 1/8 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of8 u-highlight">1of8</div>
+    <div class="u-size2of8 u-highlight">2of8</div>
+    <div class="u-size3of8 u-highlight">3of8</div>
+    <div class="u-size4of8 u-highlight">4of8</div>
+    <div class="u-size5of8 u-highlight">5of8</div>
+    <div class="u-size6of8 u-highlight">6of8</div>
+    <div class="u-size7of8 u-highlight">7of8</div>
+  </div>
 
-    <h3>10 part</h3>
-    <div class="u-size1of10 dev-Box">1of10</div>
-    <div class="u-size2of10 dev-Box">2of10</div>
-    <div class="u-size3of10 dev-Box">3of10</div>
-    <div class="u-size4of10 dev-Box">4of10</div>
-    <div class="u-size5of10 dev-Box">5of10</div>
-    <div class="u-size6of10 dev-Box">6of10</div>
-    <div class="u-size7of10 dev-Box">7of10</div>
-    <div class="u-size8of10 dev-Box">8of10</div>
-    <div class="u-size9of10 dev-Box">9of10</div>
+  <h2 class="Test-describe">.u-sizeXof10</h2>
+  <h3 class="Test-it">sizes to 1/10 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of10 u-highlight">1of10</div>
+    <div class="u-size2of10 u-highlight">2of10</div>
+    <div class="u-size3of10 u-highlight">3of10</div>
+    <div class="u-size4of10 u-highlight">4of10</div>
+    <div class="u-size5of10 u-highlight">5of10</div>
+    <div class="u-size6of10 u-highlight">6of10</div>
+    <div class="u-size7of10 u-highlight">7of10</div>
+    <div class="u-size8of10 u-highlight">8of10</div>
+    <div class="u-size9of10 u-highlight">9of10</div>
+  </div>
 
-    <h3>12 part</h3>
-    <div class="u-size1of12 dev-Box">1of12</div>
-    <div class="u-size2of12 dev-Box">2of12</div>
-    <div class="u-size3of12 dev-Box">3of12</div>
-    <div class="u-size4of12 dev-Box">4of12</div>
-    <div class="u-size5of12 dev-Box">5of12</div>
-    <div class="u-size6of12 dev-Box">6of12</div>
-    <div class="u-size7of12 dev-Box">7of12</div>
-    <div class="u-size8of12 dev-Box">8of12</div>
-    <div class="u-size9of12 dev-Box">9of12</div>
-    <div class="u-size10of12 dev-Box">10of12</div>
-    <div class="u-size11of12 dev-Box">11of12</div>
-  </body>
-</html>
+  <h2 class="Test-describe">.u-sizeXof12</h2>
+  <h3 class="Test-it">sizes to 1/2 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of12 u-highlight">1of12</div>
+    <div class="u-size2of12 u-highlight">2of12</div>
+    <div class="u-size3of12 u-highlight">3of12</div>
+    <div class="u-size4of12 u-highlight">4of12</div>
+    <div class="u-size5of12 u-highlight">5of12</div>
+    <div class="u-size6of12 u-highlight">6of12</div>
+    <div class="u-size7of12 u-highlight">7of12</div>
+    <div class="u-size8of12 u-highlight">8of12</div>
+    <div class="u-size9of12 u-highlight">9of12</div>
+    <div class="u-size10of12 u-highlight">10of12</div>
+    <div class="u-size11of12 u-highlight">11of12</div>
+  </div>
+</div>
