@@ -1,5 +1,10 @@
 === HEAD
 
+* Change media query naming convention to `u-sm-*`, `u-md-*`, `u-lg-*`.
+* Add npm support.
+* Remove CSSLint.
+* Move package to 'utils-size'.
+
 === 0.5.0 (September 26, 2013)
 
 * Add responsive offset plugins.
