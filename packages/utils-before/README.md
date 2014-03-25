@@ -2,14 +2,15 @@
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-before.png?branch=master)](http://travis-ci.org/suitcss/utils-before)
 
-A SUIT collection of utility classes for offsetting elements.
+SUIT CSS leading offset utilities.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [Component(1)](http://component.io/): `component install suitcss/utils-before`
-* [Bower](http://bower.io/): `bower install --save suitcss/utils-before`
+* [npm](http://npmjs.org/): `npm install suitcss-utils-before`
+* [Bower](http://bower.io/): `bower install suit-utils-before`
 * Download: [zip](https://github.com/suitcss/utils-before/zipball/master)
 
 ## Available classes
@@ -40,16 +41,10 @@ Install [Node](http://nodejs.org) (comes with npm).
 npm install
 ```
 
-To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
+To generate a build:
 
 ```
 npm run build
-```
-
-To generate a standalone, preprocessed build.
-
-```
-npm run build-standalone
 ```
 
 To generate the testing build.
