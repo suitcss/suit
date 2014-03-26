@@ -3,6 +3,13 @@
   "description": "Sizing utilities for SUIT CSS",
   "version": "0.6.1",
   "style": "size.css",
+  "files": [
+    "size.css",
+    "size-sm.css",
+    "size-md.css",
+    "size-lg.css",
+    "component.json"
+  ],
   "devDependencies": {
     "component": "0.19.x",
     "component-builder-suit": "0.2.x",
