@@ -3,8 +3,8 @@
   "repo": "suitcss/utils-offset",
   "version": "0.4.1",
   "dependencies": {
-    "suitcss/utils-before": "0.2.1",
-    "suitcss/utils-after": "0.2.1"
+    "suitcss/utils-before": "0.2.2",
+    "suitcss/utils-after": "0.2.2"
   },
   "author": "Nicolas Gallagher",
   "license": "MIT"

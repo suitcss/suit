@@ -1,5 +1,8 @@
 === HEAD
 
+* Update to 'utils-after' 0.2.2.
+* Update to 'utils-before' 0.2.2.
+
 === 0.4.1 (March 26, 2014)
 
 * Fix npm dependency names.
