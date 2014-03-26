@@ -1,5 +1,7 @@
 === HEAD
 
+* Fix a Firefox bug related to images within inline-block.
+
 === 0.2.3 (March 25, 2014)
 
 * Add npm support.
