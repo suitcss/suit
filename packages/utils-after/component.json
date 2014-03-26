@@ -3,10 +3,7 @@
   "repo": "suitcss/utils-after",
   "version": "0.2.1",
   "styles": [
-    "after.css",
-    "after-sm.css",
-    "after-md.css",
-    "after-lg.css"
+    "after.css"
   ],
   "development": {
     "suitcss/components-test": "*"
