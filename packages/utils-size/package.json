@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils-size",
   "description": "Sizing utilities for SUIT CSS",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "style": "size.css",
   "files": [
     "size.css",
