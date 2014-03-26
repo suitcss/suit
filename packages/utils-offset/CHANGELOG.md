@@ -1,5 +1,7 @@
 === HEAD
 
+* Fix npm dependency names.
+
 === 0.4.0 (March 25, 2014)
 
 * Add npm support.
