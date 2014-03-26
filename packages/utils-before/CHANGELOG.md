@@ -1,5 +1,8 @@
 === HEAD
 
+* Remove MQ files from component.json (6d22c69).
+* Add 'files' to package.json.
+
 === 0.2.1 (March 25, 2014)
 
 * Fix npm support.
