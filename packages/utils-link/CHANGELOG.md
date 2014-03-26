@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.1 (March 26, 2014)
+
 * Fix npm support.
 
 === 0.3.0 (March 25, 2014)
