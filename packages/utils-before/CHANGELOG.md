@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.2 (March 26, 2014)
+
 * Remove MQ files from component.json (6d22c69).
 * Add 'files' to package.json.
 
