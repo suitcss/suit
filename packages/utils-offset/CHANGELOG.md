@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.4.1 (March 26, 2014)
+
 * Fix npm dependency names.
 
 === 0.4.0 (March 25, 2014)
