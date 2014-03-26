@@ -3,6 +3,13 @@
   "description": "Trailing offset utilities for SUIT CSS",
   "version": "0.2.1",
   "style": "after.css",
+  "files": [
+    "after.css",
+    "after-sm.css",
+    "after-md.css",
+    "after-lg.css",
+    "component.json"
+  ],
   "devDependencies": {
     "component": "0.19.x",
     "component-builder-suit": "0.2.x",
