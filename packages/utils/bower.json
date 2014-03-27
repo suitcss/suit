@@ -3,13 +3,14 @@
   "version": "0.7.1",
   "author": "Nicolas Gallagher",
   "dependencies": {
-    "suit-utils-display": "~0.2.2",
-    "suit-utils-layout": "~0.2.1",
-    "suit-utils-link": "~0.1.3",
-    "suit-utils-offset": "~0.3.0",
-    "suit-utils-size": "~0.5.0",
-    "suit-utils-space": "~0.1.2",
-    "suit-utils-state": "~0.2.1",
-    "suit-utils-text": "~0.2.3"
+    "suit-utils-align": "~0.1.1",
+    "suit-utils-display": "~0.2.4",
+    "suit-utils-layout": "~0.3.0",
+    "suit-utils-link": "~0.3.1",
+    "suit-utils-offset": "~0.4.2",
+    "suit-utils-position": "~0.1.0",
+    "suit-utils-size": "~0.6.2",
+    "suit-utils-state": "~0.3.0",
+    "suit-utils-text": "~0.3.0"
   }
 }
