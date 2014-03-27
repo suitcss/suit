@@ -1,0 +1,27 @@
+{
+  "name": "suitcss-utils",
+  "description": "Utilities for SUIT CSS",
+  "version": "0.7.1",
+  "dependencies": {
+    "suitcss-utils-align": "~0.1.1",
+    "suitcss-utils-display": "~0.2.4",
+    "suitcss-utils-layout": "~0.3.0",
+    "suitcss-utils-link": "~0.3.1",
+    "suitcss-utils-offset": "~0.4.2",
+    "suitcss-utils-position": "~0.1.0",
+    "suitcss-utils-size": "~0.6.2",
+    "suitcss-utils-state": "~0.3.0",
+    "suitcss-utils-text": "~0.3.0"
+  },
+  "devDependencies": {
+    "component": "0.19.x",
+    "component-builder-suit": "0.2.x",
+    "suitcss-preprocessor": "0.1.x"
+  },
+  "scripts": {
+    "build": "npm run component && npm run preprocess",
+    "component": "component install && component build --use component-builder-suit",
+    "preprocess": "suitcss build/build.css build/build.css"
+  }
+}
+
