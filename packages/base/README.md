@@ -9,9 +9,9 @@ Read more about how to use [SUIT](https://github.com/suitcss/suit/).
 ## Installation
 
 * [Component(1)](http://github.com/component/component): `component install suitcss/base`
-* [Bower](http://bower.io/): `bower install --save suit-base`
-* [npm](http://npmjs.org/): `npm install --save suit-base`
-* [Download](https://github.com/suitcss/base/releases): `suit-base.css`
+* [Bower](http://bower.io/): `bower install suit-base`
+* [npm](http://npmjs.org/): `npm install suitcss-base`
+* [Download](https://github.com/suitcss/base/releases)
 
 ## Configurable variables
 
@@ -30,16 +30,10 @@ Install [Node](http://nodejs.org) (comes with npm).
 npm install
 ```
 
-To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
+To generate a build:
 
 ```
 npm run build
-```
-
-To generate a standalone, preprocessed build.
-
-```
-npm run build-standalone
 ```
 
 To generate the testing build.
