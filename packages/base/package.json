@@ -1,12 +1,15 @@
 {
-  "name": "suit-base",
-  "description": "",
+  "name": "suitcss-base",
+  "description": "Base styles for SUIT CSS",
   "version": "0.3.0",
   "style": "base.css",
   "files": [
     "base.css",
     "component.json"
   ],
+  "dependencies": {
+    "normalize.css": "3.0.x"
+  },
   "devDependencies": {
     "component": "0.19.x",
     "component-builder-suit": "0.1.x"
