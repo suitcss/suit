@@ -4,10 +4,10 @@
   "version": "0.3.0",
   "styles": ["base.css"],
   "dependencies": {
-    "necolas/normalize.css": "3.0.x"
+    "necolas/normalize.css": "3.0.1"
   },
   "development": {
-    "suitcss/test": "*"
+    "suitcss/components-test": "*"
   },
   "author": "Nicolas Gallagher",
   "license": "MIT"
