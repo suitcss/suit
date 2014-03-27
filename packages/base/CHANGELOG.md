@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.4.0 (March 27, 2014)
+
 * Add npm support.
 * Add SUIT-style Component(1) build pipeline.
 * Depend on 'normalize.css' 3.0.x.
