@@ -1,5 +1,6 @@
 === HEAD
 
+* Add npm support.
 * Add SUIT-style Component(1) build pipeline.
 * Depend on 'normalize.css' 3.0.x.
 * Introduce base theme variables for `html` and `a`.
