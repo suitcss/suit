@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.8.0 (March 31, 2014)
+
 * Add npm support.
 * Add 'utils-align' and 'utils-position'.
 * Update all dependencies.
