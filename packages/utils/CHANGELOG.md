@@ -1,6 +1,8 @@
 === HEAD
 
-* Reflect the renaming of 'utils-dimension' to 'utils-size'.
+* Add npm support.
+* Add 'utils-align' and 'utils-position'.
+* Update all dependencies.
 
 === 0.7.1 (November 20, 2013)
 
