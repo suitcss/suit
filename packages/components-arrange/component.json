@@ -1,18 +1,16 @@
 {
-  "name": "arrange",
-  "repo": "suitcss/arrange",
+  "name": "components-arrange",
+  "repo": "suitcss/components-arrange",
   "version": "0.2.0",
   "styles": [
     "arrange.css"
   ],
   "development": {
-    "suitcss/utils-text": "v0.2.3",
-    "suitcss/utils-size": "v0.5.0",
-    "suitcss/utils-display": "v0.2.2",
-    "suitcss/test": "*"
+    "suitcss/utils-display": "0.2.4",
+    "suitcss/utils-size": "0.6.2",
+    "suitcss/utils-text": "0.3.0",
+    "suitcss/components-test": "*"
   },
   "author": "Nicolas Gallagher",
-  "license": "MIT",
-  "remotes": [],
-  "dependencies": {}
+  "license": "MIT"
 }

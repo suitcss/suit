@@ -1,14 +1,8 @@
 {
-  "name": "suit-arrange",
+  "name": "suit-components-arrange",
   "version": "0.2.0",
   "author": "Nicolas Gallagher",
   "main": "arrange.css",
-  "devDependencies": {
-    "suit-utils-text": "~0.2.3",
-    "suit-utils-size": "~0.5.0",
-    "suit-utils-display": "~0.2.2",
-    "suit-test": "*"
-  },
   "ignore": [
     ".*",
     "CHANGELOG.md",
