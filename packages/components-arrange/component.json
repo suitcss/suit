@@ -1,7 +1,7 @@
 {
   "name": "components-arrange",
   "repo": "suitcss/components-arrange",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "styles": [
     "arrange.css"
   ],
