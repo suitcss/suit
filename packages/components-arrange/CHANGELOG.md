@@ -1,5 +1,6 @@
 === HEAD
 
+* Add npm support.
 * Re-introduce the gutter modifier, relying on a variable for configuration.
 * Stop using CSSLint.
 
