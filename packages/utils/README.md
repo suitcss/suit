@@ -1,33 +1,39 @@
 # SUIT utilities
 
-A SUIT collection of utility classes for common, reusable, low-level CSS traits.
-The collection includes size, display, layout, link, space, state, and
-text utilities.
+The full collection of SUIT CSS utility classes. Requires
+[suitcss-preprocessor](https://github.com/suitcss/preprocessor) or similar in
+your build process, if you choose to use the packages directly.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [Component(1)](http://component.io/): `component install suitcss/utils`
-* [Bower](http://bower.io/): `bower install --save suit-utils`
+* [npm](http://npmjs.org/): `npm install suitcss-utils`
+* [Bower](http://bower.io/): `bower install suit-utils`
+* [Download](https://github.com/suitcss/utils/releases) (compiled)
 
 …is a convenient way to install all the SUIT utility packages:
 
-* [suit-utils-display](https://github.com/suitcss/utils-display)
-* [suit-utils-layout](https://github.com/suitcss/utils-layout)
-* [suit-utils-link](https://github.com/suitcss/utils-link)
-* [suit-utils-offset](https://github.com/suitcss/utils-offset)
-* [suit-utils-size](https://github.com/suitcss/utils-size)
-* [suit-utils-space](https://github.com/suitcss/utils-space)
-* [suit-utils-state](https://github.com/suitcss/utils-state)
-* [suit-utils-text](https://github.com/suitcss/utils-text)
+* [utils-align](https://github.com/suitcss/utils-align/): Vertical alignment
+* [utils-display](https://github.com/suitcss/utils-display/): Display types
+* [utils-layout](https://github.com/suitcss/utils-layout/): Clearfix, floats, and new block formatting contexts
+* [utils-link](https://github.com/suitcss/utils-link/): Link things
+* [utils-offset](https://github.com/suitcss/utils-offset/): The `before` and `after` packages
+* [utils-position](https://github.com/suitcss/utils-position/): Positioning utilities
+* [utils-size](https://github.com/suitcss/utils-size/): Percentage sizing utilities
+* [utils-state](https://github.com/suitcss/utils-state/): States
+* [utils-text](https://github.com/suitcss/utils-text/): Text truncation, breaking, and alignment
 
 ## Usage
 
-Utilities are a low-level layer in your CSS. They have a very narrow scope and
-may end up being used frequently, due to their separation from the nature of
-their content. As a result, once a class is in significant use great care
-should be taken before modifying it.
+Utilities are low-level. They have a very narrow scope and may end up being
+used frequently, due to their separation from the semantics of the document and
+the theming of a component. As a result, once a class is in significant use
+great care should be taken when introducing any modifications to it.
+
+Utilities make use of `!important` to ensure that their styles always apply
+ahead of those defined in a component's dedicated CSS.
 
 ### Templating
 
@@ -39,53 +45,58 @@ corresponding class directly to the HTML.
 
 Together, they can form a wide variety of UI patterns from simple principles.
 Although you won't _always_ want to use combinations of utilities to generate
-more complicated patterns, the option is there. Refactoring an HTML template to
-move particular utility traits into a CSS component's styles is a relatively
-simple task.
+more complicated patterns, the option is there. Refactoring a component's HTML
+to move particular utility traits into the component's own styles is a
+relatively simple task.
 
 The following contrived example would be a structural template for a simple
-tweet-like component. You would then create a new component CSS file for any
-additional, specific styles (often a "skin" or "theme") needed to fully realise
-the component.
+Tweet-like component. You would then create a new CSS file for the component to
+contain any additional, specific styles (often a "skin" or "theme") needed to
+fully realise the component.
 
 ```html
 <article class="Tweet">
-    <a class="u-objRight" href="[permalink]">
-        [timestamp]
+  <a class="u-pullRight" href="{{permalinkUrl}}">
+    {{time}}
+  </a>
+  <a class="u-pullLeft" href="{{userUrl}}">
+    <img src="{{userAvatar}}" alt="{{username}}'s avatar">
+  </a>
+  <div class="u-sizeFill">
+    <a class="u-linkComplex" href="{{userUrl}}">
+      <span class="u-linkComplex-target">{{fullname}}</span>
+      <span>@{{username}}</span>
     </a>
-    <a class="u-objLeft" href="[href]">
-        <img src="[src]" alt="[username]'s avatar">
-    </a>
-    <div class="u-sizeFill">
-        <a class="u-linkComplex" href="[url]">
-            <span class="u-linkComplex-target">[full-name]</span>
-            <span>@username</span>
-        </a>
 
-        <p>
-            <a class="u-linkComplex" href="#">
-                @<span class="u-linkComplex-target">username</span>
-            </a>
-            [tweet-text]
-        </p>
+    <p class="u-textBreak">{{text}}</p>
 
-        <div class="u-textMute">
-            <a href="#">
-                <span>Expand</span>
-                <span class="u-isHidden">Collapse</span>
-            </a>
-            <a class="u-linkComplex" href="#">
-                <i class="Icon Icon--reply"></i>
-                <span class="u-linkComplex-target">Reply</span>
-            </a>
-            <a href="#">
-                <i class="Icon Icon--favorite"></i>
-                <span class="u-isHiddenVisually">Favorite</span>
-            </a>
-            ...
-        </div>
+    <div>
+      <a class="u-linkComplex" href="#" role="button">
+        <span class="Icon Icon--reply"></span>
+        <span class="u-linkComplex-target">Reply</span>
+      </a>
+      <a href="#" role="button">
+        <span class="Icon Icon--favorite"></span>
+        <span class="u-isHiddenVisually">Favorite</span>
+      </a>
+      ...
     </div>
+  </div>
 </article>
+```
+
+## Building
+
+Install [Node](http://nodejs.org) (comes with npm).
+
+```
+npm install
+```
+
+To generate a build:
+
+```
+npm run build
 ```
 
 ## Browser support
