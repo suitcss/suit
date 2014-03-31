@@ -8,23 +8,22 @@ cells. Makes use of CSS table layout.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
-[Live test rendering](http://suitcss.github.io/components-arrange/test.html)
-
 ## Installation
 
 * [Component(1)](https://github.com/component/component): `component install suitcss/components-arrange`
-* [npm](http://npmjs.org/): `npm install --save suit-components-arrange`
-* [Bower](http://bower.io/): `bower install --save suit-components-arrange`
+* [npm](http://npmjs.org/): `npm install suitcss-components-arrange`
+* [Bower](http://bower.io/): `bower install suit-components-arrange`
+* Download: [zip](https://github.com/suitcss/utils-after/zipball/master)
 
 ## Available classes
 
 * `Arrange` - The core component class
-* `Arrange-sizeFit` - The child class for cells to snap to fit their content
-* `Arrange-sizeFill` - The child class for cells to expand to fill the remaining space
 * `Arrange--middle` - The modifier class for middle-aligned cells
 * `Arrange--bottom` - The modifier class for bottom-aligned cells
 * `Arrange--equal` - The modifier class for equal-width cells
 * `Arrange--withGutter` - The modifier class for adding a gutter between cells.
+* `Arrange-sizeFit` - The child class for cells to snap to fit their content
+* `Arrange-sizeFill` - The child class for cells to expand to fill the remaining space
 
 ## Configurable variables
 
@@ -40,7 +39,7 @@ that is extended by additional modifier classes. This component works best for
 small-scale UI layout, for example, image-content pairs:
 
 ```html
-<div class="Arrange Arrange--withGutter">
+<div class="Arrange Arrange--middle Arrange--withGutter">
   <div class="Arrange-sizeFit">
     <img src="img.png" alt="">
   </div>
@@ -56,16 +55,16 @@ Or for an equally spaced row of buttons or icons, etc.
 ```html
 <ul class="Arrange Arrange--equal">
   <li class="Arrange-sizeFill">
-    <button class="Button">Reply</button>
+    <button class="Button Button--full">Reply</button>
   </li>
   <li class="Arrange-sizeFill">
-    <button class="Button">Like</button>
+    <button class="Button Button--full">Like</button>
   </li>
   <li class="Arrange-sizeFill">
-    <button class="Button">Save</button>
+    <button class="Button Button--full">Save</button>
   </li>
   <li class="Arrange-sizeFill">
-    <button class="Button">Remove</button>
+    <button class="Button Button--full">Remove</button>
   </li>
 </ul>
 ```
@@ -78,16 +77,10 @@ Install [Node](http://nodejs.org) (comes with npm).
 npm install
 ```
 
-To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
+To generate a build:
 
 ```
 npm run build
-```
-
-To generate a standalone, preprocessed build.
-
-```
-npm run build-standalone
 ```
 
 To generate the testing build.
