@@ -58,6 +58,15 @@
 }
 
 /**
+ * Remove excess padding and border in Firefox 4+
+ */
+
+.Button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
  * UI states
  */
 
@@ -71,13 +80,4 @@
 .Button.is-disabled {
   cursor: default;
   opacity: var(opacity-Button-disabled);
-}
-
-/**
- * Remove excess padding and border in Firefox 4+
- */
-
-.Button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
 }

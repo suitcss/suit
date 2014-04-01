@@ -1,6 +1,6 @@
 {
-  "name": "suit-components-button",
-  "description": "",
+  "name": "suitcss-components-button",
+  "description": "Structural button styles for SUIT CSS",
   "version": "3.0.0",
   "style": "button.css",
   "files": [
@@ -9,12 +9,15 @@
   ],
   "devDependencies": {
     "component": "0.19.x",
-    "component-builder-suit": "0.1.x"
+    "component-builder-suit": "0.2.x",
+    "suitcss-preprocessor": "0.1.x"
   },
   "scripts": {
-    "build": "component install && component build",
-    "build-test": "component install --dev && component build --dev --use component-builder-suit",
-    "build-standalone": "component install && component build --use component-builder-suit"
+    "build": "npm run component && npm run preprocess",
+    "build-test": "npm run component-dev && npm run preprocess",
+    "component": "component install && component build --use component-builder-suit",
+    "component-dev": "component install --dev && component build --dev --use component-builder-suit",
+    "preprocess": "suitcss build/build.css build/build.css"
   },
   "keywords": [
     "suit",
