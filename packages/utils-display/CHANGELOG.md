@@ -1,5 +1,7 @@
 === HEAD
 
+* Add `u-tableRow`.
+
 === 0.2.4 (March 26, 2014)
 
 * Add 'files' to package.json.

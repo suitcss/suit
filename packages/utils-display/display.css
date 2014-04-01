@@ -25,6 +25,10 @@
   display: table !important;
 }
 
+.u-tableRow {
+  display: table-row !important;
+}
+
 .u-tableCell {
   display: table-cell !important;
 }
