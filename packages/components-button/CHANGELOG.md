@@ -1,5 +1,6 @@
 === HEAD
 
+* Add npm support.
 * Revert to implicit-width, inline-block rendering.
 * Add variables support.
 * Use Component(1) for development.
