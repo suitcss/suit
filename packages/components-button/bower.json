@@ -1,5 +1,5 @@
 {
-  "name": "suit-button",
+  "name": "suit-components-button",
   "version": "3.0.0",
   "author": "Nicolas Gallagher",
   "main": "button.css",
@@ -9,8 +9,5 @@
     "component.json",
     "package.json",
     "test.html"
-  ],
-  "devDependencies": {
-    "suit-test": "*"
-  }
+  ]
 }
