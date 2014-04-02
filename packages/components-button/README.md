@@ -8,8 +8,8 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 ## Installation
 
 * [Component(1)](https://github.com/component/component/): `component install suitcss/components-button`
-* [npm](http://npmjs.org/): `npm install --save suit-components-button`
-* [Bower](http://bower.io/): `bower install --save suit-components-button`
+* [npm](http://npmjs.org/): `npm install suitcss-components-button`
+* [Bower](http://bower.io/): `bower install suit-components-button`
 
 ## Available classes
 
@@ -31,8 +31,7 @@ JavaScript event handlers from firing.
 
 ## Use
 
-Like all SUIT components, suit-button relies on a base component class that is
-extended by any number of additional modifier and state classes.
+Examples:
 
 ```html
 <a class="Button" href="{{url}}">Sign up</a>
@@ -44,8 +43,8 @@ extended by any number of additional modifier and state classes.
 
 ### Theming / extending
 
-The suit-button component is almost entirely structural. You can build your
-application-specific theme styles in your app. For example:
+The CSS is focused on common structural requirements for buttons. You can build
+your application-specific theme styles in your app. For example:
 
 ```css
 /**
@@ -98,16 +97,10 @@ Install [Node](http://nodejs.org) (comes with npm).
 npm install
 ```
 
-To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
+To generate a build:
 
 ```
 npm run build
-```
-
-To generate a standalone, preprocessed build.
-
-```
-npm run build-standalone
 ```
 
 To generate the testing build.
