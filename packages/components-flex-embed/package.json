@@ -1,8 +1,12 @@
 {
-  "name": "suit-flex-embed",
-  "private": true,
-  "description": "",
+  "name": "suitcss-components-flex-embed",
+  "description": "CSS for responsive, intrinsic ratio embeds",
   "version": "1.5.0",
+  "style": "flex-embed.css",
+  "files": [
+    "flex-embed.css",
+    "component.json"
+  ],
   "devDependencies": {
     "component": "0.19.x",
     "component-builder-suit": "0.1.x"
@@ -11,5 +15,9 @@
     "build": "component install && component build",
     "build-test": "component install --dev && component build --dev --use component-builder-suit",
     "build-standalone": "component install && component build --use component-builder-suit"
-  }
+  },
+  "keywords": [
+    "css",
+    "component"
+  ]
 }
