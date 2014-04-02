@@ -1,5 +1,7 @@
 === HEAD
 
+=== 3.1.0 (April 1, 2014)
+
 * Add npm support.
 * Revert to implicit-width, inline-block rendering.
 * Add variables support.

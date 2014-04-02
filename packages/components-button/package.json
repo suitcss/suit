@@ -1,7 +1,7 @@
 {
   "name": "suitcss-components-button",
   "description": "Structural button styles for SUIT CSS",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "style": "button.css",
   "files": [
     "button.css",
