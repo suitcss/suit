@@ -1,8 +1,6 @@
-/*! suit-flex-embed v1.5.0 | MIT License | github.com/suitcss */
+/** @define FlexEmbed */
 
-/* ==========================================================================
-   FlexEmbed
-   ========================================================================== */
+/*! suit-flex-embed v1.5.0 | MIT License | github.com/suitcss */
 
 /**
  * Flexible media embeds
@@ -31,9 +29,8 @@
 }
 
 /**
- * A pseudo-element shunt is used to provide support for `max-height`. The
- * `max-height` property has no affect when using a percentage-padding to set
- * the aspect ratio.
+ * The aspect-ratio hack is applied to a pseudo-element because it allows the
+ * component to respect `max-height`.
  */
 
 .FlexEmbed:before {
@@ -75,12 +72,9 @@
 }
 
 /**
- * Descendant: media element
- *
- * Utility of the component is improved by provide an explicit descendant
- * class. However, it will work automatically for iframes, embeds, and objects
- * to account for times when you cannot modify the attributes for 3rd party
- * widget code.
+ * Works automatically for iframes, embeds, and objects to account for
+ * situations where you cannot modify the enbedded element's attributes (e.g.,
+ * 3rd party widget code).
  */
 
 .FlexEmbed-item,
