@@ -7,10 +7,10 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-flex-embed`
 * [Component(1)](http://component.io/): `component install suitcss/flex-embed`
+* [npm](https://www.npmjs.org/package/suitcss-components-flex-embed): `npm install suitcss-components-flex-embed`
+* [Bower](http://bower.io/): `bower install suit-flex-embed`
 * Download: [zip](https://github.com/suitcss/flex-embed/zipball/master)
-* Git: `git clone https://github.com/suitcss/flex-embed.git`
 
 ## Available classes
 
@@ -62,16 +62,10 @@ Install [Node](http://nodejs.org) (comes with npm).
 npm install
 ```
 
-To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
+To generate a build:
 
 ```
 npm run build
-```
-
-To generate a standalone, preprocessed build.
-
-```
-npm run build-standalone
 ```
 
 To generate the testing build.
