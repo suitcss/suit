@@ -1,5 +1,9 @@
 === HEAD
 
+=== 1.5.1 (April 3, 2014)
+
+* Add npm support.
+
 === 1.5.0 (February 14, 2014)
 
 * Improve precision of a percentage.
