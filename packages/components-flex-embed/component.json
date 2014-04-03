@@ -1,10 +1,10 @@
 {
-  "name": "flex-embed",
-  "repo": "suitcss/flex-embed",
+  "name": "components-flex-embed",
+  "repo": "suitcss/components-flex-embed",
   "version": "1.5.0",
   "styles": ["flex-embed.css"],
   "development": {
-    "suitcss/test": "*"
+    "suitcss/components-test": "*"
   },
   "author": "Nicolas Gallagher",
   "license": "MIT"

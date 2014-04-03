@@ -1,11 +1,8 @@
 {
-  "name": "suit-flex-embed",
+  "name": "suit-components-flex-embed",
   "version": "1.5.0",
   "author": "Nicolas Gallagher",
   "main": "flex-embed.css",
-  "devDependencies": {
-    "suit-test": "*"
-  },
   "ignore": [
     "build",
     "components",
