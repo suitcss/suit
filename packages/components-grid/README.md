@@ -1,23 +1,22 @@
 # SUIT grid
 
-[![Build Status](https://secure.travis-ci.org/suitcss/grid.png?branch=master)](http://travis-ci.org/suitcss/grid)
+[![Build Status](https://secure.travis-ci.org/suitcss/components-grid.png?branch=master)](http://travis-ci.org/suitcss/components-grid)
 
 A SUIT component for a CSS grid. The grid makes use of `inline-block` and
 `box-sizing` to provide features that float-based layouts cannot.
 
 N.B. This component relies on particular dimensions being applied to cells in
-the grid via other classes. For example, [SUIT
-dimensions](https://github.com/suitcss/utils-dimensions/) or the [SUIT
-Grid Layouts](https://github.com/suitcss/grid-layouts/) extension.
+the grid via other classes. For example,
+[suitcss-utils-size](https://github.com/suitcss/utils-size/).
 
 Read more about [SUIT](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-grid`
-* [Component(1)](http://component.io/): `component install suitcss/grid`
+* [Component(1)](http://component.io/): `component install suitcss/components-grid`
+* [npm](https://www.npmjs.org/package/suitcss-components-grid): `npm install suitcss-components-grid`
+* [Bower](http://bower.io/): `bower install suit-components-grid`
 * Download: [zip](https://github.com/suitcss/grid/zipball/master)
-* Git: `git clone https://github.com/suitcss/grid`
 
 ## Features
 
