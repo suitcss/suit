@@ -1,10 +1,10 @@
 {
   "name": "suit",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "Nicolas Gallagher",
   "dependencies": {
     "suit-base": "~0.3.0",
-    "suit-utils": "~0.7.1",
+    "suit-utils": "~0.8.0",
     "suit-arrange": "~0.2.0",
     "suit-button": "~3.0.0",
     "suit-button-group": "~2.0.1",
