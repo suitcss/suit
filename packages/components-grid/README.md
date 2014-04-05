@@ -1,4 +1,4 @@
-# SUIT grid
+# SUIT Grid
 
 [![Build Status](https://secure.travis-ci.org/suitcss/components-grid.png?branch=master)](http://travis-ci.org/suitcss/components-grid)
 

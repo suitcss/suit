@@ -1,5 +1,7 @@
 === HEAD
 
+=== 1.2.0 (April 5, 2014)
+
 * Add configurable variables.
 * Add `Grid-withGutter` modifier.
 * Add npm support.
