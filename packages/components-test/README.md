@@ -1,16 +1,17 @@
 # SUIT test
 
-[![Build Status](https://secure.travis-ci.org/suitcss/test.png?branch=master)](http://travis-ci.org/suitcss/test)
+[![Build Status](https://secure.travis-ci.org/suitcss/components-test.png?branch=master)](http://travis-ci.org/suitcss/components-test)
 
-A SUIT component that provides a test structure for visually testing other
+SUIT CSS for a presentational test structure for visually testing other
 components.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-test`
 * [Component(1)](http://component.io/): `component install suitcss/test`
+* [npm](https://www.npmjs.org/package/suitcss-components-test): `npm install suitcss-components-test`
+* [Bower](http://bower.io/): `bower install suit-components-test`
 * Download: [zip](https://github.com/suitcss/test/zipball/master)
 
 ## Available classes

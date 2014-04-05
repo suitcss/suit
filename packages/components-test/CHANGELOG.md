@@ -1,5 +1,6 @@
 === HEAD
 
+* Add npm support.
 * Stop using CSSLint for development linting.
 * Use Component(1) for development and idiomatic test file.
 
