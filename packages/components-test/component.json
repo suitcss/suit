@@ -1,6 +1,6 @@
 {
-  "name": "suit-test",
-  "repo": "user/suit-test",
+  "name": "components-test",
+  "repo": "suitcss/components-test",
   "version": "0.1.0",
   "styles": ["test.css"],
   "license": "MIT"

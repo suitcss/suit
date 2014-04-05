@@ -1,6 +1,6 @@
 {
-  "name": "suit-test",
-  "description": "A SUIT component to help test the visual rendering of other components",
+  "name": "suit-components-test",
+  "description": "CSS for presenting UI components for visual tests",
   "version": "0.1.0",
   "main": "test.css",
   "ignore": [
