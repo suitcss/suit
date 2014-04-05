@@ -30,6 +30,7 @@ This is an example of an idiomatic SUIT CSS test file:
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>ComponentName [component] - SUIT</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
 <link rel="stylesheet" href="build/build.css">
 <style>
   #textWrapping {
@@ -59,7 +60,6 @@ This is an example of an idiomatic SUIT CSS test file:
   <div class="Test-run" id="modifier-larger">
     <!-- component configuration 2 -->
   </div>
-
   <h3 class="Test-it">allows text wrapping</h3>
   <div class="Test-run" id="modifier-textWrapping">
     <!-- component configuration 2 -->
@@ -75,16 +75,10 @@ Install [Node](http://nodejs.org) (comes with npm).
 npm install
 ```
 
-To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
+To generate a build:
 
 ```
 npm run build
-```
-
-To generate a standalone, preprocessed build.
-
-```
-npm run build-standalone
 ```
 
 To generate the testing build.
