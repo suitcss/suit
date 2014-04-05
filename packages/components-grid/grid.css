@@ -34,11 +34,11 @@
  */
 
 .Grid {
-    display: block; /* 1 */
-    padding: 0; /* 1 */
-    margin: 0; /* 1 */
-    text-align: left; /* 2 */
-    font-size: 0; /* 3 */
+  display: block; /* 1 */
+  padding: 0; /* 1 */
+  margin: 0; /* 1 */
+  text-align: left; /* 2 */
+  font-size: 0; /* 3 */
 }
 
 /**
@@ -46,7 +46,7 @@
  */
 
 .Grid--alignCenter {
-    text-align: center;
+  text-align: center;
 }
 
 /**
@@ -54,7 +54,7 @@
  */
 
 .Grid--alignRight {
-    text-align: right;
+  text-align: right;
 }
 
 /**
@@ -62,7 +62,7 @@
  */
 
 .Grid--alignMiddle > .Grid-cell {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /**
@@ -70,7 +70,7 @@
  */
 
 .Grid--alignBottom > .Grid-cell {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 /* Grid cell
@@ -88,16 +88,16 @@
  */
 
 .Grid-cell {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline-block; /* 1 */
-    font-size: 1rem; /* 2 */
-    margin: 0;
-    padding: 0;
-    text-align: left; /* 3 */
-    vertical-align: top; /* 4 */
-    width: 100%; /* 5 */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block; /* 1 */
+  font-size: 1rem; /* 2 */
+  margin: 0;
+  padding: 0;
+  text-align: left; /* 3 */
+  vertical-align: top; /* 4 */
+  width: 100%; /* 5 */
 }
 
 /**
@@ -107,6 +107,6 @@
  */
 
 .Grid-cell--center {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
