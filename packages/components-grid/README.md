@@ -35,8 +35,14 @@ Read more about [SUIT](https://github.com/suitcss/suit/).
 * `Grid--alignRight`: right-align all child `Grid-cell`
 * `Grid--alignMiddle`: middle-align all child `Grid-cell`
 * `Grid--alignBottom`: bottom-align all child `Grid-cell`
+* `Grid--withGutter`: adds a gutter between cells
 * `Grid-cell`: a child cell of `Grid` that wraps grid content
 * `Grid-cell--center`: center an individual `Grid-cell`
+
+## Configurable variables
+
+* `var-font-size-Grid`: the font-size to use within the Grid (defaults to 1rem).
+* `var-gutter-size-Grid`: the width of the gutter applied by the `Grid--withGutter` modifier class.
 
 ## Use
 
@@ -45,38 +51,11 @@ cells.
 
 ```html
 <div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--alignMiddle|Grid--alignBottom]">
-    <div class="Grid-cell u-size1of2 v3-u-size6of12"></div>
-    <div class="Grid-cell u-size1of2 v3-u-size4of12"></div>
-    <div class="Grid-cell u-size1of3 v3-u-size2of12"></div>
-    <div class="Grid-cell u-size1of3"></div>
+  <div class="Grid-cell u-size1of2 u-lg-size6of12"></div>
+  <div class="Grid-cell u-size1of2 u-lg-size4of12"></div>
+  <div class="Grid-cell u-size1of3 u-lg-size2of12"></div>
+  <div class="Grid-cell u-size1of3"></div>
 </div>
-```
-
-### Adding gutters
-
-The grid component includes no gutters by default. In your app's CSS, the
-component can be extended with modifier classes for your gutter sizes.
-
-```css
-/**
- * @requires suit-grid
- * ui/grid/grid.css
- */
-
-/**
- * Grid gutters: 20px
- * NOTE: this can trigger a horizontal scrollbar if the component is as wide as
- * the viewport. Use padding on a container, or `overflow-x:hidden` to protect
- * against it.
- */
-
-.Grid--withGutter {
-    margin: 0 -10px;
-}
-
-.Grid--withGutter > .Grid-cell {
-    padding: 0 10px;
-}
 ```
 
 ### Widths and offsets

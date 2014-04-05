@@ -2,6 +2,11 @@
 
 /*! suitcss-components-grid v1.1.0 | MIT License | github.com/suitcss */
 
+:root {
+  var-font-size-Grid: 1rem;
+  var-gutter-size-Grid: 20px;
+}
+
 /**
  * Core grid component
  *
@@ -10,7 +15,7 @@
  *
  * Example uses:
  *
- * <div class="Grid [Grid--alignCenter|Grid--alignRight]">
+ * <div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--withGutter]">
  *   <div class="Grid-cell [Grid-cell--center] u-size1of2"></div>
  *   <div class="Grid-cell u-size1of2"></div>
  *   <div class="Grid-cell u-size1of3"></div>
@@ -71,6 +76,22 @@
   vertical-align: bottom;
 }
 
+/**
+ * Modifier: gutters
+ *
+ * NOTE: this can trigger a horizontal scrollbar if the component is as wide as
+ * the viewport. Use padding on a container, or `overflow-x:hidden` to protect
+ * against it.
+ */
+
+.Grid--withGutter {
+  margin: 0 calc(-0.5px * var(gutter-size-Grid));
+}
+
+.Grid--withGutter > .Grid-cell {
+  padding: 0 calc(0.5px * var(gutter-size-Grid));
+}
+
 /* Grid cell
    ========================================================================== */
 
@@ -88,7 +109,7 @@
 .Grid-cell {
   box-sizing: border-box;
   display: inline-block; /* 1 */
-  font-size: 1rem; /* 2 */
+  font-size: var(font-size-Grid); /* 2 */
   margin: 0;
   padding: 0;
   text-align: left; /* 3 */

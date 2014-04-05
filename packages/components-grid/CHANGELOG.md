@@ -1,5 +1,7 @@
 === HEAD
 
+* Add configurable variables.
+* Add `Grid-withGutter` modifier.
 * Add npm support.
 
 === 1.1.0 (November 20, 2013)

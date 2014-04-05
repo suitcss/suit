@@ -19,18 +19,10 @@
   .Test {
     padding: 0 10px;
   }
-
-  .Test-run .Grid--withGutter {
-    margin: 0 -10px;
-  }
-
-  .Test-run .Grid--withGutter > .Grid-cell {
-    padding: 0 10px;
-  }
 </style>
 
 <div class="Test">
-  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/grid">Grid</a> component tests</h1>
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/components-grid">Grid</a> component tests</h1>
 
   <h2 class="Test-describe">.Grid</h2>
   <h3 class="Test-it">renders cells at fill-width by default</h3>
@@ -225,7 +217,7 @@
     </div>
   </div>
 
-  <h2 class="Test-describe">.Grid--withGutter (requires extension)</h2>
+  <h2 class="Test-describe">.Grid--withGutter</h2>
   <h3 class="Test-it">supports gutters</h3>
   <div class="Test-run">
     <div class="Grid Grid--withGutter">
@@ -270,7 +262,7 @@
       </div>
     </div>
   </div>
-  <h3 class="Test-it">correctly aligns gutters when using offsets (requires suit-utils-offset)</h3>
+  <h3 class="Test-it">correctly aligns gutters when using offsets (requires suitcss-utils-offset)</h3>
   <div class="Test-run">
     <div class="Grid Grid--withGutter">
       <div class="Grid-cell u-size1of4">
