@@ -1,7 +1,11 @@
 {
-  "name": "suit-grid",
-  "private": true,
+  "name": "suitcss-components-grid",
   "version": "1.1.0",
+  "style": "grid.css",
+  "files": [
+    "grid.css",
+    "component.json"
+  ],
   "devDependencies": {
     "component": "*",
     "csslint": ">=0.9.10"

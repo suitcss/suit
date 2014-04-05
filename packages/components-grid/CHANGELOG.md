@@ -1,5 +1,7 @@
 === HEAD
 
+* Add npm support.
+
 === 1.1.0 (November 20, 2013)
 
 * Add `Grid--alignMiddle` and `Grid--alignBottom` modifiers.
