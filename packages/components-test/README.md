@@ -1,4 +1,4 @@
-# SUIT test
+# SUIT Test
 
 [![Build Status](https://secure.travis-ci.org/suitcss/components-test.png?branch=master)](http://travis-ci.org/suitcss/components-test)
 

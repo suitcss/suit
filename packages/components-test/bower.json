@@ -1,7 +1,7 @@
 {
   "name": "suit-components-test",
   "description": "CSS for presenting UI components for visual tests",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "test.css",
   "ignore": [
     "build",
