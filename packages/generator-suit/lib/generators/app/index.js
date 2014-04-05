@@ -23,7 +23,7 @@ function Generator() {
   yeoman.generators.Base.apply(this, arguments);
 
   this.argument('moduleName', { type: String, required: false });
-  this.modulePackageName = 'suit-' + this.moduleName || path.basename(process.cwd());
+  this.modulePackageName = 'components-' + this.moduleName || path.basename(process.cwd());
   this.moduleFileName = this.moduleName + '.css';
 
   this.sourceRoot(path.join(__dirname, '../../templates/app'));

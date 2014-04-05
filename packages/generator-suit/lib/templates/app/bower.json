@@ -1,20 +1,16 @@
 {
-    "name": "<%= modulePackageName %>",
-    "description": "",
-    "version": "0.0.0",
-    "main": "<%= moduleFileName %>",
-    "devDependencies": {
-        "suit-test": "*"
-    },
-    "ignore": [
-        "build",
-        "components",
-        "test",
-        ".*",
-        "Makefile",
-        "CHANGELOG.md",
-        "component.json",
-        "package.json",
-        "test.html"
-    ]
+  "name": "suit-<%= modulePackageName %>",
+  "description": "",
+  "version": "0.0.0",
+  "main": "<%= moduleFileName %>",
+  "ignore": [
+    "build",
+    "components",
+    "test",
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ]
 }

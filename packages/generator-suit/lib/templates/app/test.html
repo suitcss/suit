@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title><%= _.classify(moduleName) %> [component] - SUIT</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
 <link rel="stylesheet" href="build/build.css">
 <style>
-    /* CSS to help implement and/or expose the test */
+  /* CSS to help implement and/or expose the test */
 </style>
 
 <div class="Test">
-    <h1 class="Test-title">SUIT CSS: <a href="https://github.com/repo/<%= modulePackageName %>"><%= _.classify(moduleName) %></a> component tests</h1>
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/<%= modulePackageName %>"><%= _.classify(moduleName) %></a> component tests</h1>
 
-    <h2 class="Test-describe">.<%= _.classify(moduleName) %></h2>
+  <h2 class="Test-describe">.<%= _.classify(moduleName) %></h2>
+  <h3 class="Test-it">renders</h3>
+  <div class="Test-run" id="renders">
+    <!-- component configuration 1 -->
+    <div class="<%= _.classify(moduleName) %>"></div>
+  </div>
+  <h3 class="Test-it">does something else</h3>
+  <div class="Test-run" id="test2">
+    <!-- component configuration 2 -->
+    <div class="<%= _.classify(moduleName) %>"></div>
+  </div>
 
-    <h3 class="Test-it">renders</h3>
-    <div class="Test-run" id="renders">
-        <!-- component configuration 1 -->
-        <div class="<%= _.classify(moduleName) %>"></div>
-    </div>
-
-    <h3 class="Test-it">does something else</h3>
-    <div class="Test-run" id="test2">
-        <!-- component configuration 2 -->
-        <div class="<%= _.classify(moduleName) %>"></div>
-    </div>
-
-    <h2 class="Test-describe">.<%= _.classify(moduleName) %>--modifier</h2>
-
-    <h3 class="Test-it">renders differently</h3>
-    <div class="Test-run" id="test3">
-        <!-- component configuration 1 -->
-        <div class="<%= _.classify(moduleName) %>--modifier"></div>
-    </div>
+  <h2 class="Test-describe">.<%= _.classify(moduleName) %>--modifier</h2>
+  <h3 class="Test-it">renders differently</h3>
+  <div class="Test-run" id="test3">
+    <!-- component configuration 1 -->
+    <div class="<%= _.classify(moduleName) %>--modifier"></div>
+  </div>
 </div>

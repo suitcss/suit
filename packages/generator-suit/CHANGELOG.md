@@ -1,5 +1,8 @@
 === HEAD
 
+* Add latest build tools.
+* Add npm support in generated components.
+
 === 0.3.0 (February 8, 2014)
 
 * Add 'component-builder-suit' to generated package's tools.

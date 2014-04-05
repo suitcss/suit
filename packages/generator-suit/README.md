@@ -44,10 +44,8 @@ Produces:
 
 ```
 .
-├── .csslintrc
 ├── .gitignore
 ├── .travis.yml
-├── Makefile
 ├── CHANGELOG.md
 ├── LICENSE.md
 ├── README.md

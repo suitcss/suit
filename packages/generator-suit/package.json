@@ -2,21 +2,7 @@
   "name": "generator-suit",
   "version": "0.3.0",
   "description": "Generator for scaffolding out a SUIT component or utility",
-  "keywords": [
-    "css",
-    "generator",
-    "suit",
-    "web",
-    "yeoman-generator"
-  ],
-  "homepage": "https://github.com/suitcss/generator-suit",
-  "bugs": "https://github.com/suitcss/generator-suit/issues",
-  "author": "Nicolas Gallagher",
   "main": "lib/generators/app/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/generator-suit.git"
-  },
   "scripts": {
     "test": "mocha --no-colors --reporter spec"
   },
@@ -32,6 +18,20 @@
   "engines": {
     "node": ">=0.8.0",
     "npm": ">=1.2.10"
+  },
+  "keywords": [
+    "css",
+    "generator",
+    "suit",
+    "web",
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/suitcss/generator-suit",
+  "bugs": "https://github.com/suitcss/generator-suit/issues",
+  "author": "Nicolas Gallagher",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/generator-suit.git"
   },
   "licenses": [
     {

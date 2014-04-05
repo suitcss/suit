@@ -36,15 +36,16 @@ describe('Generator test', function () {
         // config files
         [
           'bower.json',
-          /"name": "suit-my-module"/
+          /"name": "suit-components-my-module"/
         ],
         [
           'component.json',
-          /"name": "suit-my-module"/
+          /"name": "components-my-module"/
         ],
         [
           'package.json',
-          /"name": "suit-my-module"/
+          /"name": "suitcss-components-my-module"/,
+          /"style": "my-module.css"/
         ],
         // docs
         'CHANGELOG.md',

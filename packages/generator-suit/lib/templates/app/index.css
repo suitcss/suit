@@ -1,6 +1,4 @@
-/**
- * Component
- */
+/** @define <%= _.classify(moduleName) %> */
 
 .<%= _.classify(moduleName) %> {
 

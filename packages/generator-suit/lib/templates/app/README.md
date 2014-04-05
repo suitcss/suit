@@ -1,6 +1,6 @@
 # SUIT <%= _.classify(moduleName) %>
 
-[![Build Status](https://secure.travis-ci.org/user/<%= modulePackageName %>.png?branch=master)](http://travis-ci.org/user/<%= modulePackageName %>)
+[![Build Status](https://secure.travis-ci.org/suitcss/<%= modulePackageName %>.png?branch=master)](http://travis-ci.org/suitcss/<%= modulePackageName %>)
 
 A SUIT component for...
 
@@ -8,15 +8,18 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save <%= modulePackageName %>`
-* [Component(1)](http://component.io/): `component install user/<%= modulePackageName %>`
-* Download: [zip](https://github.com/user/<%= modulePackageName %>/zipball/master)
-* Git: `git clone https://github.com/user/<%= modulePackageName %>.git`
-
+* [Component(1)](http://component.io/): `component install suitcss/<%= modulePackageName %>`
+* [npm](https://npmjs.org/): `npm install suitcss-<%= modulePackageName %>`
+* [Bower](http://bower.io/): `bower install suit-<%= modulePackageName %>`
+* Download: [zip](https://github.com/suitcss/<%= modulePackageName %>/zipball/master)
 
 ## Available classes
 
 * `<%= _.classify(moduleName) %>` - The core component class
+
+## Configurable variables
+
+* ...
 
 ## Usage
 
@@ -34,16 +37,10 @@ Install [Node](http://nodejs.org) (comes with npm).
 npm install
 ```
 
-To generate an un-preprocessed build (i.e., you want to use your own tooling and configure variables).
+To generate a build:
 
 ```
 npm run build
-```
-
-To generate a standalone, preprocessed build.
-
-```
-npm run build-standalone
 ```
 
 To generate the testing build.
