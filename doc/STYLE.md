@@ -44,15 +44,14 @@
 ### 3.1. Format
 
 * Always use lowercase tag and attribute names.
-* Write one discrete element per line.
-* Use one additional level of indentation for each nested element.
+* Write one discrete, block-level element per line.
+* Use one additional level of indentation for each nested block-level element.
 * Use valueless boolean attributes (e.g. `checked` rather than
   `checked="checked"`).
 * Always use double quotes to quote attribute values.
 * Omit the `type` attributes from `link` stylesheet, `style` and `script`
   elements.
 * Always include closing tags.
-* Don't include a trailing slash in self-closing elements.
 
 (Keep line-length to a sensible maximum, e.g., 80 columns.)
 
@@ -60,10 +59,10 @@ Example:
 
 ```html
 <div class="Tweet">
-  <a href="{url}">
-    <img src="{avatar}" alt="">
+  <a href="{{url}}">
+    <img src="{{avatar}}" alt="">
   </a>
-  <p>{text}</p>
+  <p>{{text}}</p>
   <button disabled>Reply</button>
 </div>
 ```
@@ -76,11 +75,11 @@ lines in an effort to improve readability and produce more useful diffs.
 Example:
 
 ```html
-<a class="{class}"
- data-action="{action}"
- data-id="{id}"
- href="{url}">
-  <span>{text}</span>
+<a class="{{class}}"
+ data-action="{{action}}"
+ data-id="{{id}}"
+ href="{{url}}">
+  <span>{{text}}</span>
 </a>
 ```
 
@@ -88,19 +87,12 @@ Example:
 <a name="html-attrs"></a>
 ### 3.2. HTML attribute order
 
-HTML attributes should be listed in an order that reflects the fact that class
-names are the primary interface through which CSS and JavaScript select
-elements.
-
-1. `class`
-2. `id`
-3. `data-*`
-4. Everything else
+HTML attributes should be listed in alphabetical order.
 
 Example:
 
 ```html
-<a class="{class}" id="{id}" data-name="{name}" href="{url}">{text}</a>
+<a class="{{class}}" data-name="{{name}}" href="{{url}}" id="{{id}}">{{text}}</a>
 ```
 
 
@@ -108,8 +100,7 @@ Example:
 ### 3.3. Naming
 
 Naming is hard, but very important. It's a crucial part of the process of
-developing a maintainable code base, and ensuring that you have a relatively
-scalable interface between your HTML and CSS/JS.
+developing a maintainable code base. Don't be afraid to rename components.
 
 * Use clear, thoughtful, and appropriate names for HTML classes. The names
   should be informative both within HTML and CSS files.
@@ -165,24 +156,24 @@ An example of various conventions.
   </head>
   <body>
     <article class="Post" id="1234">
-      <time class="Post-timestamp">{date}</time>
-      <a data-id="1234"
-       data-analytics-category="{category}"
-       data-analytics-action="{action}"
-       href="{url}">{text}</a>
+      <time class="Post-timestamp">{{date}}</time>
+      <a data-analytics-action="{{action}}"
+       data-analytics-category="{{category}}"
+       data-id="1234"
+       href="{{url}}">{{text}}</a>
       <ul>
         <li>
-          <a href="{url}">{text}</a>
-          <img src="{src}" alt="">
+          <a href="{{url}}">{{text}}</a>
+          <img src="{{src}}" alt="">
         </li>
         <li>
-          <a href="{url}">{text}</a>
+          <a href="{{url}}">{{text}}</a>
         </li>
       </ul>
 
-      <a class="u-linkComplex" href="{url}">
-        <span class="u-linkComplex-target">{text}</span>
-        {text}
+      <a class="u-linkComplex" href="{{url}}">
+        <span class="u-linkComplex-target">{{text}}</span>
+        {{text}}
       </a>
 
       <input value="text" readonly>
@@ -217,11 +208,7 @@ comment patterns.
 Example:
 
 ```css
-/* ==========================================================================
-   Section comment block
-   ========================================================================== */
-
-/* Sub-section comment block
+/* Section comment block
    ========================================================================== */
 
 /**
@@ -278,8 +265,6 @@ in useful diffs and blames.
 .selector-1,
 .selector-2,
 .selector-3[type="text"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   background: #fff;
   background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
   box-sizing: border-box;
@@ -296,7 +281,8 @@ in useful diffs and blames.
 
 #### Declaration order
 
-Use alphabetical ordering of declarations unless the cascade requires otherwise.
+Use alphabetical ordering of declarations unless the cascade absolutely
+requires otherwise.
 
 ```css
 .selector {
@@ -345,9 +331,7 @@ readability and produce more useful diffs.
 An example of various conventions.
 
 ```css
-/* ==========================================================================
-   Grid layout
-   ========================================================================== */
+/** @define Grid */
 
 /**
  * Column layout with horizontal scroll.
@@ -393,7 +377,7 @@ An example of various conventions.
   border: 2px solid #333;
   box-sizing: border-box;
   display: inline-block;
-  font-size: 16px; /* 1 */
+  font-size: 1rem; /* 1 */
   height: 100%;
   overflow: hidden;
   padding: 0 10px; /* 2 */
