@@ -1,7 +1,16 @@
 {
-  "name": "suit",
-  "private": true,
+  "name": "suitcss",
   "version": "0.3.0",
+  "description": "CSS for building self-contained, composable, configurable UI components",
+  "dependencies": {
+    "suitcss-base": "~0.4.0",
+    "suitcss-utils": "~0.8.0",
+    "suitcss-components-arrange": "~0.3.0",
+    "suitcss-components-button": "~3.1.0",
+    "suitcss-components-button-group": "~2.1.0",
+    "suitcss-components-flex-embed": "~1.5.1",
+    "suitcss-components-grid": "~1.2.0"
+  },
   "devDependencies": {
     "component": "*"
   }
