@@ -1,5 +1,16 @@
 === HEAD
 
+* Add npm support.
+* Update 'suit-base' to 0.4.0.
+* Update 'suit-utils' to 0.8.0.
+* Update 'suit-components-arrange' to 0.3.0.
+* Update 'suit-components-button' to 3.1.0.
+* Update 'suit-components-button-group' to 2.1.0.
+* Update 'suit-components-flex-embed' to 1.5.1.
+* Update 'suit-components-grid' to 1.2.0.
+* Update all documentation.
+* Update code style.
+
 === 0.3.0 (November 20, 2013)
 
 * Update 'suit-base' to 0.3.0.
