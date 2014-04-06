@@ -1,5 +1,9 @@
 === HEAD
 
+=== 0.3.1 (April 5, 2014)
+
+* Update 'suit-utils' to 0.8.0.
+
 === 0.3.0 (November 20, 2013)
 
 * Update 'suit-base' to 0.3.0.
