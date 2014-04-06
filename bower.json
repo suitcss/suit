@@ -3,20 +3,19 @@
   "version": "0.3.0",
   "author": "Nicolas Gallagher",
   "dependencies": {
-    "suit-base": "~0.3.0",
-    "suit-utils": "~0.7.1",
-    "suit-arrange": "~0.2.0",
-    "suit-button": "~3.0.0",
-    "suit-button-group": "~2.0.1",
-    "suit-flex-embed": "~1.2.1",
-    "suit-grid": "~1.1.0"
+    "suit-base": "~0.4.0",
+    "suit-utils": "~0.8.0",
+    "suit-components-arrange": "~0.3.0",
+    "suit-components-button": "~3.1.0",
+    "suit-components-button-group": "~2.1.0",
+    "suit-components-flex-embed": "~1.5.1",
+    "suit-components-grid": "~1.2.0"
   },
   "ignore": [
     "build",
     "components",
     "test",
     ".*",
-    "Makefile",
     "CHANGELOG.md",
     "component.json",
     "package.json",
