@@ -1,0 +1,13 @@
+{
+  "name": "theme",
+  "repo": "suitcss/theme",
+  "version": "0.0.0",
+  "styles": [
+    "theme.css",
+    "theme-map.css"
+  ],
+  "dependencies": {
+    "suitcss/suit": "0.4.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "suit-theme",
+  "version": "0.0.0",
+  "main": "theme.css",
+  "ignore": [
+    "build",
+    "components",
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json"
+  ]
+}
