@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.4.0 (April 7, 2013)
+
 * Add npm support.
 * Update 'suit-base' to 0.4.0.
 * Update 'suit-utils' to 0.8.0.
