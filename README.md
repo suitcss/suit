@@ -67,6 +67,7 @@ Tools that work well with SUIT when building applications.
 * [rework-suit](https://github.com/suitcss/rework-suit): a SUIT-specific collection of "pure CSS" plugins for Rework.
 * [rework-suit-conformance](https://github.com/suitcss/rework-suit-conformance): test individual components for SUIT conformance.
 * [suitcss-preprocessor](https://github.com/suitcss/preprocessor): combines rework-suit and autoprefixer; CLI and Node.js interface.
+* [grunt-suitcss](https://github.com/simonsmith/grunt-suitcss): use rework-suit-conformance and suitcss-preprocessor as a [Grunt](http://gruntjs.com) task
 
 ## Plays well with…
 
