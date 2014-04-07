@@ -51,11 +51,11 @@ Examples:
 #### Node.js
 
 ```js
-var suitcss = require('suitcss');
+var suitcss = require('suitcss-preprocessor');
 var fs = require('fs');
 
 var css = fs.readFileSync('index.css', 'utf8');
-var converted = myth(css);
+var converted = suitcss(css);
 
 fs.writeFileSync('converted.css', converted);
 ```
