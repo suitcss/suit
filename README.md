@@ -62,7 +62,7 @@ Tools that work well with SUIT when building applications.
 * [css-flip](https://github.com/twitter/css-flip): automatically generate LTR/RTL stylesheets.
 * [generator-suit](https://github.com/suitcss/generator-suit): scaffold new SUIT packages.
 * [html-inspector](https://github.com/philipwalton/html-inspector): test your HTML templates for SUIT conformance.
-* [rework](https://github.com/suitcss/rework): arbitrary CSS preprocessing.
+* [rework](https://github.com/reworkcss/rework): arbitrary CSS preprocessing.
 * [rework-npm](https://github.com/conradz/rework-npm): @import inliner and de-duper using Rework (supports fetching via npm).
 * [rework-suit](https://github.com/suitcss/rework-suit): a SUIT-specific collection of "pure CSS" plugins for Rework.
 * [rework-suit-conformance](https://github.com/suitcss/rework-suit-conformance): test individual components for SUIT conformance.
