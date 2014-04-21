@@ -13,6 +13,11 @@
   "bin": {
     "suitcss": "bin/suitcss"
   },
+  "files": [
+    "bin/logger.js",
+    "bin/suitcss",
+    "lib/index.js"
+  ],
   "scripts": {
     "test": "mocha --reporter spec --slow 400",
     "watch": "mocha --watch --reporter spec --slow 400"
