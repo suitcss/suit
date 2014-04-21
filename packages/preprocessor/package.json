@@ -18,7 +18,7 @@
     "watch": "mocha --watch --reporter spec --slow 400"
   },
   "dependencies": {
-    "autoprefixer": "~1.1.20140319",
+    "autoprefixer": "^1.1.20140410",
     "colors": "~0.6.2",
     "commander": "~2.1.0",
     "node-watch": "0.3.4",
