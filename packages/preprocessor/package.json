@@ -24,8 +24,8 @@
     "node-watch": "0.3.4",
     "pad-component": "0.0.1",
     "read-file-stdin": "0.0.3",
-    "rework": "~0.20.1",
-    "rework-suit": "~1.0.0",
+    "rework": "~0.20.2",
+    "rework-suit": "~2.0.0",
     "write-file-stdout": "0.0.2"
   },
   "devDependencies": {
