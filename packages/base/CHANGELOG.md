@@ -1,5 +1,7 @@
 === HEAD
 
+* Reset default 'button' styles.
+
 === 0.4.0 (March 27, 2014)
 
 * Add npm support.

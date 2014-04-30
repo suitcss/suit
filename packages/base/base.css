@@ -51,6 +51,12 @@ pre {
   margin: 0;
 }
 
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
 fieldset {
   border: 0;
   margin: 0;
