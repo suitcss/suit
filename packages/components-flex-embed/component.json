@@ -1,7 +1,7 @@
 {
   "name": "components-flex-embed",
   "repo": "suitcss/components-flex-embed",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "styles": ["flex-embed.css"],
   "development": {
     "suitcss/components-test": "*"
