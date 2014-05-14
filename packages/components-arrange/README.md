@@ -27,7 +27,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Configurable variables
 
-* `var-gutter-size-Arrange`: the width of the gutter applied by the
+* `--gutter-size-Arrange`: the width of the gutter applied by the
   `Arrange--withGutter` modifier class.
 
 ## Usage

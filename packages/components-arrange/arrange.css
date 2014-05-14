@@ -2,12 +2,8 @@
 
 /*! suit-arrange v0.3.0 | MIT License | github.com/suitcss */
 
-/* ==========================================================================
-   Arrange cells
-   ========================================================================== */
-
 :root {
-  var-gutter-size-Arrange: 10px;
+  --gutter-size-Arrange: 10px;
 }
 
 /**
@@ -159,10 +155,10 @@
  */
 
 .Arrange--withGutter {
-  margin: 0 calc(-0.5 * var(gutter-size-Arrange));
+  margin: 0 calc(-0.5 * var(--gutter-size-Arrange));
 }
 
 .Arrange--withGutter > .Arrange-sizeFit,
 .Arrange--withGutter > .Arrange-sizeFill {
-  padding: 0 calc(0.5 * var(gutter-size-Arrange));
+  padding: 0 calc(0.5 * var(--gutter-size-Arrange));
 }
