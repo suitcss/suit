@@ -1,5 +1,6 @@
 === HEAD
 
+* Update to use latest variable syntax.
 * Reset default 'button' styles.
 
 === 0.4.0 (March 27, 2014)

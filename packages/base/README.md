@@ -15,11 +15,11 @@ Read more about how to use [SUIT](https://github.com/suitcss/suit/).
 
 ## Configurable variables
 
-* `var-background-base`: the application background style.
-* `var-color-base`: the root text color.
-* `var-font-base`: the root font style.
-* `var-link-color-base`: the root link color.
-* `var-link-color-hover-base`: the root link interaction (`:hover`, `:focus`,
+* `--background-base`: the application background style.
+* `--color-base`: the root text color.
+* `--font-base`: the root font style.
+* `--link-color-base`: the root link color.
+* `--link-color-hover-base`: the root link interaction (`:hover`, `:focus`,
   `:active`) color.
 
 ## Testing

@@ -5,11 +5,11 @@
    ========================================================================== */
 
 :root {
-  var-background-base: inherit;
-  var-color-base: inherit;
-  var-font-base: 16px sans-serif;
-  var-link-color-base: #069;
-  var-link-color-hover-base: var(link-color-base);
+  --background-base: inherit;
+  --color-base: inherit;
+  --font-base: 16px sans-serif;
+  --link-color-base: #069;
+  --link-color-hover-base: var(--link-color-base);
 }
 
 /**
@@ -19,20 +19,20 @@
  */
 
 html {
-  background: var(background-base);
-  color: var(color-base);
-  font: var(font-base);
+  background: var(--background-base);
+  color: var(--color-base);
+  font: var(--font-base);
 }
 
 a {
-  color: var(link-color-base);
+  color: var(--link-color-base);
   text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: var(link-color-hover-base);
+  color: var(--link-color-hover-base);
   text-decoration: underline;
 }
 
