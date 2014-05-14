@@ -28,12 +28,13 @@
 
 /**
  * The aspect-ratio hack is applied to a pseudo-element because it allows the
- * component to respect `max-height`.
+ * component to respect `max-height`. Default aspect ratio is 1:1.
  */
 
 .FlexEmbed:before {
   content: "";
   display: block;
+  padding-bottom: 100%;
   width: 100%;
 }
 

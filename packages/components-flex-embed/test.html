@@ -20,6 +20,32 @@
 <div class="Test">
   <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/flex-embed">FlexEmbed</a> component tests</h1>
 
+  <h2 class="Test-describe">.FlexEmbed</h2>
+  <h3 class="Test-it">renders 1:1 (iframe)</h3>
+  <div class="Test-run">
+    <div class="FlexEmbed">
+      <iframe width="1200" height="1200" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <h3 class="Test-it">renders 1:1 (img)</h3>
+  <div class="Test-run">
+    <div class="FlexEmbed">
+      <img class="FlexEmbed-item" width="600" height="600" src="http://lorempixel.com/600/600/nature/9" alt="">
+    </div>
+  </div>
+  <h3 class="Test-it">supports max-height</h3>
+  <div class="Test-run" id="max-height">
+    <div class="FlexEmbed">
+      <iframe width="1280" height="1280" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <h3 class="Test-it">supports max-width</h3>
+  <div class="Test-run" id="max-width">
+    <div class="FlexEmbed">
+      <iframe width="1280" height="1280" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
   <h2 class="Test-describe">.FlexEmbed--3by1</h2>
   <h3 class="Test-it">renders 3:1 (iframe)</h3>
   <div class="Test-run">
@@ -73,20 +99,6 @@
   <div class="Test-run">
     <div class="FlexEmbed FlexEmbed--4by3">
       <img class="FlexEmbed-item" width="500" height="375" src="http://lorempixel.com/500/375/nature/9" alt="">
-    </div>
-  </div>
-
-  <h2 class="Test-describe">.FlexEmbed</h2>
-  <h3 class="Test-it">supports max-height</h3>
-  <div class="Test-run" id="max-height">
-    <div class="FlexEmbed FlexEmbed--4by3">
-      <iframe width="1280" height="720" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-  <h3 class="Test-it">supports max-width</h3>
-  <div class="Test-run" id="max-width">
-    <div class="FlexEmbed FlexEmbed--4by3">
-      <iframe width="1280" height="720" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </div>

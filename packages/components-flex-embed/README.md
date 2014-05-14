@@ -14,7 +14,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Available classes
 
-* `FlexEmbed` - The core responsive embed component with no dimensions
+* `FlexEmbed` - The core, responsive-embed component with 1:1 aspect ratio
 * `FlexEmbed--3by1` - The modifier class for 3:1 aspect ratio embed
 * `FlexEmbed--2by1` - The modifier class for 2:1 aspect ratio embed
 * `FlexEmbed--16by9` - The modifier class for 16:9 aspect ratio embed

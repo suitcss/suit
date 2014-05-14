@@ -1,5 +1,7 @@
 === HEAD
 
+* Add 1:1 aspect ratio as the default.
+
 === 1.5.1 (April 3, 2014)
 
 * Add npm support.
