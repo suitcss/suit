@@ -1,5 +1,7 @@
 === HEAD
 
+* Remove `u-linkPseudo`.
+
 === 0.3.1 (March 26, 2014)
 
 * Fix npm support.

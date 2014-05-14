@@ -1,10 +1,5 @@
 /*! suit-utils-link v0.3.1 | MIT License | github.com/suitcss */
 
-:root {
-  var-color-linkPseudo: inherit;
-  var-color-hover-linkPseudo: var(color-linkPseudo);
-}
-
 /**
  * Clean link
  *
@@ -58,36 +53,4 @@
 .u-linkBlock:active {
   display: block !important;
   text-decoration: none !important;
-}
-
-/**
- * Pseudo-link
- *
- * Another interactive element, e.g., `button`, styled to look like an anchor.
- * Relies on the utility selector being added to the link base styles rule.
- *
- * Example HTML:
- *
- * <button class="u-linkPseudo" type="button">
- *   Button content
- * </button>
- */
-
-.u-linkPseudo {
-  display: inline-block;
-  padding: 0;
-  border: 0;
-  margin: 0;
-  background: transparent;
-  color: var(color-linkPseudo, inherit);
-  cursor: pointer !important;
-  font: inherit;
-}
-
-.u-linkPseudo:hover,
-.u-linkPseudo:focus,
-.u-linkPseudo:active {
-  background: transparent;
-  color: var(color-hover-linkPseudo);
-  text-decoration: underline;
 }

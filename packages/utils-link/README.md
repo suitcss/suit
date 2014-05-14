@@ -29,20 +29,6 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
     </a>
     ```
 
-* `u-linkPseudo` - Make another interactive element, e.g., `button`, look like
-  a link.
-
-    ```html
-    <button class="u-linkPseudo" type="button">
-      Link-like button
-    </button>
-    ```
-
-## Configurable variables
-
-* `var-color-linkPseudo`: the text color to use for `button` when styled like a text link.
-* `var-color-hover-linkPseudo`: the text interaction color to use for `button` when styled like a text link.
-
 ## Usage
 
 Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)

@@ -7,11 +7,6 @@
   .Test-run > * {
     outline: 1px solid red;
   }
-
-  #linkPseudo-mods button {
-    border: 3px solid blue;
-    padding: 10px;
-  }
 </style>
 
 <div class="Test">
@@ -40,15 +35,5 @@
       Link complex
       <span class="u-linkComplexTarget">target</span>
     </a>
-  </div>
-
-  <h2 class="Test-describe">u-linkPseudo</h2>
-  <h3 class="Test-it">renders a `button` like a link</h3>
-  <div class="Test-run">
-    <button class="u-linkPseudo" type="button">Link text</button>
-  </div>
-  <h3 class="Test-it">doesn't prevent the button styles from being modified</h3>
-  <div class="Test-run" id="linkPseudo-mods">
-    <button class="u-linkPseudo" type="button">Link text</button>
   </div>
 </div>
