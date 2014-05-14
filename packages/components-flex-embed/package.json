@@ -22,5 +22,9 @@
   "keywords": [
     "css",
     "component"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/components-flex-embed.git"
+  }
 }
