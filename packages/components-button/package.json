@@ -24,5 +24,9 @@
     "css",
     "component",
     "button"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/components-button-group.git"
+  }
 }
