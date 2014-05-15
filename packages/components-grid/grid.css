@@ -3,8 +3,8 @@
 /*! suitcss-components-grid v1.2.0 | MIT License | github.com/suitcss */
 
 :root {
-  var-font-size-Grid: 1rem;
-  var-gutter-size-Grid: 20px;
+  --font-size-Grid: 1rem;
+  --gutter-size-Grid: 20px;
 }
 
 /**
@@ -85,11 +85,11 @@
  */
 
 .Grid--withGutter {
-  margin: 0 calc(-0.5px * var(gutter-size-Grid));
+  margin: 0 calc(-0.5px * var(--gutter-size-Grid));
 }
 
 .Grid--withGutter > .Grid-cell {
-  padding: 0 calc(0.5px * var(gutter-size-Grid));
+  padding: 0 calc(0.5px * var(--gutter-size-Grid));
 }
 
 /* Grid cell
@@ -109,7 +109,7 @@
 .Grid-cell {
   box-sizing: border-box;
   display: inline-block; /* 1 */
-  font-size: var(font-size-Grid); /* 2 */
+  font-size: var(--font-size-Grid); /* 2 */
   margin: 0;
   padding: 0;
   text-align: left; /* 3 */

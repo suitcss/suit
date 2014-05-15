@@ -1,5 +1,7 @@
 === HEAD
 
+* Use latest variable syntax.
+
 === 1.2.0 (April 5, 2014)
 
 * Add configurable variables.
