@@ -22,12 +22,12 @@ JavaScript event handlers from firing.
 
 ## Configurable variables
 
-* `var-border-width-Button`
-* `var-border-color-Button`
-* `var-color-Button`
-* `var-font-Button`
-* `var-padding-Button`
-* `var-opacity-Button-disabled`
+* `--border-width-Button`
+* `--border-color-Button`
+* `--color-Button`
+* `--font-Button`
+* `--padding-Button`
+* `--opacity-Button-disabled`
 
 ## Use
 

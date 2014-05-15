@@ -5,12 +5,12 @@
    ========================================================================== */
 
 :root {
-  var-border-width-Button: 1px;
-  var-border-color-Button: currentcolor;
-  var-color-Button: inherit;
-  var-font-Button: inherit;
-  var-padding-Button: 0.4em 0.75em;
-  var-opacity-Button-disabled: 0.6;
+  --border-width-Button: 1px;
+  --border-color-Button: currentcolor;
+  --color-Button: inherit;
+  --font-Button: inherit;
+  --padding-Button: 0.4em 0.75em;
+  --opacity-Button-disabled: 0.6;
 }
 
 /**
@@ -39,17 +39,17 @@
 .Button {
   -webkit-appearance: none; /* 1 */
   background: transparent;
-  border-color: var(border-color-Button);
+  border-color: var(--border-color-Button);
   border-style: solid;
-  border-width: var(border-width-Button);
+  border-width: var(--border-width-Button);
   box-sizing: border-box; /* 2 */
-  color: var(color-Button); /* 3 */
+  color: var(--color-Button); /* 3 */
   cursor: pointer;
   display: inline-block;
-  font: var(font-Button); /* 4 */
+  font: var(--font-Button); /* 4 */
   line-height: normal; /* 6 */
   margin: 0;
-  padding: var(padding-Button);
+  padding: var(--padding-Button);
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -79,5 +79,5 @@
 .Button:disabled,
 .Button.is-disabled {
   cursor: default;
-  opacity: var(opacity-Button-disabled);
+  opacity: var(--opacity-Button-disabled);
 }

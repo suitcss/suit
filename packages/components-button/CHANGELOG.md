@@ -1,5 +1,7 @@
 === HEAD
 
+* Update variables syntax.
+
 === 3.1.0 (April 1, 2014)
 
 * Add npm support.
