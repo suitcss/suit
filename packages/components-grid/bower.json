@@ -1,6 +1,6 @@
 {
   "name": "suit-components-grid",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "Nicolas Gallagher",
   "main": "grid.css",
   "ignore": [
