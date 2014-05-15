@@ -22,5 +22,9 @@
     "css",
     "component",
     "grid"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/components-grid.git"
+  }
 }
