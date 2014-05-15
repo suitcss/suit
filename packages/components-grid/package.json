@@ -8,8 +8,8 @@
   ],
   "devDependencies": {
     "component": "0.19.x",
-    "component-builder-suit": "0.2.x",
-    "suitcss-preprocessor": "0.1.x"
+    "component-builder-suit": "0.3.x",
+    "suitcss-preprocessor": "0.2.x"
   },
   "scripts": {
     "build": "npm run component && npm run preprocess",
