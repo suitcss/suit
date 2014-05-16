@@ -1,7 +1,7 @@
 {
   "name": "utils-link",
   "repo": "suitcss/utils-link",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "styles": ["link.css"],
   "development": {
     "suitcss/components-test": "*"

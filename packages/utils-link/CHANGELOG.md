@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.4.0 (May 15, 2014)
+
 * Remove `u-linkPseudo`.
 
 === 0.3.1 (March 26, 2014)

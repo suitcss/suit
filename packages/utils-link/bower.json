@@ -1,6 +1,6 @@
 {
   "name": "suit-utils-link",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "author": "Nicolas Gallagher",
   "main": "link.css",
   "devDependencies": {
