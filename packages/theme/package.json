@@ -9,7 +9,7 @@
     "component.json"
   ],
   "dependencies": {
-    "suitcss": "0.4.0"
+    "suitcss": "*"
   },
   "devDependencies": {
     "component": "0.19.x",

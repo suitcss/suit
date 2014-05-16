@@ -10,46 +10,46 @@
  */
 
 :root {
-  var-color-twitter-blue: #55acee;
-  var-color-white: #fff;
+  --color-twitter-blue: #55acee;
+  --color-white: #fff;
 
   /* Primary grays */
-  var-color-charcoal: #292f33;
-  var-color-dark-gray: #66757f;
-  var-color-medium-gray: #8899a6;
-  var-color-gray: #ccd6dd;
-  var-color-border-gray: #e1e8ed;
-  var-color-faint-gray: #f5f8fa;
+  --color-charcoal: #292f33;
+  --color-dark-gray: #66757f;
+  --color-medium-gray: #8899a6;
+  --color-gray: #ccd6dd;
+  --color-border-gray: #e1e8ed;
+  --color-faint-gray: #f5f8fa;
 
   /* Primary blues */
-  var-color-dark-blue: #226699;
-  var-color-deep-blue: #3b88c3;
-  var-color-light-blue: #88c9f9;
+  --color-dark-blue: #226699;
+  --color-deep-blue: #3b88c3;
+  --color-light-blue: #88c9f9;
 
   /* Secondary colors */
-  var-color-orange: #ffac33;
-  var-color-green: #77b255;
-  var-color-purple: #9266cc;
-  var-color-red: #dd2e44;
-  var-color-yellow: #ffcc4d;
+  --color-orange: #ffac33;
+  --color-green: #77b255;
+  --color-purple: #9266cc;
+  --color-red: #dd2e44;
+  --color-yellow: #ffcc4d;
 
   /* Secondary color variants */
-  var-color-dark-orange: #f4900c;
-  var-color-dark-green: #3e721d;
-  var-color-dark-purple: #553788;
-  var-color-dark-red: #a0041e;
-  var-color-deep-green: #5c913b;
-  var-color-deep-purple: #744eaa;
-  var-color-deep-red: #be1931;
-  var-color-light-yellow: #ffd983;
-  var-color-light-green: #a6d388;
-  var-color-light-purple: #aa8dd8;
-  var-color-light-red: #ea596e;
-  var-color-faded-yellow: #ffe8b6;
-  var-color-faded-green: #c6e5b3;
-  var-color-faded-blue: #bbddf5;
-  var-color-faded-purple: #cbb7ea;
-  var-color-faded-red: #f4abba;
+  --color-dark-orange: #f4900c;
+  --color-dark-green: #3e721d;
+  --color-dark-purple: #553788;
+  --color-dark-red: #a0041e;
+  --color-deep-green: #5c913b;
+  --color-deep-purple: #744eaa;
+  --color-deep-red: #be1931;
+  --color-light-yellow: #ffd983;
+  --color-light-green: #a6d388;
+  --color-light-purple: #aa8dd8;
+  --color-light-red: #ea596e;
+  --color-faded-yellow: #ffe8b6;
+  --color-faded-green: #c6e5b3;
+  --color-faded-blue: #bbddf5;
+  --color-faded-purple: #cbb7ea;
+  --color-faded-red: #f4abba;
 }
 
 /**
@@ -57,9 +57,9 @@
  */
 
 :root {
-  var-font-size: 16px;
-  var-font-family: sans-serif;
-  var-line-height: 1.4;
+  --font-size: 16px;
+  --font-family: sans-serif;
+  --line-height: 1.4;
 }
 
 /**
@@ -67,7 +67,7 @@
  */
 
 :root {
-  var-space-small-px: 10px;
-  var-space-medium-px: 15px;
-  var-space-large-px: 20px;
+  --space-small-px: 10px;
+  --space-medium-px: 15px;
+  --space-large-px: 20px;
 }

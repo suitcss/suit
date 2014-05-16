@@ -3,20 +3,11 @@
  */
 
 :root {
-  var-background-base: var(color-white);
-  var-color-base: var(color-charcoal);
-  var-font-base: var(font-size)/var(line-height) var(font-family);
-  var-link-color-base: var(color-deep-blue);
-  var-link-color-hover-base: var(color-dark-blue);
-}
-
-/**
- * utils-link
- */
-
-:root {
-  var-color-linkPseudo: var(link-color-base);
-  var-color-hover-linkPseudo: var(link-color-hover-base);
+  --background-base: var(--color-white);
+  --color-base: var(--color-charcoal);
+  --font-base: var(--font-size)/var(--line-height) var(--font-family);
+  --link-color-base: var(--color-deep-blue);
+  --link-color-hover-base: var(--color-dark-blue);
 }
 
 /**
@@ -24,7 +15,7 @@
  */
 
 :root {
-  var-gutter-size-Arrange: var(space-small-px);
+  --gutter-size-Arrange: var(--space-small-px);
 }
 
 /**
@@ -32,5 +23,5 @@
  */
 
 :root {
-  var-gutter-size-Grid: var(space-large-px);
+  --gutter-size-Grid: var(--space-large-px);
 }
