@@ -1,5 +1,13 @@
 === HEAD
 
+* Use new W3C CSS variables syntax.
+* Update 'suit-utils' to 0.9.0.
+* Update 'suit-components-arrange' to 0.4.0.
+* Update 'suit-components-button' to 3.2.0.
+* Update 'suit-components-button-group' to 2.2.0.
+* Update 'suit-components-flex-embed' to 1.6.0.
+* Update 'suit-components-grid' to 1.3.0.
+
 === 0.4.0 (April 7, 2013)
 
 * Add npm support.
