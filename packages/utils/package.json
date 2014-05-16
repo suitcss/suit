@@ -4,9 +4,9 @@
   "version": "0.8.0",
   "dependencies": {
     "suitcss-utils-align": "~0.1.1",
-    "suitcss-utils-display": "~0.2.4",
+    "suitcss-utils-display": "~0.3.0",
     "suitcss-utils-layout": "~0.3.0",
-    "suitcss-utils-link": "~0.3.1",
+    "suitcss-utils-link": "~0.4.0",
     "suitcss-utils-offset": "~0.4.2",
     "suitcss-utils-position": "~0.1.0",
     "suitcss-utils-size": "~0.6.2",

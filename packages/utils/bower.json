@@ -4,9 +4,9 @@
   "author": "Nicolas Gallagher",
   "dependencies": {
     "suit-utils-align": "~0.1.1",
-    "suit-utils-display": "~0.2.4",
+    "suit-utils-display": "~0.3.0",
     "suit-utils-layout": "~0.3.0",
-    "suit-utils-link": "~0.3.1",
+    "suit-utils-link": "~0.4.0",
     "suit-utils-offset": "~0.4.2",
     "suit-utils-position": "~0.1.0",
     "suit-utils-size": "~0.6.2",
