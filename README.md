@@ -13,7 +13,7 @@ pre-authored utilities and components, but using them is not required.
 It's suggested that you depend on individual packages as and when you need
 them, however, you can install the standard library if you prefer.
 
-* [Component(1)](http://github.com/component/component): `component install suitcss/suit`
+* [Component(1)](https://github.com/component/component): `component install suitcss/suit`
 * [npm](https://www.npmjs.org/): `npm install suitcss`
 * [Bower](http://bower.io/): `bower install suit`
 * [Download](https://github.com/suitcss/suit/releases)
@@ -36,7 +36,6 @@ conventions](doc/naming-conventions.md). Dependencies are best managed using
 [Component](https://github.com/component/component/) or [npm](https://www.npmjs.org/).
 
 * [base](https://github.com/suitcss/base/): a thin reset for web apps, built on top of normalize.css.
-* [theme](https://github.com/suitcss/theme/): SUIT's example theme.
 * [utils](https://github.com/suitcss/utils/): all the utility packages.
 * [components-arrange](https://github.com/suitcss/components-arrange/): flexbox-like horizontal arrangements.
 * [components-button](https://github.com/suitcss/components-button/): robust, structural button styles.
@@ -44,6 +43,7 @@ conventions](doc/naming-conventions.md). Dependencies are best managed using
 * [components-flex-embed](https://github.com/suitcss/components-flex-embed/): aspect-ratios for embeds.
 * [components-grid](https://github.com/suitcss/components-grid/): a grid foundation.
 * [components-test](https://github.com/suitcss/components-test/): structure for visual tests.
+* [theme](https://github.com/suitcss/theme/): SUIT's example theme.
 
 You can also download pre-built bundles to try things out without setting up a
 build process:
@@ -102,16 +102,16 @@ CSS:
  */
 
 :root {
-  var-padding-Excerpt: 20px;
-  var-border-color-Excerpt-thumbnail: #000;
+  --padding-Excerpt: 20px;
+  --border-color-Excerpt-thumbnail: #000;
 }
 
 .Excerpt {
-  padding: var(padding-Excerpt);
+  padding: var(--padding-Excerpt);
 }
 
 .Excerpt-thumbnail {
-  border: 2px solid var(border-color-Excerpt-thumbnail);
+  border: 2px solid var(--border-color-Excerpt-thumbnail);
   border-radius: 3px;
   margin-right: 10px;
 }
