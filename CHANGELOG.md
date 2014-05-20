@@ -1,6 +1,7 @@
 === HEAD
 
 * Use new W3C CSS variables syntax.
+* Update 'suit-base' to 0.5.0.
 * Update 'suit-utils' to 0.9.0.
 * Update 'suit-components-arrange' to 0.4.0.
 * Update 'suit-components-button' to 3.2.0.
