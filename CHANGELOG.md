@@ -1,36 +1,36 @@
 === HEAD
 
 * Use new W3C CSS variables syntax.
-* Update 'suit-base' to 0.5.0.
-* Update 'suit-utils' to 0.9.0.
-* Update 'suit-components-arrange' to 0.4.0.
-* Update 'suit-components-button' to 3.2.0.
-* Update 'suit-components-button-group' to 2.2.0.
-* Update 'suit-components-flex-embed' to 1.6.0.
-* Update 'suit-components-grid' to 1.3.0.
+* Update 'base' to 0.5.0.
+* Update 'utils' to 0.9.0.
+* Update 'components-arrange' to 0.4.0.
+* Update 'components-button' to 3.2.0.
+* Update 'components-button-group' to 2.2.0.
+* Update 'components-flex-embed' to 1.6.0.
+* Update 'components-grid' to 1.3.0.
 
 === 0.4.0 (April 7, 2013)
 
 * Add npm support.
-* Update 'suit-base' to 0.4.0.
-* Update 'suit-utils' to 0.8.0.
-* Update 'suit-components-arrange' to 0.3.0.
-* Update 'suit-components-button' to 3.1.0.
-* Update 'suit-components-button-group' to 2.1.0.
-* Update 'suit-components-flex-embed' to 1.5.1.
-* Update 'suit-components-grid' to 1.2.0.
+* Update 'base' to 0.4.0.
+* Update 'utils' to 0.8.0.
+* Update 'components-arrange' to 0.3.0.
+* Update 'components-button' to 3.1.0.
+* Update 'components-button-group' to 2.1.0.
+* Update 'components-flex-embed' to 1.5.1.
+* Update 'components-grid' to 1.2.0.
 * Update all documentation.
 * Update code style.
 
 === 0.3.0 (November 20, 2013)
 
-* Update 'suit-base' to 0.3.0.
-* Update 'suit-utils' to 0.7.1.
-* Update 'suit-arrange' to 0.2.0.
-* Update 'suit-button' to 3.0.0.
-* Update 'suit-button-group' to 1.2.1.
-* Update 'suit-flex-embed' to 1.2.1.
-* Update 'suit-grid' to 1.1.0.
+* Update 'base' to 0.3.0.
+* Update 'utils' to 0.7.1.
+* Update 'arrange' to 0.2.0.
+* Update 'button' to 3.0.0.
+* Update 'button-group' to 1.2.1.
+* Update 'flex-embed' to 1.2.1.
+* Update 'grid' to 1.1.0.
 * Remove 'grid-layouts'.
 * Fix Component(1) installation.
 * Rewrite the component documentation.
@@ -42,9 +42,9 @@
 
 === 0.2.0 (May 26, 2013)
 
-* Add 'suit-arrange' component.
-* Update 'suit-button' to ~2.0.0.
-* Update 'suit-utils' to ~0.4.0.
+* Add 'arrange' component.
+* Update 'button' to ~2.0.0.
+* Update 'utils' to ~0.4.0.
 * Documentation improvements.
 
 === 0.1.0 (March 22, 2013)
