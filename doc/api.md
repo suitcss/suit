@@ -75,8 +75,8 @@ individual packages for details of their API.
 
 #### Variables
 
-* `var-color-linkPseudo`
-* `var-color-hover-linkPseudo`
+* `--color-linkPseudo`
+* `--color-hover-linkPseudo`
 
 ### [Position](https://github.com/suitcss/utils-position)
 
@@ -150,7 +150,7 @@ individual packages for details of their API.
 
 #### Variables
 
-* `var-gutter-size-Arrange`
+* `--gutter-size-Arrange`
 
 ### [Button](https://github.com/suitcss/components-button)
 
@@ -162,12 +162,12 @@ individual packages for details of their API.
 
 #### Variables
 
-* `var-border-width-Button`
-* `var-border-color-Button`
-* `var-color-Button`
-* `var-font-Button`
-* `var-padding-Button`
-* `var-opacity-Button-disabled`
+* `--border-width-Button`
+* `--border-color-Button`
+* `--color-Button`
+* `--font-Button`
+* `--padding-Button`
+* `--opacity-Button-disabled`
 
 ### [Button group](https://github.com/suitcss/components-button-group)
 
@@ -180,7 +180,7 @@ individual packages for details of their API.
 
 #### Variables
 
-* `var-font-size-ButtonGroup`
+* `--font-size-ButtonGroup`
 
 ### [Flexible embeds](https://github.com/suitcss/components-flex-embed)
 
@@ -207,8 +207,8 @@ individual packages for details of their API.
 
 #### Variables
 
-* `var-font-size-Grid`
-* `var-gutter-size-Grid`
+* `--font-size-Grid`
+* `--gutter-size-Grid`
 
 ### [Test](https://github.com/suitcss/components-test)
 

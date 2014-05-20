@@ -78,7 +78,7 @@ component name in the variable name:
 /** @define MyComponent */
 
 :root {
-  var-border-width-MyComponent: 5px;
+  --border-width-MyComponent: 5px;
 }
 
 .MyComponent {
