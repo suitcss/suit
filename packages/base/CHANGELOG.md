@@ -1,5 +1,7 @@
 === HEAD
 
+* Work around a Firefox/IE bug that removes `button` focus styles.
+
 === 0.5.0 (May 20, 2014)
 
 * Update to use latest variable syntax.
