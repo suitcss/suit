@@ -1,8 +1,12 @@
 # suitcss-preprocessor
 
-Preprocessor for working with SUIT CSS packages.
-
 [![Build Status](https://travis-ci.org/suitcss/preprocessor.png)](http://travis-ci.org/suitcss/preprocessor)
+
+[SUIT CSS](https://github.com/suitcss/suit) preprocessor.
+
+Provides a CLI and Node.js interface for a preprocessor that combines
+[rework-suit](https://github.com/suitcss/rework-suit) with
+[autoprefixer](https://github.com/ai/autoprefixer).
 
 ## Installation
 
@@ -15,12 +19,6 @@ npm install suitcss-preprocessor
 ```
 suitcss input.css output.css
 ```
-
-## Features
-
-Provides a CLI and Node.js interface for a preprocessor that combines
-[rework-suit](https://github.com/suitcss/rework-suit) with
-[autoprefixer](https://github.com/ai/autoprefixer).
 
 ## API
 
