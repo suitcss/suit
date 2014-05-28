@@ -1,4 +1,4 @@
-# SUIT base
+# SUIT CSS base
 
 Base styles for web applications. Provides a thin layer on top of
 [Normalize.css](https://github.com/necolas/normalize.css). Removes default
@@ -8,9 +8,9 @@ Read more about how to use [SUIT](https://github.com/suitcss/suit/).
 
 ## Installation
 
+* [npm](http://npmjs.org/): `npm install suitcss-base`
 * [Component(1)](http://github.com/component/component): `component install suitcss/base`
 * [Bower](http://bower.io/): `bower install suit-base`
-* [npm](http://npmjs.org/): `npm install suitcss-base`
 * [Download](https://github.com/suitcss/base/releases)
 
 ## Configurable variables
