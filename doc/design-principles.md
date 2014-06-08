@@ -2,7 +2,7 @@
 
 CSS for building self-contained, composable, configurable UI components.
 
-SUIT's conventions and approach are an attempt statisfy the following system
+SUIT's conventions and approach are an attempt to statisfy the following system
 design characteristics:
 
 1. [Single responsibility principle](#single-responsibility-principle)
@@ -16,13 +16,13 @@ design characteristics:
 ## Single responsibility principle
 
 Each component should have a single responsibility. It should provide HTML,
-CSS, JavaScript, and associated assets without making assumptions about the
+CSS, JavaScript and associated assets without making assumptions about the
 outer rendering context.
 
 <a name="extension"></a>
 ## Extension over direct modification
 
-Extending a component's presentation – which additional classes – is preferred
+Extending a component's presentation – with additional classes – is preferred
 to making direct modifications to selectors that it has defined for itself.
 This helps limit local complexity.
 
@@ -44,7 +44,7 @@ In general, look to apply classes directly
 to the elements you want to style.
 
 Don't couple your styles to particular DOM elements or to a particular DOM
-structure (i.e., specific siblings, or a reliance on a node always being a
+structure (i.e. specific siblings, or a reliance on a node always being a
 child of a component). Directly apply styles to elements using styles whenever
 possible.
 
