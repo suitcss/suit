@@ -3,6 +3,9 @@
   "description": "Positioning utilities for SUIT CSS",
   "version": "0.1.0",
   "style": "position.css",
+  "files": [
+    "position.css"
+  ],
   "devDependencies": {
     "component": "0.19.x",
     "component-builder-suit": "0.2.x",
