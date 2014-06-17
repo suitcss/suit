@@ -1,10 +1,10 @@
-# SUIT utilities: text
+# SUIT CSS utilities: text
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-text.png?branch=master)](http://travis-ci.org/suitcss/utils-text)
 
 SUIT CSS text utilities.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
