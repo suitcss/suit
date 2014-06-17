@@ -1,10 +1,10 @@
-# SUIT utilities: position
+# SUIT CSS utilities: position
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-position.png?branch=master)](http://travis-ci.org/suitcss/utils-position)
 
 SUIT CSS utility classes for positioning.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
@@ -23,7 +23,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Usage
 
-Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
+Please refer to the README for [SUIT CSS utils](https://github.com/suitcss/utils/)
 
 ## Testing
 
