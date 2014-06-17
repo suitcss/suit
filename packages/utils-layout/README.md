@@ -1,10 +1,10 @@
-# SUIT utilities: layout
+# SUIT CSS utilities: layout
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-layout.png?branch=master)](http://travis-ci.org/suitcss/utils-layout)
 
-A SUIT collection of utility classes for low-level CSS layout traits.
+A SUIT CSS collection of utility classes for low-level CSS layout traits.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
@@ -18,12 +18,12 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 * `u-cf` - Contain floats (micro clearfix).
 * `u-nbfc` - Create a new block formatting context.
 * `u-nbfcAlt` - Create a new block formatting context (alternative technique).
-* `u-pullLeft` - Float left.
-* `u-pullRight` - Float right.
+* `u-floatLeft` - Float left.
+* `u-floatRight` - Float right.
 
 ## Usage
 
-Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
+Please refer to the README for [SUIT CSS utils](https://github.com/suitcss/utils/)
 
 ## Testing
 

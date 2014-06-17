@@ -1,5 +1,7 @@
 === HEAD
 
+* `u-pullLeft` -> `u-floatLeft`; `u-pullRight` -> `u-floatRight`
+
 === 0.3.0 (March 24, 2014)
 
 * Add npm support.

@@ -57,10 +57,10 @@
  * Floats
  */
 
-.u-pullLeft {
+.u-floatLeft {
   float: left !important;
 }
 
-.u-pullRight {
+.u-floatRight {
   float: right !important;
 }
