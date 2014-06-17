@@ -3,6 +3,9 @@
   "description": "Text utilities for SUIT CSS",
   "version": "0.3.0",
   "style": "text.css",
+  "files": [
+    "text.css"
+  ],
   "devDependencies": {
     "component": "0.19.x",
     "component-builder-suit": "0.2.x",
