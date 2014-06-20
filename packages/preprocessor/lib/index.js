@@ -24,8 +24,10 @@ function preprocessor(css, options) {
     throw new Error('suitcss-preprocessor: did not receive a String');
   }
 
-  var browserConfig = [
-    'Explorer >= 8',
+  options = options || {};
+
+  var browserConfig = options.browsers || [
+    'Explorer >= 9',
     'last 2 Chrome versions',
     'last 2 Firefox versions',
     'last 2 Safari versions',
@@ -33,7 +35,7 @@ function preprocessor(css, options) {
     'Android 4'
   ];
 
-  css = rework(css, options).use(suit).toString();
+  css = rework(css, options).use(suit(options)).toString(options);
 
   // vendor prefixes
   css = autoprefixer(browserConfig).process(css).css;

@@ -1,5 +1,7 @@
 === HEAD
 
+* Support configuration.
+
 === 0.2.0 (April 21, 2014)
 
 * Update 'autoprefixer' to ^1.1.20140410.
