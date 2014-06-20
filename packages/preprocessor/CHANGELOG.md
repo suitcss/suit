@@ -1,5 +1,8 @@
 === HEAD
 
+* Update 'autoprefixer' to ^1.3.0.
+* Update 'rework-suit' to ^3.0.0.
+* Update 'rework' to ^1.0.0.
 * Support configuration.
 
 === 0.2.0 (April 21, 2014)

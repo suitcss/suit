@@ -1,0 +1,7 @@
+@custom-media --narrow (min-width:400px);
+
+@media (--narrow) {
+  body {
+    color: black;
+  }
+}

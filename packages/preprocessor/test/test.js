@@ -5,10 +5,10 @@ var spawn = child.spawn;
 var fs = require('fs');
 var suitcss = require('../lib/index.js');
 var path = require('path');
-var Stream = require('stream').Readable;
 
 var features = [
   'calc',
+  'custom-media',
   'prefixes',
   'vars'
 ];
