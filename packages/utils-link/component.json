@@ -1,11 +1,8 @@
 {
-  "name": "utils-link",
+  "name": "suitcss-utils-link",
   "repo": "suitcss/utils-link",
   "version": "0.4.0",
-  "styles": ["link.css"],
-  "development": {
-    "suitcss/components-test": "*"
-  },
+  "styles": ["lib/link.css"],
   "author": "Nicolas Gallagher",
   "license": "MIT"
 }

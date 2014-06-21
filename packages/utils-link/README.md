@@ -1,15 +1,15 @@
-# SUIT utilities: link
+# SUIT CSS utilities: link
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-link.png?branch=master)](http://travis-ci.org/suitcss/utils-link)
 
 SUIT CSS link utilities.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/utils-link`
 * [npm](http://npmjs.org/): `npm install suitcss-utils-link`
+* [Component(1)](http://component.io/): `component install suitcss/utils-link`
 * [Bower](http://bower.io/): `bower install suit-utils-link`
 * Download: [zip](https://github.com/suitcss/utils-link/zipball/master)
 
@@ -53,7 +53,7 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
 
 ## Browser support
 

@@ -1,5 +1,8 @@
 === HEAD
 
+* npm-based workflow.
+* Add new preprocessor build tool.
+
 === 0.4.0 (May 15, 2014)
 
 * Remove `u-linkPseudo`.
