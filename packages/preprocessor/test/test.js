@@ -9,6 +9,7 @@ var path = require('path');
 var features = [
   'calc',
   'custom-media',
+  'import',
   'prefixes',
   'vars'
 ];
@@ -30,9 +31,9 @@ describe('suitcss', function () {
 describe('features', function () {
   features.forEach(function (name) {
     it('should add ' + name + ' support', function () {
-      var input = read('features/' + name);
-      var output = read('features/' + name + '.out');
-      assert.equal(suitcss(input).trim(), output.trim());
+      var input = read('fixtures/' + name);
+      var output = read('fixtures/' + name + '.out');
+      assert.equal(suitcss(input, { dir: 'test/fixtures' }).trim(), output.trim());
     });
   });
 });
@@ -42,24 +43,24 @@ describe('features', function () {
  */
 
 describe('cli', function () {
-  var input = read('cli/input');
-  var output = read('cli/input.out');
+  var input = read('fixtures/cli/input');
+  var output = read('fixtures/cli/input.out');
 
   afterEach(function () {
-    remove('cli/output');
+    remove('fixtures/cli/output');
   });
 
   it('should read from a file and write to a file', function (done) {
-    exec('bin/suitcss test/cli/input.css test/cli/output.css', function (err, stdout) {
+    exec('bin/suitcss test/fixtures/cli/input.css test/fixtures/cli/output.css', function (err, stdout) {
       if (err) return done(err);
-      var res = read('cli/output');
+      var res = read('fixtures/cli/output');
       assert.equal(res, output);
       done();
     });
   });
 
   it('should read from a file and write to stdout', function (done) {
-    exec('bin/suitcss test/cli/input.css', function (err, stdout) {
+    exec('bin/suitcss test/fixtures/cli/input.css', function (err, stdout) {
       if (err) return done(err);
       assert.equal(stdout, output);
       done();
@@ -78,15 +79,25 @@ describe('cli', function () {
   });
 
   it('should log on verbose', function (done) {
-    exec('bin/suitcss -v test/cli/input.css test/cli/output.css', function (err, stdout) {
+    exec('bin/suitcss -v test/fixtures/cli/input.css test/fixtures/cli/output.css', function (err, stdout) {
       if (err) return done(err);
       assert(-1 != stdout.indexOf('write'));
       done();
     });
   });
 
+  it('should allow configurable import root', function (done) {
+    exec('bin/suitcss -i test/fixtures test/fixtures/import.css test/fixtures/cli/output.css', function (err, stdout) {
+      if (err) return done(err);
+      var res = read('fixtures/cli/output');
+      var expected = read('fixtures/import.out');
+      assert.equal(res, expected);
+      done();
+    });
+  });
+
   it('should log on non-existant file', function (done) {
-    exec('bin/suitcss test/cli/non-existant.css', function (err, stdout, stderr) {
+    exec('bin/suitcss test/fixtures/cli/non-existant.css', function (err, stdout, stderr) {
       assert(err);
       assert(err.code == 1);
       assert(-1 != stderr.indexOf('not found'));
@@ -95,7 +106,7 @@ describe('cli', function () {
   });
 
   xit('should print a nice error', function (done) {
-    exec('bin/suitcss test/cli/error.css', function (err, stdout, stderr) {
+    exec('bin/suitcss test/fixtures/cli/error.css', function (err, stdout, stderr) {
       assert(err);
       assert(err.code == 1);
       assert(-1 != stderr.indexOf('error'));
