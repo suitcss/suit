@@ -29,6 +29,7 @@ Usage: suitcss [<input>] [<output>]
 
 Options:
 
+  -c, --compress compress output
   -h, --help     output usage information
   -V, --version  output the version number
   -w, --watch    watch the input file for changes
@@ -49,13 +50,19 @@ Examples:
 #### Node.js
 
 ```js
-var suitcss = require('suitcss-preprocessor');
+var preprocessor = require('suitcss-preprocessor');
 var fs = require('fs');
 
 var css = fs.readFileSync('index.css', 'utf8');
-var converted = suitcss(css);
+var options = {
+  dir: "src/components",
+  source: "index.css",
+  sourcemap: true
+}
 
-fs.writeFileSync('converted.css', converted);
+var bundle = preprocessor(css, options);
+
+fs.writeFileSync('bundle.css', bundle);
 ```
 
 ## Acknowledgements
