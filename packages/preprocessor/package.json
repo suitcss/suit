@@ -1,6 +1,6 @@
 {
   "name": "suitcss-preprocessor",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A CSS preprocessor for working with SUIT CSS packages",
   "main": "lib/index.js",
   "bin": {

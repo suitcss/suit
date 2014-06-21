@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.0 (June 21, 2014)
+
 * Add 'import-root' CLI option.
 * Add 'compress' CLI option.
 * Update 'autoprefixer' to ^1.3.0.
