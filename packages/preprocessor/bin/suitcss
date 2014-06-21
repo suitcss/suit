@@ -18,8 +18,10 @@ var write = require('write-file-stdout');
 program
   .version(require('../package.json').version)
   .usage('[<input>] [<output>]')
-  .option('-w, --watch', 'watch the input file for changes')
-  .option('-v, --verbose', 'log verbose output for debugging');
+  .option('-c, --compress', 'compress output')
+  .option('-i, --import-root [path]', 'the root directory for imported css files', '')
+  .option('-v, --verbose', 'log verbose output for debugging')
+  .option('-w, --watch', 'watch the input file for changes');
 
 /**
  * Examples.
@@ -30,6 +32,9 @@ program.on('--help', function () {
   console.log();
   console.log('    # pass an input and output file:');
   console.log('    $ suitcss input.css output.css');
+  console.log();
+  console.log('    # configure the import root directory:');
+  console.log('    $ suitcss --import-root src/css input.css output.css');
   console.log();
   console.log('    # watch the input file for changes:');
   console.log('    $ suitcss --watch input.css output.css');
@@ -51,6 +56,7 @@ program.parse(process.argv);
 
 var input = program.args[0] ? resolve(program.args[0]) : null;
 var output = program.args[1] ? resolve(program.args[1]) : null;
+var importRoot = program.importRoot;
 var verbose = program.verbose;
 var regen = program.watch && input && output;
 
@@ -85,7 +91,7 @@ function run () {
     var css = buffer.toString();
 
     try {
-      css = suitcss(css, { source: input });
+      css = suitcss(css, { compress: program.compress, dir: importRoot, source: input });
     } catch (e) {
       e.css = css;
       logger.throw(e);
