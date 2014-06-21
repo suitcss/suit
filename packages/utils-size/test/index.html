@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Size [utility] - SUIT</title>
+<title>Size [utility] - SUIT CSS</title>
 <meta name="viewport" content="initial-scale=1, width=device-width">
-<link rel="stylesheet" href="build/build.css">
+<link rel="stylesheet" href="../build/test.css">
 <style>
   .u-cf:after {
     clear: both;
@@ -143,5 +143,11 @@
     <div class="u-size9of12 u-highlight">9of12</div>
     <div class="u-size10of12 u-highlight">10of12</div>
     <div class="u-size11of12 u-highlight">11of12</div>
+  </div>
+
+  <h2 class="Test-describe">.u-sm-sizeXof12 .u-md-sizeXof12 .u-lg-sizeXof12</h2>
+  <h3 class="Test-it">adapts the width at different viewport sizes</h3>
+  <div class="Test-run">
+    <div class="u-size12of12 u-sm-size9of12 u-md-size6of12 u-lg-size3of12 u-highlight">12of12 -> 9of12 -> 6of12 -> 3of12</div>
   </div>
 </div>
