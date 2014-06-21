@@ -1,5 +1,7 @@
 === HEAD
 
+* Add 'import-root' CLI option.
+* Add 'compress' CLI option.
 * Update 'autoprefixer' to ^1.3.0.
 * Update 'rework-suit' to ^3.0.0.
 * Update 'rework' to ^1.0.0.
