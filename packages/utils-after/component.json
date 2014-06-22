@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils-after",
   "repo": "suitcss/utils-after",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "styles": [
     "lib/after.css"
   ],
