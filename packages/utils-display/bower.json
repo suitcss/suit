@@ -1,13 +1,13 @@
 {
-  "name": "suit-utils-display",
+  "name": "suitcss-utils-display",
   "version": "0.3.0",
   "author": "Nicolas Gallagher",
-  "main": "display.css",
+  "main": "lib/display.css",
   "ignore": [
     ".*",
     "CHANGELOG.md",
     "component.json",
     "package.json",
-    "test.html"
+    "test"
   ]
 }

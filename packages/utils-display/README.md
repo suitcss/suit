@@ -1,15 +1,15 @@
-# SUIT utilities: display
+# SUIT CSS utilities: display
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-display.png?branch=master)](http://travis-ci.org/suitcss/utils-display)
 
 SUIT CSS display utilities.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/utils-display`
 * [npm](http://npmjs.org/): `npm install suitcss-utils-display`
+* [Component(1)](http://component.io/): `component install suitcss/utils-display`
 * [Bower](http://bower.io/): `bower install suit-utils-display`
 * Download: [zip](https://github.com/suitcss/utils-display/zipball/master)
 
@@ -26,7 +26,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Usage
 
-Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
+Please refer to the README for [SUIT CSS utils](https://github.com/suitcss/utils/)
 
 ## Testing
 
@@ -48,7 +48,7 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
 
 ## Browser support
 
