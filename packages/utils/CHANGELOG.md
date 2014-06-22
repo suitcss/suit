@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.10.0 (June 21, 2014)
+
 * Support npm-based workflow.
 * Add new preprocessor build tools.
 * Update 'utils-align' to ~0.2.0.
