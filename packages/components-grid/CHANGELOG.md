@@ -1,5 +1,8 @@
 === HEAD
 
+=== 1.4.0 (June 22, 2014)
+
+* npm-based workflow.
 * Add new preprocessor build tools.
 
 === 1.3.0 (May 15, 2014)
