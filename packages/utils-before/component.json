@@ -1,13 +1,13 @@
 {
-  "name": "utils-before",
+  "name": "suitcss-utils-before",
   "repo": "suitcss/utils-before",
   "version": "0.2.2",
   "styles": [
-    "before.css"
+    "lib/before.css",
+    "lib/before-sm.css",
+    "lib/before-md.css",
+    "lib/before-lg.css"
   ],
-  "development": {
-    "suitcss/components-test": "*"
-  },
   "author": "Nicolas Gallagher",
   "license": "MIT"
 }

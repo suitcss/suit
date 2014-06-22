@@ -1,15 +1,15 @@
-# SUIT utilities: before
+# SUIT CSS utilities: before
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-before.png?branch=master)](http://travis-ci.org/suitcss/utils-before)
 
 SUIT CSS leading offset utilities.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/utils-before`
 * [npm](http://npmjs.org/): `npm install suitcss-utils-before`
+* [Component(1)](http://component.io/): `component install suitcss/utils-before`
 * [Bower](http://bower.io/): `bower install suit-utils-before`
 * Download: [zip](https://github.com/suitcss/utils-before/zipball/master)
 
@@ -28,6 +28,23 @@ Utilities that can be limited to specific Media Query breakpoints.
 * `u-sm-beforeXofY` - To use at the small Media Query breakpoint.
 * `u-md-beforeXofY` - To use at the medium Media Query breakpoint.
 * `u-lg-beforeXofY` - To use at the large Media Query breakpoint.
+
+### Configuration
+
+There are 3 Media Query breakpoints:
+
+* `--sm-viewport`
+* `--md-viewport`
+* `--lg-viewport`
+
+When using the [SUIT CSS preprocessor](https://github.com/suitcss/preprocessor),
+breakpoints can be configured using `@custom-media`. For example:
+
+```css
+@custom-media --sm-viewport (min-width:320px) and (max-width:640px);
+@custom-media --md-viewport (min-width:640px) and (max-width:960px);
+@custom-media --lg-viewport (min-width:960px);
+```
 
 ## Usage
 
@@ -53,7 +70,7 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
 
 ## Browser support
 

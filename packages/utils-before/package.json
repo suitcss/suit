@@ -2,24 +2,31 @@
   "name": "suitcss-utils-before",
   "description": "Leading offset utilities for SUIT CSS",
   "version": "0.2.2",
-  "style": "before.css",
+  "style": "index.css",
   "files": [
-    "before.css",
-    "before-sm.css",
-    "before-md.css",
-    "before-lg.css",
-    "component.json"
+    "index.css",
+    "lib"
   ],
   "devDependencies": {
-    "component": "0.19.x",
-    "component-builder-suit": "0.2.x",
-    "suitcss-preprocessor": "0.1.x"
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "~0.3.0"
   },
   "scripts": {
-    "build": "npm run component && npm run preprocess",
-    "build-test": "npm run component-dev && npm run preprocess",
-    "component": "component install && component build --use component-builder-suit",
-    "component-dev": "component install --dev && component build --dev --use component-builder-suit",
-    "preprocess": "suitcss build/build.css build/build.css"
-  }
+    "build": "npm run setup && npm run preprocess",
+    "build-test": "npm run setup && npm run preprocess-test",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss test/test.css build/test.css",
+    "setup": "npm install && mkdir -p build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/utils-before.git"
+  },
+  "keywords": [
+    "browser",
+    "css-utilities",
+    "offset",
+    "suitcss",
+    "style"
+  ]
 }

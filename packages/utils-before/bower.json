@@ -1,18 +1,18 @@
 {
-  "name": "suit-utils-before",
+  "name": "suitcss-utils-before",
   "version": "0.2.2",
   "author": "Nicolas Gallagher",
   "main": [
-    "before.css",
-    "before-sm.css",
-    "before-md.css",
-    "before-lg.css"
+    "lib/before.css",
+    "lib/before-sm.css",
+    "lib/before-md.css",
+    "lib/before-lg.css"
   ],
   "ignore": [
     ".*",
     "CHANGELOG.md",
     "component.json",
     "package.json",
-    "test.html"
+    "test"
   ]
 }
