@@ -1,6 +1,9 @@
 === HEAD
 
-* `u-pullLeft` -> `u-floatLeft`; `u-pullRight` -> `u-floatRight`
+* npm-based workflow.
+* Add new preprocessor build tools.
+* `u-pullLeft` -> `u-floatLeft`
+* `u-pullRight` -> `u-floatRight`
 
 === 0.3.0 (March 24, 2014)
 

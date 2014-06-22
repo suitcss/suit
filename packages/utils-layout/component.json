@@ -1,13 +1,10 @@
 {
-  "name": "utils-layout",
+  "name": "suitcss-utils-layout",
   "repo": "suitcss/utils-layout",
   "version": "0.3.0",
   "styles": [
-    "layout.css"
+    "lib/layout.css"
   ],
-  "development": {
-    "suitcss/components-test": "*"
-  },
   "author": "Nicolas Gallagher",
   "license": "MIT"
 }

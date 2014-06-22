@@ -1,13 +1,13 @@
 {
-  "name": "suit-utils-layout",
+  "name": "suitcss-utils-layout",
   "version": "0.3.0",
   "author": "Nicolas Gallagher",
-  "main": "layout.css",
+  "main": "lib/layout.css",
   "ignore": [
     ".*",
     "CHANGELOG.md",
     "component.json",
     "package.json",
-    "test.html"
+    "test"
   ]
 }
