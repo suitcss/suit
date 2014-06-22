@@ -47,7 +47,7 @@
   cursor: pointer;
   display: inline-block;
   font: var(--font-Button); /* 4 */
-  line-height: normal; /* 6 */
+  line-height: normal; /* 5 */
   margin: 0;
   padding: var(--padding-Button);
   position: relative;
