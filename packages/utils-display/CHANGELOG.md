@@ -1,5 +1,6 @@
 === HEAD
 
+* Add `u-hiddenVisually`.
 * Add `u-hidden`.
 
 === 0.3.0 (May 15, 2014)

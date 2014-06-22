@@ -2,8 +2,26 @@
  * Display-type utilities
  */
 
+.u-block {
+  display: block !important;
+}
+
 .u-hidden {
   display: none !important;
+}
+
+/**
+ * Completely remove from the flow but leave available to screen readers.
+ */
+
+.u-hiddenVisually {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
 }
 
 .u-inline {
@@ -21,18 +39,14 @@
   max-width: 100%; /* 1 */
 }
 
-.u-block {
-  display: block !important;
-}
-
 .u-table {
   display: table !important;
 }
 
-.u-tableRow {
-  display: table-row !important;
-}
-
 .u-tableCell {
   display: table-cell !important;
+}
+
+.u-tableRow {
+  display: table-row !important;
 }
