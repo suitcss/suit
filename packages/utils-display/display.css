@@ -2,6 +2,10 @@
  * Display-type utilities
  */
 
+.u-hidden {
+  display: none !important;
+}
+
 .u-inline {
   display: inline !important;
 }

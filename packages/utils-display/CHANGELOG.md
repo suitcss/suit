@@ -1,5 +1,7 @@
 === HEAD
 
+* Add `u-hidden`.
+
 === 0.3.0 (May 15, 2014)
 
 * Add `u-tableRow`.
