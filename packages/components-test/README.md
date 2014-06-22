@@ -1,16 +1,15 @@
-# SUIT Test
+# SUIT CSS components-test
 
 [![Build Status](https://secure.travis-ci.org/suitcss/components-test.png?branch=master)](http://travis-ci.org/suitcss/components-test)
 
-SUIT CSS for a presentational test structure for visually testing other
-components.
+CSS to help test the visual presentation of components.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/test`
 * [npm](https://www.npmjs.org/package/suitcss-components-test): `npm install suitcss-components-test`
+* [Component(1)](http://component.io/): `component install suitcss/test`
 * [Bower](http://bower.io/): `bower install suit-components-test`
 * Download: [zip](https://github.com/suitcss/test/zipball/master)
 
@@ -29,9 +28,9 @@ This is an example of an idiomatic SUIT CSS test file:
 ```html
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>ComponentName [component] - SUIT</title>
+<title>ComponentName [component] - SUIT CSS</title>
 <meta name="viewport" content="initial-scale=1,width=device-width">
-<link rel="stylesheet" href="build/build.css">
+<link rel="stylesheet" href="../build/test.css">
 <style>
   #textWrapping {
     width: 300px;
@@ -87,7 +86,7 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
 
 ## Browser support
 

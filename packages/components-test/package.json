@@ -1,27 +1,31 @@
 {
   "name": "suitcss-components-test",
-  "description": "CSS for presenting UI components for visual tests",
+  "description": "CSS to help test the visual presentation of components",
   "version": "0.1.1",
-  "style": "test.css",
+  "style": "index.css",
   "files": [
-    "test.css",
-    "component.json"
+    "index.css",
+    "lib"
   ],
   "devDependencies": {
-    "component": "0.19.x",
-    "component-builder-suit": "0.2.x",
-    "suitcss-preprocessor": "0.1.x"
+    "suitcss-preprocessor": "~0.3.0"
   },
   "scripts": {
-    "build": "npm run component && npm run preprocess",
-    "build-test": "npm run component-dev && npm run preprocess",
-    "component": "component install && component build --use component-builder-suit",
-    "component-dev": "component install --dev && component build --dev --use component-builder-suit",
-    "preprocess": "suitcss build/build.css build/build.css"
+    "build": "npm run setup && npm run preprocess",
+    "build-test": "npm run setup && npm run preprocess-test",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss test/test.css build/test.css",
+    "setup": "npm install && mkdir -p build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/components-test.git"
   },
   "keywords": [
-    "css",
-    "component",
-    "test"
+    "browser",
+    "css-components",
+    "test",
+    "suitcss",
+    "style"
   ]
 }

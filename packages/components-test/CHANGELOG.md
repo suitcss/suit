@@ -1,5 +1,8 @@
 === HEAD
 
+* npm-based workflow.
+* Add new preprocessor build tools.
+
 === 0.1.1 (April 5, 2014)
 
 * Add npm support.
