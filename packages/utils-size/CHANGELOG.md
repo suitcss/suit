@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.7.0 (June 21, 2014)
+
 * npm-based workflow.
 * Add MQ files back to component.json.
 * Add new preprocessor build tools.
