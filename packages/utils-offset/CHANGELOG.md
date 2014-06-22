@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.5.0 (June 21, 2014)
+
 * Update to 'utils-after' 0.3.0.
 * Update to 'utils-before' 0.3.0.
 * npm-based workflow.

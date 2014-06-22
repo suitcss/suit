@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils-offset",
   "repo": "suitcss/utils-offset",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "dependencies": {
     "suitcss/utils-before": "0.3.0",
     "suitcss/utils-after": "0.3.0"
