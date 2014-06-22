@@ -63,7 +63,7 @@ fully realise the component.
   </a>
   <div class="u-sizeFill">
     <a class="u-linkComplex" href="{{userUrl}}">
-      <span class="u-linkComplex-target">{{fullname}}</span>
+      <span class="u-linkComplexTarget">{{fullname}}</span>
       <span>@{{username}}</span>
     </a>
 
@@ -72,7 +72,7 @@ fully realise the component.
     <div>
       <a class="u-linkComplex" href="#" role="button">
         <span class="Icon Icon--reply"></span>
-        <span class="u-linkComplex-target">Reply</span>
+        <span class="u-linkComplexTarget">Reply</span>
       </a>
       <a href="#" role="button">
         <span class="Icon Icon--favorite"></span>
