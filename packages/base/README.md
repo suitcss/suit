@@ -4,7 +4,7 @@ Base styles for web applications. Provides a thin layer on top of
 [Normalize.css](https://github.com/necolas/normalize.css). Removes default
 margins and exposes variables for theming.
 
-Read more about how to use [SUIT](https://github.com/suitcss/suit/).
+Read more about how to use [SUIT CSS](https://github.com/suitcss/suit/).
 
 ## Installation
 
@@ -42,7 +42,7 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
 
 ## Browser support
 
