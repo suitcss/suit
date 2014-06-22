@@ -1,13 +1,8 @@
 {
-  "name": "components-grid",
+  "name": "suitcss-components-grid",
   "repo": "suitcss/components-grid",
   "version": "1.3.0",
-  "styles": ["grid.css"],
-  "development": {
-    "suitcss/utils-offset": "0.4.2",
-    "suitcss/utils-size": "0.6.2",
-    "suitcss/components-test": "*"
-  },
+  "styles": ["lib/grid.css"],
   "author": "Nicolas Gallagher",
   "license": "MIT"
 }

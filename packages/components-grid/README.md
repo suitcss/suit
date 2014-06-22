@@ -1,20 +1,20 @@
-# SUIT Grid
+# SUIT CSS components-grid
 
 [![Build Status](https://secure.travis-ci.org/suitcss/components-grid.png?branch=master)](http://travis-ci.org/suitcss/components-grid)
 
-A SUIT component for a CSS grid. The grid makes use of `inline-block` and
-`box-sizing` to provide features that float-based layouts cannot.
+A CSS grid component. The grid makes use of `inline-block` and `box-sizing` to
+provide features that float-based layouts cannot.
 
 N.B. This component relies on particular dimensions being applied to cells in
 the grid via other classes. For example,
 [suitcss-utils-size](https://github.com/suitcss/utils-size/).
 
-Read more about [SUIT](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/components-grid`
 * [npm](https://www.npmjs.org/package/suitcss-components-grid): `npm install suitcss-components-grid`
+* [Component(1)](http://component.io/): `component install suitcss/components-grid`
 * [Bower](http://bower.io/): `bower install suit-components-grid`
 * Download: [zip](https://github.com/suitcss/grid/zipball/master)
 
@@ -60,8 +60,8 @@ cells.
 
 ### Widths and offsets
 
-Cell widths and offsets can be controlled using the [responsive dimension
-utilities](https://github.com/suitcss/utils-dimension) and [responsive offset
+Cell widths and offsets can be controlled using the [responsive sizing
+utilities](https://github.com/suitcss/utils-size) and [responsive offset
 utilities](https://github.com/suitcss/utils-offset), respectively.
 
 One limitation of creating grid gutters in the manner shown above is that it
@@ -122,7 +122,7 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
 
 ## Browser support
 

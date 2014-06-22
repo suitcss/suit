@@ -1,5 +1,7 @@
 === HEAD
 
+* Add new preprocessor build tools.
+
 === 1.3.0 (May 15, 2014)
 
 * Use latest variable syntax.

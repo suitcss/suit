@@ -1,6 +1,4 @@
-/** @define Grid */
-
-/*! suitcss-components-grid v1.3.0 | MIT License | github.com/suitcss */
+/** @define Grid; use strict */
 
 :root {
   --font-size-Grid: 1rem;

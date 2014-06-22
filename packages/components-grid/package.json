@@ -1,30 +1,33 @@
 {
   "name": "suitcss-components-grid",
   "version": "1.3.0",
-  "style": "grid.css",
+  "style": "index.css",
   "files": [
-    "grid.css",
-    "component.json"
+    "index.css",
+    "lib"
   ],
   "devDependencies": {
-    "component": "0.19.x",
-    "component-builder-suit": "0.3.x",
-    "suitcss-preprocessor": "0.2.x"
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "~0.3.0",
+    "suitcss-utils-offset": "~0.5.0",
+    "suitcss-utils-size": "~0.7.0"
   },
   "scripts": {
-    "build": "npm run component && npm run preprocess",
-    "build-test": "npm run component-dev && npm run preprocess",
-    "component": "component install && component build --use component-builder-suit",
-    "component-dev": "component install --dev && component build --dev --use component-builder-suit",
-    "preprocess": "suitcss build/build.css build/build.css"
+    "build": "npm run setup && npm run preprocess",
+    "build-test": "npm run setup && npm run preprocess-test",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss test/test.css build/test.css",
+    "setup": "npm install && mkdir -p build"
   },
-  "keywords": [
-    "css",
-    "component",
-    "grid"
-  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/suitcss/components-grid.git"
-  }
+  },
+  "keywords": [
+    "browser",
+    "css-components",
+    "grid",
+    "suitcss",
+    "style"
+  ]
 }
