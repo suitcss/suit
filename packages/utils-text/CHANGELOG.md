@@ -1,5 +1,7 @@
 === HEAD
 
+* npm-based workflow.
+* Add new preprocessor build tools.
 * Add `u-textKern` utility.
 
 === 0.3.0 (March 25, 2014)
