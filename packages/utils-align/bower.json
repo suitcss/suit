@@ -1,11 +1,8 @@
 {
-  "name": "suit-utils-align",
+  "name": "suitcss-utils-align",
   "description": "Vertical alignment utilities for SUIT CSS",
   "version": "0.1.1",
-  "main": "align.css",
-  "devDependencies": {
-    "suit-test": "*"
-  },
+  "main": "lib/align.css",
   "ignore": [
     "build",
     "components",
@@ -13,7 +10,6 @@
     ".*",
     "CHANGELOG.md",
     "component.json",
-    "package.json",
-    "test.html"
+    "package.json"
   ]
 }

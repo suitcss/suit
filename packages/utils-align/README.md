@@ -1,15 +1,15 @@
-# SUIT utilities: align
+# SUIT CSS utilities: align
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-align.png?branch=master)](http://travis-ci.org/suitcss/utils-align)
 
 SUIT CSS utility classes for vertically aligning elements.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/utils-align`
 * [npm](http://npmjs.org/): `npm install suitcss-utils-align`
+* [Component(1)](http://component.io/): `component install suitcss/utils-align`
 * [Bower](http://bower.io/): `bower install suit-utils-align`
 * Download: [zip](https://github.com/suitcss/utils-align/zipball/master)
 
@@ -22,7 +22,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Usage
 
-Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
+Please refer to the README for [SUIT CSS utils](https://github.com/suitcss/utils/)
 
 ## Testing
 
@@ -44,7 +44,7 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
 
 ## Browser support
 
