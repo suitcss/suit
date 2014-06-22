@@ -1,6 +1,6 @@
 {
   "name": "suitcss-base",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Nicolas Gallagher",
   "main": "lib/base.css",
   "dependencies": {

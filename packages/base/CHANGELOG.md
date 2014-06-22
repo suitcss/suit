@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.6.0 (June 21, 2014)
+
 * Support npm-based workflow.
 * Add preprocessor build tools;
 * Work around a Firefox/IE bug that removes `button` focus styles.
