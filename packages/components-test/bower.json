@@ -1,7 +1,7 @@
 {
   "name": "suitcss-components-test",
   "description": "CSS to help test the visual presentation of components",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "test.css",
   "ignore": [
     "build",
@@ -10,7 +10,6 @@
     ".*",
     "CHANGELOG.md",
     "component.json",
-    "package.json",
-    "test.html"
+    "package.json"
   ]
 }
