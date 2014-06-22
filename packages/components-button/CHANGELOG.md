@@ -1,5 +1,7 @@
 === HEAD
 
+* Fix Firefox/IE default `button` focus styles.
+
 === 3.2.0 (May 15, 2014)
 
 * Update variables syntax.
