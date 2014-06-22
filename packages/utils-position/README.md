@@ -8,8 +8,8 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/utils-position`
 * [npm](http://npmjs.org/): `npm install suitcss-utils-position`
+* [Component(1)](http://component.io/): `component install suitcss/utils-position`
 * [Bower](http://bower.io/): `bower install suit-utils-position`
 * Download: [zip](https://github.com/suitcss/utils-position/zipball/master)
 
@@ -45,7 +45,7 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
 
 ## Browser support
 
