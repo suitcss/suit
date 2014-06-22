@@ -1,6 +1,6 @@
 {
   "name": "suitcss-components-flex-embed",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "author": "Nicolas Gallagher",
   "main": "lib/flex-embed.css",
   "ignore": [
