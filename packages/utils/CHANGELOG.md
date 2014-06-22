@@ -1,5 +1,17 @@
 === HEAD
 
+* Support npm-based workflow.
+* Add new preprocessor build tools.
+* Update 'utils-align' to ~0.2.0.
+* Update 'utils-display' to ~0.4.0.
+* Update 'utils-layout' to ~0.4.0.
+* Update 'utils-link' to ~0.5.0.
+* Update 'utils-offset' to ~0.5.0.
+* Update 'utils-position' to ~0.2.0.
+* Update 'utils-size' to ~0.7.0.
+* Update 'utils-text' to ~0.4.0.
+* Remove 'utils-state'.
+
 === 0.9.0 (May 15, 2014)
 
 * Update 'utils-display' and 'utils-link'.

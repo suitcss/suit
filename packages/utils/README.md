@@ -1,15 +1,15 @@
-# SUIT utilities
+# SUIT CSS utilities
 
 The full collection of SUIT CSS utility classes. Requires
 [suitcss-preprocessor](https://github.com/suitcss/preprocessor) or similar in
 your build process, if you choose to use the packages directly.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/utils`
 * [npm](http://npmjs.org/): `npm install suitcss-utils`
+* [Component(1)](http://component.io/): `component install suitcss/utils`
 * [Bower](http://bower.io/): `bower install suit-utils`
 * [Download](https://github.com/suitcss/utils/releases) (compiled)
 
@@ -22,7 +22,6 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 * [utils-offset](https://github.com/suitcss/utils-offset/): The `before` and `after` packages
 * [utils-position](https://github.com/suitcss/utils-position/): Positioning utilities
 * [utils-size](https://github.com/suitcss/utils-size/): Percentage sizing utilities
-* [utils-state](https://github.com/suitcss/utils-state/): States
 * [utils-text](https://github.com/suitcss/utils-text/): Text truncation, breaking, and alignment
 
 ## Usage
@@ -56,10 +55,10 @@ fully realise the component.
 
 ```html
 <article class="Tweet">
-  <a class="u-pullRight" href="{{permalinkUrl}}">
+  <a class="u-floatRight" href="{{permalinkUrl}}">
     {{time}}
   </a>
-  <a class="u-pullLeft" href="{{userUrl}}">
+  <a class="u-floatLeft" href="{{userUrl}}">
     <img src="{{userAvatar}}" alt="{{username}}'s avatar">
   </a>
   <div class="u-sizeFill">
@@ -77,7 +76,7 @@ fully realise the component.
       </a>
       <a href="#" role="button">
         <span class="Icon Icon--favorite"></span>
-        <span class="u-isHiddenVisually">Favorite</span>
+        <span class="u-hiddenVisually">Favorite</span>
       </a>
       ...
     </div>
