@@ -1,8 +1,8 @@
 {
-  "name": "suit-components-flex-embed",
+  "name": "suitcss-components-flex-embed",
   "version": "1.6.0",
   "author": "Nicolas Gallagher",
-  "main": "flex-embed.css",
+  "main": "lib/flex-embed.css",
   "ignore": [
     "build",
     "components",
@@ -11,7 +11,6 @@
     "Makefile",
     "CHANGELOG.md",
     "component.json",
-    "package.json",
-    "test.html"
+    "package.json"
   ]
 }

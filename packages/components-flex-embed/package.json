@@ -2,29 +2,31 @@
   "name": "suitcss-components-flex-embed",
   "description": "CSS for responsive, intrinsic ratio embeds",
   "version": "1.6.0",
-  "style": "flex-embed.css",
+  "style": "index.css",
   "files": [
-    "flex-embed.css",
-    "component.json"
+    "index.css",
+    "lib"
   ],
   "devDependencies": {
-    "component": "0.19.x",
-    "component-builder-suit": "0.3.x",
-    "suitcss-preprocessor": "0.2.x"
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "~0.3.0"
   },
   "scripts": {
-    "build": "npm run component && npm run preprocess",
-    "build-test": "npm run component-dev && npm run preprocess",
-    "component": "component install && component build --use component-builder-suit",
-    "component-dev": "component install --dev && component build --dev --use component-builder-suit",
-    "preprocess": "suitcss build/build.css build/build.css"
+    "build": "npm run setup && npm run preprocess",
+    "build-test": "npm run setup && npm run preprocess-test",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss test/test.css build/test.css",
+    "setup": "npm install && mkdir -p build"
   },
-  "keywords": [
-    "css",
-    "component"
-  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/suitcss/components-flex-embed.git"
-  }
+  },
+  "keywords": [
+    "browser",
+    "css-components",
+    "flex-embed",
+    "suitcss",
+    "style"
+  ]
 }

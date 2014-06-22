@@ -1,14 +1,14 @@
-# SUIT FlexEmbed
+# SUIT CSS components-flex-embed
 
-SUIT CSS for responsive, intrinsic ratio embeds. Includes modifier classes for
-3:1, 2:1, 16:9, and 4:3 aspect ratios.
+CSS for responsive, intrinsic ratio embeds. Includes modifier classes for 3:1,
+2:1, 16:9, and 4:3 aspect ratios.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/components-flex-embed`
 * [npm](https://www.npmjs.org/package/suitcss-components-flex-embed): `npm install suitcss-components-flex-embed`
+* [Component(1)](http://component.io/): `component install suitcss/components-flex-embed`
 * [Bower](http://bower.io/): `bower install suit-components-flex-embed`
 * Download: [zip](https://github.com/suitcss/components-flex-embed/zipball/master)
 
@@ -53,7 +53,7 @@ Alternatively, aspect ratios can be calculated programmatically and the
 corresponding `padding-bottom` value applied using an inline style.
 
 ```html
-<div class="FlexEmbed" style="padding-bottom:{{percentage_ratio}}%">
+<div class="FlexEmbed" style="padding-bottom:{{percentage}}%">
   [iframe|object|embed]
 </div>
 ```
@@ -78,7 +78,7 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
 
 ## Browser support
 

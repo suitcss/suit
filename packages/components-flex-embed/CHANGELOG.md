@@ -1,5 +1,8 @@
 === HEAD
 
+* npm-based workflow.
+* Add new preprocessor build tools.
+
 === 1.6.0 (May 14, 2014)
 
 * Add 1:1 aspect ratio as the default.
