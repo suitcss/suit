@@ -1,8 +1,4 @@
-/*! suit-button v3.2.0 | MIT License | github.com/suitcss */
-
-/* ==========================================================================
-   SUIT: Button
-   ========================================================================== */
+/** @define Button; use strict */
 
 :root {
   --border-width-Button: 1px;

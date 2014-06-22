@@ -1,13 +1,13 @@
 {
-  "name": "suit-components-button",
+  "name": "suitcss-components-button",
   "version": "3.2.0",
   "author": "Nicolas Gallagher",
-  "main": "button.css",
+  "main": "lib/button.css",
   "ignore": [
     ".*",
     "CHANGELOG.md",
     "component.json",
     "package.json",
-    "test.html"
+    "test"
   ]
 }

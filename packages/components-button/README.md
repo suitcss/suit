@@ -1,14 +1,14 @@
-# SUIT components-button
+# SUIT CSS components-button
 
-A SUIT component that provides a structural UI button template to be extended
-with modifiers.
+A SUIT CSS component that provides a structural UI button template to be
+extended with modifiers.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](https://github.com/component/component/): `component install suitcss/components-button`
 * [npm](http://npmjs.org/): `npm install suitcss-components-button`
+* [Component(1)](https://github.com/component/component/): `component install suitcss/components-button`
 * [Bower](http://bower.io/): `bower install suit-components-button`
 
 ## Available classes
@@ -47,6 +47,8 @@ The CSS is focused on common structural requirements for buttons. You can build
 your application-specific theme styles in your app. For example:
 
 ```css
+@import "suitcss-components-button";
+
 /**
  * Modifier: default buttons
  */
@@ -109,7 +111,7 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
 
 ## Browser support
 

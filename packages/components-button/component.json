@@ -1,13 +1,10 @@
 {
-  "name": "components-button",
+  "name": "suitcss-components-button",
   "repo": "suitcss/components-button",
   "version": "3.2.0",
   "styles": [
-    "button.css"
+    "lib/button.css"
   ],
-  "development": {
-    "suitcss/components-test": "*"
-  },
   "author": "Nicolas Gallagher",
   "license": "MIT"
 }
