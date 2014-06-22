@@ -2,25 +2,34 @@
   "name": "suitcss-components-arrange",
   "description": "SUIT CSS component for horizontal arrangement",
   "version": "0.4.0",
-  "style": "arrange.css",
+  "style": "index.css",
   "files": [
-    "arrange.css",
-    "component.json"
+    "index.css",
+    "lib"
   ],
   "devDependencies": {
-    "component": "0.19.x",
-    "component-builder-suit": "0.3.x",
-    "suitcss-preprocessor": "0.2.x"
+    "suitcss-utils-display": "~0.4.0",
+    "suitcss-utils-size": "~0.7.0",
+    "suitcss-utils-text": "~0.4.0",
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "~0.3.0"
   },
   "scripts": {
-    "build": "npm run component && npm run preprocess",
-    "build-test": "npm run component-dev && npm run preprocess",
-    "component": "component install && component build --use component-builder-suit",
-    "component-dev": "component install --dev && component build --dev --use component-builder-suit",
-    "preprocess": "suitcss build/build.css build/build.css"
+    "build": "npm run setup && npm run preprocess",
+    "build-test": "npm run setup && npm run preprocess-test",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss test/test.css build/test.css",
+    "setup": "npm install && mkdir -p build"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/suitcss/components-arrange.git"
-  }
+  },
+  "keywords": [
+    "browser",
+    "css-components",
+    "arrange",
+    "suitcss",
+    "style"
+  ]
 }

@@ -1,14 +1,14 @@
 {
-  "name": "suit-components-arrange",
+  "name": "suitcss-components-arrange",
   "version": "0.4.0",
   "author": "Nicolas Gallagher",
-  "main": "arrange.css",
+  "main": "lib/arrange.css",
   "ignore": [
     ".*",
     "CHANGELOG.md",
     "component.json",
     "package.json",
-    "test.html",
+    "test",
     "build",
     "components"
   ]
