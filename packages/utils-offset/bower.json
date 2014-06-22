@@ -1,10 +1,10 @@
 {
-  "name": "suit-utils-offset",
+  "name": "suitcss-utils-offset",
   "version": "0.4.2",
   "author": "Nicolas Gallagher",
   "dependencies": {
-    "suit-utils-before": "0.2.x",
-    "suit-utils-after": "0.2.x"
+    "suit-utils-before": "~0.3.0",
+    "suit-utils-after": "~0.3.0"
   },
   "ignore": [
     ".*",

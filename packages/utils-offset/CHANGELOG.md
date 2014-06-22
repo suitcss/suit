@@ -1,5 +1,10 @@
 === HEAD
 
+* Update to 'utils-after' 0.3.0.
+* Update to 'utils-before' 0.3.0.
+* npm-based workflow.
+* Add new preprocessor build tools.
+
 === 0.4.2 (March 26, 2014)
 
 * Update to 'utils-after' 0.2.2.
