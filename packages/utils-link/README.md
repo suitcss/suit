@@ -31,7 +31,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 
 ## Usage
 
-Please refer to the README for [SUIT utils](https://github.com/suitcss/utils/)
+Please refer to the README for [SUIT CSS utils](https://github.com/suitcss/utils/)
 
 ## Testing
 
