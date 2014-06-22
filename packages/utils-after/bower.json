@@ -1,18 +1,18 @@
 {
-  "name": "suit-utils-after",
+  "name": "suitcss-utils-after",
   "version": "0.2.2",
   "author": "Nicolas Gallagher",
   "main": [
-    "after.css",
-    "after-sm.css",
-    "after-md.css",
-    "after-lg.css"
+    "lib/after.css",
+    "lib/after-sm.css",
+    "lib/after-md.css",
+    "lib/after-lg.css"
   ],
   "ignore": [
     ".*",
     "CHANGELOG.md",
     "component.json",
     "package.json",
-    "test.html"
+    "test"
   ]
 }
