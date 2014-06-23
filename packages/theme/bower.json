@@ -1,7 +1,13 @@
 {
-  "name": "suit-theme",
-  "version": "0.0.0",
-  "main": "theme.css",
+  "name": "suitcss-theme",
+  "version": "0.1.0",
+  "main": [
+    "lib/theme.css",
+    "lib/theme-map.css"
+  ],
+  "dependencies": {
+    "suit": "~0.5.0"
+  },
   "ignore": [
     "build",
     "components",
