@@ -1,5 +1,6 @@
 === HEAD
 
+* Update documentation.
 * Fix npm support.
 * Add support for `@custom-media`.
 * Use new W3C CSS variables syntax.
