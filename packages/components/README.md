@@ -1,15 +1,15 @@
-# SUIT components
+# SUIT CSS components
 
-The full collection of SUIT CSS component classes. Requires
+The full collection of SUIT CSS components. Requires
 [suitcss-preprocessor](https://github.com/suitcss/preprocessor) or similar in
 your build process, if you choose to use the packages directly.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/components`
 * [npm](http://npmjs.org/): `npm install suitcss-components`
+* [Component(1)](http://component.io/): `component install suitcss/components`
 * [Bower](http://bower.io/): `bower install suit-components`
 * [Download](https://github.com/suitcss/components/releases) (compiled)
 
@@ -40,4 +40,4 @@ npm run build
 * Opera (latest)
 * Firefox 4+
 * Safari 5+
-* Internet Explorer 8+
+* Internet Explorer 9+

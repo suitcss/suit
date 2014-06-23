@@ -1,5 +1,7 @@
 === HEAD
 
+* Fix npm support.
+* Add new preprocessor build tools.
 * Update 'components-arrange' to ~0.5.1.
 * Update 'components-button' to ^3.3.0.
 * Update 'components-flex-embed' to ^1.7.0.
