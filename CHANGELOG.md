@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.5.0 (June 23, 2014)
+
 * Update documentation.
 * Fix npm support.
 * Add support for `@custom-media`.
@@ -9,7 +11,7 @@
 * Update 'components' to 0.2.0.
 * Remove 'components-button-group'.
 
-=== 0.4.0 (April 7, 2013)
+=== 0.4.0 (April 7, 2014)
 
 * Add npm support.
 * Update 'base' to 0.4.0.
