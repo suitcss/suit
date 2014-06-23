@@ -1,11 +1,11 @@
-# SUIT utilities
+# SUIT CSS utilities
 
 Utility classes map to fixed, low-level, structural and positional traits.
 These classes can be used in a component's HTML. Because utilities are so
 focused, they will generally use `!important` to ensure their styles are always
 applied.
 
-(Read about SUIT's [naming conventions](naming-conventions.md).)
+(Read about SUIT CSS's [naming conventions](naming-conventions.md).)
 
 ## Why to use utilities
 
@@ -16,18 +16,17 @@ can help to reduce repetition and provide consistent implementations.
 ```html
 <div class="u-cf">
   <p class="u-textTruncate">{{text}}</p>
-  <img class="u-pullLeft" src="{{src}}" alt="">
-  <img class="u-pullLeft" src="{{src}}" alt="">
-  <img class="u-pullLeft" src="{{src}}" alt="">
+  <img class="u-floatLeft" src="{{src}}" alt="">
+  <img class="u-floatLeft" src="{{src}}" alt="">
+  <img class="u-floatLeft" src="{{src}}" alt="">
 </div>
 ```
 
-They can be used in dynamically generated DOM adjustments. Some utilities apply
-only a single declaration, so why not use inline styles? Even here, small
-utilities are preferred because their values can be preprocessed (e.g.,
-generating RTL style sheets) or adjusted to viewport dimensions, the scope of
-styles not contained in components can be tightly defined, and code is a little
-easier to read.
+Some utilities apply only a single declaration, so why not use inline styles?
+Even here, small utilities are preferred because their values can be
+preprocessed (e.g., generating RTL style sheets) or adjusted to viewport
+dimensions. The scope of styles not contained in components can be tightly
+defined, and code is a little easier to read.
 
 ## How to use utilities
 
@@ -47,7 +46,7 @@ and utilities can be used alongside component classes.
 
 Utilities are grouped by type. The names of utilities with similar concerns
 usually start with a common string, e.g., `u-textCenter`, `u-textTruncate`;
-`u-linkClean`, `u-linkBlock`; `u-isHidden`, `u-isHiddenVisually`.
+`u-linkClean`, `u-linkBlock`.
 
 Any classes with terse names, e.g., `u-cf` and `u-nbfc`, are either
 particularly abstract or very commonly used utilities with otherwise

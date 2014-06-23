@@ -1,4 +1,4 @@
-# SUIT components
+# SUIT CSS components
 
 SUIT CSS is designed for styling reusable, composable components. The benefits
 are most apparent in a system that considers components to be the building
@@ -29,23 +29,24 @@ could yield the following HTML:
 </article>
 ```
 
-SUIT helps to partially isolate the CSS used in the `Photo` component's
+SUIT CSS helps to partially isolate the CSS used in the `Photo` component's
 implementation. In doing so, it makes styling simpler by reducing the amount of
 styling entanglement between components, and prevents styles from leaking
 outside the component.
 
-(Read about SUIT's [naming conventions](naming-conventions.md).)
+(Read about SUIT CSS's [naming conventions](naming-conventions.md).)
 
 ## Component scope
 
 The component's core class name (e.g., `ComponentName`) reserves a namespace
-that can only be used by that component. This can be enforced using
+that can only be used by that component. This can be enforced using with tools
+(e.g. [suitcss-preprocessor](https://github.com/suitcss/preprocessor) or
 [rework-suit-conformance](https://github.com/suitcss/rework-suit-conformance)
 in your build process.
 
 **All selectors in a component file must start with the component's
-namespace**. For example, a component called `MyComponent` could have CSS like this,
-where every selector starts with the string `MyComponent`.
+namespace**. For example, a component called `MyComponent` could have the
+following CSS, where every selector starts with the string `MyComponent`.
 
 ```css
 /** @define MyComponent */
@@ -90,8 +91,8 @@ component name in the variable name:
 This allows a theme to override the defaults if desired.
 
 Avoid coupling or entangling components, even if that means the code is not as
-DRY as you think it should be. Isolation is more important that reuse when it
-comes to preventing avoidable complexity.
+DRY as you think it should be. Isolation prevents avoidable complexity and is
+an important part of robust reuse.
 
 ## One pattern, one component
 
@@ -117,12 +118,14 @@ should seek to answer the following questions:
 authoring a component to be full-width or inline, it can better adapt to the
 dimensions of an ancestral context.
 
-## Nested components
+## Styling dependencies
 
-**A component should wrap a nested component in an element.** This wrapping
-element can be used to control dimensions, margins, and positioning of the
-nested component _without directly modifying it_. Inheritable styles can also
-be applied to this wrapper.
+**A component should not know about the implementation of its dependencies**.
+The appearance of dependencies must be configured using the interface they provide.
+
+Controlling dimensions, margins, position, and inheritable styles of a
+component can be done _indirectly_. Add a class to its root element, or wrap
+it in another element.
 
 ```css
 /* Excerpt */
@@ -131,7 +134,14 @@ be applied to this wrapper.
   /* ... */
 }
 
-/* Wraps nested `Button` component */
+/* Attaches to a nested component */
+
+.Excerpt-button {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Wraps a nested component */
 
 .Excerpt-wrapButton {
   display: inline-block;
@@ -143,28 +153,10 @@ be applied to this wrapper.
 <article class="Excerpt u-cf">
   {{! other implementation details }}
 
+  <read-button class="Excerpt-button">Read more</read-button>
+
   <div class="Excerpt-wrapButton">
-    <button class="Button Button--default" type="button">{{button_text}}</button>
+    <read-button>Read more</read-button>
   </div>
 </article>
-```
-
-## Directly styling nested components
-
-**Directly styling nested components causes entanglement, but is unavoidable in
-some cases.** If you need to add custom styles directly to a nested component,
-the preferred pattern is shown below. It scopes the changes to affect only
-`Icon` components within the `Excerpt-wrapButton` part of the `Excerpt`
-component.
-
-```css
-/* in component file for `Excerpt` */
-
-.Excerpt-wrapButton .Icon {
-  display: none;
-}
-
-.Excerpt-wrapButton:hover .Icon {
-  display: block;
-}
 ```

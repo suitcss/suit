@@ -1,4 +1,4 @@
-# SUIT HTML/CSS code style
+# HTML/CSS code style
 
 ## Table of contents
 
@@ -208,9 +208,6 @@ comment patterns.
 Example:
 
 ```css
-/* Section comment block
-   ========================================================================== */
-
 /**
  * Short description using Doxygen-style comment format
  *
@@ -232,9 +229,11 @@ Example:
  *    comment with an inline comment corresponding to the lists number.
  */
 
+/* Thematic section comment block
+   ========================================================================== */
+
 /* Basic comment */
 ```
-
 
 <a name="css-format"></a>
 ### 4.2. Format
@@ -331,7 +330,7 @@ readability and produce more useful diffs.
 An example of various conventions.
 
 ```css
-/** @define Grid */
+/** @define Grid; use strict */
 
 /**
  * Column layout with horizontal scroll.
