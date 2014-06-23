@@ -3,11 +3,10 @@
   "repo": "suitcss/components",
   "version": "0.1.0",
   "dependencies": {
-    "suitcss/components-arrange": "0.4.0",
-    "suitcss/components-button": "3.2.0",
-    "suitcss/components-button-group": "2.2.0",
-    "suitcss/components-flex-embed": "1.6.0",
-    "suitcss/components-grid": "1.3.0"
+    "suitcss/components-arrange": "0.5.1",
+    "suitcss/components-button": "3.3.0",
+    "suitcss/components-flex-embed": "1.7.0",
+    "suitcss/components-grid": "1.4.0"
   },
   "author": "Nicolas Gallagher",
   "license": "MIT"

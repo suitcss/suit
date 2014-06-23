@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "author": "Nicolas Gallagher",
   "dependencies": {
-    "suit-components-arrange": "~0.4.0",
-    "suit-components-button": "~3.2.0",
-    "suit-components-button-group": "~2.2.0",
-    "suit-components-flex-embed": "~1.6.0",
-    "suit-components-grid": "~1.3.0"
+    "suit-components-arrange": "~0.5.1",
+    "suit-components-button": "~3.3.0",
+    "suit-components-flex-embed": "~1.7.0",
+    "suit-components-grid": "~1.4.0"
   }
 }

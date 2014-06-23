@@ -17,7 +17,6 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 * [components-arrange](https://github.com/suitcss/components-arrange/)
 * [components-button](https://github.com/suitcss/components-button/)
-* [components-button-group](https://github.com/suitcss/components-button-group/)
 * [components-flex-embed](https://github.com/suitcss/components-flex-embed/)
 * [components-grid](https://github.com/suitcss/components-grid/)
 
