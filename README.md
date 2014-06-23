@@ -148,4 +148,4 @@ npm run build
 * Opera
 * Firefox
 * Safari 6+
-* Internet Explorer 8+
+* Internet Explorer 9+
