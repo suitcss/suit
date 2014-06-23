@@ -1,6 +1,6 @@
 # API
 
-The complete API provided by official SUIT packages. See the README of
+The complete API provided by official SUIT CSS packages. See the README of
 individual packages for details of their API.
 
 ## Utilities
@@ -49,10 +49,13 @@ individual packages for details of their API.
 #### Classes
 
 * `u-block`
+* `u-hidden`
+* `u-hiddenVisually`
 * `u-inline`
 * `u-inlineBlock`
 * `u-table`
 * `u-tableCell`
+* `u-tableRow`
 
 ### [Layout](https://github.com/suitcss/utils-layout)
 
@@ -61,8 +64,8 @@ individual packages for details of their API.
 * `u-cf`
 * `u-nbfc`
 * `u-nbfcAlt`
-* `u-pullLeft`
-* `u-pullRight`
+* `u-floatLeft`
+* `u-floatRight`
 
 ### [Link](https://github.com/suitcss/utils-link)
 
@@ -71,7 +74,6 @@ individual packages for details of their API.
 * `u-linkBlock`
 * `u-linkClean`
 * `u-linkComplex` / `u-linkComplexTarget`
-* `u-linkPseudo`
 
 #### Variables
 
@@ -108,19 +110,6 @@ individual packages for details of their API.
 
 …and responsive variants `u-sm-*`, `u-md-*`, and `u-lg-*`.
 
-### [State](https://github.com/suitcss/utils-state)
-
-#### Classes
-
-* `u-isActionable`
-* `u-isDisabled`
-* `u-isDraggable`
-* `u-isHidden`
-* `u-isHiddenVisually`
-* `u-isInvisible`
-* `u-isShown`
-* `u-isVisible`
-
 ### [Text](https://github.com/suitcss/utils-text)
 
 #### Classes
@@ -129,6 +118,7 @@ individual packages for details of their API.
 * `u-textCenter`
 * `u-textColorInherit`
 * `u-textLeft`
+* `u-textKren`
 * `u-textNoWrap`
 * `u-textRight`
 * `u-textTruncate`
@@ -157,7 +147,6 @@ individual packages for details of their API.
 #### Classes
 
 * `Button`
-* `Button--full`
 * `Button.is-disabled`
 
 #### Variables
@@ -168,19 +157,6 @@ individual packages for details of their API.
 * `--font-Button`
 * `--padding-Button`
 * `--opacity-Button-disabled`
-
-### [Button group](https://github.com/suitcss/components-button-group)
-
-#### Classes
-
-* `ButtonGroup`
-* `ButtonGroup--hz`
-* `ButtonGroup--borderCollapse` (via plugin)
-* `ButtonGroup-item`
-
-#### Variables
-
-* `--font-size-ButtonGroup`
 
 ### [Flexible embeds](https://github.com/suitcss/components-flex-embed)
 
