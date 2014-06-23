@@ -1,13 +1,12 @@
 === HEAD
 
+* Fix npm support.
+* Add support for `@custom-media`.
 * Use new W3C CSS variables syntax.
-* Update 'base' to 0.5.0.
-* Update 'utils' to 0.9.0.
-* Update 'components-arrange' to 0.4.0.
-* Update 'components-button' to 3.2.0.
-* Update 'components-button-group' to 2.2.0.
-* Update 'components-flex-embed' to 1.6.0.
-* Update 'components-grid' to 1.3.0.
+* Update 'base' to 0.6.0.
+* Update 'utils' to 0.10.0.
+* Update 'components' to 0.2.0.
+* Remove 'components-button-group'.
 
 === 0.4.0 (April 7, 2013)
 
