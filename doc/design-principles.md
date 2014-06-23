@@ -1,78 +1,78 @@
-# SUIT design principles
+# SUIT CSS design principles
 
-CSS for building self-contained, composable, configurable UI components.
+SUIT CSS is a methodology focused on making CSS better to work with in
+component-based development.
 
-SUIT's conventions and approach are an attempt statisfy the following system
-design characteristics:
+A component-based system allows for the implementation and composition of
+loosely coupled, independent units into well-defined composite objects.
+Components are encapsulated but are able to interoperate via interfaces/events.
 
-1. [Single responsibility principle](#single-responsibility-principle)
-2. [Extension over direct modification](#extension)
-3. [Composition over inheritance](#composition)
-4. [Low coupling](#low-coupling)
+1. [Modularity](#modularity)
+2. [Cohesion](#cohesion)
+3. [Composition and configuration](#composition)
+4. [Loose coupling](#coupling)
 5. [Soft encapsulation](#encapsulation)
 6. [Documentation](#documentation)
 
-<a name="single-responsibility-principle"></a>
-## Single responsibility principle
+<a name="modularity"></a>
+## Modularity
 
-Each component should have a single responsibility. It should provide HTML,
+Each component should have a single focus and contain everything necessary to
+realise a specific part of the UI. Components may contain HTML,
 CSS, JavaScript, and associated assets without making assumptions about the
 outer rendering context.
 
-<a name="extension"></a>
-## Extension over direct modification
+<a name="cohesion"></a>
+## Cohesion
 
-Extending a component's presentation – which additional classes – is preferred
-to making direct modifications to selectors that it has defined for itself.
-This helps limit local complexity.
-
-Limit the total visual variation within a component. Modifier classes should
-not radically change the component or require the consumer of the component to
-change their expectations of how it will function.
+All the functionality and presentation inside each component is semantically
+related. Component's do not have direct influence over each other.
 
 <a name="composition"></a>
-## Composition over inheritance
+## Composable and configurable
 
 Composability is concerned with the inter-relationships of components.
 Composable systems have components that can be assembled in various
 combinations, as required.
 
+Configuration is done via interfaces that are provided and used by components.
+
 <a name="coupling"></a>
-## Low coupling
+## Loose coupling
 
-In general, look to apply classes directly
-to the elements you want to style.
+Components should not directly modify the presentation or behaviour of their
+dependencies. Relying on interfaces and events for inter-component
+communication results in a loose coupling.
 
-Don't couple your styles to particular DOM elements or to a particular DOM
-structure (i.e., specific siblings, or a reliance on a node always being a
-child of a component). Directly apply styles to elements using styles whenever
-possible.
+Attempting to reuse too much code across components can increase their
+coupling. Isolation is more important than avoiding the repetition of
+superficially similar code.
 
 <a name="encapsulation"></a>
 ## Soft encapsulation
+
+The implementation of a component should not be exposed to other components.
+For example: your component should not leak styles into the HTML tree fragments
+of other components; a component's HTML should not be directly included in the
+HTML for another component.
 
 Complexity is a significant problem for large, adaptive applications. The more
 you can reduce the entanglement of your components, the easier it is to reason
 about the system.
 
-Therefore, you should strongly avoid attempting to reuse too much code across
-components. Prefer isolation over avoiding repetition of low-level
-presentation.
-
-Components should not have to know about the existence or appearance of their
-children (that aren't explicit dependencies of the components, and considered
-part of their implementation).
-
-Strongly avoid leaking styles downstream into nested components.
-
 <a name="documentation"></a>
 ## Documentation
 
-Write small, independent components that are heavily commented to describe how
+Write small, independent components that are well documented to describe how
 the components should be used, and why specific CSS properties are needed in
 the implementation. Do not assume that CSS is self-documenting.
 
 ## Related reading
 
 * [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
+* [Cohesion](http://en.wikipedia.org/wiki/Cohesion_(computer_science))
+* [Component-based software engineering](http://en.wikipedia.org/wiki/Component-based_software_engineering)
+* [Encapsulation](http://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming))
+* [Functional programming](http://en.wikipedia.org/wiki/Functional_programming)
+* [Single responsibility principle](http://en.wikipedia.org/wiki/Single_responsibility_principle)
 * [SOLID CSS](http://blog.millermedeiros.com/solid-css/)

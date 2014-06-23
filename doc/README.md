@@ -1,4 +1,4 @@
-# SUIT documentation
+# SUIT CSS documentation
 
 **Table of contents**
 
