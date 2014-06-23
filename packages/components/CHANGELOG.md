@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.0 (June 22, 2014)
+
 * Fix npm support.
 * Add new preprocessor build tools.
 * Update 'components-arrange' to ~0.5.1.
