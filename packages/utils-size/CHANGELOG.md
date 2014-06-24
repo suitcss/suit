@@ -1,5 +1,7 @@
 === HEAD
 
+Add `.css` extension to imports for interoperability.
+
 === 0.7.0 (June 21, 2014)
 
 * npm-based workflow.
