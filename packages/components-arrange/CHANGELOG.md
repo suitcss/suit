@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.5.2 (June 24, 2014)
+
 Add `.css` extension to imports for interoperability.
 
 === 0.5.1 (June 21, 2014)
