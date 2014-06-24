@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils-align",
   "description": "Vertical alignment utilities for SUIT CSS",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "style": "index.css",
   "files": [
     "index.css",
