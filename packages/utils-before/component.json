@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils-before",
   "repo": "suitcss/utils-before",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "styles": [
     "lib/before.css",
     "lib/before-sm.css",
