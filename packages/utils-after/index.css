@@ -1,5 +1,4 @@
-@import "./lib/after";
-@import "./lib/after-sm";
-@import "./lib/after-md";
-@import "./lib/after-lg";
-
+@import "./lib/after.css";
+@import "./lib/after-sm.css";
+@import "./lib/after-md.css";
+@import "./lib/after-lg.css";
