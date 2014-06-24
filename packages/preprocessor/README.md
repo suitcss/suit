@@ -29,11 +29,12 @@ Usage: suitcss [<input>] [<output>]
 
 Options:
 
-  -c, --compress compress output
-  -h, --help     output usage information
-  -V, --version  output the version number
-  -w, --watch    watch the input file for changes
-  -v, --verbose  log verbose output for debugging
+  -c, --compress             compress output
+  -h, --help                 output usage information
+  -i, --import-root [path]   the root directory for imported css files
+  -v, --version              output the version number
+  -w, --watch                watch the input file for changes
+  -v, --verbose              log verbose output for debugging
 
 Examples:
 
@@ -53,16 +54,17 @@ Examples:
 var preprocessor = require('suitcss-preprocessor');
 var fs = require('fs');
 
-var css = fs.readFileSync('index.css', 'utf8');
-var options = {
-  dir: "src/components",
-  source: "index.css",
+var css = fs.readFileSync('src/components/index.css', 'utf8');
+
+var bundle = preprocessor(css, {
+  alias: {
+    'components': 'src/components'
+  },
+  source: 'src/components/index.css',
   sourcemap: true
-}
+});
 
-var bundle = preprocessor(css, options);
-
-fs.writeFileSync('bundle.css', bundle);
+fs.writeFileSync('build/bundle.css', bundle);
 ```
 
 ## Acknowledgements
