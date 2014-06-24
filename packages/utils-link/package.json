@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils-link",
   "description": "Link utilities for SUIT CSS",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "style": "index.css",
   "files": [
     "index.css",
