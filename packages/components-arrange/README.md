@@ -27,16 +27,24 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 
 ## Configurable variables
 
-* `--gutter-size-Arrange`: the width of the gutter applied by the
+* `--Arrange-gutter-size`: the width of the gutter applied by the
   `Arrange--withGutter` modifier class.
 
 ## Usage
 
 N.B. This component affects the width of images in cells.
 
-Like many SUIT CSS components, `Arrange` relies on a core component class
-that is extended by additional modifier classes. This component works best for
-small-scale UI layout, for example, image-content pairs:
+`Arrange` must only contain `Arrange-sizeFit` and `Arrange-sizeFill` child
+nodes.
+
+It's recommended that you only use one `Arrange-sizeFill` per component
+instance (unless using the `Arrange--equal` modifier; see below). The first
+`Arrange-sizeFill` in the component's source order will not share the extra
+space with any subsequent nodes of that class.
+
+`Arrange` relies on a core component class that is extended by additional
+modifier classes. This component works best for small-scale UI layout, for
+example, image-content pairs:
 
 ```html
 <div class="Arrange Arrange--middle Arrange--withGutter">

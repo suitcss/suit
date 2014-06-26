@@ -1,7 +1,7 @@
 /** @define Arrange */
 
 :root {
-  --gutter-size-Arrange: 10px;
+  --Arrange-gutter-size: 10px;
 }
 
 /**
@@ -9,28 +9,6 @@
  * specify whether a cell should be wide enough to fit its content, or take up
  * the remaining space in the row. It's also possible to give all cells an
  * equal width, and to control their vertical alignment.
- *
- * `Arrange` must only contain 'Arrange-sizeFit' and 'Arrange-sizeFill' child
- * nodes.
- *
- * It's recommended that you only use one 'Arrange-sizeFill' per component
- * instance (unless using the `Arrange--equal` modifier; see below). The
- * first 'Arrange-sizeFill' in the component's source order will not share the
- * extra space with any subsequent nodes of that class.
- *
- * Example HTML:
- *
- * <div class="Arrange [Arrange--middle|Arrange--bottom|Arrange--equal] [Arrange--withGutter]">
- *   <div class="Arrange-sizeFit">
- *     [content]
- *   </div>
- *   <div class="Arrange-sizeFill">
- *     [content]
- *   </div>
- *   <div class="Arrange-sizeFit">
- *     [content]
- *   </div>
- * </div>
  */
 
 /**
@@ -153,10 +131,10 @@
  */
 
 .Arrange--withGutter {
-  margin: 0 calc(-0.5 * var(--gutter-size-Arrange));
+  margin: 0 calc(-0.5 * var(--Arrange-gutter-size));
 }
 
 .Arrange--withGutter > .Arrange-sizeFit,
 .Arrange--withGutter > .Arrange-sizeFill {
-  padding: 0 calc(0.5 * var(--gutter-size-Arrange));
+  padding: 0 calc(0.5 * var(--Arrange-gutter-size));
 }
