@@ -1,6 +1,6 @@
 {
   "name": "suitcss-components-button",
-  "version": "3.3.1",
+  "version": "4.0.0",
   "author": "Nicolas Gallagher",
   "main": "lib/button.css",
   "ignore": [
