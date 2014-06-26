@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.7.0 (June 26, 2014)
+
 * Change variable names.
 * Add `.css` extension to imports for interoperability.
 
