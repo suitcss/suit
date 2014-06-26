@@ -1,9 +1,9 @@
 :root {
-  --background-base: inherit;
-  --color-base: inherit;
-  --font-base: 16px sans-serif;
-  --link-color-base: #069;
-  --link-color-hover-base: var(--link-color-base);
+  --base-background: inherit;
+  --base-color: inherit;
+  --base-font: 16px sans-serif;
+  --base-link-color: #069;
+  --base-link-color-hover: var(--base-link-color);
 }
 
 /**
@@ -13,20 +13,20 @@
  */
 
 html {
-  background: var(--background-base);
-  color: var(--color-base);
-  font: var(--font-base);
+  background: var(--base-background);
+  color: var(--base-color);
+  font: var(--base-font);
 }
 
 a {
-  color: var(--link-color-base);
+  color: var(--base-link-color);
   text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: var(--link-color-hover-base);
+  color: var(--base-link-color-hover);
   text-decoration: underline;
 }
 
