@@ -14,25 +14,24 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 
 ## Available classes
 
-* `FlexEmbed` - The core, responsive-embed component with 1:1 aspect ratio
-* `FlexEmbed--3by1` - The modifier class for 3:1 aspect ratio embed
-* `FlexEmbed--2by1` - The modifier class for 2:1 aspect ratio embed
-* `FlexEmbed--16by9` - The modifier class for 16:9 aspect ratio embed
-* `FlexEmbed--4by3` - The modifier class for 4:3 aspect ratio embed
-* `FlexEmbed-item` - The descendent class for the media that is being embedded
-  (optional for `iframe`, `embed`, and `object` elements)
+* `FlexEmbed` - The root node.
+* `FlexEmbed-ratio` - The element that provides the aspect ratio (1:1 by default).
+* `FlexEmbed-ratio--3by1` - The modifier class for 3:1 aspect ratio embed.
+* `FlexEmbed-ratio--2by1` - The modifier class for 2:1 aspect ratio embed,
+* `FlexEmbed-ratio--16by9` - The modifier class for 16:9 aspect ratio embed.
+* `FlexEmbed-ratio--4by3` - The modifier class for 4:3 aspect ratio embed.
+* `FlexEmbed-content` - The descendent class for the content that is being displayed.
 
 ## Usage
 
-Examples:
+Example:
 
 ```html
-<div class="FlexEmbed FlexEmbed--16by9">
-  [iframe|object|embed]
-</div>
-
-<div class="FlexEmbed FlexEmbed--4by3">
-  <img class="FlexEmbed-item" src="…" alt="">
+<div class="FlexEmbed">
+  <div class="FlexEmbed-ratio FlexEmbed-ratio--16by9"></div>
+  <div class="FlexEmbed-content">
+    <!-- child content -->
+  </div>
 </div>
 ```
 
@@ -44,7 +43,7 @@ ratio:
  * Modifier: 47:20 aspect ratio
  */
 
-.FlexEmbed--47by20:before {
+.FlexEmbed-ratio--47by20 {
   padding-bottom: 42.55%;
 }
 ```
@@ -53,8 +52,11 @@ Alternatively, aspect ratios can be calculated programmatically and the
 corresponding `padding-bottom` value applied using an inline style.
 
 ```html
-<div class="FlexEmbed" style="padding-bottom:{{percentage}}%">
-  [iframe|object|embed]
+<div class="FlexEmbed">
+  <div class="FlexEmbed-ratio" style="padding-bottom:{{percentage}}%"></div>
+  <div class="FlexEmbed-content">
+    <!-- child content -->
+  </div>
 </div>
 ```
 

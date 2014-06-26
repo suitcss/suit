@@ -1,5 +1,8 @@
 === HEAD
 
+* No longer affects the styles of child images / embeds.
+* Fix dynamic aspect ratio support.
+
 === 1.7.1 (June 24, 2014)
 
 * Add `.css` extension to imports for interoperability.
