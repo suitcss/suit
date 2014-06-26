@@ -22,12 +22,12 @@ JavaScript event handlers from firing.
 
 ## Configurable variables
 
-* `--border-width-Button`
-* `--border-color-Button`
-* `--color-Button`
-* `--font-Button`
-* `--padding-Button`
-* `--opacity-Button-disabled`
+* `--Button-border-width`
+* `--Button-border-color`
+* `--Button-color`
+* `--Button-font`
+* `--Button-padding`
+* `--Button-disabled-opacity`
 
 ## Use
 
@@ -54,20 +54,20 @@ your application-specific theme styles in your app. For example:
  */
 
 .Button--default {
+  background-color: #eee;
+  color: #444;
   border-color: #d9d9d9 #d9d9d9 #ccc;
   border-radius: 2px;
-  color: #444;
-  background-color: #eee;
 }
 
 .Button--default:hover,
 .Button--default:focus,
 .Button--default:active,
 .Button--default.is-pressed {
-  border-color: #c6c6c6 #c6c6c6 #bbb;
-  color: #222;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   background-color: #f5f5f5;
+  color: #222;
+  border-color: #c6c6c6 #c6c6c6 #bbb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .Button--default:focus {
@@ -77,8 +77,8 @@ your application-specific theme styles in your app. For example:
 
 .Button--default:active,
 .Button--default.is-pressed {
-  box-shadow: inset 0 1px 2px rgba(0,0,0, 0.2);
   background-color: #ccc;
+  box-shadow: inset 0 1px 2px rgba(0,0,0, 0.2);
 }
 
 /**
