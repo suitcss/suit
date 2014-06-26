@@ -1,6 +1,6 @@
 {
   "name": "suitcss-components-arrange",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "author": "Nicolas Gallagher",
   "main": "lib/arrange.css",
   "ignore": [

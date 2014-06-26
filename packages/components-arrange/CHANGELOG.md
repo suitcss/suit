@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.6.0 (June 26 2014)
+
 * Change variable names.
 
 === 0.5.2 (June 24, 2014)
