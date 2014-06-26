@@ -1,8 +1,8 @@
 /** @define Grid; use strict */
 
 :root {
-  --font-size-Grid: 1rem;
-  --gutter-size-Grid: 20px;
+  --Grid-font-size: 1rem;
+  --Grid-gutter-size: 20px;
 }
 
 /**
@@ -10,15 +10,6 @@
  *
  * DO NOT apply dimension or offset utilities to the `Grid` element. All cell
  * widths and offsets should be applied to child grid cells.
- *
- * Example uses:
- *
- * <div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--withGutter]">
- *   <div class="Grid-cell [Grid-cell--center] u-size1of2"></div>
- *   <div class="Grid-cell u-size1of2"></div>
- *   <div class="Grid-cell u-size1of3"></div>
- *   <div class="Grid-cell u-size1of3"></div>
- * </div>
  */
 
 /* Grid container
@@ -83,11 +74,11 @@
  */
 
 .Grid--withGutter {
-  margin: 0 calc(-0.5px * var(--gutter-size-Grid));
+  margin: 0 calc(-0.5px * var(--Grid-gutter-size));
 }
 
 .Grid--withGutter > .Grid-cell {
-  padding: 0 calc(0.5px * var(--gutter-size-Grid));
+  padding: 0 calc(0.5px * var(--Grid-gutter-size));
 }
 
 /* Grid cell
@@ -107,7 +98,7 @@
 .Grid-cell {
   box-sizing: border-box;
   display: inline-block; /* 1 */
-  font-size: var(--font-size-Grid); /* 2 */
+  font-size: var(--Grid-font-size); /* 2 */
   margin: 0;
   padding: 0;
   text-align: left; /* 3 */

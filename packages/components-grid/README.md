@@ -41,8 +41,8 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 
 ## Configurable variables
 
-* `--font-size-Grid`: the font-size to use within the Grid (defaults to 1rem).
-* `--gutter-size-Grid`: the width of the gutter applied by the `Grid--withGutter` modifier class.
+* `--Grid-font-size`: the font-size to use within the Grid (defaults to 1rem).
+* `--Grid-gutter-size`: the width of the gutter applied by the `Grid--withGutter` modifier class.
 
 ## Use
 

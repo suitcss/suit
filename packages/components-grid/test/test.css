@@ -5,4 +5,4 @@
 @import "suitcss-components-test";
 @import "suitcss-utils-size";
 @import "suitcss-utils-offset";
-@import "./index.css";
+@import "../index.css";
