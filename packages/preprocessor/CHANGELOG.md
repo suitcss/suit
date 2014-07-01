@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.4.0 (July 1, 2014)
+
 * Update 'rework-suit' to ^4.0.0.
 
 === 0.3.0 (June 21, 2014)
