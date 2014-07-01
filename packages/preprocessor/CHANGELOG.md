@@ -1,5 +1,7 @@
 === HEAD
 
+* Update 'rework-suit' to ^4.0.0.
+
 === 0.3.0 (June 21, 2014)
 
 * Add 'import-root' CLI option.
