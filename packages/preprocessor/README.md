@@ -32,9 +32,9 @@ Options:
   -c, --compress             compress output
   -h, --help                 output usage information
   -i, --import-root [path]   the root directory for imported css files
-  -v, --version              output the version number
-  -w, --watch                watch the input file for changes
   -v, --verbose              log verbose output for debugging
+  -V, --version              output the version number
+  -w, --watch                watch the input file for changes
 
 Examples:
 
