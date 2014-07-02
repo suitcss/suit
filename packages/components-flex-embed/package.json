@@ -1,7 +1,7 @@
 {
   "name": "suitcss-components-flex-embed",
   "description": "CSS for responsive, intrinsic ratio embeds",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "style": "index.css",
   "files": [
     "index.css",
