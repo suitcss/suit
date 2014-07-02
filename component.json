@@ -3,9 +3,9 @@
   "repo": "suitcss/suit",
   "version": "0.5.0",
   "dependencies": {
-    "suitcss/base": "0.6.0",
+    "suitcss/base": "0.7.0",
     "suitcss/utils": "0.10.0",
-    "suitcss/components": "0.2.0"
+    "suitcss/components": "0.3.0"
   },
   "author": "Nicolas Gallagher",
   "license": "MIT"
