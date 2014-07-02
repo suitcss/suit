@@ -13,7 +13,7 @@
     "suitcss-components-grid": "^2.0.0"
   },
   "devDependencies": {
-    "suitcss-preprocessor": "~0.3.0"
+    "suitcss-preprocessor": "~0.4.0"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
