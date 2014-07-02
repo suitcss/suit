@@ -79,11 +79,11 @@ component name in the variable name:
 /** @define MyComponent */
 
 :root {
-  --border-width-MyComponent: 5px;
+  --MyComponent-border-width: 5px;
 }
 
 .MyComponent {
-  border-width: var(border-width-MyComponent);
+  border-width: var(--MyComponent-border-width);
   /* ... */
 }
 ```

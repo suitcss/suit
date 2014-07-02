@@ -49,16 +49,16 @@ CSS:
  */
 
 :root {
-  --padding-Excerpt: 20px;
-  --border-color-Excerpt-thumbnail: #000;
+  --Excerpt-padding: 20px;
+  --Excerpt-highlight-color: orange;
 }
 
 .Excerpt {
-  padding: var(--padding-Excerpt);
+  padding: var(--Excerpt-padding);
 }
 
 .Excerpt-thumbnail {
-  border: 2px solid var(--border-color-Excerpt-thumbnail);
+  border: 2px solid var(--Excerpt-highlight-color);
   border-radius: 3px;
   margin-right: 10px;
 }

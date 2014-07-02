@@ -1,6 +1,6 @@
 # SUIT CSS design principles
 
-SUIT CSS is a methodology focused on making CSS better to work with in
+SUIT CSS is a methodology focused on improving the CSS authoring experience for
 component-based development.
 
 A component-based system allows for the implementation and composition of
@@ -25,8 +25,8 @@ outer rendering context.
 <a name="cohesion"></a>
 ## Cohesion
 
-All the functionality and presentation inside each component is semantically
-related. Component's do not have direct influence over each other.
+The functionality and presentation defined by a component must be semantically
+related. Components do not have direct influence over each other.
 
 <a name="composition"></a>
 ## Composable and configurable

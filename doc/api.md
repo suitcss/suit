@@ -75,11 +75,6 @@ individual packages for details of their API.
 * `u-linkClean`
 * `u-linkComplex` / `u-linkComplexTarget`
 
-#### Variables
-
-* `--color-linkPseudo`
-* `--color-hover-linkPseudo`
-
 ### [Position](https://github.com/suitcss/utils-position)
 
 #### Classes
@@ -140,7 +135,7 @@ individual packages for details of their API.
 
 #### Variables
 
-* `--gutter-size-Arrange`
+* `--Arrange-gutter-size`
 
 ### [Button](https://github.com/suitcss/components-button)
 
@@ -151,12 +146,12 @@ individual packages for details of their API.
 
 #### Variables
 
-* `--border-width-Button`
-* `--border-color-Button`
-* `--color-Button`
-* `--font-Button`
-* `--padding-Button`
-* `--opacity-Button-disabled`
+* `--Button-border-color`
+* `--Button-border-width`
+* `--Button-color`
+* `--Button-disabled-opacity`
+* `--Button-font`
+* `--Button-padding`
 
 ### [Flexible embeds](https://github.com/suitcss/components-flex-embed)
 
@@ -183,8 +178,8 @@ individual packages for details of their API.
 
 #### Variables
 
-* `--font-size-Grid`
-* `--gutter-size-Grid`
+* `--Grid-font-size`
+* `--Grid-gutter-size`
 
 ### [Test](https://github.com/suitcss/components-test)
 
