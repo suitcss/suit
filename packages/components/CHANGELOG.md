@@ -1,5 +1,10 @@
 === HEAD
 
+* Update 'suitcss-components-arrange' to ~0.6.0.
+* Update 'suitcss-components-button' to ^4.0.0.
+* Update 'suitcss-components-flex-embed' to ^2.0.0.
+* Update 'suitcss-components-grid' to ^2.0.0.
+
 === 0.2.0 (June 22, 2014)
 
 * Fix npm support.

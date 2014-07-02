@@ -3,9 +3,9 @@
   "version": "0.2.0",
   "author": "Nicolas Gallagher",
   "dependencies": {
-    "suit-components-arrange": "~0.5.1",
-    "suit-components-button": "~3.3.0",
-    "suit-components-flex-embed": "~1.7.0",
-    "suit-components-grid": "~1.4.0"
+    "suit-components-arrange": "~0.6.0",
+    "suit-components-button": "~4.0.0",
+    "suit-components-flex-embed": "~2.0.1",
+    "suit-components-grid": "~2.0.0"
   }
 }
