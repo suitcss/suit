@@ -1,5 +1,7 @@
 === HEAD
 
+=== 2.0.0 (July 2, 2014)
+
 * No longer affects the styles of child images / embeds.
 * Fix dynamic aspect ratio support.
 
