@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.6.0 (July 2, 2014)
+
 * Update 'base' to 0.7.0.
 * Update 'components' to 0.3.0.
 
