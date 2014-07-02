@@ -1,5 +1,8 @@
 === HEAD
 
+* Update 'base' to 0.7.0.
+* Update 'components' to 0.3.0.
+
 === 0.5.0 (June 23, 2014)
 
 * Update documentation.
