@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.0 (July 2, 2014)
+
 * Update 'suitcss-components-arrange' to ~0.6.0.
 * Update 'suitcss-components-button' to ^4.0.0.
 * Update 'suitcss-components-flex-embed' to ^2.0.0.
