@@ -74,11 +74,11 @@
  */
 
 .Grid--withGutter {
-  margin: 0 calc(-0.5px * var(--Grid-gutter-size));
+  margin: 0 calc(-0.5 * var(--Grid-gutter-size));
 }
 
 .Grid--withGutter > .Grid-cell {
-  padding: 0 calc(0.5px * var(--Grid-gutter-size));
+  padding: 0 calc(0.5 * var(--Grid-gutter-size));
 }
 
 /* Grid cell
