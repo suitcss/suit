@@ -1,5 +1,7 @@
 === HEAD
 
+=== 2.0.1 (July 8, 2014)
+
 * Support different unit types for grid gutter width.
 
 === 2.0.0 (June 26, 2014)

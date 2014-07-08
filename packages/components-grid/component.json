@@ -1,7 +1,7 @@
 {
   "name": "suitcss-components-grid",
   "repo": "suitcss/components-grid",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "styles": ["lib/grid.css"],
   "author": "Nicolas Gallagher",
   "license": "MIT"
