@@ -13,7 +13,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 * [npm](http://npmjs.org/): `npm install suitcss-components-arrange`
 * [Component(1)](https://github.com/component/component): `component install suitcss/components-arrange`
 * [Bower](http://bower.io/): `bower install suit-components-arrange`
-* Download: [zip](https://github.com/suitcss/utils-after/zipball/master)
+* Download: [zip](https://github.com/suitcss/components-arrange/zipball/master)
 
 ## Available classes
 
