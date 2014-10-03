@@ -1,6 +1,6 @@
 {
   "name": "suitcss-utils",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "author": "Nicolas Gallagher",
   "dependencies": {
     "suit-utils-align": "~0.2.0",

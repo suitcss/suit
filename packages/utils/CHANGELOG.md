@@ -1,5 +1,9 @@
 === HEAD
 
+=== 0.10.1 (October 3, 2014)
+
+* Add 'styles' field to package.json
+
 === 0.10.0 (June 21, 2014)
 
 * Support npm-based workflow.
