@@ -1,6 +1,6 @@
 {
   "name": "suitcss-utils-link",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "author": "Nicolas Gallagher",
   "main": [
     "index.js",
