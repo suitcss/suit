@@ -1,6 +1,6 @@
 {
   "name": "suitcss-components-grid",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Nicolas Gallagher",
   "main": "lib/grid.css",
   "ignore": [
