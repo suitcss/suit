@@ -1,5 +1,7 @@
 === HEAD
 
+* Add support for JS bundling.
+
 === 2.0.1 (July 2, 2014)
 === 2.0.0 (July 2, 2014)
 
