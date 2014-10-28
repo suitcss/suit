@@ -1,7 +1,10 @@
 {
   "name": "suitcss-utils-align",
   "repo": "suitcss/utils-align",
-  "version": "0.2.1",
+  "version": "0.2.2",
+  "scripts": [
+    "index.js"
+  ],
   "styles": [
     "lib/align.css"
   ],
