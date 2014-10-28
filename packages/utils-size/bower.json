@@ -3,6 +3,7 @@
   "version": "0.7.1",
   "author": "Nicolas Gallagher",
   "main": [
+    "index.js",
     "lib/size.css",
     "lib/size-sm.css",
     "lib/size-md.css",
