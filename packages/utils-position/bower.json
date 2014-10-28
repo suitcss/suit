@@ -2,7 +2,10 @@
   "name": "suitcss-utils-position",
   "description": "Positioning utilities for SUIT CSS",
   "version": "0.2.1",
-  "main": "lib/position.css",
+  "main": [
+    "index.js",
+    "lib/position.css"
+  ],
   "ignore": [
     "build",
     "components",

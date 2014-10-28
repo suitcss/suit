@@ -2,6 +2,7 @@
   "name": "suitcss-utils-position",
   "repo": "suitcss/utils-position",
   "version": "0.2.1",
+  "scripts": ["index.js"],
   "styles": [
     "lib/position.css"
   ],
