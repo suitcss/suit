@@ -1,5 +1,7 @@
 === HEAD
 
+* Add support for JS bundling.
+
 === 0.5.0 (June 21, 2014)
 
 * Update to 'utils-after' 0.3.0.

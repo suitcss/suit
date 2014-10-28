@@ -2,6 +2,7 @@
   "name": "suitcss-utils-offset",
   "repo": "suitcss/utils-offset",
   "version": "0.5.0",
+  "scripts": ["index.js"],
   "dependencies": {
     "suitcss/utils-before": "0.3.0",
     "suitcss/utils-after": "0.3.0"
