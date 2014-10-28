@@ -2,7 +2,7 @@
   "name": "suitcss-base",
   "version": "0.7.0",
   "author": "Nicolas Gallagher",
-  "main": "lib/base.css",
+  "main": ["lib/base.css"],
   "dependencies": {
     "normalize-css": "~3.0.1"
   },
