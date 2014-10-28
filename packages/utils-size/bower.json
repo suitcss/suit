@@ -1,6 +1,6 @@
 {
   "name": "suitcss-utils-size",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "author": "Nicolas Gallagher",
   "main": [
     "index.js",
