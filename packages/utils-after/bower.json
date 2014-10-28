@@ -1,8 +1,10 @@
 {
   "name": "suitcss-utils-after",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "Nicolas Gallagher",
   "main": [
+    "index.css",
+    "index.js",
     "lib/after.css",
     "lib/after-sm.css",
     "lib/after-md.css",
