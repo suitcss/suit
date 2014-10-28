@@ -1,16 +1,17 @@
 {
   "name": "suitcss-utils",
   "repo": "suitcss/utils",
-  "version": "0.10.1",
+  "version": "0.10.2",
+  "scripts": ["index.js"],
   "dependencies": {
-    "suitcss/utils-align": "0.2.0",
-    "suitcss/utils-display": "0.4.0",
-    "suitcss/utils-layout": "0.4.0",
-    "suitcss/utils-link": "0.5.0",
-    "suitcss/utils-offset": "0.5.0",
-    "suitcss/utils-position": "0.2.0",
-    "suitcss/utils-size": "0.7.0",
-    "suitcss/utils-text": "0.4.0"
+    "suitcss/utils-align": "0.2.2",
+    "suitcss/utils-display": "0.4.2",
+    "suitcss/utils-layout": "0.4.2",
+    "suitcss/utils-link": "0.5.2",
+    "suitcss/utils-offset": "0.5.1",
+    "suitcss/utils-position": "0.2.2",
+    "suitcss/utils-size": "0.7.2",
+    "suitcss/utils-text": "0.4.2"
   },
   "author": "Nicolas Gallagher",
   "license": "MIT"

@@ -1,15 +1,19 @@
 {
   "name": "suitcss-utils",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "author": "Nicolas Gallagher",
+  "main": [
+    "index.css",
+    "index.js",
+  ],
   "dependencies": {
-    "suit-utils-align": "~0.2.0",
-    "suit-utils-display": "~0.4.0",
-    "suit-utils-layout": "~0.4.0",
-    "suit-utils-link": "~0.5.0",
-    "suit-utils-offset": "~0.5.0",
-    "suit-utils-position": "~0.2.0",
-    "suit-utils-size": "~0.7.0",
-    "suit-utils-text": "~0.4.0"
+    "suit-utils-align": "~0.2.2",
+    "suit-utils-display": "~0.4.2",
+    "suit-utils-layout": "~0.4.2",
+    "suit-utils-link": "~0.5.2",
+    "suit-utils-offset": "~0.5.1",
+    "suit-utils-position": "~0.2.2",
+    "suit-utils-size": "~0.7.2",
+    "suit-utils-text": "~0.4.2"
   }
 }

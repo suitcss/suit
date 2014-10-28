@@ -1,8 +1,12 @@
 === HEAD
 
+=== 0.10.2 (October 28, 2014)
+
+* Add support for JS bundling.
+
 === 0.10.1 (October 3, 2014)
 
-* Add 'styles' field to package.json
+* Add 'styles' field to package.json.
 
 === 0.10.0 (June 21, 2014)
 
