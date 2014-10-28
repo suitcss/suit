@@ -2,6 +2,7 @@
   "name": "suitcss-utils-text",
   "repo": "suitcss/utils-text",
   "version": "0.4.1",
+  "scripts": ["index.js"],
   "styles": ["lib/text.css"],
   "author": "Nicolas Gallagher",
   "license": "MIT"

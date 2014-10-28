@@ -2,7 +2,10 @@
   "name": "suitcss-utils-text",
   "version": "0.4.1",
   "author": "Nicolas Gallagher",
-  "main": "lib/text.css",
+  "main": [
+    "index.js",
+    "lib/text.css"
+  ],
   "ignore": [
     ".*",
     "CHANGELOG.md",
