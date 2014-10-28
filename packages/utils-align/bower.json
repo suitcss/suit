@@ -2,7 +2,10 @@
   "name": "suitcss-utils-align",
   "description": "Vertical alignment utilities for SUIT CSS",
   "version": "0.2.1",
-  "main": "lib/align.css",
+  "main": [
+    "index.js",
+    "lib/align.css"
+  ],
   "ignore": [
     "build",
     "components",

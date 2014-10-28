@@ -1,5 +1,7 @@
 === HEAD
 
+* Add support for JS module bundling (e.g., webpack, AMD loaders)
+
 === 0.2.1 (June 24, 2014)
 
 Add `.css` extension to imports for interoperability.
