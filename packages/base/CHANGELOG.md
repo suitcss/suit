@@ -1,5 +1,7 @@
 === HEAD
 
+* Remove typography and link color configuration.
+
 === 0.7.0 (June 26, 2014)
 
 * Change variable names.
