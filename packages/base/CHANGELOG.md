@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.8.0 (October 28, 2014)
+
 * Add support for JS bundling.
 * Remove typography and link color configuration.
 
