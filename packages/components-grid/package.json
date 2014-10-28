@@ -4,6 +4,7 @@
   "style": "index.css",
   "files": [
     "index.css",
+    "index.js",
     "lib"
   ],
   "devDependencies": {

@@ -1,5 +1,7 @@
 === HEAD
 
+* Add support for JS bundling.
+
 === 2.0.1 (July 8, 2014)
 
 * Support different unit types for grid gutter width.
