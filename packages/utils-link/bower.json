@@ -2,7 +2,10 @@
   "name": "suitcss-utils-link",
   "version": "0.5.1",
   "author": "Nicolas Gallagher",
-  "main": "lib/link.css",
+  "main": [
+    "index.js",
+    "lib/link.css"
+  ],
   "ignore": [
     ".*",
     "Makefile",
