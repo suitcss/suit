@@ -1,5 +1,7 @@
 === HEAD
 
+* Add support for JS bundling.
+
 === 0.6.0 (June 26 2014)
 
 * Change variable names.
