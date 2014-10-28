@@ -1,8 +1,10 @@
 === HEAD
 
+* Add support for JS bundling.
+
 === 0.4.1 (June 24, 2014)
 
-Add `.css` extension to imports for interoperability.
+* Add `.css` extension to imports for interoperability.
 
 === 0.4.0 (June 21, 2014)
 
