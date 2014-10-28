@@ -1,6 +1,6 @@
 {
   "name": "suitcss-utils-offset",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "author": "Nicolas Gallagher",
   "main": [
     "index.css",
