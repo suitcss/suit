@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils",
   "repo": "suitcss/utils",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "scripts": ["index.js"],
   "dependencies": {
     "suitcss/utils-align": "0.2.2",
