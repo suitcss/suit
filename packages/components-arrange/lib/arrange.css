@@ -100,10 +100,14 @@
 /**
  * This layout algorithm will create equal-width table cells, irrespective of
  * the width of their content.
+ *
+ * 1. The layout algorithm requires a set width to correctly calculate table
+ *    cell width.
  */
 
 .Arrange--equal {
   table-layout: fixed;
+  width: 100%; /* 1 */
 }
 
 /**

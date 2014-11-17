@@ -1,5 +1,7 @@
 === HEAD
 
+* Fix equal-width modifier layout calculation.
+
 === 0.6.1 (October 28, 2014)
 
 * Add support for JS bundling.
