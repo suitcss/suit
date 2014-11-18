@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.6.2 (November 18, 2014)
+
 * Fix equal-width modifier layout calculation.
 
 === 0.6.1 (October 28, 2014)
