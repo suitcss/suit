@@ -13,7 +13,7 @@ The primary architectural division is between **[utilities](utilities.md)** and
 * [u-utilityName](#u-utilityName)
 * [ComponentName](#ComponentName)
 * [ComponentName--modifierName](#ComponentName--modifierName)
-* [ComponentName-descendantName](#ComponentName-descendantName)
+* [ComponentName-descendentName](#ComponentName-descendentName)
 * [ComponentName.is-stateOfComponent](#is-stateOfComponent)
 
 ## [Utilities](utilities.md)
