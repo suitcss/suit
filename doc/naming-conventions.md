@@ -21,7 +21,7 @@ The primary architectural division is between **[utilities](utilities.md)** and
 Low-level structural and positional traits. Utilities can be applied directly
 to any element within a component.
 
-Syntax: `u-[sm|md|lg-]<utilityName>`
+Syntax: `u-[sm-|md-|lg-]<utilityName>`
 
 <a name="u-utilityName"></a>
 ### u-utilityName
