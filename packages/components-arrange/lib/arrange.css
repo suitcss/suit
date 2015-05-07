@@ -33,8 +33,9 @@
 }
 
 /**
- * There are two possible types of child. `sizeFill` will expand to fill all
- * of the remaining space not filled by `sizeFit` elements.
+ * There are three possible types of child. `sizeFill` will expand to fill all
+ * of the remaining space not filled by `sizeFit` elements. `row` will begin a
+ * new row context, keeping columns the same size.
  *
  * 1. Zero out any default spacing that might be on an element (e.g., `li`);
  *    Margin has no effect when coupled with `display: table-cell`.
@@ -81,6 +82,14 @@
   width: auto !important;
 }
 
+/**
+ * Start a new row context.
+ */
+
+.Arrange-row {
+  display: table-row;
+}
+
 /* Vertical alignment modifiers
    ========================================================================== */
 
@@ -119,7 +128,9 @@
  */
 
 .Arrange--equal > .Arrange-sizeFill,
-.Arrange--equal > .Arrange-sizeFit {
+.Arrange--equal > .Arrange-sizeFit,
+.Arrange--equal > .Arrange-row > .Arrange-sizeFill,
+.Arrange--equal > .Arrange-row > .Arrange-sizeFit {
   width: 1%;
 }
 
@@ -139,6 +150,8 @@
 }
 
 .Arrange--withGutter > .Arrange-sizeFit,
-.Arrange--withGutter > .Arrange-sizeFill {
+.Arrange--withGutter > .Arrange-sizeFill,
+.Arrange--withGutter > .Arrange-row > .Arrange-sizeFit,
+.Arrange--withGutter > .Arrange-row > .Arrange-sizeFill {
   padding: 0 calc(0.5 * var(--Arrange-gutter-size));
 }

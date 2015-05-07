@@ -24,6 +24,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 * `Arrange--withGutter` - The modifier class for adding a gutter between cells.
 * `Arrange-sizeFit` - The child class for cells to snap to fit their content
 * `Arrange-sizeFill` - The child class for cells to expand to fill the remaining space
+* `Arrange-row` - The child class for for a new row of cells (`Arrange-sizeFit` or `Arrange-sizeFill`)
 
 ## Configurable variables
 
@@ -34,8 +35,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 
 N.B. This component affects the width of images in cells.
 
-`Arrange` must only contain `Arrange-sizeFit` and `Arrange-sizeFill` child
-nodes.
+`Arrange` must only contain `Arrange-sizeFit`, `Arrange-sizeFill`, and `Arrange-row` child nodes.
 
 It's recommended that you only use one `Arrange-sizeFill` per component
 instance (unless using the `Arrange--equal` modifier; see below). The first

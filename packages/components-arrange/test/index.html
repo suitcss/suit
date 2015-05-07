@@ -241,6 +241,50 @@
     </div>
   </div>
 
+  <h2 class="Test-describe">.Arrange-row</h2>
+  <h3 class="Test-it">renders new rows with equal width columns</h3>
+  <div class="Test-run">
+    <div class="Arrange">
+      <div class="Arrange-row">
+        <div class="Arrange-sizeFit">
+          <div class="dev-highlight">Chimpanzee</div>
+        </div>
+        <div class="Arrange-sizeFill">
+          <div class="dev-highlight">B</div>
+        </div>
+      </div>
+      <div class="Arrange-row">
+        <div class="Arrange-sizeFit">
+          <div class="dev-highlight">Gibbon</div>
+        </div>
+        <div class="Arrange-sizeFill">
+          <div class="dev-highlight">B</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">works with modifiers</h3>
+  <div class="Test-run">
+    <div class="Arrange Arrange--withGutter">
+      <div class="Arrange-row">
+        <div class="Arrange-sizeFit">
+          <div class="dev-highlight">Chimpanzee</div>
+        </div>
+        <div class="Arrange-sizeFill">
+          <div class="dev-highlight">B</div>
+        </div>
+      </div>
+      <div class="Arrange-row">
+        <div class="Arrange-sizeFit">
+          <div class="dev-highlight">Gibbon</div>
+        </div>
+        <div class="Arrange-sizeFill">
+          <div class="dev-highlight">B</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <h2 class="Test-describe">Complex example</h2>
   <h3 class="Test-it">renders ok if you make very wide images full width in Arrange-sizeFill</h3>
   <div class="Test-run" id="complex">
