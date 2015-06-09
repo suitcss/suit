@@ -93,13 +93,13 @@
 /* Vertical alignment modifiers
    ========================================================================== */
 
-.Arrange--middle .Arrange-sizeFill,
-.Arrange--middle .Arrange-sizeFit {
+.Arrange--middle > .Arrange-sizeFill,
+.Arrange--middle > .Arrange-sizeFit {
   vertical-align: middle;
 }
 
-.Arrange--bottom .Arrange-sizeFill,
-.Arrange--bottom .Arrange-sizeFit {
+.Arrange--bottom > .Arrange-sizeFill,
+.Arrange--bottom > .Arrange-sizeFit {
   vertical-align: bottom;
 }
 
