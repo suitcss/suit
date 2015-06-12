@@ -1,6 +1,5 @@
 {
   "name": "suitcss",
-  "version": "0.6.0",
   "author": "Nicolas Gallagher",
   "dependencies": {
     "suit-base": "~0.7.0",
