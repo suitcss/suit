@@ -13,7 +13,7 @@ $ npm install stylelint-config-suitcss
 
 ## Usage
 
-Require the config and use it for stylelint's option. For example, using the node API appraoch:
+Require the config and use it for stylelint's option. For example, using the node API approach:
 
 ```js
 var fs = require("fs")
@@ -32,6 +32,28 @@ var css = fs.readFileSync("input.css", "utf8")
   .process(css, { from: file })
   .then()
   .catch(err => console.error(err.stack))
+```
+
+### Extending the config
+
+Use lodash's `assign` e.g.:
+
+```js
+var assign = require("lodash.assign")
+var stylelintConfigSuitcss = require("stylelint-config-suitcss")
+
+// change indentation to tabs and disable the number-leading-zero rule
+var myConfig = {
+  "rules": {
+    "indentation": [2, "tab"],
+    "number-leading-zero": 0,
+  }
+};
+
+var config = {
+  rules: assign(stylelintConfigSuitcss.rules, myConfig.rules)
+}
+
 ```
 
 ## [Changelog](CHANGELOG.md)
