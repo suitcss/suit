@@ -1,5 +1,5 @@
 {
-  "name": "stylelint-config-suitcss-style",
+  "name": "stylelint-config-suitcss",
   "version": "0.1.0",
   "description": "SuitCSS shareable config for stylelint",
   "keywords": [
