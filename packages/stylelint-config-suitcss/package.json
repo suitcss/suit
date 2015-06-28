@@ -1,0 +1,38 @@
+{
+  "name": "stylelint-config-suitcss-style",
+  "version": "0.1.0",
+  "description": "SuitCSS shareable config for stylelint",
+  "keywords": [
+    "stylelint",
+    "stylelint-config"
+  ],
+  "author": "Stylelint",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stylelint/stylelint-config-suitcss.git"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "dist",
+    "src"
+  ],
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-eslint": "^3.1.19",
+    "babel-tape-runner": "^1.1.0",
+    "eslint": "^0.24.0",
+    "postcss": "^4.1.13",
+    "stylelint": "stylelint/stylelint",
+    "tape": "^4.0.0"
+  },
+  "scripts": {
+    "lint": "eslint . --ignore-path .gitignore",
+    "postinstall": "cd node_modules/stylelint && npm i && cd ../..",
+    "prepublish": "babel src --out-dir dist",
+    "tape": "babel-tape-runner \"src/**/__tests__/*.js\"",
+    "test": "npm run lint && npm run tape"
+  }
+}
