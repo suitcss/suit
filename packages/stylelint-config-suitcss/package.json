@@ -30,7 +30,6 @@
   },
   "scripts": {
     "lint": "eslint . --ignore-path .gitignore",
-    "postinstall": "cd node_modules/stylelint && npm i && cd ../..",
     "prepublish": "babel src --out-dir dist",
     "tape": "babel-tape-runner \"src/**/__tests__/*.js\"",
     "test": "npm run lint && npm run tape"
