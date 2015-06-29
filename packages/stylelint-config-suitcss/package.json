@@ -4,7 +4,7 @@
   "description": "SuitCSS shareable config for stylelint",
   "keywords": [
     "stylelint",
-    "stylelint-config"
+    "stylelintconfig"
   ],
   "author": "Stylelint",
   "license": "MIT",
