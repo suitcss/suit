@@ -18,20 +18,19 @@ Require the config and use it for stylelint's option. For example, using the nod
 ```js
 var fs = require("fs")
 var postcss = require("postcss")
-var stylelint = require("stylelint")
-var stylelintConfigSuitcss = require("stylelint-config-suitcss")
 var reporter = require("postcss-reporter")
+var stylelint = require("stylelint")
+var configSuitcss = require("stylelint-config-suitcss")
 
 // css to be processed
 var css = fs.readFileSync("input.css", "utf8")
 
-  postcss([
-    stylelint(stylelintConfigSuitcss),
-    reporter(),
-   ])
-  .process(css, { from: file })
-  .then()
-  .catch(err => console.error(err.stack))
+postcss([
+  stylelint(configSuitcss), // use stylelint-config-suitcss
+  reporter(),
+ ])
+.process(css, { from: "input.css" })
+.then()
 ```
 
 ### Extending the config
@@ -40,7 +39,7 @@ Use lodash's `assign` e.g.:
 
 ```js
 var assign = require("lodash.assign")
-var stylelintConfigSuitcss = require("stylelint-config-suitcss")
+var configSuitcss = require("stylelint-config-suitcss")
 
 // change indentation to tabs and disable the number-leading-zero rule
 var myConfig = {
@@ -48,10 +47,10 @@ var myConfig = {
     "indentation": [2, "tab"],
     "number-leading-zero": 0,
   }
-};
+}
 
 var config = {
-  rules: assign(stylelintConfigSuitcss.rules, myConfig.rules)
+  rules: assign(configSuitcss.rules, myConfig.rules)
 }
 
 ```
