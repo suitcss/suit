@@ -7,9 +7,7 @@ Configuration rules to ensure your CSS code is compliant with [SuitCSS's code st
 
 ## Installation
 
-```console
-$ npm install stylelint-config-suitcss
-```
+*Note: See the [`0.1.0` roadmap issue](https://github.com/stylelint/stylelint/issues/15) for details of our progress towards the first release.*
 
 ## Usage
 
