@@ -12,6 +12,8 @@ module.exports = {
     "block-opening-brace-newline-after": [ 2, "always-multi-line" ],
     "block-opening-brace-space-after": [ 2, "always-single-line" ],
     "block-opening-brace-space-before": [ 2, "always" ],
+    "color-hex-case": [ 2, "lower" ],
+    "color-hex-length": [ 2, "short" ],
     "color-no-invalid-hex": 2,
     "comment-empty-line-before": [ 2, "always" ],
     "declaration-bang-space-after": [ 2, "never" ],
