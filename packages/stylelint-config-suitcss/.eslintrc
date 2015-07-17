@@ -1,5 +1,5 @@
----
-# babel support more syntax stuff than eslint for now
+extends: 'eslint:recommended'
+
 parser: babel-eslint
 
 ecmaFeatures:
@@ -7,7 +7,6 @@ ecmaFeatures:
 
 env:
   es6: true
-  browser: true
   node: true
 
 # 0: off, 1: warning, 2: error
@@ -22,11 +21,17 @@ rules:
   # turn off consistent return
   consistent-return: 0
 
+  # unix line endings
+  linebreak-style: [2, "unix"]
+
   # 2 spaces indentation
   indent: [2, 2]
 
   # quotes are always double
   quotes: [2, "double"]
+
+  # disable console warnings
+  no-console: 0
 
   # single empty lines only
   no-multiple-empty-lines: [2, {"max": 1}]
@@ -47,10 +52,10 @@ rules:
   space-before-function-paren: [2, {"anonymous": "always", "named": "never"}]
 
   # consistent whitespace in brackets
-  space-in-brackets: [2, "always", {"singleValue": false, "propertyName": false}]
+  array-bracket-spacing: [2, "always", {"singleValue": false}]
 
   # consistent whitespace in parens
   space-in-parens: [2, "never"]
 
   # consistent whitespace in single line comments
-  spaced-line-comment: [2, "always"]
+  spaced-comment: [2, "always"]
