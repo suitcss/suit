@@ -19,13 +19,13 @@
     "index.js"
   ],
   "devDependencies": {
-    "babel": "^5.6.23",
-    "babel-eslint": "^3.1.23",
+    "babel": "^5.8.3",
+    "babel-eslint": "^3.1.26",
     "babel-tape-runner": "^1.1.0",
     "eslint": "^1.0.0-rc-1",
     "postcss": "^4.1.16",
-    "stylelint": "^0.2.0",
-    "tape": "^4.0.0"
+    "stylelint": "^0.3.0",
+    "tape": "^4.0.1"
   },
   "scripts": {
     "lint": "eslint . --ignore-path .gitignore",
