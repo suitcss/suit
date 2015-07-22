@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-suitcss",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "SuitCSS shareable config for stylelint",
   "keywords": [
     "stylelint",

@@ -1,4 +1,4 @@
-# Head
+# 0.3.0
 
 * Added: `nesting-block-opening-brace-newline-before` rule.
 * Added: `nesting-block-opening-brace-space-before` rule.
