@@ -39,6 +39,8 @@ module.exports = {
     "media-query-list-comma-space-after": [ 2, "always-single-line" ],
     "media-query-list-comma-space-before": [ 2, "never" ],
     "media-query-parentheses-space-inside": [ 2, "never" ],
+    "nesting-block-opening-brace-newline-before": [ 2, "always-multi-line" ],
+    "nesting-block-opening-brace-space-before": [ 2, "always-single-line" ],
     "no-eol-whitespace": 2,
     "no-missing-eof-newline": 2,
     "no-multiple-empty-lines": 2,
