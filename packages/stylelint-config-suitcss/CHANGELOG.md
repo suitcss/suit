@@ -1,4 +1,4 @@
-# Head
+# 0.4.0
 
 * Added `rule-no-shorthand-property-overrides` rule.
 
