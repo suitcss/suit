@@ -1,3 +1,7 @@
+# Head
+
+* Added `rule-no-shorthand-property-overrides` rule.
+
 # 0.3.0
 
 * Added: `nesting-block-opening-brace-newline-before` rule.
