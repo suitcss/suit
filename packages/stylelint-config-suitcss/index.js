@@ -49,6 +49,7 @@ module.exports = {
     "number-zero-length-no-unit": 2,
     "property-no-vendor-prefix": 2,
     "root-no-standard-properties": 2,
+    "rule-no-shorthand-property-overrides": 2,
     "rule-nested-empty-line-before": [ 2, "always-multi-line", {
       except: ["first-nested"],
     } ],
