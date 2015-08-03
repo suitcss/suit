@@ -14,8 +14,6 @@
   },
   "main": "index.js",
   "files": [
-    "CHANGELOG.md",
-    "LICENSE",
     "index.js"
   ],
   "devDependencies": {
