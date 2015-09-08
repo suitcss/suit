@@ -1,5 +1,9 @@
 # HEAD
 
+### 0.5.0 (September 8, 2015)
+
+* Update modules in generated package.
+
 ### 0.4.0 (April 5, 2014)
 
 * Add latest build tools.
