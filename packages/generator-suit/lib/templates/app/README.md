@@ -49,7 +49,19 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
+
+To pre-process:
+
+```
+npm run preprocess
+```
+
+To pre-process the tests:
+
+```
+npm run preprocess-test
+```
 
 ## Browser support
 

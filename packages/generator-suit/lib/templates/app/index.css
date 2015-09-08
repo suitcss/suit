@@ -1,5 +1,2 @@
-/** @define <%= _.classify(moduleName) %> */
+@import "./lib/<%= moduleName %>.css";
 
-.<%= _.classify(moduleName) %> {
-
-}

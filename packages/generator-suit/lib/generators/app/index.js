@@ -52,9 +52,11 @@ Generator.prototype.projectFiles = function projectFiles() {
   this.template('LICENSE.md');
   this.template('README.md');
   // component
-  this.template('index.css', this.moduleFileName);
+  this.template('index.css');
+  this.template('lib/component.css', 'lib/' + this.moduleFileName);
   // test
-  this.template('test.html', 'test.html');
+  this.template('test/index.html');
+  this.template('test/test.css');
 };
 
 Generator.name = "suitModule";

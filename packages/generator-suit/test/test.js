@@ -36,25 +36,27 @@ describe('Generator test', function () {
         // config files
         [
           'bower.json',
-          /"name": "suit-components-my-module"/
+          /"name": "suitcss-components-my-module"/
         ],
         [
           'component.json',
-          /"name": "components-my-module"/
+          /"name": "suitcss-components-my-module"/
         ],
         [
           'package.json',
           /"name": "suitcss-components-my-module"/,
-          /"style": "my-module.css"/
+          /"style": "index.css"/
         ],
         // docs
         'CHANGELOG.md',
         'LICENSE.md',
         'README.md',
         // component
-        'my-module.css',
+        'index.css',
+        'lib/my-module.css',
         // test
-        'test.html'
+        'test/index.html',
+        'test/test.css'
       ];
 
       suitmodule.run([], function () {

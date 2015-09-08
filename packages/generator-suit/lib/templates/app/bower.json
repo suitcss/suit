@@ -1,16 +1,23 @@
 {
-  "name": "suit-<%= modulePackageName %>",
+  "name": "suitcss-<%= modulePackageName %>",
   "description": "",
   "version": "0.0.0",
-  "main": "<%= moduleFileName %>",
+  "author": "",
+  "main": "lib/<%= moduleFileName %>",
   "ignore": [
-    "build",
-    "components",
-    "test",
     ".*",
     "CHANGELOG.md",
     "component.json",
     "package.json",
-    "test.html"
+    "test",
+    "build",
+    "components"
+  ],
+  "keywords": [
+    "browser",
+    "css-components",
+    "<%= modulePackageName %>",
+    "suitcss",
+    "style"
   ]
 }

@@ -52,6 +52,8 @@ Produces:
 ├── bower.json
 ├── component.json
 ├── package.json
-├── my-component.css
-└── test.html
+├── index.css
+├── lib/my-component.css
+├── test/index.html
+└── test/test.css
 ```
