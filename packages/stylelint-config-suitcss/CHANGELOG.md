@@ -1,4 +1,4 @@
-# Head
+# 0.5.0
 
 * Fix: single-line whitespace rules for `blocking-opening-brace-*`.
 
