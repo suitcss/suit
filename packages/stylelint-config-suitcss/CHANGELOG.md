@@ -1,6 +1,10 @@
+# Head
+
+* Fix: single-line whitespace rules for `blocking-opening-brace-*`.
+
 # 0.4.0
 
-* Added `rule-no-shorthand-property-overrides` rule.
+* Added: `rule-no-shorthand-property-overrides` rule.
 
 # 0.3.0
 
