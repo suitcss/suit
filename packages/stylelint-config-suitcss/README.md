@@ -52,7 +52,6 @@ var myConfig = {
 var config = {
   rules: assign(configSuitcss.rules, myConfig.rules)
 }
-
 ```
 
 ## [Changelog](CHANGELOG.md)
