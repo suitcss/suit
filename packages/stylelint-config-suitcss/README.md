@@ -27,7 +27,7 @@ var css = fs.readFileSync("input.css", "utf8")
 
 postcss([
   stylelint(configSuitcss), // use stylelint-config-suitcss
-  reporter(),
+  reporter()
  ])
 .process(css, { from: "input.css" })
 .then()
@@ -45,7 +45,7 @@ var configSuitcss = require("stylelint-config-suitcss")
 var myConfig = {
   "rules": {
     "indentation": [2, "tab"],
-    "number-leading-zero": 0,
+    "number-leading-zero": 0
   }
 }
 
