@@ -1,6 +1,6 @@
 # 0.5.0
 
-* Fix: single-line whitespace rules for `blocking-opening-brace-*`.
+* Fix: single-line whitespace rules for `blocking-closing-brace-*`.
 
 # 0.4.0
 
