@@ -1,19 +1,11 @@
 /**
  * Word breaking
  *
- * Break words when their length exceeds the width of their container.
- *
- * 1. Legacy property name for IE, Edge, Firefox, Opera Mini and Android Browser <=4.3
- * 2. Non standard for WebKit
- * 3. New property name as per the CSS3 Spec.
- *    Supported by Chrome, Safari, Opera, iOS Safari,
- *    Android Browser >=4.4.4 and Chrome for Android
+ * Break strings when their length exceeds the width of their container.
  */
 
 .u-textBreak {
-  word-wrap: break-word !important; /* 1 */
-  word-break: break-word !important; /* 2 */
-  overflow-wrap: break-word !important; /* 3 */
+  word-wrap: break-word !important;
 }
 
 /**
