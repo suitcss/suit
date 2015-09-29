@@ -9,8 +9,6 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 ## Installation
 
 * [npm](https://www.npmjs.org/package/suitcss-components-test): `npm install suitcss-components-test`
-* [Component(1)](http://component.io/): `component install suitcss/test`
-* [Bower](http://bower.io/): `bower install suit-components-test`
 * Download: [zip](https://github.com/suitcss/test/zipball/master)
 
 ## Available classes
