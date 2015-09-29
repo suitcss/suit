@@ -1,9 +1,0 @@
-{
-  "name": "suitcss-utils-link",
-  "repo": "suitcss/utils-link",
-  "version": "0.5.2",
-  "scripts": ["index.js"],
-  "styles": ["lib/link.css"],
-  "author": "Nicolas Gallagher",
-  "license": "MIT"
-}
