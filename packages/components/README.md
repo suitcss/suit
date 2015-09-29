@@ -9,8 +9,6 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-components`
-* [Component(1)](http://component.io/): `component install suitcss/components`
-* [Bower](http://bower.io/): `bower install suit-components`
 * [Download](https://github.com/suitcss/components/releases) (compiled)
 
 …is a convenient way to install the following packages:
