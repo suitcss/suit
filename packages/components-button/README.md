@@ -8,8 +8,6 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-components-button`
-* [Component(1)](https://github.com/component/component/): `component install suitcss/components-button`
-* [Bower](http://bower.io/): `bower install suit-components-button`
 
 ## Available classes
 
