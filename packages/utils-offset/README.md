@@ -7,8 +7,6 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-utils-offset`
-* [Component(1)](http://component.io/): `component install suitcss/utils-offset`
-* [Bower](http://bower.io/): `bower install suit-utils-offset`
 * Download: [zip](https://github.com/suitcss/utils-offset/zipball/master)
 
 …is a convenient way to install the SUIT CSS offset utilities:
