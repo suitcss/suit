@@ -9,8 +9,6 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-utils-before`
-* [Component(1)](http://component.io/): `component install suitcss/utils-before`
-* [Bower](http://bower.io/): `bower install suit-utils-before`
 * Download: [zip](https://github.com/suitcss/utils-before/zipball/master)
 
 ## Available classes
