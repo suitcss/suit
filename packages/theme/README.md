@@ -7,8 +7,6 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 ## Installation
 
 * [npm](https://npmjs.org/): `npm install suitcss-theme`
-* [Component(1)](http://component.io/): `component install suitcss/theme`
-* [Bower](http://bower.io/): `bower install suit-theme`
 * Download: [zip](https://github.com/suitcss/theme/zipball/master)
 
 ## Testing
