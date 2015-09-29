@@ -8,8 +8,6 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Installation
 
 * [npm](https://www.npmjs.org/package/suitcss-components-flex-embed): `npm install suitcss-components-flex-embed`
-* [Component(1)](http://component.io/): `component install suitcss/components-flex-embed`
-* [Bower](http://bower.io/): `bower install suit-components-flex-embed`
 * Download: [zip](https://github.com/suitcss/components-flex-embed/zipball/master)
 
 ## Available classes
