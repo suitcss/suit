@@ -9,8 +9,6 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-utils-display`
-* [Component(1)](http://component.io/): `component install suitcss/utils-display`
-* [Bower](http://bower.io/): `bower install suit-utils-display`
 * Download: [zip](https://github.com/suitcss/utils-display/zipball/master)
 
 ## Available classes
