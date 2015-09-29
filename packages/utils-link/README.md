@@ -9,8 +9,6 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-utils-link`
-* [Component(1)](http://component.io/): `component install suitcss/utils-link`
-* [Bower](http://bower.io/): `bower install suit-utils-link`
 * Download: [zip](https://github.com/suitcss/utils-link/zipball/master)
 
 ## Available classes
