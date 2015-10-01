@@ -131,11 +131,11 @@ Example with better names:
 
 ```css
 .ColumnBody {
-    background: #000;
+  background: #000;
 }
 
 .ColumnBody.is-scrollable {
-    overflow: auto;
+  overflow: auto;
 }
 ```
 
