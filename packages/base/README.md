@@ -38,4 +38,4 @@ Basic visual tests are in `test/index.html`.
 * Firefox
 * Safari
 * Opera
-* Internet Explorer 8+
+* Internet Explorer 9+
