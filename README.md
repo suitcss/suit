@@ -130,8 +130,6 @@ Libraries / frameworks for component-based development:
 Tools and dependency managers:
 
 * [npm](https://www.npmjs.org/): package manager.
-* [Component(1)](https://github.com/component/component): front-end package manager and build tool.
-* [component-builder-suit](https://github.com/suitcss/component-builder-suit): per-file SUIT CSS tooling for Component(1).
 * [html-inspector](https://github.com/philipwalton/html-inspector): test HTML templates for SUIT CSS conformance.
 
 ## Development
