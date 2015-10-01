@@ -1,7 +1,25 @@
 /**
  * A thin layer on top of normalize.css that provides a starting point more
- * suitable for web applications. Removes the default spacing and border for
- * appropriate elements.
+ * suitable for web applications.
+ */
+
+/**
+ * Prevent margin and border from affecting element width.
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Removes the default spacing and border for appropriate elements.
  */
 
 blockquote,
