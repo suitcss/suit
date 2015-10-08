@@ -77,13 +77,11 @@ CSS:
 
 ## CSS packages
 
-Each CSS package can be installed with npm, Component(1), or Bower.
+Each CSS package can be installed with npm.
 It's suggested that you depend on individual packages as and when you need
 them, however, you can install all the CSS packages at once if you prefer:
 
 * [npm](https://www.npmjs.org/): `npm install suitcss`
-* [Component(1)](https://github.com/component/component): `component install suitcss/suit`
-* [Bower](http://bower.io/): `bower install suit`
 
 Each package is stand-alone, contains its own documentation and tests, and is
 written to follow a common set of [naming conventions](doc/naming-conventions.md).
