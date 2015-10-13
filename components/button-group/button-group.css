@@ -1,0 +1,85 @@
+/** @define ButtonGroup */
+
+/*! suit-button-group v2.2.0 | MIT License | github.com/suitcss */
+
+:root {
+  --font-size-ButtonGroup: 1rem;
+}
+
+/**
+ * Create a visual connection between UI actions that belong together.
+ * Must only contain `ButtonGroup-item` objects as children.
+ *
+ * Example HTML:
+ *
+ * <div class="ButtonGroup [ButtonGroup--hz]">
+ *   <div class="ButtonGroup-item">
+ *     <a class="Button" href="#">Dashboard</a>
+ *   </div>
+ *   <div class="ButtonGroup-item">
+ *     <a class="Button" href="#">Account</a>
+ *   </div>
+ *   <div class="ButtonGroup-item">
+ *     <a class="Button" href="#">Logout</a>
+ *   </div>
+ * </div>
+ */
+
+/**
+ * Button group
+ *
+ * 1. Ensure component is full-width if applied to elements that are
+ *    `inline-block` by default.
+ * 2. Collapse whitespace between child elements. Only necessary for the
+ *    `ButtonGroup--hz` modifier which lays items out as `inline-block`, but
+ *    included in the base component so that affects on `font-size` are
+ *    consistent.
+ * 3. Remove any default styles that might be present when `ol` or `ul` are the
+ *    root element.
+ */
+
+.ButtonGroup {
+  display: block; /* 1 */
+  font-size: 0; /* 2 */
+  margin: 0; /* 3 */
+  list-style: none; /* 3 */
+  padding: 0; /* 3 */
+}
+
+/**
+ * Button group item
+ *
+ * 1. Make it full-width if applied to elements that are `inline-block` by
+ *    default.
+ * 2. Reset the font size of the buttons to the root font size.
+ */
+
+.ButtonGroup-item {
+  display: block; /* 1 */
+  font-size: var(--font-size-ButtonGroup); /* 2 */
+}
+
+.ButtonGroup-item > .Button {
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Ensure that interactions with a button make it sit on top of other buttons
+ * in the group.
+ */
+
+.ButtonGroup-item > .Button:hover,
+.ButtonGroup-item > .Button:focus,
+.ButtonGroup-item > .Button:active,
+.ButtonGroup-item > .Button.is-pressed {
+  z-index: 1;
+}
+
+
+/* Modifier: horizontal buttons
+   ========================================================================== */
+
+.ButtonGroup--hz > .ButtonGroup-item {
+  display: inline-block;
+}

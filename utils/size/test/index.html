@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Size [utility] - SUIT CSS</title>
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link rel="stylesheet" href="../build/build.css">
+<style>
+  .u-cf:after {
+    clear: both;
+    content:"";
+    display: table;
+  }
+
+  .u-highlight {
+    background: #ff0;
+    margin: 0 0 10px;
+  }
+
+  .dev-Box {
+    background: red;
+    height: 50px;
+    width: 50px;
+  }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-size">sizing utility</a> tests</h1>
+
+  <h2 class="Test-describe">.u-sizeFit / .u-sizeFill</h2>
+  <h3 class="Test-it">shrink-wraps (on left) / fills remaining space</h3>
+  <div class="Test-run">
+    <div class="u-cf">
+      <div class="u-sizeFit">
+        <div class="dev-Box"></div>
+      </div>
+      <div class="u-sizeFill u-highlight">
+        content
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeFit / .u-sizeFillAlt</h2>
+  <h3 class="Test-it">shrink-wraps (on left) / fills remaining space</h3>
+  <div class="Test-run">
+    <div class="u-cf">
+      <div class="u-sizeFit">
+        <div class="dev-Box"></div>
+      </div>
+      <div class="u-sizeFillAlt u-highlight">
+        content
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeFitAlt / .u-sizeFill</h2>
+  <h3 class="Test-it">shrink-wraps (on right) / fills remaining space</h3>
+  <div class="Test-run">
+    <div class="u-cf">
+      <div class="u-sizeFitAlt">
+        <div class="dev-Box"></div>
+      </div>
+      <div class="u-sizeFill u-highlight">
+        content
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeFull</h2>
+  <h3 class="Test-it">fits the full-width of the container</h3>
+  <div class="Test-run">
+    <div class="u-sizeFull u-highlight" style="border:10px solid red;">
+      content
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeXof2</h2>
+  <h3 class="Test-it">sizes to 1/2 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of2 u-highlight">1of2</div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeXof3</h2>
+  <h3 class="Test-it">sizes to 1/3 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of3 u-highlight">1of3</div>
+    <div class="u-size2of3 u-highlight">2of3</div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeXof4</h2>
+  <h3 class="Test-it">sizes to 1/4 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of4 u-highlight">1of4</div>
+    <div class="u-size2of4 u-highlight">2of4</div>
+    <div class="u-size3of4 u-highlight">3of4</div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeXof6</h2>
+  <h3 class="Test-it">sizes to 1/6 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of6 u-highlight">1of6</div>
+    <div class="u-size2of6 u-highlight">2of6</div>
+    <div class="u-size3of6 u-highlight">3of6</div>
+    <div class="u-size4of6 u-highlight">4of6</div>
+    <div class="u-size5of6 u-highlight">5of6</div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeXof8</h2>
+  <h3 class="Test-it">sizes to 1/8 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of8 u-highlight">1of8</div>
+    <div class="u-size2of8 u-highlight">2of8</div>
+    <div class="u-size3of8 u-highlight">3of8</div>
+    <div class="u-size4of8 u-highlight">4of8</div>
+    <div class="u-size5of8 u-highlight">5of8</div>
+    <div class="u-size6of8 u-highlight">6of8</div>
+    <div class="u-size7of8 u-highlight">7of8</div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeXof10</h2>
+  <h3 class="Test-it">sizes to 1/10 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of10 u-highlight">1of10</div>
+    <div class="u-size2of10 u-highlight">2of10</div>
+    <div class="u-size3of10 u-highlight">3of10</div>
+    <div class="u-size4of10 u-highlight">4of10</div>
+    <div class="u-size5of10 u-highlight">5of10</div>
+    <div class="u-size6of10 u-highlight">6of10</div>
+    <div class="u-size7of10 u-highlight">7of10</div>
+    <div class="u-size8of10 u-highlight">8of10</div>
+    <div class="u-size9of10 u-highlight">9of10</div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeXof12</h2>
+  <h3 class="Test-it">sizes to 1/2 of the parent container</h3>
+  <div class="Test-run">
+    <div class="u-size1of12 u-highlight">1of12</div>
+    <div class="u-size2of12 u-highlight">2of12</div>
+    <div class="u-size3of12 u-highlight">3of12</div>
+    <div class="u-size4of12 u-highlight">4of12</div>
+    <div class="u-size5of12 u-highlight">5of12</div>
+    <div class="u-size6of12 u-highlight">6of12</div>
+    <div class="u-size7of12 u-highlight">7of12</div>
+    <div class="u-size8of12 u-highlight">8of12</div>
+    <div class="u-size9of12 u-highlight">9of12</div>
+    <div class="u-size10of12 u-highlight">10of12</div>
+    <div class="u-size11of12 u-highlight">11of12</div>
+  </div>
+
+  <h2 class="Test-describe">.u-sm-sizeXof12 .u-md-sizeXof12 .u-lg-sizeXof12</h2>
+  <h3 class="Test-it">adapts the width at different viewport sizes</h3>
+  <div class="Test-run">
+    <div class="u-size12of12 u-sm-size9of12 u-md-size6of12 u-lg-size3of12 u-highlight">12of12 -> 9of12 -> 6of12 -> 3of12</div>
+  </div>
+</div>

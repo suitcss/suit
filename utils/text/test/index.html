@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Text [utility] - SUIT CSS</title>
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link rel="stylesheet" href="../build/test.css">
+<style>
+  html {
+    color: black;
+  }
+
+  .dev-Box {
+    background: #ddd;
+    margin-bottom: 10px;
+    max-width: 400px;
+  }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-text">text utilities</a> tests</h1>
+
+  <h2 class="Test-describe">.u-textBreak</h2>
+  <h3 class="Test-it">breaks stings across multiple lines, when they are wider than the container</h3>
+  <div class="Test-run">
+    <div class="dev-Box u-textBreak">
+        http://subdomain.exampledomain.com/averylongurlthatneedstobebrokenotherwiseitisgoingtokeepgoingforever
+    </div>
+  </div>
+  <h3 class="Test-it">does not break strings that are not wider than the container</h3>
+  <div class="Test-run">
+    <div class="dev-Box u-textBreak">
+        wraplongwords dontbreaklongwords
+        wraplongwords dontbreaklongwords
+        wraplongwords dontbreaklongwords
+        wraplongwords dontbreaklongwords
+        wraplongwords dontbreaklongwords
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-textCenter</h2>
+  <h3 class="Test-it">center-aligns text</h3>
+  <div class="Test-run">
+    <div class="dev-Box u-textCenter">
+      Lorem ipsum dolor sit amet.
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-textLeft</h2>
+  <h3 class="Test-it">left-aligns text</h3>
+  <div class="Test-run">
+    <div class="dev-Box u-textLeft">
+      Lorem ipsum dolor sit amet.
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-textRight</h2>
+  <h3 class="Test-it">right-aligns text</h3>
+  <div class="Test-run">
+    <div class="dev-Box u-textRight">
+      Lorem ipsum dolor sit amet.
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-textInheritColor</h2>
+  <h3 class="Test-it">should inherit the ancestral text color</h3>
+  <div class="Test-run">
+    <div class="dev-Box">
+      <a class="u-textInheritColor" href="#non">Should always be black</a>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-textKern</h2>
+  <h3 class="Test-it">should enable kerning in supported browsers</h3>
+  <div class="Test-run" style="font-family:arial;font-size:20px">
+    <div>The quick brown fox jumps over the lazy dog (default)</div>
+    <div class="u-textKern">The quick brown fox jumps over the lazy dog (kerning enabled)</div>
+  </div>
+
+  <h2 class="Test-describe">.u-textNoWrap</h2>
+  <h3 class="Test-it">should not wrap text</h3>
+  <div class="Test-run">
+    <div class="dev-Box u-textNoWrap">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit blandit dolor, at euismod ante eleifend in. Duis imperdiet cursus nibh, quis tincidunt nibh rhoncus at.
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-textTruncate</h2>
+  <h3 class="Test-it">clips and truncates a single line of text, using an ellipsis</h3>
+  <div class="Test-run">
+    <div class="dev-Box u-textTruncate">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit blandit dolor, at euismod ante eleifend in. Duis imperdiet cursus nibh, quis tincidunt nibh rhoncus at.
+    </div>
+  </div>
+</div>

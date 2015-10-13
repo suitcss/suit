@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>SUIT CSS base</title>
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link rel="stylesheet" href="../build/test.css">
+<style>
+  .Test-run {
+    line-height: 1;
+  }
+
+  .dev-highlight {
+    background: lightblue;
+  }
+
+  #iframe iframe {
+    background-clip: content-box;
+  }
+
+  #tabindex a:focus,
+  #tabindex button:focus {
+    outline: 5px solid red;
+  }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/base">base</a> styles tests</h1>
+
+  <h2 class="Test-describe">h1-h6</h2>
+  <h3 class="Test-it">have no margin</h3>
+  <div class="Test-run">
+    <h1 class="dev-highlight">Heading 1</h1>
+    <h2 class="dev-highlight">Heading 2</h2>
+    <h3 class="dev-highlight">Heading 3</h3>
+    <h4 class="dev-highlight">Heading 4</h4>
+    <h5 class="dev-highlight">Heading 5</h5>
+    <h6 class="dev-highlight">Heading 6</h6>
+  </div>
+
+  <h2 class="Test-describe">figure, p, pre, and blockquote</h2>
+  <h3 class="Test-it">have no margin</h3>
+  <div class="Test-run">
+    <figure class="dev-highlight">Figure</figure>
+    <p class="dev-highlight">Paragraph</p>
+    <pre class="dev-highlight">Preformatted text</pre>
+    <blockquote class="dev-highlight">Blockquote content</blockquote>
+  </div>
+
+  <h2 class="Test-describe">dl and dd</h2>
+  <h3 class="Test-it">have no margin</h3>
+  <div class="Test-run">
+    <dl class="dev-highlight">
+      <dt>Description name</dt>
+      <dd>Description value</dd>
+      <dd>
+        <dl>
+          <dt>> Description name</dt>
+          <dd>> Description value</dd>
+          <dt>> Description name</dt>
+          <dd>> Description value</dd>
+        </dl>
+      </dd>
+      <dt>Description name</dt>
+      <dd>Description value</dd>
+    </dl>
+  </div>
+
+  <h2 class="Test-describe">ul</h2>
+  <h3 class="Test-it">has no margin or list style</h3>
+  <div class="Test-run">
+    <ul class="dev-highlight">
+      <li>ul item 1</li>
+      <li>ul item 2</li>
+      <li>
+        <ul>
+          <li>> ul item 1</li>
+          <li>> ul item 2</li>
+          <li>> ul item 3</li>
+        </ul>
+      </li>
+      <li>ul item 3</li>
+      <li>ul item 4</li>
+    </ul>
+  </div>
+
+  <h2 class="Test-describe">ol</h2>
+  <h3 class="Test-it">has no margin, padding, or list style</h3>
+  <div class="Test-run">
+    <ol class="dev-highlight">
+      <li>ol item 1</li>
+      <li>ol item 2</li>
+      <li>
+        <ol>
+          <li>> ol item 1</li>
+          <li>> ol item 2</li>
+          <li>> ol item 3</li>
+        </ol>
+      </li>
+      <li>ol item 3</li>
+      <li>ol item 4</li>
+    </ol>
+  </div>
+
+  <h2 class="Test-describe">button</h2>
+  <h3 class="Test-it">has no background, border, or padding</h3>
+  <div class="Test-run">
+    <button class="dev-highlight" type="button">
+      Button content
+    </button>
+  </div>
+  <h3 class="Test-it">has focus styles (in Firefox and IE)</h3>
+  <div class="Test-run">
+    <button type="button">
+      Button content
+    </button>
+  </div>
+
+  <h2 class="Test-describe">fieldset</h2>
+  <h3 class="Test-it">has no border, margin, or padding</h3>
+  <div class="Test-run">
+    <form>
+      <fieldset class="dev-highlight">
+        Fieldset content
+      </fieldset>
+    </form>
+  </div>
+
+  <h2 class="Test-describe">iframe</h2>
+  <h3 class="Test-it">has no border, margin, or padding</h3>
+  <div class="Test-run" id="iframe">
+    <iframe class="dev-highlight"></iframe>
+  </div>
+
+  <h2 class="Test-describe">[tabindex="-1"]:focus</h2>
+  <h3 class="Test-it">has no focus outline (try clicking to trigger focus)</h3>
+  <div class="Test-run" id="tabindex">
+    <a class="dev-highlight" href="#n" tabindex="-1">example link</a>
+    <button class="dev-highlight" tabindex="-1">example button</button>
+  </div>
+</div>

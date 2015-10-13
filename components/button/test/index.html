@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Button [component] - SUIT CSS</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="stylesheet" href="../build/test.css">
+<style>
+    #fontInheritance {
+      font-family: sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    #textWrapping {
+        width: 80px;
+    }
+
+    #colorInheritance {
+        color: green;
+    }
+
+    #baseline .Button {
+        display: inline-block;
+        width: auto;
+    }
+
+    #baseline .Button:first-child {
+        width: 80px;
+    }
+</style>
+
+<div class="Test">
+    <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/components-button">Button</a> component tests</h1>
+
+    <h3 class="Test-describe">.Button</h3>
+    <h3 class="Test-it">renders inline-block</h3>
+    <div class="Test-run" id="renders">
+        <a class="Button" role="button" href="#non">Button text</a>
+        <button class="Button" type="button">Button text</button>
+    </div>
+
+    <h3 class="Test-it">inherits font</h3>
+    <div class="Test-run" id="fontInheritance">
+        <a class="Button" href="#non">Button text</a>
+        <button class="Button" type="button">Button text</button>
+    </div>
+
+    <h3 class="Test-it">inherits text color</h3>
+    <div class="Test-run" id="colorInheritance">
+        <a class="Button" href="#non">Button text</a>
+        <button class="Button" type="button">Button text</button>
+    </div>
+
+    <h3 class="Test-it">allows text wrapping</h3>
+    <div class="Test-run" id="textWrapping">
+        <a class="Button" href="#non">Button text</a>
+        <button class="Button" type="button">Button text</button>
+    </div>
+
+    <h3 class="Test-it">is baseline-aligned</h3>
+    <div class="Test-run" id="baseline">
+        <a class="Button" href="#non">Button text</a>
+        <button class="Button" type="button">Button text</button>
+    </div>
+
+    <h3 class="Test-describe">.Button.is-disabled</h3>
+    <h3 class="Test-it">renders disabled</h3>
+    <div class="Test-run" id="is-disabled-renders">
+        <a class="Button is-disabled">Button text</a>
+        <button class="Button is-disabled" type="button" disabled>Button text</button>
+    </div>
+</div>

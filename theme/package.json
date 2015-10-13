@@ -1,0 +1,31 @@
+{
+  "name": "suitcss-theme",
+  "description": "Example theme for SUIT CSS",
+  "version": "0.1.0",
+  "style": "theme.css",
+  "files": [
+    "index.css",
+    "lib"
+  ],
+  "dependencies": {
+    "suitcss": "~0.5.0"
+  },
+  "devDependencies": {
+    "suitcss-preprocessor": "~0.3.0"
+  },
+  "scripts": {
+    "build": "npm run setup && npm run preprocess",
+    "preprocess": "suitcss index.css build/build.css",
+    "setup": "npm install && mkdir -p build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/theme.git"
+  },
+  "keywords": [
+    "browser",
+    "css-theme",
+    "suitcss",
+    "style"
+  ]
+}

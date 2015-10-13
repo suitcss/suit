@@ -1,15 +1,16 @@
 {
-  "name": "suitcss",
-  "version": "0.6.0",
-  "description": "CSS base styles, utilities, and structural components for web apps",
+  "name": "suitcss-components",
+  "description": "Components for SUIT CSS",
+  "version": "0.3.0",
   "style": "index.css",
   "files": [
     "index.css"
   ],
   "dependencies": {
-    "suitcss-base": "file:base",
-    "suitcss-utils": "file:utils",
-    "suitcss-components": "file:components"
+    "suitcss-components-arrange": "file:arrange",
+    "suitcss-components-button": "file:button",
+    "suitcss-components-flex-embed": "file:flex-embed",
+    "suitcss-components-grid": "file:grid"
   },
   "devDependencies": {
     "suitcss-preprocessor": "~0.4.0"
@@ -21,12 +22,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/suitcss/suit.git"
+    "url": "git://github.com/suitcss/components.git"
   },
   "keywords": [
     "browser",
     "css-components",
-    "css-utilities",
     "suitcss",
     "style"
   ]

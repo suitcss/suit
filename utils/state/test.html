@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>State [utility] - SUIT</title>
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link rel="stylesheet" href="build/build.css">
+<style>
+  .dev-visible { visibility: visible; }
+  .dev-invisible { visibility: hidden; }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-state">state utility</a> tests</h1>
+
+  <h2 class="Test-describe">.u-isActionable</h2>
+  <h3 class="Test-it">creates a <code>pointer</code> cursor</h3>
+  <div class="Test-run">
+    <div class="u-isActionable">Should have <code>pointer</code> cursor</div>
+  </div>
+
+  <h2 class="Test-describe">.u-isDisabled</h2>
+  <h3 class="Test-it">creates a <code>default</code> cursor</h3>
+  <div class="Test-run">
+    <div class="u-isDisabled">Should have <code>default</code> cursor</div>
+  </div>
+
+  <h2 class="Test-describe">.u-isDraggable</h2>
+  <h3 class="Test-it">creates a <code>move</code> cursor</h3>
+  <div class="Test-run">
+    <div class="u-isDraggable">Should have <code>move</code> cursor</div>
+  </div>
+
+  <h2 class="Test-describe">.u-isHidden</h2>
+  <h3 class="Test-it">hides the element</h3>
+  <div class="Test-run">
+    <div class="u-isHidden">This should be hidden.</div>
+  </div>
+
+  <h2 class="Test-describe">.u-isHiddenVisually</h2>
+  <h3 class="Test-it">visually hides the element</h3>
+  <div class="Test-run">
+    <div class="u-isHiddenVisually">This should be visually hidden but not hidden from screenreaders.</div>
+  </div>
+
+  <h2 class="Test-describe">.u-isInvisible</h2>
+  <h3 class="Test-it">makes the element invisible</h3>
+  <div class="Test-run">
+    <div class="u-isInvisible dev-visible">This should be invisible</div>
+  </div>
+
+  <h2 class="Test-describe">.u-isShown</h2>
+  <h3 class="Test-it">shows the element</h3>
+  <div class="Test-run">
+    <div class="u-isShown" style="display:none;">This should be shown.</div>
+  </div>
+
+  <h2 class="Test-describe">.u-isVisible</h2>
+  <h3 class="Test-it">makes the element visible</h3>
+  <div class="Test-run">
+    <div class="u-isVisible dev-invisible">This should be visible</div>
+  </div>
+</div>
