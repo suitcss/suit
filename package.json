@@ -12,12 +12,20 @@
     "suitcss-components": "file:components"
   },
   "devDependencies": {
-    "suitcss-preprocessor": "~0.4.0"
+    "autoprefixer": "^6.0.3",
+    "postcss": "^5.0.8",
+    "postcss-bem-linter": "^1.2.0",
+    "postcss-calc": "^5.0.0",
+    "postcss-cli": "^2.1.0",
+    "postcss-custom-media": "^5.0.0",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-import": "^7.0.0",
+    "postcss-reporter": "^1.2.1"
   },
   "scripts": {
     "build": "npm run preprocess",
     "prebuild": "npm install && mkdir -p build",
-    "preprocess": "suitcss index.css build/build.css"
+    "preprocess": "postcss -c postcss-config.js -o build/build.css index.css"
   },
   "repository": {
     "type": "git",
