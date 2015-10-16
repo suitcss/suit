@@ -1,6 +1,10 @@
+# Head
+
+* Fixed: usage documentation.
+
 # 0.5.0
 
-* Fix: single-line whitespace rules for `block-closing-brace-*`.
+* Fixed: single-line whitespace rules for `block-closing-brace-*`.
 
 # 0.4.0
 
