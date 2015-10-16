@@ -13,44 +13,28 @@ $ npm install stylelint-config-suitcss
 
 ## Usage
 
-Require the config and use it for stylelint's option. For example, using the JS API approach:
+Set your stylelint config to:
 
-```js
-var fs = require("fs")
-var postcss = require("postcss")
-var reporter = require("postcss-reporter")
-var stylelint = require("stylelint")
-var configSuitcss = require("stylelint-config-suitcss")
-
-// css to be processed
-var css = fs.readFileSync("input.css", "utf8")
-
-postcss([
-  stylelint(configSuitcss), // use stylelint-config-suitcss
-  reporter()
- ])
-.process(css, { from: "input.css" })
-.then()
+```json
+{
+  "extends": "stylelint-config-suitcss"
+}
 ```
 
 ### Extending the config
 
-Use lodash's `assign` e.g.:
+Simply add a `"rules"` key to your config and add your overrides there.
 
-```js
-var assign = require("lodash.assign")
-var configSuitcss = require("stylelint-config-suitcss")
+For example, to change the `indentation` to tabs and turn off the `number-leading-zero` rule
 
-// change indentation to tabs and turn off the number-leading-zero rule
-var myConfig = {
+
+```json
+{
+  "extends": "stylelint-config-suitcss",
   "rules": {
     "indentation": [2, "tab"],
     "number-leading-zero": 0
   }
-}
-
-var config = {
-  rules: assign(configSuitcss.rules, myConfig.rules)
 }
 ```
 
