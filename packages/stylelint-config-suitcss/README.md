@@ -25,7 +25,7 @@ Set your stylelint config to:
 
 Simply add a `"rules"` key to your config and add your overrides there.
 
-For example, to change the `indentation` to tabs and turn off the `number-leading-zero` rule
+For example, to change the `indentation` to tabs and turn off the `number-leading-zero` rule:
 
 
 ```json
