@@ -19,9 +19,8 @@
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-tape-runner": "^1.2.0",
-    "eslint": "^1.6.0",
+    "eslint": "^1.7.1",
     "eslint-config-stylelint": "^0.1.0",
-    "postcss": "^5.0.10",
     "stylelint": "^2.0.0",
     "tape": "^4.2.1"
   },
