@@ -14,7 +14,7 @@
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "postcss": "^5.0.8",
-    "postcss-bem-linter": "^1.2.0",
+    "postcss-bem-linter": "^2.0.0",
     "postcss-calc": "^5.0.0",
     "postcss-cli": "^2.1.0",
     "postcss-custom-media": "^5.0.0",
