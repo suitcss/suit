@@ -1,7 +1,7 @@
 {
   "name": "suitcss-base",
   "description": "CSS base styles",
-  "version": "0.8.0",
+  "version": "1.0.0",
   "style": "index.css",
   "files": [
     "index.css",
