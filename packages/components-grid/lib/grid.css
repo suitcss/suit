@@ -1,4 +1,4 @@
-/** @define Grid; use strict */
+/** @define Grid */
 
 :root {
   --Grid-font-size: 1rem;
@@ -20,17 +20,14 @@
  *
  * 1. Account for browser defaults of elements that might be the root node of
  *    the component.
- * 2. Remove inter-cell whitespace that appears between `inline-block` child
- *    elements.
- * 3. Ensure consistent default alignment.
  */
 
 .Grid {
-  display: block; /* 1 */
-  font-size: 0; /* 2 */
+  display: flex; /* 1 */
+  box-sizing: border-box;
+  flex-flow: row wrap;
   margin: 0; /* 1 */
   padding: 0; /* 1 */
-  text-align: left; /* 3 */
 }
 
 /**
@@ -38,7 +35,7 @@
  */
 
 .Grid--alignCenter {
-  text-align: center;
+  justify-content: center;
 }
 
 /**
@@ -46,31 +43,43 @@
  */
 
 .Grid--alignRight {
-  text-align: right;
+  justify-content: flex-end;
 }
 
 /**
  * Modifier: middle-align grid cells
  */
 
-.Grid--alignMiddle > .Grid-cell {
-  vertical-align: middle;
+.Grid--alignMiddle {
+  align-items: center;
 }
 
 /**
  * Modifier: bottom-align grid cells
  */
 
-.Grid--alignBottom > .Grid-cell {
-  vertical-align: bottom;
+.Grid--alignBottom {
+  align-items: flex-end;
+}
+
+/**
+ * Modifier: allow cells to equal distribute width
+ */
+
+.Grid--fit > .Grid-cell {
+  flex: 1;
+}
+
+/**
+ * Modifier: all cells match height of tallest cell in a row
+ */
+
+.Grid--equalHeight > .Grid-cell {
+  display: flex;
 }
 
 /**
  * Modifier: gutters
- *
- * NOTE: this can trigger a horizontal scrollbar if the component is as wide as
- * the viewport. Use padding on a container, or `overflow-x:hidden` to protect
- * against it.
  */
 
 .Grid--withGutter {
@@ -86,24 +95,14 @@
 
 /**
  * No explicit width by default. Rely on combining `Grid-cell` with a dimension
- * utility or a component class that extends 'grid'.
+ * utility or a component class that extends 'Grid'.
  *
- * 1. Fundamentals of the non-float grid layout.
- * 2. Reset font size change made in `Grid`.
- * 3. Keeps content correctly aligned with the grid direction.
- * 4. Controls vertical positioning of units.
- * 5. Make cells full-width by default.
+ * 1. Set flex items to full width by default
  */
 
 .Grid-cell {
-  box-sizing: border-box;
-  display: inline-block; /* 1 */
-  font-size: var(--Grid-font-size); /* 2 */
-  margin: 0;
-  padding: 0;
-  text-align: left; /* 3 */
-  vertical-align: top; /* 4 */
-  width: 100%; /* 5 */
+  flex: 0 0 100%; /* 1 */
+  box-sizing: inherit;
 }
 
 /**
@@ -113,6 +112,5 @@
  */
 
 .Grid-cell--center {
-  display: block;
   margin: 0 auto;
 }
