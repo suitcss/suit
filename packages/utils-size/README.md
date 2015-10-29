@@ -2,24 +2,17 @@
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-size.png?branch=master)](http://travis-ci.org/suitcss/utils-size)
 
-SUIT CSS sizing utilities.
+SUIT CSS sizing utilities. Sets `width` and `flex-basis`.
 
 Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-utils-size`
-* [Component(1)](http://component.io/): `component install suitcss/utils-size`
-* [Bower](http://bower.io/): `bower install suit-utils-size`
 * Download: [zip](https://github.com/suitcss/utils-size/zipball/master)
 
 ## Available classes
 
-* `u-sizeFit` - Make an element shrink wrap its content by floating left.
-* `u-sizeFitAlt` - Make an element shrink wrap its content by floating right.
-* `u-sizeFill` - Make an element fill the remaining space.
-* `u-sizeFillAlt` - An alternative method to make an element fill the remaining space.
-* `u-sizeFull` - Make an element the width of its parent.
 * `u-sizeXofY` (numerous) - Specify the proportional width of an object.
 
 `X` must be an integer less than `Y`.
@@ -42,7 +35,7 @@ There are 3 Media Query breakpoints:
 * `--md-viewport`
 * `--lg-viewport`
 
-When using the [SUIT CSS preprocessor](https://github.com/suitcss/preprocessor),
+When using the [postcss-custom-media](https://github.com/postcss/postcss-custom-media),
 breakpoints can be configured using `@custom-media`. For example:
 
 ```css
