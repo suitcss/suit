@@ -68,6 +68,12 @@ To generate the testing build.
 npm run build-test
 ```
 
+To watch the files for making changes to test:
+
+```
+npm run watch
+```
+
 Basic visual tests are in `test/index.html`.
 
 ## Browser support
