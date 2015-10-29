@@ -72,8 +72,11 @@ Basic visual tests are in `test/index.html`.
 
 ## Browser support
 
+Refer to the [caniuse](http://caniuse.com/) page for [flexbox](http://caniuse.com/#feat=flexbox).
+This package can still be used in older browsers if `width` is required
+
 * Google Chrome (latest)
 * Opera (latest)
-* Firefox 4+
-* Safari 5+
-* Internet Explorer 8+
+* Firefox 28+
+* Safari 6.1+
+* Internet Explorer 10+
