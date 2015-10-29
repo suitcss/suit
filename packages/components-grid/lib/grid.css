@@ -1,7 +1,6 @@
 /** @define Grid */
 
 :root {
-  --Grid-font-size: 1rem;
   --Grid-gutter-size: 20px;
 }
 
