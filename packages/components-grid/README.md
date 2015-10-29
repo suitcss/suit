@@ -47,7 +47,19 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 ## Use
 
 A simple grid is easy to create. A grid container can have any number of child
-cells.
+cells. When used with `Grid--fit` space is evenly distributed without need for
+sizing utilities.
+
+```html
+<div class="Grid Grid--fit Grid--withGutter">
+  <div class="Grid-cell"></div>
+  <div class="Grid-cell"></div>
+  <div class="Grid-cell"></div>
+  <div class="Grid-cell"></div>
+</div>
+```
+
+For more granular control over layout make use of modifiers and sizing utilities.
 
 ```html
 <div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--alignMiddle|Grid--alignBottom|Grid--fit|Grid--equalHeight]">
