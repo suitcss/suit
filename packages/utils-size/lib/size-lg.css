@@ -1,56 +1,9 @@
 /**
+ * @define utilities
  * Size: breakpoint 3 (large)
  */
 
 @media (--lg-viewport) {
-
-  /**
-   * Make an element shrink wrap its content.
-   */
-
-  .u-lg-sizeFit,
-  .u-lg-sizeFitAlt {
-    display: block !important;
-    float: left !important;
-    width: auto !important;
-  }
-
-  .u-lg-sizeFitAlt {
-    float: right !important;
-  }
-
-  /**
-   * Make an element fill the remaining space.
-   * N.B. This will hide overflow.
-   */
-
-  .u-lg-sizeFill {
-    display: block !important;
-    overflow: hidden !important;
-    width: auto !important;
-  }
-
-  /**
-   * An alternative method to make an element fill the remaining space.
-   * N.B. Do not use if child elements might be wider than the remaining space.
-   * In Chrome, Safari, and Firefox it results in undesired layout.
-   */
-
-  .u-lg-sizeFillAlt {
-    display: table-cell !important;
-    max-width: 100% !important;
-    width: 10000px !important;
-  }
-
-  /**
-   * Make an element the width of its parent.
-   */
-
-  .u-lg-sizeFull {
-    box-sizing: border-box !important;
-    display: block !important;
-    width: 100% !important;
-  }
 
   /* Proportional widths: breakpoint 3 (large)
      ========================================================================== */
@@ -62,53 +15,64 @@
    */
 
   .u-lg-size1of12 {
+    flex-basis: calc(100% * 1 / 12) !important;
     width: calc(100% * 1 / 12) !important;
   }
 
   .u-lg-size1of10 {
+    flex-basis: 10% !important;
     width: 10% !important;
   }
 
   .u-lg-size1of8 {
+    flex-basis: 12.5% !important;
     width: 12.5% !important;
   }
 
   .u-lg-size1of6,
   .u-lg-size2of12 {
+    flex-basis: calc(100% * 1 / 6) !important;
     width: calc(100% * 1 / 6) !important;
   }
 
   .u-lg-size1of5,
   .u-lg-size2of10 {
+    flex-basis: 20% !important;
     width: 20% !important;
   }
 
   .u-lg-size1of4,
   .u-lg-size2of8,
   .u-lg-size3of12 {
+    flex-basis: 25% !important;
     width: 25% !important;
   }
 
   .u-lg-size3of10 {
+    flex-basis: 30% !important;
     width: 30% !important;
   }
 
   .u-lg-size1of3,
   .u-lg-size2of6,
   .u-lg-size4of12 {
+    flex-basis: calc(100% * 1 / 3) !important;
     width: calc(100% * 1 / 3) !important;
   }
 
   .u-lg-size3of8 {
+    flex-basis: 37.5% !important;
     width: 37.5% !important;
   }
 
   .u-lg-size2of5,
   .u-lg-size4of10 {
+    flex-basis: 40% !important;
     width: 40% !important;
   }
 
   .u-lg-size5of12 {
+    flex-basis: calc(100% * 5 / 12) !important;
     width: calc(100% * 5 / 12) !important;
   }
 
@@ -118,57 +82,69 @@
   .u-lg-size4of8,
   .u-lg-size5of10,
   .u-lg-size6of12 {
+    flex-basis: 50% !important;
     width: 50% !important;
   }
 
   .u-lg-size7of12 {
+    flex-basis: calc(100% * 7 / 12) !important;
     width: calc(100% * 7 / 12) !important;
   }
 
   .u-lg-size3of5,
   .u-lg-size6of10 {
+    flex-basis: 60% !important;
     width: 60% !important;
   }
 
   .u-lg-size5of8 {
+    flex-basis: 62.5% !important;
     width: 62.5% !important;
   }
 
   .u-lg-size2of3,
   .u-lg-size4of6,
   .u-lg-size8of12 {
+    flex-basis: calc(100% * 2 / 3) !important;
     width: calc(100% * 2 / 3) !important;
   }
 
   .u-lg-size7of10 {
+    flex-basis: 70% !important;
     width: 70% !important;
   }
 
   .u-lg-size3of4,
   .u-lg-size6of8,
   .u-lg-size9of12 {
+    flex-basis: 75% !important;
     width: 75% !important;
   }
 
   .u-lg-size4of5,
   .u-lg-size8of10 {
+    flex-basis: 80% !important;
     width: 80% !important;
   }
 
   .u-lg-size5of6,
   .u-lg-size10of12 {
+    flex-basis: calc(100% * 5 / 6) !important;
     width: calc(100% * 5 / 6) !important;
   }
 
   .u-lg-size7of8 {
+    flex-basis: 87.5% !important;
     width: 87.5% !important;
   }
 
   .u-lg-size9of10 {
+    flex-basis: 90% !important;
     width: 90% !important;
   }
 
   .u-lg-size11of12 {
+    flex-basis: calc(100% * 11 / 12) !important;
     width: calc(100% * 11 / 12) !important;
   }
 
