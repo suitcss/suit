@@ -10,6 +10,7 @@
     border: 1px solid black;
     margin-bottom: 10px;
     min-height: 50px;
+    width: 100%;
   }
 
   .fixture-Box--doubleHeight {
@@ -197,6 +198,58 @@
       </div>
       <div class="Grid-cell u-size1of4">
         <div class="fixture-Box">4</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Grid--fit</h2>
+  <h3 class="Test-it">evenly distribute space between cells without sizing classes</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--fit">
+      <div class="Grid-cell">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="Grid-cell">
+        <div class="fixture-Box">2</div>
+      </div>
+      <div class="Grid-cell">
+        <div class="fixture-Box">3</div>
+      </div>
+    </div>
+    <div class="Grid Grid--fit">
+      <div class="Grid-cell">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="Grid-cell">
+        <div class="fixture-Box">2</div>
+      </div>
+      <div class="Grid-cell">
+        <div class="fixture-Box">3</div>
+      </div>
+      <div class="Grid-cell">
+        <div class="fixture-Box">4</div>
+      </div>
+      <div class="Grid-cell">
+        <div class="fixture-Box">5</div>
+      </div>
+      <div class="Grid-cell">
+        <div class="fixture-Box">6</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Grid--equalHeight</h2>
+  <h3 class="Test-it">equal height columns based on tallest Grid-cell</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--equalHeight">
+      <div class="Grid-cell u-size1of3">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="Grid-cell u-size1of3">
+        <div class="fixture-Box">2<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+      </div>
+      <div class="Grid-cell u-size1of3">
+        <div class="fixture-Box">3</div>
       </div>
     </div>
   </div>
