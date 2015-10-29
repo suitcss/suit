@@ -7,11 +7,15 @@ module.exports = {
     "postcss-import",
     "postcss-calc",
     "postcss-custom-media",
-    "autoprefixer"
+    "autoprefixer",
+    "postcss-reporter"
   ],
   "postcss-import": {
     transform(css) {
       return postcss([bemLinter, reporter]).process(css).css;
     }
+  },
+  "postcss-reporter": {
+    clearMessages: true
   }
 };
