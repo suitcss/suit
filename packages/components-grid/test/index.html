@@ -132,6 +132,29 @@
     </div>
   </div>
 
+  <h3 class="Test-it">supports u-sizeFill on cells with no width</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div class="Grid-cell u-size1of4">
+        <div class="fixture-Box">1/4</div>
+      </div>
+      <div class="Grid-cell u-sizeFill">
+        <div class="fixture-Box">auto</div>
+      </div>
+    </div>
+    <div class="Grid">
+      <div class="Grid-cell u-size2of12">
+        <div class="fixture-Box">2/12</div>
+      </div>
+      <div class="Grid-cell u-sizeFill">
+        <div class="fixture-Box">auto</div>
+      </div>
+      <div class="Grid-cell u-size2of12">
+        <div class="fixture-Box">2/12</div>
+      </div>
+    </div>
+  </div>
+
   <h2 class="Test-describe">.Grid--alignCenter</h2>
   <h3 class="Test-it">center-aligns all grid cells but not their content</h3>
   <div class="Test-run">
