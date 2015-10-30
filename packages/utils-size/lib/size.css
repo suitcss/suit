@@ -4,6 +4,28 @@
  * Sizing utilities
  */
 
+/* Intrinsic widths
+   ========================================================================== */
+
+/**
+ * Make an element fill the remaining space.
+ */
+
+.u-sizeFill {
+  flex: 1 !important;
+}
+
+/**
+ * Make an element the width of its parent.
+ */
+
+.u-sizeFull {
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+
 /* Proportional widths
    ========================================================================== */
 

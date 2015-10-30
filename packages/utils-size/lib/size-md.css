@@ -5,6 +5,27 @@
 
 @media (--md-viewport) {
 
+  /* Intrinsic widths
+     ========================================================================== */
+
+  /**
+   * Make an element fill the remaining space.
+   */
+
+  .u-md-sizeFill {
+    flex: 1 !important;
+  }
+
+  /**
+   * Make an element the width of its parent.
+   */
+
+  .u-md-sizeFull {
+    box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
   /* Proportional widths: breakpoint 2 (medium)
      ========================================================================== */
 

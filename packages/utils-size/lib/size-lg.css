@@ -5,6 +5,27 @@
 
 @media (--lg-viewport) {
 
+  /* Intrinsic widths
+     ========================================================================== */
+
+  /**
+   * Make an element fill the remaining space.
+   */
+
+  .u-lg-sizeFill {
+    flex: 1 !important;
+  }
+
+  /**
+   * Make an element the width of its parent.
+   */
+
+  .u-lg-sizeFull {
+    box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
   /* Proportional widths: breakpoint 3 (large)
      ========================================================================== */
 

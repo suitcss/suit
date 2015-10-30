@@ -22,6 +22,13 @@
     display: flex;
   }
 
+  .u-flexStart {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
   .u-fullWidthFlex {
     -webkit-box-flex: 0;
       -webkit-flex: 0 0 100%;
@@ -38,6 +45,25 @@
 
 <div class="Test">
   <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-size">sizing utility</a> tests</h1>
+
+  <h2 class="Test-describe">.u-sizeFill</h2>
+  <h3 class="Test-it">fills remaining space</h3>
+  <div class="Test-run">
+    <div class="u-displayFlex u-flexStart">
+      <div class="dev-Box"></div>
+      <div class="u-sizeFill u-highlight">
+        content
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeFull</h2>
+  <h3 class="Test-it">fits the full-width of the container</h3>
+  <div class="Test-run">
+    <div class="u-sizeFull u-highlight" style="border:10px solid red;">
+      content
+    </div>
+  </div>
 
   <h2 class="Test-describe">.u-sizeXof2</h2>
   <h3 class="Test-it">sizes to 1/2 of the parent container</h3>
