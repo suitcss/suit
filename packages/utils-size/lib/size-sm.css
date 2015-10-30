@@ -10,10 +10,13 @@
 
   /**
    * Make an element fill the remaining space.
+   *
+   * Be explicit to workaround IE10 bug with shorthand flex
+   * https://github.com/philipwalton/flexbugs#6-the-default-flex-value-has-changed
    */
 
   .u-sm-sizeFill {
-    flex: 1 !important;
+    flex: 1 1 0% !important; /* 1 */
   }
 
   /**
