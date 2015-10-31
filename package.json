@@ -1,13 +1,13 @@
 {
   "name": "suitcss",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "CSS base styles, utilities, and structural components for web apps",
   "style": "index.css",
   "files": [
     "index.css"
   ],
   "dependencies": {
-    "suitcss-base": "~0.7.0",
+    "suitcss-base": "~1.0.1",
     "suitcss-utils": "~0.10.0",
     "suitcss-components": "~0.3.0"
   },
