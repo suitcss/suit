@@ -15,6 +15,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 
 * `u-block` - Display `block`.
 * `u-hidden` - Display `none`.
+* `u-flex` - Display `flex`.
 * `u-hiddenVisually` - Visually hidden but available to screenreaders.
 * `u-inline` - Display `inline`.
 * `u-inlineBlock` - Display `inline-block`.
@@ -46,12 +47,20 @@ To generate the testing build.
 npm run build-test
 ```
 
+To watch the files for making changes to test:
+
+```
+npm run watch
+```
+
 Basic visual tests are in `test/index.html`.
 
 ## Browser support
 
 * Google Chrome (latest)
 * Opera (latest)
-* Firefox 4+
-* Safari 5+
-* Internet Explorer 8+
+* Firefox 4+ (28+ for `flex`)
+* Safari 5+ (6.1+ for `flex`)
+* Internet Explorer 9+ (10+ for `flex`)
+
+Refer to the [caniuse](http://caniuse.com/) page for [flexbox](http://caniuse.com/#feat=flexbox)
