@@ -8,6 +8,7 @@ Read more about how to use [SUIT CSS](https://github.com/suitcss/suit/).
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-base`
+* [Component(1)](http://github.com/component/component): `component install suitcss/base`
 * [Download](https://github.com/suitcss/base/releases)
 
 ## Testing
