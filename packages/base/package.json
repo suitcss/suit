@@ -9,7 +9,7 @@
     "lib"
   ],
   "dependencies": {
-    "normalize.css": "^3.0.1"
+    "normalize.css": "^3.0.3"
   },
   "devDependencies": {
     "suitcss-components-test": "*",

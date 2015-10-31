@@ -4,7 +4,7 @@
   "version": "0.8.0",
   "styles": ["lib/base.css"],
   "dependencies": {
-    "necolas/normalize.css": "3.0.1"
+    "necolas/normalize.css": "3.0.3"
   },
   "author": "Nicolas Gallagher",
   "license": "MIT"
