@@ -10,6 +10,10 @@
   display: none !important;
 }
 
+.u-flex {
+  display: flex !important;
+}
+
 /**
  * Completely remove from the flow but leave available to screen readers.
  */
