@@ -37,7 +37,7 @@ There are 3 Media Query breakpoints:
 * `--md-viewport`
 * `--lg-viewport`
 
-When using the [postcss-custom-media](https://github.com/postcss/postcss-custom-media),
+When using [postcss-custom-media](https://github.com/postcss/postcss-custom-media),
 breakpoints can be configured using `@custom-media`. For example:
 
 ```css
