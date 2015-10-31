@@ -1,5 +1,9 @@
 ### HEAD
 
+### 1.0.1 (October 31, 2015)
+
+* Revert removal of `component.json`
+
 ### 1.0.0 (October 25, 2015)
 
 * Use `box-sizing: border-box;` as a default
