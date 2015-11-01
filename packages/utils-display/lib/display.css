@@ -14,6 +14,10 @@
   display: flex !important;
 }
 
+.u-inlineFlex {
+  display: inline-flex !important;
+}
+
 /**
  * Completely remove from the flow but leave available to screen readers.
  */

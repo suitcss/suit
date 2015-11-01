@@ -16,6 +16,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 * `u-block` - Display `block`.
 * `u-hidden` - Display `none`.
 * `u-flex` - Display `flex`.
+* `u-inlineFlex` - Display `inline-flex`.
 * `u-hiddenVisually` - Visually hidden but available to screenreaders.
 * `u-inline` - Display `inline`.
 * `u-inlineBlock` - Display `inline-block`.
