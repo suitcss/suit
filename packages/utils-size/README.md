@@ -9,7 +9,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-utils-size`
-* Download: [zip](https://github.com/suitcss/utils-size/zipball/master)
+* Download: [zip](https://github.com/suitcss/utils-size/releases/latest)
 
 ## Available classes
 
