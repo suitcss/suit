@@ -14,7 +14,7 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 ## Installation
 
 * [npm](https://www.npmjs.org/package/suitcss-components-grid): `npm install suitcss-components-grid`
-* Download: [zip](https://github.com/suitcss/grid/zipball/master)
+* Download: [zip](https://github.com/suitcss/components-grid/releases/latest)
 
 ## Features
 
