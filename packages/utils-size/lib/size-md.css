@@ -11,10 +11,8 @@
   /**
    * Make an element fill the remaining space.
    *
-   * 1. Be explicit to work around IE10 bug with shorthand flex
-   *    https://github.com/philipwalton/flexbugs#6-the-default-flex-value-has-changed
-   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
-   *    https://github.com/philipwalton/flexbugs/issues/92
+   * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
+   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
    */
 
   .u-md-sizeFill {
@@ -40,8 +38,7 @@
    * Intentional redundancy build into each set of unit classes.
    * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
    *
-   * Uses `flex-basis: auto` with a width to work around box-sizing bug in IE10/11
-   * https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
+   * Uses `flex-basis: auto` with a width to avoid box-sizing bug in IE10/11 - http://git.io/vllMD
    */
 
   .u-md-size1of12 {
