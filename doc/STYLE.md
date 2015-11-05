@@ -309,15 +309,19 @@ before the closing brace.
 .selector-3 { width: 30%; }
 ```
 
-Long, comma-separated property values - such as collections of gradients or
-shadows - can be arranged across multiple lines in an effort to improve
-readability and produce more useful diffs.
+Long, comma-separated property values - such as collections of shadows - or
+function arguments - such as those for gradients - can be arranged across
+multiple lines in an effort to improve readability and produce more useful diffs.
 
 ```css
 .selector {
-  background-image:
-    linear-gradient(#fff, #ccc),
-    linear-gradient(#f3c, #4ec);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
   box-shadow:
     1px 1px 1px #000,
     2px 2px 1px 1px #ccc inset;
