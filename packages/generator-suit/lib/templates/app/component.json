@@ -1,0 +1,10 @@
+{
+  "name": "suitcss-<%= modulePackageName %>",
+  "repo": "suitcss/<%= modulePackageName %>",
+  "version": "0.0.0",
+  "styles": [
+    "lib/<%= moduleFileName %>"
+  ],
+  "author": "",
+  "license": "MIT"
+}

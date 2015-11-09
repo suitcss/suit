@@ -1,0 +1,144 @@
+/** @define Arrange */
+
+:root {
+  --Arrange-gutter-size: 10px;
+}
+
+/**
+ * This component lets you lay out a row of cells in various ways. You can
+ * specify whether a cell should be wide enough to fit its content, or take up
+ * the remaining space in the row. It's also possible to give all cells an
+ * equal width, and to control their vertical alignment.
+ */
+
+/**
+ * 1. Protect against the component expanding beyond the confines of its
+ *    container if properties affecting the box-model are applied to the
+ *    component. Mainly necessary because of (5).
+ * 2. Rely on table layout.
+ * 3. Zero out the default spacing that might be on an element (e.g., `ul`).
+ * 4. Make sure the component fills at least the full width of its parent.
+ * 5. Reset the table-layout algorithm in case a component is nested.
+ */
+
+.Arrange {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; /* 1 */
+  display: table; /* 2 */
+  margin: 0; /* 3 */
+  min-width: 100%; /* 4 */
+  padding: 0; /* 3 */
+  table-layout: auto; /* 5 */
+}
+
+/**
+ * There are two possible types of child. `sizeFill` will expand to fill all
+ * of the remaining space not filled by `sizeFit` elements.
+ *
+ * 1. Zero out any default spacing that might be on an element (e.g., `li`);
+ *    Margin has no effect when coupled with `display: table-cell`.
+ * 2. All cells are top-aligned by default
+ */
+
+.Arrange-sizeFill,
+.Arrange-sizeFit {
+  display: table-cell;
+  padding: 0; /* 1 */
+  vertical-align: top; /* 2 */
+}
+
+/**
+ * Make sure the main content block expands to fill the remaining space.
+ */
+
+.Arrange-sizeFill {
+  width: 100%;
+}
+
+/**
+ * Where possible, protect against large images breaking the layout. Prevent them from
+ * exceeding the width of the main content block by making them fluid.
+ *
+ * Only work for all browsers with the `Arrange--equally` variant. For Firefox
+ * and IE to constrain image dimensions for other layouts, large images will
+ * need their width set to `100%`.
+ */
+
+.Arrange-sizeFill img {
+  height: auto;
+  max-width: 100%;
+}
+
+/**
+ * Defend against a side-effect of this layout pattern: images in
+ * 'Arrange-sizeFit' cannot be fluid, otherwise they lose their ability to
+ * provide size to a cell.
+ */
+
+.Arrange-sizeFit img {
+  max-width: none !important;
+  width: auto !important;
+}
+
+/* Vertical alignment modifiers
+   ========================================================================== */
+
+.Arrange--middle > .Arrange-sizeFill,
+.Arrange--middle > .Arrange-sizeFit {
+  vertical-align: middle;
+}
+
+.Arrange--bottom > .Arrange-sizeFill,
+.Arrange--bottom > .Arrange-sizeFit {
+  vertical-align: bottom;
+}
+
+/* Equal-width modifier
+   ========================================================================== */
+
+/**
+ * This layout algorithm will create equal-width table cells, irrespective of
+ * the width of their content.
+ *
+ * 1. The layout algorithm requires a set width to correctly calculate table
+ *    cell width.
+ */
+
+.Arrange--equal {
+  table-layout: fixed;
+  width: 100%; /* 1 */
+}
+
+/**
+ * Give the cells an equal width. This value ensures that Arrange is still 100%
+ * wide when gutters are used in conjunctions with equal-width cells.
+ *
+ * It's recommended that only 'Arrange-sizeFill' be used for equal width cells.
+ * Their inner images will automatically be responsive.
+ */
+
+.Arrange--equal > .Arrange-sizeFill,
+.Arrange--equal > .Arrange-sizeFit {
+  width: 1%;
+}
+
+/* Gutter modifier
+   ========================================================================== */
+
+/**
+ * Add a gutter between cells
+ *
+ * NOTE: this can trigger a horizontal scrollbar if the component is as wide as
+ * the viewport. Use padding on a container, or `overflow-x:hidden` to protect
+ * against it.
+ */
+
+.Arrange--withGutter {
+  margin: 0 calc(-0.5 * var(--Arrange-gutter-size));
+}
+
+.Arrange--withGutter > .Arrange-sizeFit,
+.Arrange--withGutter > .Arrange-sizeFill {
+  padding: 0 calc(0.5 * var(--Arrange-gutter-size));
+}

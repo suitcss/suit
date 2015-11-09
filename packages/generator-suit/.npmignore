@@ -1,0 +1,5 @@
+./.npmignore
+./.travis.yml
+./.jshintrc
+./CHANGELOG.md
+./test

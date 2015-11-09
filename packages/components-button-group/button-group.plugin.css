@@ -1,0 +1,63 @@
+/** @define ButtonGroup */
+
+/*! suit-button-group v2.2.0 | MIT License | github.com/suitcss */
+
+/* Modifier: collapse button borders
+   ========================================================================== */
+
+/**
+ * Includes appropriate removal of `border-radius`.
+ * All browsers that support `border-radius` also support CSS 3 pseudo-classes.
+ */
+
+/**
+ * Vertical collapse
+ */
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item {
+  margin-top: calc(var(--border-width-Button) * -1px);
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child {
+  margin-top: 0;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
+  border-radius: 0;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child:not(:only-child) > .Button {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:last-child:not(:only-child) > .Button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/**
+ * Horizontal collapse
+ */
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item {
+  margin-left: calc(var(--border-width-Button) * -1px);
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child {
+  margin-left: 0;
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
+  border-radius: 0;
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child:not(:only-child) > .Button {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:last-child:not(:only-child) > .Button {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}

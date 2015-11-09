@@ -1,0 +1,32 @@
+{
+  "name": "suitcss-components-button",
+  "description": "Structural button styles for SUIT CSS",
+  "version": "4.0.0",
+  "style": "index.css",
+  "files": [
+    "index.css",
+    "lib"
+  ],
+  "devDependencies": {
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "~0.3.0"
+  },
+  "scripts": {
+    "build": "npm run setup && npm run preprocess",
+    "build-test": "npm run setup && npm run preprocess-test",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss test/test.css build/test.css",
+    "setup": "npm install && mkdir -p build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/components-button.git"
+  },
+  "keywords": [
+    "browser",
+    "css-components",
+    "button",
+    "suitcss",
+    "style"
+  ]
+}

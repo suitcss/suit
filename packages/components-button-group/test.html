@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>ButtonGroup [component] - SUIT</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="stylesheet" href="build/build.css">
+<style>
+  .Test-run .Button:hover,
+  .Test-run .Button:focus,
+  .Test-run .Button:active {
+    border-color: red;
+  }
+
+  .Test-run--withBorderRadius .Button {
+    border-radius: 5px;
+  }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/components-button-group">ButtonGroup</a> component tests</h1>
+
+  <h2 class="Test-describe">.ButtonGroup</h2>
+  <h3 class="Test-it">renders vertically and full-width</h3>
+  <div class="Test-run">
+    <div class="ButtonGroup">
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Dashboard</a>
+      </div>
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Account</a>
+      </div>
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Logout</a>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">removes default list styles from the root element</h3>
+  <div class="Test-run">
+    <ul class="ButtonGroup">
+      <li class="ButtonGroup-item">
+        <a class="Button" href="#non">Dashboard</a>
+      </li>
+      <li class="ButtonGroup-item">
+        <a class="Button" href="#non">Account</a>
+      </li>
+      <li class="ButtonGroup-item">
+        <a class="Button" href="#non">Logout</a>
+      </li>
+    </ul>
+  </div>
+
+  <h2 class="Test-describe">.ButtonGroup.ButtonGroup--hz</h2>
+  <h3 class="Test-it">renders horizontally and buttons shrink wrap</h3>
+  <div class="Test-run" id="rendersHz">
+    <div class="ButtonGroup ButtonGroup--hz">
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Dashboard</a>
+      </div>
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Account</a>
+      </div>
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.ButtonGroup.ButtonGroup--borderCollapse (requires plugin)</h2>
+  <h3 class="Test-it">overlaps adjacent borders, removes border-radius from adjacent borders, places the active button on top</h3>
+  <div class="Test-run Test-run--withBorderRadius" id="borderCollapse-renders">
+    <div class="ButtonGroup ButtonGroup--borderCollapse">
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Dashboard</a>
+      </div>
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Account</a>
+      </div>
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Logout</a>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">doesn't have an affect on single-item groups</h3>
+  <div class="Test-run Test-run--withBorderRadius" id="borderCollapse-single">
+    <div class="ButtonGroup ButtonGroup--hz">
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.ButtonGroup.ButtonGroup--hz.ButtonGroup--borderCollapse (requires plugin)</h2>
+  <h3 class="Test-it">overlaps adjacent borders, removes border-radius from adjacent borders, places the active button on top</h3>
+  <div class="Test-run Test-run--withBorderRadius" id="hz-borderCollapse-renders">
+    <div class="ButtonGroup ButtonGroup--hz ButtonGroup--borderCollapse">
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Dashboard</a>
+      </div>
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Account</a>
+      </div>
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Logout</a>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">doesn't have an affect on single-item groups</h3>
+  <div class="Test-run Test-run--withBorderRadius" id="hz-borderCollapse-single">
+    <div class="ButtonGroup ButtonGroup--hz ButtonGroup--borderCollapse">
+      <div class="ButtonGroup-item">
+        <a class="Button" href="#non">Dashboard</a>
+      </div>
+    </div>
+  </div>
+</div>

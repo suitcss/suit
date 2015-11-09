@@ -1,0 +1,17 @@
+{
+  "name": "suitcss-release",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giuseppe Gurgone (http://giuseppe.pizza)",
+  "license": "MIT",
+  "dependencies": {
+    "alterate-files": "file:../alterate-files",
+    "mversion": "^1.10.1",
+    "suitcss-pkg-version": "file:../plugins/pkg-version",
+    "suitcss-pkg-publish": "file:../plugins/pkg-publish"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "components-button-group",
+  "repo": "suitcss/components-button-group",
+  "version": "2.2.0",
+  "styles": [
+    "button-group.css",
+    "button-group.plugin.css"
+  ],
+  "dependencies": {
+    "suitcss/components-button": "*"
+  },
+  "development": {
+    "suitcss/components-test": "*"
+  },
+  "author": "Nicolas Gallagher",
+  "license": "MIT"
+}

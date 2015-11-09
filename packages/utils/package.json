@@ -1,0 +1,28 @@
+{
+  "name": "suitcss-utils",
+  "description": "Utilities for SUIT CSS",
+  "version": "0.10.3",
+  "style": "index.css",
+  "dependencies": {
+    "suitcss-utils-align": "~0.2.2",
+    "suitcss-utils-display": "~0.4.2",
+    "suitcss-utils-layout": "~0.4.2",
+    "suitcss-utils-link": "~0.5.2",
+    "suitcss-utils-offset": "~0.5.1",
+    "suitcss-utils-position": "~0.2.2",
+    "suitcss-utils-size": "~0.7.2",
+    "suitcss-utils-text": "~0.4.2"
+  },
+  "devDependencies": {
+    "suitcss-preprocessor": "~0.3.0"
+  },
+  "scripts": {
+    "build": "npm run setup && npm run preprocess",
+    "preprocess": "suitcss index.css build/build.css",
+    "setup": "npm install && mkdir -p build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/utils.git"
+  }
+}

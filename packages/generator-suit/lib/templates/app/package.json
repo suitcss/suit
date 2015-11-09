@@ -1,0 +1,33 @@
+{
+  "name": "suitcss-<%= modulePackageName %>",
+  "description": "",
+  "version": "0.0.0",
+  "style": "index.css",
+  "files": [
+    "index.css",
+    "index.js",
+    "lib"
+  ],
+  "devDependencies": {
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "~0.3.0"
+  },
+  "scripts": {
+    "build": "npm run setup && npm run preprocess",
+    "build-test": "npm run setup && npm run preprocess-test",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss test/test.css build/test.css",
+    "setup": "npm install && mkdir -p build"
+  },  
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/<%= modulePackageName %>.git"
+  },
+  "keywords": [
+    "browser",
+    "css-components",
+    "<%= modulePackageName %>",
+    "suitcss",
+    "style"
+  ]
+}
