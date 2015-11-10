@@ -315,13 +315,14 @@ multiple lines in an effort to improve readability and produce more useful diffs
 
 ```css
 .selector {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 25px,
-    rgba(255, 255, 255, 1) 25px,
-    rgba(255, 255, 255, 1) 50px
-  );
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 25px,
+      rgba(255, 255, 255, 1) 25px,
+      rgba(255, 255, 255, 1) 50px
+    );
   box-shadow:
     1px 1px 1px #000,
     2px 2px 1px 1px #ccc inset;
