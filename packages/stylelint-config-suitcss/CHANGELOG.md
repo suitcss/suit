@@ -1,3 +1,9 @@
+# Head
+
+* Added: support for SuitCSS's "Exceptions and slight deviations" (multi-line declarations and functions, and single-line single declaration rule-sets).
+* Added: `function-linear-gradient-no-nonstandard-direction` rule.
+* Added: `comment-space-inside` rule.
+
 # 0.5.1
 
 * Fixed: usage documentation.
