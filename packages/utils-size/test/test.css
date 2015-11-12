@@ -3,4 +3,5 @@
 @custom-media --lg-viewport (min-width:960px);
 
 @import "suitcss-components-test";
+@import "suitcss-utils-display";
 @import "../index.css";
