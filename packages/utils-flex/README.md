@@ -73,7 +73,7 @@ breakpoints can be configured using `@custom-media`. For example:
 ### Applying `display: flex;`
 
 The `flex` utilities are designed to be used where the `display: flex` property
-is already set, for example by [`Grid`](https://github.com/suitcss/components-grid) or [`u-flex`](https://github.com/suitcss/utils-display).
+is already set, for example by [`Grid`](https://github.com/suitcss/components-grid) or [`utils-display`](https://github.com/suitcss/utils-display).
 
 ### Centring an element in its container
 
