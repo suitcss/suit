@@ -1,0 +1,714 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Flex [utility] - SUIT CSS</title>
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link rel="stylesheet" href="../build/test.css">
+<style>
+  .FlexItem {
+    background-color: #90C3D4;
+  }
+
+  .Test-run > div {
+    background-color: #eee;
+  }
+
+  .Test-fixedHeight {
+    height: 150px;
+  }
+
+  .Content {
+    padding: 10px;
+  }
+
+
+  .Test {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+</style>
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-flex">flex</a> tests</h1>
+
+  <h2 class="Test-describe">.u-flexRow</h2>
+  <h3 class="Test-it">displays items in a row</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexRow">
+      <div class="FlexItem">
+        <div class="Content">1. item should be in a row</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be in a row</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be in a row</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">1. item should be in a row</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be in a row</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be in a row</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexRowReverse</h2>
+  <h3 class="Test-it">reverses items in a row</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexRowReverse">
+      <div class="FlexItem">
+        <div class="Content">1. item should be in a row</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be in a row</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be in a row</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be in a row</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be in a row</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be in a row</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexCol</h2>
+  <h3 class="Test-it">displays items in a column</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexCol">
+      <div class="FlexItem">
+        <div class="Content">1. item should be in a column</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be in a column</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be in a column</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be in a column</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be in a column</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be in a column</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexColReverse</h2>
+  <h3 class="Test-it">reverses items in a column</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexColReverse">
+      <div class="FlexItem">
+        <div class="Content">1. item should be in a column</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be in a column</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be in a column</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be in a column</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be in a column</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be in a column</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexWrap</h2>
+  <h3 class="Test-it">wraps items onto next line when container is too small</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexWrap">
+      <div class="FlexItem">
+        <div class="Content">1. item should be wrapped when no space left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be wrapped when no space left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be wrapped when no space left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be wrapped when no space left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be wrapped when no space left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be wrapped when no space left</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexNoWrap</h2>
+  <h3 class="Test-it">keeps items in a single row regardless of container size</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexNoWrap">
+      <div class="FlexItem">
+        <div class="Content">1. item should be on one line</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be on one line</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be on one line</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be on one line</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be on one line</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be on one line</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexWrapReverse</h2>
+  <h3 class="Test-it">reverses wrapped items</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexWrapReverse">
+      <div class="FlexItem">
+        <div class="Content">1. item should be wrapped when no space left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be wrapped when no space left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be wrapped when no space left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be wrapped when no space left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be wrapped when no space left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be wrapped when no space left</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexJustifyStart</h2>
+  <h3 class="Test-it">items are aligned to the left side of the main axis</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexJustifyStart">
+      <div class="FlexItem">
+        <div class="Content">1. item should be aligned left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be aligned left</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be aligned left</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexJustifyEnd</h2>
+  <h3 class="Test-it">items are aligned to the right side of the main axis</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexJustifyEnd">
+      <div class="FlexItem">
+        <div class="Content">1. item should be aligned right</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be aligned right</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be aligned right</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexJustifyCenter</h2>
+  <h3 class="Test-it">items are in the center of the main axis</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexJustifyCenter">
+      <div class="FlexItem">
+        <div class="Content">1. item should be center</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be center</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be center</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexJustifyBetween</h2>
+  <h3 class="Test-it">items have space between each other on main axis</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexJustifyBetween">
+      <div class="FlexItem">
+        <div class="Content">1. item should have space between</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should have space between</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should have space between</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexJustifyAround</h2>
+  <h3 class="Test-it">items have space around each other on main axis</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexJustifyAround">
+      <div class="FlexItem">
+        <div class="Content">1. item should have space around</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should have space around</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should have space around</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignItemsStretch</h2>
+  <h3 class="Test-it">stretch to fill the container </h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexAlignItemsStretch">
+      <div class="FlexItem">
+        <div class="Content">1. item should stretch from top to bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should stretch from top to bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should stretch from top to bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should stretch from top to bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should stretch from top to bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should stretch from top to bottom</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignItemsStart</h2>
+  <h3 class="Test-it">cross-start margin edge of the items is placed on the cross-start line</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexAlignItemsStart">
+      <div class="FlexItem">
+        <div class="Content">1. item should be at top of the container</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be at top of the container</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be at top of the container</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be at top of the container</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be at top of the container</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be at top of the container</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignItemsEnd</h2>
+  <h3 class="Test-it">cross-end margin edge of the items is placed on the cross-end line</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexAlignItemsEnd">
+      <div class="FlexItem">
+        <div class="Content">1. item should be at bottom of the container</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be at bottom of the container</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be at bottom of the container</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be at bottom of the container</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be at bottom of the container</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be at bottom of the container</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignItemsCenter</h2>
+  <h3 class="Test-it">items are centered in the cross-axis</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexAlignItemsCenter">
+      <div class="FlexItem">
+        <div class="Content">1. item should be vertically centred</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be vertically centred</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be vertically centred</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be vertically centred</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be vertically centred</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be vertically centred</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignItemsBaseline</h2>
+  <h3 class="Test-it">items have their baselines aligned on the cross axis</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexAlignItemsBaseline">
+      <div class="FlexItem" style="padding-top: 25px">
+        <div class="Content">1. item should be aligned on the baseline</div>
+      </div>
+      <div class="FlexItem" style="padding-top: 50px; margin-top: 15px">
+        <div class="Content">2. item should be aligned on the baseline</div>
+      </div>
+      <div class="FlexItem" style="padding-top: 10px">
+        <div class="Content">3. item should be aligned on the baseline</div>
+      </div>
+      <div class="FlexItem" style="padding-top: 25px">
+        <div class="Content">4. item should be aligned on the baseline</div>
+      </div>
+      <div class="FlexItem" style="padding-top: 50px; margin-top: 15px">
+        <div class="Content">5. item should be aligned on the baseline</div>
+      </div>
+      <div class="FlexItem" style="padding-top: 10px">
+        <div class="Content">6. item should be aligned on the baseline</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignContentStart</h2>
+  <h3 class="Test-it">items are packed to the start of the container</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexWrap u-flexAlignContentStart">
+      <div class="FlexItem">
+        <div class="Content">1. item should be aligned to the top</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be aligned to the top</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be aligned to the top</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be aligned to the top</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be aligned to the top</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be aligned to the top</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignContentEnd</h2>
+  <h3 class="Test-it">items are packed to the end of the container</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexWrap u-flexAlignContentEnd">
+      <div class="FlexItem">
+        <div class="Content">1. item should be aligned to the bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be aligned to the bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be aligned to the bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be aligned to the bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be aligned to the bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be aligned to the bottom</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignContentCenter</h2>
+  <h3 class="Test-it">lines packed to the centre of the container</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexWrap u-flexAlignContentCenter">
+      <div class="FlexItem">
+        <div class="Content">1. item should be aligned to the centre</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be aligned to the centre</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be aligned to the centre</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be aligned to the centre</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be aligned to the centre</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be aligned to the centre</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignContentStretch</h2>
+  <h3 class="Test-it">lines stretch to take up the remaining space</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexWrap u-flexAlignContentStretch">
+      <div class="FlexItem">
+        <div class="Content">1. item should be stretched on the cross axis</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be stretched on the cross axis</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be stretched on the cross axis</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be stretched on the cross axis</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be stretched on the cross axis</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be stretched on the cross axis</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignContentBetween</h2>
+  <h3 class="Test-it">lines evenly distributed; the first line is at the start of the container while the last one is at the end</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexWrap u-flexAlignContentBetween">
+      <div class="FlexItem">
+        <div class="Content">1. item should be at the start of the cross axis</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be at the start of the cross axis</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be at the start of the cross axis</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should be at the end of the  cross axis</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should be at the end of the  cross axis</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should be at the end of the  cross axis</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignContentAround</h2>
+  <h3 class="Test-it">lines evenly distributed with equal space around each line</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexWrap u-flexAlignContentAround">
+      <div class="FlexItem">
+        <div class="Content">1. item should have space around</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should have space around</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should have space around</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. item should have space around</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. item should have space around</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">6. item should have space around</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignSelfStart</h2>
+  <h3 class="Test-it">aligns single item at cross axis start</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexAlignItemsEnd">
+      <div class="FlexItem u-flexAlignSelfStart">
+        <div class="Content">1. item should be at the top</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be at the bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be at the bottom</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignSelfEnd</h2>
+  <h3 class="Test-it">aligns single item at cross axis end</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexAlignItemsStart">
+      <div class="FlexItem u-flexAlignSelfEnd">
+        <div class="Content">1. item should be at the bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be at the top</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be at the top</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignSelfCenter</h2>
+  <h3 class="Test-it">aligns single item at cross axis centre</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexAlignItemsStart">
+      <div class="FlexItem u-flexAlignSelfCenter">
+        <div class="Content">1. item should be in the centre</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be at the top</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be at the top</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAlignSelfStretch</h2>
+  <h3 class="Test-it">stretches single item from cross start to end</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexAlignItemsStart">
+      <div class="FlexItem u-flexAlignSelfStretch">
+        <div class="Content">1. item should be stretched from top to bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. item should be at the top</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be at the top</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexOrderFirst</h2>
+  <h3 class="Test-it">positions an item at the start</h3>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="FlexItem">
+        <div class="Content">1. default order</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. default order</div>
+      </div>
+      <div class="FlexItem u-flexOrderFirst">
+        <div class="Content">3. item should be first</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">applies to multiple elements</h3>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="FlexItem">
+        <div class="Content">1. default order</div>
+      </div>
+      <div class="FlexItem u-flexOrderFirst">
+        <div class="Content">2. item should be first</div>
+      </div>
+      <div class="FlexItem u-flexOrderFirst">
+        <div class="Content">3. item should be second</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. default order</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. default order</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexOrderLast</h2>
+  <h3 class="Test-it">positions an item at the end</h3>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="FlexItem u-flexOrderLast">
+        <div class="Content">1. item should be last</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2. default order</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. default order</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">applies to multiple elements</h3>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="FlexItem u-flexOrderLast">
+        <div class="Content">1. item should be second from last</div>
+      </div>
+      <div class="FlexItem u-flexOrderLast">
+        <div class="Content">2. item should be last</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. default order</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">4. default order</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">5. default order</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-sm-flexJustifyEnd / u-md-flexJustifyCenter / u-lg-flexJustifyAround</h2>
+  <h3 class="Test-it">adapts the flexJustifyX at different widths</h3>
+  <div class="Test-run">
+    <div class="u-flex u-flexJustifyStart u-sm-flexJustifyEnd u-md-flexJustifyCenter u-lg-flexJustifyAround">
+      <div class="FlexItem">
+        <div class="Content">1.</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">2.</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3.</div>
+      </div>
+    </div>
+  </div>
+
+</div>

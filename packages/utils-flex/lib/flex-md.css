@@ -1,0 +1,190 @@
+/**
+ * @define utilities
+ * Size: breakpoint 1 (medium)
+ */
+
+@media (--md-viewport) {
+
+  /* Applies to flex container
+     ========================================================================== */
+
+  /**
+   * Direction: row
+   */
+
+  .u-md-flexRow {
+    flex-direction: row !important;
+  }
+
+  .u-md-flexRowReverse {
+    flex-direction: row-reverse !important;
+  }
+
+  /**
+   * Direction: column
+   */
+
+  .u-md-flexCol {
+     flex-direction: column !important;
+  }
+
+  .u-md-flexColReverse {
+     flex-direction: column-reverse !important;
+  }
+
+  /**
+   * Wrap
+   */
+
+  .u-md-flexWrap {
+    flex-wrap: wrap !important;
+  }
+
+  .u-md-flexNoWrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .u-md-flexWrapReverse {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  /**
+   * Align items along the main axis of the current line of the flex container
+   */
+
+  .u-md-flexJustifyStart {
+    justify-content: flex-start !important;
+  }
+
+  .u-md-flexJustifyEnd {
+    justify-content: flex-end !important;
+  }
+
+  .u-md-flexJustifyCenter {
+    justify-content: center !important;
+  }
+
+  .u-md-flexJustifyBetween {
+    justify-content: space-between !important;
+  }
+
+  .u-md-flexJustifyAround {
+    justify-content: space-around !important;
+  }
+
+  /**
+   * Align items in the cross axis of the current line of the flex container
+   * Similar to `justify-content` but in the perpendicular direction
+   */
+
+  .u-md-flexAlignItemsStart {
+    align-items: flex-start !important;
+  }
+
+  .u-md-flexAlignItemsEnd {
+    align-items: flex-end !important;
+  }
+
+  .u-md-flexAlignItemsCenter {
+    align-items: center !important;
+  }
+
+  .u-md-flexAlignItemsStretch {
+    align-items: stretch !important;
+  }
+
+  .u-md-flexAlignItemsBaseline {
+    align-items: baseline !important;
+  }
+
+  /**
+   * Aligns items within the flex container when there is extra space in the cross-axis
+   *
+   * Has no effect when there is only one line of flex items.
+   */
+
+  .u-md-flexAlignContentStart {
+    align-content: flex-start !important;
+  }
+
+  .u-md-flexAlignContentEnd {
+    align-content: flex-end !important;
+  }
+
+  .u-md-flexAlignContentCenter {
+    align-content: center !important;
+  }
+
+  .u-md-flexAlignContentStretch {
+    align-content: stretch !important;
+  }
+
+  .u-md-flexAlignContentBetween {
+    align-content: space-between !important;
+  }
+
+  .u-md-flexAlignContentAround {
+    align-content: space-around !important;
+  }
+
+  /**
+   * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
+   */
+  /* postcss-bem-linter: ignore */
+  .u-md-flexRow > *,
+  .u-md-flexRowReverse > *,
+  .u-md-flexNoWrap > *,
+  [class*="u-md-flexJustify"] > *,
+  [class*="u-md-flexAlignItems"] > *,
+  [class*="u-md-flexAlignContent"] > * {
+    flex-shrink: 1; /* 1 */
+  }
+
+  /* Applies to flex items
+     ========================================================================== */
+
+  /**
+   * Override default alignment of single item when specified by `align-items`
+   */
+
+  .u-md-flexAlignSelfStart {
+    align-self: flex-start !important;
+  }
+
+  .u-md-flexAlignSelfEnd {
+    align-self: flex-end !important;
+  }
+
+  .u-md-flexAlignSelfCenter {
+    align-self: center !important;
+  }
+
+  .u-md-flexAlignSelfStretch {
+    align-self: stretch !important;
+  }
+
+  .u-md-flexAlignSelfBaseline {
+    align-self: baseline !important;
+  }
+
+  .u-md-flexAlignSelfAuto {
+    align-self: auto !important;
+  }
+
+  /**
+   * Change order without editing underlying HTML
+   */
+
+  .u-md-flexOrderFirst {
+    order: -1 !important;
+  }
+
+  .u-md-flexOrderLast {
+    order: 1 !important;
+  }
+
+  .u-md-flexOrderNone {
+    order: 0 !important;
+  }
+
+}
