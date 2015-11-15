@@ -1,45 +1,7 @@
-
 /**
  * @define utilities
  * Sizing utilities
  */
-
-/* Intrinsic widths
-   ========================================================================== */
-
-/**
- * Make an element fill the remaining space.
- *
- * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
- * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
- */
-
-.u-sizeFill {
-  flex: 1 1 0% !important; /* 1 */
-  flex-basis: 0% !important; /* 2 */
-}
-
-/**
- * An alternative method to make an element fill the remaining space.
- * Distributes space based on the initial width and height of the element
- *
- * http://www.w3.org/TR/css-flexbox/images/rel-vs-abs-flex.svg
- */
-
-.u-sizeFillAlt {
-  flex: 1 1 auto !important;
-  flex-basis: auto !important;
-}
-
-/**
- * Make an element the width of its parent.
- */
-
-.u-sizeFull {
-  box-sizing: border-box !important;
-  display: block !important;
-  width: 100% !important;
-}
 
 /* Proportional widths
    ========================================================================== */
@@ -49,13 +11,13 @@
  * Intentional redundancy build into each set of unit classes.
  * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
  *
- * Use `flex-basis: auto` with a width to avoid box-sizing bug in IE10/11
- * http://git.io/vllMD
+ * 1. Use `flex-basis: auto` with a width to avoid box-sizing bug in IE10/11
+ *    http://git.io/vllMD
  */
 
 /* postcss-bem-linter: ignore */
 [class*="u-size"] {
-  flex-basis: auto !important;
+  flex-basis: auto !important; /* 1 */
 }
 
 .u-size1of12 {
@@ -167,4 +129,41 @@
 
 .u-size11of12 {
   width: calc(100% * 11 / 12) !important;
+}
+
+/* Intrinsic widths
+   ========================================================================== */
+
+/**
+ * Make an element fill the remaining space.
+ *
+ * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
+ * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
+ */
+
+.u-sizeFill {
+  flex: 1 1 0% !important; /* 1 */
+  flex-basis: 0% !important; /* 2 */
+}
+
+/**
+ * An alternative method to make an element fill the remaining space.
+ * Distributes space based on the initial width and height of the element
+ *
+ * http://www.w3.org/TR/css-flexbox/images/rel-vs-abs-flex.svg
+ */
+
+.u-sizeFillAlt {
+  flex: 1 1 auto !important;
+  flex-basis: auto !important;
+}
+
+/**
+ * Make an element the width of its parent.
+ */
+
+.u-sizeFull {
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important;
 }
