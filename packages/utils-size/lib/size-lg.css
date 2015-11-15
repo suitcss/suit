@@ -21,6 +21,18 @@
   }
 
   /**
+   * An alternative method to make an element fill the remaining space.
+   * Distributes space based on the initial width and height of the element
+   *
+   * http://www.w3.org/TR/css-flexbox/images/rel-vs-abs-flex.svg
+   */
+
+  .u-lg-sizeFillAlt {
+    flex: 1 1 auto !important;
+    flex-basis: auto !important;
+  }
+
+  /**
    * Make an element the width of its parent.
    */
 
