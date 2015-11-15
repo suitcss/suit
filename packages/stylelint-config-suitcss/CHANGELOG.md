@@ -1,4 +1,4 @@
-# Head
+# 1.0.0
 
 * Added: support for SuitCSS's "Exceptions and slight deviations" (multi-line declarations and functions, and single-line single declaration rule-sets).
 * Added: `function-linear-gradient-no-nonstandard-direction` rule.
