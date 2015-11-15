@@ -83,13 +83,23 @@ is already set, for example by [`Grid`](https://github.com/suitcss/components-gr
 </div>
 ```
 
-### Use with [`Grid`](https://github.com/suitcss/components-grid)
+### Usage with [`Grid`](https://github.com/suitcss/components-grid)
 
 ``` html
 <div class="Grid Grid--alignBottom">
-  <div class="Grid-cell u-size1of3 u-md-flexAlignSelfCenter"></div>
-  <div class="Grid-cell u-size1of3"></div>
-  <div class="Grid-cell u-size1of3"></div>
+  <div class="Grid-cell u-size1of3 u-md-flexAlignSelfCenter">Content</div>
+  <div class="Grid-cell u-size1of3">Content</div>
+  <div class="Grid-cell u-size1of3">Content</div>
+</div>
+```
+
+### Usage with [`util-size`](https://github.com/suitcss/utils-size)
+
+``` html
+<div class="u-flex u-flexJustifyEnd">
+  <div class="u-size4of12">Content</div>
+  <div class="u-size2of12">Content</div>
+  <div>Content</div>
 </div>
 ```
 
