@@ -51,7 +51,7 @@ breakpoints.
 
 The CSS responsible for component-specific styling.
 
-Syntax: `[<namespace>-]<ComponentName>[--modifierName|-descendentName]`
+Syntax: `[<namespace>-]<ComponentName>[-descendentName][--modifierName]`
 
 This has several benefits when reading and writing HTML and CSS:
 
