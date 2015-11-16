@@ -56,6 +56,7 @@ SUIT CSS flexbox utilities
 * `u-flexAlignSelfEnd` - Aligns single item at cross axis end
 * `u-flexAlignSelfCenter` - Aligns single item at cross axis centre-
 * `u-flexAlignSelfStretch` - Stretches single item from cross start to end
+* `u-flexAlignSelfAuto` - Uses the default set by `align-items`
 
 **`order`**
 
