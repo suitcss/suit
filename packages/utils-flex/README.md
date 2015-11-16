@@ -12,33 +12,53 @@ SUIT CSS flexbox utilities
 
 ## Available classes
 
+**`flex-direction`**
+
 * `u-flexRow` - Displays items in a row
 * `u-flexRowReverse` - Reverses items in a row
 * `u-flexCol` - Display items in a column
 * `u-flexColReverse` - Reverses items in a column
+
+**`flex-wrap`**
+
 * `u-flexWrap` - Wrap items onto another line when space allows
 * `u-flexNoWrap` - Force items to stay on one line
 * `u-flexWrapReverse` - Wrap items and reverse direction
+
+**`justify-content`**
+
 * `u-flexJustifyStart` - Align items at the start of the main axis
 * `u-flexJustifyEnd` - Align items at the end of the main axis
 * `u-flexJustifyCenter` - Align items at the center of the main axis
 * `u-flexJustifyBetween` - Items have space between each other on main axis
 * `u-flexJustifyAround` - Items have space around each other on main axis
+
+**`align-items`**
+
 * `u-flexAlignItemsStretch` - Items stretch to fill container
 * `u-flexAlignItemsStart` - Cross-start margin edge of the items is placed on the cross-start line
 * `u-flexAlignItemsEnd` - Cross-end margin edge of the items is placed on the cross-end line
 * `u-flexAlignItemsCenter` - Items are centered in the cross-axis
 * `u-flexAlignItemsBaseline` - Items have their baselines aligned on the cross axis
+
+**`align-content`**
+
 * `u-flexAlignContentStart` - Items are packed to the start of the container
 * `u-flexAlignContentEnd` - Items are packed to the end of the container
 * `u-flexAlignContentCenter` - Items are packed to the centre of the container
-* `u-flexAlignContentStretch` - Lines stretch to take up the remaining space-
-* `u-flexAlignContentBetween` - Lines evenly distributed; first and last lines are the edge of the container
+* `u-flexAlignContentStretch` - Lines stretch to take up the remaining space
+* `u-flexAlignContentBetween` - Lines evenly distributed; first and last lines at container edge
 * `u-flexAlignContentAround` - Lines evenly distributed with equal space around each line
+
+**`align-self`**
+
 * `u-flexAlignSelfStart` - Aligns single item at cross axis start
 * `u-flexAlignSelfEnd` - Aligns single item at cross axis end
 * `u-flexAlignSelfCenter` - Aligns single item at cross axis centre-
 * `u-flexAlignSelfStretch` - Stretches single item from cross start to end
+
+**`order`**
+
 * `u-flexOrderFirst` - Positions an item at the start
 * `u-flexOrderLast` - Positions an item at the end
 * `u-flexOrderNone` - Sets item order to the default of `0`
@@ -93,7 +113,7 @@ is already set, for example by [`Grid`](https://github.com/suitcss/components-gr
 </div>
 ```
 
-### Usage with [`util-size`](https://github.com/suitcss/utils-size)
+### Usage with [`utils-size`](https://github.com/suitcss/utils-size)
 
 ``` html
 <div class="u-flex u-flexJustifyEnd">
