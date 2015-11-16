@@ -123,6 +123,14 @@ is already set, for example by [`Grid`](https://github.com/suitcss/components-gr
 </div>
 ```
 
+``` html
+<div class="u-flex u-flexAlignItemsCenter">
+  <div class="u-size1of4">Content</div>
+  <div class="u-size1of4">Content</div>
+  <div class="u-sizeFill">Content</div>
+</div>
+```
+
 Please refer to the README for [SUIT CSS utils](https://github.com/suitcss/utils/)
 
 ## Testing

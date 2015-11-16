@@ -711,18 +711,32 @@
     </div>
   </div>
 
-  <h2 class="Test-describe">Adjusting size</h2>
-  <h3 class="Test-it">requires utils-size</h3>
+  <h2 class="Test-describe">Adjusting item size (requires utils-size)</h2>
+  <h3 class="Test-it">only apply size to first two items</h3>
   <div class="Test-run">
     <div class="u-flex u-flexJustifyEnd">
-      <div class="FlexItem u-size6of12">
-        <div class="Content">1.</div>
+      <div class="FlexItem u-size4of12">
+        <div class="Content">1. 4of12</div>
       </div>
-      <div class="FlexItem u-size2of12">
-        <div class="Content">2.</div>
+      <div class="FlexItem u-size4of12">
+        <div class="Content">2. 4of12</div>
       </div>
       <div class="FlexItem">
-        <div class="Content">3.</div>
+        <div class="Content">3. none</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">use u-sizeFill to take up remaining space</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexAlignItemsCenter">
+      <div class="FlexItem u-size1of4">
+        <div class="Content">1. 1of4</div>
+      </div>
+      <div class="FlexItem u-size1of4">
+        <div class="Content">2. 1of4</div>
+      </div>
+      <div class="FlexItem u-sizeFill">
+        <div class="Content">3. sizeFill</div>
       </div>
     </div>
   </div>
