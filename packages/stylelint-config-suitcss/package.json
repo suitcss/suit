@@ -32,5 +32,8 @@
   },
   "babel": {
     "presets": ["es2015"]
+  },
+  "eslintConfig": {
+    "extends": ["stylelint"]
   }
 }
