@@ -1,5 +1,13 @@
 ### HEAD
 
+### 1.0.0 (November 17, 2015)
+
+* Reintroduce `sizeFillAlt` using `flex-basis: auto`. Allows `sizeFillAlt` and
+  `sizeFill` to distribute space differently between multiple elements.
+  See [w3c spec](http://www.w3.org/TR/css-flexbox/#valdef-flex-flex-basis) and
+  the updated test page for more information.
+
+
 ### 0.8.0 (November 01, 2015)
 
 * Use `flex-basis` alongside `width` to support flexbox Grid
