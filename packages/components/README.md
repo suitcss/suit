@@ -9,7 +9,7 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-components`
-* [Download](https://github.com/suitcss/components/releases) (compiled)
+* [Download](https://github.com/suitcss/components/releases/latest)
 
 …is a convenient way to install the following packages:
 
@@ -34,8 +34,10 @@ npm run build
 
 ## Browser support
 
+Refer to the [caniuse](http://caniuse.com/) page for [flexbox](http://caniuse.com/#feat=flexbox).
+
 * Google Chrome (latest)
 * Opera (latest)
-* Firefox 4+
-* Safari 5+
-* Internet Explorer 9+
+* Firefox 28+
+* Safari 6.1+
+* Internet Explorer 10+
