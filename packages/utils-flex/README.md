@@ -12,6 +12,10 @@ SUIT CSS flexbox utilities
 
 ## Available classes
 
+**`flex-container`**
+
+* `u-flex` - Set `display: flex`
+
 **`flex-direction`**
 
 * `u-flexRow` - Displays items in a row
@@ -91,11 +95,6 @@ breakpoints can be configured using `@custom-media`. For example:
 
 ## Usage
 
-### Applying `display: flex;`
-
-The `flex` utilities are designed to be used where the `display: flex` property
-is already set, for example by [`Grid`](https://github.com/suitcss/components-grid) or [`utils-display`](https://github.com/suitcss/utils-display).
-
 ### Centring an element in its container
 
 ``` html
@@ -105,6 +104,8 @@ is already set, for example by [`Grid`](https://github.com/suitcss/components-gr
 ```
 
 ### Usage with [`Grid`](https://github.com/suitcss/components-grid)
+
+Note: The `Grid` component already sets `display: flex` on the root element.
 
 ``` html
 <div class="Grid Grid--alignBottom">
