@@ -195,4 +195,34 @@
     order: 0 !important;
   }
 
+  /**
+   * Specify the flex grow factor, which determines how much the flex item will
+   * grow relative to the rest of the flex items in the flex container.
+   *
+   * Supports 1-5 proportions
+   *
+   * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
+   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+   */
+
+  .u-sm-flexGrow1 {
+    flex: 1 1 0%; /* 1 */
+  }
+
+  .u-sm-flexGrow2 {
+    flex: 2 1 0%;
+  }
+
+  .u-sm-flexGrow3 {
+    flex: 3 1 0%;
+  }
+
+  .u-sm-flexGrow4 {
+    flex: 4 1 0%;
+  }
+
+  .u-sm-flexGrow5 {
+    flex: 5 1 0%;
+  }
+
 }

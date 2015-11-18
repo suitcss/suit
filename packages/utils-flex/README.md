@@ -68,6 +68,12 @@ SUIT CSS flexbox utilities
 * `u-flexOrderLast` - Positions an item at the end
 * `u-flexOrderNone` - Sets item order to the default of `0`
 
+**`flex-grow`**
+
+* `u-flexGrowX` - Specify how much the flex item will grow relatively
+
+`X` can be any of the following numbers: `1`, `2`, `3`, `4`, `5`.
+
 ### Plugins
 
 Utilities that can be limited to specific Media Query breakpoints.
