@@ -9,11 +9,15 @@
      ========================================================================== */
 
   /**
-   * Flex container
+   * Container
    */
 
   .u-sm-flex {
     display: flex !important;
+  }
+
+  .u-sm-flexInline {
+    display: inline-flex !important;
   }
 
   /**

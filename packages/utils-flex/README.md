@@ -14,7 +14,8 @@ SUIT CSS flexbox utilities
 
 **`flex-container`**
 
-* `u-flex` - Set `display: flex`
+* `u-flex` - Create a flex container
+* `u-flexInline` - Create an inline flex container
 
 **`flex-direction`**
 
