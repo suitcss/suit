@@ -39,5 +39,6 @@
     "flexbox",
     "suitcss",
     "style"
-  ]
+  ],
+  "dependencies": {}
 }
