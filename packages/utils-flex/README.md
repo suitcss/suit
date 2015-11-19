@@ -8,7 +8,7 @@ SUIT CSS flexbox utilities
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-utils-flex`
-* Download: [zip](https://github.com/simonsmith/utils-flex/releases/latest)
+* Download: [zip](https://github.com/suitcss/utils-flex/releases/latest)
 
 ## Available classes
 
