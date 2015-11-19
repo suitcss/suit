@@ -1,5 +1,10 @@
 ### HEAD
 
+### 0.3.0 (November 19, 2015)
+
+* Add missing `!important` rule
+* Add `u-flexInline`
+
 ### 0.2.0 (November 18, 2015)
 
 * Add `u-flexGrow` utility
