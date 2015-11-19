@@ -143,12 +143,8 @@
    * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
    */
   /* postcss-bem-linter: ignore */
-  .u-md-flexRow > *,
-  .u-md-flexRowReverse > *,
-  .u-md-flexNoWrap > *,
-  [class*="u-md-flexJustify"] > *,
-  [class*="u-md-flexAlignItems"] > *,
-  [class*="u-md-flexAlignContent"] > * {
+  .u-md-flex > *,
+  .u-md-flexInline > * {
     flex-shrink: 1; /* 1 */
   }
 
