@@ -1,5 +1,9 @@
 ### HEAD
 
+### 0.3.1 (November 19, 2015)
+
+* URL updates for move to SUIT org
+
 ### 0.3.0 (November 19, 2015)
 
 * Add missing `!important` rule
