@@ -112,7 +112,7 @@ CSS build and test tools.
 
 The preprocessor makes use of:
 
-* [autoprefixer](https://github.com/ai/autoprefixer): automatic vendor prefixing
+* [autoprefixer](https://github.com/postcss/autoprefixer): automatic vendor prefixing
 * [rework](https://github.com/reworkcss/rework): a plugin framework for CSS preprocessing
 * [rework-suit](https://github.com/suitcss/rework-suit): a collection of "pure CSS" plugins for Rework
 * [rework-suit-conformance](https://github.com/suitcss/rework-suit-conformance): a SUIT CSS conformance tool
