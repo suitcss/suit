@@ -5,16 +5,16 @@
   "style": "index.css",
   "dependencies": {
     "suitcss-utils-align": "~0.2.2",
-    "suitcss-utils-display": "~0.4.2",
+    "suitcss-utils-display": "~1.0.0",
     "suitcss-utils-layout": "~0.4.2",
     "suitcss-utils-link": "~0.5.2",
     "suitcss-utils-offset": "~0.5.1",
     "suitcss-utils-position": "~0.2.2",
-    "suitcss-utils-size": "~0.7.2",
+    "suitcss-utils-size": "~1.0.0",
     "suitcss-utils-text": "~0.4.2"
   },
   "devDependencies": {
-    "suitcss-preprocessor": "~0.3.0"
+    "suitcss-preprocessor": "~0.4.0"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
