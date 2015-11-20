@@ -1,5 +1,9 @@
 ### HEAD
 
+### 1.0.0 (November 20, 2015)
+
+* Revert `u-flex` and `u-inlineFlex` in favour of [utils-flex](https://github.com/suitcss/utils-flex)
+
 ### 0.5.0 (November 01, 2015)
 
 * Add `u-flex`
