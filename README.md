@@ -146,8 +146,10 @@ npm run build
 
 ## Browser support
 
-* Chrome
-* Opera
-* Firefox
-* Safari 6+
-* Internet Explorer 9+
+* Google Chrome (latest)
+* Opera (latest)
+* Firefox 4+ (28+ for `flex`)
+* Safari 5+ (6.1+ for `flex`)
+* Internet Explorer 9+ (10+ for `flex`)
+
+Refer to the [caniuse](http://caniuse.com/) page for [flexbox](http://caniuse.com/#feat=flexbox).
