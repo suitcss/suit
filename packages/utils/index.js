@@ -6,3 +6,4 @@ require('suitcss-utils-offset');
 require('suitcss-utils-position');
 require('suitcss-utils-size');
 require('suitcss-utils-text');
+require('suitcss-utils-flex');

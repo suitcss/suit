@@ -9,7 +9,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-utils`
-* [Download](https://github.com/suitcss/utils/releases) (compiled)
+* [Download](https://github.com/suitcss/utils/releases/latest) (compiled)
 
 …is a convenient way to install all the SUIT utility packages:
 
@@ -21,6 +21,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 * [utils-position](https://github.com/suitcss/utils-position/): Positioning utilities
 * [utils-size](https://github.com/suitcss/utils-size/): Percentage sizing utilities
 * [utils-text](https://github.com/suitcss/utils-text/): Text truncation, breaking, and alignment
+* [utils-flex](https://github.com/suitcss/utils-flex): Align elements with Flexbox
 
 ## Usage
 
@@ -100,6 +101,6 @@ npm run build
 
 * Google Chrome (latest)
 * Opera (latest)
-* Firefox 4+
-* Safari 5+
-* Internet Explorer 8+
+* Firefox 4+ (28+ for `flex`)
+* Safari 5+ (6.1+ for `flex`)
+* Internet Explorer 9+ (10+ for `flex`)
