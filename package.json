@@ -8,8 +8,8 @@
   ],
   "dependencies": {
     "suitcss-base": "~1.0.1",
-    "suitcss-utils": "~0.10.0",
-    "suitcss-components": "~0.3.0"
+    "suitcss-utils": "~0.11.0",
+    "suitcss-components": "~1.0.0"
   },
   "devDependencies": {
     "suitcss-preprocessor": "~0.4.0"
