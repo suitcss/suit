@@ -107,23 +107,27 @@ build process:
 
 The [suitcss-preprocessor](https://github.com/suitcss/preprocessor) runs CSS
 through a build pipeline. It performs per-file tests for conformance to the
-SUIT CSS naming conventions, and per-bundle tests for the IE selector limit.
-CSS build and test tools.
+SUIT CSS naming conventions, offers minification and allows additional PostCSS
+plugins to be added. A CLI and Node API are available
 
 The preprocessor makes use of:
 
-* [autoprefixer](https://github.com/postcss/autoprefixer): automatic vendor prefixing
-* [rework](https://github.com/reworkcss/rework): a plugin framework for CSS preprocessing
-* [rework-suit](https://github.com/suitcss/rework-suit): a collection of "pure CSS" plugins for Rework
-* [rework-suit-conformance](https://github.com/suitcss/rework-suit-conformance): a SUIT CSS conformance tool
+* [PostCSS](https://github.com/postcss/postcss): A tool for transforming styles with JS plugins
+  * [postcss-import](https://github.com/postcss/postcss-import)
+  * [postcss-custom-properties](https://github.com/postcss/postcss-custom-media)
+  * [postcss-calc](https://github.com/postcss/postcss-calc)
+  * [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
+  * [autoprefixer](https://github.com/postcss/autoprefixer)
+
+Packages are linted with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and minification is provided by [cssnano](http://cssnano.co/).
 
 ## Complementary tools and libraries
 
 Libraries / frameworks for component-based development:
 
-* [AngularJS](https://github.com/angular/angular.js)
+* [React](https://facebook.github.io/react/)
 * [Ember.js Components](http://emberjs.com/guides/components/)
-* [React](https://github.com/facebook/react)
+* [AngularJS](https://github.com/angular/angular.js)
 
 Tools and dependency managers:
 
@@ -133,10 +137,6 @@ Tools and dependency managers:
 ## Development
 
 Install [Node](http://nodejs.org) (comes with npm).
-
-```
-npm install
-```
 
 To generate a build:
 
