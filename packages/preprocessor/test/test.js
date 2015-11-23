@@ -1,26 +1,75 @@
-var assert = require('assert');
+var expect = require('chai').expect;
 var child = require('child_process');
 var exec = child.exec;
 var spawn = child.spawn;
 var fs = require('fs');
-var suitcss = require('../lib/index.js');
+var rewire = require('rewire');
+var suitcss = rewire('../lib');
 var path = require('path');
-
-var features = [
-  'calc',
-  'custom-media',
-  'import',
-  'prefixes',
-  'vars'
-];
 
 /**
  * Node API tests.
  */
 
 describe('suitcss', function () {
-  it('should return a css string', function () {
-    assert('string' == typeof suitcss('body {}'));
+  it('should return a css string', function (done) {
+    suitcss('body {}').then(function(result) {
+      expect(result.css).to.be.a('string');
+      done();
+    });
+  });
+
+  it('should throw if css is not a string', function() {
+    expect(function() {suitcss(null);}).to.throw(Error);
+    expect(function() {suitcss({});}).to.throw(Error);
+  });
+
+  describe('passing options', function() {
+    var mergeOptions, defaults;
+
+    beforeEach(function() {
+      mergeOptions = suitcss.__get__('mergeOptions');
+      defaults = suitcss.__get__('defaults');
+    });
+
+    it('should use default options when nothing is passed', function() {
+      expect(mergeOptions({})).to.eql(defaults);
+      expect(mergeOptions()).to.eql(defaults);
+    });
+
+    it('should allow an import root to be set', function() {
+      var opts = mergeOptions({root: 'test/root'});
+      expect(opts['postcss-import'].root).to.equal('test/root');
+    });
+
+    it('should allow an minify option to be set', function() {
+      var opts = mergeOptions({minify: true});
+      expect(opts.minify).to.be.true;
+    });
+
+    it('should merge config options with existing defaults', function() {
+      var autoprefixer = {browsers: ['> 1%', 'IE 7'], cascade: false};
+      var opts = mergeOptions({
+        root: 'test/root',
+        config: {
+          use: ['postcss-property-lookup'],
+          autoprefixer: autoprefixer
+        }
+      });
+
+      expect(opts.use).to.eql([
+        'postcss-import',
+        'postcss-custom-properties',
+        'postcss-calc',
+        'postcss-custom-media',
+        'autoprefixer',
+        'postcss-property-lookup',
+        'postcss-reporter'
+      ]);
+      expect(opts.autoprefixer).to.eql(autoprefixer);
+      expect(opts['postcss-reporter']).to.eql(defaults['postcss-reporter']);
+      expect(opts['postcss-import'].root).to.equal('test/root');
+    });
   });
 });
 
@@ -29,12 +78,14 @@ describe('suitcss', function () {
  */
 
 describe('features', function () {
-  features.forEach(function (name) {
-    it('should add ' + name + ' support', function () {
-      var input = read('fixtures/' + name);
-      var output = read('fixtures/' + name + '.out');
-      assert.equal(suitcss(input, { root: 'test/fixtures' }).trim(), output.trim());
-    });
+  it('should preprocess CSS correctly', function (done) {
+    var input = read('fixtures/component');
+    var output = read('fixtures/component.out');
+
+    suitcss(input, {root: 'test/fixtures'}).then(function(result) {
+      expect(result.css.trim()).to.be.equal(output.trim());
+      done();
+    }).catch(done);
   });
 });
 
@@ -54,7 +105,7 @@ describe('cli', function () {
     exec('bin/suitcss test/fixtures/cli/input.css test/fixtures/cli/output.css', function (err, stdout) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
-      assert.equal(res, output);
+      expect(res).to.equal(output);
       done();
     });
   });
@@ -62,7 +113,7 @@ describe('cli', function () {
   it('should read from a file and write to stdout', function (done) {
     exec('bin/suitcss test/fixtures/cli/input.css', function (err, stdout) {
       if (err) return done(err);
-      assert.equal(stdout, output);
+      expect(stdout).to.equal(output);
       done();
     });
   });
@@ -70,7 +121,7 @@ describe('cli', function () {
   it('should read from stdin and write to stdout', function (done) {
     var child = exec('bin/suitcss', function (err, stdout) {
       if (err) return done(err);
-      assert.equal(stdout, output);
+      expect(stdout).to.equal(output);
       done();
     });
 
@@ -81,7 +132,7 @@ describe('cli', function () {
   it('should log on verbose', function (done) {
     exec('bin/suitcss -v test/fixtures/cli/input.css test/fixtures/cli/output.css', function (err, stdout) {
       if (err) return done(err);
-      assert(-1 != stdout.indexOf('write'));
+      expect(stdout).to.contain('write');
       done();
     });
   });
@@ -90,30 +141,37 @@ describe('cli', function () {
     exec('bin/suitcss -i test/fixtures test/fixtures/import.css test/fixtures/cli/output.css', function (err, stdout) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
-      var expected = read('fixtures/import.out');
-      assert.equal(res, expected);
+      var expected = read('fixtures/component.out');
+      expect(res).to.equal(expected);
+      done();
+    });
+  });
+
+  it('should minify the output', function (done) {
+    exec('bin/suitcss -i test/fixtures test/fixtures/import.css test/fixtures/cli/output.css -m', function (err, stdout) {
+      if (err) return done(err);
+      var res = read('fixtures/cli/output');
+      var expected = read('fixtures/minify.out');
+      expect(res).to.equal(expected);
+      done();
+    });
+  });
+
+  it('should allow a config file to be passed', function (done) {
+    exec('bin/suitcss -i test/fixtures -c test/test.config.js test/fixtures/config.css test/fixtures/cli/output.css', function (err, stdout) {
+      if (err) return done(err);
+      var res = read('fixtures/cli/output');
+      var expected = read('fixtures/config.out');
+      expect(res).to.equal(expected);
       done();
     });
   });
 
   it('should log on non-existant file', function (done) {
     exec('bin/suitcss test/fixtures/cli/non-existant.css', function (err, stdout, stderr) {
-      assert(err);
-      assert(err.code == 1);
-      assert(-1 != stderr.indexOf('not found'));
-      done();
-    });
-  });
-
-  xit('should print a nice error', function (done) {
-    exec('bin/suitcss test/fixtures/cli/error.css', function (err, stdout, stderr) {
-      assert(err);
-      assert(err.code == 1);
-      assert(-1 != stderr.indexOf('error'));
-      assert(-1 != stderr.indexOf('SyntaxError: Missing closing parentheses'));
-      assert(-1 != stderr.indexOf('at '));
-      assert(-1 != stderr.indexOf('15'));
-      assert(-1 != stderr.indexOf('var('));
+      expect(err).to.be.an('error');
+      expect(err.code).to.equal(1);
+      expect(stderr).to.contain('not found');
       done();
     });
   });

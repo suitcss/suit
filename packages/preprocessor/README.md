@@ -5,8 +5,17 @@
 [SUIT CSS](https://github.com/suitcss/suit) preprocessor.
 
 Provides a CLI and Node.js interface for a preprocessor that combines
-[rework-suit](https://github.com/suitcss/rework-suit) with
-[autoprefixer](https://github.com/ai/autoprefixer).
+various [PostCSS](https://github.com/postcss/postcss) plugins.
+
+Compiles CSS packages with:
+
+* [postcss-import](https://github.com/postcss/postcss-import)
+* [postcss-custom-properties](https://github.com/postcss/postcss-custom-media)
+* [postcss-calc](https://github.com/postcss/postcss-calc)
+* [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
+* [autoprefixer](https://github.com/postcss/autoprefixer)
+
+In addition each imported file is linted with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter).
 
 ## Installation
 
@@ -22,33 +31,96 @@ suitcss input.css output.css
 
 ## API
 
-#### Command Line
+### Command Line
 
 ```
 Usage: suitcss [<input>] [<output>]
 
 Options:
 
-  -c, --compress             compress output
-  -h, --help                 output usage information
-  -i, --import-root [path]   the root directory for imported css files
-  -v, --verbose              log verbose output for debugging
-  -V, --version              output the version number
-  -w, --watch                watch the input file for changes
+  -h, --help                output usage information
+  -V, --version             output the version number
+  -m, --minify              minify output with cssnano
+  -i, --import-root [path]  the root directory for imported css files
+  -c, --config [path]       a custom PostCSS config file
+  -v, --verbose             log verbose output for debugging
+  -w, --watch               watch the input file and any imports for changes
 
 Examples:
 
   # pass an input and output file:
   $ suitcss input.css output.css
 
+  # configure the import root directory:
+  $ suitcss --import-root src/css input.css output.css
+
   # watch the input file for changes:
   $ suitcss --watch input.css output.css
+
+  # configure postcss plugins with a config file:
+  $ suitcss --config config.js input.css output.css
 
   # unix-style piping to stdin and stdout:
   $ cat input.css | suitcss | grep background-color
 ```
 
-#### Node.js
+### Configuration
+
+Creating a configuration file allows options to be passed to the individual PostCSS plugins. It can be passed to the `suitcss` CLI via the `-c` flag and can be either JavaScript or JSON
+
+```js
+module.exports = {
+  root: 'path/to/css',
+  autoprefixer: { browsers: ['> 1%', 'IE 7'], cascade: false },
+  'postcss-calc': { preserve: true }
+}
+```
+
+```js
+{
+  "root": "path/to/css",
+  "autoprefixer": { "browsers": ["> 1%", "IE 7"], "cascade": false },
+  "postcss-calc": { "preserve": true }
+}
+```
+
+Options are merged recursively with the defaults. For example, adding new plugins to the `use` array will result in them being merged alongside the existing ones.
+
+#### Adding additional plugins
+
+By default the preprocessor uses all necessary plugins to build SUIT components. However additional plugins can be installed into a project and then added to the `use` array.
+
+This **will not** work with the preprocessor installed globally. Instead rely on the convenience of `npm run <script>`
+
+```js
+module.exports = {
+  use: [
+    'postcss-property-lookup'
+  ]
+};
+```
+
+```js
+{
+  "name": "my-pkg",
+  "version": "0.1.0",
+  "dependencies": {
+    "postcss-property-lookup": "^1.1.3",
+    "suitcss-preprocessor": "^0.5.0"
+  },
+  "scripts": {
+    "preprocess": "suitcss -c myconfig.js index.css build/built.css"
+  }
+}
+```
+
+```
+npm run preprocess
+```
+
+### Node.js
+
+Returns a [PostCSS promise](https://github.com/postcss/postcss/blob/master/docs/api.md#lazyresult-class)
 
 ```js
 var preprocessor = require('suitcss-preprocessor');
@@ -56,15 +128,17 @@ var fs = require('fs');
 
 var css = fs.readFileSync('src/components/index.css', 'utf8');
 
-var bundle = preprocessor(css, {
-  alias: {
-    'components': 'src/components'
-  },
-  source: 'src/components/index.css',
-  sourcemap: true
+preprocessor(css, {
+  root: 'path/to/css',
+  minify: true,
+  config: {
+    use: ['postcss-property-lookup'],
+    autoprefixer: { browsers: ['> 1%', 'IE 7'], cascade: false },
+    'postcss-calc': { preserve: true }
+  }
+}).then(function(result) {
+  fs.writeFileSync('build/bundle.css', result.css);
 });
-
-fs.writeFileSync('build/bundle.css', bundle);
 ```
 
 ## Acknowledgements

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var fs = require('fs');
+var fs = require('fs-extra');
 var exists = fs.existsSync;
 var logger = require('./logger');
 var suitcss = require('..');
@@ -8,8 +8,8 @@ var path = require('path');
 var resolve = path.resolve;
 var program = require('commander');
 var read = require('read-file-stdin');
-var watch = require('node-watch');
-var write = require('write-file-stdout');
+var chokidar = require('chokidar');
+var writeFileSync = fs.outputFileSync;
 
 /**
  * Usage.
@@ -18,10 +18,11 @@ var write = require('write-file-stdout');
 program
   .version(require('../package.json').version)
   .usage('[<input>] [<output>]')
-  .option('-c, --compress', 'compress output')
+  .option('-m, --minify', 'minify output with cssnano')
   .option('-i, --import-root [path]', 'the root directory for imported css files', '')
+  .option('-c, --config [path]', 'a custom PostCSS config file', '')
   .option('-v, --verbose', 'log verbose output for debugging')
-  .option('-w, --watch', 'watch the input file for changes');
+  .option('-w, --watch', 'watch the input file and any imports for changes');
 
 /**
  * Examples.
@@ -38,6 +39,9 @@ program.on('--help', function () {
   console.log();
   console.log('    # watch the input file for changes:');
   console.log('    $ suitcss --watch input.css output.css');
+  console.log();
+  console.log('    # configure postcss plugins with a config file:');
+  console.log('    $ suitcss --config config.js input.css output.css');
   console.log();
   console.log('    # unix-style piping to stdin and stdout:');
   console.log('    $ cat input.css | suitcss | grep background-color');
@@ -56,7 +60,7 @@ program.parse(process.argv);
 
 var input = program.args[0] ? resolve(program.args[0]) : null;
 var output = program.args[1] ? resolve(program.args[1]) : null;
-var importRoot = program.importRoot;
+var config = program.config ? require(resolve(program.config)) : null;
 var verbose = program.verbose;
 var regen = program.watch && input && output;
 
@@ -73,12 +77,25 @@ if (input && !exists(input)) logger.fatal('not found', input);
 run();
 
 /**
- * Watch?
+ * Watch
  */
 
+var currentWatchedFiles;
 if (regen) {
-  watch(input, run);
-  if (verbose) logger.log('watch', input);
+  var watcher = chokidar.watch(input);
+  watcher.on('change', run);
+  watcher.on('change', function(file) {
+    if (verbose) logger.log(path.basename(file) + ' changed');
+  });
+  watcher.on('ready', function() {
+    if (verbose) logger.log('Watching ' + path.basename(input));
+  });
+
+  global.watchCSS = function(imported) {
+    watcher.unwatch(currentWatchedFiles);
+    watcher.add(imported);
+    currentWatchedFiles = imported;
+  };
 }
 
 /**
@@ -90,14 +107,19 @@ function run () {
     if (err) logger.throw(err);
     var css = buffer.toString();
 
-    try {
-      css = suitcss(css, { compress: program.compress, dir: importRoot, source: input });
-    } catch (e) {
-      e.css = css;
-      logger.throw(e);
-    }
-
-    write(output, css + '\n');
+    suitcss(css, {
+      minify: program.minify,
+      root: program.importRoot,
+      config: config
+    }).then(function(result) {
+      if (output) {
+        writeFileSync(output, result.css + '\n');
+      } else {
+        console.log(result.css);
+      }
     if (verbose && output) logger.log('write', output);
+    }).catch(function(e) {
+      logger.throw(e);
+    });
   });
 }
