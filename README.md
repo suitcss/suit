@@ -37,7 +37,7 @@ HTML:
 CSS:
 
 ```css
-/** @define Excerpt; use strict */
+/** @define Excerpt */
 
 @import "suitcss-utils-layout";
 @import "suitcss-utils-size";
