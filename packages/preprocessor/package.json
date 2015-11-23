@@ -1,6 +1,6 @@
 {
   "name": "suitcss-preprocessor",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A CSS preprocessor for working with SUIT CSS",
   "main": "lib/index.js",
   "bin": {
@@ -43,7 +43,7 @@
     "css",
     "preprocessor",
     "pure",
-    "rework",
+    "postcss",
     "suit"
   ],
   "repository": "git://github.com/suitcss/preprocessor.git",
