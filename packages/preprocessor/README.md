@@ -15,7 +15,7 @@ Compiles CSS packages with:
 * [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
 * [autoprefixer](https://github.com/postcss/autoprefixer)
 
-In addition each imported file is linted with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter).
+In addition each imported file is linted with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and minification is provided by [cssnano](http://cssnano.co/).
 
 ## Installation
 
