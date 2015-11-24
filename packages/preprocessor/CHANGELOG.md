@@ -1,5 +1,9 @@
 ### HEAD
 
+### 0.5.1 (November 24, 2015)
+
+* [Fix issue](https://github.com/suitcss/preprocessor/issues/13) with options not being passed to `postcss-bem-linter` and `postcss-reporter`
+
 ### 0.5.0 (November 23, 2015)
 
 * Switch from Rework to PostCSS
