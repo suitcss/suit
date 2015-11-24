@@ -16,6 +16,10 @@ var reporter = require('postcss-reporter');
 
 module.exports = preprocessor;
 
+/**
+ * Default options to PostCSS plugins
+ */
+
 var defaults = {
   minify: undefined,
   use: [
@@ -27,9 +31,6 @@ var defaults = {
     'postcss-reporter'
   ],
   'postcss-import': {
-    transform: function (css, filename) {
-      return postcss([bemLinter, reporter]).process(css, {from: filename}).css;
-    },
     root: undefined,
     onImport: function(imported) {
       // Update the watch task with the list of imported files
@@ -59,7 +60,7 @@ var defaults = {
  * Process CSS
  *
  * @param {String} css
- * @return {String}
+ * @returns {String}
  */
 
 function preprocessor(css, options) {
@@ -85,11 +86,11 @@ function preprocessor(css, options) {
   return processor.process(css);
 }
 
-
 /**
  * Merge options with defaults and set root
  *
  * @param {Object} options
+ * @returns {Object} Merged options object
  */
 
 function mergeOptions(options) {
@@ -98,8 +99,10 @@ function mergeOptions(options) {
 
   var merged = assign({}, defaults, options.config);
 
+  // Set some core options
   merged.minify = options.minify;
   merged['postcss-import'].root = options.root;
+  merged['postcss-import'].transform = lintImportedFiles(merged);
 
   // Ensure postcss-reporter is always the final plugin
   if (last(merged.use) !== 'postcss-reporter') {
@@ -110,3 +113,20 @@ function mergeOptions(options) {
 
   return merged;
 }
+
+/**
+ * Returns a function to be used by postcss-import
+ * Lint each imported component with postcss-bem-linter
+ *
+ * @param {Object} options
+ * @returns {Function} Used by postcss-import transform
+ */
+function lintImportedFiles(options) {
+  return function (css, filename) {
+    return postcss([
+      bemLinter(options['postcss-bem-linter']),
+      reporter(options['postcss-reporter'])
+    ]).process(css, {from: filename}).css;
+  };
+}
+

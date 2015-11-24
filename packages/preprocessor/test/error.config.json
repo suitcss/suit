@@ -1,0 +1,6 @@
+{
+  "postcss-reporter": {
+    "throwError": true,
+    "plugins": ["postcss-bem-linter"]
+  }
+}

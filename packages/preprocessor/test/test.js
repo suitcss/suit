@@ -29,12 +29,18 @@ describe('suitcss', function () {
 
     beforeEach(function() {
       mergeOptions = suitcss.__get__('mergeOptions');
-      defaults = suitcss.__get__('defaults');
     });
 
     it('should use default options when nothing is passed', function() {
-      expect(mergeOptions({})).to.eql(defaults);
-      expect(mergeOptions()).to.eql(defaults);
+      var keys = [
+        'minify',
+        'use',
+        'postcss-import',
+        'postcss-reporter',
+        'cssnano'
+      ];
+      expect(mergeOptions({})).to.have.keys(keys);
+      expect(mergeOptions()).to.have.keys(keys);
     });
 
     it('should allow an import root to be set', function() {
@@ -67,7 +73,6 @@ describe('suitcss', function () {
         'postcss-reporter'
       ]);
       expect(opts.autoprefixer).to.eql(autoprefixer);
-      expect(opts['postcss-reporter']).to.eql(defaults['postcss-reporter']);
       expect(opts['postcss-import'].root).to.equal('test/root');
     });
   });
@@ -163,6 +168,15 @@ describe('cli', function () {
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/config.out');
       expect(res).to.equal(expected);
+      done();
+    });
+  });
+
+  it('should output an error to stderr on conformance failure when throwError is set', function(done) {
+    exec('bin/suitcss -i test/fixtures -c test/error.config.json test/fixtures/import-error.css test/fixtures/cli/output.css', function (err, stdout, stderr) {
+      expect(err).to.be.an('error');
+      expect(err.code).to.equal(1);
+      expect(stderr).to.contain('postcss-reporter: warnings or errors were found');
       done();
     });
   });
