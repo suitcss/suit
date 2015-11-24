@@ -18,7 +18,7 @@ individual packages for details of their API.
 * `u-afterXof10`
 * `u-afterXof12`
 
-…and responsive variants `u-sm-*`, `u-md-*`, and `u-lg-*`.
+...and responsive variants `u-sm-*`, `u-md-*`, and `u-lg-*`.
 
 ### [Align](https://github.com/suitcss/utils-align)
 
@@ -42,7 +42,7 @@ individual packages for details of their API.
 * `u-beforeXof10`
 * `u-beforeXof12`
 
-…and responsive variants `u-sm-*`, `u-md-*`, and `u-lg-*`.
+...and responsive variants `u-sm-*`, `u-md-*`, and `u-lg-*`.
 
 ### [Display](https://github.com/suitcss/utils-display)
 
@@ -103,7 +103,76 @@ individual packages for details of their API.
 * `u-sizeXof10`
 * `u-sizeXof12`
 
-…and responsive variants `u-sm-*`, `u-md-*`, and `u-lg-*`.
+...and responsive variants `u-sm-*`, `u-md-*`, and `u-lg-*`.
+
+### [Flex](https://github.com/suitcss/utils-flex)
+
+#### Classes
+
+**`flex-container`**
+
+* `u-flex`
+* `u-flexInline`
+
+**`flex-direction`**
+
+* `u-flexRow`
+* `u-flexRowReverse`
+* `u-flexCol`
+* `u-flexColReverse`
+
+**`flex-wrap`**
+
+* `u-flexWrap`
+* `u-flexNoWrap`
+* `u-flexWrapReverse`
+
+**`justify-content`**
+
+* `u-flexJustifyStart`
+* `u-flexJustifyEnd`
+* `u-flexJustifyCenter`
+* `u-flexJustifyBetween`
+* `u-flexJustifyAround`
+
+**`align-items`**
+
+* `u-flexAlignItemsStretch`
+* `u-flexAlignItemsStart`
+* `u-flexAlignItemsEnd`
+* `u-flexAlignItemsCenter`
+* `u-flexAlignItemsBaseline`
+
+**`align-content`**
+
+* `u-flexAlignContentStart`
+* `u-flexAlignContentEnd`
+* `u-flexAlignContentCenter`
+* `u-flexAlignContentStretch`
+* `u-flexAlignContentBetween`
+* `u-flexAlignContentAround`
+
+**`align-self`**
+
+* `u-flexAlignSelfStart`
+* `u-flexAlignSelfEnd`
+* `u-flexAlignSelfCenter`
+* `u-flexAlignSelfStretch`
+* `u-flexAlignSelfAuto`
+
+**`order`**
+
+* `u-flexOrderFirst`
+* `u-flexOrderLast`
+* `u-flexOrderNone`
+
+**`flex-grow`**
+
+* `u-flexGrow1`
+* `u-flexGrow2`
+* `u-flexGrow3`
+* `u-flexGrow4`
+* `u-flexGrow5`
 
 ### [Text](https://github.com/suitcss/utils-text)
 
@@ -172,6 +241,8 @@ individual packages for details of their API.
 * `Grid--alignBottom`
 * `Grid--alignCenter`
 * `Grid--alignMiddle`
+* `Grid--fit`
+* `Grid--equalHeight`
 * `Grid--alignRight`
 * `Grid-cell`
 * `Grid-cell--center`
