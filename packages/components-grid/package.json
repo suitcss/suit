@@ -19,7 +19,8 @@
     "preprocess": "suitcss index.css build/build.css",
     "preprocess-test": "suitcss -i test test/test.css build/test.css",
     "setup": "npm install",
-    "watch": "npm run preprocess-test -- -w -v"
+    "watch": "npm run preprocess-test -- -w -v",
+    "test": "suitcss -c test.json index.css"
   },
   "repository": {
     "type": "git",
