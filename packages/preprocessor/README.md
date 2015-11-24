@@ -120,7 +120,7 @@ npm run preprocess
 
 #### Changing plugin order
 
-If duplicate plugins are used, `suitcss` will remove duplicates but also respect the new order. This is useful if you need to change the default order:
+If duplicate plugins are used they will be removed, but the new order will be respected. This is useful if you need to change the default order:
 
 ```js
 // Default order
