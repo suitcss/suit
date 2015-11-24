@@ -24,11 +24,12 @@ describe('suitcss', function () {
     expect(function() {suitcss({});}).to.throw(Error);
   });
 
-  describe('passing options', function() {
+  describe('using options', function() {
     var mergeOptions, defaults;
 
     beforeEach(function() {
       mergeOptions = suitcss.__get__('mergeOptions');
+      defaults = suitcss.__get__('defaults');
     });
 
     it('should use default options when nothing is passed', function() {
@@ -41,6 +42,8 @@ describe('suitcss', function () {
       ];
       expect(mergeOptions({})).to.have.keys(keys);
       expect(mergeOptions()).to.have.keys(keys);
+      expect(mergeOptions({}).use).to.eql(defaults.use);
+      expect(mergeOptions().use).to.eql(defaults.use);
     });
 
     it('should allow an import root to be set', function() {
@@ -58,7 +61,6 @@ describe('suitcss', function () {
       var opts = mergeOptions({
         root: 'test/root',
         config: {
-          use: ['postcss-property-lookup'],
           autoprefixer: autoprefixer
         }
       });
@@ -69,11 +71,49 @@ describe('suitcss', function () {
         'postcss-calc',
         'postcss-custom-media',
         'autoprefixer',
-        'postcss-property-lookup',
         'postcss-reporter'
       ]);
       expect(opts.autoprefixer).to.eql(autoprefixer);
       expect(opts['postcss-import'].root).to.equal('test/root');
+    });
+
+    describe('re-ordering plugins', function() {
+      it('should allow reordering of use array and remove duplicates', function() {
+        var opts = mergeOptions({
+          config: {
+            use: ['autoprefixer', 'postcss-at2x', 'postcss-calc', 'postcss-reporter']
+          }
+        });
+
+        expect(opts.use).to.eql([
+          'postcss-import',
+          'postcss-custom-properties',
+          'postcss-custom-media',
+          'autoprefixer',
+          'postcss-at2x',
+          'postcss-calc',
+          'postcss-reporter'
+        ]);
+      });
+
+      it('should just append plugins if no duplicates are used', function() {
+        var opts = mergeOptions({
+          config: {
+            use: ['postcss-at2x', 'postcss-property-lookup']
+          }
+        });
+
+        expect(opts.use).to.eql([
+          'postcss-import',
+          'postcss-custom-properties',
+          'postcss-calc',
+          'postcss-custom-media',
+          'autoprefixer',
+          'postcss-reporter',
+          'postcss-at2x',
+          'postcss-property-lookup'
+        ]);
+      });
     });
   });
 });

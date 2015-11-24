@@ -118,6 +118,42 @@ module.exports = {
 npm run preprocess
 ```
 
+#### Changing plugin order
+
+If duplicate plugins are used, `suitcss` will remove duplicates but also respect the new order. This is useful if you need to change the default order:
+
+```js
+// Default order
+var defaults = [
+  'postcss-import',
+  'postcss-custom-properties',
+  'postcss-calc',
+  'postcss-custom-media',
+  'autoprefixer',
+  'postcss-reporter'
+];
+
+// config
+module.exports = {
+  use: [
+    'stylelint',
+    'postcss-calc',
+    'autoprefixer',
+    'postcss-reporter'
+  ]
+};
+
+var result = [
+  'postcss-import',
+  'postcss-custom-properties',
+  'postcss-custom-media',
+  'stylelint',
+  'postcss-calc',
+  'autoprefixer',
+  'postcss-reporter'
+];
+```
+
 ### Node.js
 
 Returns a [PostCSS promise](https://github.com/postcss/postcss/blob/master/docs/api.md#lazyresult-class)

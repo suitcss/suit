@@ -2,8 +2,8 @@
  * Module dependencies
  */
 var assign = require('object-assign-deep');
-var without = require('lodash/array/without');
-var last = require('lodash/array/last');
+var isEmpty = require('lodash.isempty');
+var difference = require('lodash.difference');
 var autoprefixer = require('autoprefixer');
 var bemLinter = require('postcss-bem-linter');
 var postcss = require('postcss');
@@ -104,11 +104,11 @@ function mergeOptions(options) {
   merged['postcss-import'].root = options.root;
   merged['postcss-import'].transform = lintImportedFiles(merged);
 
-  // Ensure postcss-reporter is always the final plugin
-  if (last(merged.use) !== 'postcss-reporter') {
-    var plugins = without(merged.use, 'postcss-reporter');
-    plugins.push('postcss-reporter');
-    merged.use = plugins;
+  // Allow additional plugins to be merged with the defaults
+  // but remove any duplicates so that it respects the new order
+  if (!isEmpty(options.config.use)) {
+    var dedupedPlugins = difference(merged.use, options.config.use);
+    merged.use = dedupedPlugins.concat(options.config.use);
   }
 
   return merged;
