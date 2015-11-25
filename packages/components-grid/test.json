@@ -1,6 +1,7 @@
 {
+  "use": ["stylelint", "autoprefixer", "postcss-reporter"],
   "postcss-reporter": {
     "throwError": true,
-    "plugins": ["postcss-bem-linter"]
+    "plugins": ["postcss-bem-linter", "stylelint"]
   }
 }
