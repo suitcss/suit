@@ -60,7 +60,7 @@ var defaults = {
  * Process CSS
  *
  * @param {String} css
- * @returns {String}
+ * @returns {Promise}
  */
 
 function preprocessor(css, options) {
