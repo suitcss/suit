@@ -1,5 +1,11 @@
 ### HEAD
 
+### 0.6.0 (November 25, 2015)
+
+* [Allow re-ordering](https://github.com/suitcss/preprocessor/pull/15) of the `use` plugins array from config
+* Update `autoprefixer` to `^6.1.1`
+* Update `postcss-bem-linter` to `^2.3.0`
+
 ### 0.5.1 (November 24, 2015)
 
 * [Fix issue](https://github.com/suitcss/preprocessor/issues/13) with options not being passed to `postcss-bem-linter` and `postcss-reporter`
