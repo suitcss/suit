@@ -22,8 +22,8 @@
  */
 
 .Grid {
-  display: flex; /* 1 */
   box-sizing: border-box;
+  display: flex; /* 1 */
   flex-flow: row wrap;
   margin: 0; /* 1 */
   padding: 0; /* 1 */
@@ -103,8 +103,8 @@
  */
 
 .Grid-cell {
-  flex: 0 0 100%; /* 1 */
   box-sizing: inherit;
+  flex: 0 0 100%; /* 1 */
 }
 
 /**
