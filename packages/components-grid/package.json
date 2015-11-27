@@ -22,7 +22,7 @@
     "preprocess-test": "suitcss -i test test/test.css build/test.css",
     "setup": "npm install",
     "watch": "npm run preprocess-test -- -w -v",
-    "test": "suitcss -c test.json index.css"
+    "test": "suitcss -c test/config.json index.css build/output.css && rm build/output.css"
   },
   "repository": {
     "type": "git",
