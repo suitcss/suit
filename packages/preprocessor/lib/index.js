@@ -104,8 +104,8 @@ function mergeOptions(options) {
   // Allow additional plugins to be merged with the defaults
   // but remove any duplicates so that it respects the new order
   if (!isEmpty(options.use)) {
-    var dedupedPlugins = difference(merged.use, options.use);
-    merged.use = dedupedPlugins.concat(options.use);
+    var plugins = difference(merged.use, options.use);
+    merged.use = plugins.concat(options.use);
   }
 
   return merged;
@@ -119,7 +119,7 @@ function mergeOptions(options) {
  * @returns {Function} Used by postcss-import transform
  */
 function lintImportedFiles(options) {
-  return function (css, filename) {
+  return function(css, filename) {
     return postcss([
       bemLinter(options['postcss-bem-linter']),
       reporter(options['postcss-reporter'])

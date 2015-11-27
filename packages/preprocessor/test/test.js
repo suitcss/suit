@@ -145,7 +145,18 @@ describe('suitcss', function () {
           beforeLint: beforeLintStub
         }).catch(done);
 
-        expect(bemLintStub.getCall(0).args[0]).to.equal('/* before lint */');
+        expect(bemLintStub.args[0][0]).to.equal('/* before lint */');
+
+        done();
+      });
+
+      it('should pass the merged options to the beforeLint function', function (done) {
+        suitcss(read('fixtures/component'), {
+          root: 'test/fixtures',
+          beforeLint: beforeLintStub
+        }).catch(done);
+
+        expect(beforeLintStub.args[0][2].root).to.equal('test/fixtures');
 
         done();
       });
