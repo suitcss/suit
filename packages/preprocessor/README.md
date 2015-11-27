@@ -15,7 +15,7 @@ Compiles CSS packages with:
 * [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
 * [autoprefixer](https://github.com/postcss/autoprefixer)
 
-In addition each imported file is linted with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and minification is provided by [cssnano](http://cssnano.co/).
+Each imported file is linted with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and minification is provided by [cssnano](http://cssnano.co/). Additional plugins can be added via the configuration options.
 
 ## Installation
 
@@ -54,7 +54,7 @@ Examples:
   # configure the import root directory:
   $ suitcss --import-root src/css input.css output.css
 
-  # watch the input file for changes:
+  # watch the input file and imports for changes:
   $ suitcss --watch input.css output.css
 
   # configure postcss plugins with a config file:
@@ -64,7 +64,74 @@ Examples:
   $ cat input.css | suitcss | grep background-color
 ```
 
-### Configuration
+### Node.js
+
+Returns a [PostCSS promise](https://github.com/postcss/postcss/blob/master/docs/api.md#lazyresult-class)
+
+```js
+var preprocessor = require('suitcss-preprocessor');
+var fs = require('fs');
+
+var css = fs.readFileSync('src/components/index.css', 'utf8');
+
+preprocessor(css, {
+  root: 'path/to/css',
+  minify: true,
+}).then(function(result) {
+  fs.writeFileSync('build/bundle.css', result.css);
+});
+```
+
+#### Options
+
+##### `root`
+
+* Type: `String`
+* Default: `process.cwd()`
+
+Where to resolve imports from. Passed to [`postcss-import`](https://github.com/postcss/postcss-import/blob/master/README.md#root).
+
+##### `minify`
+
+* Type: `Boolean`
+* Default: `false`
+
+If set to `true` then the output is minified by [`cssnano`](http://cssnano.co/).
+
+##### `beforeLint`
+
+* Type: `Function`
+* Default: `false`
+
+Called with the imported CSS before it's passed to `postcss-bem-linter`. This allows you to transform the CSS first and it must return the css string.
+
+Third paramater is the options object containing any PostCSS configuration you may need.
+
+```js
+{
+  beforeLint(css, filename, options) {
+    // Do something to the imported css
+    return css;
+  }
+}
+```
+
+##### `config`
+
+* Type: `Object`
+* Default: [various](https://github.com/suitcss/preprocessor/blob/master/lib/index.js#L23)
+
+A list of plugins and their options that are passed to PostCSS. This can be used to add new plugins and/or configure existing ones.
+
+```js
+config: {
+  use: ['stylelint', 'postcss-property-lookup'],
+  autoprefixer: { browsers: ['> 1%', 'IE 7'], cascade: false },
+  'postcss-calc': { preserve: true }
+}
+```
+
+### Plugin configuration
 
 Creating a configuration file allows options to be passed to the individual PostCSS plugins. It can be passed to the `suitcss` CLI via the `-c` flag and can be either JavaScript or JSON
 
@@ -90,7 +157,7 @@ Options are merged recursively with the defaults. For example, adding new plugin
 
 By default the preprocessor uses all necessary plugins to build SUIT components. However additional plugins can be installed into a project and then added to the `use` array.
 
-This **will not** work with the preprocessor installed globally. Instead rely on the convenience of `npm run <script>`
+**Note**: This will not work with the preprocessor installed globally. Instead rely on the convenience of `npm run <script>`
 
 ```js
 module.exports = {
@@ -152,29 +219,6 @@ var result = [
   'autoprefixer',
   'postcss-reporter'
 ];
-```
-
-### Node.js
-
-Returns a [PostCSS promise](https://github.com/postcss/postcss/blob/master/docs/api.md#lazyresult-class)
-
-```js
-var preprocessor = require('suitcss-preprocessor');
-var fs = require('fs');
-
-var css = fs.readFileSync('src/components/index.css', 'utf8');
-
-preprocessor(css, {
-  root: 'path/to/css',
-  minify: true,
-  config: {
-    use: ['postcss-property-lookup'],
-    autoprefixer: { browsers: ['> 1%', 'IE 7'], cascade: false },
-    'postcss-calc': { preserve: true }
-  }
-}).then(function(result) {
-  fs.writeFileSync('build/bundle.css', result.css);
-});
 ```
 
 ## Acknowledgements

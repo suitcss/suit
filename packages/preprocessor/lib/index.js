@@ -21,7 +21,7 @@ module.exports = preprocessor;
  */
 
 var defaults = {
-  minify: undefined,
+  minify: false,
   use: [
     'postcss-import',
     'postcss-custom-properties',
@@ -31,7 +31,6 @@ var defaults = {
     'postcss-reporter'
   ],
   'postcss-import': {
-    root: undefined,
     onImport: function(imported) {
       // Update the watch task with the list of imported files
       if (typeof global.watchCSS === 'function') {
@@ -64,10 +63,6 @@ var defaults = {
  */
 
 function preprocessor(css, options) {
-  if (typeof css !== 'string') {
-    throw new Error('suitcss-preprocessor: did not receive a String');
-  }
-
   options = mergeOptions(options);
 
   var plugins = options.use.map(function (p) {
@@ -102,7 +97,15 @@ function mergeOptions(options) {
   // Set some core options
   merged.minify = options.minify;
   merged['postcss-import'].root = options.root;
-  merged['postcss-import'].transform = lintImportedFiles(merged);
+
+  // Call beforeLint function and pass processed css to bem-linter
+  var beforeLint = options.beforeLint;
+  merged['postcss-import'].transform = function(css, filename) {
+    if (typeof beforeLint === 'function') {
+      css = beforeLint(css, filename, merged);
+    }
+    return lintImportedFiles(merged)(css, filename);
+  };
 
   // Allow additional plugins to be merged with the defaults
   // but remove any duplicates so that it respects the new order

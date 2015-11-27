@@ -34,7 +34,8 @@
     "chai": "^3.4.1",
     "mocha": "^2.3.4",
     "postcss-property-lookup": "^1.1.4",
-    "rewire": "^2.5.0"
+    "rewire": "^2.5.0",
+    "sinon": "^1.17.2"
   },
   "scripts": {
     "test": "mocha --reporter spec --slow 400",
