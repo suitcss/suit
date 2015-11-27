@@ -11,7 +11,7 @@
     "stylelint": "^2.3.4",
     "stylelint-config-suitcss": "^1.0.0",
     "suitcss-components-test": "*",
-    "suitcss-preprocessor": "^0.6.0",
+    "suitcss-preprocessor": "^0.7.0",
     "suitcss-utils-offset": "^0.5.1",
     "suitcss-utils-size": "^1.0.0"
   },
