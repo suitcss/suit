@@ -1,5 +1,11 @@
 ### HEAD
 
+### 0.7.0 (November 27, 2015)
+
+* Add `beforeLint` function which allows imported CSS to be manipulated before linting
+* Flatten configuration options so that PostCSS specific settings are no longer
+inside `config: {}`.
+
 ### 0.6.0 (November 25, 2015)
 
 * [Allow re-ordering](https://github.com/suitcss/preprocessor/pull/15) of the `use` plugins array from config
