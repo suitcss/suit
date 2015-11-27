@@ -19,7 +19,6 @@
     "fs-extra": "^0.26.2",
     "lodash.difference": "^3.2.2",
     "lodash.isempty": "^3.0.4",
-    "object-assign": "^4.0.1",
     "object-assign-deep": "0.0.4",
     "pad-component": "0.0.1",
     "postcss": "^5.0.12",
