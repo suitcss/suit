@@ -46,11 +46,7 @@ var defaults = {
     calc: false,
     autoprefixer: false,
     mergeRules: false,
-    // Disable unsafe optimisations
-    zindex: false,
-    discardUnused: false,
-    reduceIdents: false,
-    mergeIdents: false
+    safe: true
   }
 };
 
