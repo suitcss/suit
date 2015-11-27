@@ -101,7 +101,7 @@ If set to `true` then the output is minified by [`cssnano`](http://cssnano.co/).
 ##### `beforeLint`
 
 * Type: `Function`
-* Default: `false`
+* Default: `undefined`
 
 Called with the imported CSS before it's passed to `postcss-bem-linter`. This allows you to transform the CSS first and it must return the css string.
 
@@ -116,17 +116,32 @@ Third paramater is the options object containing any PostCSS configuration you m
 }
 ```
 
-##### `config`
+##### `use`
 
-* Type: `Object`
-* Default: [various](https://github.com/suitcss/preprocessor/blob/master/lib/index.js#L23)
+* Type: `Array`
+* Default: `undefined`
 
-A list of plugins and their options that are passed to PostCSS. This can be used to add new plugins and/or configure existing ones.
+A list of plugins that are passed to PostCSS. This can be used to add new plugins and/or reorder the defaults
 
 ```js
-config: {
-  use: ['stylelint', 'postcss-property-lookup'],
-  autoprefixer: { browsers: ['> 1%', 'IE 7'], cascade: false },
+{
+  use: ['stylelint', 'postcss-property-lookup']
+}
+```
+
+##### `<plugin-name>`
+
+* Type: `Object`
+* Default: `undefined`
+
+Property matching the name of a PostCSS plugin that has options for that plugin
+
+```js
+{
+  autoprefixer: {
+    browsers: ['> 1%', 'IE 7'],
+    cascade: false
+  },
   'postcss-calc': { preserve: true }
 }
 ```
