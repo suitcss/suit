@@ -60,9 +60,7 @@ describe('suitcss', function () {
       var autoprefixer = {browsers: ['> 1%', 'IE 7'], cascade: false};
       var opts = mergeOptions({
         root: 'test/root',
-        config: {
-          autoprefixer: autoprefixer
-        }
+        autoprefixer: autoprefixer
       });
 
       expect(opts.use).to.eql([
@@ -80,9 +78,7 @@ describe('suitcss', function () {
     describe('re-ordering plugins', function() {
       it('should allow reordering of use array and remove duplicates', function() {
         var opts = mergeOptions({
-          config: {
-            use: ['autoprefixer', 'postcss-at2x', 'postcss-calc', 'postcss-reporter']
-          }
+          use: ['autoprefixer', 'postcss-at2x', 'postcss-calc', 'postcss-reporter']
         });
 
         expect(opts.use).to.eql([
@@ -98,9 +94,7 @@ describe('suitcss', function () {
 
       it('should just append plugins if no duplicates are used', function() {
         var opts = mergeOptions({
-          config: {
-            use: ['postcss-at2x', 'postcss-property-lookup']
-          }
+          use: ['postcss-at2x', 'postcss-property-lookup']
         });
 
         expect(opts.use).to.eql([
@@ -208,6 +202,7 @@ describe('cli', function () {
     var child = exec('bin/suitcss', function (err, stdout) {
       if (err) return done(err);
       expect(stdout).to.equal(output);
+      expect(stdout).to.not.contain('beforeLint ran');
       done();
     });
 
@@ -219,6 +214,7 @@ describe('cli', function () {
     exec('bin/suitcss -v test/fixtures/cli/input.css test/fixtures/cli/output.css', function (err, stdout) {
       if (err) return done(err);
       expect(stdout).to.contain('write');
+      expect(stdout).to.not.contain('beforeLint ran');
       done();
     });
   });
@@ -229,6 +225,7 @@ describe('cli', function () {
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/component.out');
       expect(res).to.equal(expected);
+      expect(stdout).to.not.contain('beforeLint ran');
       done();
     });
   });
@@ -238,6 +235,7 @@ describe('cli', function () {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/minify.out');
+      expect(stdout).to.not.contain('beforeLint ran');
       expect(res).to.equal(expected);
       done();
     });
@@ -248,6 +246,7 @@ describe('cli', function () {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/config.out');
+      expect(stdout).to.contain('beforeLint ran');
       expect(res).to.equal(expected);
       done();
     });

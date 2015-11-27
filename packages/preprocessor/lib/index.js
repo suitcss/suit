@@ -86,16 +86,14 @@ function preprocessor(css, options) {
 
 function mergeOptions(options) {
   options = options || {};
-  options.config = options.config || {};
 
-  var merged = assign({}, defaults, options.config);
+  var merged = assign({}, defaults, options);
 
   // Set some core options
-  merged.minify = options.minify;
-  merged['postcss-import'].root = options.root;
+  merged['postcss-import'].root = merged.root;
 
   // Call beforeLint function and pass processed css to bem-linter
-  var beforeLint = options.beforeLint;
+  var beforeLint = merged.beforeLint;
   merged['postcss-import'].transform = function(css, filename) {
     if (typeof beforeLint === 'function') {
       css = beforeLint(css, filename, merged);
@@ -105,9 +103,9 @@ function mergeOptions(options) {
 
   // Allow additional plugins to be merged with the defaults
   // but remove any duplicates so that it respects the new order
-  if (!isEmpty(options.config.use)) {
-    var dedupedPlugins = difference(merged.use, options.config.use);
-    merged.use = dedupedPlugins.concat(options.config.use);
+  if (!isEmpty(options.use)) {
+    var dedupedPlugins = difference(merged.use, options.use);
+    merged.use = dedupedPlugins.concat(options.use);
   }
 
   return merged;

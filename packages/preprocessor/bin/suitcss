@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var fs = require('fs-extra');
+var assign = require('object-assign-deep');
 var exists = fs.existsSync;
 var logger = require('./logger');
 var suitcss = require('..');
@@ -101,17 +102,13 @@ if (regen) {
 /**
  * Run for the given input and output.
  */
-
 function run () {
   read(input, function (err, buffer) {
     if (err) logger.throw(err);
     var css = buffer.toString();
+    var opts = assign({}, {minify: program.minify, root: program.importRoot}, config);
 
-    suitcss(css, {
-      minify: program.minify,
-      root: program.importRoot,
-      config: config
-    }).then(function(result) {
+    suitcss(css, opts).then(function(result) {
       if (output) {
         writeFileSync(output, result.css + '\n');
       } else {
