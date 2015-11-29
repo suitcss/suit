@@ -9,6 +9,7 @@ var bemLinter = require('postcss-bem-linter');
 var postcss = require('postcss');
 var cssnano = require('cssnano');
 var reporter = require('postcss-reporter');
+var stylelint = require('stylelint');
 
 /**
  * Module export
@@ -22,6 +23,7 @@ module.exports = preprocessor;
 
 var defaults = {
   minify: false,
+  stylelint: false,
   use: [
     'postcss-import',
     'postcss-custom-properties',
@@ -120,10 +122,17 @@ function mergeOptions(options) {
  */
 function lintImportedFiles(options) {
   return function(css, filename) {
-    return postcss([
-      bemLinter(options['postcss-bem-linter']),
-      reporter(options['postcss-reporter'])
-    ]).process(css, {from: filename}).css;
+    var processor = postcss();
+
+    if (options.lint) {
+      processor.use(stylelint(options.stylelint));
+    }
+
+    processor
+      .use(bemLinter(options['postcss-bem-linter']))
+      .use(reporter(options['postcss-reporter']));
+
+    return processor.process(css, {from: filename}).css;
   };
 }
 

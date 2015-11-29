@@ -20,8 +20,9 @@ program
   .version(require('../package.json').version)
   .usage('[<input>] [<output>]')
   .option('-m, --minify', 'minify output with cssnano')
-  .option('-i, --import-root [path]', 'the root directory for imported css files', '')
-  .option('-c, --config [path]', 'a custom PostCSS config file', '')
+  .option('-l, --lint', 'ensure code adheres to the SUIT code style')
+  .option('-i, --import-root [path]', 'the root directory for imported css files')
+  .option('-c, --config [path]', 'a custom PostCSS config file')
   .option('-v, --verbose', 'log verbose output for debugging')
   .option('-w, --watch', 'watch the input file and any imports for changes');
 
@@ -106,7 +107,11 @@ function run () {
   read(input, function (err, buffer) {
     if (err) logger.throw(err);
     var css = buffer.toString();
-    var opts = assign({}, {minify: program.minify, root: program.importRoot}, config);
+    var opts = assign({}, {
+                      minify: program.minify,
+                      root: program.importRoot,
+                      lint: program.lint
+                    }, config);
 
     suitcss(css, opts).then(function(result) {
       if (output) {

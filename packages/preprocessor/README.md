@@ -15,7 +15,9 @@ Compiles CSS packages with:
 * [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
 * [autoprefixer](https://github.com/postcss/autoprefixer)
 
-Each imported file is linted with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and minification is provided by [cssnano](http://cssnano.co/). Additional plugins can be added via the configuration options.
+Each imported file is linted with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and minification is provided by [cssnano](http://cssnano.co/). Code style can also be checked with [stylelint](http://stylelint.io/)
+
+Additional plugins can be added via the configuration options.
 
 ## Installation
 
@@ -41,6 +43,7 @@ Options:
   -h, --help                output usage information
   -V, --version             output the version number
   -m, --minify              minify output with cssnano
+  -l, --lint                ensure code adheres to the SUIT code style
   -i, --import-root [path]  the root directory for imported css files
   -c, --config [path]       a custom PostCSS config file
   -v, --verbose             log verbose output for debugging
@@ -91,6 +94,24 @@ preprocessor(css, {
 
 Where to resolve imports from. Passed to [`postcss-import`](https://github.com/postcss/postcss-import/blob/master/README.md#root).
 
+##### `lint`
+
+* Type: `Boolean`
+* Default: `false`
+
+Ensure code conforms to the [SUIT code style](https://github.com/suitcss/suit/blob/master/doc/STYLE.md). Stylelint [configuration options](http://stylelint.io/?/docs/user-guide/configuration.md) can also be overridden:
+
+```js
+{
+  lint: true,
+  stylelint: {
+    rules: {
+      indentation: [4, 'tab'],
+    }
+  }
+}
+```
+
 ##### `minify`
 
 * Type: `Boolean`
@@ -125,7 +146,7 @@ A list of plugins that are passed to PostCSS. This can be used to add new plugin
 
 ```js
 {
-  use: ['stylelint', 'postcss-property-lookup']
+  use: ['postcss-at2x', 'postcss-property-lookup']
 }
 ```
 
@@ -218,7 +239,7 @@ var defaults = [
 // config
 module.exports = {
   use: [
-    'stylelint',
+    'postcss-at2x',
     'postcss-calc',
     'autoprefixer',
     'postcss-reporter'
@@ -229,7 +250,7 @@ var result = [
   'postcss-import',
   'postcss-custom-properties',
   'postcss-custom-media',
-  'stylelint',
+  'postcss-at2x',
   'postcss-calc',
   'autoprefixer',
   'postcss-reporter'

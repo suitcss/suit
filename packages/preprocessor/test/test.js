@@ -36,6 +36,7 @@ describe('suitcss', function () {
       var keys = [
         'minify',
         'use',
+        'stylelint',
         'postcss-import',
         'postcss-reporter',
         'cssnano'
@@ -49,6 +50,11 @@ describe('suitcss', function () {
     it('should allow an import root to be set', function() {
       var opts = mergeOptions({root: 'test/root'});
       expect(opts['postcss-import'].root).to.equal('test/root');
+    });
+
+    it('should allow stylelint to be enabled', function() {
+      var opts = mergeOptions({lint: true});
+      expect(opts.lint).to.be.true;
     });
 
     it('should allow an minify option to be set', function() {
@@ -107,6 +113,24 @@ describe('suitcss', function () {
           'postcss-at2x',
           'postcss-property-lookup'
         ]);
+      });
+    });
+
+    describe('stylelint', function() {
+      it('should check the input conforms to SUIT style rules', function(done) {
+        suitcss('@import ./stylelint.css', {
+            lint: true,
+            root: 'test/fixtures',
+            'postcss-reporter': {
+              throwError: true
+            }
+          }
+        ).then(function(result) {
+          done(new Error('stylelint should have failed conformance'));
+        }).catch(function(err) {
+          expect(err.message).to.contain('postcss-reporter: warnings or errors were found');
+          done();
+        });
       });
     });
 
@@ -237,6 +261,14 @@ describe('cli', function () {
       var expected = read('fixtures/component.out');
       expect(res).to.equal(expected);
       expect(stdout).to.not.contain('beforeLint ran');
+      done();
+    });
+  });
+
+  it('should output stylelint warnings', function (done) {
+    exec('bin/suitcss -i test/fixtures test/fixtures/stylelint-import.css test/fixtures/cli/output.css -l', function (err, stdout) {
+      if (err) return done(err);
+      expect(stdout).to.contain('Expected property "box-sizing" to come before property "flex"');
       done();
     });
   });
