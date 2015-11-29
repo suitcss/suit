@@ -23,7 +23,7 @@ module.exports = preprocessor;
 
 var defaults = {
   minify: false,
-  stylelint: false,
+  lint: false,
   use: [
     'postcss-import',
     'postcss-custom-properties',

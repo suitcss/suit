@@ -36,7 +36,7 @@ describe('suitcss', function () {
       var keys = [
         'minify',
         'use',
-        'stylelint',
+        'lint',
         'postcss-import',
         'postcss-reporter',
         'cssnano'
