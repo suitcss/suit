@@ -1,5 +1,5 @@
 # stylelint-config-suitcss
-[![NPM version](http://img.shields.io/npm/v/stylelint-config-suitcss.svg)](https://www.npmjs.org/package/stylelint-config-suitcss) [![Travis Build Status](https://img.shields.io/travis/stylelint/stylelint-config-suitcss/master.svg?label=unix%20build)](https://travis-ci.org/stylelint/stylelint-config-suitcss) [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/jeddy3/stylelint-config-suitcss/master.svg?label=windows%20build)](https://ci.appveyor.com/project/jeddy3/stylelint-config-suitcss)
+[![NPM version](http://img.shields.io/npm/v/stylelint-config-suitcss.svg)](https://www.npmjs.org/package/stylelint-config-suitcss) [![Travis Build Status](https://img.shields.io/travis/stylelint/stylelint-config-suitcss/master.svg?label=unix%20build)](https://travis-ci.org/stylelint/stylelint-config-suitcss) [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/stylelint/stylelint-config-suitcss/master.svg?label=windows%20build)](https://ci.appveyor.com/project/stylelint/stylelint-config-suitcss)
 
 > SUIT CSS shareable config for stylelint.
 
