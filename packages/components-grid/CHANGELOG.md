@@ -1,5 +1,11 @@
 ### HEAD
 
+### 3.0.1 (December 02, 2015)
+
+* Upgrade to `^0.8.0` suitcss-preprocessor
+* Ensure [Grid conforms](https://github.com/suitcss/components-grid/commit/91a5a46daf4e7964a38ce72f29801fd8de48d451) to SUIT CSS stylelint rules
+* Add license field to `package.json`
+
 ### 3.0.0 (November 01, 2015)
 
 * Switch to flexbox for layout
