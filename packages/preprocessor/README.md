@@ -99,12 +99,16 @@ Where to resolve imports from. Passed to [`postcss-import`](https://github.com/p
 * Type: `Boolean`
 * Default: `false`
 
-Ensure code conforms to the [SUIT code style](https://github.com/suitcss/suit/blob/master/doc/STYLE.md). Stylelint [configuration options](http://stylelint.io/?/docs/user-guide/configuration.md) can also be overridden:
+Ensure code conforms to the [SUIT code style](https://github.com/suitcss/suit/blob/master/doc/STYLE.md)
+by using the [stylelint-config-suitcss](https://github.com/stylelint/stylelint-config-suitcss) package.
+
+Stylelint [configuration options](http://stylelint.io/?/docs/user-guide/configuration.md) can also be overridden:
 
 ```js
 {
   lint: true,
   stylelint: {
+  extends: 'stylelint-config-suitcss',
     rules: {
       indentation: [4, 'tab'],
     }
@@ -121,8 +125,6 @@ project root. For example:
   "extends": "stylelint-config-suitcss"
 }
 ```
-
-This would also need the [stylelint-config-suitcss](https://github.com/stylelint/stylelint-config-suitcss) package to be installed.
 
 **Note**: This works the same with the CLI `-l` flag.
 

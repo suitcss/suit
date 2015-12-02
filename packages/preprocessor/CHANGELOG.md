@@ -1,5 +1,8 @@
 ### HEAD
 
+* Use `stylelint-config-suitcss` as a dev dependency as it must be installed
+where the preprocessor is being used.
+
 ### 0.8.0 (December 01, 2015)
 
 * Add [stylelint](http://stylelint.io/) as an optional linting step
