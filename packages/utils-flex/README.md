@@ -1,5 +1,7 @@
 # SUIT CSS utilities: flex
 
+[![Build Status](https://travis-ci.org/suitcss/utils-flex.svg?branch=master)](https://travis-ci.org/suitcss/utils-flex)
+
 SUIT CSS flexbox utilities
 
 * Read more about [flexbox and its usage](http://www.w3.org/TR/css-flexbox/)
