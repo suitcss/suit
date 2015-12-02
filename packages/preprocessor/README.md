@@ -112,6 +112,18 @@ Ensure code conforms to the [SUIT code style](https://github.com/suitcss/suit/bl
 }
 ```
 
+The preprocessor will also pick up any rules added to a `.stylelintrc` in your
+project root. For example:
+
+
+```js
+{
+  "extends": "stylelint-config-suitcss"
+}
+```
+
+This works the same with the CLI `-l` flag
+
 ##### `minify`
 
 * Type: `Boolean`
