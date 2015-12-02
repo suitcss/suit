@@ -32,11 +32,11 @@
  */
 
 .u-flexCol {
-   flex-direction: column !important;
+  flex-direction: column !important;
 }
 
 .u-flexColReverse {
-   flex-direction: column-reverse !important;
+  flex-direction: column-reverse !important;
 }
 
 /**
@@ -137,7 +137,9 @@
 /**
  * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
  */
+
 /* postcss-bem-linter: ignore */
+
 .u-flex > *,
 .u-flexInline > * {
   flex-shrink: 1; /* 1 */
