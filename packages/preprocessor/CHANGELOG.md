@@ -1,5 +1,9 @@
 ### HEAD
 
+### 0.8.0 (December 01, 2015)
+
+* Add [stylelint](http://stylelint.io/) as an optional linting step
+
 ### 0.7.0 (November 27, 2015)
 
 * Add `beforeLint` function which allows imported CSS to be manipulated before linting
