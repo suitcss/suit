@@ -1,5 +1,7 @@
 ### HEAD
 
+* Remove unused `stylelint` package as this is included with the suitcss-preprocessor.
+
 ### 3.0.1 (December 02, 2015)
 
 * Upgrade to `^0.8.0` suitcss-preprocessor
