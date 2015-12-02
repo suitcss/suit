@@ -4,7 +4,6 @@
 var assign = require('object-assign-deep');
 var isEmpty = require('lodash.isempty');
 var difference = require('lodash.difference');
-var autoprefixer = require('autoprefixer');
 var bemLinter = require('postcss-bem-linter');
 var postcss = require('postcss');
 var cssnano = require('cssnano');
@@ -41,7 +40,7 @@ var defaults = {
     }
   },
   'postcss-reporter': {
-      clearMessages: true
+    clearMessages: true
   },
   // http://cssnano.co/optimisations/
   cssnano: {
@@ -63,9 +62,9 @@ var defaults = {
 function preprocessor(css, options) {
   options = mergeOptions(options);
 
-  var plugins = options.use.map(function (p) {
+  var plugins = options.use.map(function(p) {
     var plugin = require(p);
-    settings = options[p];
+    var settings = options[p];
 
     return settings ? plugin(settings) : plugin;
   });
@@ -135,4 +134,3 @@ function lintImportedFiles(options) {
     return processor.process(css, {from: filename}).css;
   };
 }
-

@@ -34,13 +34,16 @@
   },
   "devDependencies": {
     "chai": "^3.4.1",
+    "eslint": "^1.10.2",
+    "eslint-config-airbnb": "^1.0.2",
     "mocha": "^2.3.4",
     "postcss-property-lookup": "^1.1.4",
     "rewire": "^2.5.0",
     "sinon": "^1.17.2"
   },
   "scripts": {
-    "test": "mocha --reporter spec --slow 400",
+    "test": "npm run lint && mocha --reporter spec --slow 400",
+    "lint": "eslint lib/index.js test/test.js bin/suitcss",
     "watch": "mocha --watch --reporter spec --slow 400"
   },
   "keywords": [

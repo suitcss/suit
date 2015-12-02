@@ -2,7 +2,6 @@ var expect = require('chai').expect;
 var sinon = require('sinon');
 var child = require('child_process');
 var exec = child.exec;
-var spawn = child.spawn;
 var fs = require('fs');
 var rewire = require('rewire');
 var suitcss = rewire('../lib');
@@ -12,8 +11,8 @@ var path = require('path');
  * Node API tests.
  */
 
-describe('suitcss', function () {
-  it('should return a css string', function (done) {
+describe('suitcss', function() {
+  it('should return a css string', function(done) {
     suitcss('body {}').then(function(result) {
       expect(result.css).to.be.a('string');
       done();
@@ -119,13 +118,12 @@ describe('suitcss', function () {
     describe('stylelint', function() {
       it('should check the input conforms to SUIT style rules', function(done) {
         suitcss('@import ./stylelint.css', {
-            lint: true,
-            root: 'test/fixtures',
-            'postcss-reporter': {
-              throwError: true
-            }
+          lint: true,
+          root: 'test/fixtures',
+          'postcss-reporter': {
+            throwError: true
           }
-        ).then(function(result) {
+        }).then(function() {
           done(new Error('stylelint should have failed conformance'));
         }).catch(function(err) {
           expect(err.message).to.contain('postcss-reporter: warnings or errors were found');
@@ -150,7 +148,7 @@ describe('suitcss', function () {
         revert();
       });
 
-      it('should call user supplied function before linting', function (done) {
+      it('should call user supplied function before linting', function(done) {
         suitcss(read('fixtures/component'), {
           root: 'test/fixtures',
           beforeLint: beforeLintStub
@@ -163,7 +161,7 @@ describe('suitcss', function () {
         done();
       });
 
-      it('should pass processed CSS to the linting transform function', function (done) {
+      it('should pass processed CSS to the linting transform function', function(done) {
         suitcss(read('fixtures/component'), {
           root: 'test/fixtures',
           beforeLint: beforeLintStub
@@ -174,7 +172,7 @@ describe('suitcss', function () {
         done();
       });
 
-      it('should pass the merged options to the beforeLint function', function (done) {
+      it('should pass the merged options to the beforeLint function', function(done) {
         suitcss(read('fixtures/component'), {
           root: 'test/fixtures',
           beforeLint: beforeLintStub
@@ -192,8 +190,8 @@ describe('suitcss', function () {
  * Feature tests.
  */
 
-describe('features', function () {
-  it('should preprocess CSS correctly', function (done) {
+describe('features', function() {
+  it('should preprocess CSS correctly', function(done) {
     var input = read('fixtures/component');
     var output = read('fixtures/component.out');
 
@@ -208,16 +206,16 @@ describe('features', function () {
  * CLI tests.
  */
 
-describe('cli', function () {
+describe('cli', function() {
   var input = read('fixtures/cli/input');
   var output = read('fixtures/cli/input.out');
 
-  afterEach(function () {
+  afterEach(function() {
     remove('fixtures/cli/output');
   });
 
-  it('should read from a file and write to a file', function (done) {
-    exec('bin/suitcss test/fixtures/cli/input.css test/fixtures/cli/output.css', function (err, stdout) {
+  it('should read from a file and write to a file', function(done) {
+    exec('bin/suitcss test/fixtures/cli/input.css test/fixtures/cli/output.css', function(err) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       expect(res).to.equal(output);
@@ -225,28 +223,28 @@ describe('cli', function () {
     });
   });
 
-  it('should read from a file and write to stdout', function (done) {
-    exec('bin/suitcss test/fixtures/cli/input.css', function (err, stdout) {
+  it('should read from a file and write to stdout', function(done) {
+    exec('bin/suitcss test/fixtures/cli/input.css', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.equal(output);
       done();
     });
   });
 
-  it('should read from stdin and write to stdout', function (done) {
-    var child = exec('bin/suitcss', function (err, stdout) {
+  it('should read from stdin and write to stdout', function(done) {
+    var testChild = exec('bin/suitcss', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.equal(output);
       expect(stdout).to.not.contain('beforeLint ran');
       done();
     });
 
-    child.stdin.write(new Buffer(input));
-    child.stdin.end();
+    testChild.stdin.write(new Buffer(input));
+    testChild.stdin.end();
   });
 
-  it('should log on verbose', function (done) {
-    exec('bin/suitcss -v test/fixtures/cli/input.css test/fixtures/cli/output.css', function (err, stdout) {
+  it('should log on verbose', function(done) {
+    exec('bin/suitcss -v test/fixtures/cli/input.css test/fixtures/cli/output.css', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.contain('write');
       expect(stdout).to.not.contain('beforeLint ran');
@@ -254,8 +252,8 @@ describe('cli', function () {
     });
   });
 
-  it('should allow configurable import root', function (done) {
-    exec('bin/suitcss -i test/fixtures test/fixtures/import.css test/fixtures/cli/output.css', function (err, stdout) {
+  it('should allow configurable import root', function(done) {
+    exec('bin/suitcss -i test/fixtures test/fixtures/import.css test/fixtures/cli/output.css', function(err, stdout) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/component.out');
@@ -265,16 +263,16 @@ describe('cli', function () {
     });
   });
 
-  it('should output stylelint warnings', function (done) {
-    exec('bin/suitcss -i test/fixtures test/fixtures/stylelint-import.css test/fixtures/cli/output.css -l', function (err, stdout) {
+  it('should output stylelint warnings', function(done) {
+    exec('bin/suitcss -i test/fixtures test/fixtures/stylelint-import.css test/fixtures/cli/output.css -l', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.contain('Expected property "box-sizing" to come before property "flex"');
       done();
     });
   });
 
-  it('should minify the output', function (done) {
-    exec('bin/suitcss -i test/fixtures test/fixtures/import.css test/fixtures/cli/output.css -m', function (err, stdout) {
+  it('should minify the output', function(done) {
+    exec('bin/suitcss -i test/fixtures test/fixtures/import.css test/fixtures/cli/output.css -m', function(err, stdout) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/minify.out');
@@ -284,8 +282,8 @@ describe('cli', function () {
     });
   });
 
-  it('should allow a config file to be passed', function (done) {
-    exec('bin/suitcss -i test/fixtures -c test/test.config.js test/fixtures/config.css test/fixtures/cli/output.css', function (err, stdout) {
+  it('should allow a config file to be passed', function(done) {
+    exec('bin/suitcss -i test/fixtures -c test/test.config.js test/fixtures/config.css test/fixtures/cli/output.css', function(err, stdout) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/config.out');
@@ -296,7 +294,7 @@ describe('cli', function () {
   });
 
   it('should output an error to stderr on conformance failure when throwError is set', function(done) {
-    exec('bin/suitcss -i test/fixtures -c test/error.config.json test/fixtures/import-error.css test/fixtures/cli/output.css', function (err, stdout, stderr) {
+    exec('bin/suitcss -i test/fixtures -c test/error.config.json test/fixtures/import-error.css test/fixtures/cli/output.css', function(err, stdout, stderr) {
       expect(err).to.be.an('error');
       expect(err.code).to.equal(1);
       expect(stderr).to.contain('postcss-reporter: warnings or errors were found');
@@ -304,8 +302,8 @@ describe('cli', function () {
     });
   });
 
-  it('should log on non-existant file', function (done) {
-    exec('bin/suitcss test/fixtures/cli/non-existant.css', function (err, stdout, stderr) {
+  it('should log on non-existant file', function(done) {
+    exec('bin/suitcss test/fixtures/cli/non-existant.css', function(err, stdout, stderr) {
       expect(err).to.be.an('error');
       expect(err.code).to.equal(1);
       expect(stderr).to.contain('not found');
@@ -321,7 +319,7 @@ describe('cli', function () {
  * @return {String}
  */
 
-function read (filename) {
+function read(filename) {
   var file = resolve(filename);
   return fs.readFileSync(file, 'utf8');
 }
@@ -332,7 +330,7 @@ function read (filename) {
  * @param {String} filename
  */
 
-function remove (filename) {
+function remove(filename) {
   var file = resolve(filename);
   if (!fs.existsSync(file)) return;
   fs.unlinkSync(file);
@@ -345,6 +343,6 @@ function remove (filename) {
  * @return {String}
  */
 
-function resolve (filename) {
+function resolve(filename) {
   return path.resolve(__dirname, filename + '.css');
 }

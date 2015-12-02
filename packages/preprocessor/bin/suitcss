@@ -30,7 +30,7 @@ program
  * Examples.
  */
 
-program.on('--help', function () {
+program.on('--help', function() {
   console.log('  Examples:');
   console.log();
   console.log('    # pass an input and output file:');
@@ -103,15 +103,15 @@ if (regen) {
 /**
  * Run for the given input and output.
  */
-function run () {
-  read(input, function (err, buffer) {
+function run() {
+  read(input, function(err, buffer) {
     if (err) logger.throw(err);
     var css = buffer.toString();
     var opts = assign({}, {
-                      minify: program.minify,
-                      root: program.importRoot,
-                      lint: program.lint
-                    }, config);
+      minify: program.minify,
+      root: program.importRoot,
+      lint: program.lint
+    }, config);
 
     suitcss(css, opts).then(function(result) {
       if (output) {
@@ -119,7 +119,7 @@ function run () {
       } else {
         console.log(result.css);
       }
-    if (verbose && output) logger.log('write', output);
+      if (verbose && output) logger.log('write', output);
     }).catch(function(e) {
       logger.throw(e);
     });
