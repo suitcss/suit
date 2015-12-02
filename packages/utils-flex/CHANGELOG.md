@@ -1,5 +1,10 @@
 ### HEAD
 
+### 0.3.2 (December 02, 2015)
+
+* Use suitcss-preprocessor `0.8.0`
+* Ensure `utils-flex` conforms to SUIT CSS style rules with stylelint
+
 ### 0.3.1 (November 19, 2015)
 
 * URL updates for move to SUIT org
