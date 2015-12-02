@@ -122,7 +122,9 @@ project root. For example:
 }
 ```
 
-This works the same with the CLI `-l` flag
+This would also need the [stylelint-config-suitcss](https://github.com/stylelint/stylelint-config-suitcss) package to be installed.
+
+**Note**: This works the same with the CLI `-l` flag.
 
 ##### `minify`
 
