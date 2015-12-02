@@ -1,6 +1,7 @@
 {
   "name": "suitcss-components-grid",
   "version": "3.0.0",
+  "license": "MIT",
   "style": "index.css",
   "files": [
     "index.css",
