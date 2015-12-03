@@ -71,6 +71,12 @@ To generate the testing build.
 npm run build-test
 ```
 
+To lint code with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and [stylelint](http://stylelint.io/)
+
+```
+npm run lint
+```
+
 To watch the files for making changes to test:
 
 ```
