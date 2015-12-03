@@ -1,7 +1,7 @@
 {
   "name": "suitcss-components-arrange",
   "description": "SUIT CSS component for horizontal arrangement",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "style": "index.css",
   "files": [
     "index.css",
