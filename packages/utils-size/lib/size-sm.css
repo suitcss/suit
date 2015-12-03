@@ -18,6 +18,7 @@
    */
 
   /* postcss-bem-linter: ignore */
+
   [class*="u-sm-size"] {
     flex-basis: auto !important; /* 1 */
   }
