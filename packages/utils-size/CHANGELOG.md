@@ -1,5 +1,10 @@
 ### HEAD
 
+### 1.0.1 (December 03, 2015)
+
+* Ensure code conforms to SUIT CSS style rules with stylelint
+* Add suitcss-preprocessor `0.8.0`
+
 ### 1.0.0 (November 17, 2015)
 
 * Reintroduce `sizeFillAlt` using `flex-basis: auto`. Allows `sizeFillAlt` and
