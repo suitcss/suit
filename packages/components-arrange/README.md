@@ -22,7 +22,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 * `Arrange--withGutter` - The modifier class for adding a gutter between cells.
 * `Arrange-sizeFit` - The child class for cells to snap to fit their content
 * `Arrange-sizeFill` - The child class for cells to expand to fill the remaining space
-* `Arrange-row` - The child class for for a new row of cells (`Arrange-sizeFit` or `Arrange-sizeFill`)
+* `Arrange-row` - The child class for a new row of cells (`Arrange-sizeFit` or `Arrange-sizeFill`)
 
 ## Configurable variables
 
