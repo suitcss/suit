@@ -1,5 +1,9 @@
 ## HEAD
 
+### 1.1.0 (December 2, 2015)
+
+* Added ability to create new rows within the same component (`Arrange-row`).
+
 ### 1.0.0 (October 18, 2015)
 
 * Fix Vertical alignment modifiers to support nesting.
