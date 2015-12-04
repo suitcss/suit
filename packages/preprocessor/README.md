@@ -10,7 +10,7 @@ various [PostCSS](https://github.com/postcss/postcss) plugins.
 Compiles CSS packages with:
 
 * [postcss-import](https://github.com/postcss/postcss-import)
-* [postcss-custom-properties](https://github.com/postcss/postcss-custom-media)
+* [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)
 * [postcss-calc](https://github.com/postcss/postcss-calc)
 * [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
 * [autoprefixer](https://github.com/postcss/autoprefixer)
