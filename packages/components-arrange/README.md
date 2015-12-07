@@ -6,12 +6,15 @@ A SUIT CSS component for horizontally and vertically arranging a single row of
 cells. Includes modifier classes for equal-width cells and gutter-separated
 cells. Makes use of CSS table layout.
 
+**Note:** This component has been superseded by [flexbox](http://www.w3.org/TR/css-flexbox/) and you may instead find
+more use from [utils-flex](https://github.com/suitcss/utils-flex).
+
 Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-components-arrange`
-* Download: [zip](https://github.com/suitcss/components-arrange/zipball/master)
+* Download: [zip](https://github.com/suitcss/components-arrange/releases/latest)
 
 ## Available classes
 
