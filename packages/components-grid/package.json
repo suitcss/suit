@@ -24,6 +24,7 @@
     "watch": "npm run preprocess-test -- -w -v",
     "test": "suitcss -c test/config.json index.css build/output.css && rm build/output.css"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/suitcss/components-grid.git"
