@@ -1,5 +1,7 @@
 # SUIT CSS components-button
 
+[![Build Status](https://travis-ci.org/suitcss/components-button.svg?branch=master)](https://travis-ci.org/suitcss/components-button)
+
 A SUIT CSS component that provides a structural UI button template to be
 extended with modifiers.
 
