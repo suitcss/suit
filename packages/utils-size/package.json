@@ -8,6 +8,7 @@
     "index.js",
     "lib"
   ],
+  "license": "MIT",
   "devDependencies": {
     "suitcss-components-test": "*",
     "suitcss-utils-display": "^0.5.0",
