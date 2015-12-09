@@ -12,6 +12,7 @@
     "suitcss-components-test": "*",
     "suitcss-preprocessor": "~0.8.0"
   },
+  "license": "MIT",
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",
