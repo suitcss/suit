@@ -1,5 +1,7 @@
 # SUIT CSS components-flex-embed
 
+[![Build Status](https://travis-ci.org/suitcss/components-flex-embed.svg?branch=master)](https://travis-ci.org/suitcss/components-flex-embed)
+
 CSS for responsive, intrinsic ratio embeds. Includes modifier classes for 3:1,
 2:1, 16:9, and 4:3 aspect ratios.
 
@@ -8,7 +10,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Installation
 
 * [npm](https://www.npmjs.org/package/suitcss-components-flex-embed): `npm install suitcss-components-flex-embed`
-* Download: [zip](https://github.com/suitcss/components-flex-embed/zipball/master)
+* Download: [zip](https://github.com/suitcss/components-flex-embed/releases/latest)
 
 ## Available classes
 
@@ -72,10 +74,22 @@ To generate a build:
 npm run build
 ```
 
+To lint code with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and [stylelint](http://stylelint.io/)
+
+```
+npm run lint
+```
+
 To generate the testing build.
 
 ```
 npm run build-test
+```
+
+To watch the files for making changes to test:
+
+```
+npm run watch
 ```
 
 Basic visual tests are in `test/index.html`.
@@ -86,4 +100,4 @@ Basic visual tests are in `test/index.html`.
 * Opera (latest)
 * Firefox 4+
 * Safari 5+
-* Internet Explorer 8+
+* Internet Explorer 9+
