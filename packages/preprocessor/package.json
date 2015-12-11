@@ -29,7 +29,7 @@
     "postcss-import": "^7.1.3",
     "postcss-reporter": "^1.3.0",
     "read-file-stdin": "0.2.0",
-    "stylelint": "^3.0.3"
+    "stylelint": "^2.3.5"
   },
   "devDependencies": {
     "chai": "^3.4.1",
@@ -39,7 +39,7 @@
     "postcss-property-lookup": "^1.1.4",
     "rewire": "^2.5.1",
     "sinon": "^1.17.2",
-    "stylelint-config-suitcss": "^2.0.0"
+    "stylelint-config-suitcss": "^1.0.0"
   },
   "scripts": {
     "test": "npm run lint && mocha --reporter spec --slow 400",
