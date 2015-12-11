@@ -32,8 +32,8 @@ For example, to change the `indentation` to tabs and turn off the `number-leadin
 {
   "extends": "stylelint-config-suitcss",
   "rules": {
-    "indentation": [2, "tab"],
-    "number-leading-zero": 0
+    "indentation": "tab",
+    "number-leading-zero": false
   }
 }
 ```

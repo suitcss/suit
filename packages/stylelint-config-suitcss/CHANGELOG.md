@@ -1,3 +1,13 @@
+# Head
+
+* Removed: `stylelint < 3.0.0` compatibility.
+  * Changed: configuration syntax.
+  * Removed: `nesting-block-opening-brace-space-before` and `nesting-block-opening-brace-newline-before` rules.
+  * Changed: renamed `rule-single-line-max-declarations` to `declaration-block-single-line-max-declarations`.
+  * Changed: renamed the `function-space-after` rule to `function-whitespace-after`.
+  * Changed: renamed the `comment-space-inside` rule to `comment-whitespace-inside`.
+  * Changed: renamed the `no-multiple-empty-lines` rule to `max-empty-lines`.
+
 # 1.0.0
 
 * Added: support for SuitCSS's "Exceptions and slight deviations" (multi-line declarations and functions, and single-line single declaration rule-sets).
