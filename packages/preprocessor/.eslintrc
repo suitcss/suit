@@ -7,6 +7,8 @@
     "func-names": 0,
     "one-var": [2, { uninitialized: "always", initialized: "never" }],
     "no-param-reassign": [0],
-    "no-use-before-define": [2, "nofunc"]
+    "no-use-before-define": [2, "nofunc"],
+    "space-before-function-paren": 0,
+    "object-curly-spacing": 0
   }
 }
