@@ -77,6 +77,11 @@ SUIT CSS flexbox utilities
 
 `X` can be any of the following numbers: `1`, `2`, `3`, `4`, `5`.
 
+** Aligning with `auto` margins **
+
+* `u-flexExpandLeft` - Expand left margin to fill remaining space
+* `u-flexExpandRight` - Expand right margin to fill remaining space
+
 ### Plugins
 
 All flex utilities can be limited to specific Media Query breakpoints.
@@ -110,7 +115,7 @@ breakpoints can be configured using `@custom-media`. For example:
 
 ## Usage
 
-### Centring an element in its container
+### Centering an element in its container
 
 ``` html
 <div class="u-flex u-flexAlignItemsCenter u-flexJustifyCenter">

@@ -221,3 +221,15 @@
 .u-flexGrow5 {
   flex: 5 1 0% !important;
 }
+
+/**
+ * Aligning with `auto` margins - http://www.w3.org/TR/css-flexbox-1/#auto-margins
+ */
+
+.u-flexExpandLeft {
+  margin-left: auto !important;
+}
+
+.u-flexExpandRight {
+  margin-right: auto !important;
+}

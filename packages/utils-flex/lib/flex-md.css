@@ -227,4 +227,15 @@
     flex: 5 1 0% !important;
   }
 
+  /**
+   * Aligning with `auto` margins - http://www.w3.org/TR/css-flexbox-1/#auto-margins
+   */
+
+  .u-md-flexExpandLeft {
+    margin-left: auto !important;
+  }
+
+  .u-md-flexExpandRight {
+    margin-right: auto !important;
+  }
 }
