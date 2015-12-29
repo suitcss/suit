@@ -115,7 +115,7 @@ breakpoints can be configured using `@custom-media`. For example:
 
 ## Usage
 
-### Centering an element in its container
+### Centring an element in its container
 
 ``` html
 <div class="u-flex u-flexAlignItemsCenter u-flexJustifyCenter">
