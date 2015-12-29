@@ -1,5 +1,9 @@
 ### HEAD
 
+### 1.0.0 (December 29, 2015)
+
+* Add auto-margin centering (`u-flexExpandRight` / `u-flexExpandLeft`)
+
 ### 0.3.2 (December 02, 2015)
 
 * Use suitcss-preprocessor `0.8.0`
