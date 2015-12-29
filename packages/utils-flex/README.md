@@ -77,10 +77,12 @@ SUIT CSS flexbox utilities
 
 `X` can be any of the following numbers: `1`, `2`, `3`, `4`, `5`.
 
-** Aligning with `auto` margins **
+**Aligning with `auto` margins**
 
 * `u-flexExpandLeft` - Expand left margin to fill remaining space
 * `u-flexExpandRight` - Expand right margin to fill remaining space
+
+[Read more](https://medium.com/@samserif/flexbox-s-best-kept-secret-bd3d892826b6) about how this works.
 
 ### Plugins
 
