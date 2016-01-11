@@ -41,7 +41,7 @@ outside the component.
 The component's core class name (e.g., `ComponentName`) reserves a namespace
 that can only be used by that component. This can be enforced using with tools
 (e.g. [suitcss-preprocessor](https://github.com/suitcss/preprocessor) or
-[rework-suit-conformance](https://github.com/suitcss/rework-suit-conformance)
+[rework-suit-conformance](https://github.com/suitcss/rework-suit-conformance))
 in your build process.
 
 **All selectors in a component file must start with the component's
