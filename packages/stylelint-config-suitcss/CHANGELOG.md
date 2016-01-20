@@ -1,4 +1,4 @@
-# Head
+# 3.0.0
 
 * Removed: `stylelint < 4.0.0` compatibility.
   * Added: `max-line-length` rule with 80 characters for comments.
