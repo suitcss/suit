@@ -23,7 +23,7 @@
     "eslint-config-stylelint": "^0.1.0",
     "github-release-from-changelog": "^1.1.1",
     "npmpub": "^2.0.0",
-    "stylelint": "^3.0.2"
+    "stylelint": "^4.0.0"
   },
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",
