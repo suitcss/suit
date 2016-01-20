@@ -21,11 +21,14 @@
     "ava": "^0.10.0",
     "eslint": "^1.10.3",
     "eslint-config-stylelint": "^0.1.0",
+    "github-release-from-changelog": "^1.1.1",
+    "npmpub": "^2.0.0",
     "stylelint": "^3.0.2"
   },
   "scripts": {
-    "lint": "eslint . --ignore-path .gitignore",
     "ava": "ava --verbose \"__tests__/**/*.js\"",
+    "lint": "eslint . --ignore-path .gitignore",
+    "release": "npmpublish && github-release-from-changelog",
     "test": "npm run lint && npm run ava"
   },
   "eslintConfig": {
