@@ -36,6 +36,9 @@ module.exports = {
     "function-url-quotes": "double",
     "indentation": 2,
     "max-empty-lines": 1,
+    "max-line-length": [ 80, {
+      ignore: "non-comments" 
+    } ],
     "media-feature-colon-space-after": "always",
     "media-feature-colon-space-before": "never",
     "media-feature-name-no-vendor-prefix": true,
