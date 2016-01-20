@@ -75,7 +75,7 @@ const invalidCss = (
 
 `)
 
-test("expected no warnings with valid css", t => {
+test("no warnings with valid css", t => {
   stylelint.lint({
     code: validCss,
     config: config,
@@ -91,7 +91,7 @@ test("expected no warnings with valid css", t => {
   })
 })
 
-test("expected a warning with invalid css", t => {
+test("a warning with invalid css", t => {
   stylelint.lint({
     code: invalidCss,
     config: config,
