@@ -13,7 +13,7 @@
   }
 
   .Test-fixedHeight {
-    height: 150px;
+    height: 180px;
   }
 
   .Content {
@@ -766,8 +766,8 @@
     </div>
   </div>
 
-  <h2 class="Test-describe">.u-flexExpandLeft / .u-flexExpandRight</h2>
-  <h3 class="Test-it">expand child margins using remaining space along main axis</h3>
+  <h2 class="Test-describe">.u-flexExpandLeft</h2>
+  <h3 class="Test-it">expand child margins to the left using remaining space along main axis</h3>
   <div class="Test-run">
     <div class="u-flex">
       <div class="FlexItem">
@@ -782,7 +782,8 @@
     </div>
   </div>
 
-  <h3 class="Test-it"></h3>
+  <h2 class="Test-it">.u-flexExpandRight</h2>
+  <h3 class="Test-it">expand child margins to the right using remaining space along main axis</h3>
   <div class="Test-run">
     <div class="u-flex u-flexJustifyEnd">
       <div class="FlexItem u-flexExpandRight">
@@ -797,10 +798,43 @@
     </div>
   </div>
 
+  <h2 class="Test-it">.u-flexExpandTop</h2>
+  <h3 class="Test-it">expand child margins to the top using remaining space along main axis</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexCol">
+      <div class="FlexItem">
+        <div class="Content">1.</div>
+      </div>
+      <div class="FlexItem u-flexExpandTop">
+        <div class="Content">2. item should be pushed to the bottom</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3. item should be pushed to the bottom</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-it">.u-flexExpandBottom</h2>
+  <h3 class="Test-it">expand child margins to the bottom using remaining space along main axis</h3>
+  <div class="Test-run">
+    <div class="Test-fixedHeight u-flex u-flexCol">
+      <div class="FlexItem">
+        <div class="Content">1. item should be pushed to the top</div>
+      </div>
+      <div class="FlexItem u-flexExpandBottom">
+        <div class="Content">2. item should be pushed to the top</div>
+      </div>
+      <div class="FlexItem">
+        <div class="Content">3.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-it">.u-flexExpand</h2>
   <h3 class="Test-it">center child using remaining space along main axis</h3>
   <div class="Test-run">
     <div class="u-flex">
-      <div class="FlexItem u-flexExpandLeft u-flexExpandRight">
+      <div class="FlexItem u-flexExpand">
         <div class="Content">1. item should be centered in remaining horizontal space</div>
       </div>
       <div class="FlexItem">

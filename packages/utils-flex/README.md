@@ -79,8 +79,11 @@ SUIT CSS flexbox utilities
 
 **Aligning with `auto` margins**
 
-* `u-flexExpandLeft` - Expand left margin to fill remaining space
+* `u-flexExpand` - Expand all margins to fill remaining space
+* `u-flexExpandTop` - Expand top margin to fill remaining space
 * `u-flexExpandRight` - Expand right margin to fill remaining space
+* `u-flexExpandBottom` - Expand bottom margin to fill remaining space
+* `u-flexExpandLeft` - Expand left margin to fill remaining space
 
 [Read more](https://medium.com/@samserif/flexbox-s-best-kept-secret-bd3d892826b6) about how this works.
 

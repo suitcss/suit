@@ -231,6 +231,10 @@
    * Aligning with `auto` margins - http://www.w3.org/TR/css-flexbox-1/#auto-margins
    */
 
+  .u-md-flexExpand {
+    margin: auto !important;
+  }
+
   .u-md-flexExpandLeft {
     margin-left: auto !important;
   }
@@ -238,4 +242,13 @@
   .u-md-flexExpandRight {
     margin-right: auto !important;
   }
+
+  .u-md-flexExpandTop {
+    margin-top: auto !important;
+  }
+
+  .u-md-flexExpandBottom {
+    margin-bottom: auto !important;
+  }
+
 }
