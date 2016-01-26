@@ -199,7 +199,10 @@
  * Supports 1-5 proportions
  *
  * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
- *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+ *
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis. Using this instead
+ *    of `auto` as this matches what the default would be with `flex` shorthand
+ *    http://git.io/vllWx
  */
 
 .u-flexGrow1 {
