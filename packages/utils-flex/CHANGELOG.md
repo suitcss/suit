@@ -1,5 +1,9 @@
 ### HEAD
 
+### 1.1.0 (January 27, 2015)
+
+* Add additional auto-margin utils (`u-flexExpandTop` / `u-flexExpandBottom` / `u-flexExpand`)
+
 ### 1.0.0 (December 29, 2015)
 
 * Add auto-margin centering (`u-flexExpandRight` / `u-flexExpandLeft`)

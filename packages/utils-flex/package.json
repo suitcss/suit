@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils-flex",
   "description": "Flexbox utilities for SUIT CSS",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "style": "index.css",
   "files": [
     "index.css",
