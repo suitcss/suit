@@ -1,5 +1,10 @@
 ### HEAD
 
+### 0.12.0 (January 28, 2016)
+
+* Update `utils-flex` to `1.1.0`
+* Update `preprocessor` to `0.8.0`
+
 ### 0.11.0 (November 20, 2015)
 
 * Add `utils-flex` at `0.3.1`
