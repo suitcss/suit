@@ -80,6 +80,37 @@ describe('suitcss', function() {
       expect(opts['postcss-import'].root).to.equal('test/root');
     });
 
+    describe('passing options to postcss', function() {
+      var postcssStub, processMethodStub, revert;
+
+      beforeEach(function() {
+        postcssStub = sinon.stub();
+        processMethodStub = sinon.stub();
+
+        postcssStub.returns({
+          use: sinon.spy(),
+          process: processMethodStub
+        });
+        revert = suitcss.__set__('postcss', postcssStub);
+        suitcss('body {}', {
+          root: 'something',
+          postcss: {
+            from: 'somefile.css'
+          }
+        });
+      });
+
+      afterEach(function() {
+        revert();
+      });
+
+      it('should pass postcss options to the processor', function() {
+        expect(processMethodStub.getCall(0).args[1]).to.eql({
+          from: 'somefile.css'
+        });
+      });
+    });
+
     describe('re-ordering plugins', function() {
       it('should allow reordering of use array and remove duplicates', function() {
         var opts = mergeOptions({

@@ -75,7 +75,7 @@ function preprocessor(css, options) {
     processor.use(cssnano(options.cssnano));
   }
 
-  return processor.process(css);
+  return processor.process(css, options.postcss);
 }
 
 /**

@@ -153,6 +153,20 @@ Third paramater is the options object containing any PostCSS configuration you m
 }
 ```
 
+##### `postcss`
+
+* Type: `Object`
+* Default: `undefined`
+
+Options that are passed directly to `postcss`, as per [the documentation](https://github.com/postcss/postcss/blob/master/docs/api.md#processorprocesscss-opts).
+
+```js
+{
+  postcss: {from: 'filename.css'}
+}
+```
+
+
 ##### `use`
 
 * Type: `Array`
