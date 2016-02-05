@@ -4,6 +4,7 @@
     "vars-on-top": 0,
     "no-console": 0,
     "comma-dangle": [2, "never"],
+    "max-len": 0,
     "func-names": 0,
     "one-var": [2, { uninitialized: "always", initialized: "never" }],
     "no-param-reassign": [0],
