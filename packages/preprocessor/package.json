@@ -39,10 +39,11 @@
     "postcss-property-lookup": "^1.1.4",
     "rewire": "^2.5.1",
     "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0",
     "stylelint-config-suitcss": "^1.0.0"
   },
   "scripts": {
-    "test": "npm run lint && mocha --reporter spec --slow 400",
+    "test": "npm run lint && mocha --reporter spec --slow 400 --timeout 3000",
     "lint": "eslint lib/index.js test/test.js bin/suitcss",
     "watch": "mocha --watch --reporter spec --slow 400"
   },

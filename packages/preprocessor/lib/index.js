@@ -99,7 +99,7 @@ function mergeOptions(options) {
     if (typeof beforeLint === 'function') {
       css = beforeLint(css, filename, merged);
     }
-    return lintImportedFiles(merged)(css, filename);
+    return lintImportedFiles(merged, css, filename);
   };
 
   // Allow additional plugins to be merged with the defaults
@@ -119,18 +119,16 @@ function mergeOptions(options) {
  * @param {Object} options
  * @returns {Function} Used by postcss-import transform
  */
-function lintImportedFiles(options) {
-  return function(css, filename) {
-    var processor = postcss();
+function lintImportedFiles(options, css, filename) {
+  var processor = postcss();
 
-    if (options.lint) {
-      processor.use(stylelint(options.stylelint));
-    }
+  if (options.lint) {
+    processor.use(stylelint(options.stylelint));
+  }
 
-    processor
-      .use(bemLinter(options['postcss-bem-linter']))
-      .use(reporter(options['postcss-reporter']));
+  processor
+  .use(bemLinter(options['postcss-bem-linter']))
+  .use(reporter(options['postcss-reporter']));
 
-    return processor.process(css, {from: filename}).css;
-  };
+  return processor.process(css, {from: filename}).css;
 }

@@ -1,4 +1,4 @@
-var expect = require('chai').expect;
+var chai = require('chai');
 var sinon = require('sinon');
 var child = require('child_process');
 var exec = child.exec;
@@ -6,6 +6,10 @@ var fs = require('fs');
 var rewire = require('rewire');
 var suitcss = rewire('../lib');
 var path = require('path');
+var sinonChai = require('sinon-chai');
+
+chai.use(sinonChai);
+var expect = chai.expect;
 
 /**
  * Node API tests.
@@ -56,7 +60,7 @@ describe('suitcss', function() {
       expect(opts.lint).to.be.true;
     });
 
-    it('should allow an minify option to be set', function() {
+    it('should allow a minify option to be set', function() {
       var opts = mergeOptions({minify: true});
       expect(opts.minify).to.be.true;
     });
@@ -148,7 +152,7 @@ describe('suitcss', function() {
 
     describe('stylelint', function() {
       it('should check the input conforms to SUIT style rules', function(done) {
-        suitcss('@import ./stylelint.css', {
+        suitcss('@import "./stylelint.css"', {
           lint: true,
           root: 'test/fixtures',
           'postcss-reporter': {
@@ -163,15 +167,12 @@ describe('suitcss', function() {
       });
     });
 
-    describe('beforeLint option', function() {
-      var lintImportedFilesStub, bemLintStub, beforeLintStub, revert;
+    describe('transforming css before linting', function() {
+      var lintImportedFilesStub, beforeLintStub, revert;
 
       beforeEach(function() {
-        lintImportedFilesStub = sinon.stub();
-        bemLintStub = sinon.stub().returns('/* lint */');
-        beforeLintStub = sinon.stub().returns('/* before lint */');
-
-        lintImportedFilesStub.onFirstCall().returns(bemLintStub);
+        lintImportedFilesStub = sinon.stub().returns('/*linting done*/');
+        beforeLintStub = sinon.stub().returns('/*before lint*/');
         revert = suitcss.__set__('lintImportedFiles', lintImportedFilesStub);
       });
 
@@ -179,37 +180,37 @@ describe('suitcss', function() {
         revert();
       });
 
-      it('should call user supplied function before linting', function(done) {
+      it('should call `beforeLint` function before linting', function(done) {
         suitcss(read('fixtures/component'), {
           root: 'test/fixtures',
           beforeLint: beforeLintStub
         }).catch(done);
 
-        expect(bemLintStub.calledOnce).to.be.ok;
-        expect(beforeLintStub.calledOnce).to.be.ok;
-        expect(beforeLintStub.calledBefore(bemLintStub)).to.be.ok;
+        expect(lintImportedFilesStub).to.be.calledOnce;
+        expect(beforeLintStub).to.be.calledOnce;
+        expect(beforeLintStub).to.have.been.calledBefore(lintImportedFilesStub);
 
         done();
       });
 
-      it('should pass processed CSS to the linting transform function', function(done) {
+      it('should pass the result of `beforeLint` to `lintImportedFiles`', function(done) {
         suitcss(read('fixtures/component'), {
           root: 'test/fixtures',
           beforeLint: beforeLintStub
         }).catch(done);
 
-        expect(bemLintStub.args[0][0]).to.equal('/* before lint */');
+        expect(lintImportedFilesStub.args[0][1]).to.equal('/*before lint*/');
 
         done();
       });
 
-      it('should pass the merged options to the beforeLint function', function(done) {
+      it('should pass the options object to the beforeLint function as the third parameter', function(done) {
         suitcss(read('fixtures/component'), {
           root: 'test/fixtures',
           beforeLint: beforeLintStub
         }).catch(done);
 
-        expect(beforeLintStub.args[0][2].root).to.equal('test/fixtures');
+        expect(beforeLintStub.args[0][2]).to.contain({root: 'test/fixtures'});
 
         done();
       });
