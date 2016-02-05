@@ -100,7 +100,7 @@ Where to resolve imports from. Passed to [`postcss-import`](https://github.com/p
 * Default: `false`
 
 Ensure code conforms to the [SUIT code style](https://github.com/suitcss/suit/blob/master/doc/STYLE.md)
-by using the [stylelint-config-suitcss](https://github.com/stylelint/stylelint-config-suitcss) package.
+by using the [stylelint-config-suitcss](https://github.com/suitcss/stylelint-config-suitcss) package.
 
 Stylelint [configuration options](http://stylelint.io/?/docs/user-guide/configuration.md) can also be overridden:
 
