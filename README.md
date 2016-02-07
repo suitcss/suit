@@ -1,5 +1,7 @@
 # SUIT CSS
 
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](http://gitter.im/suitcss/suit)
+
 Style tools for component-based UI development.
 
 SUIT CSS provides a reliable and testable styling solution for component-based
