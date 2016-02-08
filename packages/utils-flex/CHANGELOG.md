@@ -1,5 +1,10 @@
 ### HEAD
 
+### 1.1.1 (February 08, 2016)
+
+* Update `preprocessor` to `1.0.0`
+* Fix `maxlen` warning on comments
+
 ### 1.1.0 (January 27, 2016)
 
 * Add additional auto-margin utils (`u-flexExpandTop` / `u-flexExpandBottom` / `u-flexExpand`)
