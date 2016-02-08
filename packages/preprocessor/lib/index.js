@@ -91,7 +91,9 @@ function mergeOptions(options) {
   var merged = assign({}, defaults, options);
 
   // Set some core options
-  merged['postcss-import'].root = merged.root;
+  if (merged.root) {
+    merged['postcss-import'].root = merged.root;
+  }
 
   // Call beforeLint function and pass processed css to bem-linter
   var beforeLint = merged.beforeLint;
@@ -130,5 +132,5 @@ function lintImportedFiles(options, css, filename) {
   .use(bemLinter(options['postcss-bem-linter']))
   .use(reporter(options['postcss-reporter']));
 
-  return processor.process(css, {from: filename}).css;
+  return processor.process(css, {from: filename});
 }

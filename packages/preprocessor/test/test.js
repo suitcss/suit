@@ -7,8 +7,11 @@ var rewire = require('rewire');
 var suitcss = rewire('../lib');
 var path = require('path');
 var sinonChai = require('sinon-chai');
+var chaiAsPromised = require('chai-as-promised');
+require('sinon-as-promised');
 
 chai.use(sinonChai);
+chai.use(chaiAsPromised);
 var expect = chai.expect;
 
 /**
@@ -151,19 +154,28 @@ describe('suitcss', function() {
     });
 
     describe('stylelint', function() {
-      it('should check the input conforms to SUIT style rules', function(done) {
-        suitcss('@import "./stylelint.css"', {
-          lint: true,
-          root: 'test/fixtures',
-          'postcss-reporter': {
-            throwError: true
-          }
-        }).then(function() {
-          done(new Error('stylelint should have failed conformance'));
-        }).catch(function(err) {
-          expect(err.message).to.contain('postcss-reporter: warnings or errors were found');
-          done();
-        });
+      it('should lint the component', function() {
+        return expect(
+          suitcss(read('fixtures/component'), {
+            lint: true,
+            root: 'test/fixtures',
+            'postcss-reporter': {
+              throwError: true
+            }
+          })
+        ).to.be.fulfilled;
+      });
+
+      it('should throw an error if stylelint fails', function() {
+        return expect(
+          suitcss('@import "./stylelint.css"', {
+            lint: true,
+            root: 'test/fixtures',
+            'postcss-reporter': {
+              throwError: true
+            }
+          })
+        ).to.be.rejectedWith(Error, 'postcss-reporter: warnings or errors were found');
       });
     });
 
@@ -171,7 +183,8 @@ describe('suitcss', function() {
       var lintImportedFilesStub, beforeLintStub, revert;
 
       beforeEach(function() {
-        lintImportedFilesStub = sinon.stub().returns('/*linting done*/');
+        var postcssPromise = sinon.stub().resolves('/*linting done*/')();
+        lintImportedFilesStub = sinon.stub().returns(postcssPromise);
         beforeLintStub = sinon.stub().returns('/*before lint*/');
         revert = suitcss.__set__('lintImportedFiles', lintImportedFilesStub);
       });
@@ -184,35 +197,38 @@ describe('suitcss', function() {
         suitcss(read('fixtures/component'), {
           root: 'test/fixtures',
           beforeLint: beforeLintStub
-        }).catch(done);
-
-        expect(lintImportedFilesStub).to.be.calledOnce;
-        expect(beforeLintStub).to.be.calledOnce;
-        expect(beforeLintStub).to.have.been.calledBefore(lintImportedFilesStub);
-
-        done();
+        })
+        .then(function() {
+          expect(beforeLintStub).to.be.calledOnce;
+          expect(lintImportedFilesStub).to.be.calledOnce;
+          expect(beforeLintStub).to.have.been.calledBefore(lintImportedFilesStub);
+          done();
+        })
+        .catch(done);
       });
 
       it('should pass the result of `beforeLint` to `lintImportedFiles`', function(done) {
         suitcss(read('fixtures/component'), {
           root: 'test/fixtures',
           beforeLint: beforeLintStub
-        }).catch(done);
-
-        expect(lintImportedFilesStub.args[0][1]).to.equal('/*before lint*/');
-
-        done();
+        })
+        .then(function() {
+          expect(lintImportedFilesStub.args[0][1]).to.equal('/*before lint*/');
+          done();
+        })
+        .catch(done);
       });
 
       it('should pass the options object to the beforeLint function as the third parameter', function(done) {
         suitcss(read('fixtures/component'), {
           root: 'test/fixtures',
           beforeLint: beforeLintStub
-        }).catch(done);
-
-        expect(beforeLintStub.args[0][2]).to.contain({root: 'test/fixtures'});
-
-        done();
+        })
+        .then(function() {
+          expect(beforeLintStub.args[0][2]).to.contain({root: 'test/fixtures'});
+          done();
+        })
+        .catch(done);
       });
     });
   });
