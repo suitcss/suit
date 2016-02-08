@@ -1,5 +1,10 @@
 ### HEAD
 
+### 1.0.1 (February 08, 2016)
+
+* Update `preprocessor` to `1.0.0`
+* Fix stylelint conformance
+
 ### 1.0.0 (November 20, 2015)
 
 * Revert `u-flex` and `u-inlineFlex` in favour of [utils-flex](https://github.com/suitcss/utils-flex)
