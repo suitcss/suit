@@ -9,8 +9,9 @@
     "lib"
   ],
   "devDependencies": {
+    "stylelint-config-suitcss": "^3.0.0",
     "suitcss-components-test": "*",
-    "suitcss-preprocessor": "~0.3.0"
+    "suitcss-preprocessor": "^1.0.0"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
