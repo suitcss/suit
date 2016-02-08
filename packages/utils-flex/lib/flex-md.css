@@ -6,7 +6,7 @@
 @media (--md-viewport) {
 
   /* Applies to flex container
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Container
@@ -110,7 +110,8 @@
   }
 
   /**
-   * Aligns items within the flex container when there is extra space in the cross-axis
+   * Aligns items within the flex container when there is extra
+   * space in the cross-axis
    *
    * Has no effect when there is only one line of flex items.
    */
@@ -151,7 +152,7 @@
   }
 
   /* Applies to flex items
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Override default alignment of single item when specified by `align-items`
@@ -203,8 +204,11 @@
    *
    * Supports 1-5 proportions
    *
-   * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
-   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+   * 1. Provide all values to avoid IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   *
+   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+   *    http://git.io/vllWx
    */
 
   .u-md-flexGrow1 {
@@ -228,7 +232,8 @@
   }
 
   /**
-   * Aligning with `auto` margins - http://www.w3.org/TR/css-flexbox-1/#auto-margins
+   * Aligning with `auto` margins
+   * http://www.w3.org/TR/css-flexbox-1/#auto-margins
    */
 
   .u-md-flexExpand {
