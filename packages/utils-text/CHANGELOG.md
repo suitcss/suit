@@ -1,5 +1,10 @@
 # HEAD
 
+### 1.0.0 (February 08, 2016)
+
+* Update `preprocessor` to `1.0.0`
+* Add stylelint config
+
 ### 0.4.3 (September 22, 2015)
 
 * Fix import path in test.css.
