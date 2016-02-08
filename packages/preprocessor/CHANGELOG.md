@@ -1,5 +1,10 @@
 ### HEAD
 
+### 1.0.0 (February 08, 2015)
+
+* Upgrade `stylelint` to version `4.2.0`
+* Upgrade `postcss-import` to `8.0.2`
+* Improve tests
 * Use `stylelint-config-suitcss` as a dev dependency as it must be installed
 where the preprocessor is being used.
 
