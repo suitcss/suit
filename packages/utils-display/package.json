@@ -9,19 +9,19 @@
     "lib"
   ],
   "devDependencies": {
-    "autoprefixer": "^6.1.0",
-    "postcss-import": "^7.1.3",
-    "postcss-reporter": "^1.3.0",
-    "postcss-cli": "^2.3.2",
-    "suitcss-components-test": "*"
+    "stylelint-config-suitcss": "^3.0.0",
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^1.0.0"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",
-    "preprocess": "postcss -u postcss-import -u autoprefixer -u postcss-reporter -o build/build.css index.css",
-    "preprocess-test": "postcss -u postcss-import -u autoprefixer -u postcss-reporter -o build/test.css test/test.css",
-    "setup": "npm install && mkdir -p build",
-    "watch": "npm run preprocess-test -- -w"
+    "lint": "suitcss -c test/config.json index.css build/lint.css && rm build/lint.css",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss -i test test/test.css build/test.css",
+    "setup": "npm install",
+    "watch": "npm run preprocess-test -- -w -v",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
