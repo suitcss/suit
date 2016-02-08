@@ -1,6 +1,6 @@
 # SUIT CSS utilities: display
 
-[![Build Status](https://secure.travis-ci.org/suitcss/utils-display.png?branch=master)](http://travis-ci.org/suitcss/utils-display)
+[![Build Status](https://travis-ci.org/suitcss/utils-display.svg?branch=master)](http://travis-ci.org/suitcss/utils-display)
 
 SUIT CSS display utilities.
 
@@ -40,6 +40,12 @@ To generate a build:
 npm run build
 ```
 
+To lint code with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and [stylelint](http://stylelint.io/)
+
+```
+npm run lint
+```
+
 To generate the testing build.
 
 ```
@@ -58,6 +64,6 @@ Basic visual tests are in `test/index.html`.
 
 * Google Chrome (latest)
 * Opera (latest)
-* Firefox 4+
+* Firefox (latest)
 * Safari 5+
 * Internet Explorer 9+
