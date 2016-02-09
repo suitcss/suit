@@ -10,10 +10,10 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "stylelint-config-suitcss": "^3.0.0",
     "suitcss-components-test": "*",
-    "suitcss-utils-display": "^0.5.0",
-    "stylelint-config-suitcss": "^1.0.0",
-    "suitcss-preprocessor": "^0.8.0"
+    "suitcss-preprocessor": "^1.0.0",
+    "suitcss-utils-display": "^1.0.1"
   },
   "scripts": {
     "build": "npm i && npm run preprocess",
