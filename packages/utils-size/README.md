@@ -1,6 +1,6 @@
 # SUIT CSS utilities: size
 
-[![Build Status](https://secure.travis-ci.org/suitcss/utils-size.png?branch=master)](http://travis-ci.org/suitcss/utils-size)
+[![Build Status](https://travis-ci.org/suitcss/utils-size.svg?branch=master)](https://travis-ci.org/suitcss/utils-size)
 
 SUIT CSS sizing utilities. Sets `width` and `flex-basis`.
 
