@@ -1,5 +1,10 @@
 ### HEAD
 
+### 1.0.2 (February 09, 2016)
+
+* Update `preprocessor` to `1.0.0`
+* Fix stylelint conformance
+
 ### 1.0.1 (December 03, 2015)
 
 * Ensure code conforms to SUIT CSS style rules with stylelint
