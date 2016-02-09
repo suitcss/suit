@@ -138,8 +138,10 @@
 /**
  * Make an element fill the remaining space.
  *
- * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
- * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
+ * 1. Be explicit to work around IE10 bug with shorthand flex
+ *    http://git.io/vllC7
+ * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+ *    http://git.io/vllMt
  */
 
 .u-sizeFill {
