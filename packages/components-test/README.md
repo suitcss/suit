@@ -1,6 +1,6 @@
 # SUIT CSS components-test
 
-[![Build Status](https://secure.travis-ci.org/suitcss/components-test.png?branch=master)](http://travis-ci.org/suitcss/components-test)
+[![Build Status](https://travis-ci.org/suitcss/components-test.svg?branch=master)](https://travis-ci.org/suitcss/components-test)
 
 CSS to help test the visual presentation of components.
 
@@ -9,7 +9,7 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 ## Installation
 
 * [npm](https://www.npmjs.org/package/suitcss-components-test): `npm install suitcss-components-test`
-* Download: [zip](https://github.com/suitcss/test/zipball/master)
+* Download: [zip](https://github.com/suitcss/components-test/releases/latest)
 
 ## Available classes
 
@@ -78,10 +78,22 @@ To generate a build:
 npm run build
 ```
 
+To lint code with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and [stylelint](http://stylelint.io/)
+
+```
+npm run lint
+```
+
 To generate the testing build.
 
 ```
 npm run build-test
+```
+
+To watch the files for making changes to test:
+
+```
+npm run watch
 ```
 
 Basic visual tests are in `test/index.html`.
