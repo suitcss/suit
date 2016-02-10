@@ -8,7 +8,7 @@
   counter-reset: test-describe;
 }
 
-.Test-describe:before {
+.Test-describe::before {
   content: counter(test-describe);
   counter-increment: test-describe;
 }
@@ -21,7 +21,7 @@
   counter-reset: test-it;
 }
 
-.Test-it:before {
+.Test-it::before {
   content: counter(test-describe) "." counter(test-it);
   counter-increment: test-it;
 }
@@ -31,12 +31,12 @@
  */
 
 .Test-title {
-  font-size: 2em;
-  font-family: sans-serif;
-  padding: 20px;
-  margin: 20px 0;
   background: #eee;
   color: #999;
+  font-family: sans-serif;
+  font-size: 2em;
+  margin: 20px 0;
+  padding: 20px;
 }
 
 /**
@@ -63,8 +63,8 @@
  * The counter styles
  */
 
-.Test-describe:before,
-.Test-it:before {
+.Test-describe::before,
+.Test-it::before {
   color: #999;
   display: inline-block;
   margin-right: 10px;
