@@ -1,7 +1,7 @@
 {
   "name": "suitcss-components-test",
   "description": "CSS to help test the visual presentation of components",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "style": "index.css",
   "files": [
     "index.css",
