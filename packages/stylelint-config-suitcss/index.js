@@ -56,9 +56,7 @@ module.exports = {
     "property-no-vendor-prefix": true,
     "root-no-standard-properties": true,
     "rule-no-shorthand-property-overrides": true,
-    "rule-nested-empty-line-before": [ "always-multi-line", {
-      except: ["first-nested"],
-    } ],
+    "rule-nested-empty-line-before": "always-multi-line",
     "rule-non-nested-empty-line-before": "always-multi-line",
     "rule-properties-order": "alphabetical",
     "rule-trailing-semicolon": "always",
