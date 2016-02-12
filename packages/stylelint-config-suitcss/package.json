@@ -18,18 +18,17 @@
     "index.js"
   ],
   "devDependencies": {
-    "ava": "^0.10.0",
+    "ava": "^0.11.0",
     "eslint": "^1.10.3",
     "eslint-config-stylelint": "^0.1.0",
-    "github-release-from-changelog": "^1.1.1",
-    "npmpub": "^2.0.0",
+    "npmpub": "^3.0.1",
     "stylelint": "^4.0.0"
   },
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",
     "lint": "eslint . --ignore-path .gitignore",
     "pretest": "npm run lint",
-    "release": "npmpublish && github-release-from-changelog",
+    "release": "npmpub",
     "test": "npm run ava"
   },
   "eslintConfig": {
