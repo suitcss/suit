@@ -11,8 +11,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stylelint/stylelint-config-suitcss.git"
+    "url": "https://github.com/suitcss/stylelint-config-suitcss.git"
   },
+  "homepage": "https://github.com/suitcss/stylelint-config-suitcss",
+  "bugs": "https://github.com/suitcss/stylelint-config-suitcss/issues",
   "main": "index.js",
   "files": [
     "index.js"
