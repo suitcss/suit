@@ -1,3 +1,9 @@
+# 4.0.0
+
+* Changed `rule-nested-empty-line-before` to match SUIT style.
+  Set to `always-multi-line` so nested rules will require a line break after the
+  opening brace
+
 # 3.0.0
 
 * Removed: `stylelint < 4.0.0` compatibility.
