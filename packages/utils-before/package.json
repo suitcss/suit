@@ -9,15 +9,19 @@
     "lib"
   ],
   "devDependencies": {
+    "stylelint-config-suitcss": "^4.0.0",
     "suitcss-components-test": "*",
-    "suitcss-preprocessor": "~0.3.0"
+    "suitcss-preprocessor": "^1.0.0"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",
+    "lint": "suitcss -c test/config.json index.css build/lint.css && rm build/lint.css",
     "preprocess": "suitcss index.css build/build.css",
     "preprocess-test": "suitcss test/test.css build/test.css",
-    "setup": "npm install && mkdir -p build"
+    "setup": "npm install",
+    "watch": "npm run preprocess-test -- -w -v",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
