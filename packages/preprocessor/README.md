@@ -1,6 +1,6 @@
 # suitcss-preprocessor
 
-[![Build Status](https://travis-ci.org/suitcss/preprocessor.png)](http://travis-ci.org/suitcss/preprocessor)
+[![Build Status](https://travis-ci.org/suitcss/preprocessor.svg?branch=master)](https://travis-ci.org/suitcss/preprocessor) [![Build status](https://ci.appveyor.com/api/projects/status/txiwk8cppv3eno3x?svg=true)](https://ci.appveyor.com/project/simonsmith/preprocessor)
 
 [SUIT CSS](https://github.com/suitcss/suit) preprocessor.
 
