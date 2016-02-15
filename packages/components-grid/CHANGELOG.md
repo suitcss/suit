@@ -1,5 +1,10 @@
 ### HEAD
 
+### 3.0.2 (February 15, 2016)
+
+* Update `stylelint-config-suitcss` to `4.0.0`
+* Update `preprocessor` to `1.0.0`
+* Fix `maxlen` warning on comments
 * Remove unused `stylelint` package as this is included with the suitcss-preprocessor.
 
 ### 3.0.1 (December 02, 2015)
