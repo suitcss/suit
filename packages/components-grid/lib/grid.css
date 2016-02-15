@@ -64,8 +64,11 @@
 /**
  * Modifier: allow cells to equal distribute width
  *
- * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
- *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+ * 1. Provide all values to avoid IE10 bug with shorthand flex
+ *    http://git.io/vllC7
+ *
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+ *    http://git.io/vllWx
  */
 
 .Grid--fit > .Grid-cell {
