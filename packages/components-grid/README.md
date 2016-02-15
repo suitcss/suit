@@ -1,6 +1,6 @@
 # SUIT CSS components-grid
 
-[![Build Status](https://secure.travis-ci.org/suitcss/components-grid.png?branch=master)](http://travis-ci.org/suitcss/components-grid)
+[![Build Status](https://travis-ci.org/suitcss/components-grid.svg?branch=master)](https://travis-ci.org/suitcss/components-grid)
 
 A CSS grid component. The grid makes use of `flexbox` and `box-sizing` to
 provide features that float-based layouts cannot.
