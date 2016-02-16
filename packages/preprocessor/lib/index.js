@@ -118,11 +118,11 @@ function mergeOptions(options) {
 }
 
 /**
- * Returns a function to be used by postcss-import
  * Lint each imported component with postcss-bem-linter
+ * and stylelint
  *
  * @param {Object} options
- * @returns {Function} Used by postcss-import transform
+ * @returns {Promise} Used by postcss-import transform
  */
 function lintImportedFiles(options, css, filename) {
   var processor = postcss();
