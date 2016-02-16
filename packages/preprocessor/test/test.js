@@ -180,55 +180,73 @@ describe('suitcss', function() {
     });
 
     describe('transforming css before linting', function() {
-      var lintImportedFilesStub, beforeLintStub, revert;
+      describe('ensuring functions are called correctly', function() {
+        var lintImportedFilesStub, beforeLintStub, revert;
 
-      beforeEach(function() {
-        var postcssPromise = sinon.stub().resolves('/*linting done*/')();
-        lintImportedFilesStub = sinon.stub().returns(postcssPromise);
-        beforeLintStub = sinon.stub().returns('/*before lint*/');
-        revert = suitcss.__set__('lintImportedFiles', lintImportedFilesStub);
+        beforeEach(function() {
+          var postcssPromise = sinon.stub().resolves('/*linting done*/')();
+          lintImportedFilesStub = sinon.stub().returns(postcssPromise);
+          beforeLintStub = sinon.stub().returns('/*before lint*/');
+          revert = suitcss.__set__('lintImportedFiles', lintImportedFilesStub);
+        });
+
+        afterEach(function() {
+          revert();
+        });
+
+        it('should call `beforeLint` function before linting', function(done) {
+          suitcss(read('fixtures/component'), {
+            root: 'test/fixtures',
+            beforeLint: beforeLintStub
+          })
+          .then(function() {
+            expect(beforeLintStub).to.be.calledOnce;
+            expect(lintImportedFilesStub).to.be.calledOnce;
+            expect(beforeLintStub).to.have.been.calledBefore(lintImportedFilesStub);
+            done();
+          })
+          .catch(done);
+        });
+
+        it('should pass the result of `beforeLint` to `lintImportedFiles`', function(done) {
+          suitcss(read('fixtures/component'), {
+            root: 'test/fixtures',
+            beforeLint: beforeLintStub
+          })
+          .then(function() {
+            expect(lintImportedFilesStub.args[0][1]).to.equal('/*before lint*/');
+            done();
+          })
+          .catch(done);
+        });
+
+        it('should pass the options object to the beforeLint function as the third parameter', function(done) {
+          suitcss(read('fixtures/component'), {
+            root: 'test/fixtures',
+            beforeLint: beforeLintStub
+          })
+          .then(function() {
+            expect(beforeLintStub.args[0][2]).to.contain({root: 'test/fixtures'});
+            done();
+          })
+          .catch(done);
+        });
       });
 
-      afterEach(function() {
-        revert();
-      });
-
-      it('should call `beforeLint` function before linting', function(done) {
-        suitcss(read('fixtures/component'), {
-          root: 'test/fixtures',
-          beforeLint: beforeLintStub
-        })
-        .then(function() {
-          expect(beforeLintStub).to.be.calledOnce;
-          expect(lintImportedFilesStub).to.be.calledOnce;
-          expect(beforeLintStub).to.have.been.calledBefore(lintImportedFilesStub);
-          done();
-        })
-        .catch(done);
-      });
-
-      it('should pass the result of `beforeLint` to `lintImportedFiles`', function(done) {
-        suitcss(read('fixtures/component'), {
-          root: 'test/fixtures',
-          beforeLint: beforeLintStub
-        })
-        .then(function() {
-          expect(lintImportedFilesStub.args[0][1]).to.equal('/*before lint*/');
-          done();
-        })
-        .catch(done);
-      });
-
-      it('should pass the options object to the beforeLint function as the third parameter', function(done) {
-        suitcss(read('fixtures/component'), {
-          root: 'test/fixtures',
-          beforeLint: beforeLintStub
-        })
-        .then(function() {
-          expect(beforeLintStub.args[0][2]).to.contain({root: 'test/fixtures'});
-          done();
-        })
-        .catch(done);
+      describe('outputting transformed css', function() {
+        it('should use the CSS returned from beforeLint', function(done) {
+          suitcss(read('fixtures/import'), {
+            root: 'test/fixtures',
+            beforeLint: function() {
+              return 'body {}';
+            }
+          })
+          .then(function(result) {
+            expect(result.css).to.equal('body {}\n');
+            done();
+          })
+          .catch(done);
+        });
       });
     });
   });

@@ -101,7 +101,10 @@ function mergeOptions(options) {
     if (typeof beforeLint === 'function') {
       css = beforeLint(css, filename, merged);
     }
-    return lintImportedFiles(merged, css, filename);
+
+    return lintImportedFiles(merged, css, filename).then(function(result) {
+      return result.css;
+    });
   };
 
   // Allow additional plugins to be merged with the defaults
