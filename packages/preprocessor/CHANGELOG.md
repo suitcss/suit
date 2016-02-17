@@ -1,6 +1,11 @@
 ### HEAD
 
-### 1.0.0 (February 08, 2015)
+### 1.0.1 (February 17, 2016)
+
+* Fix issue with CSS returned from `beforeLint` not being used correctly - [a07bb8c](https://github.com/suitcss/preprocessor/commit/a07bb8c7b416c3df36c3f88b1fc1600aa6a39d61)
+* Fix incorrect date in CHANGELOG.md
+
+### 1.0.0 (February 08, 2016)
 
 * Upgrade `stylelint` to version `4.2.0`
 * Upgrade `postcss-import` to `8.0.2`
