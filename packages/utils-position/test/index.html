@@ -32,6 +32,7 @@
 
   .Cover {
     background-color: rgba(0,0,0,.8);
+    z-index: 1;
     display: none;
   }
 </style>
@@ -55,5 +56,11 @@
     <label for="showblock">Toggle</label>
     <input type="checkbox" id="showblock" />
     <div class="Cover u-posFullScreen"></div>
+  </div>
+
+  <h2 class="Test-describe">.u-posFit</h2>
+  <h3 class="Test-it">fits element to its parent</h3>
+  <div class="Test-run" id="center">
+    <span class="u-posFit u-highlight"></span>
   </div>
 </div>

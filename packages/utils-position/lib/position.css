@@ -15,6 +15,20 @@
 }
 
 /**
+ * Fits an element to the dimensions of its nearest relatively-positioned
+ * ancestor.
+ */
+
+.u-posFit {
+  bottom: 0 !important;
+  left: 0 !important;
+  margin: auto !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+/**
  * 1. Make sure fixed elements are promoted into a new layer, for performance
  *    reasons.
  */
