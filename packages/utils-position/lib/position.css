@@ -23,8 +23,8 @@
  */
 
 .u-posFixed {
-  position: fixed !important;
   backface-visibility: hidden; /* 1 */
+  position: fixed !important;
 }
 
 .u-posRelative {
