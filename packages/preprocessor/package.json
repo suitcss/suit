@@ -45,7 +45,7 @@
     "stylelint-config-suitcss": "^3.0.0"
   },
   "scripts": {
-    "test": "npm run lint && mocha --reporter spec --slow 400 --timeout 3000",
+    "test": "npm run lint && mocha --reporter spec --slow 400 --timeout 8000",
     "lint": "eslint lib/index.js test/test.js bin/suitcss",
     "watch": "mocha --watch --reporter spec --slow 400"
   },
