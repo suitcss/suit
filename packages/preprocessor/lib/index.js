@@ -132,8 +132,8 @@ function lintImportedFiles(options, css, filename) {
   }
 
   processor
-  .use(bemLinter(options['postcss-bem-linter']))
-  .use(reporter(options['postcss-reporter']));
+    .use(bemLinter(options['postcss-bem-linter']))
+    .use(reporter(options['postcss-reporter']));
 
   return processor.process(css, {from: filename});
 }
