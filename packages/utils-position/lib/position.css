@@ -27,6 +27,19 @@
   position: fixed !important;
 }
 
+/**
+ * Cover the viewport
+ */
+
+.u-posFullScreen {
+  backface-visibility: hidden; /* 1 */
+  bottom: 0 !important;
+  left: 0 !important;
+  position: fixed !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
 .u-posRelative {
   position: relative !important;
 }

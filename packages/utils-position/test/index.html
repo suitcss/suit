@@ -20,6 +20,20 @@
     position: relative;
     width: 200px;
   }
+
+  #showblock {
+    position: relative;
+    z-index: 2;
+  }
+
+  #showblock:checked + .Cover {
+    display: block;
+  }
+
+  .Cover {
+    background-color: rgba(0,0,0,.8);
+    display: none;
+  }
 </style>
 
 <div class="Test">
@@ -32,5 +46,13 @@
   </div>
   <div class="Test-run" id="center">
     <span class="u-posAbsoluteCenter u-highlight Box"></span>
+  </div>
+
+  <h2 class="Test-describe">.u-posFullScreen</h2>
+  <h3 class="Test-it">covers the entire viewport</h3>
+  <div class="Test-run">
+    <label for="showblock">Toggle</label>
+    <input type="checkbox" id="showblock" />
+    <div class="Cover u-posFullScreen"></div>
   </div>
 </div>

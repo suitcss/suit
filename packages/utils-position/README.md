@@ -15,6 +15,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 
 * `u-posAbsolute` - Absolutely position an element.
 * `u-posAbsoluteCenter` - Absolutely position and center an element (requires explicit height).
+* `u-posFullScreen` - Fixes an element over the viewport
 * `u-posFixed` - Fixed position an element.
 * `u-posRelative` - Relatively position an element.
 * `u-posStatic` - Static position an element.
