@@ -26,7 +26,11 @@
     z-index: 2;
   }
 
-  #showblock:checked + .Cover {
+  #showblock + div {
+    display: none;
+  }
+
+  #showblock:checked + div {
     display: block;
   }
 
@@ -56,6 +60,14 @@
     <label for="showblock">Toggle</label>
     <input type="checkbox" id="showblock" />
     <div class="Cover u-posFullScreen"></div>
+  </div>
+
+  <h2 class="Test-describe">.u-posFixedCenter</h2>
+  <h3 class="Test-it">fix and centre an element in the viewport</h3>
+  <div class="Test-run">
+    <label for="showblock">Toggle</label>
+    <input type="checkbox" id="showblock" />
+    <div class="u-posFixedCenter u-highlight">Text in the centre</div>
   </div>
 
   <h2 class="Test-describe">.u-posFit</h2>
