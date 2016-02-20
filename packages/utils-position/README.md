@@ -24,6 +24,17 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 
 ## Usage
 
+### Creating a dialog overlay
+
+``` html
+<div role="dialog" class="Dialog u-posFixedCenter">
+  <img src="{src}" alt="" />
+</div>
+<div class="Cover u-posFullScreen"></div>
+```
+
+[Demo](http://codepen.io/simonsmith/pen/qbGaPK)
+
 Please refer to the README for [SUIT CSS utils](https://github.com/suitcss/utils/)
 
 ## Testing
