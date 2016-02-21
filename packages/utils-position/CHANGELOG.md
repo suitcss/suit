@@ -1,5 +1,12 @@
 ### HEAD
 
+### 1.0.0 (February 21, 2016)
+
+* Changed `u-posAbsoluteCenter` to use `transform` to centre and no longer requires a
+  width and height.
+* Added `u-posFit` to fit an element to the size of its parent
+* Added `u-posFullScreen` to fit an element over the viewport
+* Added `u-posFixedCenter` to centre an element in a fixed position
 * Update `preprocessor` to `1.0.1`
 * Fix stylelint conformance
 
