@@ -12,13 +12,13 @@
  *    `:before` to contain the top-margins of child elements.
  */
 
-.u-cf:before,
-.u-cf:after {
+.u-cf::before,
+.u-cf::after {
   content: " "; /* 1 */
   display: table; /* 2 */
 }
 
-.u-cf:after {
+.u-cf::after {
   clear: both;
 }
 
