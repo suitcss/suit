@@ -1,5 +1,9 @@
 ### HEAD
 
+### 1.0.1 (February 22, 2016)
+
+* Enable BEM linting
+
 ### 1.0.0 (February 21, 2016)
 
 * Changed `u-posAbsoluteCenter` to use `transform` to centre and no longer requires a
