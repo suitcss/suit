@@ -1,7 +1,7 @@
 {
   "lint": true,
   "postcss-reporter": {
-    "plugins": ["stylelint"],
+    "plugins": ["stylelint", "postcss-bem-linter"],
     "throwError": true
   }
 }
