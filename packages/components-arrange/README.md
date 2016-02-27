@@ -1,13 +1,13 @@
 # SUIT CSS components-arrange
 
-[![Build Status](https://secure.travis-ci.org/suitcss/components-arrange.png?branch=master)](http://travis-ci.org/suitcss/components-arrange)
+[![Build Status](https://travis-ci.org/suitcss/components-arrange.svg?branch=master)](https://travis-ci.org/suitcss/components-arrange)
 
 A SUIT CSS component for horizontally and vertically arranging a single row of
 cells. Includes modifier classes for equal-width cells and gutter-separated
 cells. Makes use of CSS table layout.
 
-**Note:** This component has been superseded by [flexbox](http://www.w3.org/TR/css-flexbox/) and you may instead find
-more use from [utils-flex](https://github.com/suitcss/utils-flex).
+**Note:** This component has been superseded by [flexbox](http://www.w3.org/TR/css-flexbox/)
+and you may instead find more use from [utils-flex](https://github.com/suitcss/utils-flex).
 
 Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
@@ -92,10 +92,22 @@ To generate a build:
 npm run build
 ```
 
+To lint code with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and [stylelint](http://stylelint.io/)
+
+```
+npm run lint
+```
+
 To generate the testing build.
 
 ```
 npm run build-test
+```
+
+To watch the files for making changes to test:
+
+```
+npm run watch
 ```
 
 Basic visual tests are in `test/index.html`.
