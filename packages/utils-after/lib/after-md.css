@@ -9,7 +9,7 @@
 @media (--md-viewport) {
 
   .u-md-afterNone {
-    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .u-md-after1of12 {
