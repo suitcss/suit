@@ -4,18 +4,18 @@
   "version": "0.12.0",
   "style": "index.css",
   "dependencies": {
-    "suitcss-utils-align": "~0.2.2",
-    "suitcss-utils-display": "~1.0.0",
-    "suitcss-utils-flex": "^1.1.0",
-    "suitcss-utils-layout": "~0.4.2",
-    "suitcss-utils-link": "~0.5.2",
-    "suitcss-utils-offset": "~0.5.1",
-    "suitcss-utils-position": "~0.2.2",
-    "suitcss-utils-size": "~1.0.0",
-    "suitcss-utils-text": "~0.4.2"
+    "suitcss-utils-align": "^1.0.0",
+    "suitcss-utils-display": "^1.0.2",
+    "suitcss-utils-flex": "^1.1.1",
+    "suitcss-utils-layout": "^1.0.1",
+    "suitcss-utils-link": "^1.0.1",
+    "suitcss-utils-offset": "^1.0.0",
+    "suitcss-utils-position": "^1.0.1",
+    "suitcss-utils-size": "^1.0.2",
+    "suitcss-utils-text": "^1.0.0"
   },
   "devDependencies": {
-    "suitcss-preprocessor": "^0.8.0"
+    "suitcss-preprocessor": "^1.0.1"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
