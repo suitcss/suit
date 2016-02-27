@@ -8,9 +8,9 @@
     "lib"
   ],
   "devDependencies": {
-    "stylelint-config-suitcss": "^1.0.0",
+    "stylelint-config-suitcss": "^4.0.0",
     "suitcss-components-test": "*",
-    "suitcss-preprocessor": "~0.8.0"
+    "suitcss-preprocessor": "^1.0.1"
   },
   "license": "MIT",
   "scripts": {
