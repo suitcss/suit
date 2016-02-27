@@ -1,5 +1,18 @@
 ### HEAD
 
+### 1.0.0 (February 27, 2016)
+
+Update `suitcss-utils-align` to `^1.0.0`
+Update `suitcss-utils-display` to `^1.0.2`
+Update `suitcss-utils-flex` to `^1.1.1`
+Update `suitcss-utils-layout` to `^1.0.1`
+Update `suitcss-utils-link` to `^1.0.1`
+Update `suitcss-utils-offset` to `^1.0.0`
+Update `suitcss-utils-position` to `^1.0.1`
+Update `suitcss-utils-size` to `^1.0.2`
+Update `suitcss-utils-text` to `^1.0.0`
+Update `suitcss-preprocessor` to `^1.0.1`
+
 ### 0.12.0 (January 28, 2016)
 
 * Update `utils-flex` to `1.1.0`
