@@ -1,5 +1,8 @@
 ### HEAD
 
+* Upgrade preprocessor to `^1.0.1`
+* Upgrade stylelint-config-suitcss to `^4.0.0`
+
 ### 5.0.0 (December 09, 2015)
 
 * Remove support for input elements - [issue](https://github.com/suitcss/components-button/issues/6)
