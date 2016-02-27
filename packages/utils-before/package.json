@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils-before",
   "description": "Leading offset utilities for SUIT CSS",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "style": "index.css",
   "files": [
     "index.css",

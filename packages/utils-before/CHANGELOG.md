@@ -1,5 +1,9 @@
 ### HEAD
 
+### 1.0.1 (February 27, 2016)
+
+* Enable BEM linting
+
 ### 1.0.0 (February 13, 2016)
 
 * Upgrade to latest preprocessor
