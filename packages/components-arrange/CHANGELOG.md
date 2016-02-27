@@ -1,5 +1,8 @@
 ## HEAD
 
+* Update `preprocessor` to `^1.0.1`
+* Upgrade stylelint-config-suitcss to `^4.0.0`
+
 ### 1.1.0 (December 2, 2015)
 
 * Added ability to create new rows within the same component (`Arrange-row`).
