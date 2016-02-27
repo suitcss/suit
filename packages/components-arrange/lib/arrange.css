@@ -22,8 +22,6 @@
  */
 
 .Arrange {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; /* 1 */
   display: table; /* 2 */
   margin: 0; /* 3 */
