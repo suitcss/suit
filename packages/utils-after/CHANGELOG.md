@@ -1,5 +1,9 @@
 ### HEAD
 
+### 1.0.1 (February 27, 2016)
+
+* Fix incorrect margin direction on `afterNone`
+
 ### 1.0.0 (February 12, 2016)
 
 * Upgrade to latest preprocessor
