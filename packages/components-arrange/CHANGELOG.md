@@ -1,7 +1,10 @@
 ## HEAD
 
+### 1.1.1 (February 28, 2016)
+
 * Update `preprocessor` to `^1.0.1`
 * Upgrade stylelint-config-suitcss to `^4.0.0`
+* Use weak mode for BEM linting
 
 ### 1.1.0 (December 2, 2015)
 
