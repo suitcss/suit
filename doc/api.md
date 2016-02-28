@@ -174,6 +174,14 @@ individual packages for details of their API.
 * `u-flexGrow4`
 * `u-flexGrow5`
 
+**Aligning with `auto` margins**
+
+* `u-flexExpand`
+* `u-flexExpandTop`
+* `u-flexExpandRight`
+* `u-flexExpandBottom`
+* `u-flexExpandLeft`
+
 ### [Text](https://github.com/suitcss/utils-text)
 
 #### Classes
