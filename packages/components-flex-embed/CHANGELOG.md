@@ -1,5 +1,9 @@
 ### HEAD
 
+### 2.0.4 (December 12, 2015)
+
+* Update preprocessor to `^1.0.1`
+
 ### 2.0.3 (December 12, 2015)
 
 * Update preprocessor to `^0.8.0`
