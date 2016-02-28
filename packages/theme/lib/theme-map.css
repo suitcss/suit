@@ -1,21 +1,9 @@
 /**
- * base
- */
-
-:root {
-  --background-base: var(--color-white);
-  --color-base: var(--color-charcoal);
-  --font-base: var(--font-size)/var(--line-height) var(--font-family);
-  --link-color-base: var(--color-deep-blue);
-  --link-color-hover-base: var(--color-dark-blue);
-}
-
-/**
  * components-arrange
  */
 
 :root {
-  --gutter-size-Arrange: var(--space-small-px);
+  --Arrange-gutter-size: var(--space-small-px);
 }
 
 /**
@@ -23,5 +11,5 @@
  */
 
 :root {
-  --gutter-size-Grid: var(--space-large-px);
+  --Grid-gutter-size: var(--space-large-px);
 }
