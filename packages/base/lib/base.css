@@ -5,7 +5,7 @@
 
 /**
  * Prevent margin and border from affecting element width.
- * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ * https://goo.gl/pYtbK7
  * `input[type="search"]` overrides normalize.css more specific rule.
  */
 
