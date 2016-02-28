@@ -8,15 +8,15 @@
     "lib"
   ],
   "dependencies": {
-    "suitcss": "~0.5.0"
+    "suitcss": "^1.0.0"
   },
   "devDependencies": {
-    "suitcss-preprocessor": "~0.3.0"
+    "suitcss-preprocessor": "^1.0.1"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "preprocess": "suitcss index.css build/build.css",
-    "setup": "npm install && mkdir -p build"
+    "setup": "npm install"
   },
   "repository": {
     "type": "git",
