@@ -1,7 +1,7 @@
 {
   "name": "suitcss-theme",
   "description": "Example theme for SUIT CSS",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "style": "theme.css",
   "files": [
     "index.css",
