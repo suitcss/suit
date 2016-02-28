@@ -1,5 +1,10 @@
 ### HEAD
 
+### 1.0.2 (February 28, 2016)
+
+* Update preprocessor to `^1.0.1`
+* Fix `max-line-length` error with stylelint
+
 ### 1.0.1 (October 31, 2015)
 
 * Revert removal of `component.json`
