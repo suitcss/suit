@@ -1,3 +1,11 @@
+# 5.0.0
+
+* Update to stylelint 5.x [#15](https://github.com/suitcss/stylelint-config-suitcss/pull/15)
+* Add compatible versions for `peerDependencies` [#16](https://github.com/suitcss/stylelint-config-suitcss/pull/16)
+* Update `ava` to `^0.13.0` [#12](https://github.com/suitcss/stylelint-config-suitcss/pull/12)
+* Update `eslint` to `^2.4.0` [#11](https://github.com/suitcss/stylelint-config-suitcss/pull/11)
+* Update `eslint-config-stylelint` to `^1.0.0` [#11](https://github.com/suitcss/stylelint-config-suitcss/pull/11)
+
 # 4.0.0
 
 * Changed `rule-nested-empty-line-before` to match SUIT style.
