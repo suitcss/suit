@@ -21,8 +21,8 @@
   ],
   "devDependencies": {
     "ava": "^0.13.0",
-    "eslint": "^1.10.3",
-    "eslint-config-stylelint": "^0.1.0",
+    "eslint": "^2.4.0",
+    "eslint-config-stylelint": "^1.0.0",
     "npmpub": "^3.0.1",
     "stylelint": "^5.0.1"
   },
