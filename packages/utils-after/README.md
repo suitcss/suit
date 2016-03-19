@@ -13,7 +13,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 
 ## Available classes
 
-* `u-afterXofY` (numerous) - Specify the proportional offset before an object.
+* `u-afterXofY` (numerous) - Specify the proportional offset after an object.
 
 `X` must be an integer less than `Y`.
 
