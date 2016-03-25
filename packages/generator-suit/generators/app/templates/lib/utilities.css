@@ -1,0 +1,5 @@
+/** @define utilities */
+
+.<%= moduleCssName %> {
+    font-size: 1em !important;
+}

@@ -1,21 +1,19 @@
-# SUIT <%= _.classify(moduleName) %>
+# SUIT <%= moduleCssName %>
 
-[![Build Status](https://secure.travis-ci.org/suitcss/<%= modulePackageName %>.png?branch=master)](http://travis-ci.org/suitcss/<%= modulePackageName %>)
+[![Build Status](https://secure.travis-ci.org/<%= moduleAuthorGithubUsername %>/<%= modulePackageName %>.svg?branch=master)](http://travis-ci.org/<%= moduleAuthorGithubUsername %>/<%= modulePackageName %>)
 
-A SUIT component for...
+<%= moduleDescription %>
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](http://component.io/): `component install suitcss/<%= modulePackageName %>`
 * [npm](https://npmjs.org/): `npm install suitcss-<%= modulePackageName %>`
-* [Bower](http://bower.io/): `bower install suit-<%= modulePackageName %>`
-* Download: [zip](https://github.com/suitcss/<%= modulePackageName %>/zipball/master)
+* Download: [releases](https://github.com/<%= moduleAuthorGithubUsername %>/<%= modulePackageName %>/releases/latest)
 
 ## Available classes
 
-* `<%= _.classify(moduleName) %>` - The core component class
+* `<%= moduleCssName %>` - The core <% moduleType %> class
 
 ## Configurable variables
 
@@ -24,7 +22,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 ## Usage
 
 ```html
-<div class="<%= _.classify(moduleName) %>">
+<div class="<%= moduleCssName %>">
 
 </div>
 ```

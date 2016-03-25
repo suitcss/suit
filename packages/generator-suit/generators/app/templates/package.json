@@ -1,6 +1,6 @@
 {
   "name": "suitcss-<%= modulePackageName %>",
-  "description": "",
+  "description": "<%= moduleDescription %>",
   "version": "0.0.0",
   "style": "index.css",
   "files": [
@@ -9,19 +9,22 @@
     "lib"
   ],
   "devDependencies": {
+    "stylelint-config-suitcss": "^5.0.0",
     "suitcss-components-test": "*",
-    "suitcss-preprocessor": "~0.3.0"
+    "suitcss-preprocessor": "^1.0.0"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",
     "preprocess": "suitcss index.css build/build.css",
-    "preprocess-test": "suitcss test/test.css build/test.css",
-    "setup": "npm install && mkdir -p build"
-  },  
+    "preprocess-test": "suitcss -i test test/test.css build/test.css",
+    "setup": "npm install",
+    "watch": "npm run preprocess-test -- -w -v",
+    "test": "suitcss -c test/config.json index.css build/output.css && rm build/output.css"
+  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/suitcss/<%= modulePackageName %>.git"
+    "url": "git://github.com/<%= moduleAuthorGithubUsername %>/<%= modulePackageName %>.git"
   },
   "keywords": [
     "browser",

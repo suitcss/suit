@@ -1,5 +1,7 @@
-./.npmignore
-./.travis.yml
-./.jshintrc
-./CHANGELOG.md
-./test
+.editorconfig
+.eslintrc
+.gitattributes
+.npmignore
+.travis.yml
+CHANGELOG.md
+test

@@ -1,5 +1,0 @@
-/** @define <%= _.classify(moduleName) %>; 'use strict' */
-
-.<%= _.classify(moduleName) %> {
-
-}
