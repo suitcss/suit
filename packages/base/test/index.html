@@ -12,6 +12,11 @@
     background: lightblue;
   }
 
+  .box-sizing-elem {
+    width: 100%;
+    padding: 0 10%;
+  }
+
   #iframe iframe {
     background-clip: content-box;
   }
@@ -135,5 +140,12 @@
   <div class="Test-run" id="tabindex">
     <a class="dev-highlight" href="#n" tabindex="-1">example link</a>
     <button class="dev-highlight" tabindex="-1">example button</button>
+  </div>
+
+  <h2 class="Test-describe">border-box</h2>
+  <h3 class="Test-it">padding should not add to the element width (elements should be centred)</h3>
+  <div class="Test-run" style="width: 80%; margin: 0 auto">
+    <div class="dev-highlight box-sizing-elem">content</div>
+    <div class="dev-highlight"><input type="search" class="box-sizing-elem"></div>
   </div>
 </div>
