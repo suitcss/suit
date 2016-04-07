@@ -6,7 +6,7 @@
 /**
  * Prevent margin and border from affecting element width.
  * https://goo.gl/pYtbK7
- * `input[type="search"]` overrides normalize.css more specific rule.
+ *
  */
 
 html {
@@ -15,8 +15,7 @@ html {
 
 *,
 *::before,
-*::after,
-input[type="search"] {
+*::after {
   box-sizing: inherit;
 }
 
