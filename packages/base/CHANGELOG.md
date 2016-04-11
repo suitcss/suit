@@ -1,5 +1,10 @@
 ### HEAD
 
+### 2.0.0 (April 11, 2016)
+
+* Update normalize to `^4.0.0`
+* Update stylelint-config-suitcss to `^5.0.0`
+
 ### 1.0.2 (February 28, 2016)
 
 * Update preprocessor to `^1.0.1`
