@@ -19,7 +19,7 @@
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",
-    "lint": "suitcss -c test/config.json lib/base.css build/lint.css && rm build/lint.css",
+    "lint": "suitcss -c test/config.json index.css build/lint.css && rm build/lint.css",
     "preprocess": "suitcss index.css build/build.css",
     "preprocess-test": "suitcss -i test test/test.css build/test.css",
     "setup": "npm install",

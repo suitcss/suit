@@ -1,5 +1,10 @@
 {
   "lint": true,
+  "stylelint": {
+    "configOverrides": {
+      "ignoreFiles": "**/normalize.css"
+    }
+  },
   "postcss-reporter": {
     "plugins": ["stylelint", "postcss-bem-linter"],
     "throwError": true
