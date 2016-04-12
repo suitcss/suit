@@ -1,5 +1,10 @@
 ### HEAD
 
+### 2.0.0 (April 12, 2016)
+
+* Switch to `postcss-easy-import`
+* Major release to correct previous upgrade to stylelint 5.x
+
 ### 1.0.2 (March 17, 2016)
 
 * Upgrade `stylelint` to `^5.0.1`
