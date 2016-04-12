@@ -43,7 +43,7 @@ describe('suitcss', function() {
         'minify',
         'use',
         'lint',
-        'postcss-import',
+        'postcss-easy-import',
         'postcss-reporter',
         'cssnano'
       ];
@@ -55,7 +55,7 @@ describe('suitcss', function() {
 
     it('should allow an import root to be set', function() {
       var opts = mergeOptions({root: 'test/root'});
-      expect(opts['postcss-import'].root).to.equal('test/root');
+      expect(opts['postcss-easy-import'].root).to.equal('test/root');
     });
 
     it('should allow stylelint to be enabled', function() {
@@ -76,7 +76,7 @@ describe('suitcss', function() {
       });
 
       expect(opts.use).to.eql([
-        'postcss-import',
+        'postcss-easy-import',
         'postcss-custom-properties',
         'postcss-calc',
         'postcss-custom-media',
@@ -84,7 +84,7 @@ describe('suitcss', function() {
         'postcss-reporter'
       ]);
       expect(opts.autoprefixer).to.eql(autoprefixer);
-      expect(opts['postcss-import'].root).to.equal('test/root');
+      expect(opts['postcss-easy-import'].root).to.equal('test/root');
     });
 
     describe('passing options to postcss', function() {
@@ -125,7 +125,7 @@ describe('suitcss', function() {
         });
 
         expect(opts.use).to.eql([
-          'postcss-import',
+          'postcss-easy-import',
           'postcss-custom-properties',
           'postcss-custom-media',
           'autoprefixer',
@@ -141,7 +141,7 @@ describe('suitcss', function() {
         });
 
         expect(opts.use).to.eql([
-          'postcss-import',
+          'postcss-easy-import',
           'postcss-custom-properties',
           'postcss-calc',
           'postcss-custom-media',

@@ -9,7 +9,7 @@ various [PostCSS](https://github.com/postcss/postcss) plugins.
 
 Compiles CSS packages with:
 
-* [postcss-import](https://github.com/postcss/postcss-import)
+* [postcss-easy-import](https://github.com/TrySound/postcss-easy-import)
 * [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)
 * [postcss-calc](https://github.com/postcss/postcss-calc)
 * [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
@@ -258,7 +258,7 @@ If duplicate plugins are used they will be removed, but the new order will be re
 ```js
 // Default order
 var defaults = [
-  'postcss-import',
+  'postcss-easy-import',
   'postcss-custom-properties',
   'postcss-calc',
   'postcss-custom-media',
@@ -277,7 +277,7 @@ module.exports = {
 };
 
 var result = [
-  'postcss-import',
+  'postcss-easy-import',
   'postcss-custom-properties',
   'postcss-custom-media',
   'postcss-at2x',

@@ -24,14 +24,14 @@ var defaults = {
   minify: false,
   lint: false,
   use: [
-    'postcss-import',
+    'postcss-easy-import',
     'postcss-custom-properties',
     'postcss-calc',
     'postcss-custom-media',
     'autoprefixer',
     'postcss-reporter'
   ],
-  'postcss-import': {
+  'postcss-easy-import': {
     onImport: function(imported) {
       // Update the watch task with the list of imported files
       if (typeof global.watchCSS === 'function') {
@@ -92,12 +92,12 @@ function mergeOptions(options) {
 
   // Set some core options
   if (merged.root) {
-    merged['postcss-import'].root = merged.root;
+    merged['postcss-easy-import'].root = merged.root;
   }
 
   // Call beforeLint function and pass processed css to bem-linter
   var beforeLint = merged.beforeLint;
-  merged['postcss-import'].transform = function(css, filename) {
+  merged['postcss-easy-import'].transform = function(css, filename) {
     if (typeof beforeLint === 'function') {
       css = beforeLint(css, filename, merged);
     }
