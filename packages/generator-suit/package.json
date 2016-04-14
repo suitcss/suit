@@ -1,6 +1,6 @@
 {
   "name": "generator-suit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generator for scaffolding out a SUIT component or utility",
   "homepage": "https://github.com/suitcss/generator-suit",
   "author": {
