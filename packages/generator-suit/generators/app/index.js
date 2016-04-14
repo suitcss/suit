@@ -92,6 +92,11 @@ module.exports = yeoman.generators.Base.extend({
     );
 
     this.fs.move(
+      this.destinationPath('packagejson'),
+      this.destinationPath('package.json')
+    );
+
+    this.fs.move(
       this.destinationPath('gitignore'),
       this.destinationPath('.gitignore')
     );
