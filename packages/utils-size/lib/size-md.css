@@ -157,6 +157,14 @@
      ======================================================================== */
 
   /**
+   * Make an element shrink wrap its content.
+   */
+
+  .u-md-sizeFit {
+    flex-basis: auto !important;
+  }
+
+  /**
    * Make an element fill the remaining space.
    *
    * 1. Be explicit to work around IE10 bug with shorthand flex
