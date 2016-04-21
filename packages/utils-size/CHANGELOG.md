@@ -1,5 +1,10 @@
 ### HEAD
 
+### 1.1.0 (April 21, 2016)
+
+* Add `u-sizeFit` using `flex-basis`
+* Update `preprocessor` to `2.0.0`
+
 ### 1.0.2 (February 09, 2016)
 
 * Update `preprocessor` to `1.0.0`
