@@ -70,6 +70,15 @@ For more granular control over layout make use of modifiers and sizing utilities
 </div>
 ```
 
+Fit cells to their content and allow others to fill the remaining space.
+
+```html
+<div class="Grid">
+  <div class="Grid-cell u-sizeFit">Fit to content</div>
+  <div class="Grid-cell u-sizeFill">Take up remaining space</div>
+</div>
+```
+
 ### Widths and offsets
 
 Cell widths and offsets can be controlled using the [responsive sizing
