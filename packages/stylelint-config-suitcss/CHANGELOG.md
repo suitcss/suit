@@ -1,3 +1,7 @@
+# 6.0.0
+
+* Update to stylelint `^6.0.0`
+
 # 5.0.0
 
 * Update to stylelint 5.x [#15](https://github.com/suitcss/stylelint-config-suitcss/pull/15)
