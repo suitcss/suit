@@ -107,7 +107,7 @@
 
 .Grid-cell {
   box-sizing: inherit;
-  flex: 0 0 100%; /* 1 */
+  flex-basis: 100%; /* 1 */
 }
 
 /**
