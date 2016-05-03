@@ -103,11 +103,14 @@
  * utility or a component class that extends 'Grid'.
  *
  * 1. Set flex items to full width by default
+ * 2. Fix issue where elements with overflow extend past the
+ *    `Grid-cell` container - https://git.io/vw5oF
  */
 
 .Grid-cell {
   box-sizing: inherit;
   flex-basis: 100%; /* 1 */
+  min-width: 0; /* 2 */
 }
 
 /**

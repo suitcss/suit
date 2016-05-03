@@ -16,6 +16,12 @@
     min-height: 100px;
   }
 
+  pre {
+    overflow: auto;
+    white-space: pre;
+    word-wrap: normal;
+  }
+
   .Test {
     padding: 0 10px;
   }
@@ -50,6 +56,18 @@
       </div>
       <div class="Grid-cell u-size1of4">
         <div class="fixture-Box">4</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">handles overflowing elements</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div class="Grid-cell">
+        <div class="fixture-Box">
+           <pre>
+              This is some really long content that should be scrolled when the container is too small.
+           </pre>
+        </div>
       </div>
     </div>
   </div>
