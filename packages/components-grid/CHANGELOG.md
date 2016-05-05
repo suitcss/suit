@@ -1,5 +1,10 @@
 ### HEAD
 
+### 3.0.3 (May 05, 2016)
+
+* Fix issue with overflowing elements [#44](https://github.com/suitcss/components-grid/pull/44)
+* Fix issue with offsets and no explicit cell width [#43](https://github.com/suitcss/components-grid/pull/43)
+
 ### 3.0.2 (February 15, 2016)
 
 * Update `stylelint-config-suitcss` to `4.0.0`
