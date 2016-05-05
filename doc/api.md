@@ -92,7 +92,6 @@ individual packages for details of their API.
 * `u-sizeFill`
 * `u-sizeFillAlt`
 * `u-sizeFit`
-* `u-sizeFitAlt`
 * `u-sizeFull`
 * `u-sizeXof2`
 * `u-sizeXof3`
