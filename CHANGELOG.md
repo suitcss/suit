@@ -1,5 +1,9 @@
 ### HEAD
 
+### 2.0.0 (May 05, 2016)
+
+* Update `base` to `^2.0.0`
+
 ### 1.0.0 (February 28, 2016)
 
 * Update `utils` to `^1.0.0`

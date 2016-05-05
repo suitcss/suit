@@ -1,6 +1,6 @@
 {
   "name": "suitcss",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "CSS base styles, utilities, and structural components for web apps",
   "style": "index.css",
   "files": [
