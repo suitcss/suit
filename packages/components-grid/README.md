@@ -155,8 +155,11 @@ Basic visual tests are in `test/index.html`.
 
 * Google Chrome (latest)
 * Opera (latest)
-* Firefox 28+
-* Safari 6.1+
+* Firefox (latest)
+* Safari 6.2+
 * Internet Explorer 10+
+* iOS 7+
+* Android 4.4+
+* Windows Phone 8.1+
 
 Refer to the [caniuse](http://caniuse.com/) page for [flexbox](http://caniuse.com/#feat=flexbox)
