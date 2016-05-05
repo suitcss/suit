@@ -11,6 +11,11 @@
     min-height: 50px;
   }
 
+  .fixture-Wrap {
+    background: rgba(100, 150, 50, .7);
+    border: 1px solid black;
+  }
+
   .fixture-Box--doubleHeight {
     min-height: 100px;
   }
@@ -132,16 +137,18 @@
   <div class="Test-run">
     <div class="Grid">
       <div class="Grid-cell u-size3of4">
-        <div class="fixture-Box">1</div>
-        <div class="Grid">
-          <div class="Grid-cell u-size1of3">
-            <div class="fixture-Box">Nested 1</div>
-          </div>
-          <div class="Grid-cell u-size1of3">
-            <div class="fixture-Box">Nested 2</div>
-          </div>
-          <div class="Grid-cell u-size1of3">
-            <div class="fixture-Box">Nested 3</div>
+        <div class="fixture-Wrap">
+          Level 1
+          <div class="Grid">
+            <div class="Grid-cell u-size1of3">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="Grid-cell u-size1of3">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="Grid-cell u-size1of3">
+              <div class="fixture-Box">Level 2</div>
+            </div>
           </div>
         </div>
       </div>
@@ -343,27 +350,30 @@
   <div class="Test-run">
     <div class="Grid Grid--withGutter">
       <div class="Grid-cell u-size1of2">
-        <div class="fixture-Box">1</div>
-        <div class="Grid">
-          <div class="Grid-cell u-size1of2">
-            <div class="fixture-Box">Nested 1</div>
-          </div>
-          <div class="Grid-cell u-size1of2">
-            <div class="fixture-Box">Nested 2</div>
+        <div class="fixture-Wrap">
+          Level 1
+          <div class="Grid">
+            <div class="Grid-cell u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="Grid-cell u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
           </div>
         </div>
       </div>
       <div class="Grid-cell u-size1of2">
-        <div class="fixture-Box">2</div>
-        <div class="Grid">
-          <div class="Grid-cell u-size1of2">
-            <div class="fixture-Box">Nested 1</div>
-          </div>
-          <div class="Grid-cell u-size1of2">
-            <div class="fixture-Box">Nested 2</div>
+        <div class="fixture-Wrap">
+          Level 1
+          <div class="Grid">
+            <div class="Grid-cell u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="Grid-cell u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
   <h3 class="Test-it">correctly aligns gutters when using offsets (requires suitcss-utils-offset)</h3>
@@ -395,27 +405,30 @@
   <div class="Test-run">
     <div class="Grid Grid--withGutter">
       <div class="Grid-cell u-size1of2">
-        <div class="fixture-Box">1</div>
-        <div class="Grid Grid--withGutter">
-          <div class="Grid-cell u-size1of2">
-            <div class="fixture-Box">Nested 1</div>
-          </div>
-          <div class="Grid-cell u-size1of2">
-            <div class="fixture-Box">Nested 2</div>
+        <div class="fixture-Wrap">
+          Level 1
+          <div class="Grid Grid--withGutter">
+            <div class="Grid-cell u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="Grid-cell u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
           </div>
         </div>
       </div>
       <div class="Grid-cell u-size1of2">
-        <div class="fixture-Box">2</div>
-        <div class="Grid Grid--withGutter">
-          <div class="Grid-cell u-size1of2">
-            <div class="fixture-Box">Nested 1</div>
-          </div>
-          <div class="Grid-cell u-size1of2">
-            <div class="fixture-Box">Nested 2</div>
+        <div class="fixture-Wrap">
+          Level 1
+          <div class="Grid Grid--withGutter">
+            <div class="Grid-cell u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="Grid-cell u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
   <h3 class="Test-it">correctly adds gutters with Grid--fit</h3>
