@@ -7,7 +7,7 @@
     "index.css"
   ],
   "dependencies": {
-    "suitcss-base": "^1.0.2",
+    "suitcss-base": "^2.0.0",
     "suitcss-components": "^1.0.1",
     "suitcss-utils": "^1.0.0"
   },
