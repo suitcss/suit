@@ -13,8 +13,8 @@
     "suitcss-components-grid": "^3.0.2"
   },
   "devDependencies": {
-    "stylelint-config-suitcss": "^4.0.0",
-    "suitcss-preprocessor": "^1.0.1"
+    "stylelint-config-suitcss": "^6.0.0",
+    "suitcss-preprocessor": "^2.0.0"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
