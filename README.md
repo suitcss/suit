@@ -17,6 +17,57 @@ your setup and build pipeline.
 
 **[Documentation](doc/README.md)**.
 
+## Quick start
+
+Install the SUIT package and preprocessor with npm:
+
+```
+npm install suitcss --save
+npm install suitcss-preprocessor --save-dev
+```
+
+Create an `index.css` that will import the SUIT packages. Add values for the
+custom media queries and any custom properties that you wish to override:
+
+```css
+@import "suitcss";
+
+@custom-media --sm-viewport (min-width: 320px) and (max-width: 640px);
+@custom-media --md-viewport (min-width: 640px) and (max-width: 960px);
+@custom-media --lg-viewport (min-width: 960px);
+
+:root {
+  --Grid-gutter-size: 25px;
+}
+```
+
+Packages can also be installed independently for a more modular build:
+
+```
+npm install suitcss-utils-size suitcss-components-grid --save
+```
+
+```css
+@import "suitcss-components-grid";
+@import "suitcss-utils-size";
+```
+
+Add an entry to the `scripts` object in `package.json` that will run the
+preprocessor:
+
+```json
+"scripts": {
+  "build": "suitcss index.css build/build.css"
+}
+```
+
+Now run `npm run build` on the command line to output the built packages to
+`build/build.css`. The preprocessor can also watch for file changes by passing
+the `-w` flag e.g. `npm run build -- -w`.
+
+Refer to the [SUIT theme](https://github.com/suitcss/theme) for a more thorough
+example.
+
 ## Example
 
 SUIT CSS makes use of variables, custom media queries, and dependency resolution for CSS.
