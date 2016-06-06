@@ -8,7 +8,7 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [npm](https://npmjs.org/): `npm install suitcss-<%= modulePackageName %>`
+* [npm](https://npmjs.org/): `npm install <%= modulePackageName %>`
 * Download: [releases](https://github.com/<%= moduleAuthorGithubUsername %>/<%= modulePackageName %>/releases/latest)
 
 ## Available classes

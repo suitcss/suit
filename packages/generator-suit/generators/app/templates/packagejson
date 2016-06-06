@@ -1,5 +1,5 @@
 {
-  "name": "suitcss-<%= modulePackageName %>",
+  "name": "<%= modulePackageName %>",
   "description": "<%= moduleDescription %>",
   "version": "0.0.0",
   "style": "index.css",

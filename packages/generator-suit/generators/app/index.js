@@ -65,7 +65,7 @@ module.exports = yeoman.generators.Base.extend({
       // Utilities
       if (props.moduleType === 'utility') {
         this.props.moduleCssName = 'u-' + toCamelCase(this.moduleName);
-        this.props.modulePackageName = 'utils-' + this.moduleName;
+        this.props.modulePackageName = 'suitcss-utils-' + this.moduleName;
         this.props.moduleDescription = props.moduleDescription ?
           props.moduleDescription + ' utilities for SUIT CSS':
           '';
@@ -75,7 +75,7 @@ module.exports = yeoman.generators.Base.extend({
 
       // Components
       this.props.moduleCssName = toPascalCase(this.moduleName);
-      this.props.modulePackageName = 'components-' + this.moduleName;
+      this.props.modulePackageName = 'suitcss-components-' + this.moduleName;
       this.props.moduleDescription = props.moduleDescription ?
         'A SUIT component for ' + props.moduleDescription :
         '';
