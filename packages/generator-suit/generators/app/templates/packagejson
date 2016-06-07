@@ -1,7 +1,8 @@
 {
   "name": "<%= modulePackageName %>",
   "description": "<%= moduleDescription %>",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "license": "MIT",
   "style": "index.css",
   "files": [
     "index.css",
@@ -9,9 +10,9 @@
     "lib"
   ],
   "devDependencies": {
-    "stylelint-config-suitcss": "^5.0.0",
+    "stylelint-config-suitcss": "^6.0.0",
     "suitcss-components-test": "*",
-    "suitcss-preprocessor": "^1.0.0"
+    "suitcss-preprocessor": "^2.0.0"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",

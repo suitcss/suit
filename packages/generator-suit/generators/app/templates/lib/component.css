@@ -1,9 +1,9 @@
 /** @define <%= moduleCssName %> */
 
 :root {
-    --<%= moduleCssName %>-example-property: 1em;
+  --<%= moduleCssName %>-example-property: 1em;
 }
 
 .<%= moduleCssName %> {
-    font-size: var(--<%= moduleCssName %>-example-property);
+  font-size: var(--<%= moduleCssName %>-example-property);
 }
