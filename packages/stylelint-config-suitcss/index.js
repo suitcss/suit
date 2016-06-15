@@ -55,7 +55,7 @@ module.exports = {
     "no-missing-eof-newline": true,
     "number-leading-zero": "always",
     "number-no-trailing-zeros": true,
-    "number-zero-length-no-unit": true,
+    "length-zero-no-unit": true,
     "property-no-vendor-prefix": true,
     "root-no-standard-properties": true,
     "rule-nested-empty-line-before": "always-multi-line",
