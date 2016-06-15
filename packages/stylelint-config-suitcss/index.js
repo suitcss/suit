@@ -36,7 +36,7 @@ module.exports = {
     "function-parentheses-newline-inside": "always-multi-line",
     "function-parentheses-space-inside": "never-single-line",
     "function-whitespace-after": "always",
-    "function-url-quotes": "double",
+    "function-url-quotes": "always",
     "indentation": 2,
     "max-empty-lines": 1,
     "max-line-length": [ 80, {
