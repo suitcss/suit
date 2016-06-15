@@ -1,4 +1,4 @@
-# Head
+# 7.0.0
 
 * Changed: `number-zero-length-no-unit` to `length-zero-no-unit`.
 * Changed: `function-url-quotes` option from `"double"` to `'always'`.
