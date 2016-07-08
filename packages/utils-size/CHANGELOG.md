@@ -1,5 +1,9 @@
 ### HEAD
 
+### 2.0.0 (July 08, 2016)
+
+* Remove `box-sizing` and `display` from sizeFull [#36](https://github.com/suitcss/utils-size/pull/36)
+
 ### 1.1.0 (April 21, 2016)
 
 * Add `u-sizeFit` using `flex-basis`
