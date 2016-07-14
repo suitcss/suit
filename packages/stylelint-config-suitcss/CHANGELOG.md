@@ -1,4 +1,4 @@
-# Head
+# 8.0.0
 
 * Changed: `media-query-parentheses-space-inside` to `media-feature-parentheses-space-inside`.
 * Changed: `no-missing-eof-newline` to `no-missing-end-of-source-newline`.
