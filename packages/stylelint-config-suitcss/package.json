@@ -24,10 +24,10 @@
     "eslint": "^2.4.0",
     "eslint-config-stylelint": "^1.0.0",
     "npmpub": "^3.0.1",
-    "stylelint": "^6.6.0"
+    "stylelint": "^7.0.1"
   },
   "peerDependencies": {
-    "stylelint": "^6.6.0"
+    "stylelint": "^7.0.1"
   },
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",

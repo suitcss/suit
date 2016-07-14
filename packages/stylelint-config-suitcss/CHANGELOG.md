@@ -1,3 +1,8 @@
+# Head
+
+* Changed: `media-query-parentheses-space-inside` to `media-feature-parentheses-space-inside`.
+* Changed: `no-missing-eof-newline` to `no-missing-end-of-source-newline`.
+
 # 7.0.0
 
 * Changed: `number-zero-length-no-unit` to `length-zero-no-unit`.
