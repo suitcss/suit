@@ -1,5 +1,9 @@
 ### HEAD
 
+### 2.0.0
+
+Update `suitcss-utils-size` to `^2.0.0`
+
 ### 1.0.0 (February 27, 2016)
 
 Update `suitcss-utils-align` to `^1.0.0`

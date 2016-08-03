@@ -1,7 +1,7 @@
 {
   "name": "suitcss-utils",
   "description": "Utilities for SUIT CSS",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "style": "index.css",
   "dependencies": {
     "suitcss-utils-align": "^1.0.0",
