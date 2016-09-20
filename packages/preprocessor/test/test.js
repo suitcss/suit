@@ -332,7 +332,7 @@ describe('cli', function() {
   it('should output stylelint warnings', function(done) {
     exec('node bin/suitcss -i test/fixtures test/fixtures/stylelint-import.css test/fixtures/cli/output.css -l', function(err, stdout) {
       if (err) return done(err);
-      expect(stdout).to.contain('Expected property "box-sizing" to come before property "flex"');
+      expect(stdout).to.contain('Expected "box-sizing" to come before "flex"');
       done();
     });
   });
