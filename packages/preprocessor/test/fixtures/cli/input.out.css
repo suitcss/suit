@@ -1,7 +1,6 @@
 .cli {
   color: #f00;
   width: 100px;
-  -webkit-transition: all 1s;
   transition: all 1s;
 }
 

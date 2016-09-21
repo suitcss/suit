@@ -1,5 +1,6 @@
 ### HEAD
 
+* Add default browsers list for autoprefixer
 * Use `stylelint-config-suitcss` from within the preprocessor. No longer needs
   to be installed locally by the consumer.
 

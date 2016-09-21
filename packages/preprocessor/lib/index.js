@@ -32,6 +32,10 @@ var defaults = {
     'autoprefixer',
     'postcss-reporter'
   ],
+  autoprefixer: {
+    browsers: '> 1%, last 2 versions, safari > 6, ie > 9, ' +
+      'ios > 6, android > 4.3, samsung > 3, chromeandroid > 50'
+  },
   'postcss-easy-import': {
     onImport: function(imported) {
       // Update the watch task with the list of imported files

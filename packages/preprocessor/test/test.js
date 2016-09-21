@@ -40,6 +40,7 @@ describe('suitcss', function() {
 
     it('should use default options when nothing is passed', function() {
       var keys = [
+        'autoprefixer',
         'minify',
         'use',
         'lint',
@@ -279,7 +280,25 @@ describe('features', function() {
     var input = read('fixtures/component');
     var output = read('fixtures/component.out');
 
-    suitcss(input, {root: 'test/fixtures'}).then(function(result) {
+    suitcss(input, {
+      root: 'test/fixtures',
+      // disable autoprefixer
+      autoprefixer: {add: false, remove: false}
+    }).then(function(result) {
+      expect(result.css.trim()).to.be.equal(output.trim());
+      done();
+    }).catch(done);
+  });
+
+  it('should add vendor prefixes', function(done) {
+    var input = '.test { filter: blur(1px) }';
+    var output = '.test { -webkit-filter: blur(1px); filter: blur(1px) }';
+
+    suitcss(input, {
+      autoprefixer: {
+        browsers: 'Chrome 50'
+      }
+    }).then(function(result) {
       expect(result.css.trim()).to.be.equal(output.trim());
       done();
     }).catch(done);
@@ -299,7 +318,7 @@ describe('cli', function() {
   });
 
   it('should read from a file and write to a file', function(done) {
-    exec('node bin/suitcss test/fixtures/cli/input.css test/fixtures/cli/output.css', function(err) {
+    exec('node bin/suitcss -c test/noautoprefixer.config.js test/fixtures/cli/input.css test/fixtures/cli/output.css', function(err) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       expect(res).to.equal(output);
@@ -308,7 +327,7 @@ describe('cli', function() {
   });
 
   it('should read from a file and write to stdout', function(done) {
-    exec('node bin/suitcss test/fixtures/cli/input.css', function(err, stdout) {
+    exec('node bin/suitcss -c test/noautoprefixer.config.js test/fixtures/cli/input.css', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.equal(output);
       done();
@@ -316,7 +335,7 @@ describe('cli', function() {
   });
 
   it('should read from stdin and write to stdout', function(done) {
-    var testChild = exec('node bin/suitcss', function(err, stdout) {
+    var testChild = exec('node bin/suitcss -c test/noautoprefixer.config.js', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.equal(output);
       expect(stdout).to.not.contain('beforeLint ran');
@@ -328,7 +347,7 @@ describe('cli', function() {
   });
 
   it('should log on verbose', function(done) {
-    exec('node bin/suitcss -v test/fixtures/cli/input.css test/fixtures/cli/output.css', function(err, stdout) {
+    exec('node bin/suitcss -v  -c test/noautoprefixer.config.js test/fixtures/cli/input.css test/fixtures/cli/output.css', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.contain('write');
       expect(stdout).to.not.contain('beforeLint ran');
@@ -337,7 +356,7 @@ describe('cli', function() {
   });
 
   it('should allow configurable import root', function(done) {
-    exec('node bin/suitcss -i test/fixtures test/fixtures/import.css test/fixtures/cli/output.css', function(err, stdout) {
+    exec('node bin/suitcss -i test/fixtures -c test/noautoprefixer.config.js test/fixtures/import.css test/fixtures/cli/output.css', function(err, stdout) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/component.out');
@@ -348,7 +367,7 @@ describe('cli', function() {
   });
 
   it('should output stylelint warnings', function(done) {
-    exec('node bin/suitcss -i test/fixtures test/fixtures/stylelint-import.css test/fixtures/cli/output.css -l', function(err, stdout) {
+    exec('node bin/suitcss -i test/fixtures -c test/noautoprefixer.config.js test/fixtures/stylelint-import.css test/fixtures/cli/output.css -l', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.contain('Expected indentation of 2 spaces');
       done();
@@ -356,7 +375,7 @@ describe('cli', function() {
   });
 
   it('should minify the output', function(done) {
-    exec('node bin/suitcss -i test/fixtures test/fixtures/import.css test/fixtures/cli/output.css -m', function(err, stdout) {
+    exec('node bin/suitcss -i test/fixtures -c test/noautoprefixer.config.js test/fixtures/import.css test/fixtures/cli/output.css -m', function(err, stdout) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/minify.out');
@@ -387,7 +406,7 @@ describe('cli', function() {
   });
 
   it('should log on non-existant file', function(done) {
-    exec('node bin/suitcss test/fixtures/cli/non-existant.css', function(err, stdout, stderr) {
+    exec('node bin/suitcss -c test/noautoprefixer.config.js test/fixtures/cli/non-existant.css', function(err, stdout, stderr) {
       expect(err).to.be.an('error');
       expect(err.code).to.equal(1);
       expect(stderr).to.contain('not found');

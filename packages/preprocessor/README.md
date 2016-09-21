@@ -278,6 +278,21 @@ var result = [
 ];
 ```
 
+#### Autoprefixer: vendor prefixes
+
+By default the preprocessor uses the SUIT
+[browserslist](https://github.com/ai/browserslist) configuration:
+
+```
+> 1%, last 2 versions, safari > 6, ie > 9, ios > 6, android > 4.3, samsung > 3, chromeandroid > 50
+```
+
+The preprocessor doesn't attempt to find any `browserslist` config file.
+
+Instead you can customise the browsers list
+via [configuration file](#plugin-configuration).
+
+
 ## Acknowledgements
 
 Based on [Myth](https://github.com/segmentio/myth) by Segment.io.
