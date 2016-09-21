@@ -9,6 +9,7 @@ var postcss = require('postcss');
 var cssnano = require('cssnano');
 var reporter = require('postcss-reporter');
 var stylelint = require('stylelint');
+var stylelintConfigSuit = require('stylelint-config-suitcss');
 
 /**
  * Module export
@@ -128,7 +129,7 @@ function lintImportedFiles(options, css, filename) {
   var processor = postcss();
 
   if (options.lint) {
-    processor.use(stylelint(options.stylelint));
+    processor.use(stylelint(options.stylelint || stylelintConfigSuit));
   }
 
   processor

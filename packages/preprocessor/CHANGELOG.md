@@ -1,5 +1,8 @@
 ### HEAD
 
+* Use `stylelint-config-suitcss` from within the preprocessor. No longer needs
+  to be installed locally by the consumer.
+
 ### 2.0.0 (April 12, 2016)
 
 * Switch to `postcss-easy-import`

@@ -166,6 +166,24 @@ describe('suitcss', function() {
         ).to.be.fulfilled;
       });
 
+      it('should allow the config to be overidden', function() {
+        return expect(
+          suitcss('@import "./stylelint.css"', {
+            lint: true,
+            root: 'test/fixtures',
+            stylelint: {
+              extends: 'stylelint-config-suitcss',
+              rules: {
+                indentation: 4
+              }
+            },
+            'postcss-reporter': {
+              throwError: true
+            }
+          })
+        ).to.be.fulfilled;
+      });
+
       it('should throw an error if stylelint fails', function() {
         return expect(
           suitcss('@import "./stylelint.css"', {
@@ -332,7 +350,7 @@ describe('cli', function() {
   it('should output stylelint warnings', function(done) {
     exec('node bin/suitcss -i test/fixtures test/fixtures/stylelint-import.css test/fixtures/cli/output.css -l', function(err, stdout) {
       if (err) return done(err);
-      expect(stdout).to.contain('Expected "box-sizing" to come before "flex"');
+      expect(stdout).to.contain('Expected indentation of 2 spaces');
       done();
     });
   });

@@ -102,31 +102,22 @@ Where to resolve imports from. Passed to [`postcss-import`](https://github.com/p
 Ensure code conforms to the [SUIT code style](https://github.com/suitcss/suit/blob/master/doc/STYLE.md)
 by using the [stylelint-config-suitcss](https://github.com/suitcss/stylelint-config-suitcss) package.
 
-Stylelint [configuration options](http://stylelint.io/?/docs/user-guide/configuration.md) can also be overridden:
+Stylelint [configuration
+options](http://stylelint.io/?/docs/user-guide/configuration.md) can also be
+overridden but this requires the `stylelint-config-suitcss` to be installed
+locally in your package.
 
 ```js
 {
   lint: true,
   stylelint: {
-  extends: 'stylelint-config-suitcss',
+    extends: 'stylelint-config-suitcss',
     rules: {
       indentation: [4, 'tab'],
     }
   }
 }
 ```
-
-The preprocessor will also pick up any rules added to a `.stylelintrc` in your
-project root. For example:
-
-
-```js
-{
-  "extends": "stylelint-config-suitcss"
-}
-```
-
-**Note**: This works the same with the CLI `-l` flag.
 
 ##### `minify`
 
