@@ -27,7 +27,9 @@ describe('suitcss', function() {
   });
 
   it('should handle invalid input', function() {
-    expect(function() {suitcss(null);}).to.throw(TypeError);
+    expect(function() {
+      suitcss(null);
+    }).to.throw(TypeError);
   });
 
   describe('using options', function() {
@@ -197,77 +199,6 @@ describe('suitcss', function() {
         ).to.be.rejectedWith(Error, 'postcss-reporter: warnings or errors were found');
       });
     });
-
-    describe('transforming css before linting', function() {
-      describe('ensuring functions are called correctly', function() {
-        var lintImportedFilesStub, beforeLintStub, revert;
-
-        beforeEach(function() {
-          var postcssPromise = sinon.stub().resolves('/*linting done*/')();
-          lintImportedFilesStub = sinon.stub().returns(postcssPromise);
-          beforeLintStub = sinon.stub().returns('/*before lint*/');
-          revert = suitcss.__set__('lintImportedFiles', lintImportedFilesStub);
-        });
-
-        afterEach(function() {
-          revert();
-        });
-
-        it('should call `beforeLint` function before linting', function(done) {
-          suitcss(read('fixtures/component'), {
-            root: 'test/fixtures',
-            beforeLint: beforeLintStub
-          })
-          .then(function() {
-            expect(beforeLintStub).to.be.calledOnce;
-            expect(lintImportedFilesStub).to.be.calledOnce;
-            expect(beforeLintStub).to.have.been.calledBefore(lintImportedFilesStub);
-            done();
-          })
-          .catch(done);
-        });
-
-        it('should pass the result of `beforeLint` to `lintImportedFiles`', function(done) {
-          suitcss(read('fixtures/component'), {
-            root: 'test/fixtures',
-            beforeLint: beforeLintStub
-          })
-          .then(function() {
-            expect(lintImportedFilesStub.args[0][1]).to.equal('/*before lint*/');
-            done();
-          })
-          .catch(done);
-        });
-
-        it('should pass the options object to the beforeLint function as the third parameter', function(done) {
-          suitcss(read('fixtures/component'), {
-            root: 'test/fixtures',
-            beforeLint: beforeLintStub
-          })
-          .then(function() {
-            expect(beforeLintStub.args[0][2]).to.contain({root: 'test/fixtures'});
-            done();
-          })
-          .catch(done);
-        });
-      });
-
-      describe('outputting transformed css', function() {
-        it('should use the CSS returned from beforeLint', function(done) {
-          suitcss(read('fixtures/import'), {
-            root: 'test/fixtures',
-            beforeLint: function() {
-              return 'body {}';
-            }
-          })
-          .then(function(result) {
-            expect(result.css).to.equal('body {}\n');
-            done();
-          })
-          .catch(done);
-        });
-      });
-    });
   });
 });
 
@@ -338,7 +269,6 @@ describe('cli', function() {
     var testChild = exec('node bin/suitcss -c test/noautoprefixer.config.js', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.equal(output);
-      expect(stdout).to.not.contain('beforeLint ran');
       done();
     });
 
@@ -350,18 +280,16 @@ describe('cli', function() {
     exec('node bin/suitcss -v  -c test/noautoprefixer.config.js test/fixtures/cli/input.css test/fixtures/cli/output.css', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.contain('write');
-      expect(stdout).to.not.contain('beforeLint ran');
       done();
     });
   });
 
   it('should allow configurable import root', function(done) {
-    exec('node bin/suitcss -i test/fixtures -c test/noautoprefixer.config.js test/fixtures/import.css test/fixtures/cli/output.css', function(err, stdout) {
+    exec('node bin/suitcss -i test/fixtures -c test/noautoprefixer.config.js test/fixtures/import.css test/fixtures/cli/output.css', function(err) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/component.out');
       expect(res).to.equal(expected);
-      expect(stdout).to.not.contain('beforeLint ran');
       done();
     });
   });
@@ -375,22 +303,20 @@ describe('cli', function() {
   });
 
   it('should minify the output', function(done) {
-    exec('node bin/suitcss -i test/fixtures -c test/noautoprefixer.config.js test/fixtures/import.css test/fixtures/cli/output.css -m', function(err, stdout) {
+    exec('node bin/suitcss -i test/fixtures -c test/noautoprefixer.config.js test/fixtures/import.css test/fixtures/cli/output.css -m', function(err) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/minify.out');
-      expect(stdout).to.not.contain('beforeLint ran');
       expect(res).to.equal(expected);
       done();
     });
   });
 
   it('should allow a config file to be passed', function(done) {
-    exec('node bin/suitcss -i test/fixtures -c test/test.config.js test/fixtures/config.css test/fixtures/cli/output.css', function(err, stdout) {
+    exec('node bin/suitcss -i test/fixtures -c test/test.config.js test/fixtures/config.css test/fixtures/cli/output.css', function(err) {
       if (err) return done(err);
       var res = read('fixtures/cli/output');
       var expected = read('fixtures/config.out');
-      expect(stdout).to.contain('beforeLint ran');
       expect(res).to.equal(expected);
       done();
     });

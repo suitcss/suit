@@ -35,8 +35,8 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "chai-as-promised": "^5.2.0",
-    "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^5.0.0",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
     "mocha": "^2.3.4",
     "postcss-property-lookup": "^1.1.4",
     "rewire": "^2.5.1",
@@ -45,9 +45,10 @@
     "sinon-chai": "^2.8.0"
   },
   "scripts": {
-    "test": "npm run lint && mocha --reporter spec --slow 400 --timeout 8000",
+    "test": "npm run mocha && npm run lint",
+    "mocha": "mocha --reporter spec --slow 400 --timeout 8000",
     "lint": "eslint lib/index.js test/test.js bin/suitcss",
-    "watch": "mocha --watch --reporter spec --slow 400"
+    "watch": "npm run mocha -- --watch"
   },
   "keywords": [
     "css",

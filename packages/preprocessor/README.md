@@ -126,24 +126,6 @@ locally in your package.
 
 If set to `true` then the output is minified by [`cssnano`](http://cssnano.co/).
 
-##### `beforeLint`
-
-* Type: `Function`
-* Default: `undefined`
-
-Called with the imported CSS before it's passed to `postcss-bem-linter`. This allows you to transform the CSS first and it must return the css string.
-
-Third paramater is the options object containing any PostCSS configuration you may need.
-
-```js
-{
-  beforeLint(css, filename, options) {
-    // Do something to the imported css
-    return css;
-  }
-}
-```
-
 ##### `postcss`
 
 * Type: `Object`
@@ -156,7 +138,6 @@ Options that are passed directly to `postcss`, as per [the documentation](https:
   postcss: {from: 'filename.css'}
 }
 ```
-
 
 ##### `use`
 

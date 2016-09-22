@@ -1,6 +1,3 @@
-/**
- * Module dependencies
- */
 var assign = require('object-assign-deep');
 var isEmpty = require('lodash.isempty');
 var difference = require('lodash.difference');
@@ -10,10 +7,6 @@ var cssnano = require('cssnano');
 var reporter = require('postcss-reporter');
 var stylelint = require('stylelint');
 var stylelintConfigSuit = require('stylelint-config-suitcss');
-
-/**
- * Module export
- */
 
 module.exports = preprocessor;
 
@@ -92,22 +85,15 @@ function preprocessor(css, options) {
 
 function mergeOptions(options) {
   options = options || {};
-
-  var merged = assign({}, defaults, options);
+  var mergedOpts = assign({}, defaults, options);
 
   // Set some core options
-  if (merged.root) {
-    merged['postcss-easy-import'].root = merged.root;
+  if (mergedOpts.root) {
+    mergedOpts['postcss-easy-import'].root = mergedOpts.root;
   }
 
-  // Call beforeLint function and pass processed css to bem-linter
-  var beforeLint = merged.beforeLint;
-  merged['postcss-easy-import'].transform = function(css, filename) {
-    if (typeof beforeLint === 'function') {
-      css = beforeLint(css, filename, merged);
-    }
-
-    return lintImportedFiles(merged, css, filename).then(function(result) {
+  mergedOpts['postcss-easy-import'].transform = function(css, filename) {
+    return lintImportedFiles(mergedOpts, css, filename).then(function(result) {
       return result.css;
     });
   };
@@ -115,11 +101,11 @@ function mergeOptions(options) {
   // Allow additional plugins to be merged with the defaults
   // but remove any duplicates so that it respects the new order
   if (!isEmpty(options.use)) {
-    var plugins = difference(merged.use, options.use);
-    merged.use = plugins.concat(options.use);
+    var plugins = difference(mergedOpts.use, options.use);
+    mergedOpts.use = plugins.concat(options.use);
   }
 
-  return merged;
+  return mergedOpts;
 }
 
 /**
