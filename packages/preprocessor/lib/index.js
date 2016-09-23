@@ -30,12 +30,8 @@ var defaults = {
       'ios > 6, android > 4.3, samsung > 3, chromeandroid > 50'
   },
   'postcss-easy-import': {
-    onImport: function(imported) {
-      // Update the watch task with the list of imported files
-      if (typeof global.watchCSS === 'function') {
-        global.watchCSS(imported);
-      }
-    }
+    transform: identity,
+    onImport: noop
   },
   'postcss-reporter': {
     clearMessages: true
@@ -48,7 +44,6 @@ var defaults = {
     safe: true
   }
 };
-
 
 /**
  * Process CSS
@@ -86,16 +81,24 @@ function preprocessor(css, options) {
 function mergeOptions(options) {
   options = options || {};
   var mergedOpts = assign({}, defaults, options);
+  var easyImportOpts = mergedOpts['postcss-easy-import'];
+  var origTransform = easyImportOpts.transform;
+  var origOnImport = easyImportOpts.onImport;
 
-  // Set some core options
   if (mergedOpts.root) {
-    mergedOpts['postcss-easy-import'].root = mergedOpts.root;
+    easyImportOpts.root = mergedOpts.root;
   }
 
-  mergedOpts['postcss-easy-import'].transform = function(css, filename) {
-    return lintImportedFiles(mergedOpts, css, filename).then(function(result) {
+  easyImportOpts.transform = function(css, filename) {
+    var transformedCss = origTransform(css);
+    return lintImportedFiles(mergedOpts, transformedCss, filename).then(function(result) {
       return result.css;
     });
+  };
+
+  easyImportOpts.onImport = function(importedFiles) {
+    updateWatchTaskFiles(importedFiles);
+    origOnImport(importedFiles);
   };
 
   // Allow additional plugins to be merged with the defaults
@@ -126,5 +129,27 @@ function lintImportedFiles(options, css, filename) {
     .use(bemLinter(options['postcss-bem-linter']))
     .use(reporter(options['postcss-reporter']));
 
+  if (isPromise(css)) {
+    return css.then(function(css) { // eslint-disable-line no-shadow
+      return processor.process(css, {from: filename});
+    });
+  }
+
   return processor.process(css, {from: filename});
+}
+
+function isPromise(obj) {
+  return typeof obj.then === 'function';
+}
+
+function noop() {}
+
+function identity(x) {
+  return x;
+}
+
+function updateWatchTaskFiles(files) {
+  if (typeof global.watchCSS === 'function') {
+    global.watchCSS(files);
+  }
 }

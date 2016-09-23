@@ -69,7 +69,7 @@ Examples:
 
 ### Node.js
 
-Returns a [PostCSS promise](https://github.com/postcss/postcss/blob/master/docs/api.md#lazyresult-class)
+Returns a [PostCSS promise](http://api.postcss.org/LazyResult.html)
 
 ```js
 var preprocessor = require('suitcss-preprocessor');
@@ -131,7 +131,7 @@ If set to `true` then the output is minified by [`cssnano`](http://cssnano.co/).
 * Type: `Object`
 * Default: `undefined`
 
-Options that are passed directly to `postcss`, as per [the documentation](https://github.com/postcss/postcss/blob/master/docs/api.md#processorprocesscss-opts).
+Options that are passed directly to `postcss`, as per [the documentation](http://api.postcss.org/global.html#processOptions).
 
 ```js
 {
@@ -195,7 +195,7 @@ Options are merged recursively with the defaults. For example, adding new plugin
 
 By default the preprocessor uses all necessary plugins to build SUIT components. However additional plugins can be installed into a project and then added to the `use` array.
 
-**Note**: This will not work with the preprocessor installed globally. Instead rely on the convenience of `npm run <script>`
+**Note**: This will not work with the preprocessor installed globally. Instead rely on the convenience of `npm run script`
 
 ```js
 module.exports = {

@@ -1,5 +1,8 @@
 {
   "extends": "airbnb/legacy",
+  "globals": {
+    "Promise": true
+  },
   "rules": {
     "vars-on-top": 0,
     "no-console": 0,

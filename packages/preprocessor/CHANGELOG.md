@@ -1,5 +1,6 @@
 ### HEAD
 
+* Allow usage of `transform` and `onImport` in `postcss-easy-import`
 * Remove `beforeLint` feature
 * Add default browsers list for autoprefixer
 * Use `stylelint-config-suitcss` from within the preprocessor. No longer needs

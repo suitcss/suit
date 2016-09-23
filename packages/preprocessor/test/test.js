@@ -121,6 +121,94 @@ describe('suitcss', function() {
       });
     });
 
+    describe('using the transform option in postcss-import', function() {
+      it('should use a default transform function that just returns the css', function(done) {
+        suitcss('@import "./util.css";', {
+          lint: true,
+          root: 'test/fixtures'
+        }).then(function(result) {
+          expect(result.css).to.equal('.u-img {\n  border-radius: 50%;\n}');
+          done();
+        })
+        .catch(done);
+      });
+
+      it('should call a custom transform function with the imported component', function(done) {
+        var transformStub = sinon.stub().returns('body { color: blue; }');
+
+        suitcss('@import "./util.css";', {
+          lint: true,
+          root: 'test/fixtures',
+          'postcss-easy-import': {
+            transform: transformStub
+          }
+        }).then(function(result) {
+          expect(transformStub.calledOnce).to.be.true;
+          expect(transformStub.getCall(0).args[0]).to.equal('.u-img {\n  border-radius: 50%;\n}\n');
+          expect(result.css).to.equal('body { color: blue; }');
+          done();
+        })
+        .catch(done);
+      });
+
+      it('should also work with a promise returned from the custom transform function', function(done) {
+        suitcss('@import "./util.css";', {
+          lint: true,
+          root: 'test/fixtures',
+          'postcss-easy-import': {
+            transform: function() {
+              return Promise.resolve('body { font: red; }');
+            }
+          }
+        }).then(function(result) {
+          expect(result.css).to.equal('body { font: red; }');
+          done();
+        })
+        .catch(done);
+      });
+    });
+
+    describe('using the onImport option postcss-import', function() {
+      var updateWatchTaskFilesSpy, revert;
+
+      beforeEach(function() {
+        updateWatchTaskFilesSpy = sinon.spy();
+        revert = suitcss.__set__('updateWatchTaskFiles', updateWatchTaskFilesSpy);
+      });
+
+      afterEach(function() {
+        revert();
+      });
+
+      it('should call the updateWatchTaskFiles function with the file paths', function(done) {
+        suitcss('@import "./util.css";', {
+          lint: true,
+          root: 'test/fixtures'
+        }).then(function() {
+          expect(updateWatchTaskFilesSpy.getCall(0).args[0][0]).to.contain('util.css');
+          done();
+        })
+        .catch(done);
+      });
+
+      it('should call a custom onImport function', function(done) {
+        var onImportSpy = sinon.spy();
+
+        suitcss('@import "./util.css";', {
+          lint: true,
+          root: 'test/fixtures',
+          'postcss-easy-import': {
+            onImport: onImportSpy
+          }
+        }).then(function() {
+          expect(onImportSpy.getCall(0).args[0][0]).to.contain('util.css');
+          expect(updateWatchTaskFilesSpy.getCall(0).args[0][0]).to.contain('util.css');
+          done();
+        })
+        .catch(done);
+      });
+    });
+
     describe('re-ordering plugins', function() {
       it('should allow reordering of use array and remove duplicates', function() {
         var opts = mergeOptions({
