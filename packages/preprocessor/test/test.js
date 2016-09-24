@@ -41,15 +41,7 @@ describe('suitcss', function() {
     });
 
     it('should use default options when nothing is passed', function() {
-      var keys = [
-        'autoprefixer',
-        'minify',
-        'use',
-        'lint',
-        'postcss-easy-import',
-        'postcss-reporter',
-        'cssnano'
-      ];
+      var keys = Object.keys(defaults);
       expect(mergeOptions({})).to.have.keys(keys);
       expect(mergeOptions()).to.have.keys(keys);
       expect(mergeOptions({}).use).to.eql(defaults.use);
@@ -59,6 +51,19 @@ describe('suitcss', function() {
     it('should allow an import root to be set', function() {
       var opts = mergeOptions({root: 'test/root'});
       expect(opts['postcss-easy-import'].root).to.equal('test/root');
+    });
+
+    it('should allow a debug function to be ran on plugins', function (done) {
+      var debug = sinon.spy(function (plugins) {
+        return plugins;
+      });
+
+      suitcss('body {}', {
+        debug: debug
+      }).then(function () {
+        expect(debug.calledOnce).to.be.true;
+        done();
+      }).catch(done);
     });
 
     it('should allow stylelint to be enabled', function() {

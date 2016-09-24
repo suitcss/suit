@@ -1,5 +1,6 @@
 ### HEAD
 
+* Add `debug` option to pass an `postcss-debug` instance
 * Allow usage of `transform` and `onImport` in `postcss-easy-import`
 * Remove `beforeLint` feature
 * Add default browsers list for autoprefixer

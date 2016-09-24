@@ -11,12 +11,14 @@ var stylelintConfigSuit = require('stylelint-config-suitcss');
 module.exports = preprocessor;
 
 /**
- * Default options to PostCSS plugins
+ * Default configuration
+ * and options to PostCSS plugins
  */
 
 var defaults = {
-  minify: false,
+  debug: identity,
   lint: false,
+  minify: false,
   use: [
     'postcss-easy-import',
     'postcss-custom-properties',
@@ -62,7 +64,7 @@ function preprocessor(css, options) {
     return settings ? plugin(settings) : plugin;
   });
 
-  var processor = postcss(plugins);
+  var processor = postcss(options.debug(plugins));
 
   if (options.minify) {
     processor.use(cssnano(options.cssnano));

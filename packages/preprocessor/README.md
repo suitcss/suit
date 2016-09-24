@@ -94,6 +94,35 @@ preprocessor(css, {
 
 Where to resolve imports from. Passed to [`postcss-import`](https://github.com/postcss/postcss-import/blob/master/README.md#root).
 
+##### `debug`
+
+* Type: `Function`
+* Default: identity (it does nothing)
+
+Before preprocessing `debug` is invoked on the postcss `plugins` array.
+This allows you to pass a [`postcss-debug`](https://www.npmjs.com/package/postcss-debug) instance.
+
+```javascript
+var preprocessor = require('suitcss-preprocessor');
+var createDebugger = require('postcss-debug').createDebugger;
+var debug = createDebugger();
+
+preprocessor(css, {
+  debug: debug
+}).then(function () {
+  debug.inspect();
+});
+```
+
+N.B. `debug` should always take one argument that is `plugins` and eventually return it:
+
+```javascript
+function debug(plugins) {
+  // do something with plugins here
+  return plugins;
+}
+```
+
 ##### `lint`
 
 * Type: `Boolean`
