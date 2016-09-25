@@ -23,7 +23,9 @@ var defaults = {
     'postcss-easy-import',
     'postcss-custom-properties',
     'postcss-calc',
+    'postcss-color-function',
     'postcss-custom-media',
+    'postcss-apply',
     'autoprefixer',
     'postcss-reporter'
   ],

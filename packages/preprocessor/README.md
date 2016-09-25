@@ -12,6 +12,8 @@ Compiles CSS packages with:
 * [postcss-easy-import](https://github.com/TrySound/postcss-easy-import)
 * [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)
 * [postcss-calc](https://github.com/postcss/postcss-calc)
+* [postcss-color-function](https://github.com/postcss/postcss-color-function)
+* [postcss-apply](https://github.com/pascalduez/postcss-apply)
 * [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
 * [autoprefixer](https://github.com/postcss/autoprefixer)
 
@@ -262,7 +264,9 @@ var defaults = [
   'postcss-easy-import',
   'postcss-custom-properties',
   'postcss-calc',
+  'postcss-color-function',
   'postcss-custom-media',
+  'postcss-apply',
   'autoprefixer',
   'postcss-reporter'
 ];
@@ -280,7 +284,9 @@ module.exports = {
 var result = [
   'postcss-easy-import',
   'postcss-custom-properties',
+  'postcss-color-function',
   'postcss-custom-media',
+  'postcss-apply',
   'postcss-at2x',
   'postcss-calc',
   'autoprefixer',

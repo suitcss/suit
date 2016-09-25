@@ -87,7 +87,9 @@ describe('suitcss', function() {
         'postcss-easy-import',
         'postcss-custom-properties',
         'postcss-calc',
+        'postcss-color-function',
         'postcss-custom-media',
+        'postcss-apply',
         'autoprefixer',
         'postcss-reporter'
       ]);
@@ -223,7 +225,9 @@ describe('suitcss', function() {
         expect(opts.use).to.eql([
           'postcss-easy-import',
           'postcss-custom-properties',
+          'postcss-color-function',
           'postcss-custom-media',
+          'postcss-apply',
           'autoprefixer',
           'postcss-at2x',
           'postcss-calc',
@@ -240,7 +244,9 @@ describe('suitcss', function() {
           'postcss-easy-import',
           'postcss-custom-properties',
           'postcss-calc',
+          'postcss-color-function',
           'postcss-custom-media',
+          'postcss-apply',
           'autoprefixer',
           'postcss-reporter',
           'postcss-at2x',
