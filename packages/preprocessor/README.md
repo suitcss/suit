@@ -43,13 +43,14 @@ Usage: suitcss [<input>] [<output>]
 Options:
 
   -h, --help                output usage information
-  -V, --version             output the version number
-  -m, --minify              minify output with cssnano
-  -L, --no-lint             disable stylelint and postcss-bem-linter
-  -i, --import-root [path]  the root directory for imported css files
   -c, --config [path]       a custom PostCSS config file
-  -v, --verbose             log verbose output for debugging
+  -i, --import-root [path]  the root directory for imported css files
   -w, --watch               watch the input file and any imports for changes
+  -m, --minify              minify output with cssnano
+  -e, --throw-error         throw an error when any warnings are found
+  -L, --no-lint             disable stylelint and postcss-bem-linter
+  -v, --verbose             log verbose output for debugging
+  -V, --version             output the version number
 
 Examples:
 

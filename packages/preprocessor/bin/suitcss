@@ -17,14 +17,16 @@ var writeFileSync = fs.outputFileSync;
  */
 
 program
-  .version(require('../package.json').version)
   .usage('[<input>] [<output>]')
-  .option('-m, --minify', 'minify output with cssnano')
-  .option('-L, --no-lint', 'disable stylelint and postcss-bem-linter')
-  .option('-i, --import-root [path]', 'the root directory for imported css files')
   .option('-c, --config [path]', 'a custom PostCSS config file')
+  .option('-i, --import-root [path]', 'the root directory for imported css files')
+  .option('-w, --watch', 'watch the input file and any imports for changes')
+  .option('-m, --minify', 'minify output with cssnano')
+  .option('-e, --throw-error', 'throw an error when any warnings are found')
+  .option('-L, --no-lint', 'disable stylelint and postcss-bem-linter')
   .option('-v, --verbose', 'log verbose output for debugging')
-  .option('-w, --watch', 'watch the input file and any imports for changes');
+  .version(require('../package.json').version);
+
 
 /**
  * Examples.
@@ -112,6 +114,14 @@ function run() {
       root: program.importRoot,
       lint: program.lint
     }, config);
+
+    if (program.throwError) {
+      assign(opts, {
+        'postcss-reporter': {
+          throwError: true
+        }
+      });
+    }
 
     suitcss(css, opts).then(function(result) {
       if (output) {

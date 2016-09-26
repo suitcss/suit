@@ -1,5 +1,6 @@
 ### HEAD
 
+* Add `--throw-error` (`-e`) to CLI
 * Enable `lint` option by default
 * Add `postcss-apply`
 * Add `postcss-color-function`

@@ -413,8 +413,8 @@ describe('cli', function() {
     });
   });
 
-  it('should output an error to stderr on conformance failure when throwError is set', function(done) {
-    exec('node bin/suitcss -i test/fixtures -c test/error.config.json test/fixtures/import-error.css test/fixtures/cli/output.css', function(err, stdout, stderr) {
+  it('should output an error to stderr on conformance failure when --throw-error is set', function(done) {
+    exec('node bin/suitcss -i test/fixtures -e test/fixtures/import-error.css test/fixtures/cli/output.css', function(err, stdout, stderr) {
       expect(err).to.be.an('error');
       expect(err.code).to.equal(1);
       expect(stderr).to.contain('postcss-reporter: warnings or errors were found');
