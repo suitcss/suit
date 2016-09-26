@@ -20,7 +20,7 @@ program
   .version(require('../package.json').version)
   .usage('[<input>] [<output>]')
   .option('-m, --minify', 'minify output with cssnano')
-  .option('-l, --lint', 'ensure code adheres to the SUIT code style')
+  .option('-L, --no-lint', 'disable stylelint and postcss-bem-linter')
   .option('-i, --import-root [path]', 'the root directory for imported css files')
   .option('-c, --config [path]', 'a custom PostCSS config file')
   .option('-v, --verbose', 'log verbose output for debugging')

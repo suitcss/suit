@@ -17,7 +17,7 @@ module.exports = preprocessor;
 
 var defaults = {
   debug: identity,
-  lint: false,
+  lint: true,
   minify: false,
   use: [
     'postcss-easy-import',

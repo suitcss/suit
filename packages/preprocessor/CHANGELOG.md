@@ -1,5 +1,6 @@
 ### HEAD
 
+* Enable `lint` option by default
 * Add `postcss-apply`
 * Add `postcss-color-function`
 * Add `debug` option to pass an `postcss-debug` instance

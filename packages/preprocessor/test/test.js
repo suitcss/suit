@@ -66,9 +66,9 @@ describe('suitcss', function() {
       }).catch(done);
     });
 
-    it('should allow stylelint to be enabled', function() {
-      var opts = mergeOptions({lint: true});
-      expect(opts.lint).to.be.true;
+    it('should allow stylelint to be disabled', function() {
+      var opts = mergeOptions({lint: false});
+      expect(opts.lint).to.be.false;
     });
 
     it('should allow a minify option to be set', function() {
@@ -131,7 +131,6 @@ describe('suitcss', function() {
     describe('using the transform option in postcss-import', function() {
       it('should use a default transform function that just returns the css', function(done) {
         suitcss('@import "./util.css";', {
-          lint: true,
           root: 'test/fixtures'
         }).then(function(result) {
           expect(result.css).to.equal('.u-img {\n  border-radius: 50%;\n}');
@@ -144,7 +143,6 @@ describe('suitcss', function() {
         var transformStub = sinon.stub().returns('body { color: blue; }');
 
         suitcss('@import "./util.css";', {
-          lint: true,
           root: 'test/fixtures',
           'postcss-easy-import': {
             transform: transformStub
@@ -160,7 +158,6 @@ describe('suitcss', function() {
 
       it('should also work with a promise returned from the custom transform function', function(done) {
         suitcss('@import "./util.css";', {
-          lint: true,
           root: 'test/fixtures',
           'postcss-easy-import': {
             transform: function() {
@@ -189,7 +186,6 @@ describe('suitcss', function() {
 
       it('should call the updateWatchTaskFiles function with the file paths', function(done) {
         suitcss('@import "./util.css";', {
-          lint: true,
           root: 'test/fixtures'
         }).then(function() {
           expect(updateWatchTaskFilesSpy.getCall(0).args[0][0]).to.contain('util.css');
@@ -202,7 +198,6 @@ describe('suitcss', function() {
         var onImportSpy = sinon.spy();
 
         suitcss('@import "./util.css";', {
-          lint: true,
           root: 'test/fixtures',
           'postcss-easy-import': {
             onImport: onImportSpy
@@ -259,7 +254,6 @@ describe('suitcss', function() {
       it('should lint the component', function() {
         return expect(
           suitcss(read('fixtures/component'), {
-            lint: true,
             root: 'test/fixtures',
             'postcss-reporter': {
               throwError: true
@@ -271,7 +265,6 @@ describe('suitcss', function() {
       it('should allow the config to be overidden', function() {
         return expect(
           suitcss('@import "./stylelint.css"', {
-            lint: true,
             root: 'test/fixtures',
             stylelint: {
               extends: 'stylelint-config-suitcss',
@@ -289,7 +282,6 @@ describe('suitcss', function() {
       it('should throw an error if stylelint fails', function() {
         return expect(
           suitcss('@import "./stylelint.css"', {
-            lint: true,
             root: 'test/fixtures',
             'postcss-reporter': {
               throwError: true

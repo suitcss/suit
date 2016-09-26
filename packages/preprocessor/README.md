@@ -17,7 +17,7 @@ Compiles CSS packages with:
 * [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
 * [autoprefixer](https://github.com/postcss/autoprefixer)
 
-Each imported file is linted with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and minification is provided by [cssnano](http://cssnano.co/). Code style can also be checked with [stylelint](http://stylelint.io/)
+Each imported file is linted with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and [stylelint](http://stylelint.io/). Minification is provided by [cssnano](http://cssnano.co/).
 
 Additional plugins can be added via the configuration options.
 
@@ -45,7 +45,7 @@ Options:
   -h, --help                output usage information
   -V, --version             output the version number
   -m, --minify              minify output with cssnano
-  -l, --lint                ensure code adheres to the SUIT code style
+  -L, --no-lint             disable stylelint and postcss-bem-linter
   -i, --import-root [path]  the root directory for imported css files
   -c, --config [path]       a custom PostCSS config file
   -v, --verbose             log verbose output for debugging
@@ -128,7 +128,7 @@ function debug(plugins) {
 ##### `lint`
 
 * Type: `Boolean`
-* Default: `false`
+* Default: `true`
 
 Ensure code conforms to the [SUIT code style](https://github.com/suitcss/suit/blob/master/doc/STYLE.md)
 by using the [stylelint-config-suitcss](https://github.com/suitcss/stylelint-config-suitcss) package.
@@ -140,7 +140,6 @@ locally in your package.
 
 ```js
 {
-  lint: true,
   stylelint: {
     extends: 'stylelint-config-suitcss',
     rules: {
