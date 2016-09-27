@@ -42,13 +42,11 @@
     "mocha": "^2.3.4",
     "postcss-property-lookup": "^1.1.4",
     "rewire": "^2.5.1",
-    "sinon": "^1.17.2",
-    "sinon-as-promised": "^4.0.0",
-    "sinon-chai": "^2.8.0"
+    "sinon": "^1.17.2"
   },
   "scripts": {
     "test": "npm run mocha && npm run lint",
-    "mocha": "mocha --reporter spec --slow 400 --timeout 8000",
+    "mocha": "mocha test/index.js --reporter spec --slow 400 --timeout 8000",
     "lint": "eslint lib/index.js test/test.js bin/suitcss",
     "watch": "npm run mocha -- --watch"
   },
