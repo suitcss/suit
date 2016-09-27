@@ -1,5 +1,7 @@
 ### HEAD
 
+* Input file is now linted (previously only imported files were passed through
+  the linting tools)
 * Add `--throw-error` (`-e`) to CLI
 * Enable `lint` option by default
 * Add `postcss-apply`

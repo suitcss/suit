@@ -75,15 +75,26 @@ Examples:
 Returns a [PostCSS promise](http://api.postcss.org/LazyResult.html)
 
 ```js
+preprocessor(css: String [, options: Object] [, filename: String]);
+```
+
+* `css`: CSS input (_required_)
+* `options`: Options to the preprocessor (see below) (_optional_)
+* `filename`: Filename of the input CSS file (_optional_)
+
+#### Example
+
+```js
 var preprocessor = require('suitcss-preprocessor');
 var fs = require('fs');
 
-var css = fs.readFileSync('src/components/index.css', 'utf8');
+var filename = 'src/components/index.css';
+var css = fs.readFileSync(filename, 'utf8');
 
 preprocessor(css, {
   root: 'path/to/css',
   minify: true,
-}).then(function(result) {
+}, filename).then(function(result) {
   fs.writeFileSync('build/bundle.css', result.css);
 });
 ```

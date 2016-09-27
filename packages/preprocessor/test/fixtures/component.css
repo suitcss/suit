@@ -1,7 +1,6 @@
 /** @define Component */
 
 @import "./util.css";
-
 @custom-media --media-query (min-width: 200px);
 
 :root {
@@ -12,17 +11,19 @@
 }
 
 .Component {
+  background: color(red a(90%));
   font-size: var(--Component-size);
   width: calc(100% * 1 / 6);
-  background: color(red a(90%));
 }
 
 .Component-item {
   display: flex;
+
   @apply --Component-color;
 }
 
 @media (--media-query) {
+
   .Component-item {
     color: red;
   }

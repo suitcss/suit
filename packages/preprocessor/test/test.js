@@ -20,7 +20,7 @@ var expect = chai.expect;
 
 describe('suitcss', function() {
   it('should return a css string', function(done) {
-    suitcss('body {}').then(function(result) {
+    suitcss('body {}', {lint: false}).then(function(result) {
       expect(result.css).to.be.a('string');
       done();
     });
@@ -28,7 +28,7 @@ describe('suitcss', function() {
 
   it('should handle invalid input', function() {
     expect(function() {
-      suitcss(null);
+      suitcss(null, {lint: false});
     }).to.throw(TypeError);
   });
 
@@ -59,7 +59,8 @@ describe('suitcss', function() {
       });
 
       suitcss('body {}', {
-        debug: debug
+        debug: debug,
+        lint: false
       }).then(function () {
         expect(debug.calledOnce).to.be.true;
         done();
@@ -102,19 +103,20 @@ describe('suitcss', function() {
 
       beforeEach(function() {
         postcssStub = sinon.stub();
-        processMethodStub = sinon.stub();
+        processMethodStub = sinon.stub().returns(Promise.resolve());
 
         postcssStub.returns({
-          use: sinon.spy(),
+          use: sinon.stub().returns({use: sinon.spy()}),
           process: processMethodStub
         });
         revert = suitcss.__set__('postcss', postcssStub);
         suitcss('body {}', {
           root: 'something',
+          lint: false,
           postcss: {
-            from: 'somefile.css'
+            test: 'testing'
           }
-        });
+        }, 'filename.css');
       });
 
       afterEach(function() {
@@ -123,7 +125,8 @@ describe('suitcss', function() {
 
       it('should pass postcss options to the processor', function() {
         expect(processMethodStub.getCall(0).args[1]).to.eql({
-          from: 'somefile.css'
+          from: 'filename.css',
+          test: 'testing'
         });
       });
     });
@@ -131,7 +134,8 @@ describe('suitcss', function() {
     describe('using the transform option in postcss-import', function() {
       it('should use a default transform function that just returns the css', function(done) {
         suitcss('@import "./util.css";', {
-          root: 'test/fixtures'
+          root: 'test/fixtures',
+          lint: false
         }).then(function(result) {
           expect(result.css).to.equal('.u-img {\n  border-radius: 50%;\n}');
           done();
@@ -144,6 +148,7 @@ describe('suitcss', function() {
 
         suitcss('@import "./util.css";', {
           root: 'test/fixtures',
+          lint: false,
           'postcss-easy-import': {
             transform: transformStub
           }
@@ -159,6 +164,7 @@ describe('suitcss', function() {
       it('should also work with a promise returned from the custom transform function', function(done) {
         suitcss('@import "./util.css";', {
           root: 'test/fixtures',
+          lint: false,
           'postcss-easy-import': {
             transform: function() {
               return Promise.resolve('body { font: red; }');
@@ -186,7 +192,8 @@ describe('suitcss', function() {
 
       it('should call the updateWatchTaskFiles function with the file paths', function(done) {
         suitcss('@import "./util.css";', {
-          root: 'test/fixtures'
+          root: 'test/fixtures',
+          lint: false
         }).then(function() {
           expect(updateWatchTaskFilesSpy.getCall(0).args[0][0]).to.contain('util.css');
           done();
@@ -199,6 +206,7 @@ describe('suitcss', function() {
 
         suitcss('@import "./util.css";', {
           root: 'test/fixtures',
+          lint: false,
           'postcss-easy-import': {
             onImport: onImportSpy
           }
@@ -264,7 +272,7 @@ describe('suitcss', function() {
 
       it('should allow the config to be overidden', function() {
         return expect(
-          suitcss('@import "./stylelint.css"', {
+          suitcss('@import "./stylelint.css"\n\n', {
             root: 'test/fixtures',
             stylelint: {
               extends: 'stylelint-config-suitcss',
@@ -281,8 +289,18 @@ describe('suitcss', function() {
 
       it('should throw an error if stylelint fails', function() {
         return expect(
-          suitcss('@import "./stylelint.css"', {
+          suitcss('@import "./stylelint.css"\n\n', {
             root: 'test/fixtures',
+            'postcss-reporter': {
+              throwError: true
+            }
+          })
+        ).to.be.rejectedWith(Error, 'postcss-reporter: warnings or errors were found');
+      });
+
+      it('should lint the input file', function() {
+        return expect(
+          suitcss('body {}', {
             'postcss-reporter': {
               throwError: true
             }
@@ -304,6 +322,7 @@ describe('features', function() {
 
     suitcss(input, {
       root: 'test/fixtures',
+      lint: false,
       // disable autoprefixer
       autoprefixer: {add: false, remove: false}
     }).then(function(result) {
@@ -317,6 +336,7 @@ describe('features', function() {
     var output = '.test { -webkit-filter: blur(1px); filter: blur(1px) }';
 
     suitcss(input, {
+      lint: false,
       autoprefixer: {
         browsers: 'Chrome 50'
       }
@@ -349,7 +369,7 @@ describe('cli', function() {
   });
 
   it('should read from a file and write to stdout', function(done) {
-    exec('node bin/suitcss -c test/noautoprefixer.config.js test/fixtures/cli/input.css', function(err, stdout) {
+    exec('node bin/suitcss -L -c test/noautoprefixer.config.js test/fixtures/cli/input.css', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.equal(output);
       done();
@@ -357,7 +377,7 @@ describe('cli', function() {
   });
 
   it('should read from stdin and write to stdout', function(done) {
-    var testChild = exec('node bin/suitcss -c test/noautoprefixer.config.js', function(err, stdout) {
+    var testChild = exec('node bin/suitcss -L -c test/noautoprefixer.config.js', function(err, stdout) {
       if (err) return done(err);
       expect(stdout).to.equal(output);
       done();

@@ -123,7 +123,7 @@ function run() {
       });
     }
 
-    suitcss(css, opts).then(function(result) {
+    suitcss(css, opts, input).then(function(result) {
       if (output) {
         writeFileSync(output, result.css + '\n');
       } else {

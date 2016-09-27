@@ -53,16 +53,17 @@ var defaults = {
  * Process CSS
  *
  * @param {String} css
+ * @param {Object} options
+ * @param {String} filename
  * @returns {Promise}
  */
 
-function preprocessor(css, options) {
+function preprocessor(css, options, filename) {
   options = mergeOptions(options);
 
   var plugins = options.use.map(function(p) {
     var plugin = require(p);
     var settings = options[p];
-
     return settings ? plugin(settings) : plugin;
   });
 
@@ -72,7 +73,9 @@ function preprocessor(css, options) {
     processor.use(cssnano(options.cssnano));
   }
 
-  return processor.process(css, options.postcss);
+  return lintFile(css, options, filename).then(function(result) {
+    return processor.process(result.css, options.postcss);
+  });
 }
 
 /**
@@ -95,7 +98,7 @@ function mergeOptions(options) {
 
   easyImportOpts.transform = function(css, filename) {
     var transformedCss = origTransform(css);
-    return lintImportedFiles(mergedOpts, transformedCss, filename).then(function(result) {
+    return lintFile(transformedCss, mergedOpts, filename).then(function(result) {
       return result.css;
     });
   };
@@ -116,18 +119,24 @@ function mergeOptions(options) {
 }
 
 /**
- * Lint each imported component with postcss-bem-linter
- * and stylelint
+ * Lint component with postcss-bem-linter and stylelint
  *
+ * @param {String} css
  * @param {Object} options
+ * @param {String} filename
  * @returns {Promise} Used by postcss-import transform
  */
-function lintImportedFiles(options, css, filename) {
+function lintFile(css, options, filename) {
   var processor = postcss();
 
   if (options.lint) {
     processor.use(stylelint(options.stylelint || stylelintConfigSuit));
   }
+
+  // Merge filename alongside any other `postcss` options
+  assign(options, {
+    postcss: {from: filename}
+  });
 
   processor
     .use(bemLinter(options['postcss-bem-linter']))
@@ -135,11 +144,11 @@ function lintImportedFiles(options, css, filename) {
 
   if (isPromise(css)) {
     return css.then(function(css) { // eslint-disable-line no-shadow
-      return processor.process(css, {from: filename});
+      return processor.process(css, options.postcss);
     });
   }
 
-  return processor.process(css, {from: filename});
+  return processor.process(css, options.postcss);
 }
 
 function isPromise(obj) {
