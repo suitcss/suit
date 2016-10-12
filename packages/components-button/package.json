@@ -1,18 +1,27 @@
 {
   "name": "suitcss-components-button",
-  "description": "Structural button styles for SUIT CSS",
   "version": "5.0.0",
-  "style": "index.css",
+  "description": "Structural button styles for SUIT CSS",
+  "keywords": [
+    "browser",
+    "css-components",
+    "button",
+    "suitcss",
+    "style"
+  ],
+  "homepage": "https://github.com/suitcss/components-button#readme",
+  "bugs": "https://github.com/suitcss/components-button/labels/bug",
+  "license": "MIT",
+  "author": "Nicolas Gallagher",
   "files": [
     "index.css",
     "lib"
   ],
-  "devDependencies": {
-    "stylelint-config-suitcss": "^4.0.0",
-    "suitcss-components-test": "*",
-    "suitcss-preprocessor": "^1.0.1"
+  "style": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/components-button.git"
   },
-  "license": "MIT",
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",
@@ -23,15 +32,9 @@
     "watch": "npm run preprocess-test -- -w -v",
     "test": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/components-button.git"
-  },
-  "keywords": [
-    "browser",
-    "css-components",
-    "button",
-    "suitcss",
-    "style"
-  ]
+  "devDependencies": {
+    "stylelint-config-suitcss": "^4.0.0",
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^1.0.1"
+  }
 }
