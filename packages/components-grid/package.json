@@ -1,20 +1,27 @@
 {
   "name": "suitcss-components-grid",
   "version": "3.0.3",
+  "description": "SUIT CSS component for grid layouts",
+  "keywords": [
+    "browser",
+    "css-components",
+    "grid",
+    "suitcss",
+    "style"
+  ],
+  "homepage": "https://github.com/suitcss/components-grid#readme",
+  "bugs": "https://github.com/suitcss/components-grid/labels/bug",
   "license": "MIT",
-  "style": "index.css",
+  "author": "Nicolas Gallagher",
   "files": [
     "index.css",
     "index.js",
     "lib"
   ],
-  "devDependencies": {
-    "stylelint": "^5.4.0",
-    "stylelint-config-suitcss": "^5.0.0",
-    "suitcss-components-test": "*",
-    "suitcss-preprocessor": "^2.0.0",
-    "suitcss-utils-offset": "^1.0.0",
-    "suitcss-utils-size": "^1.0.0"
+  "style": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/components-grid.git"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
@@ -25,16 +32,12 @@
     "watch": "npm run preprocess-test -- -w -v",
     "test": "suitcss -c test/config.json index.css build/output.css && rm build/output.css"
   },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/components-grid.git"
-  },
-  "keywords": [
-    "browser",
-    "css-components",
-    "grid",
-    "suitcss",
-    "style"
-  ]
+  "devDependencies": {
+    "stylelint": "^5.4.0",
+    "stylelint-config-suitcss": "^5.0.0",
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^2.0.0",
+    "suitcss-utils-offset": "^1.0.0",
+    "suitcss-utils-size": "^1.0.0"
+  }
 }
