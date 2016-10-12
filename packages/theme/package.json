@@ -1,31 +1,35 @@
 {
   "name": "suitcss-theme",
-  "description": "Example theme for SUIT CSS",
   "version": "1.0.0",
-  "style": "theme.css",
+  "description": "Example theme for SUIT CSS",
+  "keywords": [
+    "browser",
+    "css-theme",
+    "suitcss",
+    "style"
+  ],
+  "homepage": "https://github.com/suitcss/theme#readme",
+  "bugs": "https://github.com/suitcss/theme/labels/bug",
+  "license": "MIT",
+  "author": "Nicolas Gallagher",
   "files": [
     "index.css",
     "lib"
   ],
-  "dependencies": {
-    "suitcss": "^2.0.0"
-  },
-  "devDependencies": {
-    "suitcss-preprocessor": "^2.0.0"
+  "style": "theme.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/theme.git"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "preprocess": "suitcss index.css build/build.css",
     "setup": "npm install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/theme.git"
+  "dependencies": {
+    "suitcss": "^2.0.0"
   },
-  "keywords": [
-    "browser",
-    "css-theme",
-    "suitcss",
-    "style"
-  ]
+  "devDependencies": {
+    "suitcss-preprocessor": "^2.0.0"
+  }
 }
