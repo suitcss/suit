@@ -1,12 +1,32 @@
 {
   "name": "suitcss-utils-offset",
-  "description": "Offset utilities for SUIT CSS",
   "version": "1.0.0",
-  "style": "index.css",
+  "description": "Offset utilities for SUIT CSS",
+  "keywords": [
+    "browser",
+    "css-utilities",
+    "offset",
+    "suitcss",
+    "style"
+  ],
+  "homepage": "https://github.com/suitcss/utils-offset#readme",
+  "bugs": "https://github.com/suitcss/utils-offset/labels/bug",
+  "license": "MIT",
+  "author": "Nicolas Gallagher",
   "files": [
     "index.css",
     "index.js"
   ],
+  "style": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/utils-offset.git"
+  },
+  "scripts": {
+    "build": "npm run setup && npm run preprocess",
+    "preprocess": "suitcss index.css build/build.css",
+    "setup": "npm install"
+  },
   "dependencies": {
     "suitcss-utils-after": "^1.0.0",
     "suitcss-utils-before": "^1.0.0"
@@ -14,21 +34,5 @@
   "devDependencies": {
     "suitcss-components-test": "*",
     "suitcss-preprocessor": "^1.0.0"
-  },
-  "scripts": {
-    "build": "npm run setup && npm run preprocess",
-    "preprocess": "suitcss index.css build/build.css",
-    "setup": "npm install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/utils-offset.git"
-  },
-  "keywords": [
-    "browser",
-    "css-utilities",
-    "offset",
-    "suitcss",
-    "style"
-  ]
+  }
 }
