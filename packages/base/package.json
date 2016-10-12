@@ -1,20 +1,28 @@
 {
   "name": "suitcss-base",
-  "description": "CSS base styles",
   "version": "2.0.0",
-  "style": "index.css",
+  "description": "CSS base styles",
+  "keywords": [
+    "base",
+    "browser",
+    "css",
+    "normalize-css",
+    "suitcss",
+    "style"
+  ],
+  "homepage": "https://github.com/suitcss/base#readme",
+  "bugs": "https://github.com/suitcss/base/labels/bug",
+  "license": "MIT",
+  "author": "Nicolas Gallagher",
   "files": [
     "index.css",
     "index.js",
     "lib"
   ],
-  "dependencies": {
-    "normalize.css": "^4.0.0"
-  },
-  "devDependencies": {
-    "stylelint-config-suitcss": "^5.0.0",
-    "suitcss-components-test": "*",
-    "suitcss-preprocessor": "^1.0.2"
+  "style": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/base.git"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
@@ -26,16 +34,12 @@
     "watch": "npm run preprocess-test -- -w -v",
     "test": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/base.git"
+  "dependencies": {
+    "normalize.css": "^4.0.0"
   },
-  "keywords": [
-    "base",
-    "browser",
-    "css",
-    "normalize-css",
-    "suitcss",
-    "style"
-  ]
+  "devDependencies": {
+    "stylelint-config-suitcss": "^5.0.0",
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^1.0.2"
+  }
 }
