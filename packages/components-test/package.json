@@ -1,15 +1,26 @@
 {
   "name": "suitcss-components-test",
-  "description": "CSS to help test the visual presentation of components",
   "version": "1.0.0",
-  "style": "index.css",
+  "description": "CSS to help test the visual presentation of components",
+  "keywords": [
+    "browser",
+    "css-components",
+    "test",
+    "suitcss",
+    "style"
+  ],
+  "homepage": "https://github.com/suitcss/components-test#readme",
+  "bugs": "https://github.com/suitcss/components-test/labels/bug",
+  "license": "MIT",
+  "author": "Nicolas Gallagher",
   "files": [
     "index.css",
     "lib"
   ],
-  "devDependencies": {
-    "stylelint-config-suitcss": "^3.0.0",
-    "suitcss-preprocessor": "^1.0.0"
+  "style": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/components-test.git"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
@@ -21,15 +32,8 @@
     "watch": "npm run preprocess-test -- -w -v",
     "test": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/components-test.git"
-  },
-  "keywords": [
-    "browser",
-    "css-components",
-    "test",
-    "suitcss",
-    "style"
-  ]
+  "devDependencies": {
+    "stylelint-config-suitcss": "^3.0.0",
+    "suitcss-preprocessor": "^1.0.0"
+  }
 }
