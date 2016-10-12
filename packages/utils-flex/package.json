@@ -1,19 +1,28 @@
 {
   "name": "suitcss-utils-flex",
-  "description": "Flexbox utilities for SUIT CSS",
   "version": "1.1.1",
-  "style": "index.css",
+  "description": "Flexbox utilities for SUIT CSS",
+  "keywords": [
+    "browser",
+    "css-utilities",
+    "flex",
+    "flexbox",
+    "suitcss",
+    "style"
+  ],
+  "homepage": "https://github.com/suitcss/utils-flex#readme",
+  "bugs": "https://github.com/suitcss/utils-flex/labels/bug",
+  "license": "MIT",
+  "author": "Simon Smith",
   "files": [
     "index.css",
     "index.js",
     "lib"
   ],
-  "devDependencies": {
-    "stylelint-config-suitcss": "^4.0.0",
-    "suitcss-components-test": "*",
-    "suitcss-preprocessor": "^1.0.0",
-    "suitcss-utils-display": "^1.0.0",
-    "suitcss-utils-size": "^1.0.0"
+  "style": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/utils-flex"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
@@ -25,17 +34,11 @@
     "watch": "npm run preprocess-test -- -w -v",
     "test": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/utils-flex"
-  },
-  "keywords": [
-    "browser",
-    "css-utilities",
-    "flex",
-    "flexbox",
-    "suitcss",
-    "style"
-  ],
-  "dependencies": {}
+  "devDependencies": {
+    "stylelint-config-suitcss": "^4.0.0",
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^1.0.0",
+    "suitcss-utils-display": "^1.0.0",
+    "suitcss-utils-size": "^1.0.0"
+  }
 }
