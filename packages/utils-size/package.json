@@ -1,20 +1,27 @@
 {
   "name": "suitcss-utils-size",
-  "description": "Sizing utilities for SUIT CSS",
   "version": "2.0.0",
-  "style": "index.css",
+  "description": "Sizing utilities for SUIT CSS",
+  "keywords": [
+    "browser",
+    "css-utilities",
+    "size",
+    "suitcss",
+    "style"
+  ],
+  "homepage": "https://github.com/suitcss/utils-size#readme",
+  "bugs": "https://github.com/suitcss/utils-size/labels/bug",
+  "license": "MIT",
+  "author": "Nicolas Gallagher",
   "files": [
     "index.css",
     "index.js",
     "lib"
   ],
-  "license": "MIT",
-  "devDependencies": {
-    "stylelint": "^5.4.0",
-    "stylelint-config-suitcss": "^5.0.0",
-    "suitcss-components-test": "*",
-    "suitcss-preprocessor": "^2.0.0",
-    "suitcss-utils-display": "^1.0.1"
+  "style": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/utils-size.git"
   },
   "scripts": {
     "build": "npm i && npm run preprocess",
@@ -25,15 +32,11 @@
     "watch": "npm run preprocess-test -- -w -v",
     "test": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/utils-size.git"
-  },
-  "keywords": [
-    "browser",
-    "css-utilities",
-    "size",
-    "suitcss",
-    "style"
-  ]
+  "devDependencies": {
+    "stylelint": "^5.4.0",
+    "stylelint-config-suitcss": "^5.0.0",
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^2.0.0",
+    "suitcss-utils-display": "^1.0.1"
+  }
 }
