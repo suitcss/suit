@@ -1,18 +1,26 @@
 {
   "name": "<%= modulePackageName %>",
-  "description": "<%= moduleDescription %>",
   "version": "0.1.0",
+  "description": "<%= moduleDescription %>",
+  "keywords": [
+    "browser",
+    "css-components",
+    "<%= modulePackageName %>",
+    "suitcss",
+    "style"
+  ],
+  "homepage": "https://github.com/<%= moduleAuthorGithubUsername %>/<%= modulePackageName %>#readme",
+  "bugs": "https://github.com/<%= moduleAuthorGithubUsername %>/<%= modulePackageName %>/labels/bug",
   "license": "MIT",
-  "style": "index.css",
   "files": [
     "index.css",
     "index.js",
     "lib"
   ],
-  "devDependencies": {
-    "stylelint-config-suitcss": "^6.0.0",
-    "suitcss-components-test": "*",
-    "suitcss-preprocessor": "^2.0.0"
+  "style": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/<%= moduleAuthorGithubUsername %>/<%= modulePackageName %>.git"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
@@ -23,15 +31,9 @@
     "watch": "npm run preprocess-test -- -w -v",
     "test": "suitcss -c test/config.json index.css build/output.css && rm build/output.css"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/<%= moduleAuthorGithubUsername %>/<%= modulePackageName %>.git"
-  },
-  "keywords": [
-    "browser",
-    "css-components",
-    "<%= modulePackageName %>",
-    "suitcss",
-    "style"
-  ]
+  "devDependencies": {
+    "stylelint-config-suitcss": "^6.0.0",
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^2.0.0"
+  }
 }

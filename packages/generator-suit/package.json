@@ -2,14 +2,6 @@
   "name": "generator-suit",
   "version": "1.0.2",
   "description": "Generator for scaffolding out a SUIT component or utility",
-  "homepage": "https://github.com/suitcss/generator-suit",
-  "author": {
-    "name": "Giuseppe Gurgone"
-  },
-  "files": [
-    "generators"
-  ],
-  "main": "generators/app/index.js",
   "keywords": [
     "yeoman-generator",
     "generator",
@@ -18,6 +10,24 @@
     "yeoman-generator",
     "css component"
   ],
+  "homepage": "https://github.com/suitcss/generator-suit#readme",
+  "bugs": "https://github.com/suitcss/generator-suit/labels/bug",
+  "license": "MIT",
+  "author": "Giuseppe Gurgone",
+  "files": [
+    "generators"
+  ],
+  "main": "generators/app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suitcss/generator-suit.git"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "test": "mocha --reporter spec --slow 400 --timeout 3000",
+    "pretest": "npm run lint",
+    "lint": "eslint test/app.js generators/app/index.js"
+  },
   "dependencies": {
     "chalk": "^1.0.0",
     "lodash.camelcase": "^4.1.0",
@@ -30,13 +40,5 @@
     "mocha": "^2.4.5",
     "nsp": "^2.2.0",
     "yeoman-assert": "^2.0.0"
-  },
-  "repository": "https://github.com/suitcss/generator-suit.git",
-  "scripts": {
-    "prepublish": "nsp check",
-    "test": "mocha --reporter spec --slow 400 --timeout 3000",
-    "pretest": "npm run lint",
-    "lint": "eslint test/app.js generators/app/index.js"
-  },
-  "license": "MIT"
+  }
 }
