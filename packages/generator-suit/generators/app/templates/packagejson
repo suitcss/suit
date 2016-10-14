@@ -12,6 +12,7 @@
   "homepage": "https://github.com/<%= moduleAuthorGithubUsername %>/<%= modulePackageName %>#readme",
   "bugs": "https://github.com/<%= moduleAuthorGithubUsername %>/<%= modulePackageName %>/labels/bug",
   "license": "MIT",
+  "author": "<%= moduleAuthorName %>",
   "files": [
     "index.css",
     "index.js",

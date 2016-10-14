@@ -50,6 +50,12 @@ module.exports = yeoman.generators.Base.extend({
         message: 'Your github username',
         name: 'moduleAuthorGithubUsername',
         default: 'suitcss'
+      },
+      {
+        type: 'input',
+        message: 'Your full name',
+        name: 'moduleAuthorName',
+        default: ''
       }
     ];
 
@@ -57,9 +63,11 @@ module.exports = yeoman.generators.Base.extend({
       // Common props
       this.props = {
         moduleAuthorGithubUsername: props.moduleAuthorGithubUsername,
+        moduleAuthorName: props.moduleAuthorName,
         moduleName: this.moduleName,
         moduleFileName: this.moduleName + '.css',
-        moduleType: props.moduleType
+        moduleType: props.moduleType,
+        moduleYear: new Date().getFullYear()
       };
 
       // Utilities
