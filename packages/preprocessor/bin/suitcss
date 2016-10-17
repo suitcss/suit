@@ -109,11 +109,11 @@ function run() {
   read(input, function(err, buffer) {
     if (err) logger.throw(err);
     var css = buffer.toString();
-    var opts = assign({}, {
+    var opts = assign({}, config, {
       minify: program.minify,
       root: program.importRoot,
       lint: program.lint
-    }, config);
+    });
 
     if (program.throwError) {
       assign(opts, {

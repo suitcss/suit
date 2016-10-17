@@ -1,5 +1,6 @@
 ### HEAD
 
+* CLI flags override config file options
 * Input file is now linted (previously only imported files were passed through
   the linting tools)
 * Add `--throw-error` (`-e`) to CLI

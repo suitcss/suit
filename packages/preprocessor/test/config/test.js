@@ -1,4 +1,5 @@
 module.exports = {
+  lint: true,
   use: [
     "postcss-property-lookup"
   ],

@@ -86,6 +86,16 @@ describe('cli', function() {
     });
   });
 
+  it('should allow to override config options via cli flags', function(done) {
+    exec('node bin/suitcss -L -c test/config/test.js test/fixtures/import.css test/fixtures/cli/output.css', function(err) {
+      if (err) return done(err);
+      var res = util.read('fixtures/cli/output');
+      var commentsPattern = /\/\*[^]*?\*\//g;
+      expect(res).to.match(commentsPattern);
+      done();
+    });
+  });
+
   it('should output an error to stderr on conformance failure when --throw-error is set', function(done) {
     exec('node bin/suitcss -i test/fixtures -e test/fixtures/import-error.css test/fixtures/cli/output.css', function(err, stdout, stderr) {
       expect(err).to.be.an('error');
