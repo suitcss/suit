@@ -171,7 +171,7 @@ The same rules also apply to nested components.
 
 **Rationale**
 
-One of the difficulties with CSS components is predictably. Unwanted styles
+One of the difficulties with CSS components is predictability. Unwanted styles
 can be inherited from parent components and this can make it difficult to
 reuse components in different contexts.
 
