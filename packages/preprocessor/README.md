@@ -12,6 +12,7 @@ Compiles CSS packages with:
 * [postcss-easy-import](https://github.com/TrySound/postcss-easy-import)
 * [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)
 * [postcss-calc](https://github.com/postcss/postcss-calc)
+* [postcss-autoreset](https://github.com/maximkoretskiy/postcss-autoreset)
 * [postcss-color-function](https://github.com/postcss/postcss-color-function)
 * [postcss-apply](https://github.com/pascalduez/postcss-apply)
 * [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
@@ -37,6 +38,8 @@ suitcss input.css output.css
 
 ### Command Line
 
+Options are [documented below](#options)
+
 ```
 Usage: suitcss [<input>] [<output>]
 
@@ -45,6 +48,7 @@ Options:
   -h, --help                output usage information
   -c, --config [path]       a custom PostCSS config file
   -i, --import-root [path]  the root directory for imported css files
+  -s, --encapsulate         encapsulate component styles
   -w, --watch               watch the input file and any imports for changes
   -m, --minify              minify output with cssnano
   -e, --throw-error         throw an error when any warnings are found
@@ -99,16 +103,16 @@ preprocessor(css, {
 });
 ```
 
-#### Options
+### Options
 
-##### `root`
+#### `root`
 
 * Type: `String`
 * Default: `process.cwd()`
 
 Where to resolve imports from. Passed to [`postcss-import`](https://github.com/postcss/postcss-import/blob/master/README.md#root).
 
-##### `debug`
+#### `debug`
 
 * Type: `Function`
 * Default: identity (it does nothing)
@@ -137,7 +141,130 @@ function debug(plugins) {
 }
 ```
 
-##### `lint`
+#### `encapsulate`
+
+_(experimental)_
+
+* Type: `Boolean`
+* Default: `false`
+
+Resets CSS properties to their [initial values](https://developer.mozilla.org/en-US/docs/Web/CSS/initial_value)
+to effectively allow a component to opt out of CSS inheritance and be
+encapsulated from the rest of the application similar to [the Shadow DOM](https://www.w3.org/TR/shadow-dom/).
+There are two types of CSS properties that affect components, inherited (e.g.
+`font-size,` `color`) and non-inherited (e.g. `margin`, `background`). This
+option works so that:
+
+* Root elements (e.g. `.Component`) have both inherited and non-inherited
+  properties reset to default values.
+* Descendants (e.g. `.Component-item`) only have non-inherited properties reset
+  as this allows properties set on the root element to be inherited by its
+  descendants.
+
+This means that components are isolated from styles outside the component root
+element but should an inheritable property such as `font-size` be applied on the
+component root element it will be inherited by the component descendants as
+normal. This prevents the need to redeclare properties on every descendant in a
+component.
+
+The same rules also apply to nested components.
+
+**Rationale**
+
+One of the difficulties with CSS components is predictably. Unwanted styles
+can be inherited from parent components and this can make it difficult to
+reuse components in different contexts.
+
+Methodologies such as SUIT and BEM exist to solve problems around the cascade
+and specificity but they cannot protect components from inheriting unwanted
+styles. What would really help is to allow inheritance to be 'opt-in' and let
+component authors decide what properties are inherited. This creates a more
+predictable baseline for styling components and promoting easier
+reuse.
+
+* [Component Based Style Reuse](https://youtu.be/_70Yp8KPXH8?t=27m45s)
+* [React: CSS in JS](http://blog.vjeux.com/2014/javascript/react-css-in-js-nationjs.html)
+
+**Examples**
+
+* [CodePen encapsulate](http://codepen.io/simonsmith/pen/BLOyAX) - Demonstrates
+  how components are encapsulated from global and parent styles.
+* [CodePen encapsulate inheritance](http://codepen.io/simonsmith/pen/LRgxdp) -
+  Similar to above but shows how components can opt-in to inheritance.
+
+**What about `all: initial`?**
+
+The `all: initial` declaration will reset both inherited and non-inherited
+properties but this can be too forceful. For example `display` is reset to
+`inline` on block elements and as mentioned earlier, descendants of a component
+should only have non-inherited properties reset to allow declarations to be
+inherited from the root element.
+
+> For example, if an author specifies `all: initial` on an element it will block
+  all inheritance and reset all properties, as if no rules appeared in the
+  author, user, or user-agent levels of the cascade.
+
+https://www.w3.org/TR/css3-cascade/#all-shorthand
+
+Instead a subset of properties are reset to allow more
+granular control over what parts of a component use inheritance.
+
+To achieve this the preprocessor uses
+[postcss-autoreset](https://github.com/maximkoretskiy/postcss-autoreset) with
+the SUIT preset and a [custom set of CSS properties](lib/encapsulation.js) that
+are reset to their initial values. **Only selectors conforming** to the SUIT naming
+conventions are affected.
+
+**Caveats**
+
+##### Selectors must be present in the component CSS
+
+If an element is present in the HTML but not styled in the component CSS
+(perhaps relying on utility classes) it will not be reset. In
+this instance an empty ruleset can be added to ensure it is correctly reset:
+
+```html
+<div class="Component u-posRelative u-textCenter">
+  <div class="Component-item"></div>
+</div>
+```
+```css
+/* Empty ruleset required */
+.Component {}
+
+.Component-item {
+  color: red;
+}
+```
+
+##### Global styles can still override descendants
+
+Because component descendants only have non-inheritable properties reset it can
+lead to specific global rules still applying:
+
+```css
+/* global.css */
+span {
+  color: red;
+}
+
+/* component.css */
+.Component-text {
+  font-style: bold;
+}
+```
+```html
+<div class="Component">
+  <span class="Component-text">
+    <!-- this text is red -->
+  <span>
+</div>
+```
+
+The solution to this is to minimise or avoid entirely the use of global styles
+which is the recommended approach in a SUIT CSS application.
+
+#### `lint`
 
 * Type: `Boolean`
 * Default: `true`
@@ -161,14 +288,14 @@ locally in your package.
 }
 ```
 
-##### `minify`
+#### `minify`
 
 * Type: `Boolean`
 * Default: `false`
 
 If set to `true` then the output is minified by [`cssnano`](http://cssnano.co/).
 
-##### `postcss`
+#### `postcss`
 
 * Type: `Object`
 * Default: `undefined`
@@ -194,7 +321,7 @@ A list of plugins that are passed to PostCSS. This can be used to add new plugin
 }
 ```
 
-##### `<plugin-name>`
+#### `<plugin-name>`
 
 * Type: `Object`
 * Default: `undefined`

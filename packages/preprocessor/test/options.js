@@ -43,14 +43,11 @@ describe('basic options', function() {
     });
 
     expect(opts.use).to.eql([
-      'postcss-easy-import',
       'postcss-custom-properties',
       'postcss-calc',
       'postcss-color-function',
       'postcss-custom-media',
-      'postcss-apply',
-      'autoprefixer',
-      'postcss-reporter'
+      'postcss-apply'
     ]);
     expect(opts.autoprefixer).to.eql(autoprefixer);
     expect(opts['postcss-easy-import'].root).to.equal('test/root');
@@ -66,19 +63,16 @@ describe('re-ordering the `use` array of postcss plugins', function() {
 
   it('should allow reordering of use array and remove duplicates', function() {
     var opts = mergeOptions({
-      use: ['autoprefixer', 'postcss-at2x', 'postcss-calc', 'postcss-reporter']
+      use: ['postcss-at2x', 'postcss-calc']
     });
 
     expect(opts.use).to.eql([
-      'postcss-easy-import',
       'postcss-custom-properties',
       'postcss-color-function',
       'postcss-custom-media',
       'postcss-apply',
-      'autoprefixer',
       'postcss-at2x',
-      'postcss-calc',
-      'postcss-reporter'
+      'postcss-calc'
     ]);
   });
 
@@ -88,14 +82,11 @@ describe('re-ordering the `use` array of postcss plugins', function() {
     });
 
     expect(opts.use).to.eql([
-      'postcss-easy-import',
       'postcss-custom-properties',
       'postcss-calc',
       'postcss-color-function',
       'postcss-custom-media',
       'postcss-apply',
-      'autoprefixer',
-      'postcss-reporter',
       'postcss-at2x',
       'postcss-property-lookup'
     ]);

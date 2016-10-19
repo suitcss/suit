@@ -4,7 +4,7 @@
 @custom-media --media-query (min-width: 200px);
 
 :root {
-  --Component-size: 16px;
+  --Component-size: 26px;
   --Component-color: {
     color: green;
   };

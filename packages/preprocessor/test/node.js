@@ -5,7 +5,9 @@ var expect = chai.expect;
 
 describe('node API', function() {
   it('should return a css string', function(done) {
-    suitcss('body {}', {lint: false}).then(function(result) {
+    suitcss('body {}', {
+      lint: false
+    }).then(function(result) {
       expect(result.css).to.be.a('string');
       done();
     });

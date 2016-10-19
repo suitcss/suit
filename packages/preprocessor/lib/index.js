@@ -1,9 +1,12 @@
 var assign = require('object-assign-deep');
-var isEmpty = require('lodash.isempty');
-var difference = require('lodash.difference');
+var autoprefixer = require('autoprefixer');
 var bemLinter = require('postcss-bem-linter');
-var postcss = require('postcss');
 var cssnano = require('cssnano');
+var difference = require('lodash.difference');
+var encapsulationPlugins = require('./encapsulation');
+var isEmpty = require('lodash.isempty');
+var postcss = require('postcss');
+var postcssEasyImport = require('postcss-easy-import');
 var reporter = require('postcss-reporter');
 var stylelint = require('stylelint');
 var stylelintConfigSuit = require('stylelint-config-suitcss');
@@ -19,15 +22,13 @@ var defaults = {
   debug: identity,
   lint: true,
   minify: false,
+  encapsulate: false,
   use: [
-    'postcss-easy-import',
     'postcss-custom-properties',
     'postcss-calc',
     'postcss-color-function',
     'postcss-custom-media',
-    'postcss-apply',
-    'autoprefixer',
-    'postcss-reporter'
+    'postcss-apply'
   ],
   autoprefixer: {
     browsers: '> 1%, last 2 versions, safari > 6, ie > 9, ' +
@@ -61,11 +62,31 @@ var defaults = {
 function preprocessor(css, options, filename) {
   options = mergeOptions(options);
 
-  var plugins = options.use.map(function(p) {
-    var plugin = require(p);
-    var settings = options[p];
-    return settings ? plugin(settings) : plugin;
-  });
+  var plugins = [
+    postcssEasyImport(options['postcss-easy-import'])
+  ];
+
+  plugins = plugins.concat(
+    options.use.map(function(p) {
+      var plugin = require(p);
+      var settings = options[p];
+      return settings ? plugin(settings) : plugin;
+    })
+  );
+
+  if (options.encapsulate) {
+    plugins = plugins.concat([
+      encapsulationPlugins.resetGeneric,
+      encapsulationPlugins.resetInherited
+    ]);
+  }
+
+  // autoprefixer and postcss-reporter
+  // should always be the last plugin
+  plugins = plugins.concat([
+    autoprefixer(options.autoprefixer),
+    reporter(options['postcss-reporter'])
+  ]);
 
   var processor = postcss(options.debug(plugins));
 

@@ -23,6 +23,7 @@
     "pad-component": "0.0.1",
     "postcss": "^5.0.12",
     "postcss-apply": "^0.4.0",
+    "postcss-autoreset": "^1.2.0",
     "postcss-bem-linter": "^2.3.0",
     "postcss-calc": "^5.0.0",
     "postcss-color-function": "^2.0.1",
@@ -35,19 +36,26 @@
     "stylelint-config-suitcss": "^8.0.0"
   },
   "devDependencies": {
+    "browserify": "^13.1.0",
+    "browserify-css": "^0.9.2",
     "chai": "^3.4.1",
     "chai-as-promised": "^5.2.0",
+    "computed-style": "^0.3.0",
     "eslint": "^3.5.0",
     "eslint-config-airbnb": "^11.1.0",
     "mocha": "^2.3.4",
     "postcss-property-lookup": "^1.1.4",
     "rewire": "^2.5.1",
-    "sinon": "^1.17.2"
+    "sinon": "^1.17.2",
+    "tape": "^4.6.2",
+    "tape-css": "^1.0.2-beta",
+    "tape-run": "^2.1.4"
   },
   "scripts": {
-    "test": "npm run mocha && npm run lint",
+    "test": "npm run mocha && npm run test:encapsulation && npm run lint",
+    "test:encapsulation": "browserify -t [ browserify-css --autoInject=false ] test/encapsulation/browser.js | tape-run",
     "mocha": "mocha test/index.js --reporter spec --slow 400 --timeout 8000",
-    "lint": "eslint lib/index.js test/test.js bin/suitcss",
+    "lint": "eslint lib/*.js test/**/*.js bin/suitcss",
     "watch": "npm run mocha -- --watch"
   },
   "keywords": [
