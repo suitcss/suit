@@ -229,7 +229,12 @@ this instance an empty ruleset can be added to ensure it is correctly reset:
 </div>
 ```
 ```css
-/* Empty ruleset required */
+/**
+ * Empty ruleset required.
+ * Note the disabling of stylelint
+ */
+
+/* stylelint-disable-next-line block-no-empty */
 .Component {}
 
 .Component-item {
