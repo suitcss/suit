@@ -1,5 +1,7 @@
 ### HEAD
 
+### 3.0.0 (October 20, 2016)
+
 * Pin core plugins order:
 
   `postcss-easy-import`
