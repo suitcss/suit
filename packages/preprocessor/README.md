@@ -367,7 +367,7 @@ Options are merged recursively with the defaults. For example, adding new plugin
 
 #### Adding additional plugins
 
-By default the preprocessor uses all necessary plugins to build SUIT components. However additional plugins can be installed into a project and then added to the `use` array.
+By default the preprocessor uses all necessary plugins to build SUIT components. However additional plugins can be installed into a project and then added to the `use` array. They will be appended to the existing list of plugins.
 
 **Note**: This will not work with the preprocessor installed globally. Instead rely on the convenience of `npm run script`
 
@@ -404,14 +404,11 @@ If duplicate plugins are used they will be removed, but the new order will be re
 ```js
 // Default order
 var defaults = [
-  'postcss-easy-import',
   'postcss-custom-properties',
   'postcss-calc',
   'postcss-color-function',
   'postcss-custom-media',
   'postcss-apply',
-  'autoprefixer',
-  'postcss-reporter'
 ];
 
 // config
@@ -419,23 +416,21 @@ module.exports = {
   use: [
     'postcss-at2x',
     'postcss-calc',
-    'autoprefixer',
-    'postcss-reporter'
   ]
 };
 
 var result = [
-  'postcss-easy-import',
   'postcss-custom-properties',
   'postcss-color-function',
   'postcss-custom-media',
   'postcss-apply',
   'postcss-at2x',
   'postcss-calc',
-  'autoprefixer',
-  'postcss-reporter'
 ];
 ```
+
+**Note** Some core plugins such as `postcss-easy-import` and `autoprefixer`
+cannot be re-ordered. This is to ensure components are preprocessed correctly.
 
 #### Autoprefixer: vendor prefixes
 
