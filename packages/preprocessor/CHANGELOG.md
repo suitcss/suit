@@ -1,5 +1,13 @@
 ### HEAD
 
+* Pin core plugins order:
+
+  `postcss-easy-import`
+  [ user plugins ]
+  [ encapsulation plugins ]
+  `autoprefixer`
+  `postcss-reporter`
+* Add experimental `encapsulate` option/feature
 * CLI flags override config file options
 * Input file is now linted (previously only imported files were passed through
   the linting tools)

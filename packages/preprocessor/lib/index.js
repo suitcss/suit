@@ -133,9 +133,14 @@ function mergeOptions(options) {
   // but remove any duplicates so that it respects the new order
   if (!isEmpty(options.use)) {
     var plugins = difference(mergedOpts.use, options.use);
-    mergedOpts.use = plugins.concat(options.use);
+    // Remove core plugins. Can't reorder them
+    var userPlugins = difference(options.use, [
+      'postcss-easy-import',
+      'autoprefixer',
+      'postcss-reporter'
+    ]);
+    mergedOpts.use = plugins.concat(userPlugins);
   }
-
   return mergedOpts;
 }
 

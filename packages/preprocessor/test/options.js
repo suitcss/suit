@@ -63,7 +63,7 @@ describe('re-ordering the `use` array of postcss plugins', function() {
 
   it('should allow reordering of use array and remove duplicates', function() {
     var opts = mergeOptions({
-      use: ['postcss-at2x', 'postcss-calc']
+      use: ['postcss-at2x', 'postcss-easy-import', 'postcss-calc']
     });
 
     expect(opts.use).to.eql([
