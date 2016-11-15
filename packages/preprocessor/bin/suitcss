@@ -110,12 +110,18 @@ function run() {
   read(input, function(err, buffer) {
     if (err) logger.throw(err);
     var css = buffer.toString();
-    var opts = assign({}, config, {
-      minify: program.minify,
-      root: program.importRoot,
-      encapsulate: program.encapsulate,
-      lint: program.lint
-    });
+    var flags = [
+      'minify',
+      'encapsulate',
+      'root',
+      'lint'
+    ].reduce(function (accumulator, flag) {
+      if (({}).hasOwnProperty.call(program, flag)) {
+        accumulator[flag] = program[flag];
+      }
+      return accumulator;
+    }, {});
+    var opts = assign({}, config, flags);
 
     if (program.throwError) {
       assign(opts, {

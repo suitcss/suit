@@ -1,5 +1,9 @@
 ### HEAD
 
+### 3.0.1 (November XX, 2016)
+
+* Fix: `undefined` cli flags don't override config
+
 ### 3.0.0 (October 20, 2016)
 
 * Pin core plugins order:

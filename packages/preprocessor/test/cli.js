@@ -87,11 +87,21 @@ describe('cli', function() {
   });
 
   it('should allow to override config options via cli flags', function(done) {
-    exec('node bin/suitcss -L -c test/config/test.js test/fixtures/import.css test/fixtures/cli/output.css', function(err) {
+    exec('node bin/suitcss -m -c test/config/test.js test/fixtures/import.css test/fixtures/cli/output.css', function(err) {
       if (err) return done(err);
       var res = util.read('fixtures/cli/output');
       var commentsPattern = /\/\*[^]*?\*\//g;
-      expect(res).to.match(commentsPattern);
+      expect(res).to.not.match(commentsPattern);
+      done();
+    });
+  });
+
+  it('should preserve config options when not passing cli flags', function(done) {
+    exec('node bin/suitcss -c test/config/cli-undefined-flags.js test/fixtures/import.css test/fixtures/cli/output.css', function(err) {
+      if (err) return done(err);
+      var res = util.read('fixtures/cli/output');
+      var commentsPattern = /\/\*[^]*?\*\//g;
+      expect(res).to.not.match(commentsPattern);
       done();
     });
   });
