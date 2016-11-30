@@ -76,8 +76,18 @@ describe('cli', function() {
     });
   });
 
-  it('should allow a config file to be passed', function(done) {
+  it('should allow a config module to be passed', function(done) {
     exec('node bin/suitcss -i test/fixtures -c test/config/test.js test/fixtures/config.css test/fixtures/cli/output.css', function(err) {
+      if (err) return done(err);
+      var res = util.read('fixtures/cli/output');
+      var expected = util.read('fixtures/config.out');
+      expect(res).to.equal(expected);
+      done();
+    });
+  });
+
+  it('should allow an arbitrarily named json config file to be passed', function(done) {
+    exec('node bin/suitcss -i test/fixtures -c test/config/test.config test/fixtures/config.css test/fixtures/cli/output.css', function(err) {
       if (err) return done(err);
       var res = util.read('fixtures/cli/output');
       var expected = util.read('fixtures/config.out');

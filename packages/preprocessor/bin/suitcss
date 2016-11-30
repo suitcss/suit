@@ -63,9 +63,16 @@ program.parse(process.argv);
  * Settings.
  */
 
+function requireOrParse(configFile) {
+  var configPath = resolve(configFile);
+  var ext = path.extname(configPath);
+  var readFn = /js|json/.test(ext) ? require : fs.readJsonSync;
+  return readFn(configPath);
+}
+
 var input = program.args[0] ? resolve(program.args[0]) : null;
 var output = program.args[1] ? resolve(program.args[1]) : null;
-var config = program.config ? require(resolve(program.config)) : null;
+var config = program.config ? requireOrParse(program.config) : {};
 var verbose = program.verbose;
 var regen = program.watch && input && output;
 
