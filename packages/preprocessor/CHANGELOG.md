@@ -2,6 +2,7 @@
 
 ### 3.0.1 (November XX, 2016)
 
+* Allow config file to be arbitrarily named
 * Fix: `undefined` cli flags don't override config
 
 ### 3.0.0 (October 20, 2016)
