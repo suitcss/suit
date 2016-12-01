@@ -156,7 +156,9 @@ function lintFile(css, options, filename) {
   var processor = postcss();
 
   if (options.lint) {
-    processor.use(stylelint(options.stylelint || stylelintConfigSuit));
+    processor
+      .use(stylelint(options.stylelint || stylelintConfigSuit))
+      .use(bemLinter(options['postcss-bem-linter']));
   }
 
   // Merge filename alongside any other `postcss` options
@@ -165,7 +167,6 @@ function lintFile(css, options, filename) {
   });
 
   processor
-    .use(bemLinter(options['postcss-bem-linter']))
     .use(reporter(options['postcss-reporter']));
 
   if (isPromise(css)) {

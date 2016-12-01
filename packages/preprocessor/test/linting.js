@@ -79,3 +79,16 @@ describe('stylelint', function() {
     ).to.be.rejectedWith(Error, 'postcss-reporter: warnings or errors were found');
   });
 });
+
+describe('disabling linting', function() {
+  it('should not run stylelint or postcss-bem-linter', function() {
+    return expect(
+      suitcss('/** @define Foo */\n\n.foo {color: red;}', {
+        lint: false,
+        'postcss-reporter': {
+          throwError: true
+        }
+      })
+    ).to.be.fulfilled;
+  });
+});

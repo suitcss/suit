@@ -2,6 +2,7 @@
 
 ### 3.0.1 (November XX, 2016)
 
+* Fix: Setting `lint` to false also disables `postcss-bem-linter`
 * Allow config file to be arbitrarily named
 * Fix: `undefined` cli flags don't override config
 
