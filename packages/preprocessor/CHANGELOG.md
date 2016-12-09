@@ -1,10 +1,12 @@
 ### HEAD
 
-### 3.0.1 (November XX, 2016)
+### 3.0.1 (Decemeber 09, 2016)
 
-* Fix: Setting `lint` to false also disables `postcss-bem-linter`
-* Allow config file to be arbitrarily named
-* Fix: `undefined` cli flags don't override config
+* Fix: Allow `--importRoot` to override root config option [#70](https://github.com/suitcss/preprocessor/pull/70)
+* Fix: Setting `lint` to false also disables `postcss-bem-linter` [#68](https://github.com/suitcss/preprocessor/pull/68)
+* Allow config file to be arbitrarily named [#66](https://github.com/suitcss/preprocessor/pull/66)
+* Fix: `undefined` cli flags don't override config [#62](https://github.com/suitcss/preprocessor/pull/62)
+* Update `postcss-reporter` to `^2.0.0` [#63](https://github.com/suitcss/preprocessor/pull/63)
 
 ### 3.0.0 (October 20, 2016)
 
