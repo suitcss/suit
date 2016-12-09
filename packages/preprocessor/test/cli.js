@@ -133,5 +133,20 @@ describe('cli', function() {
       done();
     });
   });
-});
 
+  describe('--importRoot', function() {
+    it('should be able to override root in a config file with importRoot', function(done) {
+      exec('node bin/suitcss -c test/config/root-fake.js -i ./test/fixtures ./test/fixtures/import.css test/fixtures/cli/output.css', function(err) {
+        expect(err).to.be.null;
+        done();
+      });
+    });
+
+    it('should use the config root option if importRoot is undefined', function(done) {
+      exec('node bin/suitcss -c test/config/root-real.js ./test/fixtures/import.css test/fixtures/cli/output.css', function(err) {
+        expect(err).to.be.null;
+        done();
+      });
+    });
+  });
+});

@@ -117,16 +117,20 @@ function run() {
   read(input, function(err, buffer) {
     if (err) logger.throw(err);
     var css = buffer.toString();
+    var optsAliases = {
+      importRoot: 'root'
+    };
     var flags = [
       'minify',
       'encapsulate',
-      'root',
+      'importRoot',
       'lint'
-    ].reduce(function (accumulator, flag) {
-      if (({}).hasOwnProperty.call(program, flag)) {
-        accumulator[flag] = program[flag];
+    ].reduce(function(acc, inFlag) {
+      if (({}).hasOwnProperty.call(program, inFlag)) {
+        var flag = optsAliases[inFlag] || inFlag;
+        acc[flag] = program[inFlag];
       }
-      return accumulator;
+      return acc;
     }, {});
     var opts = assign({}, config, flags);
 
