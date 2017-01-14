@@ -30,7 +30,6 @@
   border-width: var(--Button-border-width);
   box-sizing: border-box; /* 1 */
   color: var(--Button-color); /* 2 */
-  cursor: pointer;
   display: inline-block;
   font: var(--Button-font); /* 3 */
   margin: 0;
