@@ -1,7 +1,9 @@
 ### HEAD
 
-* Upgrade preprocessor to `^1.0.1`
-* Upgrade stylelint-config-suitcss to `^4.0.0`
+### 6.0.0 (January 14, 2017)
+
+* Remove `cursor: pointer;` ([#22](https://github.com/suitcss/components-button/pull/22))
+* Upgrade preprocessor to `^3.0.1`
 
 ### 5.0.0 (December 09, 2015)
 
