@@ -1,6 +1,0 @@
-{
-  "lint": true,
-  "postcss-reporter": {
-    "throwError": true
-  }
-}
