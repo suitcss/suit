@@ -1,3 +1,10 @@
+# Head
+
+* Removed: `root-no-standard-properties`.
+* Removed: `selector-root-no-composition`.
+* Changed: `declaration-block-properties-order` to `order/declaration-block-properties-alphabetical-order`.
+* Changed: `rule-nested-empty-line-before` & `rule-non-nested-empty-line-before` to `rule-empty-line-before`.
+
 # 8.0.0
 
 * Changed: `media-query-parentheses-space-inside` to `media-feature-parentheses-space-inside`.

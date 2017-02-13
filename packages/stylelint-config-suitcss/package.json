@@ -7,7 +7,7 @@
     "stylelint-config",
     "suitcss"
   ],
-  "author": "Stylelint",
+  "author": "stylelint",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -24,10 +24,10 @@
     "eslint": "^2.4.0",
     "eslint-config-stylelint": "^1.0.0",
     "npmpub": "^3.0.1",
-    "stylelint": "^7.0.1"
+    "stylelint": "^7.8.0"
   },
   "peerDependencies": {
-    "stylelint": "^7.0.1"
+    "stylelint": "^7.8.0"
   },
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",
@@ -40,5 +40,8 @@
     "extends": [
       "stylelint"
     ]
+  },
+  "dependencies": {
+    "stylelint-order": "^0.2.2"
   }
 }
