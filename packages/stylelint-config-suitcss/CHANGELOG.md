@@ -1,4 +1,4 @@
-# Head
+# 9.0.0
 
 * Removed: `root-no-standard-properties`.
 * Removed: `selector-root-no-composition`.
