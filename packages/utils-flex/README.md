@@ -166,6 +166,25 @@ Note: The `Grid` component already sets `display: flex` on the root element.
 
 Please refer to the README for [SUIT CSS utils](https://github.com/suitcss/utils/)
 
+## Setting `flex-shrink` in IE10
+
+In IE10 it is required to [explicitly set `flex-shrink` on flex
+items](https://github.com/philipwalton/flexbugs#6-the-default-flex-value-has-changed),
+or use the longhand `flex` declaration.
+
+In prior versions of `utils-flex` this was set automatically on all flex items.
+Due to issues with specificity this has been removed.
+
+Should you need to apply the fix for IE10 then add a `u-flexShrink` class
+manually:
+
+```html
+<div class="u-flex u-flexNoWrap">
+  <div class="FlexItem u-flexShrink1">Content</div>
+  <div class="FlexItem u-flexShrink1">Content</div>
+</div>
+```
+
 ## Testing
 
 Install [Node](http://nodejs.org) (comes with npm).
