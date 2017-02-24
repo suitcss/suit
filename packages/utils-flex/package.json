@@ -27,7 +27,7 @@
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",
-    "lint": "suitcss -c test/config.json index.css build/lint.css && rm build/lint.css",
+    "lint": "suitcss index.css >/dev/null",
     "preprocess": "suitcss index.css build/build.css",
     "preprocess-test": "suitcss -i test test/test.css build/test.css",
     "setup": "npm install",
@@ -35,10 +35,9 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "stylelint-config-suitcss": "^4.0.0",
     "suitcss-components-test": "*",
-    "suitcss-preprocessor": "^1.0.0",
+    "suitcss-preprocessor": "^3.0.1",
     "suitcss-utils-display": "^1.0.0",
-    "suitcss-utils-size": "^1.0.0"
+    "suitcss-utils-size": "^2.0.0"
   }
 }

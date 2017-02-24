@@ -1,7 +1,6 @@
 ### HEAD
 
-* Enable BEM linter reporting in tests
-* Update stylelint-config-suitcss to `4.0.0`
+* Update suitcss-preprocessor to `3.0.1`
 * Move custom media below imports to fix warning
 
 ### 1.1.1 (February 08, 2016)
