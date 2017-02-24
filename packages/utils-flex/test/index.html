@@ -919,4 +919,78 @@
     </div>
   </div>
 
+  <h2 class="Test-describe">.u-flexBasisAuto</h2>
+  <h3 class="Test-it">Overrides the flex-basis value</h3>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="FlexItem u-flexGrow1 u-flexBasisAuto">
+        <div class="Content">1.</div>
+      </div>
+      <div class="FlexItem u-flexGrow1">
+        <div class="Content">2.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexBasis0</h2>
+  <h3 class="Test-it">Overrides the flex-basis value</h3>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="FlexItem u-flexGrow1 u-flexBasis0">
+        <div class="Content">1.</div>
+      </div>
+      <div class="FlexItem u-flexGrow1">
+        <div class="Content">2.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexInitial</h2>
+  <h3 class="Test-it">Sizes the item based on the width/height properties</h3>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="FlexItem u-flexGrow1">
+        <div class="Content">1.</div>
+      </div>
+      <div class="FlexItem u-flexGrow1 u-flexInitial" style="width: 200px">
+        <div class="Content">2. some content</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexAuto</h2>
+  <h3 class="Test-it">
+    Sizes the item based on the width/height properties, but
+    makes them fully flexible, so that they absorb any free space along the main
+    axis.
+  </h3>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="FlexItem u-flexGrow1">
+        <div class="Content">1.</div>
+      </div>
+      <div class="FlexItem u-flexGrow1 u-flexAuto" style="width: 200px">
+        <div class="Content">2. some content</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-flexNone</h2>
+  <h3 class="Test-it">
+    Sizes the item according to the width/height properties, but makes the flex
+    item fully inflexible. Similar to initial, except that flex items are
+    not allowed to shrink, even in overflow situations. Should overflow
+    container in this test.
+  </h3>
+  <div class="Test-run">
+    <div class="u-flex" style="width: 350px">
+      <div class="FlexItem u-flexGrow1">
+        <div class="Content">1.</div>
+      </div>
+      <div class="FlexItem u-flexGrow1 u-flexNone" style="width: 400px">
+        <div class="Content">2. some content</div>
+      </div>
+    </div>
+  </div>
+
 </div>

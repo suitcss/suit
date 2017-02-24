@@ -83,6 +83,23 @@ SUIT CSS flexbox utilities
 
 `X` can be any of the following numbers: `0`, `1`, `2`, `3`, `4`, `5`.
 
+**`flex-basis`**
+
+Used to override other utilities and tweak [how space is
+distributed](https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg).
+
+* `u-flexBasisAuto`
+* `u-flexBasis0`
+
+**`flex` shorthand**
+
+* `u-flexInitial` - Sizes the item based on the width/height properties
+* `u-flexAuto` - Sizes the item based on the width/height properties, but makes
+  them fully flexible, so that they absorb any free space along the main axis.
+* `u-flexNone` - Sizes the item according to the width/height properties, but
+  makes the flex item fully inflexible. Similar to initial, except that flex
+  items are not allowed to shrink, even in overflow situations.
+
 **Aligning with `auto` margins**
 
 * `u-flexExpand` - Expand all margins to fill remaining space
