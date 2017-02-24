@@ -77,6 +77,12 @@ SUIT CSS flexbox utilities
 
 `X` can be any of the following numbers: `1`, `2`, `3`, `4`, `5`.
 
+**`flex-shrink`**
+
+* `u-flexShrinkX` - Specify how much the flex item will shrink relatively
+
+`X` can be any of the following numbers: `0`, `1`, `2`, `3`, `4`, `5`.
+
 **Aligning with `auto` margins**
 
 * `u-flexExpand` - Expand all margins to fill remaining space

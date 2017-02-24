@@ -1,5 +1,6 @@
 ### HEAD
 
+* Add `flex-shrink` utility
 * Remove IE10 hack for applying `flex-shrink` to all children
 * Update suitcss-preprocessor to `3.0.1`
 * Move custom media below imports to fix warning

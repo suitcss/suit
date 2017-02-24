@@ -217,6 +217,35 @@
 }
 
 /**
+ * Specify the flex shrink factor, which determines how much the flex item will
+ * shrink relative to the rest of the flex items in the flex container.
+ */
+
+.u-flexShrink0 {
+  flex-shrink: 0 !important;
+}
+
+.u-flexShrink1 {
+  flex-shrink: 1 !important;
+}
+
+.u-flexShrink2 {
+  flex-shrink: 2 !important;
+}
+
+.u-flexShrink3 {
+  flex-shrink: 3 !important;
+}
+
+.u-flexShrink4 {
+  flex-shrink: 4 !important;
+}
+
+.u-flexShrink5 {
+  flex-shrink: 5 !important;
+}
+
+/**
  * Aligning with `auto` margins
  * http://www.w3.org/TR/css-flexbox-1/#auto-margins
  */
