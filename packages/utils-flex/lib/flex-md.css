@@ -221,8 +221,8 @@
   }
 
   /**
-   * Specify the flex shrink factor, which determines how much the flex item will
-   * shrink relative to the rest of the flex items in the flex container.
+   * Specify the flex shrink factor, which determines how much the flex item
+   * will shrink relative to the rest of the flex items in the flex container.
    */
 
   .u-md-flexShrink0 {
