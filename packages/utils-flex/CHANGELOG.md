@@ -1,5 +1,7 @@
 ### HEAD
 
+### 2.0.0 (February 28, 2017)
+
 * Add utils for `flex-basis` and `flex` shorthand (initial, auto, none)
 * Add `flex-shrink` utility
 * Remove IE10 hack for applying `flex-shrink` to all children
