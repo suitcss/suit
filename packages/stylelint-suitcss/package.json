@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint rules utils",
-    "test": "ava index.test.js **/test/*.js"
+    "test": "ava index.test.js **/test/*.js && npm run lint"
   },
   "author": "Simon Smith",
   "license": "MIT",
