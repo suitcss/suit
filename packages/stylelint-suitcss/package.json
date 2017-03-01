@@ -2,10 +2,27 @@
   "name": "stylelint-suitcss",
   "version": "0.1.0",
   "description": "A collection of stylelint plugins for SUIT CSS",
+  "keywords": [
+    "stylelint-plugin",
+    "stylelint",
+    "css",
+    "lint",
+    "suitcss"
+  ],
+  "repository": "suitcss/stylelint-suitcss",
+  "bugs": {
+    "url": "https://github.com/suitcss/stylelint-suitcss/issues"
+  },
+  "homepage": "https://github.com/suitcss/stylelint-suitcss",
+
+  "engines": {
+    "node": ">=4"
+  },
   "main": "index.js",
   "scripts": {
     "lint": "eslint rules utils",
-    "test": "ava index.test.js **/test/*.js && npm run lint"
+    "pretest": "npm run lint",
+    "test": "ava index.test.js **/test/*.js"
   },
   "author": "Simon Smith",
   "license": "MIT",
