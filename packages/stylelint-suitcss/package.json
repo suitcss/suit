@@ -1,0 +1,22 @@
+{
+  "name": "stylelint-suitcss",
+  "version": "0.1.0",
+  "description": "A collection of stylelint plugins for SUIT CSS",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint rules utils",
+    "test": "ava index.test.js **/test/*.js"
+  },
+  "author": "Simon Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "eslint": "^3.16.1",
+    "stylelint-test-rule-ava": "^0.2.0"
+  },
+  "dependencies": {
+    "lodash.find": "^4.6.0",
+    "postcss-selector-parser": "^2.2.3",
+    "stylelint": "^7.9.0"
+  }
+}
