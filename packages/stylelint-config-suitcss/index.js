@@ -1,6 +1,7 @@
 module.exports = {
   "plugins": [
     "stylelint-order",
+    "stylelint-suitcss",
   ],
   "rules": {
     "at-rule-empty-line-before": [ "always", {
@@ -67,6 +68,9 @@ module.exports = {
     "selector-list-comma-space-before": "never",
     "selector-no-vendor-prefix": true,
     "selector-pseudo-element-colon-notation": "double",
+    "suitcss/custom-property-no-outside-root": true,
+    "suitcss/root-no-standard-properties": true,
+    "suitcss/selector-root-no-composition": true,
     "string-quotes": "double",
     "value-list-comma-newline-after": "always-multi-line",
     "value-list-comma-space-after": "always-single-line",
