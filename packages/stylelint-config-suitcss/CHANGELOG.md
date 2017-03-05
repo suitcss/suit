@@ -1,4 +1,4 @@
-# Head
+# 10.0.0
 
 * Updated: `ava` to `0.18.2`
 * Updated: `eslint` to `3.17.0`
