@@ -1,6 +1,7 @@
 var chai = require('chai');
 var suitcss = require('../lib');
 var util = require('./util');
+
 var expect = chai.expect;
 
 describe('node API', function() {

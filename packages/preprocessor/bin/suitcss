@@ -2,14 +2,15 @@
 
 var fs = require('fs-extra');
 var assign = require('object-assign-deep');
-var exists = fs.existsSync;
 var logger = require('./logger');
 var suitcss = require('..');
 var path = require('path');
-var resolve = path.resolve;
 var program = require('commander');
 var read = require('read-file-stdin');
 var chokidar = require('chokidar');
+
+var exists = fs.existsSync;
+var resolve = path.resolve;
 var writeFileSync = fs.outputFileSync;
 
 /**

@@ -1,5 +1,12 @@
 ### HEAD
 
+* Update `fs-extra` to `2.0.0`
+* Update `postcss-apply` to `0.5.0`
+* Update `postcss-color-function` to `3.0.0`
+* Update `postcss-reporter` to `3.0.0`
+* Update `stylelint-config-suitcss` to `10.0.0`
+* Update `devDependencies` to latest
+
 ### 3.0.1 (Decemeber 09, 2016)
 
 * Fix: Allow `--importRoot` to override root config option [#70](https://github.com/suitcss/preprocessor/pull/70)

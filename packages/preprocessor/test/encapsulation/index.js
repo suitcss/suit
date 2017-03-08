@@ -2,6 +2,7 @@ var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
 var suitcss = require('../../lib');
 var util = require('../util');
+
 var expect = chai.expect;
 
 chai.use(chaiAsPromised);

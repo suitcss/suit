@@ -1,22 +1,31 @@
 {
-  "extends": "airbnb/legacy",
+  "extends": "airbnb-base",
   "env": {
     "es6": true
   },
   "globals": {
-    "Promise": true
+    "Promise": true,
+    "document": true
   },
   "rules": {
-    "vars-on-top": 0,
-    "no-console": 0,
     "comma-dangle": [2, "never"],
-    "max-len": 0,
     "func-names": 0,
-    "one-var": [2, { "uninitialized": "always", "initialized": "never" }],
+    "global-require": 0,
+    "max-len": 0,
+    "no-console": 0,
     "no-param-reassign": [0],
     "no-use-before-define": [2, "nofunc"],
-    "space-before-function-paren": 0,
     "object-curly-spacing": 0,
-    "global-require": 0
+    "one-var": [2, { "uninitialized": "always", "initialized": "never" }],
+    "space-before-function-paren": 0,
+    "vars-on-top": 0,
+
+    "import/no-dynamic-require": 0,
+
+    // Disable until using node 4 as base
+    "no-var": 0,
+    "prefer-arrow-callback": 0,
+    "object-shorthand": 0,
+    "prefer-template": 0
   }
 }

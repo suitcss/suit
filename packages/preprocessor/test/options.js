@@ -1,6 +1,7 @@
 var sinon = require('sinon');
 var rewire = require('rewire');
 var chai = require('chai');
+
 var suitcss = rewire('../lib');
 var expect = chai.expect;
 
