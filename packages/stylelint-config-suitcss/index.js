@@ -59,7 +59,7 @@ module.exports = {
     "number-leading-zero": "always",
     "number-no-trailing-zeros": true,
     "length-zero-no-unit": true,
-    "order/declaration-block-properties-alphabetical-order": true,
+    "order/properties-alphabetical-order": true,
     "property-no-vendor-prefix": true,
     "rule-empty-line-before": "always-multi-line",
     "selector-combinator-space-after": "always",
