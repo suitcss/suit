@@ -1,3 +1,7 @@
+# 11.0.0
+
+* Changed: `order/declaration-block-properties-alphabetical-order` to `order/properties-alphabetical-order`.
+
 # 10.0.0
 
 * Updated: `ava` to `0.18.2`
