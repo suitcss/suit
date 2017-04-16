@@ -1,11 +1,14 @@
 ### HEAD
 
 * Refactor to support Node 4 upwards
-* Update `fs-extra` to `2.0.0`
-* Update `postcss-apply` to `0.5.0`
+* Update `fs-extra` to `2.1.2`
+* Update `autoprefixer` to `6.7.7`
+* Update `postcss-apply` to `0.6.1`
 * Update `postcss-color-function` to `3.0.0`
 * Update `postcss-reporter` to `3.0.0`
-* Update `stylelint-config-suitcss` to `10.0.0`
+* Update `postcss` to `5.2.17`
+* Update `stylelint-config-suitcss` to `11.0.0`
+* Update `stylelint` to `7.10.1`
 * Update `devDependencies` to latest
 
 ### 3.0.1 (Decemeber 09, 2016)
