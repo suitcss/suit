@@ -1,5 +1,6 @@
 ### HEAD
 
+* Refactor to support Node 4 upwards
 * Update `fs-extra` to `2.0.0`
 * Update `postcss-apply` to `0.5.0`
 * Update `postcss-color-function` to `3.0.0`

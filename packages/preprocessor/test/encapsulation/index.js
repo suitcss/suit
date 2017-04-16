@@ -1,16 +1,18 @@
-var chai = require('chai');
-var chaiAsPromised = require('chai-as-promised');
-var suitcss = require('../../lib');
-var util = require('../util');
+'use strict';
 
-var expect = chai.expect;
+const chai = require('chai');
+const chaiAsPromised = require('chai-as-promised');
+const suitcss = require('../../lib');
+const util = require('../util');
+
+const expect = chai.expect;
 
 chai.use(chaiAsPromised);
 
-describe('encapsulation', function() {
-  it('should reset inherited and non inherited properties', function(done) {
-    var input = util.read('fixtures/encapsulation');
-    var output = util.read('fixtures/encapsulation.out');
+describe('encapsulation', () => {
+  it('should reset inherited and non inherited properties', done => {
+    const input = util.read('fixtures/encapsulation');
+    const output = util.read('fixtures/encapsulation.out');
 
     suitcss(input, {
       encapsulate: true,
@@ -21,38 +23,35 @@ describe('encapsulation', function() {
       autoprefixer: {
         browsers: 'Chrome 50'
       }
-    }).then(function(result) {
+    }).then(result => {
       expect(result.css.trim()).to.be.equal(output.trim());
       done();
     }).catch(done);
   });
 
-  describe('plugins', function() {
-    function getPluginsNames(result) {
-      return (result.processor.plugins || []).map(function (plugin) {
-        return plugin.postcssPlugin;
-      });
-    }
+  describe('plugins', () => {
+    const getPluginsNames = result =>
+      (result.processor.plugins || []).map(plugin => plugin.postcssPlugin);
 
-    it('should insert the encapsulationPlugins to the `plugins` array', function(done) {
+    it('should insert the encapsulationPlugins to the `plugins` array', done => {
       suitcss('body {}', {
         encapsulate: true,
         lint: false
-      }).then(function (result) {
-        var plugins = getPluginsNames(result);
+      }).then(result => {
+        const plugins = getPluginsNames(result);
         expect(plugins).to.include('autoreset-suitcss-encapsulation-inherited');
         expect(plugins).to.include('autoreset-suitcss-encapsulation-nonInherited');
         done();
       }).catch(done);
     });
 
-    it('should insert the encapsulationPlugins before `autoprefixer`', function(done) {
+    it('should insert the encapsulationPlugins before `autoprefixer`', done => {
       suitcss('body {}', {
         encapsulate: true,
         lint: false
-      }).then(function (result) {
-        var plugins = getPluginsNames(result);
-        var autoprefixerIndex = plugins.indexOf('autoprefixer');
+      }).then(result => {
+        const plugins = getPluginsNames(result);
+        const autoprefixerIndex = plugins.indexOf('autoprefixer');
         expect(autoprefixerIndex).to.be.above(plugins.indexOf('autoreset-suitcss-encapsulation-inherited'));
         expect(autoprefixerIndex).to.be.above(plugins.indexOf('autoreset-suitcss-encapsulation-nonInherited'));
         done();

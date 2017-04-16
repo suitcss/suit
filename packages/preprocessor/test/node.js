@@ -1,50 +1,52 @@
-var chai = require('chai');
-var suitcss = require('../lib');
-var util = require('./util');
+'use strict';
 
-var expect = chai.expect;
+const chai = require('chai');
+const suitcss = require('../lib');
+const util = require('./util');
 
-describe('node API', function() {
-  it('should return a css string', function(done) {
+const expect = chai.expect;
+
+describe('node API', () => {
+  it('should return a css string', done => {
     suitcss('body {}', {
       lint: false
-    }).then(function(result) {
+    }).then(result => {
       expect(result.css).to.be.a('string');
       done();
     });
   });
 
-  it('should handle invalid input', function() {
-    expect(function() {
+  it('should handle invalid input', () => {
+    expect(() => {
       suitcss(null, {lint: false});
     }).to.throw(TypeError);
   });
 
-  it('should preprocess CSS correctly', function(done) {
-    var input = util.read('fixtures/component');
-    var output = util.read('fixtures/component.out');
+  it('should preprocess CSS correctly', done => {
+    const input = util.read('fixtures/component');
+    const output = util.read('fixtures/component.out');
 
     suitcss(input, {
       root: 'test/fixtures',
       lint: false,
       // disable autoprefixer
       autoprefixer: {add: false, remove: false}
-    }).then(function(result) {
+    }).then(result => {
       expect(result.css.trim()).to.be.equal(output.trim());
       done();
     }).catch(done);
   });
 
-  it('should add vendor prefixes', function(done) {
-    var input = '.test { filter: blur(1px) }';
-    var output = '.test { -webkit-filter: blur(1px); filter: blur(1px) }';
+  it('should add vendor prefixes', done => {
+    const input = '.test { filter: blur(1px) }';
+    const output = '.test { -webkit-filter: blur(1px); filter: blur(1px) }';
 
     suitcss(input, {
       lint: false,
       autoprefixer: {
         browsers: 'Chrome 50'
       }
-    }).then(function(result) {
+    }).then(result => {
       expect(result.css.trim()).to.be.equal(output.trim());
       done();
     }).catch(done);

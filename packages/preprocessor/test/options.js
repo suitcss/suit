@@ -1,46 +1,48 @@
-var sinon = require('sinon');
-var rewire = require('rewire');
-var chai = require('chai');
+'use strict';
 
-var suitcss = rewire('../lib');
-var expect = chai.expect;
+const sinon = require('sinon');
+const rewire = require('rewire');
+const chai = require('chai');
 
-describe('basic options', function() {
-  var mergeOptions, defaults;
+const suitcss = rewire('../lib');
+const expect = chai.expect;
 
-  beforeEach(function() {
+describe('basic options', () => {
+  let mergeOptions, defaults;
+
+  beforeEach(() => {
     mergeOptions = suitcss.__get__('mergeOptions');
     defaults = suitcss.__get__('defaults');
   });
 
-  it('should use default options when nothing is passed', function() {
-    var keys = Object.keys(defaults);
+  it('should use default options when nothing is passed', () => {
+    const keys = Object.keys(defaults);
     expect(mergeOptions({})).to.have.keys(keys);
     expect(mergeOptions()).to.have.keys(keys);
     expect(mergeOptions({}).use).to.eql(defaults.use);
     expect(mergeOptions().use).to.eql(defaults.use);
   });
 
-  it('should allow an import root to be set', function() {
-    var opts = mergeOptions({root: 'test/root'});
+  it('should allow an import root to be set', () => {
+    const opts = mergeOptions({root: 'test/root'});
     expect(opts['postcss-easy-import'].root).to.equal('test/root');
   });
 
-  it('should allow stylelint to be disabled', function() {
-    var opts = mergeOptions({lint: false});
+  it('should allow stylelint to be disabled', () => {
+    const opts = mergeOptions({lint: false});
     expect(opts.lint).to.be.false;
   });
 
-  it('should allow a minify option to be set', function() {
-    var opts = mergeOptions({minify: true});
+  it('should allow a minify option to be set', () => {
+    const opts = mergeOptions({minify: true});
     expect(opts.minify).to.be.true;
   });
 
-  it('should merge config options with existing defaults', function() {
-    var autoprefixer = {browsers: ['> 1%', 'IE 7'], cascade: false};
-    var opts = mergeOptions({
+  it('should merge config options with existing defaults', () => {
+    const autoprefixer = {browsers: ['> 1%', 'IE 7'], cascade: false};
+    const opts = mergeOptions({
       root: 'test/root',
-      autoprefixer: autoprefixer
+      autoprefixer
     });
 
     expect(opts.use).to.eql([
@@ -55,15 +57,15 @@ describe('basic options', function() {
   });
 });
 
-describe('re-ordering the `use` array of postcss plugins', function() {
-  var mergeOptions;
+describe('re-ordering the `use` array of postcss plugins', () => {
+  let mergeOptions;
 
-  beforeEach(function() {
+  beforeEach(() => {
     mergeOptions = suitcss.__get__('mergeOptions');
   });
 
-  it('should allow reordering of use array and remove duplicates', function() {
-    var opts = mergeOptions({
+  it('should allow reordering of use array and remove duplicates', () => {
+    const opts = mergeOptions({
       use: ['postcss-at2x', 'postcss-easy-import', 'postcss-calc']
     });
 
@@ -77,8 +79,8 @@ describe('re-ordering the `use` array of postcss plugins', function() {
     ]);
   });
 
-  it('should just append plugins if no duplicates are used', function() {
-    var opts = mergeOptions({
+  it('should just append plugins if no duplicates are used', () => {
+    const opts = mergeOptions({
       use: ['postcss-at2x', 'postcss-property-lookup']
     });
 
@@ -94,31 +96,31 @@ describe('re-ordering the `use` array of postcss plugins', function() {
   });
 });
 
-describe('using the `onImport` option in postcss-import', function() {
-  var updateWatchTaskFilesSpy, revert;
+describe('using the `onImport` option in postcss-import', () => {
+  let updateWatchTaskFilesSpy, revert;
 
-  beforeEach(function() {
+  beforeEach(() => {
     updateWatchTaskFilesSpy = sinon.spy();
     revert = suitcss.__set__('updateWatchTaskFiles', updateWatchTaskFilesSpy);
   });
 
-  afterEach(function() {
+  afterEach(() => {
     revert();
   });
 
-  it('should call the updateWatchTaskFiles function with the file paths', function(done) {
+  it('should call the updateWatchTaskFiles function with the file paths', done => {
     suitcss('@import "./util.css";', {
       root: 'test/fixtures',
       lint: false
-    }).then(function() {
+    }).then(() => {
       expect(updateWatchTaskFilesSpy.getCall(0).args[0][0]).to.contain('util.css');
       done();
     })
       .catch(done);
   });
 
-  it('should call a custom onImport function', function(done) {
-    var onImportSpy = sinon.spy();
+  it('should call a custom onImport function', done => {
+    const onImportSpy = sinon.spy();
 
     suitcss('@import "./util.css";', {
       root: 'test/fixtures',
@@ -126,7 +128,7 @@ describe('using the `onImport` option in postcss-import', function() {
       'postcss-easy-import': {
         onImport: onImportSpy
       }
-    }).then(function() {
+    }).then(() => {
       expect(onImportSpy.getCall(0).args[0][0]).to.contain('util.css');
       expect(updateWatchTaskFilesSpy.getCall(0).args[0][0]).to.contain('util.css');
       done();
@@ -135,20 +137,20 @@ describe('using the `onImport` option in postcss-import', function() {
   });
 });
 
-describe('using the `transform` option in postcss-import', function() {
-  it('should use a default transform function that just returns the css', function(done) {
+describe('using the `transform` option in postcss-import', () => {
+  it('should use a default transform function that just returns the css', done => {
     suitcss('@import "./util.css";', {
       root: 'test/fixtures',
       lint: false
-    }).then(function(result) {
+    }).then(result => {
       expect(result.css).to.equal('.u-img {\n  border-radius: 50%;\n}');
       done();
     })
       .catch(done);
   });
 
-  it('should call a custom transform function with the imported component', function(done) {
-    var transformStub = sinon.stub().returns('body { color: blue; }');
+  it('should call a custom transform function with the imported component', done => {
+    const transformStub = sinon.stub().returns('body { color: blue; }');
 
     suitcss('@import "./util.css";', {
       root: 'test/fixtures',
@@ -156,7 +158,7 @@ describe('using the `transform` option in postcss-import', function() {
       'postcss-easy-import': {
         transform: transformStub
       }
-    }).then(function(result) {
+    }).then(result => {
       expect(transformStub.calledOnce).to.be.true;
       expect(transformStub.getCall(0).args[0]).to.equal('.u-img {\n  border-radius: 50%;\n}\n');
       expect(result.css).to.equal('body { color: blue; }');
@@ -165,16 +167,16 @@ describe('using the `transform` option in postcss-import', function() {
       .catch(done);
   });
 
-  it('should also work with a promise returned from the custom transform function', function(done) {
+  it('should also work with a promise returned from the custom transform function', done => {
     suitcss('@import "./util.css";', {
       root: 'test/fixtures',
       lint: false,
       'postcss-easy-import': {
-        transform: function() {
+        transform() {
           return Promise.resolve('body { font: red; }');
         }
       }
-    }).then(function(result) {
+    }).then(result => {
       expect(result.css).to.equal('body { font: red; }');
       done();
     })
@@ -182,26 +184,24 @@ describe('using the `transform` option in postcss-import', function() {
   });
 });
 
-describe('using the debug option', function() {
-  it('should allow a debug function to be ran on plugins', function (done) {
-    var debug = sinon.spy(function(plugins) {
-      return plugins;
-    });
+describe('using the debug option', () => {
+  it('should allow a debug function to be ran on plugins', done => {
+    const debug = sinon.spy(plugins => plugins);
 
     suitcss('body {}', {
-      debug: debug,
+      debug,
       lint: false
-    }).then(function() {
+    }).then(() => {
       expect(debug.calledOnce).to.be.true;
       done();
     }).catch(done);
   });
 });
 
-describe('passing options to postcss processor instance', function() {
-  var postcssStub, processMethodStub, revert;
+describe('passing options to postcss processor instance', () => {
+  let postcssStub, processMethodStub, revert;
 
-  beforeEach(function() {
+  beforeEach(() => {
     postcssStub = sinon.stub();
     processMethodStub = sinon.stub().returns(Promise.resolve());
 
@@ -219,11 +219,11 @@ describe('passing options to postcss processor instance', function() {
     }, 'filename.css');
   });
 
-  afterEach(function() {
+  afterEach(() => {
     revert();
   });
 
-  it('should pass postcss options to the processor', function() {
+  it('should pass postcss options to the processor', () => {
     expect(processMethodStub.getCall(0).args[1]).to.eql({
       from: 'filename.css',
       test: 'testing'

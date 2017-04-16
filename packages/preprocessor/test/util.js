@@ -1,23 +1,25 @@
-var fs = require('fs');
-var path = require('path');
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
 
 function read(filename) {
-  var file = resolve(filename);
+  const file = resolve(filename);
   return fs.readFileSync(file, 'utf8');
 }
 
 function remove(filename) {
-  var file = resolve(filename);
+  const file = resolve(filename);
   if (!fs.existsSync(file)) return;
   fs.unlinkSync(file);
 }
 
 function resolve(filename) {
-  return path.resolve(__dirname, filename + '.css');
+  return path.resolve(__dirname, `${filename}.css`);
 }
 
 module.exports = {
-  read: read,
-  remove: remove,
-  resolve: resolve
+  read,
+  remove,
+  resolve
 };

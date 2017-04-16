@@ -1,7 +1,9 @@
-/* eslint-disable quote-props */
-var autoreset = require('postcss-autoreset');
+'use strict';
 
-var rules = {
+/* eslint-disable quote-props */
+const autoreset = require('postcss-autoreset');
+
+const rules = {
   inherited: {
     'border-collapse': 'separate',
     'border-spacing': 0,
@@ -101,10 +103,10 @@ var rules = {
 // This applies only to the Component Root
 // to stop inheritance and ensure
 // styles encapsulation
-var resetInherited = autoreset({
+const resetInherited = autoreset({
   reset: rules.inherited,
-  rulesMatcher: function (rule) {
-    var selector = rule.selector;
+  rulesMatcher(rule) {
+    const selector = rule.selector;
     return (
       selector.charAt(0) === '.' &&
       /^\.(?:[a-z0-9]*-)?[A-Z](?:[a-zA-Z0-9]+)$/.test(selector)
@@ -115,7 +117,7 @@ var resetInherited = autoreset({
 resetInherited.postcssPlugin = 'autoreset-suitcss-encapsulation-inherited';
 
 // This applies to the Component Root and Descendants
-var resetGeneric = autoreset({
+const resetGeneric = autoreset({
   reset: rules.nonInherited,
   rulesMatcher: 'suit'
 });
@@ -123,6 +125,7 @@ var resetGeneric = autoreset({
 resetGeneric.postcssPlugin = 'autoreset-suitcss-encapsulation-nonInherited';
 
 module.exports = {
-  resetInherited: resetInherited,
-  resetGeneric: resetGeneric
+  resetInherited,
+  resetGeneric
 };
+

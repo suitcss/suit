@@ -1,9 +1,11 @@
-var getStyle = require('computed-style');
-var test = require('tape-css')(require('tape'));
-var styles = require('../fixtures/encapsulation.out.css');
+'use strict';
 
-var dom = (function () {
-  var container = document.createElement('div');
+const getStyle = require('computed-style');
+const test = require('tape-css')(require('tape'));
+const styles = require('../fixtures/encapsulation.out.css');
+
+const dom = (() => {
+  const container = document.createElement('div');
   container.innerHTML = `
     <div class="Component" style="font-size: 30px">
       <div class="Component-item">
@@ -15,17 +17,17 @@ var dom = (function () {
     </div>
   `;
   return container;
-}());
+})();
 
 test(
   'Encapsulated Component\'s Root',
   {
-    dom: dom,
-    styles: styles
+    dom,
+    styles
   },
-  function (is) {
-    var parent = dom.querySelector('.Component');
-    var root = dom.querySelector('.Encapsulation');
+  is => {
+    const parent = dom.querySelector('.Component');
+    const root = dom.querySelector('.Encapsulation');
     is.notEqual(
       getStyle(root, 'font-size'),
       getStyle(parent, 'font-size'),
@@ -44,11 +46,11 @@ test(
 test(
   'Encapsulated Descendant',
   {
-    dom: dom,
-    styles: styles
+    dom,
+    styles
   },
-  function (is) {
-    var descendant = dom.querySelector('.Encapsulation-descendant');
+  is => {
+    const descendant = dom.querySelector('.Encapsulation-descendant');
     is.equal(
       getStyle(descendant, 'color'),
       'rgb(255, 0, 0)',

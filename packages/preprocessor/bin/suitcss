@@ -1,17 +1,19 @@
 #!/usr/bin/env node
 
-var fs = require('fs-extra');
-var assign = require('object-assign-deep');
-var logger = require('./logger');
-var suitcss = require('..');
-var path = require('path');
-var program = require('commander');
-var read = require('read-file-stdin');
-var chokidar = require('chokidar');
+'use strict';
 
-var exists = fs.existsSync;
-var resolve = path.resolve;
-var writeFileSync = fs.outputFileSync;
+const fs = require('fs-extra');
+const assign = require('object-assign-deep');
+const logger = require('./logger');
+const suitcss = require('..');
+const path = require('path');
+const program = require('commander');
+const read = require('read-file-stdin');
+const chokidar = require('chokidar');
+
+const exists = fs.existsSync;
+const resolve = path.resolve;
+const writeFileSync = fs.outputFileSync;
 
 /**
  * Usage.
@@ -34,7 +36,7 @@ program
  * Examples.
  */
 
-program.on('--help', function() {
+program.on('--help', () => {
   console.log('  Examples:');
   console.log();
   console.log('    # pass an input and output file:');
@@ -65,17 +67,17 @@ program.parse(process.argv);
  */
 
 function requireOrParse(configFile) {
-  var configPath = resolve(configFile);
-  var ext = path.extname(configPath);
-  var readFn = /js|json/.test(ext) ? require : fs.readJsonSync;
+  const configPath = resolve(configFile);
+  const ext = path.extname(configPath);
+  const readFn = /js|json/.test(ext) ? require : fs.readJsonSync;
   return readFn(configPath);
 }
 
-var input = program.args[0] ? resolve(program.args[0]) : null;
-var output = program.args[1] ? resolve(program.args[1]) : null;
-var config = program.config ? requireOrParse(program.config) : {};
-var verbose = program.verbose;
-var regen = program.watch && input && output;
+const input = program.args[0] ? resolve(program.args[0]) : null;
+const output = program.args[1] ? resolve(program.args[1]) : null;
+const config = program.config ? requireOrParse(program.config) : {};
+const verbose = program.verbose;
+const regen = program.watch && input && output;
 
 /**
  * Exists?
@@ -93,18 +95,18 @@ run();
  * Watch
  */
 
-var currentWatchedFiles;
+let currentWatchedFiles;
 if (regen) {
-  var watcher = chokidar.watch(input);
+  const watcher = chokidar.watch(input);
   watcher.on('change', run);
-  watcher.on('change', function(file) {
-    if (verbose) logger.log(path.basename(file) + ' changed');
+  watcher.on('change', file => {
+    if (verbose) logger.log(`${path.basename(file)} changed`);
   });
-  watcher.on('ready', function() {
-    if (verbose) logger.log('Watching ' + path.basename(input));
+  watcher.on('ready', () => {
+    if (verbose) logger.log(`Watching ${path.basename(input)}`);
   });
 
-  global.watchCSS = function(imported) {
+  global.watchCSS = imported => {
     watcher.unwatch(currentWatchedFiles);
     watcher.add(imported);
     currentWatchedFiles = imported;
@@ -115,25 +117,25 @@ if (regen) {
  * Run for the given input and output.
  */
 function run() {
-  read(input, function(err, buffer) {
+  read(input, (err, buffer) => {
     if (err) logger.throw(err);
-    var css = buffer.toString();
-    var optsAliases = {
+    const css = buffer.toString();
+    const optsAliases = {
       importRoot: 'root'
     };
-    var flags = [
+    const flags = [
       'minify',
       'encapsulate',
       'importRoot',
       'lint'
-    ].reduce(function(acc, inFlag) {
+    ].reduce((acc, inFlag) => {
       if (({}).hasOwnProperty.call(program, inFlag)) {
-        var flag = optsAliases[inFlag] || inFlag;
+        const flag = optsAliases[inFlag] || inFlag;
         acc[flag] = program[inFlag];
       }
       return acc;
     }, {});
-    var opts = assign({}, config, flags);
+    const opts = assign({}, config, flags);
 
     if (program.throwError) {
       assign(opts, {
@@ -143,14 +145,14 @@ function run() {
       });
     }
 
-    suitcss(css, opts, input).then(function(result) {
+    suitcss(css, opts, input).then(result => {
       if (output) {
-        writeFileSync(output, result.css + '\n');
+        writeFileSync(output, `${result.css}\n`);
       } else {
         console.log(result.css);
       }
       if (verbose && output) logger.log('write', output);
-    }).catch(function(e) {
+    }).catch(e => {
       logger.throw(e);
     });
   });

@@ -1,15 +1,17 @@
-var assign = require('object-assign-deep');
-var autoprefixer = require('autoprefixer');
-var bemLinter = require('postcss-bem-linter');
-var cssnano = require('cssnano');
-var difference = require('lodash.difference');
-var encapsulationPlugins = require('./encapsulation');
-var isEmpty = require('lodash.isempty');
-var postcss = require('postcss');
-var postcssEasyImport = require('postcss-easy-import');
-var reporter = require('postcss-reporter');
-var stylelint = require('stylelint');
-var stylelintConfigSuit = require('stylelint-config-suitcss');
+'use strict';
+
+const assign = require('object-assign-deep');
+const autoprefixer = require('autoprefixer');
+const bemLinter = require('postcss-bem-linter');
+const cssnano = require('cssnano');
+const difference = require('lodash.difference');
+const encapsulationPlugins = require('./encapsulation');
+const isEmpty = require('lodash.isempty');
+const postcssEasyImport = require('postcss-easy-import');
+const reporter = require('postcss-reporter');
+const stylelint = require('stylelint');
+const stylelintConfigSuit = require('stylelint-config-suitcss');
+let postcss = require('postcss'); // eslint-disable-line prefer-const
 
 module.exports = preprocessor;
 
@@ -18,7 +20,7 @@ module.exports = preprocessor;
  * and options to PostCSS plugins
  */
 
-var defaults = {
+const defaults = {
   debug: identity,
   lint: true,
   minify: false,
@@ -31,8 +33,8 @@ var defaults = {
     'postcss-apply'
   ],
   autoprefixer: {
-    browsers: '> 1%, last 2 versions, safari > 6, ie > 9, ' +
-      'ios > 6, android > 4.3, samsung > 3, chromeandroid > 50'
+    browsers: `> 1%, last 2 versions, safari > 6, ie > 9,
+    ios > 6, android > 4.3, samsung > 3, chromeandroid > 50`
   },
   'postcss-easy-import': {
     transform: identity,
@@ -62,14 +64,14 @@ var defaults = {
 function preprocessor(css, options, filename) {
   options = mergeOptions(options);
 
-  var plugins = [
+  let plugins = [
     postcssEasyImport(options['postcss-easy-import'])
   ];
 
   plugins = plugins.concat(
-    options.use.map(function(p) {
-      var plugin = require(p);
-      var settings = options[p];
+    options.use.map(p => {
+      const plugin = require(p);
+      const settings = options[p];
       return settings ? plugin(settings) : plugin;
     })
   );
@@ -88,15 +90,14 @@ function preprocessor(css, options, filename) {
     reporter(options['postcss-reporter'])
   ]);
 
-  var processor = postcss(options.debug(plugins));
+  const processor = postcss(options.debug(plugins));
 
   if (options.minify) {
     processor.use(cssnano(options.cssnano));
   }
 
-  return lintFile(css, options, filename).then(function(result) {
-    return processor.process(result.css, options.postcss);
-  });
+  return lintFile(css, options, filename)
+    .then(result => processor.process(result.css, options.postcss));
 }
 
 /**
@@ -108,23 +109,21 @@ function preprocessor(css, options, filename) {
 
 function mergeOptions(options) {
   options = options || {};
-  var mergedOpts = assign({}, defaults, options);
-  var easyImportOpts = mergedOpts['postcss-easy-import'];
-  var origTransform = easyImportOpts.transform;
-  var origOnImport = easyImportOpts.onImport;
+  const mergedOpts = assign({}, defaults, options);
+  const easyImportOpts = mergedOpts['postcss-easy-import'];
+  const origTransform = easyImportOpts.transform;
+  const origOnImport = easyImportOpts.onImport;
 
   if (mergedOpts.root) {
     easyImportOpts.root = mergedOpts.root;
   }
 
-  easyImportOpts.transform = function(css, filename) {
-    var transformedCss = origTransform(css);
-    return lintFile(transformedCss, mergedOpts, filename).then(function(result) {
-      return result.css;
-    });
+  easyImportOpts.transform = (css, filename) => {
+    const transformedCss = origTransform(css);
+    return lintFile(transformedCss, mergedOpts, filename).then(result => result.css);
   };
 
-  easyImportOpts.onImport = function(importedFiles) {
+  easyImportOpts.onImport = importedFiles => {
     updateWatchTaskFiles(importedFiles);
     origOnImport(importedFiles);
   };
@@ -132,9 +131,9 @@ function mergeOptions(options) {
   // Allow additional plugins to be merged with the defaults
   // but remove any duplicates so that it respects the new order
   if (!isEmpty(options.use)) {
-    var plugins = difference(mergedOpts.use, options.use);
+    const plugins = difference(mergedOpts.use, options.use);
     // Remove core plugins. Can't reorder them
-    var userPlugins = difference(options.use, [
+    const userPlugins = difference(options.use, [
       'postcss-easy-import',
       'autoprefixer',
       'postcss-reporter'
@@ -153,7 +152,7 @@ function mergeOptions(options) {
  * @returns {Promise} Used by postcss-import transform
  */
 function lintFile(css, options, filename) {
-  var processor = postcss();
+  const processor = postcss();
 
   if (options.lint) {
     processor
@@ -170,9 +169,7 @@ function lintFile(css, options, filename) {
     .use(reporter(options['postcss-reporter']));
 
   if (isPromise(css)) {
-    return css.then(function(css) { // eslint-disable-line no-shadow
-      return processor.process(css, options.postcss);
-    });
+    return css.then(css => processor.process(css, options.postcss)); // eslint-disable-line no-shadow
   }
 
   return processor.process(css, options.postcss);
