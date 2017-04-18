@@ -137,8 +137,8 @@ describe('using the `onImport` option in postcss-import', () => {
   });
 });
 
-describe('using the `transform` option in postcss-import', () => {
-  it('should use a default transform function that just returns the css', done => {
+describe('using the `load` option in postcss-import', () => {
+  it('should use a default load function that just returns the css', done => {
     suitcss('@import "./util.css";', {
       root: 'test/fixtures',
       lint: false
@@ -149,30 +149,30 @@ describe('using the `transform` option in postcss-import', () => {
       .catch(done);
   });
 
-  it('should call a custom transform function with the imported component', done => {
-    const transformStub = sinon.stub().returns('body { color: blue; }');
+  it('should call a custom load function with the imported component', done => {
+    const loadStub = sinon.stub().returns('body { color: blue; }');
 
     suitcss('@import "./util.css";', {
       root: 'test/fixtures',
       lint: false,
       'postcss-easy-import': {
-        transform: transformStub
+        load: loadStub
       }
     }).then(result => {
-      expect(transformStub.calledOnce).to.be.true;
-      expect(transformStub.getCall(0).args[0]).to.equal('.u-img {\n  border-radius: 50%;\n}\n');
+      expect(loadStub.calledOnce).to.be.true;
+      expect(loadStub.getCall(0).args[0]).to.contain('util.css');
       expect(result.css).to.equal('body { color: blue; }');
       done();
     })
       .catch(done);
   });
 
-  it('should also work with a promise returned from the custom transform function', done => {
+  it('should also work with a promise returned from the custom load function', done => {
     suitcss('@import "./util.css";', {
       root: 'test/fixtures',
       lint: false,
       'postcss-easy-import': {
-        transform() {
+        load() {
           return Promise.resolve('body { font: red; }');
         }
       }

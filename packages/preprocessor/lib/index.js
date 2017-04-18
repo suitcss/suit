@@ -6,7 +6,10 @@ const bemLinter = require('postcss-bem-linter');
 const cssnano = require('cssnano');
 const difference = require('lodash.difference');
 const encapsulationPlugins = require('./encapsulation');
+const fs = require('fs');
 const isEmpty = require('lodash.isempty');
+const isPromise = require('is-promise');
+const pify = require('pify');
 const postcssEasyImport = require('postcss-easy-import');
 const reporter = require('postcss-reporter');
 const stylelint = require('stylelint');
@@ -37,7 +40,7 @@ const defaults = {
     ios > 6, android > 4.3, samsung > 3, chromeandroid > 50`
   },
   'postcss-easy-import': {
-    transform: identity,
+    load: getFileContent,
     onImport: noop
   },
   'postcss-reporter': {
@@ -111,16 +114,17 @@ function mergeOptions(options) {
   options = options || {};
   const mergedOpts = assign({}, defaults, options);
   const easyImportOpts = mergedOpts['postcss-easy-import'];
-  const origTransform = easyImportOpts.transform;
+  const origLoad = easyImportOpts.load;
   const origOnImport = easyImportOpts.onImport;
 
   if (mergedOpts.root) {
     easyImportOpts.root = mergedOpts.root;
   }
 
-  easyImportOpts.transform = (css, filename) => {
-    const transformedCss = origTransform(css);
-    return lintFile(transformedCss, mergedOpts, filename).then(result => result.css);
+  easyImportOpts.load = filename => {
+    const transformedCss = origLoad(filename);
+    return lintFile(transformedCss, mergedOpts, filename)
+      .then(result => result.css);
   };
 
   easyImportOpts.onImport = importedFiles => {
@@ -175,11 +179,11 @@ function lintFile(css, options, filename) {
   return processor.process(css, options.postcss);
 }
 
-function isPromise(obj) {
-  return typeof obj.then === 'function';
-}
-
 function noop() {}
+
+function getFileContent(filename) {
+  return pify(fs.readFile)(filename, 'utf8');
+}
 
 function identity(x) {
   return x;
