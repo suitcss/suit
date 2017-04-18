@@ -1,5 +1,7 @@
 ### HEAD
 
+### 4.0.0 (April 18, 2017)
+
 * Drop support for Node 0.12
 * Update `postcss-easy-import` to `2.0.0`
 * Update `fs-extra` to `2.1.2`
@@ -12,7 +14,7 @@
 * Update `stylelint` to `7.10.1`
 * Update `devDependencies` to latest
 
-### 3.0.1 (Decemeber 09, 2016)
+### 3.0.1 (December 09, 2016)
 
 * Fix: Allow `--importRoot` to override root config option [#70](https://github.com/suitcss/preprocessor/pull/70)
 * Fix: Setting `lint` to false also disables `postcss-bem-linter` [#68](https://github.com/suitcss/preprocessor/pull/68)
