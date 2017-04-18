@@ -1,6 +1,6 @@
 ### HEAD
 
-* Refactor to support Node 4 upwards
+* Drop support for Node 0.12
 * Update `postcss-easy-import` to `2.0.0`
 * Update `fs-extra` to `2.1.2`
 * Update `autoprefixer` to `6.7.7`
