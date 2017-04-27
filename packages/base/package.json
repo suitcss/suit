@@ -35,7 +35,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "normalize.css": "^4.0.0"
+    "normalize.css": "^6.0.0"
   },
   "devDependencies": {
     "suitcss-components-test": "*",
