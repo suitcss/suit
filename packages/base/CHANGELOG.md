@@ -1,5 +1,8 @@
 ### HEAD
 
+* Update normalize to `^6.0.0`
+* Add reset rules removed from normalize
+
 ### 2.0.0 (April 11, 2016)
 
 * Update normalize to `^4.0.0`
