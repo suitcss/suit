@@ -1,5 +1,9 @@
 ### HEAD
 
+### 3.0.0 (April 28, 2017)
+
+Update `suitcss-utils-flex` to `^2.0.0`
+
 ### 2.0.0
 
 Update `suitcss-utils-size` to `^2.0.0`
