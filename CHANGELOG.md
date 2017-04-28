@@ -1,5 +1,11 @@
 ### HEAD
 
+### 3.0.0 (April 28th, 2017)
+
+* Update `utils` to `^3.0.0`
+* Update `components` to `2.0.0`
+* Update `base` to `3.0.0`
+
 ### 2.0.0 (May 05, 2016)
 
 * Update `base` to `^2.0.0`
@@ -8,7 +14,7 @@
 
 * Update `utils` to `^1.0.0`
 * Update `components` to `1.0.1`
-* Update `base` 1o `1.0.2`
+* Update `base` to `1.0.2`
 
 ### 0.8.0 (November 20, 2015)
 
