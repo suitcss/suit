@@ -8,13 +8,12 @@
   ],
   "dependencies": {
     "suitcss-components-arrange": "^1.1.1",
-    "suitcss-components-button": "^5.0.0",
+    "suitcss-components-button": "^6.0.0",
     "suitcss-components-flex-embed": "^2.0.4",
     "suitcss-components-grid": "^3.0.2"
   },
   "devDependencies": {
-    "stylelint-config-suitcss": "^6.0.0",
-    "suitcss-preprocessor": "^2.0.0"
+    "suitcss-preprocessor": "^4.0.0"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
