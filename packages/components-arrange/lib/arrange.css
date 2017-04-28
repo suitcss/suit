@@ -56,8 +56,8 @@
 }
 
 /**
- * Where possible, protect against large images breaking the layout. Prevent them from
- * exceeding the width of the main content block by making them fluid.
+ * Where possible, protect against large images breaking the layout. Prevent
+ * them from exceeding the width of the main content block by making them fluid.
  *
  * Only work for all browsers with the `Arrange--equally` variant. For Firefox
  * and IE to constrain image dimensions for other layouts, large images will
