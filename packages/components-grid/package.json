@@ -26,11 +26,12 @@
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",
+    "lint": "suitcss -e index.css build/lint.css && rm build/lint.css",
     "preprocess": "suitcss index.css build/build.css",
     "preprocess-test": "suitcss -i test test/test.css build/test.css",
     "setup": "npm install",
     "watch": "npm run preprocess-test -- -w -v",
-    "test": "suitcss -e index.css build/lint.css && rm build/lint.css"
+    "test": "npm run lint"
   },
   "devDependencies": {
     "suitcss-components-test": "*",

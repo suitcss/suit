@@ -137,6 +137,12 @@ To generate a build:
 npm run build
 ```
 
+To lint code with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and [stylelint](http://stylelint.io/)
+
+```
+npm run lint
+```
+
 To generate the testing build:
 
 ```
