@@ -30,13 +30,11 @@
     "preprocess-test": "suitcss -i test test/test.css build/test.css",
     "setup": "npm install",
     "watch": "npm run preprocess-test -- -w -v",
-    "test": "suitcss -c test/config.json index.css build/output.css && rm build/output.css"
+    "test": "suitcss -e index.css build/lint.css && rm build/lint.css"
   },
   "devDependencies": {
-    "stylelint": "^5.4.0",
-    "stylelint-config-suitcss": "^5.0.0",
     "suitcss-components-test": "*",
-    "suitcss-preprocessor": "^2.0.0",
+    "suitcss-preprocessor": "^4.0.0",
     "suitcss-utils-offset": "^1.0.0",
     "suitcss-utils-size": "^1.0.0"
   }
