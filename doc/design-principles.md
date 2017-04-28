@@ -69,6 +69,8 @@ the implementation. Do not assume that CSS is self-documenting.
 
 ## Related reading
 
+* [The single responsibility principle applied to CSS](http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/)
+* [The open/closed principle applied to CSS](http://csswizardry.com/2012/06/the-open-closed-principle-applied-to-css/)
 * [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
 * [Cohesion](http://en.wikipedia.org/wiki/Cohesion_(computer_science))
 * [Component-based software engineering](http://en.wikipedia.org/wiki/Component-based_software_engineering)
