@@ -7,12 +7,12 @@
     "index.css"
   ],
   "dependencies": {
-    "suitcss-base": "^2.0.0",
-    "suitcss-components": "^1.0.1",
-    "suitcss-utils": "^1.0.0"
+    "suitcss-base": "^3.0.0",
+    "suitcss-components": "^2.0.0",
+    "suitcss-utils": "^3.0.0"
   },
   "devDependencies": {
-    "suitcss-preprocessor": "^2.0.0"
+    "suitcss-preprocessor": "^4.0.0"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
