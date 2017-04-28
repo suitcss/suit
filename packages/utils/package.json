@@ -6,7 +6,7 @@
   "dependencies": {
     "suitcss-utils-align": "^1.0.0",
     "suitcss-utils-display": "^1.0.2",
-    "suitcss-utils-flex": "^1.1.1",
+    "suitcss-utils-flex": "^2.0.0",
     "suitcss-utils-layout": "^1.0.1",
     "suitcss-utils-link": "^1.0.1",
     "suitcss-utils-offset": "^1.0.0",
@@ -15,7 +15,7 @@
     "suitcss-utils-text": "^1.0.0"
   },
   "devDependencies": {
-    "suitcss-preprocessor": "^2.0.0"
+    "suitcss-preprocessor": "^4.0.0"
   },
   "scripts": {
     "build": "npm run setup && npm run preprocess",
