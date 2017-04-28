@@ -1,5 +1,7 @@
 ### HEAD
 
+### 3.0.0 (April 28th, 2017)
+
 * Update normalize to `^6.0.0`
 * Add reset rules removed from normalize
 

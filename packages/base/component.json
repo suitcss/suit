@@ -1,7 +1,7 @@
 {
   "name": "suitcss-base",
   "repo": "suitcss/base",
-  "version": "1.0.1",
+  "version": "3.0.0",
   "styles": ["lib/base.css"],
   "dependencies": {
     "necolas/normalize.css": "6.0.0"
