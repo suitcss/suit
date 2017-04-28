@@ -1,5 +1,9 @@
 ### HEAD
 
+### 2.0.0 (April 28, 2017)
+
+* Update `suitcss-components-button` to `^6.0.0`
+
 ### 1.0.1 (February 28, 2016)
 
 * Update `suitcss-components-arrange` to ^1.1.1

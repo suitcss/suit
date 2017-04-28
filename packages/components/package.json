@@ -1,7 +1,7 @@
 {
   "name": "suitcss-components",
   "description": "Components for SUIT CSS",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "style": "index.css",
   "files": [
     "index.css"
