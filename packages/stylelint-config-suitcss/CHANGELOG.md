@@ -1,3 +1,5 @@
+# 12.0.0 
+
 * Updated: `stylelint` to `8.0.0`
 
 # 11.0.0
