@@ -1,3 +1,5 @@
+* Updated: `stylelint` to `8.0.0`
+
 # 11.0.0
 
 * Changed: `order/declaration-block-properties-alphabetical-order` to `order/properties-alphabetical-order`.
