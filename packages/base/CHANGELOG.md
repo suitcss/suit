@@ -1,5 +1,9 @@
 ### HEAD
 
+### 4.0.0 (September 25th, 2017)
+
+* Update normalize to `^7.0.0`
+
 ### 3.0.0 (April 28th, 2017)
 
 * Update normalize to `^6.0.0`
