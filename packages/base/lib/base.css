@@ -6,7 +6,7 @@
 /**
  * 1. Prevent padding and border from affecting element width
  * https://goo.gl/pYtbK7
- * 2. Change the default font family in all browsers
+ * 2. Change the default font family in all browsers (opinionated)
  */
 
 html {
@@ -24,7 +24,6 @@ html {
  * Removes the default spacing and border for appropriate elements.
  */
 
-body,
 blockquote,
 dl,
 dd,
@@ -81,38 +80,4 @@ ul {
 
 [tabindex="-1"]:focus {
   outline: none !important;
-}
-
-/**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers.
- */
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
-/**
- * Change the font styles in all browsers.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-}
-
-/**
- * Change the border, margin, and padding in all browsers.
- */
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
 }
