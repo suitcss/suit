@@ -15,6 +15,7 @@
   "author": "Nicolas Gallagher",
   "files": [
     "index.css",
+    "index.js",
     "lib"
   ],
   "style": "index.css",
