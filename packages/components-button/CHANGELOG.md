@@ -1,5 +1,9 @@
 ### HEAD
 
+### 6.0.1 (October 27, 2017)
+
+* Add support for JS bundling ([#24](https://github.com/suitcss/components-button/pull/24))
+
 ### 6.0.0 (January 14, 2017)
 
 * Remove `cursor: pointer;` ([#22](https://github.com/suitcss/components-button/pull/22))
