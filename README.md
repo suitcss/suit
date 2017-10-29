@@ -68,6 +68,22 @@ the `-w` flag e.g. `npm run build -- -w`.
 Refer to the [SUIT theme](https://github.com/suitcss/theme) for a more thorough
 example.
 
+## Community Packages
+
+Easily extend SUIT CSS with these third-party packages.
+
+### Components
+
+* https://github.com/antontrollback/select
+* https://github.com/giuseppeg/suitcss-toolkit
+* https://github.com/simonsmith/suitcss-components-form-field
+
+### Utilities
+
+* https://github.com/frekyll/suitcss-utils-spacing
+* https://github.com/simonsmith/suitcss-utils-image
+* https://github.com/simonsmith/suitcss-utils-list
+
 ## Example
 
 SUIT CSS makes use of variables, custom media queries, and dependency resolution for CSS.
@@ -186,23 +202,6 @@ Tools and dependency managers:
 
 * [npm](https://www.npmjs.org/): package manager.
 * [html-inspector](https://github.com/philipwalton/html-inspector): test HTML templates for SUIT CSS conformance.
-
-### Community Packages
-
-Easily extend SUIT CSS with these third-party packages.
-
-#### Components
-
-* https://github.com/simonsmith/suitcss-components-form-field
-* https://github.com/giuseppeg/suitcss-components-icon
-* https://github.com/giuseppeg/suitcss-components-arrow
-* https://github.com/antontrollback/select
-
-#### Utilities
-
-* https://github.com/simonsmith/suitcss-utils-list
-* https://github.com/simonsmith/suitcss-utils-image
-* https://github.com/frekyll/suitcss-utils-spacing
 
 ## Development
 
