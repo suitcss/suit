@@ -187,6 +187,23 @@ Tools and dependency managers:
 * [npm](https://www.npmjs.org/): package manager.
 * [html-inspector](https://github.com/philipwalton/html-inspector): test HTML templates for SUIT CSS conformance.
 
+### Community Packages
+
+Easily extend SUIT CSS with these third-party packages.
+
+#### Components
+
+* https://github.com/simonsmith/suitcss-components-form-field
+* https://github.com/giuseppeg/suitcss-components-icon
+* https://github.com/giuseppeg/suitcss-components-arrow
+* https://github.com/antontrollback/select
+
+#### Utilities
+
+* https://github.com/simonsmith/suitcss-utils-list
+* https://github.com/simonsmith/suitcss-utils-image
+* https://github.com/frekyll/suitcss-utils-spacing
+
 ## Development
 
 Install [Node](http://nodejs.org) (comes with npm).
