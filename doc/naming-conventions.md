@@ -15,6 +15,7 @@ The primary architectural division is between **[utilities](utilities.md)** and
 * [ComponentName--modifierName](#ComponentName--modifierName)
 * [ComponentName-descendentName](#ComponentName-descendentName)
 * [ComponentName.is-stateOfComponent](#is-stateOfComponent)
+* [Variables](variables.md)
 
 ## [Utilities](utilities.md)
 
@@ -150,4 +151,37 @@ the component).
 <article class="Tweet is-expanded">
   …
 </article>
+```
+## [Variables](variables.md)
+
+Syntax: `--ComponentName[-descendant|--modifier][-onState]-(cssProperty|variableName)`
+
+### Component Variables
+
+Custom properties are global. Components should not expose the internal structure. Variables used in components should have a flat structure after their namespace.
+
+```css
+:root {
+  --ComponentName-backgroundColor
+  --ComponentName-descendant-backgroundColor
+  --ComponentName--modifier-backgroundColor
+  --ComponentName-onHover-backgroundColor
+  --ComponentName-descendant-onHover-backgroundColor
+}
+```
+
+### Theme Variables
+
+Non-component variables must be written in camel case. For shared use, they should be authored in a `theme.css` file.
+
+```css
+:root {
+  --fontSize: 16px;
+  --fontFamily: sans-serif;
+  --lineHeight: 1.5;
+
+  --spaceSm: 16px;
+  --spaceMd: 32px;
+  --spaceLg: 64px;
+}
 ```
