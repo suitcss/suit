@@ -68,6 +68,20 @@ the `-w` flag e.g. `npm run build -- -w`.
 Refer to the [SUIT theme](https://github.com/suitcss/theme) for a more thorough
 example.
 
+## Community Packages
+
+### Components
+
+* https://github.com/antontrollback/select
+* https://github.com/giuseppeg/suitcss-toolkit
+* https://github.com/simonsmith/suitcss-components-form-field
+
+### Utilities
+
+* https://github.com/frekyll/suitcss-utils-spacing
+* https://github.com/simonsmith/suitcss-utils-image
+* https://github.com/simonsmith/suitcss-utils-list
+
 ## Example
 
 SUIT CSS makes use of variables, custom media queries, and dependency resolution for CSS.
