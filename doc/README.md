@@ -9,6 +9,7 @@
   * [ComponentName--modifierName](naming-conventions.md#ComponentName--modifierName)
   * [ComponentName-descendentName](naming-conventions.md#ComponentName-descendentName)
   * [ComponentName.is-stateOfComponent](naming-conventions.md#is-stateOfComponent)
+  * [Variables](naming-conventions.md#variables)
 * [Utilities](utilities.md)
 * [Components](components.md)
 * [API](api.md)
