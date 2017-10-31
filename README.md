@@ -70,8 +70,6 @@ example.
 
 ## Community Packages
 
-Easily extend SUIT CSS with these third-party packages.
-
 ### Components
 
 * https://github.com/antontrollback/select
