@@ -172,7 +172,7 @@ Custom properties are global. Components should not expose the internal structur
 
 ### Theme Variables
 
-Non-component variables must be written in camel case. For shared use, they should be authored in a `theme.css` file.
+Non-component variables must be written in camel case. For shared use, they should be authored in [a `theme.css`](https://github.com/suitcss/theme) file.
 
 ```css
 :root {
