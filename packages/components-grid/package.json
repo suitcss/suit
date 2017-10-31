@@ -36,6 +36,7 @@
   "devDependencies": {
     "suitcss-components-test": "*",
     "suitcss-preprocessor": "^4.0.0",
+    "suitcss-utils-flex": "^2.0.0",
     "suitcss-utils-offset": "^1.0.0",
     "suitcss-utils-size": "^1.0.0"
   }

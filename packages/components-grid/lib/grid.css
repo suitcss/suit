@@ -1,4 +1,4 @@
-/** @define Grid */
+/** @define Grid; weak */
 
 :root {
   --Grid-gutter-size: 20px;
@@ -15,7 +15,7 @@
    ========================================================================== */
 
 /**
- * All content must be contained within child `Grid-cell` elements.
+ * All content must be contained within child elements.
  *
  * 1. Account for browser defaults of elements that might be the root node of
  *    the component.
@@ -27,6 +27,21 @@
   flex-flow: row wrap;
   margin: 0; /* 1 */
   padding: 0; /* 1 */
+}
+
+/**
+ * No explicit width by default. Rely on combining a cell with a dimension
+ * utility or a component class that extends 'Grid'.
+ *
+ * 1. Set flex items to full width by default
+ * 2. Fix issue where elements with overflow extend past the
+ *    `.Grid > *` container - https://git.io/vw5oF
+ */
+
+.Grid > * {
+  box-sizing: inherit;
+  flex-basis: 100%; /* 1 */
+  min-width: 0; /* 2 */
 }
 
 /**
@@ -71,7 +86,7 @@
  *    http://git.io/vllWx
  */
 
-.Grid--fill > .Grid-cell {
+.Grid--fill > * {
   flex: 1 1 0%; /* 1 */
 }
 
@@ -79,7 +94,7 @@
  * Modifier: fit cells to their content
  */
 
-.Grid--fit > .Grid-cell {
+.Grid--fit > * {
   flex-basis: auto;
 }
 
@@ -87,7 +102,7 @@
  * Modifier: all cells match height of tallest cell in a row
  */
 
-.Grid--equalHeight > .Grid-cell {
+.Grid--equalHeight > * {
   display: flex;
 }
 
@@ -99,34 +114,6 @@
   margin: 0 calc(-0.5 * var(--Grid-gutter-size));
 }
 
-.Grid--withGutter > .Grid-cell {
+.Grid--withGutter > * {
   padding: 0 calc(0.5 * var(--Grid-gutter-size));
-}
-
-/* Grid cell
-   ========================================================================== */
-
-/**
- * No explicit width by default. Rely on combining `Grid-cell` with a dimension
- * utility or a component class that extends 'Grid'.
- *
- * 1. Set flex items to full width by default
- * 2. Fix issue where elements with overflow extend past the
- *    `Grid-cell` container - https://git.io/vw5oF
- */
-
-.Grid-cell {
-  box-sizing: inherit;
-  flex-basis: 100%; /* 1 */
-  min-width: 0; /* 2 */
-}
-
-/**
- * Modifier: horizontally center one unit
- * Set a specific unit to be horizontally centered. Doesn't affect
- * any other units. Can still contain a child `Grid` object.
- */
-
-.Grid-cell--center {
-  margin: 0 auto;
 }
