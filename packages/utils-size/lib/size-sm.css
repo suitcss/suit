@@ -160,6 +160,7 @@
 
   .u-sm-sizeFit {
     flex-basis: auto !important;
+    width: auto !important;
   }
 
   /**

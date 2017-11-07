@@ -162,6 +162,7 @@
 
   .u-md-sizeFit {
     flex-basis: auto !important;
+    width: auto !important;
   }
 
   /**
