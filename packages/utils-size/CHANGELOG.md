@@ -1,5 +1,9 @@
 ### HEAD
 
+### 2.0.1 (November 07, 2017)
+
+* Fix u-sizeFit overriding responsive versions [#39](https://github.com/suitcss/utils-size/issues/39)
+
 ### 2.0.0 (July 08, 2016)
 
 * Remove `box-sizing` and `display` from sizeFull [#36](https://github.com/suitcss/utils-size/pull/36)
