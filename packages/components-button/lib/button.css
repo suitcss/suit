@@ -26,6 +26,7 @@
 .Button {
   background: transparent;
   border-color: var(--Button-border-color);
+  border-radius: 0;
   border-style: solid;
   border-width: var(--Button-border-width);
   box-sizing: border-box; /* 1 */
