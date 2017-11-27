@@ -1,5 +1,9 @@
 ### HEAD
 
+### 6.0.2 (November 27, 2017)
+
+* Remove default border radius ([#25](https://github.com/suitcss/components-button/pull/25))
+
 ### 6.0.1 (October 27, 2017)
 
 * Add support for JS bundling ([#24](https://github.com/suitcss/components-button/pull/24))
