@@ -1,5 +1,7 @@
 ### HEAD
 
+* Rename `Grid-fit` to `Grid-fill` [#51](https://github.com/suitcss/components-grid/issues/51)
+
 ### 3.0.3 (May 05, 2016)
 
 * Fix issue with overflowing elements [#44](https://github.com/suitcss/components-grid/pull/44)

@@ -71,7 +71,7 @@
  *    http://git.io/vllWx
  */
 
-.Grid--fit > .Grid-cell {
+.Grid--fill > .Grid-cell {
   flex: 1 1 0%; /* 1 */
 }
 

@@ -20,7 +20,7 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 
 * Fluid layout.
 * Intelligent cell wrapping.
-* Evenly fit cell spacing
+* Evenly fill cell spacing
 * Equal height columns
 * Horizontal centering of cells.
 * Custom vertical alignment of cells (top, bottom, or middle).
@@ -34,7 +34,7 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 * `Grid--alignRight`: right-align all child `Grid-cell`
 * `Grid--alignMiddle`: middle-align all child `Grid-cell`
 * `Grid--alignBottom`: bottom-align all child `Grid-cell`
-* `Grid--fit`: evenly distribute space amongst all child `Grid-cell`
+* `Grid--fill`: evenly distribute space amongst all child `Grid-cell`
 * `Grid--equalHeight`: all child `Grid-cell` match height of the tallest
 * `Grid--withGutter`: adds a gutter between cells
 * `Grid-cell`: a child cell of `Grid` that wraps grid content
@@ -47,11 +47,11 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 ## Use
 
 A simple grid is easy to create. A grid container can have any number of child
-cells. When used with `Grid--fit` space is evenly distributed without need for
+cells. When used with `Grid--fill` space is evenly distributed without need for
 sizing utilities.
 
 ```html
-<div class="Grid Grid--fit Grid--withGutter">
+<div class="Grid Grid--fill Grid--withGutter">
   <div class="Grid-cell"></div>
   <div class="Grid-cell"></div>
   <div class="Grid-cell"></div>
@@ -62,7 +62,7 @@ sizing utilities.
 For more granular control over layout make use of modifiers and sizing utilities.
 
 ```html
-<div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--alignMiddle|Grid--alignBottom|Grid--fit|Grid--equalHeight]">
+<div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--alignMiddle|Grid--alignBottom|Grid--fill|Grid--equalHeight]">
   <div class="Grid-cell u-size1of2 u-lg-size6of12"></div>
   <div class="Grid-cell u-size1of2 u-lg-size4of12"></div>
   <div class="Grid-cell u-size1of3 u-lg-size2of12"></div>
