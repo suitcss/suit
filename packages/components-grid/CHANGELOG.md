@@ -1,6 +1,6 @@
 ### HEAD
 
-* Rename `Grid-fit` to `Grid-fill` [#51](https://github.com/suitcss/components-grid/issues/51)
+* Rename `Grid-fit` to `Grid-fill` and repurpose to match sizing utility behavior [#51](https://github.com/suitcss/components-grid/issues/51)
 
 ### 3.0.3 (May 05, 2016)
 

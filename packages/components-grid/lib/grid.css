@@ -76,6 +76,14 @@
 }
 
 /**
+ * Modifier: fit cells to their content
+ */
+
+.Grid--fit > .Grid-cell {
+  flex-basis: auto;
+}
+
+/**
  * Modifier: all cells match height of tallest cell in a row
  */
 

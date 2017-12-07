@@ -35,6 +35,7 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 * `Grid--alignMiddle`: middle-align all child `Grid-cell`
 * `Grid--alignBottom`: bottom-align all child `Grid-cell`
 * `Grid--fill`: evenly distribute space amongst all child `Grid-cell`
+* `Grid--fit`: fit cells to their content
 * `Grid--equalHeight`: all child `Grid-cell` match height of the tallest
 * `Grid--withGutter`: adds a gutter between cells
 * `Grid-cell`: a child cell of `Grid` that wraps grid content
@@ -62,7 +63,7 @@ sizing utilities.
 For more granular control over layout make use of modifiers and sizing utilities.
 
 ```html
-<div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--alignMiddle|Grid--alignBottom|Grid--fill|Grid--equalHeight]">
+<div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--alignMiddle|Grid--alignBottom|Grid--fill|Grid--fit|Grid--equalHeight]">
   <div class="Grid-cell u-size1of2 u-lg-size6of12"></div>
   <div class="Grid-cell u-size1of2 u-lg-size4of12"></div>
   <div class="Grid-cell u-size1of3 u-lg-size2of12"></div>
