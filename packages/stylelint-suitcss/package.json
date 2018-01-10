@@ -14,7 +14,6 @@
     "url": "https://github.com/suitcss/stylelint-suitcss/issues"
   },
   "homepage": "https://github.com/suitcss/stylelint-suitcss",
-
   "engines": {
     "node": ">=4"
   },
@@ -34,6 +33,6 @@
   "dependencies": {
     "lodash.find": "^4.6.0",
     "postcss-selector-parser": "^2.2.3",
-    "stylelint": "^7.9.0"
+    "stylelint": "^8.4.0"
   }
 }
