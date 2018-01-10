@@ -3886,7 +3886,7 @@ stylelint@^7.8.0:
     svg-tags "^1.0.0"
     table "^4.0.1"
 
-stylelint@^8.0.0:
+stylelint@^8.4.0:
   version "8.4.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-8.4.0.tgz#c2dbaeb17236917819f9206e1c0df5fddf6f83c3"
   dependencies:
