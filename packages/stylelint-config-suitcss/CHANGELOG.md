@@ -1,4 +1,4 @@
-# Head
+# 13.0.0
 
 * Updated: `stylelint-order` to `0.7.0`
 * Updated: `stylelint-suitcss` to `2.0.0`
