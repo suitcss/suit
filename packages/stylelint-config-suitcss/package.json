@@ -45,7 +45,7 @@
     }
   },
   "dependencies": {
-    "stylelint-order": "^0.4.3",
-    "stylelint-suitcss": "^1.0.0"
+    "stylelint-order": "^0.7.0",
+    "stylelint-suitcss": "^2.0.0"
   }
 }
