@@ -1,5 +1,8 @@
 ### HEAD
 
+### 2.0.1 (February 16, 2018)
+* Fix comments
+
 ### 2.0.0 (February 28, 2017)
 
 * Add utils for `flex-basis` and `flex` shorthand (initial, auto, none)
