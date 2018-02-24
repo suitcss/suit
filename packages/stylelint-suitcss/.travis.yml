@@ -3,10 +3,3 @@ sudo: false
 node_js:
   - "stable"
   - "6"
-  - "4"
-cache:
-  directories:
-    - node_modules
-before_install:
-- npm prune
-- npm update
