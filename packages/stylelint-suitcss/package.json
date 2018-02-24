@@ -1,6 +1,6 @@
 {
   "name": "stylelint-suitcss",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A collection of stylelint plugins for SUIT CSS",
   "keywords": [
     "stylelint-plugin",
