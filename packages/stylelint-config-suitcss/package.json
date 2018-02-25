@@ -24,10 +24,10 @@
     "eslint": "^3.17.0",
     "eslint-config-stylelint": "^6.0.0",
     "npmpub": "^3.0.1",
-    "stylelint": "^8.0.0"
+    "stylelint": "^9.0.0"
   },
   "peerDependencies": {
-    "stylelint": "^8.0.0"
+    "stylelint": "^9.0.0"
   },
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",
@@ -45,7 +45,7 @@
     }
   },
   "dependencies": {
-    "stylelint-order": "^0.7.0",
-    "stylelint-suitcss": "^2.0.0"
+    "stylelint-order": "^0.8.0",
+    "stylelint-suitcss": "^3.0.0"
   }
 }
