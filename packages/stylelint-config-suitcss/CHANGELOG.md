@@ -1,9 +1,15 @@
+# 14.0.0
+
+* Updated: `stylelint` to `9.0.0`
+* Updated: `stylelint-order` to `0.8.0`
+* Updated: `stylelint-suitcss` to `3.0.0`
+
 # 13.0.0
 
 * Updated: `stylelint-order` to `0.7.0`
 * Updated: `stylelint-suitcss` to `2.0.0`
 
-# 12.0.0 
+# 12.0.0
 
 * Updated: `stylelint` to `8.0.0`
 
