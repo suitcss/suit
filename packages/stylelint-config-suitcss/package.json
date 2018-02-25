@@ -32,9 +32,9 @@
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",
     "lint": "eslint . --ignore-path .gitignore",
-    "pretest": "npm run lint",
+    "pretest": "yarn run lint",
     "release": "npmpub",
-    "test": "npm run ava"
+    "test": "yarn run ava"
   },
   "eslintConfig": {
     "extends": [
