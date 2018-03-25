@@ -5,8 +5,8 @@
 
 /**
  * 1. Prevent padding and border from affecting element width
- * https://goo.gl/pYtbK7
- * 2. Change the default font family in all browsers (opinionated)
+ *    https://goo.gl/pYtbK7.
+ * 2. Change the default font family in all browsers (opinionated).
  */
 
 html {
