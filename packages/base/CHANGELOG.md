@@ -1,32 +1,34 @@
 ### HEAD
 
+* Update normalize.css to `^8.0.0`.
+
 ### 4.0.0 (September 25th, 2017)
 
-* Update normalize to `^7.0.0`
+* Update normalize.css to `^7.0.0`.
 
 ### 3.0.0 (April 28th, 2017)
 
-* Update normalize to `^6.0.0`
-* Add reset rules removed from normalize
+* Update normalize.css to `^6.0.0`.
+* Add reset rules removed from normalize.css.
 
 ### 2.0.0 (April 11, 2016)
 
-* Update normalize to `^4.0.0`
-* Update stylelint-config-suitcss to `^5.0.0`
+* Update normalize.css to `^4.0.0`.
+* Update stylelint-config-suitcss to `^5.0.0`.
 
 ### 1.0.2 (February 28, 2016)
 
-* Update preprocessor to `^1.0.1`
-* Fix `max-line-length` error with stylelint
+* Update preprocessor to `^1.0.1`.
+* Fix `max-line-length` error with stylelint.
 
 ### 1.0.1 (October 31, 2015)
 
-* Revert removal of `component.json`
+* Revert removal of `component.json`.
 
 ### 1.0.0 (October 25, 2015)
 
-* Use `box-sizing: border-box;` as a default
-* Remove `bower.json` and `component.json`
+* Use `box-sizing: border-box;` as a default.
+* Remove `bower.json` and `component.json`.
 
 ### 0.8.0 (October 28, 2014)
 
@@ -41,7 +43,7 @@
 ### 0.6.0 (June 21, 2014)
 
 * Support npm-based workflow.
-* Add preprocessor build tools;
+* Add preprocessor build tools.
 * Work around a Firefox/IE bug that removes `button` focus styles.
 
 ### 0.5.0 (May 20, 2014)
@@ -53,7 +55,7 @@
 
 * Add npm support.
 * Add SUIT-style Component(1) build pipeline.
-* Depend on 'normalize.css' 3.0.x.
+* Depend on normalize.css 3.0.x.
 * Introduce base theme variables for `html` and `a`.
 * Remove default `figure` margin.
 
