@@ -37,7 +37,7 @@ custom media queries and any custom properties that you wish to override:
 @custom-media --lg-viewport (min-width: 960px);
 
 :root {
-  --Grid-gutter-size: 25px;
+  --Grid-gutterSize: 25px;
 }
 ```
 
@@ -117,7 +117,7 @@ CSS:
 
 :root {
   --Excerpt-padding: 20px;
-  --Excerpt-highlight-color: orange;
+  --Excerpt-highlightColor: orange;
 }
 
 .Excerpt {
@@ -125,7 +125,7 @@ CSS:
 }
 
 .Excerpt-thumbnail {
-  border: 2px solid var(--Excerpt-highlight-color);
+  border: 2px solid var(--Excerpt-highlightColor);
   border-radius: 3px;
   margin-right: 10px;
 }

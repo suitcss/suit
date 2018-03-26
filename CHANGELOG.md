@@ -1,29 +1,31 @@
 ### HEAD
 
+* Update naming of variables according to the conventions.
+
 ### 3.0.0 (April 28th, 2017)
 
-* Update `utils` to `^3.0.0`
-* Update `components` to `2.0.0`
-* Update `base` to `3.0.0`
+* Update `utils` to `^3.0.0`.
+* Update `components` to `2.0.0`.
+* Update `base` to `3.0.0`.
 
 ### 2.0.0 (May 05, 2016)
 
-* Update `base` to `^2.0.0`
+* Update `base` to `^2.0.0`.
 
 ### 1.0.0 (February 28, 2016)
 
-* Update `utils` to `^1.0.0`
-* Update `components` to `1.0.1`
-* Update `base` to `1.0.2`
+* Update `utils` to `^1.0.0`.
+* Update `components` to `1.0.1`.
+* Update `base` to `1.0.2`.
 
 ### 0.8.0 (November 20, 2015)
 
-* Update `utils` to `0.11.0`
-* Update `components` to `1.0.0`
+* Update `utils` to `0.11.0`.
+* Update `components` to `1.0.0`.
 
 ### 0.7.0 (October 31, 2015)
 
-* Update 'base' to 1.0.1
+* Update 'base' to 1.0.1.
 
 ### 0.6.0 (July 2, 2014)
 
@@ -86,4 +88,4 @@
 * Introduce `u-` prefix for utilities.
 * Change notation for structured class names.
 * Add Bower configuration and manifest.
-* Initial public release
+* Initial public release.

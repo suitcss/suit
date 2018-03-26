@@ -152,7 +152,8 @@ the component).
   …
 </article>
 ```
-## [Variables](variables.md)
+
+## Variables
 
 Syntax: `--ComponentName[-descendant|--modifier][-onState]-(cssProperty|variableName)`
 
@@ -172,16 +173,16 @@ Custom properties are global. Components should not expose the internal structur
 
 ### Theme Variables
 
-Non-component variables must be written in camel case. For shared use, they should be authored in [a `theme.css`](https://github.com/suitcss/theme) file.
+Non-component variables must be written in camel case. For shared use, they should be authored in [a `theme.css`](https://github.com/suitcss/theme/blob/master/lib/theme.css) file.
 
 ```css
 :root {
   --fontSize: 16px;
   --fontFamily: sans-serif;
-  --lineHeight: 1.5;
+  --lineHeight: 1.4;
 
-  --spaceSm: 16px;
-  --spaceMd: 32px;
-  --spaceLg: 64px;
+  --spaceSmall: 10px;
+  --spaceMedium: 15px;
+  --spaceLarge: 20px;
 }
 ```
