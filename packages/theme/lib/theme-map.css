@@ -3,7 +3,7 @@
  */
 
 :root {
-  --Arrange-gutter-size: var(--space-small-px);
+  --Arrange-gutterSize: var(--spaceSmall);
 }
 
 /**
@@ -11,5 +11,5 @@
  */
 
 :root {
-  --Grid-gutter-size: var(--space-large-px);
+  --Grid-gutterSize: var(--spaceLarge);
 }

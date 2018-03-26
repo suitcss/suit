@@ -18,46 +18,46 @@
  */
 
 :root {
-  --color-twitter-blue: #55acee;
-  --color-white: #fff;
+  --colorTwitterBlue: #55acee;
+  --colorWhite: #fff;
 
   /* Primary grays */
-  --color-charcoal: #292f33;
-  --color-dark-gray: #66757f;
-  --color-medium-gray: #8899a6;
-  --color-gray: #ccd6dd;
-  --color-border-gray: #e1e8ed;
-  --color-faint-gray: #f5f8fa;
+  --colorCharcoal: #292f33;
+  --colorDarkGray: #66757f;
+  --colorMediumGray: #8899a6;
+  --colorGray: #ccd6dd;
+  --colorBorderGray: #e1e8ed;
+  --colorFaintGray: #f5f8fa;
 
   /* Primary blues */
-  --color-dark-blue: #226699;
-  --color-deep-blue: #3b88c3;
-  --color-light-blue: #88c9f9;
+  --colorDarkBlue: #226699;
+  --colorDeepBlue: #3b88c3;
+  --colorLightBlue: #88c9f9;
 
   /* Secondary colors */
-  --color-orange: #ffac33;
-  --color-green: #77b255;
-  --color-purple: #9266cc;
-  --color-red: #dd2e44;
-  --color-yellow: #ffcc4d;
+  --colorOrange: #ffac33;
+  --colorGreen: #77b255;
+  --colorPurple: #9266cc;
+  --colorRed: #dd2e44;
+  --colorYellow: #ffcc4d;
 
   /* Secondary color variants */
-  --color-dark-orange: #f4900c;
-  --color-dark-green: #3e721d;
-  --color-dark-purple: #553788;
-  --color-dark-red: #a0041e;
-  --color-deep-green: #5c913b;
-  --color-deep-purple: #744eaa;
-  --color-deep-red: #be1931;
-  --color-light-yellow: #ffd983;
-  --color-light-green: #a6d388;
-  --color-light-purple: #aa8dd8;
-  --color-light-red: #ea596e;
-  --color-faded-yellow: #ffe8b6;
-  --color-faded-green: #c6e5b3;
-  --color-faded-blue: #bbddf5;
-  --color-faded-purple: #cbb7ea;
-  --color-faded-red: #f4abba;
+  --colorDarkOrange: #f4900c;
+  --colorDarkGreen: #3e721d;
+  --colorDarkPurple: #553788;
+  --colorDarkRed: #a0041e;
+  --colorDeepGreen: #5c913b;
+  --colorDeepPurple: #744eaa;
+  --colorDeepRed: #be1931;
+  --colorLightYellow: #ffd983;
+  --colorLightGreen: #a6d388;
+  --colorLightPurple: #aa8dd8;
+  --colorLightRed: #ea596e;
+  --colorFadedYellow: #ffe8b6;
+  --colorFadedGreen: #c6e5b3;
+  --colorFadedBlue: #bbddf5;
+  --colorFadedPurple: #cbb7ea;
+  --colorFadedRed: #f4abba;
 }
 
 /**
@@ -65,9 +65,9 @@
  */
 
 :root {
-  --font-size: 16px;
-  --font-family: sans-serif;
-  --line-height: 1.4;
+  --fontSize: 16px;
+  --fontFamily: sans-serif;
+  --lineHeight: 1.4;
 }
 
 /**
@@ -75,7 +75,7 @@
  */
 
 :root {
-  --space-small-px: 10px;
-  --space-medium-px: 15px;
-  --space-large-px: 20px;
+  --spaceSmall: 10px;
+  --spaceMedium: 15px;
+  --spaceLarge: 20px;
 }
