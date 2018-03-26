@@ -1,7 +1,7 @@
 /** @define Grid; weak */
 
 :root {
-  --Grid-gutter-size: 20px;
+  --Grid-gutterSize: 20px;
 }
 
 /**
@@ -111,9 +111,9 @@
  */
 
 .Grid--withGutter {
-  margin: 0 calc(-0.5 * var(--Grid-gutter-size));
+  margin: 0 calc(-0.5 * var(--Grid-gutterSize));
 }
 
 .Grid--withGutter > * {
-  padding: 0 calc(0.5 * var(--Grid-gutter-size));
+  padding: 0 calc(0.5 * var(--Grid-gutterSize));
 }

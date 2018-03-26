@@ -41,7 +41,7 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 
 ## Configurable variables
 
-* `--Grid-gutter-size`: the width of the gutter applied by the `Grid--withGutter` modifier class.
+* `--Grid-gutterSize`: the width of the gutter applied by the `Grid--withGutter` modifier class.
 
 ## Use
 

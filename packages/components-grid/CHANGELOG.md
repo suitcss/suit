@@ -1,32 +1,34 @@
 ### HEAD
 
+* Update naming of variables according to the conventions.
+
 ### 4.0.0 (January 25, 2018)
 
-* Rename `Grid-fit` to `Grid-fill` and repurpose to match sizing utility behavior [#51](https://github.com/suitcss/components-grid/issues/51)
+* Rename `Grid-fit` to `Grid-fill` and repurpose to match sizing utility behavior [#51](https://github.com/suitcss/components-grid/issues/51).
 
 ### 3.0.3 (May 05, 2016)
 
-* Fix issue with overflowing elements [#44](https://github.com/suitcss/components-grid/pull/44)
-* Fix issue with offsets and no explicit cell width [#43](https://github.com/suitcss/components-grid/pull/43)
+* Fix issue with overflowing elements [#44](https://github.com/suitcss/components-grid/pull/44).
+* Fix issue with offsets and no explicit cell width [#43](https://github.com/suitcss/components-grid/pull/43).
 
 ### 3.0.2 (February 15, 2016)
 
-* Update `stylelint-config-suitcss` to `4.0.0`
-* Update `preprocessor` to `1.0.0`
-* Fix `maxlen` warning on comments
+* Update `stylelint-config-suitcss` to `4.0.0`.
+* Update `preprocessor` to `1.0.0`.
+* Fix `maxlen` warning on comments.
 * Remove unused `stylelint` package as this is included with the suitcss-preprocessor.
 
 ### 3.0.1 (December 02, 2015)
 
-* Upgrade to `^0.8.0` suitcss-preprocessor
-* Ensure [Grid conforms](https://github.com/suitcss/components-grid/commit/91a5a46daf4e7964a38ce72f29801fd8de48d451) to SUIT CSS stylelint rules
-* Add license field to `package.json`
+* Upgrade to `^0.8.0` suitcss-preprocessor.
+* Ensure [Grid conforms](https://github.com/suitcss/components-grid/commit/91a5a46daf4e7964a38ce72f29801fd8de48d451) to SUIT CSS stylelint rules.
+* Add license field to `package.json`.
 
 ### 3.0.0 (November 01, 2015)
 
-* Switch to flexbox for layout
-* Add `Grid--fit` and `Grid--equalHeight` modifiers
-* Use PostCSS instead of suitcss-preprocessor
+* Switch to flexbox for layout.
+* Add `Grid--fit` and `Grid--equalHeight` modifiers.
+* Use PostCSS instead of suitcss-preprocessor.
 
 ### 2.0.2 (October 28, 2014)
 
