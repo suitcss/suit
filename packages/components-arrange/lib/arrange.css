@@ -1,7 +1,7 @@
 /** @define Arrange; weak */
 
 :root {
-  --Arrange-gutter-size: 10px;
+  --Arrange-gutterSize: 10px;
 }
 
 /**
@@ -144,12 +144,12 @@
  */
 
 .Arrange--withGutter {
-  margin: 0 calc(-0.5 * var(--Arrange-gutter-size));
+  margin: 0 calc(-0.5 * var(--Arrange-gutterSize));
 }
 
 .Arrange--withGutter > .Arrange-sizeFit,
 .Arrange--withGutter > .Arrange-sizeFill,
 .Arrange--withGutter > .Arrange-row > .Arrange-sizeFit,
 .Arrange--withGutter > .Arrange-row > .Arrange-sizeFill {
-  padding: 0 calc(0.5 * var(--Arrange-gutter-size));
+  padding: 0 calc(0.5 * var(--Arrange-gutterSize));
 }

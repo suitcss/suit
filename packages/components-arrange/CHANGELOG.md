@@ -1,5 +1,7 @@
 ## HEAD
 
+* Update naming of variables according to the conventions.
+
 ### 1.1.1 (February 28, 2016)
 
 * Update `preprocessor` to `^1.0.1`
