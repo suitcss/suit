@@ -1,0 +1,159 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs-extra');
+const assign = require('object-assign-deep');
+const logger = require('./logger');
+const suitcss = require('..');
+const path = require('path');
+const program = require('commander');
+const read = require('read-file-stdin');
+const chokidar = require('chokidar');
+
+const exists = fs.existsSync;
+const resolve = path.resolve;
+const writeFileSync = fs.outputFileSync;
+
+/**
+ * Usage.
+ */
+
+program
+  .usage('[<input>] [<output>]')
+  .option('-c, --config [path]', 'a custom PostCSS config file')
+  .option('-i, --import-root [path]', 'the root directory for imported css files')
+  .option('-s, --encapsulate', 'encapsulate component styles')
+  .option('-w, --watch', 'watch the input file and any imports for changes')
+  .option('-m, --minify', 'minify output with cssnano')
+  .option('-e, --throw-error', 'throw an error when any warnings are found')
+  .option('-L, --no-lint', 'disable stylelint and postcss-bem-linter')
+  .option('-v, --verbose', 'log verbose output for debugging')
+  .version(require('../package.json').version);
+
+
+/**
+ * Examples.
+ */
+
+program.on('--help', () => {
+  console.log('  Examples:');
+  console.log();
+  console.log('    # pass an input and output file:');
+  console.log('    $ suitcss input.css output.css');
+  console.log();
+  console.log('    # configure the import root directory:');
+  console.log('    $ suitcss --import-root src/css input.css output.css');
+  console.log();
+  console.log('    # watch the input file and imports for changes:');
+  console.log('    $ suitcss --watch input.css output.css');
+  console.log();
+  console.log('    # configure postcss plugins with a config file:');
+  console.log('    $ suitcss --config config.js input.css output.css');
+  console.log();
+  console.log('    # unix-style piping to stdin and stdout:');
+  console.log('    $ cat input.css | suitcss | grep background-color');
+  console.log();
+});
+
+/**
+ * Parse.
+ */
+
+program.parse(process.argv);
+
+/**
+ * Settings.
+ */
+
+function requireOrParse(configFile) {
+  const configPath = resolve(configFile);
+  const ext = path.extname(configPath);
+  const readFn = /js|json/.test(ext) ? require : fs.readJsonSync;
+  return readFn(configPath);
+}
+
+const input = program.args[0] ? resolve(program.args[0]) : null;
+const output = program.args[1] ? resolve(program.args[1]) : null;
+const config = program.config ? requireOrParse(program.config) : {};
+const verbose = program.verbose;
+const regen = program.watch && input && output;
+
+/**
+ * Exists?
+ */
+
+if (input && !exists(input)) logger.fatal('not found', input);
+
+/**
+ * Run.
+ */
+
+run();
+
+/**
+ * Watch
+ */
+
+let currentWatchedFiles;
+if (regen) {
+  const watcher = chokidar.watch(input);
+  watcher.on('change', run);
+  watcher.on('change', file => {
+    if (verbose) logger.log(`${path.basename(file)} changed`);
+  });
+  watcher.on('ready', () => {
+    if (verbose) logger.log(`Watching ${path.basename(input)}`);
+  });
+
+  global.watchCSS = imported => {
+    watcher.unwatch(currentWatchedFiles);
+    watcher.add(imported);
+    currentWatchedFiles = imported;
+  };
+}
+
+/**
+ * Run for the given input and output.
+ */
+function run() {
+  read(input, (err, buffer) => {
+    if (err) logger.throw(err);
+    const css = buffer.toString();
+    const optsAliases = {
+      importRoot: 'root'
+    };
+    const flags = [
+      'minify',
+      'encapsulate',
+      'importRoot',
+      'lint'
+    ].reduce((acc, inFlag) => {
+      if (({}).hasOwnProperty.call(program, inFlag)) {
+        const flag = optsAliases[inFlag] || inFlag;
+        acc[flag] = program[inFlag];
+      }
+      return acc;
+    }, {});
+    const opts = assign({}, config, flags);
+
+    if (program.throwError) {
+      assign(opts, {
+        'postcss-reporter': {
+          throwError: true
+        }
+      });
+    }
+
+    suitcss(css, opts, input).then(result => {
+      if (output) {
+        writeFileSync(output, `${result.css}\n`);
+      } else {
+        console.log(result.css);
+      }
+      if (verbose && output) logger.log('write', output);
+    }).catch(e => {
+      logger.throw(e);
+    });
+  });
+}

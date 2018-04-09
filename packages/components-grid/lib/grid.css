@@ -1,0 +1,119 @@
+/** @define Grid; weak */
+
+:root {
+  --Grid-gutterSize: 20px;
+}
+
+/**
+ * Core grid component
+ *
+ * DO NOT apply dimension or offset utilities to the `Grid` element. All cell
+ * widths and offsets should be applied to child grid cells.
+ */
+
+/* Grid container
+   ========================================================================== */
+
+/**
+ * All content must be contained within child elements.
+ *
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ */
+
+.Grid {
+  box-sizing: border-box;
+  display: flex; /* 1 */
+  flex-flow: row wrap;
+  margin: 0; /* 1 */
+  padding: 0; /* 1 */
+}
+
+/**
+ * No explicit width by default. Rely on combining a cell with a dimension
+ * utility or a component class that extends 'Grid'.
+ *
+ * 1. Set flex items to full width by default
+ * 2. Fix issue where elements with overflow extend past the
+ *    `.Grid > *` container - https://git.io/vw5oF
+ */
+
+.Grid > * {
+  box-sizing: inherit;
+  flex-basis: 100%; /* 1 */
+  min-width: 0; /* 2 */
+}
+
+/**
+ * Modifier: center align all grid cells
+ */
+
+.Grid--alignCenter {
+  justify-content: center;
+}
+
+/**
+ * Modifier: right align all grid cells
+ */
+
+.Grid--alignRight {
+  justify-content: flex-end;
+}
+
+/**
+ * Modifier: middle-align grid cells
+ */
+
+.Grid--alignMiddle {
+  align-items: center;
+}
+
+/**
+ * Modifier: bottom-align grid cells
+ */
+
+.Grid--alignBottom {
+  align-items: flex-end;
+}
+
+/**
+ * Modifier: allow cells to equal distribute width
+ *
+ * 1. Provide all values to avoid IE10 bug with shorthand flex
+ *    http://git.io/vllC7
+ *
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+ *    http://git.io/vllWx
+ */
+
+.Grid--fill > * {
+  flex: 1 1 0%; /* 1 */
+}
+
+/**
+ * Modifier: fit cells to their content
+ */
+
+.Grid--fit > * {
+  flex-basis: auto;
+}
+
+/**
+ * Modifier: all cells match height of tallest cell in a row
+ */
+
+.Grid--equalHeight > * {
+  display: flex;
+}
+
+/**
+ * Modifier: gutters
+ */
+
+.Grid--withGutter {
+  margin: 0 calc(-0.5 * var(--Grid-gutterSize));
+}
+
+.Grid--withGutter > * {
+  padding: 0 calc(0.5 * var(--Grid-gutterSize));
+}

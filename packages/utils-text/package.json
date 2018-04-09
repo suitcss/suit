@@ -1,0 +1,41 @@
+{
+  "name": "suitcss-utils-text",
+  "version": "1.0.0",
+  "description": "Text utilities for SUIT CSS",
+  "keywords": [
+    "browser",
+    "css-utilities",
+    "text",
+    "suitcss",
+    "style"
+  ],
+  "homepage": "https://github.com/suitcss/utils-text#readme",
+  "bugs": "https://github.com/suitcss/utils-text/labels/bug",
+  "license": "MIT",
+  "author": "Nicolas Gallagher",
+  "files": [
+    "index.css",
+    "index.js",
+    "lib"
+  ],
+  "style": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/utils-text.git"
+  },
+  "scripts": {
+    "build": "npm run setup && npm run preprocess",
+    "build-test": "npm run setup && npm run preprocess-test",
+    "lint": "suitcss -c test/config.json index.css build/lint.css && rm build/lint.css",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss -i test test/test.css build/test.css",
+    "setup": "npm install",
+    "watch": "npm run preprocess-test -- -w -v",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "stylelint-config-suitcss": "^3.0.0",
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^1.0.0"
+  }
+}

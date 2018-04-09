@@ -1,0 +1,174 @@
+# SUIT CSS components-grid
+
+[![Build Status](https://travis-ci.org/suitcss/components-grid.svg?branch=master)](https://travis-ci.org/suitcss/components-grid)
+
+A CSS grid component. The grid makes use of `flexbox` and `box-sizing` to
+provide features that float-based layouts cannot.
+
+N.B. This component relies on particular dimensions being applied to cells in
+the grid via other classes. For example,
+[suitcss-utils-size](https://github.com/suitcss/utils-size/).
+
+Read more about [SUIT CSS](https://github.com/suitcss/suit/).
+
+## Installation
+
+* [npm](https://www.npmjs.org/package/suitcss-components-grid): `npm install suitcss-components-grid`
+* Download: [zip](https://github.com/suitcss/components-grid/releases/latest)
+
+## Features
+
+* Fluid layout.
+* Intelligent cell wrapping.
+* Evenly fill cell spacing
+* Equal height columns
+* Horizontal centering of cells.
+* Custom vertical alignment of cells (top, bottom, or middle).
+* Cell width is controlled independently of grid gutter.
+* Infinite nesting.
+
+## Available classes
+
+* `Grid`: core component
+* `Grid--alignCenter`: center-align all child cells
+* `Grid--alignRight`: right-align all child cells
+* `Grid--alignMiddle`: middle-align all child cells
+* `Grid--alignBottom`: bottom-align all child cells
+* `Grid--fill`: evenly distribute space amongst all child cells
+* `Grid--fit`: fit cells to their content
+* `Grid--equalHeight`: all child cells match height of the tallest
+* `Grid--withGutter`: adds a gutter between cells
+
+## Configurable variables
+
+* `--Grid-gutterSize`: the width of the gutter applied by the `Grid--withGutter` modifier class.
+
+## Use
+
+A simple grid is easy to create. A grid container can have any number of child
+cells. When used with `Grid--fill` space is evenly distributed without need for
+sizing utilities.
+
+**Note** Elements that are direct descendants of `Grid` will be flex items. It's
+recommended to use an element that can easily have classes attached later if
+needed, such as `u-sizeFill` or `u-flexJustifyCenter`
+
+```html
+<div class="Grid Grid--fill Grid--withGutter">
+  <div><!-- cell content --></div>
+  <div><!-- cell content --></div>
+  <div><!-- cell content --></div>
+  <div><!-- cell content --></div>
+</div>
+```
+
+For more granular control over layout make use of modifiers and sizing utilities.
+
+```html
+<div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--alignMiddle|Grid--alignBottom|Grid--fill|Grid--fit|Grid--equalHeight]">
+  <div class="u-size1of2 u-lg-size6of12"></div>
+  <div class="u-size1of2 u-lg-size4of12"></div>
+  <div class="u-size1of3 u-lg-size2of12"></div>
+  <div class="u-size1of3"></div>
+</div>
+```
+
+Fit cells to their content and allow others to fill the remaining space.
+
+```html
+<div class="Grid">
+  <div class="u-sizeFit">Fit to content</div>
+  <div class="u-sizeFill">Take up remaining space</div>
+</div>
+```
+
+### Widths and offsets
+
+Cell widths and offsets can be controlled using the [responsive sizing
+utilities](https://github.com/suitcss/utils-size) and [responsive offset
+utilities](https://github.com/suitcss/utils-offset), respectively.
+
+One limitation of creating grid gutters in the manner shown above is that it
+prevents any offset utilities applied directly to the `Grid` component from
+functioning as expected.
+
+GOOD:
+
+```html
+<div class="Grid Grid--withGutter">
+  <div class="u-size1of2 u-before1of4 u-after1of4">
+    {{>partial}}
+  </div>
+</div>
+```
+
+BAD:
+
+```html
+<div class="Grid Grid--withGutter u-before1of4 u-after1of4">
+  <div>
+    {{>partial}}
+  </div>
+</div>
+```
+
+You can nest grids in any context, including one that uses dimension or offset
+utilities, but keep in mind that the dimensions will be relative to the
+grid's width, and not the width of the whole application.
+
+```html
+<div class="u-before1of4 u-after1of4">
+  <div class="Grid Grid--withGutter">
+    <div class="u-size1of2"> <!-- 50% of the width of the Grid -->
+      {{>partial}}
+    </div>
+  </div>
+</div>
+```
+
+## Testing
+
+Install [Node](http://nodejs.org) (comes with npm).
+
+```
+npm install
+```
+
+To generate a build:
+
+```
+npm run build
+```
+
+To lint code with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and [stylelint](http://stylelint.io/)
+
+```
+npm run lint
+```
+
+To generate the testing build:
+
+```
+npm run build-test
+```
+
+To watch the files for making changes to test:
+
+```
+npm run watch
+```
+
+Basic visual tests are in `test/index.html`.
+
+## Browser support
+
+* Google Chrome (latest)
+* Opera (latest)
+* Firefox (latest)
+* Safari 6.2+
+* Internet Explorer 10+
+* iOS 7+
+* Android 4.4+
+* Windows Phone 8.1+
+
+Refer to the [caniuse](http://caniuse.com/) page for [flexbox](http://caniuse.com/#feat=flexbox)

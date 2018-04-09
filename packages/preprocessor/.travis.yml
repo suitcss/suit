@@ -1,0 +1,21 @@
+language: node_js
+sudo: required
+node_js:
+  - "4"
+  - "6"
+  - "stable"
+addons:
+  apt:
+    packages:
+      - xvfb
+before_install:
+  - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  - sudo apt-get update && sudo apt-get install yarn
+cache:
+  directories:
+  - $HOME/.yarn-cache
+install:
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - yarn

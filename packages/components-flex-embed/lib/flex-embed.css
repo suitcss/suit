@@ -1,0 +1,73 @@
+/** @define FlexEmbed */
+
+/**
+ * Flexible media embeds
+ *
+ * For use with media embeds – such as videos, slideshows, or even images –
+ * that need to retain a specific aspect ratio but adapt to the width of their
+ * containing element.
+ *
+ * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
+ */
+
+.FlexEmbed {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+/**
+ * The aspect-ratio hack is applied to an empty element because it allows
+ * the component to respect `max-height`. Default aspect ratio is 1:1.
+ */
+
+.FlexEmbed-ratio {
+  display: block;
+  padding-bottom: 100%;
+  width: 100%;
+}
+
+/**
+ * Modifier: 3:1 aspect ratio
+ */
+
+.FlexEmbed-ratio--3by1 {
+  padding-bottom: calc(100% / 3);
+}
+
+/**
+ * Modifier: 2:1 aspect ratio
+ */
+
+.FlexEmbed-ratio--2by1 {
+  padding-bottom: 50%;
+}
+
+/**
+ * Modifier: 16:9 aspect ratio
+ */
+
+.FlexEmbed-ratio--16by9 {
+  padding-bottom: 56.25%;
+}
+
+/**
+ * Modifier: 4:3 aspect ratio
+ */
+
+.FlexEmbed-ratio--4by3 {
+  padding-bottom: 75%;
+}
+
+/**
+ * Fit the content to the aspect ratio
+ */
+
+.FlexEmbed-content {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

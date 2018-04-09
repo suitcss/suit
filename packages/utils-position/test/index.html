@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Position [utility] - SUIT CSS</title>
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link rel="stylesheet" href="../build/test.css">
+<style>
+  .Box {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+  }
+
+  .u-highlight {
+    background: red;
+  }
+
+  #center {
+    border: 1px solid black;
+    height: 200px;
+    position: relative;
+    width: 200px;
+  }
+
+  #showblock {
+    position: relative;
+    z-index: 2;
+  }
+
+  #showblock + div {
+    display: none;
+  }
+
+  #showblock:checked + div {
+    display: block;
+  }
+
+  .Cover {
+    background-color: rgba(0,0,0,.8);
+    z-index: 1;
+    display: none;
+  }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-position">positioning utilities</a> tests</h1>
+
+  <h2 class="Test-describe">.u-posAbsoluteCenter</h2>
+  <h3 class="Test-it">absolutely centers the element</h3>
+  <div class="Test-run" id="center">
+    <span class="u-posAbsoluteCenter u-highlight Box"></span>
+  </div>
+  <h3 class="Test-it">centers without width and height</h3>
+  <div class="Test-run" id="center">
+    <span class="u-posAbsoluteCenter u-highlight">Testing</span>
+  </div>
+
+  <h2 class="Test-describe">.u-posFullScreen</h2>
+  <h3 class="Test-it">covers the entire viewport</h3>
+  <div class="Test-run">
+    <label for="showblock">Toggle</label>
+    <input type="checkbox" id="showblock" />
+    <div class="Cover u-posFullScreen"></div>
+  </div>
+
+  <h2 class="Test-describe">.u-posFixedCenter</h2>
+  <h3 class="Test-it">fix and centre an element in the viewport</h3>
+  <div class="Test-run">
+    <label for="showblock">Toggle</label>
+    <input type="checkbox" id="showblock" />
+    <div class="u-posFixedCenter u-highlight">Text in the centre</div>
+  </div>
+
+  <h2 class="Test-describe">.u-posFit</h2>
+  <h3 class="Test-it">fits element to its parent</h3>
+  <div class="Test-run" id="center">
+    <span class="u-posFit u-highlight"></span>
+  </div>
+</div>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>SUIT CSS: style tools for UI components</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="main.css">
+
+<div class="Page">
+
+  <div class="Card" role="main">
+
+    <div class="Container">
+
+      <header class="Header u-cf">
+        <h1 class="Header-project u-textCenter">
+          <a href="https://github.com/suitcss/suit">SUIT CSS</a>
+        </h1>
+      </header>
+
+      <div class="CallToAction u-textCenter">
+        <p class="CallToAction-text">Style tools for UI components</p>
+        <div class="CallToAction-tools">
+          <div>
+            <a class="CallToAction-link" href="https://github.com/suitcss/preprocessor">css preprocessor</a>
+            &middot;
+            <a class="CallToAction-link" href="https://github.com/postcss/postcss-bem-linter">encapsulation testing</a>
+          </div>
+          <div>
+            <a class="CallToAction-link" href="https://github.com/suitcss/base">style foundation</a>
+            &middot;
+            <a class="CallToAction-link" href="https://github.com/suitcss/utils">style utilities</a>
+            &middot;
+            <a class="CallToAction-link" href="https://github.com/suitcss/components">style components</a>
+          </div>
+        </div>
+        <div class="CallToAction-footer">
+          <a class="CallToAction-supportingLink" href="https://github.com/suitcss/suit/blob/master/doc/README.md">Documentation</a> &middot;
+          <a class="CallToAction-supportingLink" href="https://github.com/suitcss/suit/releases">Downloads</a> &middot;
+          <a class="CallToAction-supportingLink" href="https://github.com/suitcss">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="Container">
+
+    <section class="Section">
+      <h2 class="Section-title u-textCenter">Introduction</h2>
+      <p class="Section-text">
+        SUIT CSS is a reliable and testable styling methodology for
+        <b>component-based UI development</b>. A collection of CSS packages and
+        build tools are available as modules. SUIT CSS plays well with React,
+        Ember, Angular, and other component-based approaches to UI development.
+      </p>
+    </section>
+
+    <!-- ================================================================== -->
+
+    <section class="Section">
+      <h2 class="Section-title u-textCenter">Scope styles</h2>
+      <p class="Section-text">
+        The SUIT CSS <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">naming convention</a>
+        helps to scope component CSS and make your widgets render more predictably.
+      </p>
+      <pre class="Code">.MyComponent {}
+.MyComponent.is-animating {}
+.MyComponent--modifier {}
+
+.MyComponent-part {}
+.MyComponent-anotherPart {}</pre>
+    </section>
+
+    <!-- ================================================================== -->
+
+    <section class="Section">
+      <h2 class="Section-title u-textCenter">Future-facing CSS preprocessor</h2>
+      <p class="Section-text">
+        The SUIT CSS <a href="https://github.com/suitcss/preprocessor">preprocessor</a> assembles
+        future-facing extensions to CSS that support component-based development.
+      </p>
+      <pre class="Code">npm install suitcss-preprocessor</pre>
+      <p class="Section-text">
+        Vendor-prefixes are automatically applied with <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>.
+        <a href="https://github.com/postcss/postcss-custom-media">Custom media query aliases</a>
+        and <a href="https://github.com/postcss/postcss-custom-properties">custom properties</a> help with
+        theming and configuring components. <a href="https://github.com/postcss/postcss-import">Imports are inlined</a>
+        and can be used to reference npm-installed packages.
+      </p>
+      <pre class="Code"><span class="Code-comment">/* Import inlining */</span>
+@import "normalize.css";
+
+<span class="Code-comment">/* Media query aliases */</span>
+@custom-media --wide-screen (min-width: 80em);
+
+<span class="Code-comment">/* Custom properties */</span>
+:root {
+  --base-font-size: 16px;
+}
+
+@media (--wide-screen) {
+  html {
+    font-size: calc(var(--base-font-size) * 2);
+  }
+}</pre>
+    </section>
+
+    <!-- ================================================================== -->
+
+    <section class="Section">
+      <h2 class="Section-title u-textCenter">Encapsulation testing</h2>
+      <p class="Section-text">
+        <a href="https://github.com/postcss/postcss-bem-linter">postcss-bem-linter</a>
+        (for <a href="https://github.com/postcss/postcss">PostCSS</a>) is
+        included in the preprocessor but can be used stand-alone. It lets you test your
+        CSS for conformance to the SUIT CSS methodology.
+      </p>
+      <pre class="Code"><span class="Code-comment">/** @define MyComponent; */</span>
+
+:root {
+  --MyComponent-color: green;
+}
+
+.MyComponent {
+  color: var(--MyComponent-color);
+}</pre>
+      <p class="Section-text">
+        <a href="https://github.com/philipwalton/html-inspector">HTML Inspector</a>
+        can be used to test that your HTML conforms to the SUIT conventions.
+      </p>
+    </section>
+
+    <!-- ================================================================== -->
+
+    <section class="Section">
+      <h2 class="Section-title u-textCenter">Starter CSS for web apps</h2>
+      <p class="Section-text">
+        SUIT CSS provides a normalizing
+        <a href="https://github.com/suitcss/base">style foundation</a> designed
+        for web applications. The
+        <a href="https://github.com/suitcss/utils">utilities</a> provide
+        design-agnostic structural helpers that reduce common boilerplate CSS
+        in components.
+      </p>
+      <pre class="Code">&lt;div class="MyComponent">
+  &lt;h1 class="u-textTruncate">...&lt;/h1>
+  &lt;div class="u-cf">
+    &lt;div class="u-sizeFit">...&lt;/div>
+    &lt;div class="u-sizeFill">...&lt;/div>
+  &lt;/div>
+&lt;/div></pre>
+    </section>
+
+    <!-- ================================================================== -->
+
+    <section class="Section">
+      <h2 class="Section-title u-textCenter">Dependency resolution</h2>
+      <p class="Section-text">
+        SUIT CSS works best when style dependencies are automatically resolved.
+        Rely on <a href="https://www.npmjs.org/">npm</a> or
+        <a href="https://github.com/component/component">Component(1)</a>. With
+        npm, imports can be used to depend on local components <em>and</em> CSS
+        in npm-installed packages.
+      </p>
+      <pre class="Code"><span class="Code-comment">/* npm-installed dependency */</span>
+@import "suitcss-utils-text";
+<span class="Code-comment">/* local dependency */</span>
+@import "./Button";
+
+.MyComponent {}</pre>
+    </section>
+
+    <!-- ================================================================== -->
+
+    <section class="Section">
+      <h2 class="Section-title u-textCenter">Modular and extensible</h2>
+      <p class="Section-text">
+        Each part of the <a href="https://github.com/suitcss">SUIT CSS</a>
+        project is modular. Pick and choose which CSS packages to use. Write
+        your own components. Rebuild and extend the CSS preprocessor using
+        <a href="https://github.com/postcss/postcss">PostCSS</a> plugins.
+      </p>
+    </section>
+
+    <!-- ================================================================== -->
+
+    <section class="Section">
+      <h2 class="Section-title u-textCenter">Used by…</h2>
+      <p class="Section-text u-textCenter">
+        <a href="https://twitter.com/">Twitter</a>,
+        <a href="http://www.bbc.co.uk/bbcthree">BBC Three</a>,
+        <a href="https://cloudfour.com/">Cloud Four</a>,
+        <a href="https://segment.io/">Segment.io</a> and many others.
+      </p>
+    </section>
+
+    <footer class="Footer">
+      <p class="u-textCenter">
+        <a href="https://twitter.com/necolas" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @necolas</a>
+      </p>
+    </footer>
+
+  </div>
+
+</div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

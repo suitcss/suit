@@ -1,0 +1,28 @@
+@import './component';
+@import './util';
+
+.Encapsulation {
+  color: red;
+  width: 50px;
+}
+
+.Encapsulation-descendant {
+  background-color: #eee;
+}
+
+.Encapsulation-descendant:hover {
+  background-color: #f00;
+}
+
+.Encapsulation-descendant[aria-hidden="true"] {
+  display: none;
+}
+
+.Encapsulation.is-inState {
+  background-color: red;
+}
+
+.Encapsulation-item,
+.Encapsulation span {
+  filter: blur(10px);
+}

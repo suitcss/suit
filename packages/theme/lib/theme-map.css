@@ -1,0 +1,15 @@
+/**
+ * components-arrange
+ */
+
+:root {
+  --Arrange-gutterSize: var(--spaceSmall);
+}
+
+/**
+ * components-grid
+ */
+
+:root {
+  --Grid-gutterSize: var(--spaceLarge);
+}

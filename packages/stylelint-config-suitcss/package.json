@@ -1,0 +1,51 @@
+{
+  "name": "stylelint-config-suitcss",
+  "version": "14.0.0",
+  "description": "SUIT CSS config for stylelint",
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "suitcss"
+  ],
+  "author": "stylelint",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suitcss/stylelint-config-suitcss.git"
+  },
+  "homepage": "https://github.com/suitcss/stylelint-config-suitcss",
+  "bugs": "https://github.com/suitcss/stylelint-config-suitcss/issues",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "eslint": "^3.17.0",
+    "eslint-config-stylelint": "^6.0.0",
+    "npmpub": "^3.0.1",
+    "stylelint": "^9.0.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^9.0.0"
+  },
+  "scripts": {
+    "ava": "ava --verbose \"__tests__/**/*.js\"",
+    "lint": "eslint . --ignore-path .gitignore",
+    "pretest": "yarn run lint",
+    "release": "npmpub",
+    "test": "yarn run ava"
+  },
+  "eslintConfig": {
+    "extends": [
+      "stylelint"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  },
+  "dependencies": {
+    "stylelint-order": "^0.8.0",
+    "stylelint-suitcss": "^3.0.0"
+  }
+}

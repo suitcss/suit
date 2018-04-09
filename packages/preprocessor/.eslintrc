@@ -1,0 +1,27 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "es6": true
+  },
+  "globals": {
+    "Promise": true,
+    "document": true
+  },
+  "rules": {
+    "comma-dangle": [2, "never"],
+    "func-names": 0,
+    "global-require": 0,
+    "max-len": 0,
+    "no-console": 0,
+    "no-param-reassign": [0],
+    "no-use-before-define": [2, "nofunc"],
+    "object-curly-spacing": 0,
+    "one-var": [2, { "uninitialized": "always", "initialized": "never" }],
+    "space-before-function-paren": 0,
+    "vars-on-top": 0,
+    "arrow-parens": 0,
+    "strict": 0,
+
+    "import/no-dynamic-require": 0
+  }
+}

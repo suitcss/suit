@@ -1,0 +1,7 @@
+.editorconfig
+.eslintrc
+.gitattributes
+.npmignore
+.travis.yml
+CHANGELOG.md
+test

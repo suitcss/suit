@@ -1,0 +1,48 @@
+/** @define utilities */
+
+.u-posFit,
+.u-posAbsoluteCenter,
+.u-posAbsolute {
+  position: absolute !important;
+}
+
+/**
+ * Element will be centered to its nearest relatively-positioned
+ * ancestor.
+ */
+
+.u-posFixedCenter,
+.u-posAbsoluteCenter {
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.u-posFit,
+.u-posFullScreen {
+  bottom: 0 !important;
+  left: 0 !important;
+  margin: auto !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+/**
+ * 1. Make sure fixed elements are promoted into a new layer, for performance
+ *    reasons.
+ */
+
+.u-posFullScreen,
+.u-posFixedCenter,
+.u-posFixed {
+  backface-visibility: hidden; /* 1 */
+  position: fixed !important;
+}
+
+.u-posRelative {
+  position: relative !important;
+}
+
+.u-posStatic {
+  position: static !important;
+}

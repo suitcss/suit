@@ -1,0 +1,44 @@
+{
+  "name": "generator-suit",
+  "version": "1.0.2",
+  "description": "Generator for scaffolding out a SUIT component or utility",
+  "keywords": [
+    "yeoman-generator",
+    "generator",
+    "suit",
+    "web",
+    "yeoman-generator",
+    "css component"
+  ],
+  "homepage": "https://github.com/suitcss/generator-suit#readme",
+  "bugs": "https://github.com/suitcss/generator-suit/labels/bug",
+  "license": "MIT",
+  "author": "Giuseppe Gurgone",
+  "files": [
+    "generators"
+  ],
+  "main": "generators/app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suitcss/generator-suit.git"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "test": "mocha --reporter spec --slow 400 --timeout 3000",
+    "pretest": "npm run lint",
+    "lint": "eslint test/app.js generators/app/index.js"
+  },
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "lodash.camelcase": "^4.1.0",
+    "yeoman-generator": "^0.21.1",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^5.0.0",
+    "mocha": "^2.4.5",
+    "nsp": "^2.2.0",
+    "yeoman-assert": "^2.0.0"
+  }
+}
