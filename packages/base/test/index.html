@@ -20,11 +20,6 @@
   #iframe iframe {
     background-clip: content-box;
   }
-
-  #tabindex a:focus,
-  #tabindex button:focus {
-    outline: 5px solid red;
-  }
 </style>
 
 <div class="Test">
@@ -133,13 +128,6 @@
   <h3 class="Test-it">has no border, margin, or padding</h3>
   <div class="Test-run" id="iframe">
     <iframe class="dev-highlight"></iframe>
-  </div>
-
-  <h2 class="Test-describe">[tabindex="-1"]:focus</h2>
-  <h3 class="Test-it">has no focus outline (try clicking to trigger focus)</h3>
-  <div class="Test-run" id="tabindex">
-    <a class="dev-highlight" href="#n" tabindex="-1">example link</a>
-    <button class="dev-highlight" tabindex="-1">example button</button>
   </div>
 
   <h2 class="Test-describe">border-box</h2>
