@@ -1,5 +1,7 @@
 ### HEAD
 
+### 5.0.0 (October 8th, 2018)
+
 * Update normalize.css to `^8.0.0`.
 * Remove `tabindex=-1` ruleset.
 
