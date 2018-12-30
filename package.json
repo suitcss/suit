@@ -12,6 +12,7 @@
     "suitcss-utils": "^3.0.0"
   },
   "devDependencies": {
+    "lerna": "^3.4.3",
     "suitcss-preprocessor": "^4.0.0"
   },
   "scripts": {
