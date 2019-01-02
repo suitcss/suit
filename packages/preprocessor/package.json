@@ -71,6 +71,7 @@
     "suit"
   ],
   "repository": "https://github.com/suitcss/suit/tree/master/packages/preprocessor",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/preprocessor",
   "bugs": "https://github.com/suitcss/suit/labels/bug",
   "license": "MIT"
 }

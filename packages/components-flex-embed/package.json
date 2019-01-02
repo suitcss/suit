@@ -25,6 +25,7 @@
   },
   "license": "MIT",
   "repository": "https://github.com/suitcss/suit/tree/master/packages/components-flex-embed",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/components-flex-embed",
   "bugs": "https://github.com/suitcss/suit/labels/bug",
   "keywords": [
     "browser",

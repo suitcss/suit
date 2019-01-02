@@ -9,7 +9,6 @@
     "suitcss",
     "style"
   ],
-  "homepage": "https://github.com/suitcss/utils-align#readme",
   "bugs": "https://github.com/suitcss/suit/labels/bug",
   "license": "MIT",
   "author": "Nicolas Gallagher",
@@ -20,6 +19,7 @@
   ],
   "style": "index.css",
   "repository": "https://github.com/suitcss/suit/tree/master/packages/utils-align",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/utils-align",
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",

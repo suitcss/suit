@@ -10,7 +10,6 @@
     "yeoman-generator",
     "css component"
   ],
-  "homepage": "https://github.com/suitcss/generator-suit#readme",
   "bugs": "https://github.com/suitcss/suit/labels/bug",
   "license": "MIT",
   "author": "Giuseppe Gurgone",
@@ -19,6 +18,7 @@
   ],
   "main": "generators/app/index.js",
   "repository": "https://github.com/suitcss/suit/tree/master/packages/generator-suit",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/generator-suit",
   "scripts": {
     "test": "mocha --reporter spec --slow 400 --timeout 3000",
     "pretest": "npm run lint",

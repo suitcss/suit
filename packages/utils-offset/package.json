@@ -9,7 +9,6 @@
     "suitcss",
     "style"
   ],
-  "homepage": "https://github.com/suitcss/utils-offset#readme",
   "bugs": "https://github.com/suitcss/suit/labels/bug",
   "license": "MIT",
   "author": "Nicolas Gallagher",
@@ -19,6 +18,7 @@
   ],
   "style": "index.css",
   "repository": "https://github.com/suitcss/suit/tree/master/packages/utils-offset",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/utils-offset",
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "preprocess": "suitcss index.css build/build.css",

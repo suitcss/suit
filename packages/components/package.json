@@ -21,6 +21,7 @@
     "setup": "npm install && mkdir -p build"
   },
   "repository": "https://github.com/suitcss/suit/tree/master/packages/components",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/components",
   "bugs": "https://github.com/suitcss/suit/labels/bug",
   "keywords": [
     "browser",

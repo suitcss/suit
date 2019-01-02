@@ -9,7 +9,6 @@
     "suitcss",
     "style"
   ],
-  "homepage": "https://github.com/suitcss/components-test#readme",
   "bugs": "https://github.com/suitcss/suit/labels/bug",
   "license": "MIT",
   "author": "Nicolas Gallagher",
@@ -19,6 +18,7 @@
   ],
   "style": "index.css",
   "repository": "https://github.com/suitcss/suit/tree/master/packages/components-test",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/components-test",
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",

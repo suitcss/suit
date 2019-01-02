@@ -10,7 +10,7 @@
   "author": "stylelint",
   "license": "MIT",
   "repository": "https://github.com/suitcss/suit/tree/master/packages/stylelint-config-suitcss",
-  "homepage": "https://github.com/suitcss/stylelint-config-suitcss",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/stylelint-config-suitcss",
   "bugs": "https://github.com/suitcss/suit/labels/bug",
   "main": "index.js",
   "files": [

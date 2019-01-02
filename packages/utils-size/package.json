@@ -9,7 +9,6 @@
     "suitcss",
     "style"
   ],
-  "homepage": "https://github.com/suitcss/utils-size#readme",
   "bugs": "https://github.com/suitcss/suit/labels/bug",
   "license": "MIT",
   "author": "Nicolas Gallagher",
@@ -20,6 +19,7 @@
   ],
   "style": "index.css",
   "repository": "https://github.com/suitcss/suit/tree/master/packages/utils-size",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/utils-size",
   "scripts": {
     "build": "npm i && npm run preprocess",
     "build-test": "npm i && npm run preprocess-test",

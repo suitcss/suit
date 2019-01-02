@@ -10,7 +10,6 @@
     "suitcss",
     "style"
   ],
-  "homepage": "https://github.com/suitcss/utils-flex#readme",
   "bugs": "https://github.com/suitcss/suit/labels/bug",
   "license": "MIT",
   "author": "Simon Smith",
@@ -21,6 +20,7 @@
   ],
   "style": "index.css",
   "repository": "https://github.com/suitcss/suit/tree/master/packages/utils-flex",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/utils-flex",
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",
