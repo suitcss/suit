@@ -24,6 +24,7 @@
     "test": "npm run lint"
   },
   "repository": "https://github.com/suitcss/suit/tree/master/packages/utils-position",
+  "bugs": "https://github.com/suitcss/suit/labels/bug",
   "keywords": [
     "browser",
     "css-utilities",

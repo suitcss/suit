@@ -22,5 +22,6 @@
     "preprocess": "suitcss index.css build/build.css",
     "setup": "npm install"
   },
-  "repository": "https://github.com/suitcss/suit/tree/master/packages/utils"
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/utils",
+  "bugs": "https://github.com/suitcss/suit/labels/bug"
 }

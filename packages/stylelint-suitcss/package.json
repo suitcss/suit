@@ -10,9 +10,7 @@
     "suitcss"
   ],
   "repository": "https://github.com/suitcss/suit/tree/master/packages/stylelint-suitcss",
-  "bugs": {
-    "url": "https://github.com/suitcss/stylelint-suitcss/issues"
-  },
+  "bugs": "https://github.com/suitcss/suit/labels/bug",
   "homepage": "https://github.com/suitcss/stylelint-suitcss",
   "engines": {
     "node": ">=4"

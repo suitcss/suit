@@ -10,7 +10,7 @@
     "style"
   ],
   "homepage": "https://github.com/suitcss/components-grid#readme",
-  "bugs": "https://github.com/suitcss/components-grid/labels/bug",
+  "bugs": "https://github.com/suitcss/suit/labels/bug",
   "license": "MIT",
   "author": "Nicolas Gallagher",
   "files": [

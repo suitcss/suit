@@ -11,7 +11,7 @@
     "style"
   ],
   "homepage": "https://github.com/suitcss/base#readme",
-  "bugs": "https://github.com/suitcss/base/labels/bug",
+  "bugs": "https://github.com/suitcss/suit/labels/bug",
   "license": "MIT",
   "author": "Nicolas Gallagher",
   "files": [

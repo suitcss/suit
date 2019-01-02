@@ -11,7 +11,7 @@
     "css component"
   ],
   "homepage": "https://github.com/suitcss/generator-suit#readme",
-  "bugs": "https://github.com/suitcss/generator-suit/labels/bug",
+  "bugs": "https://github.com/suitcss/suit/labels/bug",
   "license": "MIT",
   "author": "Giuseppe Gurgone",
   "files": [
