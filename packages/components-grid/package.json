@@ -19,10 +19,7 @@
     "lib"
   ],
   "style": "index.css",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/components-grid.git"
-  },
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/components-grid",
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "build-test": "npm run setup && npm run preprocess-test",

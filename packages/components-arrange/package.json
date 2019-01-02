@@ -25,10 +25,7 @@
     "watch": "npm run preprocess-test -- -w -v",
     "test": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/components-arrange.git"
-  },
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/components-arrange",
   "keywords": [
     "browser",
     "css-components",

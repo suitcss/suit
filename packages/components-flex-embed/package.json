@@ -24,10 +24,7 @@
     "test": "npm run lint"
   },
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/components-flex-embed.git"
-  },
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/components-flex-embed",
   "keywords": [
     "browser",
     "css-components",

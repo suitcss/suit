@@ -9,10 +9,7 @@
   ],
   "author": "stylelint",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/suitcss/stylelint-config-suitcss.git"
-  },
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/stylelint-config-suitcss",
   "homepage": "https://github.com/suitcss/stylelint-config-suitcss",
   "bugs": "https://github.com/suitcss/stylelint-config-suitcss/issues",
   "main": "index.js",

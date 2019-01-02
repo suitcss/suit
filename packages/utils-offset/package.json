@@ -18,10 +18,7 @@
     "index.js"
   ],
   "style": "index.css",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/utils-offset.git"
-  },
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/utils-offset",
   "scripts": {
     "build": "npm run setup && npm run preprocess",
     "preprocess": "suitcss index.css build/build.css",

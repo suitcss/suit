@@ -18,10 +18,7 @@
     "generators"
   ],
   "main": "generators/app/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/suitcss/generator-suit.git"
-  },
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/generator-suit",
   "scripts": {
     "test": "mocha --reporter spec --slow 400 --timeout 3000",
     "pretest": "npm run lint",

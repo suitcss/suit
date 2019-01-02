@@ -70,6 +70,6 @@
     "postcss",
     "suit"
   ],
-  "repository": "git://github.com/suitcss/preprocessor.git",
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/preprocessor",
   "license": "MIT"
 }

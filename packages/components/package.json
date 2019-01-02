@@ -20,10 +20,7 @@
     "preprocess": "suitcss index.css build/build.css",
     "setup": "npm install && mkdir -p build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/components.git"
-  },
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/components",
   "keywords": [
     "browser",
     "css-components",

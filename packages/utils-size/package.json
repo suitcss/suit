@@ -19,10 +19,7 @@
     "lib"
   ],
   "style": "index.css",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/utils-size.git"
-  },
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/utils-size",
   "scripts": {
     "build": "npm i && npm run preprocess",
     "build-test": "npm i && npm run preprocess-test",

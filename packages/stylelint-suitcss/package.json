@@ -9,7 +9,7 @@
     "lint",
     "suitcss"
   ],
-  "repository": "suitcss/stylelint-suitcss",
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/stylelint-suitcss",
   "bugs": {
     "url": "https://github.com/suitcss/stylelint-suitcss/issues"
   },
