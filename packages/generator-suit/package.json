@@ -23,7 +23,6 @@
     "url": "https://github.com/suitcss/generator-suit.git"
   },
   "scripts": {
-    "prepublish": "nsp check",
     "test": "mocha --reporter spec --slow 400 --timeout 3000",
     "pretest": "npm run lint",
     "lint": "eslint test/app.js generators/app/index.js"
@@ -37,8 +36,7 @@
   "devDependencies": {
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.0",
-    "mocha": "^2.4.5",
-    "nsp": "^2.2.0",
+    "mocha": "^5.2.0",
     "yeoman-assert": "^2.0.0"
   }
 }
