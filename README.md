@@ -7,10 +7,10 @@ Style tools for component-based UI development.
 SUIT CSS provides a reliable and testable styling solution for component-based
 web application development. The project includes:
 
-* [CSS base styles](https://github.com/suitcss/base) for web apps.
-* [CSS utilities](https://github.com/suitcss/utils).
-* [CSS components](https://github.com/suitcss/components).
-* A [future-facing CSS preprocessor](https://github.com/suitcss/preprocessor)
+* [CSS base styles](https://github.com/suitcss/suit/tree/master/packages/base) for web apps.
+* [CSS utilities](https://github.com/suitcss/suit/tree/master/packages/utils).
+* [CSS components](https://github.com/suitcss/suit/tree/master/packages/components).
+* A [future-facing CSS preprocessor](https://github.com/suitcss/suit/tree/master/packages/preprocessor)
 
 Each of these modules are made up of smaller modules, making it easy to customize
 your setup and build pipeline.
@@ -65,7 +65,7 @@ Now run `npm run build` on the command line to output the built packages to
 `build/build.css`. The preprocessor can also watch for file changes by passing
 the `-w` flag e.g. `npm run build -- -w`.
 
-Refer to the [SUIT theme](https://github.com/suitcss/theme) for a more thorough
+Refer to the [SUIT theme](https://github.com/suitcss/suit/tree/master/packages/theme) for a more thorough
 example.
 
 ## Community Packages
@@ -153,14 +153,14 @@ them, however, you can install all the CSS packages at once if you prefer:
 Each package is stand-alone, contains its own documentation and tests, and is
 written to follow a common set of [naming conventions](doc/naming-conventions.md).
 
-* [base](https://github.com/suitcss/base/): a thin reset for web apps, built on top of normalize.css.
-* [utils](https://github.com/suitcss/utils/): all the utility packages.
-* [components-arrange](https://github.com/suitcss/components-arrange/): flexbox-like horizontal arrangements.
-* [components-button](https://github.com/suitcss/components-button/): robust, structural button styles.
-* [components-flex-embed](https://github.com/suitcss/components-flex-embed/): aspect-ratios for embeds.
-* [components-grid](https://github.com/suitcss/components-grid/): a grid foundation.
-* [components-test](https://github.com/suitcss/components-test/): structure for visual tests.
-* [theme](https://github.com/suitcss/theme/): example theme.
+* [base](https://github.com/suitcss/suit/tree/master/packages/base/): a thin reset for web apps, built on top of normalize.css.
+* [utils](https://github.com/suitcss/suit/tree/master/packages/utils/): all the utility packages.
+* [components-arrange](https://github.com/suitcss/suit/tree/master/packages/components-arrange/): flexbox-like horizontal arrangements.
+* [components-button](https://github.com/suitcss/suit/tree/master/packages/components-button/): robust, structural button styles.
+* [components-flex-embed](https://github.com/suitcss/suit/tree/master/packages/components-flex-embed/): aspect-ratios for embeds.
+* [components-grid](https://github.com/suitcss/suit/tree/master/packages/components-grid/): a grid foundation.
+* [components-test](https://github.com/suitcss/suit/tree/master/packages/components-test/): structure for visual tests.
+* [theme](https://github.com/suitcss/suit/tree/master/packages/theme/): example theme.
 
 You can also download pre-built bundles to try things out without setting up a
 build process:
@@ -172,7 +172,7 @@ build process:
 
 ## Build and test tools
 
-The [suitcss-preprocessor](https://github.com/suitcss/preprocessor) runs CSS
+The [suitcss-preprocessor](https://github.com/suitcss/suit/tree/master/packages/preprocessor) runs CSS
 through a build pipeline. It performs per-file tests for conformance to the
 SUIT CSS naming conventions, offers minification and allows additional PostCSS
 plugins to be added. A CLI and Node API are available
