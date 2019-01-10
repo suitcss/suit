@@ -1,0 +1,32 @@
+{
+  "name": "suitcss",
+  "version": "3.0.0",
+  "description": "CSS base styles, utilities, and structural components for web apps",
+  "style": "index.css",
+  "files": [
+    "index.css"
+  ],
+  "dependencies": {
+    "suitcss-base": "^3.0.0",
+    "suitcss-components": "^2.0.0",
+    "suitcss-utils": "^3.0.0"
+  },
+  "devDependencies": {
+    "suitcss-preprocessor": "^4.0.0"
+  },
+  "scripts": {
+    "build": "npm run setup && npm run preprocess",
+    "preprocess": "suitcss index.css build/build.css",
+    "setup": "npm install"
+  },
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/suit",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/suit",
+  "bugs": "https://github.com/suitcss/suit/labels/bug",
+  "keywords": [
+    "browser",
+    "css-components",
+    "css-utilities",
+    "suitcss",
+    "style"
+  ]
+}
