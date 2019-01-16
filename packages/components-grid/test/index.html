@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Grid [component] - SUIT CSS</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="stylesheet" href="../build/test.css">
+<style>
+  .fixture-Box {
+    background: rgb(100, 150, 50);
+    border: 1px solid black;
+    margin-bottom: 10px;
+    min-height: 50px;
+  }
+
+  .fixture-Wrap {
+    background: rgba(100, 150, 50, .7);
+    border: 1px solid black;
+  }
+
+  .fixture-Box--doubleHeight {
+    min-height: 100px;
+  }
+
+  pre {
+    overflow: auto;
+    white-space: pre;
+    word-wrap: normal;
+  }
+
+  .Test {
+    padding: 0 10px;
+  }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/components-grid">Grid</a> component tests</h1>
+
+  <h2 class="Test-describe">.Grid</h2>
+  <h3 class="Test-it">renders cells at full-width by default</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div>
+        <div class="fixture-Box">1</div>
+      </div>
+      <div>
+        <div class="fixture-Box">2</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">removes inter-cell whitespace</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div class="u-size1of4">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">2</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">3</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">4</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">handles overflowing elements</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div>
+        <div class="fixture-Box">
+           <pre>
+              This is some really long content that should be scrolled when the container is too small.
+           </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">automatically wraps cells across multiple lines when they don't fit a single row</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div class="u-size1of4">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">2</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">3</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">4</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">5</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">6</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">7</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">8</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">arranges cells of different heights into clear rows</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div class="u-size1of4">
+        <div class="fixture-Box fixture-Box--doubleHeight">1</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">2</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box fixture-Box--doubleHeight">3</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">4</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">5</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box fixture-Box--doubleHeight">6</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">7</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box fixture-Box--doubleHeight">8</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">supports nested grids</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div class="u-size3of4">
+        <div class="fixture-Wrap">
+          Level 1
+          <div class="Grid">
+            <div class="u-size1of3">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="u-size1of3">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="u-size1of3">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="Test-it">supports u-sizeFill on cells with no width</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div class="u-size1of4">
+        <div class="fixture-Box">1/4</div>
+      </div>
+      <div class="u-sizeFill">
+        <div class="fixture-Box">auto</div>
+      </div>
+    </div>
+    <div class="Grid">
+      <div class="u-size2of12">
+        <div class="fixture-Box">2/12</div>
+      </div>
+      <div class="u-sizeFill">
+        <div class="fixture-Box">auto</div>
+      </div>
+      <div class="u-size2of12">
+        <div class="fixture-Box">2/12</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="Test-it">supports u-sizeFit and u-sizeFill</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div class="u-sizeFit">
+        <div class="fixture-Box">shrink to content width</div>
+      </div>
+      <div class="u-sizeFill">
+        <div class="fixture-Box">u-sizeFill</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Grid--fill</h2>
+  <h3 class="Test-it">evenly distribute space between cells without sizing classes</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--fill">
+      <div>
+        <div class="fixture-Box">1</div>
+      </div>
+      <div>
+        <div class="fixture-Box">2</div>
+      </div>
+      <div>
+        <div class="fixture-Box">3</div>
+      </div>
+    </div>
+    <div class="Grid Grid--fill">
+      <div>
+        <div class="fixture-Box">1</div>
+      </div>
+      <div>
+        <div class="fixture-Box">2</div>
+      </div>
+      <div>
+        <div class="fixture-Box">3</div>
+      </div>
+      <div>
+        <div class="fixture-Box">4</div>
+      </div>
+      <div>
+        <div class="fixture-Box">5</div>
+      </div>
+      <div>
+        <div class="fixture-Box">6</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Grid--fit</h2>
+  <h3 class="Test-it">fit cells to their content</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--fit">
+      <div>
+        <div class="fixture-Box">1<br> Lorem ipsum dolor sit amet</div>
+      </div>
+      <div>
+        <div class="fixture-Box">2<br> dolor sit amet</div>
+      </div>
+      <div>
+        <div class="fixture-Box">3<br> consectetur adipiscing elit</div>
+      </div>
+    </div>
+    <div class="Grid Grid--fit Grid--alignCenter">
+      <div class="u-size1of3">
+        <div class="fixture-Box u-sizeFill">1<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+      </div>
+      <div>
+        <div class="fixture-Box u-sizeFill">2<br> dolor sit amet</div>
+      </div>
+      <div>
+        <div class="fixture-Box u-sizeFill">3<br> consectetur adipiscing elit</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Grid--alignCenter</h2>
+  <h3 class="Test-it">center-aligns all grid cells but not their content</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--alignCenter">
+      <div class="u-size1of3">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="u-size1of3">
+        <div class="fixture-Box">2</div>
+      </div>
+      <div class="u-size1of2">
+        <div class="fixture-Box">3</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Grid--alignRight</h2>
+  <h3 class="Test-it">right-aligns all grid cells but not their content</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--alignRight">
+      <div class="u-size1of4">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">2</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">3</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Grid--alignMiddle</h2>
+  <h3 class="Test-it">middle-aligns all grid cells</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--alignMiddle">
+      <div class="u-size1of4">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box fixture-Box--doubleHeight">2</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">3</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">4</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Grid--alignBottom</h2>
+  <h3 class="Test-it">bottom-aligns all grid cells</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--alignBottom">
+      <div class="u-size1of4">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box fixture-Box--doubleHeight">2</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">3</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">4</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Grid--equalHeight</h2>
+  <h3 class="Test-it">equal height columns based on tallest cell</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--equalHeight">
+      <div class="u-size1of3">
+        <div class="fixture-Box u-sizeFill">1</div>
+      </div>
+      <div class="u-size1of3">
+        <div class="fixture-Box u-sizeFill">2<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis velit non gravida venenatis. Praesent consequat lectus purus, ut scelerisque velit condimentum eu. Maecenas sagittis ante ut turpis varius interdum. Quisque tellus ipsum, eleifend non ipsum id, suscipit ultricies neque.</div>
+      </div>
+      <div class="u-size1of3">
+        <div class="fixture-Box u-sizeFill">3</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">Align an individual grid cell but not its content (requires suitcss-utils-flex)</h2>
+  <h3 class="Test-it">with u-flexExpand</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div class="u-size1of2">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="u-size1of2">
+        <div class="fixture-Box">2</div>
+      </div>
+      <div class="u-size3of4 u-flexExpandLeft u-flexExpandRight">
+        <div class="fixture-Box">3: centered cell</div>
+      </div>
+      <div class="u-size3of4 u-flexExpandRight">
+        <div class="fixture-Box">4: left aligned cell</div>
+      </div>
+      <div class="u-size3of4 u-flexExpandLeft">
+        <div class="fixture-Box">4: right aligned cell</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">with u-flexJustify</h3>
+  <div class="Test-run">
+    <div class="Grid">
+      <div class="u-size1of2">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="u-size1of2">
+        <div class="fixture-Box">2</div>
+      </div>
+      <div class="u-flex u-flexJustifyCenter">
+        <div class="fixture-Box u-size3of4">3: centered cell</div>
+      </div>
+      <div class="u-flex u-flexJustifyStart">
+        <div class="fixture-Box u-size3of4">4: left aligned cell</div>
+      </div>
+      <div class="u-flex u-flexJustifyEnd">
+        <div class="fixture-Box u-size3of4">5: right aligned cell</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Grid--withGutter</h2>
+  <h3 class="Test-it">supports gutters</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--withGutter">
+      <div class="u-size1of4">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">2</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">3</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">4</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">doesn't apply gutters to nested grids</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--withGutter">
+      <div class="u-size1of2">
+        <div class="fixture-Wrap">
+          Level 1
+          <div class="Grid">
+            <div class="u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-size1of2">
+        <div class="fixture-Wrap">
+          Level 1
+          <div class="Grid">
+            <div class="u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <h3 class="Test-it">correctly aligns gutters when using offsets (requires suitcss-utils-offset)</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--withGutter">
+      <div class="u-size1of4">
+        <div class="fixture-Box">1</div>
+      </div>
+      <div class="u-before1of4 u-size1of4">
+        <div class="fixture-Box">2</div>
+      </div>
+      <div class="u-size1of4">
+        <div class="fixture-Box">3</div>
+      </div>
+    </div>
+    <div class="Grid Grid--withGutter">
+      <div class="u-before1of2">
+        <div class="fixture-Box">1</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">correctly aligns gutters within nested grids</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--withGutter">
+      <div class="u-size1of2">
+        <div class="fixture-Wrap">
+          Level 1
+          <div class="Grid Grid--withGutter">
+            <div class="u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-size1of2">
+        <div class="fixture-Wrap">
+          Level 1
+          <div class="Grid Grid--withGutter">
+            <div class="u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+            <div class="u-size1of2">
+              <div class="fixture-Box">Level 2</div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <h3 class="Test-it">correctly adds gutters with Grid--fill</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--withGutter Grid--fill">
+      <div>
+        <div class="fixture-Box">1</div>
+      </div>
+      <div>
+        <div class="fixture-Box">2</div>
+      </div>
+      <div>
+        <div class="fixture-Box">3</div>
+      </div>
+    </div>
+    <div class="Grid Grid--withGutter Grid--fill">
+      <div>
+        <div class="fixture-Box">1</div>
+      </div>
+      <div>
+        <div class="fixture-Box">2</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="Test-it">correctly adds gutters with Grid--fit</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--withGutter Grid--fit">
+      <div>
+        <div class="fixture-Box">Lorem ipsum dolor sit amet, consectetur. Lorem ipsum.</div>
+      </div>
+      <div>
+        <div class="fixture-Box">Lorem ipsum dolor sit amet, consectetur.</div>
+      </div>
+      <div>
+        <div class="fixture-Box">Lorem ipsum.</div>
+      </div>
+    </div>
+  </div>
+</div>

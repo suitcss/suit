@@ -1,0 +1,36 @@
+{
+  "name": "suitcss-utils-layout",
+  "description": "Layout utilities for SUIT CSS",
+  "version": "1.0.1",
+  "style": "index.css",
+  "files": [
+    "index.css",
+    "index.js",
+    "lib"
+  ],
+  "devDependencies": {
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^1.0.1",
+    "stylelint-config-suitcss": "^4.0.0"
+  },
+  "scripts": {
+    "build": "npm run setup && npm run preprocess",
+    "build-test": "npm run setup && npm run preprocess-test",
+    "lint": "suitcss -c test/config.json index.css build/lint.css && rm build/lint.css",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss -i test test/test.css build/test.css",
+    "setup": "npm install",
+    "watch": "npm run preprocess-test -- -w -v",
+    "test": "npm run lint"
+  },
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/utils-layout",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/utils-layout",
+  "bugs": "https://github.com/suitcss/suit/labels/bug",
+  "keywords": [
+    "browser",
+    "css-utilities",
+    "layout",
+    "suitcss",
+    "style"
+  ]
+}

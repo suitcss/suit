@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Arrange [component] - SUIT CSS</title>
+<link rel="stylesheet" href="../build/test.css">
+<style>
+  p {
+    margin: 0;
+  }
+
+  .fixture-Box {
+    background: rgb(100, 150, 50);
+    border: 1px solid black;
+    min-height: 150px;
+    width: 150px;
+  }
+
+  .dev-highlight {
+    background: yellow;
+  }
+
+  /**
+   * Padding equal to half the size of the test gutter. Prevents horizontal
+   * scrollbar on these full-width tests.
+   */
+
+  .Test {
+    padding: 0 10px;
+  }
+
+  #complex {
+    max-width: 800px;
+  }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/components-arrange">Arrange</a> component tests</h1>
+
+  <h2 class="Test-describe">.Arrange</h2>
+  <h3 class="Test-it">renders full width by default</h3>
+  <div class="Test-run">
+    <div class="Arrange">
+      <div class="fixture-Box" style="width: auto;"></div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Arrange-sizeFit / .Arrange-sizeFill</h2>
+  <h3 class="Test-it">shrinkwraps content of .Arrange-sizeFit</h3>
+  <div class="Test-run">
+    <div class="Arrange">
+      <div class="Arrange-sizeFit dev-highlight">
+        <div class="fixture-Box"></div>
+      </div>
+      <div class="Arrange-sizeFill">
+        Main content
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">fills remaining space with content of .Arrange-sizeFill</h3>
+  <div class="Test-run">
+    <div class="Arrange">
+      <div class="Arrange-sizeFit">
+        <div class="fixture-Box"></div>
+      </div>
+      <div class="Arrange-sizeFill dev-highlight">
+        Main content
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">renders equal-height columns</h3>
+  <div class="Test-run">
+    <div class="Arrange">
+      <div class="Arrange-sizeFit dev-highlight">
+        <div class="fixture-Box"></div>
+      </div>
+      <div class="Arrange-sizeFill dev-highlight">
+        Main content
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">works with reverse source order</h3>
+  <div class="Test-run">
+    <div class="Arrange">
+      <div class="Arrange-sizeFill dev-highlight">
+        Arrange-sizeFill
+      </div>
+      <div class="Arrange-sizeFit">
+        <div class="fixture-Box"></div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">allows multiple instances of .Arrange-sizeFit in various orders</h3>
+  <div class="Test-run">
+    <div class="Arrange">
+      <div class="Arrange-sizeFit dev-highlight">
+        <div class="fixture-Box"></div>
+        <small>Copywrite notice</small>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="Arrange-sizeFill">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa dui. In quam sapien, vulputate ut ultrices eu, ultricies non felis. Donec nisi diam, accumsan viverra laoreet sed, ultricies ut lacus. Sed sed iaculis sapien. Phasellus nec massa elit. Nullam rutrum, sapien non semper fermentum, mauris libero eleifend diam, ac rhoncus risus metus sed magna. Duis venenatis, orci at fermentum pulvinar, est diam consequat eros, in tristique neque ligula commodo lorem. Pellentesque eleifend mollis tincidunt. Donec a porta nisl. Phasellus ultrices rutrum odio tincidunt tristique. In hac habitasse platea dictumst. Proin nec massa ultrices est fermentum pretium sed non elit. Aenean nec erat augue.</p>
+      </div>
+      <div class="Arrange-sizeFit dev-highlight">
+        <div class="fixture-Box"></div>
+      </div>
+    </div>
+    <br>
+    <div class="Arrange">
+      <div class="Arrange-sizeFit dev-highlight">
+        <div class="fixture-Box"></div>
+        <small>Copywrite notice</small>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="Arrange-sizeFit dev-highlight">
+        <div class="fixture-Box"></div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa dui. In quam sapien, vulputate ut ultrices eu, ultricies non felis. Donec nisi diam, accumsan viverra laoreet sed, ultricies ut lacus. Sed sed iaculis sapien. Phasellus nec massa elit. Nullam rutrum, sapien non semper fermentum, mauris libero eleifend diam, ac rhoncus risus metus sed magna. Duis venenatis, orci at fermentum pulvinar, est diam consequat eros, in tristique neque ligula commodo lorem. Pellentesque eleifend mollis tincidunt. Donec a porta nisl. Phasellus ultrices rutrum odio tincidunt tristique. In hac habitasse platea dictumst. Proin nec massa ultrices est fermentum pretium sed non elit. Aenean nec erat augue.</p>
+      </div>
+    </div>
+    <br>
+    <div class="Arrange">
+      <div class="Arrange-sizeFill">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa dui. In quam sapien, vulputate ut ultrices eu, ultricies non felis. Donec nisi diam, accumsan viverra laoreet sed, ultricies ut lacus. Sed sed iaculis sapien. Phasellus nec massa elit. Nullam rutrum, sapien non semper fermentum, mauris libero eleifend diam, ac rhoncus risus metus sed magna. Duis venenatis, orci at fermentum pulvinar, est diam consequat eros, in tristique neque ligula commodo lorem. Pellentesque eleifend mollis tincidunt. Donec a porta nisl. Phasellus ultrices rutrum odio tincidunt tristique. In hac habitasse platea dictumst. Proin nec massa ultrices est fermentum pretium sed non elit. Aenean nec erat augue.</p>
+      </div>
+      <div class="Arrange-sizeFit dev-highlight">
+        <div class="fixture-Box"></div>
+        <small>Copywrite notice</small>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="Arrange-sizeFit dev-highlight">
+        <div class="fixture-Box"></div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">supports inter-cell gutters</h3>
+  <div class="Test-run">
+    <div class="Arrange Arrange--withGutter">
+      <div class="Arrange-sizeFit">
+        <div class="fixture-Box"></div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">Main content</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Arrange--middle</h2>
+  <h3 class="Test-it">middle-aligns content</h3>
+  <div class="Test-run">
+    <div class="Arrange Arrange--middle">
+      <div class="Arrange-sizeFit dev-highlight">
+        <div class="fixture-Box"></div>
+      </div>
+      <div class="Arrange-sizeFill dev-highlight">
+        <p>Main content.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Arrange--bottom</h2>
+  <h3 class="Test-it">bottom-aligns content</h3>
+  <div class="Test-run">
+    <div class="Arrange Arrange--bottom">
+      <div class="Arrange-sizeFit dev-highlight">
+        <div class="fixture-Box"></div>
+      </div>
+      <div class="Arrange-sizeFill dev-highlight">
+        <p>Main content.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Arrange--equal</h2>
+  <h3 class="Test-it">renders equal-width cells</h3>
+  <div class="Test-run">
+    <div class="Arrange Arrange--equal">
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">A</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">B</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">C</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">D</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">E</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">F</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">renders equal-width cells when a gutter is included</h3>
+  <div class="Test-run">
+    <div class="Arrange Arrange--equal Arrange--withGutter">
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">A</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">B</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">C</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">D</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">E</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">F</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">renders equal-width cells when content width varies</h3>
+  <div class="Test-run">
+    <div class="Arrange Arrange--equal">
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">Orangutan</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">Gorilla</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">Chimpanzee</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">Bonobo</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">Gibbon</div>
+      </div>
+      <div class="Arrange-sizeFill">
+        <div class="dev-highlight">Siamang</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.Arrange-row</h2>
+  <h3 class="Test-it">renders new rows with equal width columns</h3>
+  <div class="Test-run">
+    <div class="Arrange">
+      <div class="Arrange-row">
+        <div class="Arrange-sizeFit">
+          <div class="dev-highlight">Chimpanzee</div>
+        </div>
+        <div class="Arrange-sizeFill">
+          <div class="dev-highlight">B</div>
+        </div>
+      </div>
+      <div class="Arrange-row">
+        <div class="Arrange-sizeFit">
+          <div class="dev-highlight">Gibbon</div>
+        </div>
+        <div class="Arrange-sizeFill">
+          <div class="dev-highlight">B</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">works with modifiers</h3>
+  <div class="Test-run">
+    <div class="Arrange Arrange--withGutter">
+      <div class="Arrange-row">
+        <div class="Arrange-sizeFit">
+          <div class="dev-highlight">Chimpanzee</div>
+        </div>
+        <div class="Arrange-sizeFill">
+          <div class="dev-highlight">B</div>
+        </div>
+      </div>
+      <div class="Arrange-row">
+        <div class="Arrange-sizeFit">
+          <div class="dev-highlight">Gibbon</div>
+        </div>
+        <div class="Arrange-sizeFill">
+          <div class="dev-highlight">B</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">Complex example</h2>
+  <h3 class="Test-it">renders ok if you make very wide images full width in Arrange-sizeFill</h3>
+  <div class="Test-run" id="complex">
+    <div class="Arrange">
+      <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/120/120" alt="">
+      </div>
+      <div class="Arrange-sizeFill u-textBreak dev-highlight">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <img class="u-sizeFull" src="http://lorempixel.com/700/150" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa dui. In quam sapien, vulputate ut ultrices eu, ultricies non felis. Donec nisi diam, accumsan viverra laoreet sed, ultricies ut lacus. Sed sed iaculis sapien. Phasellus nec massa elit. Nullam rutrum, sapien non semper fermentum, mauris libero eleifend diam, ac rhoncus risus metus sed magna. Duis venenatis, orci at fermentum pulvinar, est diam consequat eros, in tristique neque ligula commodo lorem. Pellentesque eleifend mollis tincidunt. Donec a porta nisl. Phasellus ultrices rutrum odio tincidunt tristique. In hac habitasse platea dictumst. Proin nec massa ultrices est fermentum pretium sed non elit. Aenean nec erat augue.</p>
+      </div>
+      <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/80/80" alt="">
+      </div>
+      <div class="Arrange-sizeFit dev-highlight">
+        <img class="u-block" src="http://lorempixel.com/40/40" alt="">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+/**
+ * @define utilities
+ * Vertical alignment utilities
+ * Depends on an appropriate `display` value.
+ */
+
+.u-alignBaseline {
+  vertical-align: baseline !important;
+}
+
+.u-alignBottom {
+  vertical-align: bottom !important;
+}
+
+.u-alignMiddle {
+  vertical-align: middle !important;
+}
+
+.u-alignTop {
+  vertical-align: top !important;
+}

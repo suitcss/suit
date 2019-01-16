@@ -1,0 +1,37 @@
+{
+  "name": "suitcss-utils-size",
+  "version": "2.0.1",
+  "description": "Sizing utilities for SUIT CSS",
+  "keywords": [
+    "browser",
+    "css-utilities",
+    "size",
+    "suitcss",
+    "style"
+  ],
+  "bugs": "https://github.com/suitcss/suit/labels/bug",
+  "license": "MIT",
+  "author": "Nicolas Gallagher",
+  "files": [
+    "index.css",
+    "index.js",
+    "lib"
+  ],
+  "style": "index.css",
+  "repository": "https://github.com/suitcss/suit/tree/master/packages/utils-size",
+  "homepage": "https://github.com/suitcss/suit/tree/master/packages/utils-size",
+  "scripts": {
+    "build": "npm i && npm run preprocess",
+    "build-test": "npm i && npm run preprocess-test",
+    "lint": "suitcss index.css build/lint.css",
+    "preprocess": "suitcss index.css build/build.css",
+    "preprocess-test": "suitcss -i test test/test.css build/test.css",
+    "watch": "npm run preprocess-test -- -w -v",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "suitcss-components-test": "*",
+    "suitcss-preprocessor": "^4.0.0",
+    "suitcss-utils-display": "^1.0.1"
+  }
+}

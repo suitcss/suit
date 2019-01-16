@@ -1,33 +1,8 @@
 {
-  "name": "suitcss",
-  "version": "3.0.0",
-  "description": "CSS base styles, utilities, and structural components for web apps",
-  "style": "index.css",
-  "files": [
-    "index.css"
-  ],
-  "dependencies": {
-    "suitcss-base": "^3.0.0",
-    "suitcss-components": "^2.0.0",
-    "suitcss-utils": "^3.0.0"
-  },
+  "name": "suit",
+  "private": true,
   "devDependencies": {
-    "suitcss-preprocessor": "^4.0.0"
+    "lerna": "^3.4.3"
   },
-  "scripts": {
-    "build": "npm run setup && npm run preprocess",
-    "preprocess": "suitcss index.css build/build.css",
-    "setup": "npm install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/suitcss/suit.git"
-  },
-  "keywords": [
-    "browser",
-    "css-components",
-    "css-utilities",
-    "suitcss",
-    "style"
-  ]
+  "license": "MIT"
 }

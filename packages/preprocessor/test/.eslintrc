@@ -1,0 +1,12 @@
+{
+  "extends": "../.eslintrc",
+  "env": {
+    "mocha": true
+  },
+  "rules": {
+    "no-unused-expressions": 0,
+    "no-underscore-dangle": 0,
+    "consistent-return": 0,
+    "one-var-declaration-per-line": 0
+  }
+}

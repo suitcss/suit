@@ -1,0 +1,6 @@
+@import "./component.css";
+
+.Test {
+  width: 100px;
+  height: @width;
+}

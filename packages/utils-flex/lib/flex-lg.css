@@ -1,0 +1,329 @@
+/**
+ * @define utilities
+ * Size: breakpoint 3 (large)
+ */
+
+@media (--lg-viewport) {
+
+  /* Applies to flex container
+     ======================================================================== */
+
+  /**
+   * Container
+   */
+
+  .u-lg-flex {
+    display: flex !important;
+  }
+
+  .u-lg-flexInline {
+    display: inline-flex !important;
+  }
+
+  /**
+   * Direction: row
+   */
+
+  .u-lg-flexRow {
+    flex-direction: row !important;
+  }
+
+  .u-lg-flexRowReverse {
+    flex-direction: row-reverse !important;
+  }
+
+  /**
+   * Direction: column
+   */
+
+  .u-lg-flexCol {
+    flex-direction: column !important;
+  }
+
+  .u-lg-flexColReverse {
+    flex-direction: column-reverse !important;
+  }
+
+  /**
+   * Wrap
+   */
+
+  .u-lg-flexWrap {
+    flex-wrap: wrap !important;
+  }
+
+  .u-lg-flexNoWrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .u-lg-flexWrapReverse {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  /**
+   * Align items along the main axis of the current line of the flex container
+   */
+
+  .u-lg-flexJustifyStart {
+    justify-content: flex-start !important;
+  }
+
+  .u-lg-flexJustifyEnd {
+    justify-content: flex-end !important;
+  }
+
+  .u-lg-flexJustifyCenter {
+    justify-content: center !important;
+  }
+
+  .u-lg-flexJustifyBetween {
+    justify-content: space-between !important;
+  }
+
+  .u-lg-flexJustifyAround {
+    justify-content: space-around !important;
+  }
+
+  /**
+   * Align items in the cross axis of the current line of the flex container
+   * Similar to `justify-content` but in the perpendicular direction
+   */
+
+  .u-lg-flexAlignItemsStart {
+    align-items: flex-start !important;
+  }
+
+  .u-lg-flexAlignItemsEnd {
+    align-items: flex-end !important;
+  }
+
+  .u-lg-flexAlignItemsCenter {
+    align-items: center !important;
+  }
+
+  .u-lg-flexAlignItemsStretch {
+    align-items: stretch !important;
+  }
+
+  .u-lg-flexAlignItemsBaseline {
+    align-items: baseline !important;
+  }
+
+  /**
+   * Aligns items within the flex container when there is extra
+   * space in the cross-axis
+   *
+   * Has no effect when there is only one line of flex items.
+   */
+
+  .u-lg-flexAlignContentStart {
+    align-content: flex-start !important;
+  }
+
+  .u-lg-flexAlignContentEnd {
+    align-content: flex-end !important;
+  }
+
+  .u-lg-flexAlignContentCenter {
+    align-content: center !important;
+  }
+
+  .u-lg-flexAlignContentStretch {
+    align-content: stretch !important;
+  }
+
+  .u-lg-flexAlignContentBetween {
+    align-content: space-between !important;
+  }
+
+  .u-lg-flexAlignContentAround {
+    align-content: space-around !important;
+  }
+
+  /* Applies to flex items
+     ======================================================================== */
+
+  /**
+   * Override default alignment of single item when specified by `align-items`
+   */
+
+  .u-lg-flexAlignSelfStart {
+    align-self: flex-start !important;
+  }
+
+  .u-lg-flexAlignSelfEnd {
+    align-self: flex-end !important;
+  }
+
+  .u-lg-flexAlignSelfCenter {
+    align-self: center !important;
+  }
+
+  .u-lg-flexAlignSelfStretch {
+    align-self: stretch !important;
+  }
+
+  .u-lg-flexAlignSelfBaseline {
+    align-self: baseline !important;
+  }
+
+  .u-lg-flexAlignSelfAuto {
+    align-self: auto !important;
+  }
+
+  /**
+   * Change order without editing underlying HTML
+   */
+
+  .u-lg-flexOrderFirst {
+    order: -1 !important;
+  }
+
+  .u-lg-flexOrderLast {
+    order: 1 !important;
+  }
+
+  .u-lg-flexOrderNone {
+    order: 0 !important;
+  }
+
+  /**
+   * Specify the flex grow factor, which determines how much the flex item will
+   * grow relative to the rest of the flex items in the flex container.
+   *
+   * Supports 1-5 proportions
+   *
+   * 1. Provide all values to avoid IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   *
+   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+   *    http://git.io/vllWx
+   */
+
+  .u-lg-flexGrow1 {
+    flex: 1 1 0% !important; /* 1 */
+  }
+
+  .u-lg-flexGrow2 {
+    flex: 2 1 0% !important;
+  }
+
+  .u-lg-flexGrow3 {
+    flex: 3 1 0% !important;
+  }
+
+  .u-lg-flexGrow4 {
+    flex: 4 1 0% !important;
+  }
+
+  .u-lg-flexGrow5 {
+    flex: 5 1 0% !important;
+  }
+
+  /**
+   * Specify the flex shrink factor, which determines how much the flex item
+   * will shrink relative to the rest of the flex items in the flex container.
+   */
+
+  .u-lg-flexShrink0 {
+    flex-shrink: 0 !important;
+  }
+
+  .u-lg-flexShrink1 {
+    flex-shrink: 1 !important;
+  }
+
+  .u-lg-flexShrink2 {
+    flex-shrink: 2 !important;
+  }
+
+  .u-lg-flexShrink3 {
+    flex-shrink: 3 !important;
+  }
+
+  .u-lg-flexShrink4 {
+    flex-shrink: 4 !important;
+  }
+
+  .u-lg-flexShrink5 {
+    flex-shrink: 5 !important;
+  }
+
+  /**
+   * Aligning with `auto` margins
+   * http://www.w3.org/TR/css-flexbox-1/#auto-margins
+   */
+
+  .u-lg-flexExpand {
+    margin: auto !important;
+  }
+
+  .u-lg-flexExpandLeft {
+    margin-left: auto !important;
+  }
+
+  .u-lg-flexExpandRight {
+    margin-right: auto !important;
+  }
+
+  .u-lg-flexExpandTop {
+    margin-top: auto !important;
+  }
+
+  .u-lg-flexExpandBottom {
+    margin-bottom: auto !important;
+  }
+
+  /**
+   * Basis
+   */
+
+  .u-lg-flexBasisAuto {
+    flex-basis: auto !important;
+  }
+
+  .u-lg-flexBasis0 {
+    flex-basis: 0 !important;
+  }
+
+  /*
+   * Shorthand
+   *
+   * Declares all values instead of keywords like 'initial' to work around IE10
+   * https://www.w3.org/TR/css-flexbox-1/#flex-common
+   *
+   * 1. Fixes issue in IE 10 where flex-basis is ignored - https://git.io/vllMt
+   *    This ensures it overrides flex-basis set in other utilities.
+   */
+
+  /*
+   * Sizes the item based on the width/height properties
+   */
+
+  .u-lg-flexInitial {
+    flex: 0 1 auto !important;
+    flex-basis: auto !important; /* 1 */
+  }
+
+  /*
+   * Sizes the item based on the width/height properties, but makes them fully
+   * flexible, so that they absorb any free space along the main axis.
+   */
+
+  .u-lg-flexAuto {
+    flex: 1 1 auto !important;
+    flex-basis: auto !important; /* 1 */
+  }
+
+  /*
+   * Sizes the item according to the width/height properties, but makes the flex
+   * item fully inflexible. Similar to initial, except that flex items are
+   * not allowed to shrink, even in overflow situations.
+   */
+
+  .u-lg-flexNone {
+    flex: 0 0 auto !important;
+    flex-basis: auto !important; /* 1 */
+  }
+
+}

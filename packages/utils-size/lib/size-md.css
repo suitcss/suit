@@ -1,0 +1,202 @@
+/**
+ * @define utilities
+ * Size: breakpoint 2 (medium)
+ */
+
+@media (--md-viewport) {
+
+  /* Proportional widths: breakpoint 2 (medium)
+     ======================================================================== */
+
+  /**
+   * Specify the proportional width of an object.
+   * Intentional redundancy build into each set of unit classes.
+   * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
+   *
+   * 1. Use `flex-basis: auto` with a width to avoid box-sizing bug in IE10/11
+   *    http://git.io/vllMD
+   */
+
+  /* postcss-bem-linter: ignore */
+
+  .u-md-size1of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 1 / 12) !important;
+  }
+
+  .u-md-size1of10 {
+    flex-basis: auto !important;
+    width: 10% !important;
+  }
+
+  .u-md-size1of8 {
+    flex-basis: auto !important;
+    width: 12.5% !important;
+  }
+
+  .u-md-size1of6,
+  .u-md-size2of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 1 / 6) !important;
+  }
+
+  .u-md-size1of5,
+  .u-md-size2of10 {
+    flex-basis: auto !important;
+    width: 20% !important;
+  }
+
+  .u-md-size1of4,
+  .u-md-size2of8,
+  .u-md-size3of12 {
+    flex-basis: auto !important;
+    width: 25% !important;
+  }
+
+  .u-md-size3of10 {
+    flex-basis: auto !important;
+    width: 30% !important;
+  }
+
+  .u-md-size1of3,
+  .u-md-size2of6,
+  .u-md-size4of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 1 / 3) !important;
+  }
+
+  .u-md-size3of8 {
+    flex-basis: auto !important;
+    width: 37.5% !important;
+  }
+
+  .u-md-size2of5,
+  .u-md-size4of10 {
+    flex-basis: auto !important;
+    width: 40% !important;
+  }
+
+  .u-md-size5of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 5 / 12) !important;
+  }
+
+  .u-md-size1of2,
+  .u-md-size2of4,
+  .u-md-size3of6,
+  .u-md-size4of8,
+  .u-md-size5of10,
+  .u-md-size6of12 {
+    flex-basis: auto !important;
+    width: 50% !important;
+  }
+
+  .u-md-size7of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 7 / 12) !important;
+  }
+
+  .u-md-size3of5,
+  .u-md-size6of10 {
+    flex-basis: auto !important;
+    width: 60% !important;
+  }
+
+  .u-md-size5of8 {
+    flex-basis: auto !important;
+    width: 62.5% !important;
+  }
+
+  .u-md-size2of3,
+  .u-md-size4of6,
+  .u-md-size8of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 2 / 3) !important;
+  }
+
+  .u-md-size7of10 {
+    flex-basis: auto !important;
+    width: 70% !important;
+  }
+
+  .u-md-size3of4,
+  .u-md-size6of8,
+  .u-md-size9of12 {
+    flex-basis: auto !important;
+    width: 75% !important;
+  }
+
+  .u-md-size4of5,
+  .u-md-size8of10 {
+    flex-basis: auto !important;
+    width: 80% !important;
+  }
+
+  .u-md-size5of6,
+  .u-md-size10of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 5 / 6) !important;
+  }
+
+  .u-md-size7of8 {
+    flex-basis: auto !important;
+    width: 87.5% !important;
+  }
+
+  .u-md-size9of10 {
+    flex-basis: auto !important;
+    width: 90% !important;
+  }
+
+  .u-md-size11of12 {
+    flex-basis: auto !important;
+    width: calc(100% * 11 / 12) !important;
+  }
+
+  /* Intrinsic widths
+     ======================================================================== */
+
+  /**
+   * Make an element shrink wrap its content.
+   */
+
+  .u-md-sizeFit {
+    flex-basis: auto !important;
+    width: auto !important;
+  }
+
+  /**
+   * Make an element fill the remaining space.
+   *
+   * 1. Be explicit to work around IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+   *    http://git.io/vllMt
+   */
+
+  .u-md-sizeFill {
+    flex: 1 1 0% !important; /* 1 */
+    flex-basis: 0% !important; /* 2 */
+  }
+
+  /**
+   * An alternative method to make an element fill the remaining space.
+   * Distributes space based on the initial width and height of the element
+   *
+   * http://www.w3.org/TR/css-flexbox/images/rel-vs-abs-flex.svg
+   */
+
+  .u-md-sizeFillAlt {
+    flex: 1 1 auto !important;
+    flex-basis: auto !important;
+  }
+
+  /**
+   * Make an element the width of its parent.
+   */
+
+  .u-md-sizeFull {
+    width: 100% !important;
+  }
+
+}

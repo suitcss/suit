@@ -1,0 +1,117 @@
+/**
+ * @define utilities
+ * Specify the proportional offset before an object.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 3, 4, 5, 6, 8, 10, 12 section
+ */
+
+.u-before1of12 {
+  margin-left: calc(100% * 1 / 12) !important;
+}
+
+.u-before1of10 {
+  margin-left: 10% !important;
+}
+
+.u-before1of8 {
+  margin-left: 12.5% !important;
+}
+
+.u-before1of6,
+.u-before2of12 {
+  margin-left: calc(100% * 1 / 6) !important;
+}
+
+.u-before1of5,
+.u-before2of10 {
+  margin-left: 20% !important;
+}
+
+.u-before1of4,
+.u-before2of8,
+.u-before3of12 {
+  margin-left: 25% !important;
+}
+
+.u-before3of10 {
+  margin-left: 30% !important;
+}
+
+.u-before1of3,
+.u-before2of6,
+.u-before4of12 {
+  margin-left: calc(100% * 1 / 3) !important;
+}
+
+.u-before3of8 {
+  margin-left: 37.5% !important;
+}
+
+.u-before2of5,
+.u-before4of10 {
+  margin-left: 40% !important;
+}
+
+.u-before5of12 {
+  margin-left: calc(100% * 5 / 12) !important;
+}
+
+.u-before1of2,
+.u-before2of4,
+.u-before3of6,
+.u-before4of8,
+.u-before5of10,
+.u-before6of12 {
+  margin-left: 50% !important;
+}
+
+.u-before7of12 {
+  margin-left: calc(100% * 7 / 12) !important;
+}
+
+.u-before3of5,
+.u-before6of10 {
+  margin-left: 60% !important;
+}
+
+.u-before5of8 {
+  margin-left: 62.5% !important;
+}
+
+.u-before2of3,
+.u-before4of6,
+.u-before8of12 {
+  margin-left: calc(100% * 2 / 3) !important;
+}
+
+.u-before7of10 {
+  margin-left: 70% !important;
+}
+
+.u-before3of4,
+.u-before6of8,
+.u-before9of12 {
+  margin-left: 75% !important;
+}
+
+.u-before4of5,
+.u-before8of10 {
+  margin-left: 80% !important;
+}
+
+.u-before5of6,
+.u-before10of12 {
+  margin-left: calc(100% * 5 / 6) !important;
+}
+
+.u-before7of8 {
+  margin-left: 87.5% !important;
+}
+
+.u-before9of10 {
+  margin-left: 90% !important;
+}
+
+.u-before11of12 {
+  margin-left: calc(100% * 11 / 12) !important;
+}

@@ -1,0 +1,195 @@
+/**
+ * @define utilities
+ * Sizing utilities
+ */
+
+/* Proportional widths
+   ========================================================================== */
+
+/**
+ * Specify the proportional width of an object.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
+ *
+ * 1. Use `flex-basis: auto` with a width to avoid box-sizing bug in IE10/11
+ *    http://git.io/vllMD
+ */
+
+.u-size1of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 1 / 12) !important;
+}
+
+.u-size1of10 {
+  flex-basis: auto !important;
+  width: 10% !important;
+}
+
+.u-size1of8 {
+  flex-basis: auto !important;
+  width: 12.5% !important;
+}
+
+.u-size1of6,
+.u-size2of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 1 / 6) !important;
+}
+
+.u-size1of5,
+.u-size2of10 {
+  flex-basis: auto !important;
+  width: 20% !important;
+}
+
+.u-size1of4,
+.u-size2of8,
+.u-size3of12 {
+  flex-basis: auto !important;
+  width: 25% !important;
+}
+
+.u-size3of10 {
+  flex-basis: auto !important;
+  width: 30% !important;
+}
+
+.u-size1of3,
+.u-size2of6,
+.u-size4of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 1 / 3) !important;
+}
+
+.u-size3of8 {
+  flex-basis: auto !important;
+  width: 37.5% !important;
+}
+
+.u-size2of5,
+.u-size4of10 {
+  flex-basis: auto !important;
+  width: 40% !important;
+}
+
+.u-size5of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 5 / 12) !important;
+}
+
+.u-size1of2,
+.u-size2of4,
+.u-size3of6,
+.u-size4of8,
+.u-size5of10,
+.u-size6of12 {
+  flex-basis: auto !important;
+  width: 50% !important;
+}
+
+.u-size7of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 7 / 12) !important;
+}
+
+.u-size3of5,
+.u-size6of10 {
+  flex-basis: auto !important;
+  width: 60% !important;
+}
+
+.u-size5of8 {
+  flex-basis: auto !important;
+  width: 62.5% !important;
+}
+
+.u-size2of3,
+.u-size4of6,
+.u-size8of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 2 / 3) !important;
+}
+
+.u-size7of10 {
+  flex-basis: auto !important;
+  width: 70% !important;
+}
+
+.u-size3of4,
+.u-size6of8,
+.u-size9of12 {
+  flex-basis: auto !important;
+  width: 75% !important;
+}
+
+.u-size4of5,
+.u-size8of10 {
+  flex-basis: auto !important;
+  width: 80% !important;
+}
+
+.u-size5of6,
+.u-size10of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 5 / 6) !important;
+}
+
+.u-size7of8 {
+  flex-basis: auto !important;
+  width: 87.5% !important;
+}
+
+.u-size9of10 {
+  flex-basis: auto !important;
+  width: 90% !important;
+}
+
+.u-size11of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 11 / 12) !important;
+}
+
+/* Intrinsic widths
+   ========================================================================== */
+
+/**
+ * Make an element shrink wrap its content.
+ */
+
+.u-sizeFit {
+  flex-basis: auto !important;
+}
+
+/**
+ * Make an element fill the remaining space.
+ *
+ * 1. Be explicit to work around IE10 bug with shorthand flex
+ *    http://git.io/vllC7
+ * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+ *    http://git.io/vllMt
+ */
+
+.u-sizeFill {
+  flex: 1 1 0% !important; /* 1 */
+  flex-basis: 0% !important; /* 2 */
+}
+
+/**
+ * An alternative method to make an element fill the remaining space.
+ * Distributes space based on the initial width and height of the element
+ *
+ * http://www.w3.org/TR/css-flexbox/images/rel-vs-abs-flex.svg
+ */
+
+.u-sizeFillAlt {
+  flex: 1 1 auto !important;
+  flex-basis: auto !important;
+}
+
+/**
+ * Make an element the width of its parent.
+ */
+
+.u-sizeFull {
+  width: 100% !important;
+}

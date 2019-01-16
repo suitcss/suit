@@ -1,0 +1,127 @@
+/**
+ * @define utilities
+ * Offset: breakpoint 2 (medium)
+ *
+ * Specify the proportional offset after an element.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 4, 5, 6, 8, 10, 12 section
+ */
+
+@media (--md-viewport) {
+
+  .u-md-afterNone {
+    margin-right: 0 !important;
+  }
+
+  .u-md-after1of12 {
+    margin-right: calc(100% * 1 / 12) !important;
+  }
+
+  .u-md-after1of10 {
+    margin-right: 10% !important;
+  }
+
+  .u-md-after1of8 {
+    margin-right: 12.5% !important;
+  }
+
+  .u-md-after1of6,
+  .u-md-after2of12 {
+    margin-right: calc(100% * 1 / 6) !important;
+  }
+
+  .u-md-after1of5,
+  .u-md-after2of10 {
+    margin-right: 20% !important;
+  }
+
+  .u-md-after1of4,
+  .u-md-after2of8,
+  .u-md-after3of12 {
+    margin-right: 25% !important;
+  }
+
+  .u-md-after3of10 {
+    margin-right: 30% !important;
+  }
+
+  .u-md-after1of3,
+  .u-md-after2of6,
+  .u-md-after4of12 {
+    margin-right: calc(100% * 1 / 3) !important;
+  }
+
+  .u-md-after3of8 {
+    margin-right: 37.5% !important;
+  }
+
+  .u-md-after2of5,
+  .u-md-after4of10 {
+    margin-right: 40% !important;
+  }
+
+  .u-md-after5of12 {
+    margin-right: calc(100% * 5 / 12) !important;
+  }
+
+  .u-md-after1of2,
+  .u-md-after2of4,
+  .u-md-after3of6,
+  .u-md-after4of8,
+  .u-md-after5of10,
+  .u-md-after6of12 {
+    margin-right: 50% !important;
+  }
+
+  .u-md-after7of12 {
+    margin-right: calc(100% * 7 / 12) !important;
+  }
+
+  .u-md-after3of5,
+  .u-md-after6of10 {
+    margin-right: 60% !important;
+  }
+
+  .u-md-after5of8 {
+    margin-right: 62.5% !important;
+  }
+
+  .u-md-after2of3,
+  .u-md-after4of6,
+  .u-md-after8of12 {
+    margin-right: calc(100% * 2 / 3) !important;
+  }
+
+  .u-md-after7of10 {
+    margin-right: 70% !important;
+  }
+
+  .u-md-after3of4,
+  .u-md-after6of8,
+  .u-md-after9of12 {
+    margin-right: 75% !important;
+  }
+
+  .u-md-after4of5,
+  .u-md-after8of10 {
+    margin-right: 80% !important;
+  }
+
+  .u-md-after5of6,
+  .u-md-after10of12 {
+    margin-right: calc(100% * 5 / 6) !important;
+  }
+
+  .u-md-after7of8 {
+    margin-right: 87.5% !important;
+  }
+
+  .u-md-after9of10 {
+    margin-right: 90% !important;
+  }
+
+  .u-md-after11of12 {
+    margin-right: calc(100% * 11 / 12) !important;
+  }
+
+}

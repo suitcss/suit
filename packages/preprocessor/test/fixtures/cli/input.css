@@ -1,0 +1,9 @@
+:root {
+  --red: #f00;
+}
+
+.cli {
+  color: var(--red);
+  width: calc(50px * 2);
+  transition: all 1s;
+}

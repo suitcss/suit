@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Layout [utility] - SUIT CSS</title>
+<meta name="viewport" content="intial-scale=1, width=device-width">
+<link rel="stylesheet" href="../build/test.css">
+<style>
+  .dev-Highlight {
+    background: #ff0;
+  }
+
+  .dev-Box {
+    background: #649632;
+    height: 100px;
+    width: 100px;
+  }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-layout">layout utility</a> tests</h1>
+
+  <h2 class="Test-describe">.u-cf</h2>
+  <h3 class="Test-it">contains floats</h3>
+  <div class="Test-run">
+    <div class="u-cf dev-Highlight">
+      <div class="dev-Box" style="float:left"></div>
+      <div class="dev-Box" style="float:left; margin-left:10px"></div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-nbfc</h2>
+  <h3 class="Test-it">creates a new block formatting context</h3>
+  <div class="Test-run">
+    <div class="dev-Highlight" style="width:300px;">
+      <div class="dev-Box" style="float:left"></div>
+      <div class="u-nbfc">
+        <p>The text should not wrap under the float.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tincidunt nulla. Suspendisse semper, nisl vitae ultricies vulputate, metus tortor tincidunt neque, sed feugiat lacus ipsum eu neque. Mauris pharetra facilisis turpis, ac lacinia justo fermentum vel. Maecenas sed semper nisi. Integer sed erat nec sem mattis dignissim.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-nbfcAlt</h2>
+  <h3 class="Test-it">creates a new block formatting context</h3>
+  <div class="Test-run">
+    <div class="dev-Highlight" style="width:300px;">
+      <div class="dev-Box" style="float:left"></div>
+      <div class="u-nbfcAlt">
+        <p>The text should not wrap under the float.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tincidunt nulla. Suspendisse semper, nisl vitae ultricies vulputate, metus tortor tincidunt neque, sed feugiat lacus ipsum eu neque. Mauris pharetra facilisis turpis, ac lacinia justo fermentum vel. Maecenas sed semper nisi. Integer sed erat nec sem mattis dignissim.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-floatLeft</h2>
+  <h3 class="Test-it">floats left</h3>
+  <div class="Test-run">
+    <div class="u-cf dev-Highlight" style="text-align:left">
+      <div class="u-floatLeft dev-Box"></div>
+      some text outside
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-floatRight</h2>
+  <h3 class="Test-it">floats right</h3>
+  <div class="Test-run">
+    <div class="u-cf dev-Highlight" style="text-align:right">
+      <div class="u-floatRight dev-Box"></div>
+      some text outside
+    </div>
+  </div>
+</div>

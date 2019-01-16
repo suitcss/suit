@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Link [utility] - SUIT</title>
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link rel="stylesheet" href="../build/test.css">
+<style>
+  .Test-run > * {
+    outline: 1px solid red;
+  }
+</style>
+
+<div class="Test">
+  <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-link">link utilities</a> tests</h1>
+
+  <p>
+    <a href="#">Control link</a>
+  </p>
+
+  <h2 class="Test-describe">u-linkBlock</h2>
+  <h3 class="Test-it">renders a block-level link with no text decoration for any state</h3>
+  <div class="Test-run">
+    <a class="u-linkBlock" href="#">Link text</a>
+  </div>
+
+  <h2 class="Test-describe">u-linkClean</h2>
+  <h3 class="Test-it">renders a link with no text decoration for any state</h3>
+  <div class="Test-run">
+    <a class="u-linkClean" href="#">Link text</a>
+  </div>
+
+  <h2 class="Test-describe">u-linkComplex / u-linkComplexTarget</h2>
+  <h3 class="Test-it">renders a link with only the 'target' receiving text decoration on hover/focus/active</h3>
+  <div class="Test-run">
+    <a class="u-linkComplex" href="#">
+      Link complex
+      <span class="u-linkComplexTarget">target</span>
+    </a>
+  </div>
+</div>
