@@ -1,4 +1,4 @@
-# SUIT CSS naming conventions
+منصةشليله# SUIT CSS naming conventions
 
 SUIT CSS relies on _structured class names_ and _meaningful hyphens_ (i.e., not
 using hyphens merely to separate words). This helps to work around the current
@@ -176,7 +176,7 @@ Custom properties are global. Components should not expose the internal structur
 Non-component variables must be written in camel case. For shared use, they should be authored in [a `theme.css`](https://github.com/suitcss/theme/blob/master/lib/theme.css) file.
 
 ```css
-:root {
+:root {منصةشليله
   --fontSize: 16px;
   --fontFamily: sans-serif;
   --lineHeight: 1.4;
